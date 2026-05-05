@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文 ま行 練習</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">五十音 · Gojuon</div>
+    <div class="center">行 の 練 習</div>
+    <div class="right">2026 / 05 / 05</div>
+  </header>
+
+  <h1 class="page-title">ま<span class="accent">行</span></h1>
+  <p class="page-subtitle">ま・み・む・め・も — 嘴唇閉起來發音的 m 音</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card" data-text="ま">
+      <div class="kana-big">ま</div>
+      <div class="kana-romaji">ma</div>
+    </div>
+    <div class="kana-card" data-text="み">
+      <div class="kana-big">み</div>
+      <div class="kana-romaji">mi</div>
+    </div>
+    <div class="kana-card" data-text="む">
+      <div class="kana-big">む</div>
+      <div class="kana-romaji">mu</div>
+    </div>
+    <div class="kana-card" data-text="め">
+      <div class="kana-big">め</div>
+      <div class="kana-romaji">me</div>
+    </div>
+    <div class="kana-card" data-text="も">
+      <div class="kana-big">も</div>
+      <div class="kana-romaji">mo</div>
+    </div>
+  </div>
+
+  <button class="row-btn" id="rowBtn">▶ 連續念 ま行</button>
+
+  <div class="tip">
+    💡 <strong>記憶小技巧</strong><br>
+    • ま行全部都是 <strong>m 音</strong>，嘴唇先閉合，再打開——就像「嗯」的起手式<br>
+    • <span class="compare">む</span>（mu）是這行裡最難的，嘴型像噘嘴，比 u 還圓<br>
+    • <span class="compare">め</span>（me）長得像「め」＝「目」的古字，記住「眼睛＝め」超好用<br>
+    • <span class="compare">も</span>（mo）比 <span class="compare">て</span> 多一橫，別搞混了
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 ま行單字</div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">まち</div>
+        <div class="word-romaji">machi</div>
+        <div class="word-meaning">城鎮、市區</div>
+      </div>
+      <button class="play-btn" data-text="まち">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">まいにち</div>
+        <div class="word-romaji">mainichi</div>
+        <div class="word-meaning">每天</div>
+      </div>
+      <button class="play-btn" data-text="まいにち">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">みず</div>
+        <div class="word-romaji">mizu</div>
+        <div class="word-meaning">水</div>
+      </div>
+      <button class="play-btn" data-text="みず">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">みみ</div>
+        <div class="word-romaji">mimi</div>
+        <div class="word-meaning">耳朵</div>
+      </div>
+      <button class="play-btn" data-text="みみ">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">みせ</div>
+        <div class="word-romaji">mise</div>
+        <div class="word-meaning">店、商店</div>
+      </div>
+      <button class="play-btn" data-text="みせ">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">め</div>
+        <div class="word-romaji">me</div>
+        <div class="word-meaning">眼睛</div>
+      </div>
+      <button class="play-btn" data-text="め">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">もも</div>
+        <div class="word-romaji">momo</div>
+        <div class="word-meaning">桃子</div>
+      </div>
+      <button class="play-btn" data-text="もも">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>まいにち ＝ 毎日</strong><br>
+    「まい」（每）＋「にち」（日）組合起來就是「每天」。<br>
+    這個詞在日文裡超高頻，之後說「每天學日文」就用得到：<br>
+    　<strong>まいにち にほんごを べんきょうします</strong><br>
+    　mainichi nihongo o benkyō shimasu — 我每天學日文
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 簡單句子</div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">みずが すきです</div>
+        <div class="word-romaji">mizu ga suki desu</div>
+        <div class="word-meaning">我喜歡水</div>
+      </div>
+      <button class="play-btn" data-text="みずが すきです">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">めが おおきい</div>
+        <div class="word-romaji">me ga ōkii</div>
+        <div class="word-meaning">眼睛很大</div>
+      </div>
+      <button class="play-btn" data-text="めが おおきい">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">まちに みせが あります</div>
+        <div class="word-romaji">machi ni mise ga arimasu</div>
+        <div class="word-meaning">城鎮裡有店</div>
+      </div>
+      <button class="play-btn" data-text="まちに みせが あります">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">まいにち みずを のみます</div>
+        <div class="word-romaji">mainichi mizu o nomimasu</div>
+        <div class="word-meaning">我每天喝水</div>
+      </div>
+      <button class="play-btn" data-text="まいにち みずを のみます">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">もものはなが きれいです</div>
+        <div class="word-romaji">momo no hana ga kirei desu</div>
+        <div class="word-meaning">桃花很漂亮（複習：はな＝花）</div>
+      </div>
+      <button class="play-btn" data-text="もものはなが きれいです">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>學到這裡，你已經會了幾行？</strong><br>
+    あ行・か行・さ行・た行・な行・は行・<strong>ま行</strong><br>
+    共 <strong>35 個</strong>假名！五十音只剩 や行・ら行・わ行・ん 了，快到終點了！
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+      if (button) button.classList.add('playing');
+      u.onend = () => { if (button) button.classList.remove('playing'); resolve(); };
+      u.onerror = () => { if (button) button.classList.remove('playing'); resolve(); };
+      speechSynthesis.speak(u);
+    });
+  }
+
+  document.querySelectorAll('.kana-card').forEach(card => {
+    card.addEventListener('click', () => speak(card.dataset.text, card));
+  });
+
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => { e.stopPropagation(); speak(btn.dataset.text, btn); });
+  });
+
+  document.getElementById('rowBtn').addEventListener('click', async () => {
+    const row = ['ま', 'み', 'む', 'め', 'も'];
+    const cards = document.querySelectorAll('.kana-card');
+    for (let i = 0; i < row.length; i++) {
+      await speak(row[i], cards[i]);
+      await new Promise(r => setTimeout(r, 150));
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文 な行 練習</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}50%{transform:scale(1.08);}}/* numbers page */
+/* topic/phrase pages */
+/* kana intro page */
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap"><a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">五十音 · Gojuon</div>
+    <div class="center">行 の 練 習</div>
+    <div class="right">2026 / 05 / 03</div>
+  </header>
+
+  <h1 class="page-title">な<span class="accent">行</span></h1>
+  <p class="page-subtitle">な・に・ぬ・ね・の</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card" data-text="な">
+      <div class="kana-big">な</div>
+      <div class="kana-romaji">na</div>
+    </div>
+    <div class="kana-card" data-text="に">
+      <div class="kana-big">に</div>
+      <div class="kana-romaji">ni</div>
+    </div>
+    <div class="kana-card" data-text="ぬ">
+      <div class="kana-big">ぬ</div>
+      <div class="kana-romaji">nu</div>
+    </div>
+    <div class="kana-card" data-text="ね">
+      <div class="kana-big">ね</div>
+      <div class="kana-romaji">ne</div>
+    </div>
+    <div class="kana-card" data-text="の">
+      <div class="kana-big">の</div>
+      <div class="kana-romaji">no</div>
+    </div>
+  </div>
+
+  <button class="row-btn" id="rowBtn">▶ 連續念 な行</button>
+
+  <div class="tip">
+    <strong>💡 容易搞混提醒</strong><br>
+    • <span class="compare">ぬ</span>（nu）vs <span class="compare">め</span>（me）— 長得很像，ぬ 多一個小尾巴<br>
+    • <span class="compare">ね</span>（ne）vs <span class="compare">れ</span>（re）— ね 右邊有個圈<br>
+    • <span class="compare">の</span>（no）是萬用助詞，意思像中文的「的」
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 な行單字</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">なに</div>
+        <div class="word-romaji">nani</div>
+        <div class="word-meaning">什麼</div>
+      </div>
+      <button class="play-btn" data-text="なに">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">なな</div>
+        <div class="word-romaji">nana</div>
+        <div class="word-meaning">七（你學過了！）</div>
+      </div>
+      <button class="play-btn" data-text="なな">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">なつ</div>
+        <div class="word-romaji">natsu</div>
+        <div class="word-meaning">夏天（你學過了！）</div>
+      </div>
+      <button class="play-btn" data-text="なつ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">いぬ</div>
+        <div class="word-romaji">inu</div>
+        <div class="word-meaning">狗</div>
+      </div>
+      <button class="play-btn" data-text="いぬ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">あに</div>
+        <div class="word-romaji">ani</div>
+        <div class="word-meaning">哥哥</div>
+      </div>
+      <button class="play-btn" data-text="あに">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">あね</div>
+        <div class="word-romaji">ane</div>
+        <div class="word-meaning">姊姊</div>
+      </div>
+      <button class="play-btn" data-text="あね">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">いいえ</div>
+        <div class="word-romaji">iie</div>
+        <div class="word-meaning">不（否定回答）</div>
+      </div>
+      <button class="play-btn" data-text="いいえ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ない</div>
+        <div class="word-romaji">nai</div>
+        <div class="word-meaning">沒有／不在</div>
+      </div>
+      <button class="play-btn" data-text="ない">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">に</div>
+        <div class="word-romaji">ni</div>
+        <div class="word-meaning">二（你學過了！）</div>
+      </div>
+      <button class="play-btn" data-text="に">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 簡單句子</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">なに？</div>
+        <div class="word-romaji">nani?</div>
+        <div class="word-meaning">什麼？</div>
+      </div>
+      <button class="play-btn" data-text="なに">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">いぬが いない</div>
+        <div class="word-romaji">inu ga inai</div>
+        <div class="word-meaning">狗不在／沒有狗</div>
+      </div>
+      <button class="play-btn" data-text="いぬが いない">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">あには いない</div>
+        <div class="word-romaji">ani wa inai</div>
+        <div class="word-meaning">哥哥不在</div>
+      </div>
+      <button class="play-btn" data-text="あには いない">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">⭐ 「の」的用法</div>
+    <div class="tip" style="margin-bottom: 12px;">
+      「の」放在兩個名詞中間，意思像中文的「的」。
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">あにの いぬ</div>
+        <div class="word-romaji">ani no inu</div>
+        <div class="word-meaning">哥哥的狗</div>
+      </div>
+      <button class="play-btn" data-text="あにの いぬ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">あねの なまえ</div>
+        <div class="word-romaji">ane no namae</div>
+        <div class="word-meaning">姊姊的名字</div>
+      </div>
+      <button class="play-btn" data-text="あねの なまえ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">なつの あさ</div>
+        <div class="word-romaji">natsu no asa</div>
+        <div class="word-meaning">夏天的早晨</div>
+      </div>
+      <button class="play-btn" data-text="なつの あさ">▶</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  // 頁面載入時預先快取聲音，避免第一次播放選到錯誤聲音
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+      if (button) button.classList.add('playing');
+      u.onend = () => {
+        if (button) button.classList.remove('playing');
+        resolve();
+      };
+      u.onerror = () => {
+        if (button) button.classList.remove('playing');
+        resolve();
+      };
+      speechSynthesis.speak(u);
+    });
+  }
+
+  document.querySelectorAll('.kana-card').forEach(card => {
+    card.addEventListener('click', () => {
+      speak(card.dataset.text, card);
+    });
+  });
+
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      speak(btn.dataset.text, btn);
+    });
+  });
+
+  document.getElementById('rowBtn').addEventListener('click', async () => {
+    const row = ['な', 'に', 'ぬ', 'ね', 'の'];
+    const cards = document.querySelectorAll('.kana-card');
+    for (let i = 0; i < row.length; i++) {
+      await speak(row[i], cards[i]);
+      await new Promise(r => setTimeout(r, 150));
+    }
+  });
+</script>
+</body>
+</html>

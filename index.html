@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本語学習日誌</title>
+<meta name="description" content="My Japanese learning journey">
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;/* reading & about accent colours for type badges */
+    --reading-accent:#8b3a3a;--about-accent:#2a5f9e;}.container{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:48px 32px 80px;}/* ── Masthead ── */
+  /* ── Hero title ── */
+  .hero{text-align:center;margin-bottom:48px;}.hero-kicker{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);letter-spacing:.15em;font-size:14px;margin-bottom:14px;}.hero h1{font-family:'Shippori Mincho',serif;font-weight:800;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:.03em;color:var(--ink);margin-bottom:10px;}.hero h1 .accent{color:var(--accent);}.hero .subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:16px;letter-spacing:.12em;}/* ── Stats ── */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:48px;}.stat{background:rgba(255,255,255,.6);padding:20px 8px;text-align:center;}.stat-value{font-family:'Shippori Mincho',serif;font-size:36px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1;margin-bottom:6px;}.stat-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;}/* ── Section divider ── */
+  /* ── Calendar ── */
+  .cal-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px;}.cal-month{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:16px;}.cal-month-title{text-align:center;font-size:14px;letter-spacing:.25em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}.cal-dow{text-align:center;font-size:14px;letter-spacing:.08em;color:var(--ink-mute);text-transform:uppercase;padding-bottom:5px;font-family:'Cormorant Garamond',serif;}.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink);font-family:'Cormorant Garamond',serif;}.cal-day.has-lesson{background:var(--accent-pale);color:var(--accent);font-weight:700;cursor:pointer;transition:background .15s;}.cal-day.has-lesson:hover{background:var(--accent);color:white;}.cal-day.has-lesson.active{background:var(--accent);color:white;}/* ── Calendar popup ── */
+  .cal-popup{display:none;background:rgba(255,255,255,.8);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 18px;margin-bottom:32px;}.cal-popup.visible{display:block;}.cal-popup-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:10px;}.cal-popup-item{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:14px;transition:color .1s;}.cal-popup-item:last-child{border-bottom:none;}.cal-popup-item:hover{color:var(--accent);}.cal-popup-arrow{margin-left:auto;color:var(--ink-mute);font-size:14px;}/* ── Lesson list ── */
+  .lesson-list{list-style:none;display:flex;flex-direction:column;gap:8px;}.lesson-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:16px 20px;text-decoration:none;color:inherit;transition:border-color .15s,background .15s,transform .15s;}.lesson-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}/* reading cards get brown left border */
+  .lesson-link[href^="readings/"]{border-left-color:var(--reading-accent);}.lesson-link[href^="readings/"]:hover{border-color:var(--reading-accent);}/* about card gets blue left border */
+  .lesson-link[href="my-name-katakana.html"]{border-left-color:var(--about-accent);}.lesson-link[href="my-name-katakana.html"]:hover{border-color:var(--about-accent);}.lesson-meta{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:4px;}.lesson-title{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:8px;}.lesson-title .arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s;}.lesson-link:hover .lesson-title .arrow{color:var(--accent);transform:translateX(4px);}.lesson-summary{font-size:14px;color:var(--ink-soft);}/* ── Footer ── */
+  .footer-area{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.1em;}.footer-area a{color:var(--accent);text-decoration:none;}.footer-area a:hover{text-decoration:underline;}.footer-area .seal{width:40px;height:40px;border:2px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Shippori Mincho',serif;font-weight:700;font-size:16px;transform:rotate(-6deg);}@media(max-width:600px){.container{padding:32px 18px 64px;}.hero h1{font-size:36px;}.cal-wrap{grid-template-columns:1fr;}.stat-value{font-size:28px;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+</head>
+<body>
+<div class="container">
+
+  <header class="masthead">
+    <div class="left">カリン · 日本語</div>
+    <div class="center">学 習 日 誌</div>
+    <div class="right">2026 · Spring</div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-kicker">— Japanese Learning Log —</div>
+    <h1>日本語 <span class="accent">学習日誌</span></h1>
+    <p class="subtitle">每天一點點 · One step at a time</p>
+  </div>
+
+  <!-- data-kana-base / data-words-base：開始記錄前就學的底數 -->
+  <div class="stats" id="stats" data-kana-base="0" data-words-base="0">
+    <div class="stat">
+      <div class="stat-value" id="stat-lessons">—</div>
+      <div class="stat-label">Lessons</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-words">—</div>
+      <div class="stat-label">Words</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-kana">—</div>
+      <div class="stat-label">Kana</div>
+    </div>
+  </div>
+
+  <div class="divider" style="margin-bottom:20px;">学習カレンダー · Calendar</div>
+  <div class="cal-wrap" id="cal-wrap"></div>
+  <div class="cal-popup" id="cal-popup">
+    <div class="cal-popup-date" id="cal-popup-date"></div>
+    <div id="cal-popup-items"></div>
+  </div>
+
+  <div class="divider" style="margin:40px 0 16px;">關於我 · About</div>
+  <ul class="lesson-list" style="margin-bottom:40px;">
+    <li>
+      <a class="lesson-link" href="my-name-katakana.html">
+        <div class="lesson-meta">私の名前 · My Name in Japanese</div>
+        <div class="lesson-title">シー・カリン <span class="arrow">→</span></div>
+        <div class="lesson-summary">用片假名寫名字，附每個文字的羅馬拼音與發音</div>
+      </a>
+    </li>
+  </ul>
+
+  <div class="divider" style="margin-bottom:16px;">學習紀錄 · Log</div>
+
+  <ul class="lesson-list" id="lesson-list">
+    <li>
+      <a class="lesson-link" href="readings/2026-05-05-reading-cho.html" data-kana="0" data-words="11" data-date="2026-05-05">
+        <div class="lesson-meta">2026 · May 5 · Tue · Reading</div>
+        <div class="lesson-title">蝶の話 · 今日の読書 <span class="arrow">→</span></div>
+        <div class="lesson-summary">いつも同じ夢を見る ── 文章閱讀筆記，含假名對照、單字、助詞與 してくれる 句型</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-04-ha-row.html" data-kana="5" data-words="11" data-date="2026-05-04">
+        <div class="lesson-meta">2026 · May 4 · Mon · Lesson</div>
+        <div class="lesson-title">は行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">は・ひ・ふ・へ・ほ，含助詞は的特殊發音 wa、單字與句子</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-04-kana.html" data-kana="0" data-words="0" data-date="2026-05-04">
+        <div class="lesson-meta">2026 · May 4 · Mon · Lesson</div>
+        <div class="lesson-title">假名是什麼？平假名 vs 片假名 <span class="arrow">→</span></div>
+        <div class="lesson-summary">仮名（かな）的概念、平假名與片假名的差異與用途對照</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-04-seasons.html" data-kana="0" data-words="8" data-date="2026-05-04">
+        <div class="lesson-meta">2026 · May 4 · Mon · Lesson</div>
+        <div class="lesson-title">春夏秋冬 <span class="arrow">→</span></div>
+        <div class="lesson-summary">はる・なつ・あき・ふゆ + 喜歡的用法</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-03-na-row.html" data-kana="5" data-words="9" data-date="2026-05-03">
+        <div class="lesson-meta">2026 · May 3 · Sun · Lesson</div>
+        <div class="lesson-title">な行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">な・に・ぬ・ね・の，配上 いぬ、あに、あね 等單字</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-03-numbers.html" data-kana="0" data-words="10" data-date="2026-05-03">
+        <div class="lesson-meta">2026 · May 3 · Sun · Lesson</div>
+        <div class="lesson-title">數字 1–10 <span class="arrow">→</span></div>
+        <div class="lesson-summary">いち到じゅう，注意 4/7/9 有兩種念法</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-02-ashita.html" data-kana="0" data-words="8" data-date="2026-05-02">
+        <div class="lesson-meta">2026 · May 2 · Sat · Lesson</div>
+        <div class="lesson-title">あした + 句子 <span class="arrow">→</span></div>
+        <div class="lesson-summary">あした、またあした、あしたね 等實用表達</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-02-ta-row.html" data-kana="5" data-words="8" data-date="2026-05-02">
+        <div class="lesson-meta">2026 · May 2 · Sat · Lesson</div>
+        <div class="lesson-title">た行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">た・ち・つ・て・と，注意 ち＝chi、つ＝tsu 的特殊發音</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-01-sa-row.html" data-kana="5" data-words="8" data-date="2026-05-01">
+        <div class="lesson-meta">2026 · May 1 · Fri · Lesson</div>
+        <div class="lesson-title">さ行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">さ・し・す・せ・そ，注意 し＝shi 的特殊發音</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-04-30-ka-row.html" data-kana="5" data-words="8" data-date="2026-04-30">
+        <div class="lesson-meta">2026 · Apr 30 · Thu · Lesson</div>
+        <div class="lesson-title">か行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">か・き・く・け・こ，第一個子音行</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-04-29-a-row.html" data-kana="5" data-words="8" data-date="2026-04-29">
+        <div class="lesson-meta">2026 · Apr 29 · Wed · Lesson</div>
+        <div class="lesson-title">あ行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">あ・い・う・え・お，五十音の起點，五個基本母音</div>
+      </a>
+    </li>
+  </ul>
+
+  <footer class="footer-area">
+    <div><a href="https://chialin.me">chialin.me</a> · <a href="https://blog.chialin.me">blog</a></div>
+    <div class="seal">日</div>
+    <div>毎日少しずつ。</div>
+  </footer>
+</div>
+
+<script>
+  /* ── Stats ── */
+  const stats   = document.getElementById('stats');
+  const lessons = document.querySelectorAll('.lesson-link[data-kana]');
+  const kanaBase  = parseInt(stats.dataset.kanaBase)  || 0;
+  const wordsBase = parseInt(stats.dataset.wordsBase) || 0;
+  let totalKana = kanaBase, totalWords = wordsBase;
+  lessons.forEach(l => {
+    totalKana  += parseInt(l.dataset.kana)  || 0;
+    totalWords += parseInt(l.dataset.words) || 0;
+  });
+  document.getElementById('stat-lessons').textContent = lessons.length;
+  document.getElementById('stat-words').textContent   = totalWords;
+  document.getElementById('stat-kana').textContent    = totalKana;
+
+  /* ── Build lesson map by date ── */
+  const byDate = {};
+  document.querySelectorAll('.lesson-link[data-date]').forEach(link => {
+    const d = link.dataset.date;
+    if (!byDate[d]) byDate[d] = [];
+    const title = link.querySelector('.lesson-title').childNodes[0].textContent.trim();
+    byDate[d].push({ title, href: link.getAttribute('href') });
+  });
+
+  /* ── Calendar renderer ── */
+  const MONTHS = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+  const DOWS   = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  let activeDay = null;
+
+  function renderMonth(year, month) {
+    const wrap = document.createElement('div');
+    wrap.className = 'cal-month';
+
+    const title = document.createElement('div');
+    title.className = 'cal-month-title';
+    title.textContent = `${MONTHS[month]} ${year}`;
+    wrap.appendChild(title);
+
+    const grid = document.createElement('div');
+    grid.className = 'cal-grid';
+
+    DOWS.forEach(d => {
+      const cell = document.createElement('div');
+      cell.className = 'cal-dow';
+      cell.textContent = d;
+      grid.appendChild(cell);
+    });
+
+    const firstDow = new Date(year, month, 1).getDay();
+    for (let i = 0; i < firstDow; i++) {
+      const blank = document.createElement('div');
+      blank.className = 'cal-day empty';
+      grid.appendChild(blank);
+    }
+
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    for (let d = 1; d <= daysInMonth; d++) {
+      const dateKey = `${year}-${String(month + 1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const cell = document.createElement('div');
+      cell.className = 'cal-day';
+      cell.textContent = d;
+      if (byDate[dateKey]) {
+        cell.classList.add('has-lesson');
+        cell.title = byDate[dateKey].map(l => l.title).join(' / ');
+        cell.addEventListener('click', () => showPopup(dateKey, cell));
+      }
+      grid.appendChild(cell);
+    }
+    wrap.appendChild(grid);
+    return wrap;
+  }
+
+  function showPopup(dateKey, cell) {
+    const popup   = document.getElementById('cal-popup');
+    const dateEl  = document.getElementById('cal-popup-date');
+    const itemsEl = document.getElementById('cal-popup-items');
+    if (activeDay === dateKey) {
+      activeDay = null;
+      popup.classList.remove('visible');
+      document.querySelectorAll('.cal-day.active').forEach(el => el.classList.remove('active'));
+      return;
+    }
+    activeDay = dateKey;
+    document.querySelectorAll('.cal-day.active').forEach(el => el.classList.remove('active'));
+    cell.classList.add('active');
+    const [y, m, d] = dateKey.split('-');
+    const dt = new Date(+y, +m - 1, +d);
+    dateEl.textContent = dt.toLocaleDateString('zh-Hant', { year:'numeric', month:'long', day:'numeric', weekday:'long' });
+    itemsEl.innerHTML = '';
+    byDate[dateKey].forEach(lesson => {
+      const a = document.createElement('a');
+      a.className = 'cal-popup-item';
+      a.href = lesson.href;
+      a.innerHTML = `<span>${lesson.title}</span><span class="cal-popup-arrow">→</span>`;
+      itemsEl.appendChild(a);
+    });
+    popup.classList.add('visible');
+  }
+
+  // 自動取最近兩個有課的月份來顯示
+  const calWrap = document.getElementById('cal-wrap');
+  const monthSet = new Set(Object.keys(byDate).map(d => d.slice(0, 7)));
+  const sortedMonths = [...monthSet].sort().slice(-2);
+  sortedMonths.forEach(ym => {
+    const [y, m] = ym.split('-').map(Number);
+    calWrap.appendChild(renderMonth(y, m - 1));
+  });
+</script>
+</body>
+</html>

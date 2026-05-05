@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文數字 1-10 發音練習</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}50%{transform:scale(1.08);}}/* numbers page */
+/* topic/phrase pages */
+/* kana intro page */
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap"><a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">語彙 · Vocabulary</div>
+    <div class="center">今 日 の 学 習</div>
+    <div class="right">2026 / 05 / 03</div>
+  </header>
+
+  <h1 class="page-title">数字<span class="accent"> 1–10</span></h1>
+  <p class="page-subtitle">一から十まで — 注意 4・7・9 有兩種念法</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <button class="count-all" id="countAll">▶ 連續念 1 到 10（基本念法）</button>
+
+  <div id="numbers"></div>
+
+  <div class="note">
+    <strong>💡 小提醒：</strong><br>
+    • 「し」「く」聽起來像「死」「苦」，日本人覺得不吉利<br>
+    • 4 → 平常單獨講常用 <strong>yon</strong><br>
+    • 7 → 平常單獨講常用 <strong>nana</strong><br>
+    • 9 → 平常單獨講常用 <strong>kyuu</strong><br>
+    • 但「1, 2, 3...」一路數下去時，習慣用 し、しち、く
+  </div>
+</div>
+
+<script>
+  const numbers = [
+    { num: 1, readings: [{ ja: 'いち', romaji: 'ichi' }] },
+    { num: 2, readings: [{ ja: 'に', romaji: 'ni' }] },
+    { num: 3, readings: [{ ja: 'さん', romaji: 'san' }] },
+    { num: 4, readings: [{ ja: 'し', romaji: 'shi' }, { ja: 'よん', romaji: 'yon' }] },
+    { num: 5, readings: [{ ja: 'ご', romaji: 'go' }] },
+    { num: 6, readings: [{ ja: 'ろく', romaji: 'roku' }] },
+    { num: 7, readings: [{ ja: 'しち', romaji: 'shichi' }, { ja: 'なな', romaji: 'nana' }] },
+    { num: 8, readings: [{ ja: 'はち', romaji: 'hachi' }] },
+    { num: 9, readings: [{ ja: 'きゅう', romaji: 'kyuu' }, { ja: 'く', romaji: 'ku' }] },
+    { num: 10, readings: [{ ja: 'じゅう', romaji: 'juu' }] },
+  ];
+
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  // 頁面載入時預先快取聲音，避免第一次播放選到錯誤聲音
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+
+      if (button) {
+        button.classList.add('playing');
+        button.textContent = '🔊';
+      }
+
+      u.onend = () => {
+        if (button) {
+          button.classList.remove('playing');
+          button.textContent = '▶';
+        }
+        resolve();
+      };
+      u.onerror = () => {
+        if (button) {
+          button.classList.remove('playing');
+          button.textContent = '▶';
+        }
+        resolve();
+      };
+
+      speechSynthesis.speak(u);
+    });
+  }
+
+  // 渲染數字卡片
+  const container = document.getElementById('numbers');
+  numbers.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'number-card';
+    card.innerHTML = `
+      <div class="number-big">${item.num}</div>
+      <div class="readings">
+        ${item.readings.map(r => `
+          <div class="reading-row">
+            <div class="reading-info">
+              <div class="japanese">${r.ja}</div>
+              <div class="romaji">${r.romaji}</div>
+            </div>
+            <button class="play-btn" data-text="${r.ja}" aria-label="播放">▶</button>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  // 綁定每個按鈕
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      speak(btn.dataset.text, btn);
+    });
+  });
+
+  // 連續念 1 到 10
+  document.getElementById('countAll').addEventListener('click', async () => {
+    const sequence = ['いち', 'に', 'さん', 'し', 'ご', 'ろく', 'しち', 'はち', 'きゅう', 'じゅう'];
+    for (const word of sequence) {
+      await speak(word, null);
+      await new Promise(r => setTimeout(r, 150));
+    }
+  });
+</script>
+</body>
+</html>

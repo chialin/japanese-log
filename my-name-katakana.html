@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>私の名前 · シ・カリン</title>
+<style>
+:root{--paper:#f2f6fb;--ink:#152030;--ink-soft:#304560;--ink-mute:#6080a0;--accent:#2a5f9e;--accent-soft:#80b0d0;--accent-pale:#deeef8;--line:#c0d8ec;}
+  .name-display{text-align:center;margin-bottom:48px;}.name-kicker{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);letter-spacing:.15em;font-size:14px;margin-bottom:16px;}.name-jp{font-family:'Shippori Mincho',serif;font-weight:800;font-size:clamp(52px,8vw,80px);line-height:1.05;letter-spacing:.08em;color:var(--ink);margin-bottom:12px;}.name-jp .accent{color:var(--accent);}.name-order{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);letter-spacing:.12em;}
+  .parts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}.part-card{background:rgba(255,255,255,.55);border:1px solid var(--line);border-top:3px solid var(--accent);padding:20px 24px;}.part-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px;}.part-jp{font-family:'Shippori Mincho',serif;font-size:40px;font-weight:700;color:var(--ink);margin-bottom:6px;letter-spacing:.05em;}.part-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--accent);letter-spacing:.08em;margin-bottom:4px;}.part-meaning{font-size:14px;color:var(--ink-mute);letter-spacing:.05em;}
+  .pronounce-area{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:24px;margin-bottom:16px;text-align:center;}.pronounce-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px;}.pronounce-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;}.pronounce-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:white;border:none;padding:10px 20px;font-family:'Shippori Mincho',serif;font-size:14px;letter-spacing:.1em;cursor:pointer;transition:background .15s;}.pronounce-btn:hover{background:var(--ink);}.pronounce-btn.speaking{background:var(--ink-soft);animation:pulse .8s infinite;}50%{transform:scale(1.04);}}.pronounce-hint{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);letter-spacing:.08em;margin-top:8px;}
+  .tip-box{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 24px;margin-bottom:24px;}.tip-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px;}.tip-text{font-size:14px;color:var(--ink-soft);line-height:1.9;}.tip-text strong{color:var(--ink);}
+  .chars-section{margin-bottom:24px;}.chars{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}.char-box{background:rgba(255,255,255,.7);border:1px solid var(--line);padding:16px 14px;text-align:center;min-width:80px;position:relative;}.char-box::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--accent);}.char-big{font-family:'Shippori Mincho',serif;font-size:36px;font-weight:700;color:var(--ink);margin-bottom:6px;}.char-roma{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--accent);letter-spacing:.05em;}.char-meaning{font-size:14px;color:var(--ink-mute);margin-top:4px;letter-spacing:.04em;}
+  .footer-area{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.1em;}.footer-area .seal{width:44px;height:44px;border:2px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Shippori Mincho',serif;font-weight:700;font-size:18px;transform:rotate(-6deg);}@media(max-width:600px){.parts{grid-template-columns:1fr;}.part-jp{font-size:32px;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <a href="index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">私について · About</div>
+    <div class="center">私 の 名 前</div>
+    <div class="right">2026 / 05</div>
+  </header>
+
+  <div class="name-display">
+    <div class="name-kicker">— My Name in Japanese —</div>
+    <div class="name-jp"><span class="accent">シ</span>・カリン</div>
+    <div class="name-order">日本語の順番：姓（シ）＋ 名（カリン）</div>
+  </div>
+
+  <div class="divider">名前の分解 · Name Breakdown</div>
+
+  <div class="parts">
+    <div class="part-card">
+      <div class="part-label">姓（みょうじ）· Surname</div>
+      <div class="part-jp">シ</div>
+      <div class="part-romaji">Shi</div>
+      <div class="part-meaning">shi（シ）</div>
+    </div>
+    <div class="part-card">
+      <div class="part-label">名（なまえ）· First Name</div>
+      <div class="part-jp">カリン</div>
+      <div class="part-romaji">Karin</div>
+      <div class="part-meaning">ka・ri・n（カ＋リ＋ン）</div>
+    </div>
+  </div>
+
+  <div class="pronounce-area" id="pronounce-area">
+    <div class="pronounce-label">— 發音練習 · Pronunciation —</div>
+    <div class="pronounce-row">
+      <button class="pronounce-btn" onclick="speak('シ・カリン', this)">▶ 全名：シ・カリン</button>
+    </div>
+    <div class="pronounce-row">
+      <button class="pronounce-btn" onclick="speak('シ', this)">▶ シ（Shi）</button>
+      <button class="pronounce-btn" onclick="speak('カリン', this)">▶ カリン（Karin）</button>
+    </div>
+    <div class="pronounce-hint">點擊按鈕聽日語發音 · クリックして発音を聞く</div>
+  </div>
+
+  <div class="divider">文字の分解 · Character Breakdown</div>
+
+  <div class="chars-section">
+    <div class="chars">
+      <div class="char-box">
+        <div class="char-big">シ</div>
+        <div class="char-roma">shi</div>
+        <div class="char-meaning">姓</div>
+      </div>
+      <div class="char-box">
+        <div class="char-big">カ</div>
+        <div class="char-roma">ka</div>
+        <div class="char-meaning">名の1文字目</div>
+      </div>
+      <div class="char-box">
+        <div class="char-big">リ</div>
+        <div class="char-roma">ri</div>
+        <div class="char-meaning">名の2文字目</div>
+      </div>
+      <div class="char-box">
+        <div class="char-big">ン</div>
+        <div class="char-roma">n</div>
+        <div class="char-meaning">名の3文字目</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">豆知識 · Trivia</div>
+
+  <div class="tip-box">
+    <div class="tip-title">— 花梨（かりん）—</div>
+    <div class="tip-text">
+      <strong>カリン</strong> は日本語で「花梨」（かりん）とも書き、バラ科の果樹の名前です。香りがよい実がなります 🍐<br><br>
+      片假名（カタカナ）は外来語や外国人の名前を書くときに使います。あなたの名前はとても自然に片假名で書けます！<br><br>
+      <span style="color:var(--ink-mute);font-size:13px;">
+      「カリン」在日文中也可以寫作「花梨」（かりん），是薔薇科的果樹名稱，會結出香氣宜人的果實 🍐<br>
+      片假名（カタカナ）用於書寫外來語和外國人名字。你的名字用片假名寫起來非常自然！
+      </span>
+    </div>
+  </div>
+
+  <footer class="footer-area">
+    <div>日本語学習ログ · 2026年5月</div>
+    <div class="seal">名</div>
+    <div>私の名前。</div>
+  </footer>
+
+</div>
+
+<script>
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, btn) {
+    if (!window.speechSynthesis) return;
+    speechSynthesis.cancel();
+    document.querySelectorAll('.pronounce-btn').forEach(b => b.classList.remove('speaking'));
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'ja-JP'; u.rate = 0.85; u.pitch = 1.05;
+    const voice = getJapaneseVoice();
+    if (voice) u.voice = voice;
+    btn.classList.add('speaking');
+    u.onend = () => btn.classList.remove('speaking');
+    u.onerror = () => btn.classList.remove('speaking');
+    speechSynthesis.speak(u);
+  }
+</script>
+</body>
+</html>

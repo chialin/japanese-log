@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文 た行 練習</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}50%{transform:scale(1.08);}}/* numbers page */
+/* topic/phrase pages */
+/* kana intro page */
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">五十音 · Gojuon</div>
+    <div class="center">行 の 練 習</div>
+    <div class="right">2026 / 05 / 02</div>
+  </header>
+
+  <h1 class="page-title">た<span class="accent">行</span></h1>
+  <p class="page-subtitle">た・ち・つ・て・と — ち＝chi，つ＝tsu</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card" data-text="た"><div class="kana-big">た</div><div class="kana-romaji">ta</div></div>
+    <div class="kana-card" data-text="ち"><div class="kana-big">ち</div><div class="kana-romaji">chi</div></div>
+    <div class="kana-card" data-text="つ"><div class="kana-big">つ</div><div class="kana-romaji">tsu</div></div>
+    <div class="kana-card" data-text="て"><div class="kana-big">て</div><div class="kana-romaji">te</div></div>
+    <div class="kana-card" data-text="と"><div class="kana-big">と</div><div class="kana-romaji">to</div></div>
+  </div>
+
+  <button class="row-btn" id="rowBtn">▶ 連續念 た行</button>
+
+  <div class="tip">
+    ⚠️ <strong>た行有兩個不規則發音！</strong><br>
+    • <span class="compare">ち</span> 念 <strong>chi</strong>，不是 ti<br>
+    • <span class="compare">つ</span> 念 <strong>tsu</strong>，不是 tu — 舌頭先抵上齒，再推出去<br>
+    • <span class="compare">て</span>（te）vs <span class="compare">て</span> 看起來像反過來的「ち」，注意方向
+  </div>
+
+  <div class="tip">
+    📌 <strong>此時已學：あいうえお ＋ かきくけこ ＋ さしすせそ ＋ たちつてと</strong><br>
+    單字和句子只用這 20 個字組成。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 た行單字（只用 あ〜た行）</div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">ちち</div><div class="word-romaji">chichi</div><div class="word-meaning">爸爸（自謙說法）</div></div>
+      <button class="play-btn" data-text="ちち">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">つき</div><div class="word-romaji">tsuki</div><div class="word-meaning">月亮／月份</div></div>
+      <button class="play-btn" data-text="つき">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">て</div><div class="word-romaji">te</div><div class="word-meaning">手</div></div>
+      <button class="play-btn" data-text="て">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">たかい</div><div class="word-romaji">takai</div><div class="word-meaning">高的／貴的</div></div>
+      <button class="play-btn" data-text="たかい">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">ちいさい</div><div class="word-romaji">chiisai</div><div class="word-meaning">小的</div></div>
+      <button class="play-btn" data-text="ちいさい">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">とけい</div><div class="word-romaji">tokei</div><div class="word-meaning">時鐘／手錶</div></div>
+      <button class="play-btn" data-text="とけい">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">あした</div><div class="word-romaji">ashita</div><div class="word-meaning">明天</div></div>
+      <button class="play-btn" data-text="あした">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">うた</div><div class="word-romaji">uta</div><div class="word-meaning">歌</div></div>
+      <button class="play-btn" data-text="うた">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">した</div><div class="word-romaji">shita</div><div class="word-meaning">下面／舌頭</div></div>
+      <button class="play-btn" data-text="した">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">おいしい</div><div class="word-romaji">oishii</div><div class="word-meaning">好吃</div></div>
+      <button class="play-btn" data-text="おいしい">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 簡單句子（只用 あ〜た行）</div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">あした、いく！</div><div class="word-romaji">ashita, iku!</div><div class="word-meaning">明天去！</div></div>
+      <button class="play-btn" data-text="あした、いく！">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">うた、おいしい！</div><div class="word-romaji">uta, oishii!</div><div class="word-meaning">歌好聽！（說錯了，可以拿來練發音）</div></div>
+      <button class="play-btn" data-text="うた、おいしい！">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">うえ？した？</div><div class="word-romaji">ue? shita?</div><div class="word-meaning">上面？還是下面？</div></div>
+      <button class="play-btn" data-text="うえ？した？">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content"><div class="word-ja">ちいさい とけい</div><div class="word-romaji">chiisai tokei</div><div class="word-meaning">小的時鐘</div></div>
+      <button class="play-btn" data-text="ちいさい とけい">▶</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue  = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => { rateValue.textContent = rateSlider.value + 'x'; });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  // 頁面載入時預先快取聲音，避免第一次播放選到錯誤聲音
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP'; u.rate = parseFloat(rateSlider.value); u.pitch = 1;
+      const voice = getJapaneseVoice(); if (voice) u.voice = voice;
+      if (button) button.classList.add('playing');
+      u.onend = () => { if (button) button.classList.remove('playing'); resolve(); };
+      u.onerror = () => { if (button) button.classList.remove('playing'); resolve(); };
+      speechSynthesis.speak(u);
+    });
+  }
+
+  document.querySelectorAll('.kana-card').forEach(card => card.addEventListener('click', () => speak(card.dataset.text, card)));
+  document.querySelectorAll('.play-btn').forEach(btn => btn.addEventListener('click', e => { e.stopPropagation(); speak(btn.dataset.text, btn); }));
+  document.getElementById('rowBtn').addEventListener('click', async () => {
+    const row = ['た','ち','つ','て','と'];
+    const cards = document.querySelectorAll('.kana-card');
+    for (let i = 0; i < row.length; i++) { await speak(row[i], cards[i]); await new Promise(r => setTimeout(r, 150)); }
+  });
+  if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = () => {};
+</script>
+</body>
+</html>

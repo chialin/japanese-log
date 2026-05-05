@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文 は行 練習</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}50%{transform:scale(1.08);}}/* numbers page */
+/* topic/phrase pages */
+/* kana intro page */
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">五十音 · Gojuon</div>
+    <div class="center">行 の 練 習</div>
+    <div class="right">2026 / 05 / 04</div>
+  </header>
+
+  <h1 class="page-title">は<span class="accent">行</span></h1>
+  <p class="page-subtitle">は・ひ・ふ・へ・ほ — は當助詞時念 wa</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card" data-text="は">
+      <div class="kana-big">は</div>
+      <div class="kana-romaji">ha</div>
+    </div>
+    <div class="kana-card" data-text="ひ">
+      <div class="kana-big">ひ</div>
+      <div class="kana-romaji">hi</div>
+    </div>
+    <div class="kana-card" data-text="ふ">
+      <div class="kana-big">ふ</div>
+      <div class="kana-romaji">fu</div>
+    </div>
+    <div class="kana-card" data-text="へ">
+      <div class="kana-big">へ</div>
+      <div class="kana-romaji">he</div>
+    </div>
+    <div class="kana-card" data-text="ほ">
+      <div class="kana-big">ほ</div>
+      <div class="kana-romaji">ho</div>
+    </div>
+  </div>
+
+  <button class="row-btn" id="rowBtn">▶ 連續念 は行</button>
+
+  <div class="alert">
+    ⚠️ <strong>特別注意：は行當助詞時發音會變！</strong><br>
+    • <span class="compare">は</span> 當主題助詞時，念 <strong>wa</strong>（不是 ha）<br>
+    &emsp;例：わたし<strong>は</strong>カリンです → watashi <strong>wa</strong> Karin desu<br>
+    • <span class="compare">へ</span> 當方向助詞時，念 <strong>e</strong>（不是 he）<br>
+    &emsp;例：とうきょう<strong>へ</strong> → tōkyō <strong>e</strong>
+  </div>
+
+  <div class="tip">
+    💡 <strong>記憶小技巧</strong><br>
+    • <span class="compare">ふ</span>（fu）不是 hu！嘴唇不要用力，像輕輕吹氣<br>
+    • <span class="compare">ひ</span>（hi）像英文 "he"，但短一點<br>
+    • <span class="compare">ほ</span>（ho）vs <span class="compare">ほ</span> 跟 <span class="compare">は</span> 長得有點像，注意右邊多一橫
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 は行單字</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">はな</div>
+        <div class="word-romaji">hana</div>
+        <div class="word-meaning">花</div>
+      </div>
+      <button class="play-btn" data-text="はな">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">はる</div>
+        <div class="word-romaji">haru</div>
+        <div class="word-meaning">春天（你學過了！）</div>
+      </div>
+      <button class="play-btn" data-text="はる">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">はい</div>
+        <div class="word-romaji">hai</div>
+        <div class="word-meaning">是、好</div>
+      </div>
+      <button class="play-btn" data-text="はい">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ひと</div>
+        <div class="word-romaji">hito</div>
+        <div class="word-meaning">人</div>
+      </div>
+      <button class="play-btn" data-text="ひと">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ふゆ</div>
+        <div class="word-romaji">fuyu</div>
+        <div class="word-meaning">冬天（你學過了！）</div>
+      </div>
+      <button class="play-btn" data-text="ふゆ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">へや</div>
+        <div class="word-romaji">heya</div>
+        <div class="word-meaning">房間</div>
+      </div>
+      <button class="play-btn" data-text="へや">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ほん</div>
+        <div class="word-romaji">hon</div>
+        <div class="word-meaning">書</div>
+      </div>
+      <button class="play-btn" data-text="ほん">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ほし</div>
+        <div class="word-romaji">hoshi</div>
+        <div class="word-meaning">星星</div>
+      </div>
+      <button class="play-btn" data-text="ほし">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">はは</div>
+        <div class="word-romaji">haha</div>
+        <div class="word-meaning">媽媽（自謙說法）</div>
+      </div>
+      <button class="play-btn" data-text="はは">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ひだり</div>
+        <div class="word-romaji">hidari</div>
+        <div class="word-meaning">左邊</div>
+      </div>
+      <button class="play-btn" data-text="ひだり">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ふたつ</div>
+        <div class="word-romaji">futatsu</div>
+        <div class="word-meaning">兩個（日語原生數數法）</div>
+      </div>
+      <button class="play-btn" data-text="ふたつ">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>ふたつ 是日語原生的數數法</strong><br>
+    你之前學的 いち・に・さん 是漢字音讀，另外還有一套純日語的數法：<br>
+    　ひとつ（1個）　ふたつ（2個）　みっつ（3個）<br>
+    　よっつ（4個）　いつつ（5個）<br>
+    通常用來數沒有特定單位的東西，像蘋果、糖果、問題等。
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 簡單句子</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">はい</div>
+        <div class="word-romaji">hai</div>
+        <div class="word-meaning">是的</div>
+      </div>
+      <button class="play-btn" data-text="はい">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ほんが すきです</div>
+        <div class="word-romaji">hon ga suki desu</div>
+        <div class="word-meaning">我喜歡書</div>
+      </div>
+      <button class="play-btn" data-text="ほんが すきです">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">はなが きれいです</div>
+        <div class="word-romaji">hana ga kirei desu</div>
+        <div class="word-meaning">花很漂亮</div>
+      </div>
+      <button class="play-btn" data-text="はなが きれいです">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">へやに います</div>
+        <div class="word-romaji">heya ni imasu</div>
+        <div class="word-meaning">在房間裡</div>
+      </div>
+      <button class="play-btn" data-text="へやに います">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">わたしは カリンです</div>
+        <div class="word-romaji">watashi wa Karin desu</div>
+        <div class="word-meaning">我是 Karin（注意：は 念 wa）</div>
+      </div>
+      <button class="play-btn" data-text="わたしは カリンです">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">はるの はなが すきです</div>
+        <div class="word-romaji">haru no hana ga suki desu</div>
+        <div class="word-meaning">我喜歡春天的花</div>
+      </div>
+      <button class="play-btn" data-text="はるの はなが すきです">▶</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  // 頁面載入時預先快取聲音，避免第一次播放選到錯誤聲音
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+      if (button) button.classList.add('playing');
+      u.onend = () => { if (button) button.classList.remove('playing'); resolve(); };
+      u.onerror = () => { if (button) button.classList.remove('playing'); resolve(); };
+      speechSynthesis.speak(u);
+    });
+  }
+
+  document.querySelectorAll('.kana-card').forEach(card => {
+    card.addEventListener('click', () => speak(card.dataset.text, card));
+  });
+
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => { e.stopPropagation(); speak(btn.dataset.text, btn); });
+  });
+
+  document.getElementById('rowBtn').addEventListener('click', async () => {
+    const row = ['は', 'ひ', 'ふ', 'へ', 'ほ'];
+    const cards = document.querySelectorAll('.kana-card');
+    for (let i = 0; i < row.length; i++) {
+      await speak(row[i], cards[i]);
+      await new Promise(r => setTimeout(r, 150));
+    }
+  });
+
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = () => {};
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文基礎 - 假名是什麼？</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}50%{transform:scale(1.08);}}/* numbers page */
+/* topic/phrase pages */
+/* kana intro page */
+/* kana intro page - custom components */
+.tree-box{background:rgba(255,255,255,.5);border:1px solid var(--line);padding:24px;text-align:center;margin-bottom:20px;}.tree-root{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:4px;}.tree-root-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);margin-bottom:16px;}.tree-branches{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}.branch{display:flex;flex-direction:column;align-items:center;}.branch-card{background:rgba(255,255,255,.7);border:1px solid var(--line);padding:16px 20px;text-align:center;width:100%;}.branch-card.hira{border-top:3px solid var(--accent);}.branch-card.kata{border-top:3px solid #2a5f9e;}.branch-name{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;margin-bottom:4px;}.branch-name.hira{color:var(--accent);}.branch-name.kata{color:#2a5f9e;}.branch-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);letter-spacing:.1em;margin-bottom:10px;}.branch-char{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--ink);}/* card = editorial section block */
+.card{background:rgba(255,255,255,.5);border:1px solid var(--line);margin-bottom:16px;overflow:hidden;}.card-header{padding:12px 20px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.4);}.card-badge{font-family:'Shippori Mincho',serif;font-size:14px;font-weight:600;letter-spacing:.05em;color:var(--ink);}.card-badge.hira{color:var(--accent);}.card-badge.kata{color:#2a5f9e;}.card-badge.kana{color:var(--ink);}.card-body{padding:16px 20px;font-size:14px;color:var(--ink-soft);line-height:1.9;}.card-body ul{padding-left:20px;margin-top:8px;}.card-body li{margin-bottom:4px;}.card-body strong{color:var(--ink);}/* compare table */
+.compare-table{width:100%;border-collapse:collapse;font-size:14px;}.compare-table thead th{background:var(--ink);color:var(--paper);padding:10px 14px;text-align:left;font-family:'Shippori Mincho',serif;font-weight:500;font-size:14px;}.compare-table tbody td{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft);}.compare-table tbody tr:last-child td{border-bottom:none;}.compare-table tbody tr:hover{background:rgba(192,57,94,.04);}.tag-hira,.tag-kata{display:inline-block;padding:2px 8px;font-size:14px;font-weight:600;font-family:'Shippori Mincho',serif;}.tag-hira{background:var(--accent-pale);color:var(--accent);}.tag-kata{background:#deeef8;color:#2a5f9e;}/* example rows */
+.example-row{display:flex;align-items:center;gap:14px;padding:12px 20px;border-bottom:1px solid var(--line);}.example-row:last-of-type{border-bottom:none;}.ex-chars{display:flex;align-items:center;gap:8px;}.ex-hira,.ex-kata{font-family:'Shippori Mincho',serif;font-size:32px;font-weight:700;display:block;text-align:center;}.ex-hira{color:var(--accent);}.ex-kata{color:#2a5f9e;}.ex-label{font-size:14px;letter-spacing:.08em;color:var(--ink-mute);text-align:center;margin-top:2px;}.ex-info{flex:1;}.ex-roma{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--accent);}.ex-meaning{font-size:14px;color:var(--ink-soft);margin-top:2px;}.speak-btn{background:transparent;color:var(--accent);border:1px solid var(--accent-soft);padding:7px 14px;font-size:14px;cursor:pointer;font-family:'Shippori Mincho',serif;letter-spacing:.05em;transition:all .15s;flex-shrink:0;}.speak-btn:hover{background:var(--accent);color:white;border-color:var(--accent);}.speak-btn.speaking{background:var(--accent);color:white;border-color:var(--accent);}/* footer */
+.footer{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);text-align:center;}.footer a{color:var(--accent);text-decoration:none;}.footer a:hover{text-decoration:underline;}@media(max-width:500px){.tree-branches{grid-template-columns:1fr 1fr;}.example-row{flex-wrap:wrap;gap:8px;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">文字解說 · Kana</div>
+    <div class="center">今 日 の 学 習</div>
+    <div class="right">2026 / 05 / 04</div>
+  </header>
+
+  <h1 class="page-title">仮<span class="accent">名</span></h1>
+  <p class="page-subtitle">假名是什麼？平假名 vs 片假名</p>
+
+  <!-- 速度控制 -->
+  <div class="speed-control">
+    <label>🔊 語速</label>
+    <input type="range" id="speedRange" min="0.5" max="1.5" step="0.05" value="0.85"
+      oninput="document.getElementById('speedVal').textContent = (+this.value).toFixed(2)">
+    <span class="speed-value" id="speedVal">0.85</span>
+  </div>
+
+  <!-- 樹狀圖 -->
+  <div class="tree-box">
+    <div class="tree-root">仮名（かな）Kana</div>
+    <div class="tree-root-sub">日文字母的總稱</div>
+    <div class="tree-branches">
+      <div class="branch">
+        <div class="branch-card hira">
+          <div class="branch-name hira">平假名</div>
+          <div class="branch-en">Hiragana</div>
+          <div class="branch-char hira">あいうえお</div>
+        </div>
+      </div>
+      <div class="branch">
+        <div class="branch-card kata">
+          <div class="branch-name kata">片假名</div>
+          <div class="branch-en">Katakana</div>
+          <div class="branch-char kata">アイウエオ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">兩種字母 · Two Scripts</div>
+
+  <!-- 平假名說明 -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-badge hira">平假名 Hiragana</span>
+    </div>
+    <div class="card-body">
+      平假名是日文最基本的字母，形狀比較圓潤柔和。你現在學的 50 音就是平假名！
+      <ul>
+        <li>用來寫日文原生的詞彙：<strong>あした（明天）、いぬ（狗）</strong></li>
+        <li>用來寫動詞變化、助詞等文法結構</li>
+        <li>初學日文一定先從這裡開始</li>
+        <li>共 46 個基本字符</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 片假名說明 -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-badge kata">片假名 Katakana</span>
+    </div>
+    <div class="card-body">
+      片假名形狀比較方正銳利。和平假名對應同樣的發音，但用途不同：
+      <ul>
+        <li>寫<strong>外來語</strong>：<strong>コーヒー（咖啡 coffee）、テレビ（電視 TV）</strong></li>
+        <li>寫<strong>外國人名字和地名</strong>：シー・カリン（你的名字）</li>
+        <li>強調特定詞彙（類似斜體或粗體的效果）</li>
+        <li>也是 46 個基本字符，與平假名一一對應</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 對照表 -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-badge kana">對照比較</span>
+    </div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th><span class="tag-hira">平假名</span></th>
+          <th><span class="tag-kata">片假名</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>形狀</td>
+          <td>圓潤、曲線多</td>
+          <td>方正、直線多</td>
+        </tr>
+        <tr>
+          <td>主要用途</td>
+          <td>日文本身的詞彙、文法</td>
+          <td>外來語、外國人名</td>
+        </tr>
+        <tr>
+          <td>例子</td>
+          <td>あした、ねこ、はる</td>
+          <td>コーヒー、カリン、テレビ</td>
+        </tr>
+        <tr>
+          <td>字符數</td>
+          <td>46 個基本字</td>
+          <td>46 個基本字</td>
+        </tr>
+        <tr>
+          <td>學習順序</td>
+          <td>✅ 先學這個</td>
+          <td>⏳ 之後再學</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 發音示例 -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-badge kana">🔊 同音的平假名 vs 片假名</span>
+    </div>
+    <div class="card-body" style="margin-bottom:8px;">同樣的發音，兩種寫法：</div>
+
+    <div class="example-row">
+      <div class="ex-chars">
+        <div><span class="ex-hira">あ</span><div class="ex-label">平</div></div>
+        <div><span style="color:#ccc;font-size:16px;">＝</span></div>
+        <div><span class="ex-kata">ア</span><div class="ex-label">片</div></div>
+      </div>
+      <div class="ex-info">
+        <div class="ex-roma">a</div>
+        <div class="ex-meaning">第一個音</div>
+      </div>
+      <button class="speak-btn" onclick="speak('あ', this)">▶ あ</button>
+    </div>
+
+    <div class="example-row">
+      <div class="ex-chars">
+        <div><span class="ex-hira">か</span><div class="ex-label">平</div></div>
+        <div><span style="color:#ccc;font-size:16px;">＝</span></div>
+        <div><span class="ex-kata">カ</span><div class="ex-label">片</div></div>
+      </div>
+      <div class="ex-info">
+        <div class="ex-roma">ka</div>
+        <div class="ex-meaning">カリン 的第一個字</div>
+      </div>
+      <button class="speak-btn" onclick="speak('か', this)">▶ か</button>
+    </div>
+
+    <div class="example-row">
+      <div class="ex-chars">
+        <div><span class="ex-hira">り</span><div class="ex-label">平</div></div>
+        <div><span style="color:#ccc;font-size:16px;">＝</span></div>
+        <div><span class="ex-kata">リ</span><div class="ex-label">片</div></div>
+      </div>
+      <div class="ex-info">
+        <div class="ex-roma">ri</div>
+        <div class="ex-meaning">カリン 的第二個字</div>
+      </div>
+      <button class="speak-btn" onclick="speak('り', this)">▶ り</button>
+    </div>
+
+    <div class="example-row">
+      <div class="ex-chars">
+        <div><span class="ex-hira">ん</span><div class="ex-label">平</div></div>
+        <div><span style="color:#ccc;font-size:16px;">＝</span></div>
+        <div><span class="ex-kata">ン</span><div class="ex-label">片</div></div>
+      </div>
+      <div class="ex-info">
+        <div class="ex-roma">n</div>
+        <div class="ex-meaning">カリン 的最後一個字</div>
+      </div>
+      <button class="speak-btn" onclick="speak('ん', this)">▶ ん</button>
+    </div>
+  </div>
+
+  <!-- 實際應用例子 -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-badge kana">📝 實際文章中的樣子</span>
+    </div>
+    <div class="card-body">
+      日文一篇文章通常會同時出現兩種假名，還加上漢字：
+      <div style="margin-top:14px;padding:14px;background:#fafafa;border-radius:10px;font-size:18px;line-height:2.2;text-align:center;">
+        <span style="color:#0a7a8f;">わたし</span>は
+        <span style="color:#c43070;">カリン</span>です。
+        <span style="color:#0a7a8f;">コーヒー</span>が
+        <span style="color:#334;">好き</span>です。
+      </div>
+      <div style="margin-top:10px;font-size:14px;color:#888;text-align:center;">
+        <span style="color:#0a7a8f;">■ 平假名</span>
+        <span style="color:#c43070;">■ 片假名</span>
+        <span style="color:#334;">■ 漢字</span>
+      </div>
+      <div style="margin-top:10px;font-size:14px;color:#555;text-align:center;">
+        我是 Karin。我喜歡咖啡。
+      </div>
+      <div style="margin-top:10px;text-align:center;">
+        <button class="speak-btn" onclick="speak('わたしはカリンです。コーヒーが好きです。', this)">
+          🔊 聽整句
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="../index.html">← 回到首頁</a>　·　2026年5月4日　·　日本語学習日誌 🌸
+  </div>
+</div>
+
+<script>
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  // 頁面載入時預先快取聲音，避免第一次播放選到錯誤聲音
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, btn) {
+    if (!window.speechSynthesis) return;
+    speechSynthesis.cancel();
+    document.querySelectorAll('.speak-btn').forEach(b => b.classList.remove('speaking'));
+
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'ja-JP';
+    utter.rate = parseFloat(document.getElementById('speedRange').value);
+    utter.pitch = 1.05;
+
+    const voice = getJapaneseVoice();
+    if (voice) utter.voice = voice;
+
+    btn.classList.add('speaking');
+    utter.onend = () => btn.classList.remove('speaking');
+    utter.onerror = () => btn.classList.remove('speaking');
+    speechSynthesis.speak(utter);
+  }
+
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = () => {};
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文春夏秋冬</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+/* seasons page */
+.all-seasons-btn{background:var(--accent);color:white;border:none;width:100%;padding:14px;font-family:'Shippori Mincho',serif;font-size:14px;letter-spacing:.2em;cursor:pointer;margin-bottom:24px;transition:background .15s;}.all-seasons-btn:hover{background:var(--ink);}.seasons{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px;}.season-card{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--line);padding:20px 16px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s;}.season-card:hover{border-color:var(--accent-soft);}.season-card.playing{background:var(--accent-pale);}.season-card .emoji{font-size:36px;margin-bottom:8px;display:block;}.season-card .chinese{font-size:14px;color:var(--ink-mute);margin-bottom:4px;font-family:'Cormorant Garamond',serif;font-style:italic;}.season-card.spring{border-top-color:#e8a0b4;}.season-card.summer{border-top-color:#f59e0b;}.season-card.autumn{border-top-color:#c0395e;}.season-card.winter{border-top-color:#2a5f9e;}.extras{background:rgba(255,255,255,.5);border:1px solid var(--line);padding:16px 20px;margin-bottom:16px;}.extras-title{font-family:'Shippori Mincho',serif;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line);}.extra-item{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);}.extra-item:last-child{border-bottom:none;}.extra-content{flex:1;}.extra-ja{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);margin-bottom:2px;}.extra-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--accent);letter-spacing:.05em;}.extra-meaning{font-size:14px;color:var(--ink-soft);margin-top:2px;}.small-play-btn{background:transparent;color:var(--accent);border:1px solid var(--accent-soft);width:34px;height:34px;border-radius:50%;font-size:14px;cursor:pointer;flex-shrink:0;transition:all .15s;}.small-play-btn:hover{background:var(--accent);color:white;border-color:var(--accent);}.small-play-btn.playing{background:var(--accent);color:white;border-color:var(--accent);animation:pulse .8s infinite;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap"><a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">語彙 · Vocabulary</div>
+    <div class="center">今 日 の 学 習</div>
+    <div class="right">2026 / 05 / 04</div>
+  </header>
+
+  <h1 class="page-title">春夏<span class="accent">秋冬</span></h1>
+  <p class="page-subtitle">はる・なつ・あき・ふゆ + 喜歡的用法</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <button class="all-seasons-btn" id="allBtn">▶ 連續念：はる・なつ・あき・ふゆ</button>
+
+  <div class="seasons">
+    <div class="season-card spring" data-text="はる">
+      <div class="emoji">🌸</div>
+      <div class="chinese">春天</div>
+      <div class="japanese">はる</div>
+      <div class="romaji">haru</div>
+      <button class="play-btn">▶</button>
+    </div>
+    <div class="season-card summer" data-text="なつ">
+      <div class="emoji">🌻</div>
+      <div class="chinese">夏天</div>
+      <div class="japanese">なつ</div>
+      <div class="romaji">natsu</div>
+      <button class="play-btn">▶</button>
+    </div>
+    <div class="season-card autumn" data-text="あき">
+      <div class="emoji">🍁</div>
+      <div class="chinese">秋天</div>
+      <div class="japanese">あき</div>
+      <div class="romaji">aki</div>
+      <button class="play-btn">▶</button>
+    </div>
+    <div class="season-card winter" data-text="ふゆ">
+      <div class="emoji">❄️</div>
+      <div class="chinese">冬天</div>
+      <div class="japanese">ふゆ</div>
+      <div class="romaji">fuyu</div>
+      <button class="play-btn">▶</button>
+    </div>
+  </div>
+
+  <div class="extras">
+    <div class="extras-title">💖 喜歡某個季節</div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">はるが すき</div>
+        <div class="extra-romaji">haru ga suki</div>
+        <div class="extra-meaning">喜歡春天</div>
+      </div>
+      <button class="small-play-btn" data-text="はるが すき">▶</button>
+    </div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">なつが すき</div>
+        <div class="extra-romaji">natsu ga suki</div>
+        <div class="extra-meaning">喜歡夏天</div>
+      </div>
+      <button class="small-play-btn" data-text="なつが すき">▶</button>
+    </div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">あきが すき</div>
+        <div class="extra-romaji">aki ga suki</div>
+        <div class="extra-meaning">喜歡秋天</div>
+      </div>
+      <button class="small-play-btn" data-text="あきが すき">▶</button>
+    </div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">ふゆが すき</div>
+        <div class="extra-romaji">fuyu ga suki</div>
+        <div class="extra-meaning">喜歡冬天</div>
+      </div>
+      <button class="small-play-btn" data-text="ふゆが すき">▶</button>
+    </div>
+  </div>
+
+  <div class="extras">
+    <div class="extras-title">🏖️ 季節+休假</div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">はるやすみ</div>
+        <div class="extra-romaji">haru yasumi</div>
+        <div class="extra-meaning">春假</div>
+      </div>
+      <button class="small-play-btn" data-text="はるやすみ">▶</button>
+    </div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">なつやすみ</div>
+        <div class="extra-romaji">natsu yasumi</div>
+        <div class="extra-meaning">暑假</div>
+      </div>
+      <button class="small-play-btn" data-text="なつやすみ">▶</button>
+    </div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">ふゆやすみ</div>
+        <div class="extra-romaji">fuyu yasumi</div>
+        <div class="extra-meaning">寒假</div>
+      </div>
+      <button class="small-play-btn" data-text="ふゆやすみ">▶</button>
+    </div>
+  </div>
+
+  <div class="extras">
+    <div class="extras-title">🌏 進階</div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">しき</div>
+        <div class="extra-romaji">shiki</div>
+        <div class="extra-meaning">四季</div>
+      </div>
+      <button class="small-play-btn" data-text="しき">▶</button>
+    </div>
+    <div class="extra-item">
+      <div class="extra-content">
+        <div class="extra-ja">いまは なつです</div>
+        <div class="extra-romaji">ima wa natsu desu</div>
+        <div class="extra-meaning">現在是夏天</div>
+      </div>
+      <button class="small-play-btn" data-text="いまは なつです">▶</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  // 頁面載入時預先快取聲音，避免第一次播放選到錯誤聲音
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+
+      if (button) {
+        button.classList.add('playing');
+      }
+
+      u.onend = () => {
+        if (button) button.classList.remove('playing');
+        resolve();
+      };
+      u.onerror = () => {
+        if (button) button.classList.remove('playing');
+        resolve();
+      };
+
+      speechSynthesis.speak(u);
+    });
+  }
+
+  // 季節大卡片
+  document.querySelectorAll('.season-card').forEach(card => {
+    const btn = card.querySelector('.play-btn');
+    const handler = (e) => {
+      e.stopPropagation();
+      speak(card.dataset.text, btn);
+    };
+    card.addEventListener('click', handler);
+  });
+
+  // 小按鈕
+  document.querySelectorAll('.small-play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      speak(btn.dataset.text, btn);
+    });
+  });
+
+  // 連續念四季
+  document.getElementById('allBtn').addEventListener('click', async () => {
+    const seasons = ['はる', 'なつ', 'あき', 'ふゆ'];
+    for (const s of seasons) {
+      await speak(s, null);
+      await new Promise(r => setTimeout(r, 200));
+    }
+  });
+</script>
+</body>
+</html>

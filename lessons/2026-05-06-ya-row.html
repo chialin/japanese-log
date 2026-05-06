@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文 や行 練習</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">五十音 · Gojuon</div>
+    <div class="center">行 の 練 習</div>
+    <div class="right">2026 / 05 / 06</div>
+  </header>
+
+  <h1 class="page-title">や<span class="accent">行</span></h1>
+  <p class="page-subtitle">や・ゆ・よ — 只有三個音，い和え的位置是空的</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card" data-text="や">
+      <div class="kana-big">や</div>
+      <div class="kana-romaji">ya</div>
+    </div>
+    <div class="kana-card" data-text="ゆ">
+      <div class="kana-big">ゆ</div>
+      <div class="kana-romaji">yu</div>
+    </div>
+    <div class="kana-card" data-text="よ">
+      <div class="kana-big">よ</div>
+      <div class="kana-romaji">yo</div>
+    </div>
+  </div>
+
+  <button class="row-btn" id="rowBtn">▶ 連續念 や行</button>
+
+  <div class="note">
+    📌 <strong>や行只有三個假名</strong><br>
+    五十音表中 や行的 い 和 え 欄位是空的（古代日文有，但現代已消失）。<br>
+    所以這行只需記住三個：<strong>や・ゆ・よ</strong>。
+  </div>
+
+  <div class="tip">
+    💡 <strong>記憶小技巧</strong><br>
+    • <span class="compare">や</span>（ya）像英文 "yacht"（遊艇）的開頭<br>
+    • <span class="compare">ゆ</span>（yu）像英文 "you"，嘴唇要圓<br>
+    • <span class="compare">よ</span>（yo）像英文 "yo"，輕鬆自然<br>
+    • や行也是組合音（拗音）的基礎！例如：きゃ / にゅ / びょ，之後會學到
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 や行單字</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">やま</div>
+        <div class="word-romaji">yama</div>
+        <div class="word-meaning">山</div>
+      </div>
+      <button class="play-btn" data-text="やま">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">やさい</div>
+        <div class="word-romaji">yasai</div>
+        <div class="word-meaning">蔬菜</div>
+      </div>
+      <button class="play-btn" data-text="やさい">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">やすみ</div>
+        <div class="word-romaji">yasumi</div>
+        <div class="word-meaning">休息、假日</div>
+      </div>
+      <button class="play-btn" data-text="やすみ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ゆき</div>
+        <div class="word-romaji">yuki</div>
+        <div class="word-meaning">雪</div>
+      </div>
+      <button class="play-btn" data-text="ゆき">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ゆめ</div>
+        <div class="word-romaji">yume</div>
+        <div class="word-meaning">夢</div>
+      </div>
+      <button class="play-btn" data-text="ゆめ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">よる</div>
+        <div class="word-romaji">yoru</div>
+        <div class="word-meaning">夜晚</div>
+      </div>
+      <button class="play-btn" data-text="よる">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">よむ</div>
+        <div class="word-romaji">yomu</div>
+        <div class="word-meaning">讀、閱讀（動詞）</div>
+      </div>
+      <button class="play-btn" data-text="よむ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">よっつ</div>
+        <div class="word-romaji">yottsu</div>
+        <div class="word-meaning">四個（日語原生數數法，你學過了！）</div>
+      </div>
+      <button class="play-btn" data-text="よっつ">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 簡單句子</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">やまが すきです</div>
+        <div class="word-romaji">yama ga suki desu</div>
+        <div class="word-meaning">我喜歡山</div>
+      </div>
+      <button class="play-btn" data-text="やまが すきです">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ゆきが ふります</div>
+        <div class="word-romaji">yuki ga furimasu</div>
+        <div class="word-meaning">下雪了</div>
+      </div>
+      <button class="play-btn" data-text="ゆきが ふります">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">よる、ほしが みえます</div>
+        <div class="word-romaji">yoru, hoshi ga miemasu</div>
+        <div class="word-meaning">晚上可以看到星星</div>
+      </div>
+      <button class="play-btn" data-text="よる、ほしが みえます">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">きょうは やすみです</div>
+        <div class="word-romaji">kyō wa yasumi desu</div>
+        <div class="word-meaning">今天是休息日</div>
+      </div>
+      <button class="play-btn" data-text="きょうは やすみです">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ほんを よみます</div>
+        <div class="word-romaji">hon wo yomimasu</div>
+        <div class="word-meaning">讀書</div>
+      </div>
+      <button class="play-btn" data-text="ほんを よみます">▶</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+      if (button) button.classList.add('playing');
+      u.onend = () => { if (button) button.classList.remove('playing'); resolve(); };
+      u.onerror = () => { if (button) button.classList.remove('playing'); resolve(); };
+      speechSynthesis.speak(u);
+    });
+  }
+
+  document.querySelectorAll('.kana-card').forEach(card => {
+    card.addEventListener('click', () => speak(card.dataset.text, card));
+  });
+
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => { e.stopPropagation(); speak(btn.dataset.text, btn); });
+  });
+
+  document.getElementById('rowBtn').addEventListener('click', async () => {
+    const row = ['や', 'ゆ', 'よ'];
+    const cards = document.querySelectorAll('.kana-card');
+    for (let i = 0; i < row.length; i++) {
+      await speak(row[i], cards[i]);
+      await new Promise(r => setTimeout(r, 150));
+    }
+  });
+</script>
+</body>
+</html>

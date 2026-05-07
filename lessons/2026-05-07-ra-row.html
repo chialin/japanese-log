@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文 ら行 練習</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">五十音 · Gojuon</div>
+    <div class="center">行 の 練 習</div>
+    <div class="right">2026 / 05 / 07</div>
+  </header>
+
+  <h1 class="page-title">ら<span class="accent">行</span></h1>
+  <p class="page-subtitle">ら・り・る・れ・ろ — 日文最特別的音，介於 R 與 D 之間</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card" data-text="ら">
+      <div class="kana-big">ら</div>
+      <div class="kana-romaji">ra</div>
+    </div>
+    <div class="kana-card" data-text="り">
+      <div class="kana-big">り</div>
+      <div class="kana-romaji">ri</div>
+    </div>
+    <div class="kana-card" data-text="る">
+      <div class="kana-big">る</div>
+      <div class="kana-romaji">ru</div>
+    </div>
+    <div class="kana-card" data-text="れ">
+      <div class="kana-big">れ</div>
+      <div class="kana-romaji">re</div>
+    </div>
+    <div class="kana-card" data-text="ろ">
+      <div class="kana-big">ろ</div>
+      <div class="kana-romaji">ro</div>
+    </div>
+  </div>
+
+  <button class="row-btn" id="rowBtn">▶ 連續念 ら行</button>
+
+  <div class="note">
+    ✍️ <strong>り 的兩種長相——同一個字，不同字體</strong><br><br>
+    學日文常常會看到 り 有兩種寫法，讓人困惑，但它們完全是同一個假名：<br><br>
+    <div class="compare" style="font-size:2.2rem;letter-spacing:.15em;line-height:2;">
+      り &nbsp;（明朝體・印刷體）&emsp;｜&emsp;<span style="font-family:sans-serif;">り</span>&nbsp;（教科書體・手寫）
+    </div>
+    <br>
+    • <strong>明朝體（本站使用的字體）</strong>：兩筆看起來在底部<strong>連在一起</strong>，像毛筆書寫時筆畫流動的殘影，有「連寫感」<br>
+    • <strong>教科書體 / 手寫</strong>：兩筆<strong>清楚斷開</strong>，左右各自獨立，是日本小學教的「正確寫法」<br><br>
+    💡 手寫時請寫<strong>斷開的版本</strong>（兩筆分開）。印刷品裡看到連著的不用擔心，是字體的視覺風格，不是「連筆字」。
+  </div>
+
+  <div class="tip">
+    💡 <strong>ら行的發音秘訣：日文的「R」</strong><br>
+    ら行不是英文的 R，也不是中文的 ㄌ，它是獨特的「彈音」：<br>
+    • 舌尖<strong>輕輕彈一下</strong>上顎（就在上排牙齒後面），馬上放開<br>
+    • 有點像英文 "butter" 中快速的 "tt"，或西班牙文的單顫音 r<br>
+    • 嘴型：ら・れ・ろ 自然張開；り 嘴角微拉；る・ろ 嘴唇微圓<br>
+    • 多聽、多模仿，這個音需要肌肉記憶！
+  </div>
+
+  <div class="note">
+    📌 <strong>記憶小技巧</strong><br>
+    • <span class="compare">ら</span>（ra）字形像「ら」——想像一個人「拉」著一條線<br>
+    • <span class="compare">り</span>（ri）字形像兩條豎線「立」著<br>
+    • <span class="compare">る</span>（ru）字形像「流」水打個圈——有個小尾巴<br>
+    • <span class="compare">れ</span>（re）字形像「れ」——想像「鈴聲」迴盪<br>
+    • <span class="compare">ろ</span>（ro）字形像「ろ」——和る很像，但沒有小尾巴
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 ら行單字</div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">らいねん</div>
+        <div class="word-romaji">rainen</div>
+        <div class="word-meaning">明年（来年）</div>
+      </div>
+      <button class="play-btn" data-text="らいねん">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">らいしゅう</div>
+        <div class="word-romaji">raishuu</div>
+        <div class="word-meaning">下週（来週）</div>
+      </div>
+      <button class="play-btn" data-text="らいしゅう">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">りんご</div>
+        <div class="word-romaji">ringo</div>
+        <div class="word-meaning">蘋果</div>
+      </div>
+      <button class="play-btn" data-text="りんご">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">りょうり</div>
+        <div class="word-romaji">ryōri</div>
+        <div class="word-meaning">料理、烹飪</div>
+      </div>
+      <button class="play-btn" data-text="りょうり">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">れんしゅう</div>
+        <div class="word-romaji">renshuu</div>
+        <div class="word-meaning">練習</div>
+      </div>
+      <button class="play-btn" data-text="れんしゅう">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">れきし</div>
+        <div class="word-romaji">rekishi</div>
+        <div class="word-meaning">歷史</div>
+      </div>
+      <button class="play-btn" data-text="れきし">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ろく</div>
+        <div class="word-romaji">roku</div>
+        <div class="word-meaning">六（你已經學過了！）</div>
+      </div>
+      <button class="play-btn" data-text="ろく">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">るすばん</div>
+        <div class="word-romaji">rusuban</div>
+        <div class="word-meaning">看家、守門（留守番）</div>
+      </div>
+      <button class="play-btn" data-text="るすばん">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📘 <strong>句子裡出現的新用法</strong><br><br>
+    <strong>します（shimasu）</strong>——動詞「做」的禮貌形。<br>
+    &emsp;「〜を します」＝「做〜」，是很萬用的句型。<br>
+    &emsp;例：れんしゅうを <strong>します</strong> → 做練習<br><br>
+    <strong>たい（tai）</strong>——表示「想要做」的語尾。<br>
+    &emsp;動詞去掉「ます」加上「たい」＝「想做〜」。<br>
+    &emsp;例：いき<strong>たい</strong> → 想去；たべ<strong>たい</strong> → 想吃<br><br>
+    <strong>りょうりを します／します</strong>——「做料理」是固定說法，<br>
+    &emsp;也可以說 りょうりを つくります（tsukurimasu，製作）更口語。<br><br>
+    💡 「〜たい」句型超實用：想表達願望時都能用！
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 簡單句子</div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">りんごが すきです</div>
+        <div class="word-romaji">ringo ga suki desu</div>
+        <div class="word-meaning">我喜歡蘋果</div>
+      </div>
+      <button class="play-btn" data-text="りんごが すきです">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">らいねん にほんに いきたい</div>
+        <div class="word-romaji">rainen nihon ni ikitai</div>
+        <div class="word-meaning">明年想去日本</div>
+      </div>
+      <button class="play-btn" data-text="らいねん にほんに いきたい">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">まいにち れんしゅうします</div>
+        <div class="word-romaji">mainichi renshuu shimasu</div>
+        <div class="word-meaning">每天練習</div>
+      </div>
+      <button class="play-btn" data-text="まいにち れんしゅうします">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">りょうりが すきです</div>
+        <div class="word-romaji">ryōri ga suki desu</div>
+        <div class="word-meaning">我喜歡料理（烹飪）</div>
+      </div>
+      <button class="play-btn" data-text="りょうりが すきです">▶</button>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">らいしゅう また きます</div>
+        <div class="word-romaji">raishuu mata kimasu</div>
+        <div class="word-meaning">下週再來</div>
+      </div>
+      <button class="play-btn" data-text="らいしゅう また きます">▶</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+      if (button) button.classList.add('playing');
+      u.onend = () => { if (button) button.classList.remove('playing'); resolve(); };
+      u.onerror = () => { if (button) button.classList.remove('playing'); resolve(); };
+      speechSynthesis.speak(u);
+    });
+  }
+
+  document.querySelectorAll('.kana-card').forEach(card => {
+    card.addEventListener('click', () => speak(card.dataset.text, card));
+  });
+
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => { e.stopPropagation(); speak(btn.dataset.text, btn); });
+  });
+
+  document.getElementById('rowBtn').addEventListener('click', async () => {
+    const row = ['ら', 'り', 'る', 'れ', 'ろ'];
+    const cards = document.querySelectorAll('.kana-card');
+    for (let i = 0; i < row.length; i++) {
+      await speak(row[i], cards[i]);
+      await new Promise(r => setTimeout(r, 150));
+    }
+  });
+</script>
+</body>
+</html>

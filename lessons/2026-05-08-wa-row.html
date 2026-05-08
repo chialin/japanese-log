@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文 わ行 + ん 練習</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">五十音 · Gojuon</div>
+    <div class="center">行 の 練 習</div>
+    <div class="right">2026 / 05 / 08</div>
+  </header>
+
+  <h1 class="page-title">わ<span class="accent">行</span> + ん</h1>
+  <p class="page-subtitle">わ・を・ん — 五十音表的最後三個音，到這裡就學完基本平假名了！</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card" data-text="わ">
+      <div class="kana-big">わ</div>
+      <div class="kana-romaji">wa</div>
+    </div>
+    <div class="kana-card" data-text="を">
+      <div class="kana-big">を</div>
+      <div class="kana-romaji">wo / o</div>
+    </div>
+    <div class="kana-card" data-text="ん">
+      <div class="kana-big">ん</div>
+      <div class="kana-romaji">n</div>
+    </div>
+  </div>
+
+  <button class="row-btn" id="rowBtn">▶ 連續念 わ・を・ん</button>
+
+  <div class="note">
+    📌 <strong>わ行其實只剩兩個音</strong><br>
+    五十音表中 わ行的 い・う・え 欄位都是空的（古代有 ゐ・ゑ，現代消失了）。<br>
+    所以這行只有 <strong>わ</strong> 和 <strong>を</strong>，再加上獨立的 <strong>ん</strong>，剛好是平假名表的最後三格。
+  </div>
+
+  <div class="tip">
+    💡 <strong>三個音的重點</strong><br>
+    • <span class="compare">わ</span>（wa）一般詞彙都會用到，例：わたし（我）<br>
+    • <span class="compare">を</span>（wo）<strong>幾乎只當助詞用</strong>，發音和「お」一樣，但寫成 を，標出受詞<br>
+    • <span class="compare">ん</span>（n）<strong>不能放在詞首</strong>，是日文唯一的「撥音」（鼻音收尾）
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>を 是日文最特別的字之一</strong><br>
+    現代日文裡，<strong>を 幾乎只用來當「受詞助詞」</strong>，標示動作的對象。<br>
+    &emsp;・ほん<strong>を</strong> よむ → 讀書（書是被讀的對象）<br>
+    &emsp;・みず<strong>を</strong> のむ → 喝水（水是被喝的對象）<br>
+    發音和「お」幾乎一樣（o），但寫法固定，不會混用。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 わ 開頭的單字</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">わたし</div>
+        <div class="word-romaji">watashi</div>
+        <div class="word-meaning">我</div>
+      </div>
+      <button class="play-btn" data-text="わたし">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">わかる</div>
+        <div class="word-romaji">wakaru</div>
+        <div class="word-meaning">懂、明白（動詞）</div>
+      </div>
+      <button class="play-btn" data-text="わかる">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">かわいい</div>
+        <div class="word-romaji">kawaii</div>
+        <div class="word-meaning">可愛的</div>
+      </div>
+      <button class="play-btn" data-text="かわいい">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 含 ん 的單字</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ほん</div>
+        <div class="word-romaji">hon</div>
+        <div class="word-meaning">書</div>
+      </div>
+      <button class="play-btn" data-text="ほん">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">にほん</div>
+        <div class="word-romaji">nihon</div>
+        <div class="word-meaning">日本</div>
+      </div>
+      <button class="play-btn" data-text="にほん">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">せんせい</div>
+        <div class="word-romaji">sensei</div>
+        <div class="word-meaning">老師</div>
+      </div>
+      <button class="play-btn" data-text="せんせい">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">りんご</div>
+        <div class="word-romaji">ringo</div>
+        <div class="word-meaning">蘋果</div>
+      </div>
+      <button class="play-btn" data-text="りんご">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">でんわ</div>
+        <div class="word-romaji">denwa</div>
+        <div class="word-meaning">電話（同時有 ん 和 わ ！）</div>
+      </div>
+      <button class="play-btn" data-text="でんわ">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📘 <strong>關於 ん 的小知識</strong><br><br>
+    ん 雖然羅馬拼音都寫 <strong>n</strong>，但實際發音會跟著後面的音稍微變化：<br>
+    &emsp;・後接 ま行／ば行／ぱ行 → 聽起來像 m（例：さんぽ → sampo）<br>
+    &emsp;・後接 か行／が行 → 聽起來像 ng（例：りんご → ringo 鼻音收）<br>
+    &emsp;・其他情況 → 一般 n 的鼻音<br>
+    💡 不必刻意記，自然唸就會跟著變。先記得「ん 不能放開頭」就好。
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 簡單句子</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">わたしは がくせいです</div>
+        <div class="word-romaji">watashi wa gakusei desu</div>
+        <div class="word-meaning">我是學生</div>
+      </div>
+      <button class="play-btn" data-text="わたしは がくせいです">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">わたしは にほんが すきです</div>
+        <div class="word-romaji">watashi wa nihon ga suki desu</div>
+        <div class="word-meaning">我喜歡日本</div>
+      </div>
+      <button class="play-btn" data-text="わたしは にほんが すきです">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ほんを よみます</div>
+        <div class="word-romaji">hon wo yomimasu</div>
+        <div class="word-meaning">讀書（を 標示受詞）</div>
+      </div>
+      <button class="play-btn" data-text="ほんを よみます">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">みずを のみます</div>
+        <div class="word-romaji">mizu wo nomimasu</div>
+        <div class="word-meaning">喝水</div>
+      </div>
+      <button class="play-btn" data-text="みずを のみます">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">かわいい ねこ</div>
+        <div class="word-romaji">kawaii neko</div>
+        <div class="word-meaning">可愛的貓</div>
+      </div>
+      <button class="play-btn" data-text="かわいい ねこ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">わかりました</div>
+        <div class="word-romaji">wakarimashita</div>
+        <div class="word-meaning">我懂了／知道了</div>
+      </div>
+      <button class="play-btn" data-text="わかりました">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    🎉 <strong>恭喜！平假名基本 46 音全部學完了！</strong><br>
+    從 <span class="compare">あ行</span> 一路到 <span class="compare">わ行 + ん</span>，<br>
+    接下來可以開始練習濁音（が・ざ・だ・ば）、半濁音（ぱ）、和拗音（きゃ・しゅ・にょ⋯）了。
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+      if (button) button.classList.add('playing');
+      u.onend = () => { if (button) button.classList.remove('playing'); resolve(); };
+      u.onerror = () => { if (button) button.classList.remove('playing'); resolve(); };
+      speechSynthesis.speak(u);
+    });
+  }
+
+  document.querySelectorAll('.kana-card').forEach(card => {
+    card.addEventListener('click', () => speak(card.dataset.text, card));
+  });
+
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => { e.stopPropagation(); speak(btn.dataset.text, btn); });
+  });
+
+  document.getElementById('rowBtn').addEventListener('click', async () => {
+    const row = ['わ', 'を', 'ん'];
+    const cards = document.querySelectorAll('.kana-card');
+    for (let i = 0; i < row.length; i++) {
+      await speak(row[i], cards[i]);
+      await new Promise(r => setTimeout(r, 150));
+    }
+  });
+</script>
+</body>
+</html>

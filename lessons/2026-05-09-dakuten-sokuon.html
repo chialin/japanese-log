@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文基礎 - 濁音、半濁音、促音</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+.row-label{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink-soft);margin:22px 0 10px;letter-spacing:.05em;display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+.row-label .seion{color:var(--ink-mute);}
+.row-label .arrow{color:var(--ink-mute);}
+.row-label .dakuon{color:var(--accent);font-size:18px;}
+.row-label .roma{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);letter-spacing:.1em;font-weight:400;margin-left:auto;}
+.mark{display:inline-block;background:var(--accent-pale);color:var(--accent);padding:2px 10px;border-radius:3px;font-family:'Shippori Mincho',serif;font-weight:700;}
+.intro-block{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 18px;margin:8px 0 8px;font-size:15px;line-height:1.95;color:var(--ink-soft);}
+.intro-block strong{color:var(--ink);}
+.dbl{color:var(--accent);font-weight:700;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">音の解說 · Sound Marks</div>
+    <div class="center">特 殊 な 音</div>
+    <div class="right">2026 / 05 / 09</div>
+  </header>
+
+  <h1 class="page-title">音の<span class="accent">変化</span></h1>
+  <p class="page-subtitle">濁音 ・ 半濁音 ・ 促音 — 五十音之外的三種變身規則</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="note">
+    📌 <strong>學完 46 音之後，還有三件事要會</strong><br>
+    日常生字裡常出現 <strong>が ・ ぱ ・ っ</strong> 這類字。它們不是新的字，<br>
+    而是在原本的假名上「加記號」或「寫小一號」做出新的音。本課三個規則：<br><br>
+    • <span class="mark">゛</span> <strong>濁音</strong>（だくおん）— 加兩點，<strong>4 行 共 20 字</strong><br>
+    • <span class="mark">゜</span> <strong>半濁音</strong>（はんだくおん）— 加圓圈，<strong>只有 1 行 5 字</strong><br>
+    • <span class="mark">っ</span> <strong>促音</strong>（そくおん）— 寫小一號，<strong>停一拍</strong>
+  </div>
+
+  <div class="divider">濁音 · Dakuon</div>
+
+  <div class="section">
+    <div class="section-title">゛ 濁音 だくおん — 加兩點</div>
+    <div class="intro-block">
+      <strong>規則：</strong>在假名右上角加 <span class="mark">゛</span>（濁點），把清音變濁音。<br>
+      口型不變，但聲帶會震動，所以聽起來「混濁、有重量」。<br>
+      可以加濁點的有 4 行：<strong>か→が、さ→ざ、た→だ、は→ば</strong>，共 20 個字。
+    </div>
+
+    <div class="row-label">
+      <span class="seion">か行</span><span class="arrow">→</span><span class="dakuon">が行</span>
+      <span class="roma">k → g</span>
+    </div>
+    <div class="gojuon">
+      <div class="kana-card" data-text="が"><div class="kana-big">が</div><div class="kana-romaji">ga</div></div>
+      <div class="kana-card" data-text="ぎ"><div class="kana-big">ぎ</div><div class="kana-romaji">gi</div></div>
+      <div class="kana-card" data-text="ぐ"><div class="kana-big">ぐ</div><div class="kana-romaji">gu</div></div>
+      <div class="kana-card" data-text="げ"><div class="kana-big">げ</div><div class="kana-romaji">ge</div></div>
+      <div class="kana-card" data-text="ご"><div class="kana-big">ご</div><div class="kana-romaji">go</div></div>
+    </div>
+    <button class="row-btn" data-row="が,ぎ,ぐ,げ,ご">▶ 連續念 が行</button>
+
+    <div class="row-label">
+      <span class="seion">さ行</span><span class="arrow">→</span><span class="dakuon">ざ行</span>
+      <span class="roma">s → z（じ → ji）</span>
+    </div>
+    <div class="gojuon">
+      <div class="kana-card" data-text="ざ"><div class="kana-big">ざ</div><div class="kana-romaji">za</div></div>
+      <div class="kana-card" data-text="じ"><div class="kana-big">じ</div><div class="kana-romaji">ji</div></div>
+      <div class="kana-card" data-text="ず"><div class="kana-big">ず</div><div class="kana-romaji">zu</div></div>
+      <div class="kana-card" data-text="ぜ"><div class="kana-big">ぜ</div><div class="kana-romaji">ze</div></div>
+      <div class="kana-card" data-text="ぞ"><div class="kana-big">ぞ</div><div class="kana-romaji">zo</div></div>
+    </div>
+    <button class="row-btn" data-row="ざ,じ,ず,ぜ,ぞ">▶ 連續念 ざ行</button>
+
+    <div class="row-label">
+      <span class="seion">た行</span><span class="arrow">→</span><span class="dakuon">だ行</span>
+      <span class="roma">t → d（ぢ→ji ／ づ→zu，罕用）</span>
+    </div>
+    <div class="gojuon">
+      <div class="kana-card" data-text="だ"><div class="kana-big">だ</div><div class="kana-romaji">da</div></div>
+      <div class="kana-card" data-text="ぢ"><div class="kana-big">ぢ</div><div class="kana-romaji">ji</div></div>
+      <div class="kana-card" data-text="づ"><div class="kana-big">づ</div><div class="kana-romaji">zu</div></div>
+      <div class="kana-card" data-text="で"><div class="kana-big">で</div><div class="kana-romaji">de</div></div>
+      <div class="kana-card" data-text="ど"><div class="kana-big">ど</div><div class="kana-romaji">do</div></div>
+    </div>
+    <button class="row-btn" data-row="だ,ぢ,づ,で,ど">▶ 連續念 だ行</button>
+
+    <div class="note">
+      ⚠️ <strong>ぢ ／ づ 幾乎不會用到</strong><br>
+      現代日文裡，原本 ぢ／づ 的音都被 <strong>じ／ず</strong> 取代了。<br>
+      只有少數複合詞還會出現 ぢ／づ，例：<strong>はなぢ</strong>（鼻血 hanaji）、<strong>つづく</strong>（持續 tsuzuku）。<br>
+      實務上記 <strong>じ ＝ ji、ず ＝ zu</strong> 就好。
+    </div>
+
+    <div class="row-label">
+      <span class="seion">は行</span><span class="arrow">→</span><span class="dakuon">ば行</span>
+      <span class="roma">h → b</span>
+    </div>
+    <div class="gojuon">
+      <div class="kana-card" data-text="ば"><div class="kana-big">ば</div><div class="kana-romaji">ba</div></div>
+      <div class="kana-card" data-text="び"><div class="kana-big">び</div><div class="kana-romaji">bi</div></div>
+      <div class="kana-card" data-text="ぶ"><div class="kana-big">ぶ</div><div class="kana-romaji">bu</div></div>
+      <div class="kana-card" data-text="べ"><div class="kana-big">べ</div><div class="kana-romaji">be</div></div>
+      <div class="kana-card" data-text="ぼ"><div class="kana-big">ぼ</div><div class="kana-romaji">bo</div></div>
+    </div>
+    <button class="row-btn" data-row="ば,び,ぶ,べ,ぼ">▶ 連續念 ば行</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 濁音常用單字</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">かぞく</div>
+        <div class="word-romaji">kazoku</div>
+        <div class="word-meaning">家人</div>
+      </div>
+      <button class="play-btn" data-text="かぞく">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">じかん</div>
+        <div class="word-romaji">jikan</div>
+        <div class="word-meaning">時間</div>
+      </div>
+      <button class="play-btn" data-text="じかん">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">だいがく</div>
+        <div class="word-romaji">daigaku</div>
+        <div class="word-meaning">大學</div>
+      </div>
+      <button class="play-btn" data-text="だいがく">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">でんわ</div>
+        <div class="word-romaji">denwa</div>
+        <div class="word-meaning">電話</div>
+      </div>
+      <button class="play-btn" data-text="でんわ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ともだち</div>
+        <div class="word-romaji">tomodachi</div>
+        <div class="word-meaning">朋友</div>
+      </div>
+      <button class="play-btn" data-text="ともだち">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ぼく</div>
+        <div class="word-romaji">boku</div>
+        <div class="word-meaning">我（男性自稱）</div>
+      </div>
+      <button class="play-btn" data-text="ぼく">▶</button>
+    </div>
+  </div>
+
+  <div class="divider">半濁音 · Handakuon</div>
+
+  <div class="section">
+    <div class="section-title">゜ 半濁音 はんだくおん — 加圓圈</div>
+    <div class="intro-block">
+      <strong>規則：</strong>只有 <strong>は行</strong> 可以加 <span class="mark">゜</span>（半濁點 / 小圓圈），把 h 變成 p。<br>
+      共 5 個字：<strong>ぱ ・ ぴ ・ ぷ ・ ぺ ・ ぽ</strong>。<br>
+      半濁音多出現在 <strong>外來語</strong>、<strong>促音之後</strong>（例：きっぷ）、<strong>ん 之後</strong>（例：さんぽ）。
+    </div>
+
+    <div class="row-label">
+      <span class="seion">は行</span><span class="arrow">→</span><span class="dakuon">ぱ行</span>
+      <span class="roma">h → p</span>
+    </div>
+    <div class="gojuon">
+      <div class="kana-card" data-text="ぱ"><div class="kana-big">ぱ</div><div class="kana-romaji">pa</div></div>
+      <div class="kana-card" data-text="ぴ"><div class="kana-big">ぴ</div><div class="kana-romaji">pi</div></div>
+      <div class="kana-card" data-text="ぷ"><div class="kana-big">ぷ</div><div class="kana-romaji">pu</div></div>
+      <div class="kana-card" data-text="ぺ"><div class="kana-big">ぺ</div><div class="kana-romaji">pe</div></div>
+      <div class="kana-card" data-text="ぽ"><div class="kana-big">ぽ</div><div class="kana-romaji">po</div></div>
+    </div>
+    <button class="row-btn" data-row="ぱ,ぴ,ぷ,ぺ,ぽ">▶ 連續念 ぱ行</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 半濁音常用單字</div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ぱん</div>
+        <div class="word-romaji">pan</div>
+        <div class="word-meaning">麵包（外來語：葡萄牙語 pão）</div>
+      </div>
+      <button class="play-btn" data-text="ぱん">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">えんぴつ</div>
+        <div class="word-romaji">enpitsu</div>
+        <div class="word-meaning">鉛筆（ん 之後接 ぴ）</div>
+      </div>
+      <button class="play-btn" data-text="えんぴつ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">さんぽ</div>
+        <div class="word-romaji">sanpo</div>
+        <div class="word-meaning">散步（ん 之後接 ぽ）</div>
+      </div>
+      <button class="play-btn" data-text="さんぽ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">きっぷ</div>
+        <div class="word-romaji">kippu</div>
+        <div class="word-meaning">車票（促音 + ぷ）</div>
+      </div>
+      <button class="play-btn" data-text="きっぷ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">かんぱい</div>
+        <div class="word-romaji">kanpai</div>
+        <div class="word-meaning">乾杯！</div>
+      </div>
+      <button class="play-btn" data-text="かんぱい">▶</button>
+    </div>
+  </div>
+
+  <div class="divider">促音 · Sokuon</div>
+
+  <div class="section">
+    <div class="section-title">っ 促音 そくおん — 小寫的 つ</div>
+    <div class="intro-block">
+      <strong>規則：</strong>把 <strong>つ</strong> 寫成小一號的 <span class="mark">っ</span>，自己 <strong>不發音</strong>，<br>
+      但讓下一個子音「<strong>停一拍</strong>」再爆發。通常出現在 <strong>か ・ さ ・ た ・ ぱ 行</strong> 之前。<br>
+      羅馬拼音時，<strong>下一個子音重複</strong>（kk, ss, tt, pp）。<br>
+      想像國語的「啊⋯哈！」中間那種短暫的停頓。
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">きって</div>
+        <div class="word-romaji">ki<span class="dbl">tt</span>e</div>
+        <div class="word-meaning">郵票（っ + て → tt）</div>
+      </div>
+      <button class="play-btn" data-text="きって">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">がっこう</div>
+        <div class="word-romaji">ga<span class="dbl">kk</span>ou</div>
+        <div class="word-meaning">學校（っ + こ → kk）</div>
+      </div>
+      <button class="play-btn" data-text="がっこう">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">きっぷ</div>
+        <div class="word-romaji">ki<span class="dbl">pp</span>u</div>
+        <div class="word-meaning">車票（っ + ぷ → pp）</div>
+      </div>
+      <button class="play-btn" data-text="きっぷ">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ざっし</div>
+        <div class="word-romaji">za<span class="dbl">ss</span>hi</div>
+        <div class="word-meaning">雜誌（っ + し → ss）</div>
+      </div>
+      <button class="play-btn" data-text="ざっし">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">もっと</div>
+        <div class="word-romaji">mo<span class="dbl">tt</span>o</div>
+        <div class="word-meaning">再多一點 / 更</div>
+      </div>
+      <button class="play-btn" data-text="もっと">▶</button>
+    </div>
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">ちょっと</div>
+        <div class="word-romaji">cho<span class="dbl">tt</span>o</div>
+        <div class="word-meaning">一下／有點（很常用！）</div>
+      </div>
+      <button class="play-btn" data-text="ちょっと">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>小 っ 和 大 つ 是不同的字！</strong><br>
+    寫的大小不一樣，意思就完全不同：<br>
+    &emsp;・<span class="compare">きって</span>（kitte 郵票）　vs　<span class="compare">きて</span>（kite 請來）<br>
+    &emsp;・<span class="compare">がっこう</span>（gakkou 學校）　vs　<span class="compare">がこう</span>（沒這個詞）<br>
+    手寫時要把 <strong>っ</strong> 寫得明顯比正常 <strong>つ</strong> 小，靠左下角。
+  </div>
+
+  <div class="note">
+    💡 <strong>促音的小規則</strong><br>
+    • 不會出現在<strong>詞首</strong>或<strong>句末</strong><br>
+    • 後面通常接 <strong>か行 ・ さ行 ・ た行 ・ ぱ行</strong>（其他行很罕見）<br>
+    • 母音（あいうえお）、ん、り、わ、や 前面 <strong>不會</strong> 用促音<br>
+    • 念的時候不要急著接下去，<strong>停半拍</strong>再爆發下一個音
+  </div>
+
+  <div class="tip">
+    📝 <strong>三規則總結</strong><br>
+    • <span class="mark">゛</span> 兩點 → <strong>濁音</strong>（が ・ ざ ・ だ ・ ば，4 行 20 字）<br>
+    • <span class="mark">゜</span> 圓圈 → <strong>半濁音</strong>（ぱ，1 行 5 字）<br>
+    • <span class="mark">っ</span> 寫小 → <strong>促音</strong>（停一拍，子音雙寫）<br><br>
+    記號加在 <strong>右上角</strong>，小字寫在 <strong>左下角</strong>，看到就會分了。
+  </div>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    return new Promise((resolve) => {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ja-JP';
+      u.rate = parseFloat(rateSlider.value);
+      u.pitch = 1;
+      const voice = getJapaneseVoice();
+      if (voice) u.voice = voice;
+      if (button) button.classList.add('playing');
+      u.onend = () => { if (button) button.classList.remove('playing'); resolve(); };
+      u.onerror = () => { if (button) button.classList.remove('playing'); resolve(); };
+      speechSynthesis.speak(u);
+    });
+  }
+
+  document.querySelectorAll('.kana-card').forEach(card => {
+    card.addEventListener('click', () => speak(card.dataset.text, card));
+  });
+
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => { e.stopPropagation(); speak(btn.dataset.text, btn); });
+  });
+
+  document.querySelectorAll('.row-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const row = btn.dataset.row.split(',');
+      btn.classList.add('playing');
+      for (const k of row) {
+        await speak(k);
+        await new Promise(r => setTimeout(r, 150));
+      }
+      btn.classList.remove('playing');
+    });
+  });
+</script>
+</body>
+</html>

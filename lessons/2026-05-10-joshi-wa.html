@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文助詞入門 — は・が・の・を・か</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 助詞速記表 */
+.joshi-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.joshi-table th,.joshi-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.joshi-table tr:last-child td{border-bottom:none;}
+.joshi-table .col-kana{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;color:var(--accent);width:46px;text-align:center;}
+.joshi-table .col-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);width:60px;}
+.joshi-table .col-role{color:var(--ink);font-weight:600;width:120px;}
+.joshi-table .col-meaning{color:var(--ink-soft);}
+
+/* 對照欄：は vs が */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+.vs-col{background:rgba(255,255,255,.55);border:1px solid var(--line);border-top:3px solid var(--accent);padding:14px 16px;}
+.vs-col-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--accent);margin-bottom:6px;letter-spacing:.05em;}
+.vs-col-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);margin-bottom:10px;letter-spacing:.05em;}
+.vs-col-body{font-size:14px;color:var(--ink-soft);line-height:1.8;}
+.vs-col-body strong{color:var(--ink);}
+@media(max-width:600px){.vs-grid{grid-template-columns:1fr;}}
+
+/* 助詞高亮（句子裡把助詞框起來） */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:700;padding:0 4px;border-radius:2px;font-family:'Shippori Mincho',serif;}
+
+/* 「下一篇」卡片 */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">文法 · Grammar</div>
+    <div class="center">助 詞 入 門</div>
+    <div class="right">2026 / 05 / 10</div>
+  </header>
+
+  <h1 class="page-title">助<span class="accent">詞</span>って何？</h1>
+  <p class="page-subtitle">從「わたしは」的兩個 wa 講起 — 5 個入門助詞 は・が・の・を・か</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>什麼是助詞 (じょし)？</strong><br>
+    日文句子像積木，<strong>助詞</strong>就是把積木黏起來的那一小塊。它放在<strong>名詞後面</strong>，告訴你這個名詞在句子裡扮演什麼角色——是主角、是被做的對象、是地點、還是時間。<br>
+    中文靠語序判斷（「我打狗」≠「狗打我」），日文靠助詞，所以<strong>句子順序可以變來變去，意思不變</strong>。
+  </div>
+
+  <div class="note">
+    📝 日文助詞很多，本篇只挑 <strong>5 個</strong> 最常用、最入門的：<strong>は・が・の・を・か</strong>。練熟這 5 個，已經夠搭出大部分初級句子。剩下的等遇到再學。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、わたしは 的兩個 wa</div>
+
+  <div class="alert">
+    ⚠️ <strong>同樣念 wa，但是兩種完全不同的東西：</strong><br>
+    • <span class="compare">わ</span> — 純粹的假名，是<strong>單字本身的一部分</strong>（わたし、わるい、かわいい）<br>
+    • <span class="compare">は</span> — 當<strong>助詞</strong>用時，破例念 wa，標示「這句話的主題」<br>
+    　　（は 平常念 ha，例如 はな・はる・はい）
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句拆解</div>
+    <div class="word-item" data-text="わたしは カリンです">
+      <div class="word-content">
+        <div class="word-ja">わたし<span class="j-mark">は</span> カリンです</div>
+        <div class="word-romaji">watashi <strong>wa</strong> Karin desu</div>
+        <div class="word-meaning">我是 Karin —— 第一個 wa＝わ（假名），第二個 wa＝は（助詞）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="はなは きれいです">
+      <div class="word-content">
+        <div class="word-ja">はな<span class="j-mark">は</span> きれいです</div>
+        <div class="word-romaji">hana <strong>wa</strong> kirei desu</div>
+        <div class="word-meaning">花很漂亮 —— 第一個 は 是「はな」的 ha，第二個 は 是助詞念 wa</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、寫一樣、唸不一樣</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日文有<strong>三個助詞</strong>寫法保留古音、發音卻現代化了。本篇先記其中兩個，第三個 <span class="compare">へ</span>(e) 留到進階篇。<br>
+    <strong>除了這幾個之外，其他助詞都是怎麼寫就怎麼唸。</strong>
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>寫</th><th>唸</th><th>用途</th><th>例</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kana">は</td>
+        <td class="col-romaji">wa</td>
+        <td class="col-role">主題標記</td>
+        <td class="col-meaning">わたし<strong>は</strong>… 我這個人嘛…</td>
+      </tr>
+      <tr>
+        <td class="col-kana">を</td>
+        <td class="col-romaji">o</td>
+        <td class="col-role">受詞標記</td>
+        <td class="col-meaning">ほん<strong>を</strong>よむ 讀書</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    💡 <strong>を 這個假名只剩助詞功能</strong>—— 現代日文的單字裡幾乎不會出現 を，所以看到 を，99% 就是助詞，念 o。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、主角組：は vs が</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <div class="vs-col-title">は (wa)</div>
+      <div class="vs-col-sub">topic — 主題</div>
+      <div class="vs-col-body">
+        「<strong>講到 X 嘛…</strong>」<br>
+        把 X 拉出來當話題，<strong>已知</strong>或<strong>對比</strong>用。<br>
+        中文常翻「～是」「～呢」。
+      </div>
+    </div>
+    <div class="vs-col">
+      <div class="vs-col-title">が (ga)</div>
+      <div class="vs-col-sub">subject — 主格</div>
+      <div class="vs-col-body">
+        「<strong>是 X 喔！</strong>」<br>
+        指出動作或狀態的<strong>主體</strong>，常用在<strong>新資訊</strong>、強調、或描述眼前看到的事。
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🎯 感受差別</div>
+    <div class="word-item" data-text="わたしは カリンです">
+      <div class="word-content">
+        <div class="word-ja">わたし<span class="j-mark">は</span> カリンです</div>
+        <div class="word-romaji">watashi wa Karin desu</div>
+        <div class="word-meaning">（自我介紹）我嘛，叫 Karin。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="わたしが カリンです">
+      <div class="word-content">
+        <div class="word-ja">わたし<span class="j-mark">が</span> カリンです</div>
+        <div class="word-romaji">watashi ga Karin desu</div>
+        <div class="word-meaning">（被問「誰是 Karin？」時）我才是 Karin！</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="ねこが かわいい">
+      <div class="word-content">
+        <div class="word-ja">ねこ<span class="j-mark">が</span> かわいい</div>
+        <div class="word-romaji">neko ga kawaii</div>
+        <div class="word-meaning">（看到貓）貓貓好可愛！—— 描述眼前看到的，用 が</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="ねこは かわいい">
+      <div class="word-content">
+        <div class="word-ja">ねこ<span class="j-mark">は</span> かわいい</div>
+        <div class="word-romaji">neko wa kawaii</div>
+        <div class="word-meaning">貓嘛（一般來說）很可愛 —— 講普遍特性，用 は</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>新手原則</strong>：不確定的時候，<strong>自我介紹／講自己／句子的「話題」用 は</strong>，<strong>形容眼前狀況／回答「誰／哪個」的問題用 が</strong>。剩下的細節以後慢慢補。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、的：の</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">の</span>(no) 幾乎完全等於中文的<strong>「的」</strong>，把兩個名詞接起來：<br>
+    <strong>X の Y</strong> ＝ X 的 Y（X 修飾 Y、X 屬於 Y）。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+    <div class="word-item" data-text="わたしの ほん">
+      <div class="word-content">
+        <div class="word-ja">わたし<span class="j-mark">の</span> ほん</div>
+        <div class="word-romaji">watashi no hon</div>
+        <div class="word-meaning">我的書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="はるの はな">
+      <div class="word-content">
+        <div class="word-ja">はる<span class="j-mark">の</span> はな</div>
+        <div class="word-romaji">haru no hana</div>
+        <div class="word-meaning">春天的花</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="にほんごの ほん">
+      <div class="word-content">
+        <div class="word-ja">にほんご<span class="j-mark">の</span> ほん</div>
+        <div class="word-romaji">nihongo no hon</div>
+        <div class="word-meaning">日文（的）書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、受詞：を</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">を</span>(o) 放在<strong>動作對象</strong>後面，告訴你「動詞做在誰／什麼身上」。<br>
+    句型：<strong>X を 動詞</strong> ＝ 對 X 做某動作。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+    <div class="word-item" data-text="ほんを よむ">
+      <div class="word-content">
+        <div class="word-ja">ほん<span class="j-mark">を</span> よむ</div>
+        <div class="word-romaji">hon o yomu</div>
+        <div class="word-meaning">讀書（書是「被讀」的對象）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="みずを のむ">
+      <div class="word-content">
+        <div class="word-ja">みず<span class="j-mark">を</span> のむ</div>
+        <div class="word-romaji">mizu o nomu</div>
+        <div class="word-meaning">喝水</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="てがみを かく">
+      <div class="word-content">
+        <div class="word-ja">てがみ<span class="j-mark">を</span> かく</div>
+        <div class="word-romaji">tegami o kaku</div>
+        <div class="word-meaning">寫信</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、句尾魔法：か</div>
+
+  <div class="tip">
+    💡 <strong>か (ka) — 句尾＝問號</strong><br>
+    日文沒有「？」也能問問題，只要在句尾加上 <span class="compare">か</span>，整句馬上變成疑問句。語調尾音上揚，但不需要倒裝。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+    <div class="word-item" data-text="がくせいです">
+      <div class="word-content">
+        <div class="word-ja">がくせいです<span style="opacity:.4;">。</span></div>
+        <div class="word-romaji">gakusei desu.</div>
+        <div class="word-meaning">是學生。（陳述）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="がくせいですか">
+      <div class="word-content">
+        <div class="word-ja">がくせいです<span class="j-mark">か</span></div>
+        <div class="word-romaji">gakusei desu ka?</div>
+        <div class="word-meaning">是學生嗎？（疑問）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="あしたは ひまですか">
+      <div class="word-content">
+        <div class="word-ja">あした<span class="j-mark">は</span> ひまです<span class="j-mark">か</span></div>
+        <div class="word-romaji">ashita wa hima desu ka?</div>
+        <div class="word-meaning">明天有空嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · Cheat sheet</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>助詞</th><th>音</th><th>主要功能</th><th>記憶口訣</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-kana">は</td><td class="col-romaji">wa</td><td class="col-role">主題</td><td class="col-meaning">「我這人嘛…」</td></tr>
+      <tr><td class="col-kana">が</td><td class="col-romaji">ga</td><td class="col-role">主格 / 強調</td><td class="col-meaning">「是 X 喔！」</td></tr>
+      <tr><td class="col-kana">の</td><td class="col-romaji">no</td><td class="col-role">的</td><td class="col-meaning">X の Y＝X 的 Y</td></tr>
+      <tr><td class="col-kana">を</td><td class="col-romaji">o</td><td class="col-role">受詞</td><td class="col-meaning">動作的對象</td></tr>
+      <tr><td class="col-kana">か</td><td class="col-romaji">ka</td><td class="col-role">疑問</td><td class="col-meaning">放句尾＝？</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 這 <strong>5 個</strong> 練熟，已經能搭出大部分入門句子。剩下的等遇到再學。
+  </div>
+
+  <a href="2026-05-10-joshi-2.html" class="next-link">
+    <span class="next-kicker">— Next —</span>
+    <span class="next-title">進階篇：に・で・へ・と・も <span class="next-arrow">→</span></span>
+    <span class="next-sub">移動、場所、連接 — 把句子拼得更完整的下一組 5 個助詞</span>
+  </a>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'ja-JP';
+    u.rate = parseFloat(rateSlider.value);
+    u.pitch = 1;
+    const voice = getJapaneseVoice();
+    if (voice) u.voice = voice;
+    if (button) {
+      button.classList.add('playing');
+      button.textContent = '🔊';
+    }
+    u.onend = () => {
+      if (button) { button.classList.remove('playing'); button.textContent = '▶'; }
+    };
+    u.onerror = () => {
+      if (button) { button.classList.remove('playing'); button.textContent = '▶'; }
+    };
+    speechSynthesis.speak(u);
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

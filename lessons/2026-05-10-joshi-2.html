@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文助詞 II — に・で・へ・と・も</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 助詞速記表 */
+.joshi-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.joshi-table th,.joshi-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.joshi-table tr:last-child td{border-bottom:none;}
+.joshi-table .col-kana{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;color:var(--accent);width:46px;text-align:center;}
+.joshi-table .col-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);width:60px;}
+.joshi-table .col-role{color:var(--ink);font-weight:600;width:120px;}
+.joshi-table .col-meaning{color:var(--ink-soft);}
+
+/* 助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:700;padding:0 4px;border-radius:2px;font-family:'Shippori Mincho',serif;}
+
+/* 「下一篇 / 上一篇」卡片 */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(-4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-right:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(-4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">文法 · Grammar II</div>
+    <div class="center">助 詞 進 階</div>
+    <div class="right">2026 / 05 / 10</div>
+  </header>
+
+  <h1 class="page-title">助詞 <span class="accent">II</span></h1>
+  <p class="page-subtitle">移動・場所・連接 — に・で・へ・と・も</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>承上一篇</strong>：你已經會 <span class="compare">は・が・の・を・か</span>，可以講「我是…／X 的 Y／做 X／…嗎？」這類句子。<br>
+    這篇再加 <strong>5 個</strong>，把「<strong>地點、時間、方向、和誰、也</strong>」這些細節補進句子裡。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、に — 三種「點」：到達 / 時間 / 存在</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">に</span>(ni) 標示一個<strong>「點」</strong>—— 空間上的點（位置、目的地）或時間上的點（幾點、星期幾）。三個用法本質都是「指向某個定點」。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+    <div class="word-item" data-text="へやに います">
+      <div class="word-content">
+        <div class="word-ja">へや<span class="j-mark">に</span> います</div>
+        <div class="word-romaji">heya ni imasu</div>
+        <div class="word-meaning">在房間裡（存在的地點 → に）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="がっこうに いく">
+      <div class="word-content">
+        <div class="word-ja">がっこう<span class="j-mark">に</span> いく</div>
+        <div class="word-romaji">gakkō ni iku</div>
+        <div class="word-meaning">去學校（到達點 → に）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="しちじに おきる">
+      <div class="word-content">
+        <div class="word-ja">しちじ<span class="j-mark">に</span> おきる</div>
+        <div class="word-romaji">shichi-ji ni okiru</div>
+        <div class="word-meaning">七點起床（時間點 → に）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、で — 動作的場所 / 手段</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">で</span>(de) 標示<strong>動作發生在哪裡</strong>，或<strong>用什麼工具</strong>做。<br>
+    它強調的是「在這個範圍裡進行某動作」，跟 に 的「定點」不同。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+    <div class="word-item" data-text="うちで ほんを よむ">
+      <div class="word-content">
+        <div class="word-ja">うち<span class="j-mark">で</span> ほん<span class="j-mark">を</span> よむ</div>
+        <div class="word-romaji">uchi de hon o yomu</div>
+        <div class="word-meaning">在家讀書（動作場所 → で）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="がっこうで たべる">
+      <div class="word-content">
+        <div class="word-ja">がっこう<span class="j-mark">で</span> たべる</div>
+        <div class="word-romaji">gakkō de taberu</div>
+        <div class="word-meaning">在學校吃（動作場所 → で）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="でんしゃで いく">
+      <div class="word-content">
+        <div class="word-ja">でんしゃ<span class="j-mark">で</span> いく</div>
+        <div class="word-romaji">densha de iku</div>
+        <div class="word-meaning">坐電車去（手段 → で）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    🎯 <strong>に vs で 一刀切記法</strong><br>
+    • 句子有<strong>動作</strong>（讀、吃、玩…）→ 那個地方用 <span class="compare">で</span><br>
+    • 只是<strong>存在</strong>（在、有、住…）→ 那個地方用 <span class="compare">に</span><br>
+    例：うち<strong>で</strong> たべる（在家吃）／ うち<strong>に</strong> いる（在家裡）
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、へ — 方向（寫 へ，唸 e）</div>
+
+  <div class="alert">
+    ⚠️ <strong>本系列第三個「寫一樣、唸不一樣」</strong>—— 助詞 <span class="compare">へ</span> 念 <strong>e</strong>（不是 he）。<br>
+    跟 は→wa、を→o 並列，是日文僅有的三個發音破例。
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">へ</span>(e) 跟 に 都能表示「去某地」，差別在語感：<br>
+    • <strong>に</strong> 強調<strong>到達點</strong>（重點是到那裡）<br>
+    • <strong>へ</strong> 強調<strong>方向／過程</strong>（朝著那邊去）<br>
+    入門階段兩個常常可以互換，會話中 に 比較常用。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+    <div class="word-item" data-text="とうきょうへ いく">
+      <div class="word-content">
+        <div class="word-ja">とうきょう<span class="j-mark">へ</span> いく</div>
+        <div class="word-romaji">tōkyō e iku</div>
+        <div class="word-meaning">去東京（往東京方向）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="うちへ かえる">
+      <div class="word-content">
+        <div class="word-ja">うち<span class="j-mark">へ</span> かえる</div>
+        <div class="word-romaji">uchi e kaeru</div>
+        <div class="word-meaning">回家（朝著家的方向回去）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、と — 和 / 跟</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">と</span>(to) 兩種用法都很常見：<br>
+    • <strong>並列</strong>：A と B ＝ A 和 B（兩個東西列在一起）<br>
+    • <strong>共同</strong>：X と 動詞 ＝ 跟 X 一起做某動作
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+    <div class="word-item" data-text="いぬと ねこ">
+      <div class="word-content">
+        <div class="word-ja">いぬ<span class="j-mark">と</span> ねこ</div>
+        <div class="word-romaji">inu to neko</div>
+        <div class="word-meaning">狗跟貓（並列）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="ともだちと いく">
+      <div class="word-content">
+        <div class="word-ja">ともだち<span class="j-mark">と</span> いく</div>
+        <div class="word-romaji">tomodachi to iku</div>
+        <div class="word-meaning">跟朋友一起去（共同）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="あにと あね">
+      <div class="word-content">
+        <div class="word-ja">あに<span class="j-mark">と</span> あね</div>
+        <div class="word-romaji">ani to ane</div>
+        <div class="word-meaning">哥哥跟姊姊（並列）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、も — 也</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">も</span>(mo) ＝ 中文的<strong>「也」</strong>。它會<strong>取代 は 或 が 的位置</strong>（不是放在它們後面）。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+    <div class="word-item" data-text="わたしも がくせいです">
+      <div class="word-content">
+        <div class="word-ja">わたし<span class="j-mark">も</span> がくせいです</div>
+        <div class="word-romaji">watashi mo gakusei desu</div>
+        <div class="word-meaning">我也是學生（取代了 は）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="あにも います">
+      <div class="word-content">
+        <div class="word-ja">あに<span class="j-mark">も</span> います</div>
+        <div class="word-romaji">ani mo imasu</div>
+        <div class="word-meaning">也有哥哥（取代了 が）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 對照：<br>
+    • わたし<strong>は</strong> がくせいです — 我是學生<br>
+    • わたし<strong>も</strong> がくせいです — 我<strong>也</strong>是學生（は 換成 も）
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · 全 10 個</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    上下兩篇合起來的速記表。把這 10 個練熟，初級日文 90% 的句子都能搭出來。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>助詞</th><th>音</th><th>主要功能</th><th>記憶口訣</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-kana">は</td><td class="col-romaji">wa</td><td class="col-role">主題</td><td class="col-meaning">「我這人嘛…」</td></tr>
+      <tr><td class="col-kana">が</td><td class="col-romaji">ga</td><td class="col-role">主格 / 強調</td><td class="col-meaning">「是 X 喔！」</td></tr>
+      <tr><td class="col-kana">の</td><td class="col-romaji">no</td><td class="col-role">的</td><td class="col-meaning">X の Y＝X 的 Y</td></tr>
+      <tr><td class="col-kana">を</td><td class="col-romaji">o</td><td class="col-role">受詞</td><td class="col-meaning">動作的對象</td></tr>
+      <tr><td class="col-kana">か</td><td class="col-romaji">ka</td><td class="col-role">疑問</td><td class="col-meaning">放句尾＝？</td></tr>
+      <tr><td class="col-kana">に</td><td class="col-romaji">ni</td><td class="col-role">到達 / 時間 / 存在</td><td class="col-meaning">點狀的「在 / 到」</td></tr>
+      <tr><td class="col-kana">で</td><td class="col-romaji">de</td><td class="col-role">場所 / 手段</td><td class="col-meaning">在哪裡做 / 用什麼做</td></tr>
+      <tr><td class="col-kana">へ</td><td class="col-romaji">e</td><td class="col-role">方向</td><td class="col-meaning">朝著去（寫 へ 唸 e）</td></tr>
+      <tr><td class="col-kana">と</td><td class="col-romaji">to</td><td class="col-role">和 / 跟</td><td class="col-meaning">並列、同行</td></tr>
+      <tr><td class="col-kana">も</td><td class="col-romaji">mo</td><td class="col-role">也</td><td class="col-meaning">取代 は／が 的位置</td></tr>
+    </tbody>
+  </table>
+
+  <a href="2026-05-10-joshi-wa.html" class="next-link">
+    <span class="next-kicker">— Back —</span>
+    <span class="next-title"><span class="next-arrow">←</span> 入門篇：は・が・の・を・か</span>
+    <span class="next-sub">回去複習基礎 5 個助詞</span>
+  </a>
+</div>
+
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  let _jaVoice = null;
+  function getJapaneseVoice() {
+    if (_jaVoice) return _jaVoice;
+    const voices = speechSynthesis.getVoices();
+    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
+    _jaVoice =
+      ja.find(v => v.name.includes('Kyoko')) ||
+      ja.find(v => v.name.includes('O-ren')) ||
+      ja.find(v => v.name.includes('Hana'))  ||
+      ja[0] || null;
+    return _jaVoice;
+  }
+  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
+  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
+
+  function speak(text, button) {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'ja-JP';
+    u.rate = parseFloat(rateSlider.value);
+    u.pitch = 1;
+    const voice = getJapaneseVoice();
+    if (voice) u.voice = voice;
+    if (button) {
+      button.classList.add('playing');
+      button.textContent = '🔊';
+    }
+    u.onend = () => {
+      if (button) { button.classList.remove('playing'); button.textContent = '▶'; }
+    };
+    u.onerror = () => {
+      if (button) { button.classList.remove('playing'); button.textContent = '▶'; }
+    };
+    speechSynthesis.speak(u);
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

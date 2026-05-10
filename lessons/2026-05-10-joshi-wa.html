@@ -332,6 +332,7 @@
   </a>
 </div>
 
+<script src="../js/tts.js"></script>
 <script>
   const rateSlider = document.getElementById('rate');
   const rateValue = document.getElementById('rateValue');
@@ -339,46 +340,13 @@
     rateValue.textContent = rateSlider.value + 'x';
   });
 
-  let _jaVoice = null;
-  function getJapaneseVoice() {
-    if (_jaVoice) return _jaVoice;
-    const voices = speechSynthesis.getVoices();
-    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
-    _jaVoice =
-      ja.find(v => v.name.includes('Kyoko')) ||
-      ja.find(v => v.name.includes('O-ren')) ||
-      ja.find(v => v.name.includes('Hana'))  ||
-      ja[0] || null;
-    return _jaVoice;
-  }
-  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
-  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
-
-  function speak(text, button) {
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'ja-JP';
-    u.rate = parseFloat(rateSlider.value);
-    u.pitch = 1;
-    const voice = getJapaneseVoice();
-    if (voice) u.voice = voice;
-    if (button) {
-      button.classList.add('playing');
-      button.textContent = '🔊';
-    }
-    u.onend = () => {
-      if (button) { button.classList.remove('playing'); button.textContent = '▶'; }
-    };
-    u.onerror = () => {
-      if (button) { button.classList.remove('playing'); button.textContent = '▶'; }
-    };
-    speechSynthesis.speak(u);
-  }
-
   document.querySelectorAll('.word-item[data-text]').forEach(item => {
     const button = item.querySelector('.play-btn');
     const text = item.dataset.text;
-    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    const handler = (e) => {
+      e.stopPropagation();
+      JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+    };
     button.addEventListener('click', handler);
     item.addEventListener('click', handler);
   });

@@ -113,34 +113,11 @@
 
 </div>
 
+<script src="js/tts.js"></script>
 <script>
-  let _jaVoice = null;
-  function getJapaneseVoice() {
-    if (_jaVoice) return _jaVoice;
-    const voices = speechSynthesis.getVoices();
-    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
-    _jaVoice =
-      ja.find(v => v.name.includes('Kyoko')) ||
-      ja.find(v => v.name.includes('O-ren')) ||
-      ja.find(v => v.name.includes('Hana'))  ||
-      ja[0] || null;
-    return _jaVoice;
-  }
-  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
-  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
 
-  function speak(text, btn) {
-    if (!window.speechSynthesis) return;
-    speechSynthesis.cancel();
-    document.querySelectorAll('.pronounce-btn').forEach(b => b.classList.remove('speaking'));
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'ja-JP'; u.rate = 0.85; u.pitch = 1.05;
-    const voice = getJapaneseVoice();
-    if (voice) u.voice = voice;
-    btn.classList.add('speaking');
-    u.onend = () => btn.classList.remove('speaking');
-    u.onerror = () => btn.classList.remove('speaking');
-    speechSynthesis.speak(u);
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(document.getElementById('rate').value || 1) });
   }
 </script>
 </body>

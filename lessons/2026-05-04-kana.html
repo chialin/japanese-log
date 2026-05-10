@@ -234,40 +234,11 @@
   </div>
 </div>
 
+<script src="../js/tts.js"></script>
 <script>
-  let _jaVoice = null;
-  function getJapaneseVoice() {
-    if (_jaVoice) return _jaVoice;
-    const voices = speechSynthesis.getVoices();
-    const ja = voices.filter(v => v.lang.startsWith('ja') && !v.name.includes('Otoya'));
-    _jaVoice =
-      ja.find(v => v.name.includes('Kyoko')) ||
-      ja.find(v => v.name.includes('O-ren')) ||
-      ja.find(v => v.name.includes('Hana'))  ||
-      ja[0] || null;
-    return _jaVoice;
-  }
-  // 頁面載入時預先快取聲音，避免第一次播放選到錯誤聲音
-  speechSynthesis.onvoiceschanged = () => { _jaVoice = null; getJapaneseVoice(); };
-  if (speechSynthesis.getVoices().length > 0) getJapaneseVoice();
 
-  function speak(text, btn) {
-    if (!window.speechSynthesis) return;
-    speechSynthesis.cancel();
-    document.querySelectorAll('.speak-btn').forEach(b => b.classList.remove('speaking'));
-
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = 'ja-JP';
-    utter.rate = parseFloat(document.getElementById('speedRange').value);
-    utter.pitch = 1.05;
-
-    const voice = getJapaneseVoice();
-    if (voice) utter.voice = voice;
-
-    btn.classList.add('speaking');
-    utter.onend = () => btn.classList.remove('speaking');
-    utter.onerror = () => btn.classList.remove('speaking');
-    speechSynthesis.speak(utter);
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(document.getElementById('speedRange').value || 1) });
   }
 
   if (speechSynthesis.onvoiceschanged !== undefined) {

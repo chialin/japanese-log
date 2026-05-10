@@ -4,6 +4,9 @@
    每個頁面另有 <style> 定義自己的 :root 色調（粉色 / 棕色 / 藍色 / 紅色）
    ============================================================ */
 
+/* ── Klee One — 教科書風日文字（給例句、單字、kana 用，標題仍用 Shippori Mincho）── */
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -122,7 +125,7 @@ body::before {
 .kana-card:hover::before, .kana-card.playing::before { transform: scaleX(1); }
 .kana-card.playing { border-color: var(--accent); background: var(--accent-pale); }
 .kana-big {
-  font-family: 'Shippori Mincho', serif; font-size: 32px; font-weight: 700;
+  font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 32px; font-weight: 600;
   color: var(--ink); margin-bottom: 6px;
 }
 .kana-romaji {
@@ -157,7 +160,7 @@ body::before {
 .word-item:last-child { border-bottom: none; }
 .word-content { flex: 1; min-width: 0; }
 .word-ja {
-  font-family: 'Shippori Mincho', serif; font-size: 18px; font-weight: 600;
+  font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 18px; font-weight: 600;
   color: var(--ink); margin-bottom: 2px;
 }
 .word-romaji {
@@ -203,8 +206,8 @@ body::before {
 /* ── Highlight inline ── */
 .compare {
   display: inline-block; background: var(--accent-pale);
-  padding: 1px 7px; font-weight: 700; color: var(--accent);
-  font-family: 'Shippori Mincho', serif;
+  padding: 1px 7px; font-weight: 600; color: var(--accent);
+  font-family: 'Klee One', 'Shippori Mincho', serif;
 }
 
 /* ── Phrase items ── */
@@ -221,7 +224,7 @@ body::before {
 .phrase:hover { border-color: var(--accent-soft); }
 .phrase-content { flex: 1; }
 .phrase-ja {
-  font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 600;
+  font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 22px; font-weight: 600;
   color: var(--ink); margin-bottom: 4px;
 }
 .phrase-romaji {
@@ -244,7 +247,7 @@ body::before {
 .reading-row { display: flex; align-items: center; gap: 10px; }
 .reading-info { flex: 1; }
 .japanese {
-  font-family: 'Shippori Mincho', serif; font-size: 20px; font-weight: 600; color: var(--ink);
+  font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 20px; font-weight: 600; color: var(--ink);
 }
 .romaji {
   font-family: 'Cormorant Garamond', serif; font-style: italic;
@@ -260,7 +263,7 @@ body::before {
 }
 .kana-row-display { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
 .kana-char {
-  font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 700;
+  font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 28px; font-weight: 600;
   color: var(--ink); background: var(--accent-pale);
   padding: 6px 10px; border: 1px solid var(--line);
 }

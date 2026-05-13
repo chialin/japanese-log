@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文人稱代名詞 — わたし・あなた・あのひと</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 人稱卡片 — 漢字大、假名小 */
+.pron-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:16px;}
+.pron-card{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 18px;cursor:pointer;transition:background .15s,border-color .15s;}
+.pron-card:hover{background:rgba(255,255,255,.85);}
+.pron-kanji{font-family:'Klee One','Shippori Mincho',serif;font-size:34px;font-weight:600;color:var(--accent);min-width:78px;text-align:center;line-height:1;letter-spacing:.02em;}
+.pron-body{flex:1;display:flex;flex-direction:column;gap:2px;}
+.pron-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);}
+.pron-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;}
+.pron-meaning{color:var(--ink-soft);font-size:14px;margin-top:3px;}
+.pron-tag{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--accent);background:var(--accent-pale);padding:1px 8px;margin-left:6px;letter-spacing:.05em;border-radius:2px;}
+.pron-card .play-btn{flex-shrink:0;}
+
+/* 速記表 */
+.pron-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.pron-table th,.pron-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+.pron-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.pron-table tr:last-child td{border-bottom:none;}
+.pron-table .col-label{color:var(--ink-mute);font-family:'Cormorant Garamond',serif;font-style:italic;width:80px;}
+.pron-table .col-sg,.pron-table .col-pl{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink);}
+.pron-table .col-sg strong,.pron-table .col-pl strong{color:var(--accent);font-weight:600;}
+.pron-table .ro{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:12px;margin-top:2px;}
+
+/* 行內高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 「下一篇」卡片 */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">文法 · Pronouns</div>
+    <div class="center">人 稱 代 名 詞</div>
+    <div class="right">2026 / 05 / 13</div>
+  </header>
+
+  <h1 class="page-title">わたし・あなた・<span class="accent">あのひと</span></h1>
+  <p class="page-subtitle">日文的「我、你、他」 — 三大人稱與複數加 たち</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>三句話搞懂全篇</strong><br>
+    ① 第一人稱（我）出現最多，記熟 <span class="compare">わたし</span> 就好；<br>
+    ② 第二人稱（你）和第三人稱（他）日文常常省略不講，重點記 <span class="compare">あなた</span> 和 <span class="compare">あのひと</span>；<br>
+    ③ 複數一律後面加 <span class="compare">たち</span>（只有「彼」例外，用「彼ら」）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、第一人稱 — 我</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">わたし</span> 是<strong>男女通用</strong>的禮貌說法，初學者只記這一個就夠了。<br>
+    男生在朋友之間另外有 <span class="compare">ぼく</span>（較斯文）和 <span class="compare">おれ</span>（較粗獷）兩種口語版本，僅供辨識，不一定要用。
+  </p>
+
+  <div class="pron-grid">
+    <div class="pron-card" data-text="わたし">
+      <div class="pron-kanji">私</div>
+      <div class="pron-body">
+        <div class="pron-kana">わたし<span class="pron-tag">禮貌・男女通用</span></div>
+        <div class="pron-romaji">watashi</div>
+        <div class="pron-meaning">我 — 最標準的說法，書面、口語都能用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="ぼく">
+      <div class="pron-kanji">僕</div>
+      <div class="pron-body">
+        <div class="pron-kana">ぼく<span class="pron-tag">男生口語</span></div>
+        <div class="pron-romaji">boku</div>
+        <div class="pron-meaning">我 — 男生對朋友／晚輩用，較柔和</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="おれ">
+      <div class="pron-kanji">俺</div>
+      <div class="pron-body">
+        <div class="pron-kana">おれ<span class="pron-tag">男生口語</span></div>
+        <div class="pron-romaji">ore</div>
+        <div class="pron-meaning">我 — 男生對熟人用，較粗獷／隨意</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、第二人稱 — 你</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">あなた</span> 是課本上的「你」，但日文實際對話<strong>很少直呼對方</strong>——多半用「對方的名字 + さん」代替（例：田中さん）。<br>
+    <span class="compare">きみ</span> 是朋友之間的口語，男生對女生／長輩對晚輩比較常用。
+  </p>
+
+  <div class="pron-grid">
+    <div class="pron-card" data-text="あなた">
+      <div class="pron-kanji">貴方</div>
+      <div class="pron-body">
+        <div class="pron-kana">あなた<span class="pron-tag">標準</span></div>
+        <div class="pron-romaji">anata</div>
+        <div class="pron-meaning">你 — 通常會被替換成「<strong>～さん</strong>」，純講「あなた」反而很少</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="きみ">
+      <div class="pron-kanji">君</div>
+      <div class="pron-body">
+        <div class="pron-kana">きみ<span class="pron-tag">朋友口語</span></div>
+        <div class="pron-romaji">kimi</div>
+        <div class="pron-meaning">你 — 平輩之間／長輩對晚輩用，比 あなた 親近</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>不要對長輩或老闆直接用「あなた」或「きみ」</strong><br>
+    日文職場、對長輩，要叫對方<strong>名字＋さん</strong>（例：山田さん）或<strong>頭銜</strong>（先生／部長）。直接「你」會顯得失禮。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、第三人稱 — 他／她／那個人</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日文的第三人稱有三種，按使用頻率排：<br>
+    ① <span class="compare">あのひと</span>（不分性別，最常用）<br>
+    ② <span class="compare">かれ</span>（他）<br>
+    ③ <span class="compare">かのじょ</span>（她）<br>
+    特別注意：<strong>かれ／かのじょ</strong> 在熟人之間還可以解作「男朋友／女朋友」，看上下文。
+  </p>
+
+  <div class="pron-grid">
+    <div class="pron-card" data-text="あのひと">
+      <div class="pron-kanji">あの人</div>
+      <div class="pron-body">
+        <div class="pron-kana">あのひと<span class="pron-tag">不分性別・最常用</span></div>
+        <div class="pron-romaji">ano hito</div>
+        <div class="pron-meaning">那個人 — 男女皆可，最安全也最常聽到</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="かれ">
+      <div class="pron-kanji">彼</div>
+      <div class="pron-body">
+        <div class="pron-kana">かれ<span class="pron-tag">男性</span></div>
+        <div class="pron-romaji">kare</div>
+        <div class="pron-meaning">他／男朋友 — 上下文決定意思</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="かのじょ">
+      <div class="pron-kanji">彼女</div>
+      <div class="pron-body">
+        <div class="pron-kana">かのじょ<span class="pron-tag">女性</span></div>
+        <div class="pron-romaji">kanojo</div>
+        <div class="pron-meaning">她／女朋友 — 上下文決定意思</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、複數 — 後面加 たち</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日文沒有像英文 I→we、he→they 那種變形。<strong>絕大多數的人稱複數，就是後面加 <span class="compare">たち</span></strong>。<br>
+    唯一例外：<strong>彼 → 彼ら（かれら）</strong>，比較古式但仍常見。
+  </p>
+
+  <div class="pron-grid">
+    <div class="pron-card" data-text="わたしたち">
+      <div class="pron-kanji">私たち</div>
+      <div class="pron-body">
+        <div class="pron-kana">わたしたち</div>
+        <div class="pron-romaji">watashi-tachi</div>
+        <div class="pron-meaning">我們</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="あなたたち">
+      <div class="pron-kanji">あなたたち</div>
+      <div class="pron-body">
+        <div class="pron-kana">あなたたち</div>
+        <div class="pron-romaji">anata-tachi</div>
+        <div class="pron-meaning">你們</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="あのひとたち">
+      <div class="pron-kanji">あの人たち</div>
+      <div class="pron-body">
+        <div class="pron-kana">あのひとたち</div>
+        <div class="pron-romaji">ano hito-tachi</div>
+        <div class="pron-meaning">那些人</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="かのじょたち">
+      <div class="pron-kanji">彼女たち</div>
+      <div class="pron-body">
+        <div class="pron-kana">かのじょたち</div>
+        <div class="pron-romaji">kanojo-tachi</div>
+        <div class="pron-meaning">她們</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="pron-card" data-text="かれら">
+      <div class="pron-kanji">彼ら</div>
+      <div class="pron-body">
+        <div class="pron-kana">かれら<span class="pron-tag">例外</span></div>
+        <div class="pron-romaji">karera</div>
+        <div class="pron-meaning">他們 — 不是「彼たち」，是 <strong>彼ら</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、形式不變 — 不用變格</div>
+
+  <div class="tip">
+    💡 <strong>好消息：日文的人稱不會「變身」</strong><br>
+    英文 I／me／my／mine 一個字四個樣，中文「我」也會跟「我們」變化。<br>
+    日文不一樣 ——「<span class="compare">わたし</span>」不管當主詞、受詞、所有格，都還是「わたし」，只是後面換不同助詞。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 同一個「わたし」走遍天下</div>
+    <div class="word-item" data-text="わたしは がくせいです">
+      <div class="word-content">
+        <div class="word-ja">わたし<span class="j-mark">は</span> がくせいです</div>
+        <div class="word-romaji">watashi <strong>wa</strong> gakusei desu</div>
+        <div class="word-meaning">我是學生 — わたし＋は，當主題</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="わたしの ほん">
+      <div class="word-content">
+        <div class="word-ja">わたし<span class="j-mark">の</span> ほん</div>
+        <div class="word-romaji">watashi <strong>no</strong> hon</div>
+        <div class="word-meaning">我的書 — わたし＋の，當所有格</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="わたしも います">
+      <div class="word-content">
+        <div class="word-ja">わたし<span class="j-mark">も</span> います</div>
+        <div class="word-romaji">watashi <strong>mo</strong> imasu</div>
+        <div class="word-meaning">我也在 — わたし＋も，當「也」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · Cheat sheet</div>
+
+  <table class="pron-table">
+    <thead>
+      <tr><th></th><th>單數</th><th>複數</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-label">第一人稱</td>
+        <td class="col-sg"><strong>わたし</strong>（私）<span class="ro">watashi · 我</span></td>
+        <td class="col-pl">わたし<strong>たち</strong><span class="ro">watashi-tachi · 我們</span></td>
+      </tr>
+      <tr>
+        <td class="col-label">第二人稱</td>
+        <td class="col-sg"><strong>あなた</strong><span class="ro">anata · 你</span></td>
+        <td class="col-pl">あなた<strong>たち</strong><span class="ro">anata-tachi · 你們</span></td>
+      </tr>
+      <tr>
+        <td class="col-label" rowspan="3">第三人稱</td>
+        <td class="col-sg"><strong>あのひと</strong>（あの人）<span class="ro">ano hito · 那個人（不分性別）</span></td>
+        <td class="col-pl">あのひと<strong>たち</strong><span class="ro">ano hito-tachi · 那些人</span></td>
+      </tr>
+      <tr>
+        <td class="col-sg"><strong>かれ</strong>（彼）<span class="ro">kare · 他／男友</span></td>
+        <td class="col-pl">かれ<strong>ら</strong>（彼ら）<span class="ro">karera · 他們（例外）</span></td>
+      </tr>
+      <tr>
+        <td class="col-sg"><strong>かのじょ</strong>（彼女）<span class="ro">kanojo · 她／女友</span></td>
+        <td class="col-pl">かのじょ<strong>たち</strong><span class="ro">kanojo-tachi · 她們</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 <strong>新手只記三個</strong>：<span class="compare">わたし</span>（我）、<span class="compare">あなた</span>（你，但常被名字＋さん取代）、<span class="compare">あのひと</span>（那個人）。其他口語版（ぼく／おれ／きみ／かれ／かのじょ）認得就好，等熟了再選用。
+  </div>
+
+  <a href="2026-05-13-onyomi-sensei.html" class="next-link">
+    <span class="next-kicker">— Same day · 同一天 —</span>
+    <span class="next-title">音讀：先生・學生・會社員 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一個「生」念 せい — 漢字音讀的入門規律＋兩個常見職業稱呼</span>
+  </a>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // pron-card：整張卡 + 播放按鈕
+  document.querySelectorAll('.pron-card[data-text]').forEach(card => {
+    const button = card.querySelector('.play-btn');
+    const text = card.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    card.addEventListener('click', handler);
+  });
+
+  // word-item：例句
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

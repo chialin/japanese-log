@@ -165,7 +165,7 @@ body::before {
 }
 .word-romaji {
   font-family: 'Cormorant Garamond', serif; font-style: italic;
-  font-size: 14px; color: var(--accent); letter-spacing: .05em;
+  font-size: 18px; color: var(--accent); letter-spacing: .05em;
 }
 .word-meaning { font-size: 14px; color: var(--ink-soft); margin-top: 2px; }
 

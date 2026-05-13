@@ -50,16 +50,17 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
 
 **Step 1 — 決定類型**（決定目錄、色票、可用樣板區塊）：
 
-| 類型 | 放在 | 範本可參考 |
+| 類型 | 放在 | 起手用什麼 |
 |------|------|------|
-| 五十音行 | `lessons/YYYY-MM-DD-XX-row.html` | [a-row](lessons/2026-04-29-a-row.html) |
-| 主題（數字／季節／句型／概念） | `lessons/YYYY-MM-DD-topic.html` | 對照上表「類型 → 樣板對照」挑最近的 |
-| 閱讀筆記 | `readings/YYYY-MM-DD-topic.html` | [reading-cho](readings/2026-05-05-reading-cho.html) |
-| 一次性介紹頁 | 根目錄 | [my-name-katakana](my-name-katakana.html) |
+| `lessons/*`（每日課程，含五十音行／主題／文法／概念） | `lessons/YYYY-MM-DD-<slug>.html` | **複製 [`lessons/_skeleton.html`](lessons/_skeleton.html)**，依「子類型」加上對應 CSS 區塊（見下表） |
+| 閱讀筆記 | `readings/YYYY-MM-DD-topic.html` | 複製 [reading-cho](readings/2026-05-05-reading-cho.html) |
+| 一次性介紹頁 | 根目錄 | 複製 [my-name-katakana](my-name-katakana.html) |
 
-**Step 2 — 複製最相近的同類型頁面**，改 `:root` 色票（保留色票類別不變）、頁標、內文。
+**Step 2 — 把 skeleton 內所有 `TODO:` 註解區塊填掉**（標題、masthead、divider、word-item …），不需要的 `<section>` 整段刪。色票寫死在 `:root`，**不要改**。
 
-**Step 3 — 在 `index.html` `<ul id="lesson-list">` 開頭插入新 `<li>`**（新→舊排序）：
+**Step 3 — 加子類型專屬 CSS／HTML 區塊**（從下方「子類型 → 樣板對照」表挑最近的範本，把它的 `<style>` 與結構複製過來）。
+
+**Step 4 — 在 `index.html` `<ul id="lesson-list">` 開頭插入新 `<li>`**（新→舊排序）：
 
 ```html
 <li>
@@ -143,6 +144,8 @@ function getJapaneseVoice() {
 | 主題 — 數字 | [numbers](lessons/2026-05-03-numbers.html) | `.number-card` + `.number-big` / `.readings` `.reading-row` `.reading-info` / `.japanese` + `.romaji` / `.count-all` |
 | 主題 — 季節 | [seasons](lessons/2026-05-04-seasons.html) | `.seasons` + `.season-card` (spring/summer/autumn/winter) / `.extras` + `.extra-item` / 自有 `.all-seasons-btn` `.small-play-btn` |
 | 主題 — 句型／問候 | [ashita](lessons/2026-05-02-ashita.html) | `.category` + `.category-title` / `.phrase` `.phrase-content` `.phrase-ja` `.phrase-romaji` `.phrase-meaning` / `.warning` |
+| 文法 — 助詞／音變 | [joshi-wa](lessons/2026-05-10-joshi-wa.html), [joshi-2](lessons/2026-05-10-joshi-2.html), [dakuten-sokuon](lessons/2026-05-09-dakuten-sokuon.html) | `.joshi-table` + `.col-kana` `.col-romaji` `.col-role` `.col-meaning` / `.j-mark`（行內助詞高亮）/ `.vs-grid` + `.vs-col` 對照欄 / `.next-link` 跨頁 |
+| 文法 — 詞彙概念（人稱／音讀） | [jinshou](lessons/2026-05-13-jinshou.html), [onyomi-sensei](lessons/2026-05-13-onyomi-sensei.html) | 自製 `.pron-card` / `.job-card`（漢字大＋假名小＋羅馬＋意思的卡片）/ `.kanji-spot` 單字大字解析 / 速記表沿用 `.joshi-table` 同款 |
 | 假名概念 | [kana](lessons/2026-05-04-kana.html) | 自有 `.tree-box` `.branch-card` (hira/kata) / `.compare-table` / `.example-row` + `.ex-hira` `.ex-kata` |
 | 自我介紹（片假名） | [my-name-katakana](my-name-katakana.html) | 自有 `.card`（藍色主題、結構接近 reading hero） |
 | 閱讀筆記 | [reading-cho](readings/2026-05-05-reading-cho.html) | `.hero` + `.hero-title` `.hero-sub` `.hero-meta` / `.vertical-text` + `.vertical-card` / `.particles` + `.particle` / `.row` + `.kana` + `.translate` / `.grammar` |

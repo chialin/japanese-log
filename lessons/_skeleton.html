@@ -1,0 +1,132 @@
+<!--
+  ─────────────────────────────────────────────
+  📋 LESSON SKELETON — 複製此檔開新課程
+  ─────────────────────────────────────────────
+  使用方式：
+    1. cp lessons/_skeleton.html lessons/YYYY-MM-DD-<slug>.html
+    2. 全文搜尋「TODO:」逐一填入
+    3. 不需要的 <section> 區塊整段刪掉
+    4. 在 index.html 的 <ul id="lesson-list"> 開頭插入新 <li>
+    5. 跑 `node scripts/generate-audio.mjs --speaker 11` 生 TTS 音檔
+
+  色票：lessons/* 一律棕橘（已寫死於下方 :root，不要動）
+  路徑：本檔放在 lessons/ 下，所有相對路徑（../shared.css、../js/tts.js
+        、../index.html）已正確設定 — 複製到 lessons/ 下即可直接用
+  ─────────────────────────────────────────────
+-->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TODO: 改成本課的瀏覽器分頁標題 -->
+<title>標題 — Lesson Title</title>
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* TODO: 本頁專用樣式寫在這裡（範例：.pron-card、.joshi-table、.season-card …）
+   只放這頁需要的；通用樣式（.wrap / .word-item / .play-btn / .tip / .note / .alert / .divider / .compare）已在 shared.css */
+
+/* 行內助詞高亮（多數文法／概念課會用，不用就刪） */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 跨頁 next-link 卡片（同一天兩篇互跳、或上一篇 / 下一篇用，不用就刪） */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <!-- TODO: 三欄文字（左：類別、中：本課大標題、右：日期） -->
+    <div class="left">類別 · Category</div>
+    <div class="center">本　課　名　稱</div>
+    <div class="right">2026 / 05 / 13</div>
+  </header>
+
+  <!-- TODO: 大標題（中文 / 假名皆可），span.accent 是要染上強調色的字 -->
+  <h1 class="page-title">本課標題 <span class="accent">重點字</span></h1>
+  <p class="page-subtitle">一句話副標 — 說明本課要做什麼</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <!-- TODO: 開頭可選的 callout：tip（💡）/ note（📝）/ alert（⚠️）/ warning -->
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    一句話交代學完這篇能學到什麼。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <!-- TODO: 重複以下 section，每個小節一塊 -->
+  <div class="divider">一、小節標題</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    小節說明文字。需要強調的詞用 <span class="compare">これ</span>，需要對照的用 <strong>粗體</strong>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句／單字</div>
+
+    <!-- 單字／例句卡片：data-text 是 TTS 朗讀的內容（純假名） -->
+    <div class="word-item" data-text="ここに 例文を 書く">
+      <div class="word-content">
+        <div class="word-ja">ここに 例文を かく</div>
+        <div class="word-romaji">koko ni reibun o kaku</div>
+        <div class="word-meaning">在這裡寫例句 — 中文翻譯／補充</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <!-- TODO: 結尾速記表 / 重點回顧（可選） -->
+
+  <!-- TODO: 跨頁 next-link（可選 — 同一天兩篇互跳，或系列課的上下篇）
+  <a href="2026-05-13-other.html" class="next-link">
+    <span class="next-kicker">— Next / Same day —</span>
+    <span class="next-title">下一篇標題 <span class="next-arrow">→</span></span>
+    <span class="next-sub">一句話說明下一篇要學什麼</span>
+  </a>
+  -->
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // 通用：所有帶 data-text 的元素 — 點整塊或點按鈕都會唸
+  // 加新的 .pron-card、.kana-card、.phrase 等自製卡片時，把 selector 加進來
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

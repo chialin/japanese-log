@@ -8,8 +8,12 @@
 //   1. 安裝 VOICEVOX (https://voicevox.hiroshiba.jp/) 並開啟 app（會自動啟動 engine on :50021）
 //   2. 系統需有 ffmpeg（brew install ffmpeg）
 //
+// 單音（單一假名，text.length === 1）特殊處理：逐拍 pitch 壓平成平均值，
+// 做出「念表腔」的真‧單調，避免 TTS 對孤立一拍套上句尾語調聽起來很怪。
+// 單字／句子維持一般合成。全部過 ffmpeg loudnorm 統一音量。
+//
 // 用法：
-//   node scripts/generate-audio.mjs                    # 用預設角色（九州そら ノーマル, id=16）
+//   node scripts/generate-audio.mjs                    # 用預設角色（春日部つむぎ ノーマル, id=8）
 //   node scripts/generate-audio.mjs --speaker 8        # 換角色
 //   node scripts/generate-audio.mjs --list-speakers    # 列出所有可選角色
 //   node scripts/generate-audio.mjs --force            # 強制重新生成（即使 cache 已存在）
@@ -28,7 +32,7 @@ const args = process.argv.slice(2);
 const force = args.includes('--force');
 const listOnly = args.includes('--list-speakers');
 const speakerIdx = args.indexOf('--speaker');
-const SPEAKER = speakerIdx >= 0 ? parseInt(args[speakerIdx + 1], 10) : 16;
+const SPEAKER = speakerIdx >= 0 ? parseInt(args[speakerIdx + 1], 10) : 8;
 const SPEED = 1.0;
 
 // ── 1. ping engine ───────────────────────
@@ -105,14 +109,17 @@ function hashText(text) {
 
 // ── 5. 單句生成 ──────────────────────────
 async function synthesize(text) {
-  // 短字（≤4 字 且無空格）特殊處理：句尾加「。」騙模型當完整句、降 intonation 避免抑揚過頭
-  const isShort = text.length <= 4 && !text.includes(' ');
-  const synthText = isShort ? text + '。' : text;
+  // 單音（單一假名）：做「念表腔」真‧單調 — 句尾加「。」、逐拍 pitch 壓平成平均值、
+  // 關掉疑問語調，避免 TTS 對孤立一拍套上句尾抑揚聽起來很怪。
+  const isSingle = text.length === 1 && !text.includes(' ');
+  // 其餘短字（2-4 字無空格）：句尾加「。」騙模型當完整句、降 intonation 避免抑揚過頭
+  const isShort = !isSingle && text.length <= 4 && !text.includes(' ');
+  const synthText = isSingle || isShort ? text + '。' : text;
 
   // 依字長自動調 speedScale — 越短的越慢，避免 phoneme 太短聽起來「破」「促」
   let speedScale = SPEED;
   if (!text.includes(' ')) {
-    if (text.length === 1) speedScale = 0.5;
+    if (text.length === 1) speedScale = 0.55;
     else if (text.length === 2) speedScale = 0.7;
     else if (text.length <= 4) speedScale = 0.85;
   }
@@ -126,9 +133,24 @@ async function synthesize(text) {
   const query = await queryRes.json();
   query.speedScale = speedScale;
   // 給短字（1-2 個 kana）多一點頭尾空白，避免神經模型 render 太擠造成破音
-  query.prePhonemeLength = 0.25;
-  query.postPhonemeLength = 0.25;
-  if (isShort) {
+  query.prePhonemeLength = 0.3;
+  query.postPhonemeLength = 0.3;
+  if (isSingle) {
+    // 逐拍把 pitch 覆寫成平均值 → 真正的平音（比 intonationScale 更徹底）
+    const pitches = [];
+    for (const ap of query.accent_phrases)
+      for (const m of ap.moras) if (m.pitch > 0) pitches.push(m.pitch);
+    const flat = pitches.length
+      ? pitches.reduce((a, b) => a + b, 0) / pitches.length
+      : 5.3;
+    for (const ap of query.accent_phrases) {
+      ap.is_interrogative = false;
+      for (const m of ap.moras) if (m.pitch > 0) m.pitch = flat;
+      if (ap.pause_mora && ap.pause_mora.pitch > 0) ap.pause_mora.pitch = flat;
+    }
+    query.pitchScale = 0;
+    query.volumeScale = 1.2;
+  } else if (isShort) {
     query.intonationScale = 0.5;
   }
 
@@ -148,6 +170,7 @@ function wavToMp3(wavBuf, outPath) {
     const ff = spawn('ffmpeg', [
       '-y', '-loglevel', 'error',
       '-f', 'wav', '-i', 'pipe:0',
+      '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11',
       '-codec:a', 'libmp3lame', '-b:a', '128k',
       outPath,
     ]);

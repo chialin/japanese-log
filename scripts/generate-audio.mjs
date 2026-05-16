@@ -10,7 +10,7 @@
 //
 // 單音（單一假名，text.length === 1）特殊處理：逐拍 pitch 壓平成平均值，
 // 做出「念表腔」的真‧單調，避免 TTS 對孤立一拍套上句尾語調聽起來很怪。
-// 單字／句子維持一般合成。全部過 ffmpeg loudnorm 統一音量。
+// 單字／句子維持一般合成。全部用兩段式峰值正規化拉到 -1.5 dBFS（不經限幅器，不破音）。
 //
 // 用法：
 //   node scripts/generate-audio.mjs                    # 用預設角色（春日部つむぎ ノーマル, id=8）
@@ -18,7 +18,7 @@
 //   node scripts/generate-audio.mjs --list-speakers    # 列出所有可選角色
 //   node scripts/generate-audio.mjs --force            # 強制重新生成（即使 cache 已存在）
 
-import { readFile, writeFile, mkdir, readdir, access } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir, access, unlink } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
@@ -149,7 +149,6 @@ async function synthesize(text) {
       if (ap.pause_mora && ap.pause_mora.pitch > 0) ap.pause_mora.pitch = flat;
     }
     query.pitchScale = 0;
-    query.volumeScale = 1.2;
   } else if (isShort) {
     query.intonationScale = 0.5;
   }
@@ -164,26 +163,47 @@ async function synthesize(text) {
   return Buffer.from(await synthRes.arrayBuffer());
 }
 
-// ── 6. WAV → MP3 (via ffmpeg) ────────────
-function wavToMp3(wavBuf, outPath) {
+// ── 6. WAV → MP3：兩段式峰值正規化 ────────
+// VOICEVOX 輸出 volumeScale=1.0（不在合成端放大，避免預先削波），
+// 改在這裡量測真實峰值、補一個靜態增益拉到 -1.5 dBFS。
+// 不經 loudnorm 的動態限幅器 → 不會擠壓失真（破音），單音與單字響度也一致。
+const PEAK_TARGET_DB = -1.5;
+
+function ffmpegRun(args, wavBuf) {
   return new Promise((resolve, reject) => {
-    const ff = spawn('ffmpeg', [
-      '-y', '-loglevel', 'error',
-      '-f', 'wav', '-i', 'pipe:0',
-      '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11',
-      '-codec:a', 'libmp3lame', '-b:a', '128k',
-      outPath,
-    ]);
+    const ff = spawn('ffmpeg', args);
     let stderr = '';
     ff.stderr.on('data', d => { stderr += d.toString(); });
     ff.on('error', reject);
     ff.on('exit', code => {
-      if (code === 0) resolve();
+      if (code === 0) resolve(stderr);
       else reject(new Error(`ffmpeg exit ${code}: ${stderr}`));
     });
-    ff.stdin.write(wavBuf);
-    ff.stdin.end();
+    if (wavBuf) { ff.stdin.write(wavBuf); ff.stdin.end(); }
   });
+}
+
+async function wavToMp3(wavBuf, outPath) {
+  const tmpWav = outPath.replace(/\.mp3$/, '.tmp.wav');
+  await writeFile(tmpWav, wavBuf);
+  try {
+    // pass 1: 量測峰值
+    const det = await ffmpegRun(
+      ['-loglevel', 'info', '-i', tmpWav, '-af', 'volumedetect', '-f', 'null', '-']
+    );
+    const m = det.match(/max_volume:\s*(-?[\d.]+) dB/);
+    const maxDb = m ? parseFloat(m[1]) : -1.5;
+    const gainDb = (PEAK_TARGET_DB - maxDb).toFixed(2);
+    // pass 2: 補靜態增益後編碼
+    await ffmpegRun([
+      '-y', '-loglevel', 'error', '-i', tmpWav,
+      '-af', `volume=${gainDb}dB`,
+      '-codec:a', 'libmp3lame', '-b:a', '128k',
+      outPath,
+    ]);
+  } finally {
+    await unlink(tmpWav).catch(() => {});
+  }
 }
 
 // ── main ─────────────────────────────────

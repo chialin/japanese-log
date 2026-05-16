@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A pure static-HTML Japanese learning log. No build system, no package manager, no dependencies — every file opens directly in a browser. Deployed via GitHub Pages from the `main` branch root.
 
-The learner (Scarlett) is studying from zero, currently on hiragana only (no katakana in lesson content yet). Each lesson page teaches either a 五十音 row (5 kana + vocabulary) or a thematic topic (numbers, seasons, phrases).
+The learner (Scarlett) is studying from zero. She finished the hiragana 五十音 and (from 2026-05-14) started katakana, so both kana are now in scope for lesson content. Each lesson page teaches either a 五十音 row (5 kana + vocabulary) or a thematic topic (numbers, seasons, phrases).
 
 ## No Build Commands
 
@@ -21,7 +21,7 @@ There is no build, lint, or test step. Development workflow:
 ```
 index.html                       ← 首頁：stats + calendar + log（棕色主題）
 shared.css                       ← 全站共用元件樣式（masthead/word-item/play-btn/...）
-my-name-katakana.html            ← 「私の名前」自我介紹（藍色主題，唯一允許片假名）
+my-name-katakana.html            ← 「私の名前」自我介紹（藍色主題）
 lessons/YYYY-MM-DD-topic.html    ← 每日課程（棕色主題）
 readings/YYYY-MM-DD-topic.html   ← 閱讀筆記（深紅主題）
 ```
@@ -159,7 +159,7 @@ function getJapaneseVoice() {
 ## Content Guidelines
 
 - **Language**: Lesson content is in Traditional Chinese (繁體中文) with Japanese text. UI labels mix Chinese, Japanese, and English naturally.
-- **Hiragana only** for all new lesson content — no katakana in lesson body text yet (katakana is only in `my-name-katakana.html`).
+- **Hiragana and katakana** are both allowed in lesson content. Hiragana rows build vocabulary from already-learned kana; katakana row lessons instead pair each kana with its hiragana counterpart and use a few common 外來語 (loanwords, not restricted to learned rows).
 - 五十音行（行）課程每頁恰好 5 個 kana：附羅馬拼音、發音重點、單字、用已學 kana 拼出來的簡單句子。
 - 主題課程（數字／季節／句型／假名概念）專注在日常實用。
 - 閱讀筆記（readings/）拿真實日文短文當素材，標出假名讀法、單字、助詞、文法句型。

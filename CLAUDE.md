@@ -77,6 +77,8 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
 
 Stats 與 calendar 會自動重算——`data-kana` / `data-words` / `data-date` 提供即可，新月份不必動 calendar 邏輯。
 
+**Step 5 — 確保 favicon link 存在**（特別是非複製 `lessons/_skeleton.html` 的手寫頁、或新類型的產生器頁）：最簡單做法是執行 `node scripts/add-favicon.mjs`（冪等，已有 `rel="icon"` 的頁會自動跳過；root 頁注入 `favicon.svg`、`lessons/` 與 `readings/` 注入 `../favicon.svg`）。favicon 功能已於 2026-05-17 完成（見 [docs/superpowers/specs/2026-05-17-favicon-design.md](docs/superpowers/specs/2026-05-17-favicon-design.md)），`_skeleton.html` 已內含該 link，但手寫新頁或新產生器樣板不會自動帶上。
+
 ### TTS — Web Speech API
 
 All audio uses the browser's built-in `speechSynthesis`. No API key needed.

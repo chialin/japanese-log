@@ -71,6 +71,7 @@ function page({ data, kindZh, kindEn, subtitle, tipHtml, whyHtml, historyHtml, n
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${kindZh} 字源 × 筆順 — ${kindEn} Origins</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 <style>
 ${ROOT_CSS}
 ${PAGE_CSS}

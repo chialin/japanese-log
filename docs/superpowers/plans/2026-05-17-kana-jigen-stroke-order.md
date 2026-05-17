@@ -371,7 +371,7 @@ Run:
 ```bash
 grep -c 'class="jg-romaji"' lessons/2026-05-17-hiragana-jigen.html
 grep -c 'class="jg-group"' lessons/2026-05-17-hiragana-jigen.html
-grep -c 'tag-same' lessons/2026-05-17-katakana-jigen.html
+grep -o '<span class="tag-same">' lessons/2026-05-17-katakana-jigen.html | wc -l
 grep -o '../assets/kanjivg/[0-9a-f]*\.svg' lessons/2026-05-17-hiragana-jigen.html | sort -u | wc -l
 grep -c 'js/tts.js\|speak(\|data-text' lessons/2026-05-17-hiragana-jigen.html || echo "no-tts OK"
 ```

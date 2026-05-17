@@ -181,7 +181,7 @@ git commit -m "Fetch 92 KanjiVG stroke-order SVGs (CC-BY-SA 3.0)"
 - Create (產物): `lessons/2026-05-17-hiragana-jigen.html`
 - Create (產物): `lessons/2026-05-17-katakana-jigen.html`
 
-樣式來源：`lessons/2026-05-04-kana.html`（`.card`/`.compare-table`/`.tag-hira`/`.tag-kata`/`.footer`）。`.divider`/`.tip`/`.wrap`/`.masthead`/`.back-link`/`.page-title`/`.page-subtitle`/`.next-link` 來自 `shared.css`，不重寫。新增 `.stroke`、`.jg-kana`、`.src-kanji`、group header 列樣式。
+樣式來源：`lessons/2026-05-04-kana.html`（`.card`/`.compare-table`/`.tag-hira`/`.tag-kata`/`.footer`）。`.divider`/`.tip`/`.wrap`/`.masthead`/`.back-link`/`.page-title`/`.page-subtitle` 來自 `shared.css`，不重寫。`.next-link` 系列**不在** `shared.css`（各頁皆於自身 `<style>` 內定義，見 `lessons/_skeleton.html`），故需納入 `PAGE_CSS`。新增 `.stroke`、`.jg-kana`、`.src-kanji`、group header 列樣式。
 
 - [ ] **Step 1: 建立產生器腳本**
 
@@ -220,6 +220,13 @@ const PAGE_CSS = `
 .footer a{color:var(--accent);text-decoration:none;}.footer a:hover{text-decoration:underline;}
 .attrib{margin-top:14px;font-size:12px;color:var(--ink-mute);font-style:normal;font-family:'Noto Serif TC',serif;}
 .attrib a{color:var(--ink-mute);}
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
 @media(max-width:500px){.jg-kana{font-size:26px;}.src-kanji{font-size:22px;}.stroke{width:52px;height:52px;}}`;
 
 function rows(data) {

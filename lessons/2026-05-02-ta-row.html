@@ -35,14 +35,12 @@
   </div>
 
   <div class="gojuon">
-    <div class="kana-card" data-text="た"><div class="kana-big">た</div><div class="kana-romaji">ta</div></div>
-    <div class="kana-card" data-text="ち"><div class="kana-big">ち</div><div class="kana-romaji">chi</div></div>
-    <div class="kana-card" data-text="つ"><div class="kana-big">つ</div><div class="kana-romaji">tsu</div></div>
-    <div class="kana-card" data-text="て"><div class="kana-big">て</div><div class="kana-romaji">te</div></div>
-    <div class="kana-card" data-text="と"><div class="kana-big">と</div><div class="kana-romaji">to</div></div>
+    <div class="kana-card"><div class="kana-big">た</div><div class="kana-romaji">ta</div></div>
+    <div class="kana-card"><div class="kana-big">ち</div><div class="kana-romaji">chi</div></div>
+    <div class="kana-card"><div class="kana-big">つ</div><div class="kana-romaji">tsu</div></div>
+    <div class="kana-card"><div class="kana-big">て</div><div class="kana-romaji">te</div></div>
+    <div class="kana-card"><div class="kana-big">と</div><div class="kana-romaji">to</div></div>
   </div>
-
-  <button class="row-btn" id="rowBtn">▶ 連續念 た行</button>
 
   <div class="tip">
     ⚠️ <strong>た行有兩個不規則發音！</strong><br>
@@ -131,12 +129,8 @@
     return JTalk.speak(text, button, { rate: parseFloat(document.getElementById('rate').value || 1) });
   }
 
-  document.querySelectorAll('.kana-card').forEach(card => card.addEventListener('click', () => speak(card.dataset.text, card)));
-  document.querySelectorAll('.play-btn').forEach(btn => btn.addEventListener('click', e => { e.stopPropagation(); speak(btn.dataset.text, btn); }));
-  document.getElementById('rowBtn').addEventListener('click', async () => {
-    const row = ['た','ち','つ','て','と'];
-    const cards = document.querySelectorAll('.kana-card');
-    for (let i = 0; i < row.length; i++) { await speak(row[i], cards[i]); await new Promise(r => setTimeout(r, 150)); }
-  });</script>
+  // 單音（單一假名）不提供 TTS——VOICEVOX／speechSynthesis 都無法好好念孤立一拍。
+  // kana 卡片只作視覺對照，不可點擊發音；只有單字保留發音。
+  document.querySelectorAll('.play-btn').forEach(btn => btn.addEventListener('click', e => { e.stopPropagation(); speak(btn.dataset.text, btn); }));</script>
 </body>
 </html>

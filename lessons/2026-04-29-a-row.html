@@ -35,14 +35,12 @@
   </div>
 
   <div class="gojuon">
-    <div class="kana-card" data-text="あ"><div class="kana-big">あ</div><div class="kana-romaji">a</div></div>
-    <div class="kana-card" data-text="い"><div class="kana-big">い</div><div class="kana-romaji">i</div></div>
-    <div class="kana-card" data-text="う"><div class="kana-big">う</div><div class="kana-romaji">u</div></div>
-    <div class="kana-card" data-text="え"><div class="kana-big">え</div><div class="kana-romaji">e</div></div>
-    <div class="kana-card" data-text="お"><div class="kana-big">お</div><div class="kana-romaji">o</div></div>
+    <div class="kana-card"><div class="kana-big">あ</div><div class="kana-romaji">a</div></div>
+    <div class="kana-card"><div class="kana-big">い</div><div class="kana-romaji">i</div></div>
+    <div class="kana-card"><div class="kana-big">う</div><div class="kana-romaji">u</div></div>
+    <div class="kana-card"><div class="kana-big">え</div><div class="kana-romaji">e</div></div>
+    <div class="kana-card"><div class="kana-big">お</div><div class="kana-romaji">o</div></div>
   </div>
-
-  <button class="row-btn" id="rowBtn">▶ 連續念 あ行</button>
 
   <div class="tip">
     💡 <strong>あ行 是所有五十音的基礎母音</strong><br>
@@ -118,12 +116,8 @@
     return JTalk.speak(text, button, { rate: parseFloat(document.getElementById('rate').value || 1) });
   }
 
-  document.querySelectorAll('.kana-card').forEach(card => card.addEventListener('click', () => speak(card.dataset.text, card)));
-  document.querySelectorAll('.play-btn').forEach(btn => btn.addEventListener('click', e => { e.stopPropagation(); speak(btn.dataset.text, btn); }));
-  document.getElementById('rowBtn').addEventListener('click', async () => {
-    const row = ['あ','い','う','え','お'];
-    const cards = document.querySelectorAll('.kana-card');
-    for (let i = 0; i < row.length; i++) { await speak(row[i], cards[i]); await new Promise(r => setTimeout(r, 150)); }
-  });</script>
+  // 單音（單一假名）不提供 TTS——VOICEVOX／speechSynthesis 都無法好好念孤立一拍。
+  // kana 卡片只作視覺對照，不可點擊發音；只有單字保留發音。
+  document.querySelectorAll('.play-btn').forEach(btn => btn.addEventListener('click', e => { e.stopPropagation(); speak(btn.dataset.text, btn); }));</script>
 </body>
 </html>

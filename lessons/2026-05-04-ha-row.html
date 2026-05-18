@@ -35,29 +35,27 @@
   </div>
 
   <div class="gojuon">
-    <div class="kana-card" data-text="は">
+    <div class="kana-card">
       <div class="kana-big">は</div>
       <div class="kana-romaji">ha</div>
     </div>
-    <div class="kana-card" data-text="ひ">
+    <div class="kana-card">
       <div class="kana-big">ひ</div>
       <div class="kana-romaji">hi</div>
     </div>
-    <div class="kana-card" data-text="ふ">
+    <div class="kana-card">
       <div class="kana-big">ふ</div>
       <div class="kana-romaji">fu</div>
     </div>
-    <div class="kana-card" data-text="へ">
+    <div class="kana-card">
       <div class="kana-big">へ</div>
       <div class="kana-romaji">he</div>
     </div>
-    <div class="kana-card" data-text="ほ">
+    <div class="kana-card">
       <div class="kana-big">ほ</div>
       <div class="kana-romaji">ho</div>
     </div>
   </div>
-
-  <button class="row-btn" id="rowBtn">▶ 連續念 は行</button>
 
   <div class="alert">
     ⚠️ <strong>特別注意：は行當助詞時發音會變！</strong><br>
@@ -239,21 +237,11 @@
     return JTalk.speak(text, button, { rate: parseFloat(document.getElementById('rate').value || 1) });
   }
 
-  document.querySelectorAll('.kana-card').forEach(card => {
-    card.addEventListener('click', () => speak(card.dataset.text, card));
-  });
+  // 單音（單一假名）不提供 TTS——VOICEVOX／speechSynthesis 都無法好好念孤立一拍。
+  // kana 卡片只作視覺對照，不可點擊發音；只有單字保留發音。
 
   document.querySelectorAll('.play-btn').forEach(btn => {
     btn.addEventListener('click', (e) => { e.stopPropagation(); speak(btn.dataset.text, btn); });
-  });
-
-  document.getElementById('rowBtn').addEventListener('click', async () => {
-    const row = ['は', 'ひ', 'ふ', 'へ', 'ほ'];
-    const cards = document.querySelectorAll('.kana-card');
-    for (let i = 0; i < row.length; i++) {
-      await speak(row[i], cards[i]);
-      await new Promise(r => setTimeout(r, 150));
-    }
   });
 
   if (speechSynthesis.onvoiceschanged !== undefined) {

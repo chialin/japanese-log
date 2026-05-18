@@ -33,21 +33,19 @@
   </div>
 
   <div class="gojuon">
-    <div class="kana-card" data-text="わ">
+    <div class="kana-card">
       <div class="kana-big">わ</div>
       <div class="kana-romaji">wa</div>
     </div>
-    <div class="kana-card" data-text="を">
+    <div class="kana-card">
       <div class="kana-big">を</div>
       <div class="kana-romaji">wo / o</div>
     </div>
-    <div class="kana-card" data-text="ん">
+    <div class="kana-card">
       <div class="kana-big">ん</div>
       <div class="kana-romaji">n</div>
     </div>
   </div>
-
-  <button class="row-btn" id="rowBtn">▶ 連續念 わ・を・ん</button>
 
   <div class="note">
     📌 <strong>わ行其實只剩兩個音</strong><br>
@@ -222,21 +220,11 @@
     return JTalk.speak(text, button, { rate: parseFloat(document.getElementById('rate').value || 1) });
   }
 
-  document.querySelectorAll('.kana-card').forEach(card => {
-    card.addEventListener('click', () => speak(card.dataset.text, card));
-  });
+  // 單音（單一假名）不提供 TTS——VOICEVOX／speechSynthesis 都無法好好念孤立一拍。
+  // kana 卡片只作視覺對照，不可點擊發音；只有單字保留發音。
 
   document.querySelectorAll('.play-btn').forEach(btn => {
     btn.addEventListener('click', (e) => { e.stopPropagation(); speak(btn.dataset.text, btn); });
-  });
-
-  document.getElementById('rowBtn').addEventListener('click', async () => {
-    const row = ['わ', 'を', 'ん'];
-    const cards = document.querySelectorAll('.kana-card');
-    for (let i = 0; i < row.length; i++) {
-      await speak(row[i], cards[i]);
-      await new Promise(r => setTimeout(r, 150));
-    }
   });
 </script>
 </body>

@@ -54,14 +54,12 @@
   </div>
 
   <div class="gojuon">
-    <div class="kana-card" data-text="ア"><div class="kana-big">ア</div><div class="kana-romaji">a</div><div class="kana-hira">＝ <span>あ</span></div></div>
-    <div class="kana-card" data-text="イ"><div class="kana-big">イ</div><div class="kana-romaji">i</div><div class="kana-hira">＝ <span>い</span></div></div>
-    <div class="kana-card" data-text="ウ"><div class="kana-big">ウ</div><div class="kana-romaji">u</div><div class="kana-hira">＝ <span>う</span></div></div>
-    <div class="kana-card" data-text="エ"><div class="kana-big">エ</div><div class="kana-romaji">e</div><div class="kana-hira">＝ <span>え</span></div></div>
-    <div class="kana-card" data-text="オ"><div class="kana-big">オ</div><div class="kana-romaji">o</div><div class="kana-hira">＝ <span>お</span></div></div>
+    <div class="kana-card"><div class="kana-big">ア</div><div class="kana-romaji">a</div><div class="kana-hira">＝ <span>あ</span></div></div>
+    <div class="kana-card"><div class="kana-big">イ</div><div class="kana-romaji">i</div><div class="kana-hira">＝ <span>い</span></div></div>
+    <div class="kana-card"><div class="kana-big">ウ</div><div class="kana-romaji">u</div><div class="kana-hira">＝ <span>う</span></div></div>
+    <div class="kana-card"><div class="kana-big">エ</div><div class="kana-romaji">e</div><div class="kana-hira">＝ <span>え</span></div></div>
+    <div class="kana-card"><div class="kana-big">オ</div><div class="kana-romaji">o</div><div class="kana-hira">＝ <span>お</span></div></div>
   </div>
-
-  <button class="row-btn" id="rowBtn">▶ 連續念 ア行</button>
 
   <div class="tip">
     💡 <strong>片假名 = 平假名的另一套寫法，發音完全一樣</strong><br>
@@ -160,8 +158,8 @@
     return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
   }
 
-  document.querySelectorAll('.kana-card').forEach(card =>
-    card.addEventListener('click', () => speak(card.dataset.text, card)));
+  // 單音（單一假名）不提供 TTS——VOICEVOX／speechSynthesis 都無法好好念孤立一拍。
+  // kana 卡片只作視覺對照，不可點擊發音；只有單字（外來語）保留發音。
 
   document.querySelectorAll('.word-item[data-text]').forEach(item => {
     const button = item.querySelector('.play-btn');
@@ -169,15 +167,6 @@
     const handler = (e) => { e.stopPropagation(); speak(text, button); };
     button.addEventListener('click', handler);
     item.addEventListener('click', handler);
-  });
-
-  document.getElementById('rowBtn').addEventListener('click', async () => {
-    const row = ['ア','イ','ウ','エ','オ'];
-    const cards = document.querySelectorAll('.kana-card');
-    for (let i = 0; i < row.length; i++) {
-      await speak(row[i], cards[i]);
-      await new Promise(r => setTimeout(r, 150));
-    }
   });
 </script>
 </body>

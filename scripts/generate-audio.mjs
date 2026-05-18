@@ -8,9 +8,9 @@
 //   1. 安裝 VOICEVOX (https://voicevox.hiroshiba.jp/) 並開啟 app（會自動啟動 engine on :50021）
 //   2. 系統需有 ffmpeg（brew install ffmpeg）
 //
-// 單音（單一假名，text.length === 1）特殊處理：逐拍 pitch 壓平成平均值，
-// 做出「念表腔」的真‧單調，避免 TTS 對孤立一拍套上句尾語調聽起來很怪。
+// 短字（2-4 字無空格）句尾補「。」並降 intonation，避免 TTS 抑揚過頭。
 // 單字／句子維持一般合成。全部用兩段式峰值正規化拉到 -1.5 dBFS（不經限幅器，不破音）。
+// （孤立單音不再餵進來——所有頁面已移除單音 data-text，故無單音特殊處理。）
 //
 // 用法：
 //   node scripts/generate-audio.mjs                    # 用預設角色（春日部つむぎ ノーマル, id=8）
@@ -109,12 +109,9 @@ function hashText(text) {
 
 // ── 5. 單句生成 ──────────────────────────
 async function synthesize(text) {
-  // 單音（單一假名）：做「念表腔」真‧單調 — 句尾加「。」、逐拍 pitch 壓平成平均值、
-  // 關掉疑問語調，避免 TTS 對孤立一拍套上句尾抑揚聽起來很怪。
-  const isSingle = text.length === 1 && !text.includes(' ');
-  // 其餘短字（2-4 字無空格）：句尾加「。」騙模型當完整句、降 intonation 避免抑揚過頭
-  const isShort = !isSingle && text.length <= 4 && !text.includes(' ');
-  const synthText = isSingle || isShort ? text + '。' : text;
+  // 短字（≤4 字無空格）：句尾加「。」騙模型當完整句、降 intonation 避免抑揚過頭
+  const isShort = text.length <= 4 && !text.includes(' ');
+  const synthText = isShort ? text + '。' : text;
 
   // 依字長自動調 speedScale — 越短的越慢，避免 phoneme 太短聽起來「破」「促」
   let speedScale = SPEED;
@@ -135,21 +132,7 @@ async function synthesize(text) {
   // 給短字（1-2 個 kana）多一點頭尾空白，避免神經模型 render 太擠造成破音
   query.prePhonemeLength = 0.3;
   query.postPhonemeLength = 0.3;
-  if (isSingle) {
-    // 逐拍把 pitch 覆寫成平均值 → 真正的平音（比 intonationScale 更徹底）
-    const pitches = [];
-    for (const ap of query.accent_phrases)
-      for (const m of ap.moras) if (m.pitch > 0) pitches.push(m.pitch);
-    const flat = pitches.length
-      ? pitches.reduce((a, b) => a + b, 0) / pitches.length
-      : 5.3;
-    for (const ap of query.accent_phrases) {
-      ap.is_interrogative = false;
-      for (const m of ap.moras) if (m.pitch > 0) m.pitch = flat;
-      if (ap.pause_mora && ap.pause_mora.pitch > 0) ap.pause_mora.pitch = flat;
-    }
-    query.pitchScale = 0;
-  } else if (isShort) {
+  if (isShort) {
     query.intonationScale = 0.5;
   }
 
@@ -166,7 +149,7 @@ async function synthesize(text) {
 // ── 6. WAV → MP3：兩段式峰值正規化 ────────
 // VOICEVOX 輸出 volumeScale=1.0（不在合成端放大，避免預先削波），
 // 改在這裡量測真實峰值、補一個靜態增益拉到 -1.5 dBFS。
-// 不經 loudnorm 的動態限幅器 → 不會擠壓失真（破音），單音與單字響度也一致。
+// 不經 loudnorm 的動態限幅器 → 不會擠壓失真（破音），短字與長句響度也一致。
 const PEAK_TARGET_DB = -1.5;
 
 function ffmpegRun(args, wavBuf) {

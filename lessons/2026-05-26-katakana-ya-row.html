@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>片假名 ヤ行 練習</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* kana-card 內顯示對應平假名（片假名課專用） */
+.kana-hira{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;color:var(--ink-mute);margin-top:6px;}
+.kana-hira span{color:var(--accent);font-weight:600;}
+
+/* 片假名 ↔ 平假名 對照表 */
+.cmp-table{width:100%;border-collapse:collapse;margin-bottom:28px;background:rgba(255,255,255,.55);}
+.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:12px 8px;text-align:center;}
+.cmp-table th{background:var(--accent-pale);font-family:'Shippori Mincho',serif;font-size:14px;color:var(--ink-soft);letter-spacing:.1em;}
+.cmp-table td{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;color:var(--ink);}
+.cmp-table .cmp-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--accent);}
+.cmp-table .cmp-empty{color:var(--ink-mute);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;}
+
+/* 跨頁 next-link 卡片 */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+.next-link.prev .next-arrow{transform:scaleX(-1);}
+.next-link.prev:hover .next-arrow{transform:scaleX(-1) translateX(4px);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">カタカナ · Katakana</div>
+    <div class="center">ヤ　行　の　練　習</div>
+    <div class="right">2026 / 05 / 26</div>
+  </header>
+
+  <h1 class="page-title">ヤ<span class="accent">行</span></h1>
+  <p class="page-subtitle">ヤ・ユ・ヨ — 只有三個音，い・え 的位置是空的</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card"><div class="kana-big">ヤ</div><div class="kana-romaji">ya</div><div class="kana-hira">＝ <span>や</span></div></div>
+    <div class="kana-card"><div class="kana-big">ユ</div><div class="kana-romaji">yu</div><div class="kana-hira">＝ <span>ゆ</span></div></div>
+    <div class="kana-card"><div class="kana-big">ヨ</div><div class="kana-romaji">yo</div><div class="kana-hira">＝ <span>よ</span></div></div>
+  </div>
+
+  <div class="note">
+    📌 <strong>ヤ行只有三個假名</strong><br>
+    い段、え段沒有專屬的假名（要用就直接借 <strong>イ・エ</strong>），<br>
+    所以這行只要記 <strong>ヤ・ユ・ヨ</strong> 三個就好——跟平假名 や・ゆ・よ 一模一樣的規則。
+  </div>
+
+  <div class="tip">
+    💡 <strong>ヤ行 = や行的片假名寫法</strong><br>
+    發音跟 や・ゆ・よ 完全一樣，只是換成片假名長相。<br>
+    一樣最常用在<strong>外來語</strong>，例如 ユーロ＝歐元、ヨガ＝瑜珈。
+  </div>
+
+  <div class="note">
+    📝 <strong>記憶小撇步</strong><br>
+    ヨ 像「ヨ」三橫一豎（注意別跟 コ、ヲ 搞混）；ユ 接近平假名 <span class="compare">ゆ</span> 的骨架；ヤ 接近平假名 や。<br>
+    ヤ 開頭的純外來語很少，下面用最眼熟的幾個。
+  </div>
+
+  <div class="divider">一、片假名 ↔ 平假名 對照</div>
+
+  <table class="cmp-table">
+    <tr><th>羅馬音</th><th>片假名</th><th>平假名</th></tr>
+    <tr><td class="cmp-romaji">ya</td><td>ヤ</td><td>や</td></tr>
+    <tr><td class="cmp-romaji">(i)</td><td class="cmp-empty">—（借 イ）</td><td class="cmp-empty">—（借 い）</td></tr>
+    <tr><td class="cmp-romaji">yu</td><td>ユ</td><td>ゆ</td></tr>
+    <tr><td class="cmp-romaji">(e)</td><td class="cmp-empty">—（借 エ）</td><td class="cmp-empty">—（借 え）</td></tr>
+    <tr><td class="cmp-romaji">yo</td><td>ヨ</td><td>よ</td></tr>
+  </table>
+
+  <div class="divider">二、常見外來語</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    下面三個分別以 ヤ・ユ・ヨ 開頭，是日常會碰到的外來語，先把發音記熟。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 ヤ行外來語</div>
+
+    <div class="word-item" data-text="ヤクルト">
+      <div class="word-content">
+        <div class="word-ja">ヤクルト</div>
+        <div class="word-romaji">yakuruto</div>
+        <div class="word-meaning">養樂多（Yakult）— ヤ 開頭最眼熟的詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ユーロ">
+      <div class="word-content">
+        <div class="word-ja">ユーロ</div>
+        <div class="word-romaji">yūro</div>
+        <div class="word-meaning">歐元（euro）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ヨガ">
+      <div class="word-content">
+        <div class="word-ja">ヨガ</div>
+        <div class="word-romaji">yoga</div>
+        <div class="word-meaning">瑜珈（yoga）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <a href="2026-05-25-katakana-ma-row.html" class="next-link prev">
+    <span class="next-kicker">— Prev / 上一篇 —</span>
+    <span class="next-title">片假名 マ行（マ・ミ・ム・メ・モ） <span class="next-arrow">→</span></span>
+    <span class="next-sub">回去複習片假名第七行 — マ行 + 外來語</span>
+  </a>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // 單音（單一假名）不提供 TTS——VOICEVOX／speechSynthesis 都無法好好念孤立一拍。
+  // kana 卡片只作視覺對照，不可點擊發音；只有單字（外來語）保留發音。
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+# 自動：push 到 main 就部署
+# 手動：Actions 頁面 → 這個 workflow → "Run workflow"（workflow_dispatch）
+#       遇到部署卡住時可直接手動重觸發，不必再推空 commit。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# 部署到 GitHub Pages 所需權限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時間只跑一個部署；不取消進行中的（讓部署完整跑完）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 純靜態站，不需 build；直接把整個 repo 根目錄打包上傳
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

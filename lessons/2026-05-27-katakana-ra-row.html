@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>片假名 ラ行 練習</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* kana-card 內顯示對應平假名（片假名課專用） */
+.kana-hira{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;color:var(--ink-mute);margin-top:6px;}
+.kana-hira span{color:var(--accent);font-weight:600;}
+
+/* 片假名 ↔ 平假名 對照表 */
+.cmp-table{width:100%;border-collapse:collapse;margin-bottom:28px;background:rgba(255,255,255,.55);}
+.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:12px 8px;text-align:center;}
+.cmp-table th{background:var(--accent-pale);font-family:'Shippori Mincho',serif;font-size:14px;color:var(--ink-soft);letter-spacing:.1em;}
+.cmp-table td{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;color:var(--ink);}
+.cmp-table .cmp-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--accent);}
+
+/* 跨頁 next-link 卡片 */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+.next-link.prev .next-arrow{transform:scaleX(-1);}
+.next-link.prev:hover .next-arrow{transform:scaleX(-1) translateX(4px);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">カタカナ · Katakana</div>
+    <div class="center">ラ　行　の　練　習</div>
+    <div class="right">2026 / 05 / 27</div>
+  </header>
+
+  <h1 class="page-title">ラ<span class="accent">行</span></h1>
+  <p class="page-subtitle">ラ・リ・ル・レ・ロ — 片假名第九行</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="gojuon">
+    <div class="kana-card"><div class="kana-big">ラ</div><div class="kana-romaji">ra</div><div class="kana-hira">＝ <span>ら</span></div></div>
+    <div class="kana-card"><div class="kana-big">リ</div><div class="kana-romaji">ri</div><div class="kana-hira">＝ <span>り</span></div></div>
+    <div class="kana-card"><div class="kana-big">ル</div><div class="kana-romaji">ru</div><div class="kana-hira">＝ <span>る</span></div></div>
+    <div class="kana-card"><div class="kana-big">レ</div><div class="kana-romaji">re</div><div class="kana-hira">＝ <span>れ</span></div></div>
+    <div class="kana-card"><div class="kana-big">ロ</div><div class="kana-romaji">ro</div><div class="kana-hira">＝ <span>ろ</span></div></div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>ラ行 = ら行的片假名寫法</strong><br>
+    發音跟 ら・り・る・れ・ろ 完全一樣（日文的 r 介於中文 ㄌ 和 ㄉ 之間，輕輕彈一下）。<br>
+    ラ行外來語超級多，例如 ラジオ＝收音機、ロボット＝機器人。
+  </div>
+
+  <div class="note">
+    📝 <strong>記憶小撇步</strong><br>
+    ロ 是一個方框（像漢字「口」，別跟 コ 只有兩邊搞混）；リ 兩豎，跟平假名 <span class="compare">り</span> 同源；ル 一短一長帶個鉤；レ 一撇一豎像「レ」。<br>
+    最容易混：ラ vs フ vs ワ — 看上面那一橫和整體開口方向。
+  </div>
+
+  <div class="divider">一、片假名 ↔ 平假名 對照</div>
+
+  <table class="cmp-table">
+    <tr><th>羅馬音</th><th>片假名</th><th>平假名</th></tr>
+    <tr><td class="cmp-romaji">ra</td><td>ラ</td><td>ら</td></tr>
+    <tr><td class="cmp-romaji">ri</td><td>リ</td><td>り</td></tr>
+    <tr><td class="cmp-romaji">ru</td><td>ル</td><td>る</td></tr>
+    <tr><td class="cmp-romaji">re</td><td>レ</td><td>れ</td></tr>
+    <tr><td class="cmp-romaji">ro</td><td>ロ</td><td>ろ</td></tr>
+  </table>
+
+  <div class="divider">二、常見外來語</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    下面五個分別以 ラ・リ・ル・レ・ロ 開頭，是日常超常見的外來語，先把發音記熟。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 ラ行外來語</div>
+
+    <div class="word-item" data-text="ラジオ">
+      <div class="word-content">
+        <div class="word-ja">ラジオ</div>
+        <div class="word-romaji">rajio</div>
+        <div class="word-meaning">收音機（radio）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="リボン">
+      <div class="word-content">
+        <div class="word-ja">リボン</div>
+        <div class="word-romaji">ribon</div>
+        <div class="word-meaning">緞帶、蝴蝶結（ribbon）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ルール">
+      <div class="word-content">
+        <div class="word-ja">ルール</div>
+        <div class="word-romaji">rūru</div>
+        <div class="word-meaning">規則（rule）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="レモン">
+      <div class="word-content">
+        <div class="word-ja">レモン</div>
+        <div class="word-romaji">remon</div>
+        <div class="word-meaning">檸檬（lemon）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ロボット">
+      <div class="word-content">
+        <div class="word-ja">ロボット</div>
+        <div class="word-romaji">robotto</div>
+        <div class="word-meaning">機器人（robot）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <a href="2026-05-26-katakana-ya-row.html" class="next-link prev">
+    <span class="next-kicker">— Prev / 上一篇 —</span>
+    <span class="next-title">片假名 ヤ行（ヤ・ユ・ヨ） <span class="next-arrow">→</span></span>
+    <span class="next-sub">回去複習片假名第八行 — ヤ行 + 外來語</span>
+  </a>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // 單音（單一假名）不提供 TTS——VOICEVOX／speechSynthesis 都無法好好念孤立一拍。
+  // kana 卡片只作視覺對照，不可點擊發音；只有單字（外來語）保留發音。
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

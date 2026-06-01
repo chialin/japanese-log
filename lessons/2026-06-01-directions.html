@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>方向 — Directions</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 方向卡片格線 */
+.dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
+.dir-card{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:10px;padding:20px 16px;text-align:center;cursor:pointer;transition:background .15s,transform .15s;display:flex;flex-direction:column;align-items:center;gap:6px;}
+.dir-card:hover{background:rgba(255,255,255,.9);transform:translateY(-2px);}
+.dir-kanji{font-family:'Shippori Mincho',serif;font-size:48px;font-weight:700;color:var(--accent);line-height:1;}
+.dir-kana{font-family:'Shippori Mincho',serif;font-size:18px;color:var(--ink-soft);}
+.dir-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);letter-spacing:.05em;}
+.dir-meaning{font-size:13px;color:var(--ink-mute);}
+
+/* 左右大卡（寬版） */
+.dir-grid-wide{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
+.dir-card-wide{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:10px;padding:24px 16px;text-align:center;cursor:pointer;transition:background .15s,transform .15s;display:flex;flex-direction:column;align-items:center;gap:6px;}
+.dir-card-wide:hover{background:rgba(255,255,255,.9);transform:translateY(-2px);}
+
+/* 指北針示意圖 */
+.compass{text-align:center;margin:20px auto 8px;font-size:64px;line-height:1;user-select:none;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">方向 · Direction</div>
+    <div class="center">東　西　南　北</div>
+    <div class="right">2026 / 06 / 01</div>
+  </header>
+
+  <h1 class="page-title">方向の <span class="accent">ことば</span></h1>
+  <p class="page-subtitle">東西南北 + 左右 — 生活中常用的方向詞</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>學習重點</strong><br>
+    東西南北用漢字讀音，左右是和語詞彙。問路時常搭配助詞 <strong>に</strong>（方向）和 <strong>へ</strong>（往…去）。
+  </div>
+
+  <!-- ──────────────────────────── -->
+  <div class="divider">一、東西南北</div>
+
+  <div class="compass">🧭</div>
+
+  <div class="dir-grid">
+    <div class="dir-card" data-text="きた">
+      <div class="dir-kanji">北</div>
+      <div class="dir-kana">きた</div>
+      <div class="dir-romaji">kita</div>
+      <div class="dir-meaning">北</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="dir-card" data-text="みなみ">
+      <div class="dir-kanji">南</div>
+      <div class="dir-kana">みなみ</div>
+      <div class="dir-romaji">minami</div>
+      <div class="dir-meaning">南</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="dir-card" data-text="ひがし">
+      <div class="dir-kanji">東</div>
+      <div class="dir-kana">ひがし</div>
+      <div class="dir-romaji">higashi</div>
+      <div class="dir-meaning">東</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="dir-card" data-text="にし">
+      <div class="dir-kanji">西</div>
+      <div class="dir-kana">にし</div>
+      <div class="dir-romaji">nishi</div>
+      <div class="dir-meaning">西</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ──────────────────────────── -->
+  <div class="divider">二、左右</div>
+
+  <div class="dir-grid-wide">
+    <div class="dir-card-wide" data-text="ひだり">
+      <div class="dir-kanji">左</div>
+      <div class="dir-kana">ひだり</div>
+      <div class="dir-romaji">hidari</div>
+      <div class="dir-meaning">左</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="dir-card-wide" data-text="みぎ">
+      <div class="dir-kanji">右</div>
+      <div class="dir-kana">みぎ</div>
+      <div class="dir-romaji">migi</div>
+      <div class="dir-meaning">右</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ──────────────────────────── -->
+  <div class="divider">三、常用句子</div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="みぎにまがってください">
+      <div class="word-content">
+        <div class="word-ja">みぎに まがって ください。</div>
+        <div class="word-romaji">migi ni magatte kudasai</div>
+        <div class="word-meaning">請右轉。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ひだりにまがってください">
+      <div class="word-content">
+        <div class="word-ja">ひだりに まがって ください。</div>
+        <div class="word-romaji">hidari ni magatte kudasai</div>
+        <div class="word-meaning">請左轉。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きたへいきます">
+      <div class="word-content">
+        <div class="word-ja">きたへ いきます。</div>
+        <div class="word-romaji">kita e ikimasu</div>
+        <div class="word-meaning">往北走。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="えきはひがしです">
+      <div class="word-content">
+        <div class="word-ja">えきは ひがしです。</div>
+        <div class="word-romaji">eki wa higashi desu</div>
+        <div class="word-meaning">車站在東邊。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="みぎがわにあります">
+      <div class="word-content">
+        <div class="word-ja">みぎがわに あります。</div>
+        <div class="word-romaji">migi-gawa ni arimasu</div>
+        <div class="word-meaning">在右側。（みぎがわ = 右側）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>助詞提醒</strong><br>
+    方向 + <strong>に</strong> → 表示在某個方向（靜態位置）：ひだりに あります<br>
+    方向 + <strong>へ</strong> → 表示往某個方向移動：きたへ いきます
+  </div>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    if (!button) return;
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

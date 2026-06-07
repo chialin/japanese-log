@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ゆうちょ單字 — 通帳・認証・申し込み</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 合成詞拆解表 */
+.compound{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0;}
+.compound-part{background:var(--paper-deep);border:1px solid var(--line);border-radius:8px;padding:10px 16px;text-align:center;min-width:80px;}
+.compound-kana{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);}
+.compound-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-mute);margin-top:2px;}
+.compound-meaning{font-size:12px;color:var(--ink-soft);margin-top:4px;}
+.compound-plus{display:flex;align-items:center;color:var(--ink-mute);font-size:20px;font-weight:300;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">生活日語 · Daily Japanese</div>
+    <div class="center">ゆ う ち ょ 單 字</div>
+    <div class="right">2026 / 06 / 03</div>
+  </header>
+
+  <h1 class="page-title">通帳・認証・<span class="accent">申し込み</span></h1>
+  <p class="page-subtitle">從日本郵局銀行 App 學到的實用單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>今日情境</strong><br>
+    下載 ゆうちょ銀行 App 時看到的詞彙——全都是生活中常見的漢字組合。
+  </div>
+
+  <!-- ───── App 名稱拆解 ───── -->
+  <div class="divider">一、App 名稱拆解</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    兩個 App 名稱其實都是三個詞拼在一起，拆開就全懂了。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📱 ゆうちょ通帳アプリ</div>
+    <div class="compound">
+      <div class="compound-part">
+        <div class="compound-kana">ゆうちょ</div>
+        <div class="compound-romaji">yūcho</div>
+        <div class="compound-meaning">郵局銀行（品牌名）</div>
+      </div>
+      <div class="compound-plus">＋</div>
+      <div class="compound-part" data-text="つうちょう">
+        <div class="compound-kana">通帳</div>
+        <div class="compound-romaji">tsūchō</div>
+        <div class="compound-meaning">存摺</div>
+      </div>
+      <div class="compound-plus">＋</div>
+      <div class="compound-part" data-text="アプリ">
+        <div class="compound-kana">アプリ</div>
+        <div class="compound-romaji">apuri</div>
+        <div class="compound-meaning">App（外來語）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:16px;">
+    <div class="section-title">🔐 ゆうちょ認証アプリ</div>
+    <div class="compound">
+      <div class="compound-part">
+        <div class="compound-kana">ゆうちょ</div>
+        <div class="compound-romaji">yūcho</div>
+        <div class="compound-meaning">郵局銀行（品牌名）</div>
+      </div>
+      <div class="compound-plus">＋</div>
+      <div class="compound-part" data-text="にんしょう">
+        <div class="compound-kana">認証</div>
+        <div class="compound-romaji">ninshō</div>
+        <div class="compound-meaning">認證・驗證</div>
+      </div>
+      <div class="compound-plus">＋</div>
+      <div class="compound-part" data-text="アプリ">
+        <div class="compound-kana">アプリ</div>
+        <div class="compound-romaji">apuri</div>
+        <div class="compound-meaning">App（外來語）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───── 單字 ───── -->
+  <div class="divider">二、今日單字</div>
+
+  <div class="section">
+    <div class="section-title">📖 單字與發音</div>
+
+    <div class="word-item" data-text="つうちょう">
+      <div class="word-content">
+        <div class="word-ja">通帳　つうちょう</div>
+        <div class="word-romaji">tsū · chō</div>
+        <div class="word-meaning">存摺 — 銀行存款紀錄本，也可指電子存摺 App</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="にんしょう">
+      <div class="word-content">
+        <div class="word-ja">認証　にんしょう</div>
+        <div class="word-romaji">nin · shō</div>
+        <div class="word-meaning">認證・驗證 — 確認身分的動作，如轉帳時輸入密碼</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しんき">
+      <div class="word-content">
+        <div class="word-ja">新規　しんき</div>
+        <div class="word-romaji">shin · ki</div>
+        <div class="word-meaning">新辦・全新 — 第一次使用、從頭申請</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="もうしこみ">
+      <div class="word-content">
+        <div class="word-ja">申し込み　もうしこみ</div>
+        <div class="word-romaji">mō · shi · ko · mi</div>
+        <div class="word-meaning">申請・報名 — 提出申請的動作</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="アプリ">
+      <div class="word-content">
+        <div class="word-ja">アプリ</div>
+        <div class="word-romaji">a · pu · ri</div>
+        <div class="word-meaning">App（外來語，application 的縮寫）— 片假名，注意不是平假名</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───── 關鍵句 ───── -->
+  <div class="divider">三、操作畫面會看到的句子</div>
+
+  <div class="section">
+    <div class="section-title">📱 實用語句</div>
+
+    <div class="word-item" data-text="しんきもうしこみ">
+      <div class="word-content">
+        <div class="word-ja">新規申し込み</div>
+        <div class="word-romaji">shinki mōshikomi</div>
+        <div class="word-meaning">新辦申請 — App 首頁按鈕，第一次使用時點這個</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="でんしつうちょう">
+      <div class="word-content">
+        <div class="word-ja">電子通帳　でんしつうちょう</div>
+        <div class="word-romaji">denshi tsūchō</div>
+        <div class="word-meaning">電子存摺 — 紙本存摺的數位版</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ふりこみ">
+      <div class="word-content">
+        <div class="word-ja">振り込み　ふりこみ</div>
+        <div class="word-romaji">fu · ri · ko · mi</div>
+        <div class="word-meaning">轉帳 — 要用「認証アプリ」驗證身分才能做</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>記憶小技巧</strong><br>
+    <strong>通帳</strong>（つうちょう）= 通 + 帳，帳本讓錢流通的記錄。<br>
+    <strong>認証</strong>（にんしょう）= 認 + 証，認可的證明。<br>
+    <strong>申し込み</strong>（もうしこみ）= 申す（說、請求）+ 込む（進去）→ 把請求送進去 = 申請。
+  </div>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .compound-part[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    if (button) button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

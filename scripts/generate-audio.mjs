@@ -23,7 +23,9 @@ import { createHash } from 'node:crypto';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
 
-const ENGINE = 'http://localhost:50021';
+// 用 127.0.0.1 而非 localhost：Node fetch 會把 localhost 解析成 IPv6 ::1，
+// 但 VOICEVOX engine 只監聽 IPv4，會導致連線失敗。
+const ENGINE = 'http://127.0.0.1:50021';
 const AUDIO_DIR = 'audio';
 const ROOT = process.cwd();
 

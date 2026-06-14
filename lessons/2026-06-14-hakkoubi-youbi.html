@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>発行日と曜日 — 年・月・日・週一到週日</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 日期拆解卡 */
+.date-break{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:18px 0;}
+.date-part{background:var(--paper-deep);border:1px solid var(--line);border-radius:8px;padding:12px 18px;text-align:center;cursor:pointer;transition:border-color .15s,transform .15s;}
+.date-part:hover{border-color:var(--accent);transform:translateY(-2px);}
+.date-num{font-family:'Shippori Mincho',serif;font-size:26px;font-weight:700;color:var(--ink);}
+.date-read{font-family:'Shippori Mincho',serif;font-size:14px;color:var(--accent);margin-top:4px;}
+.date-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-mute);margin-top:2px;}
+.date-sep{display:flex;align-items:center;color:var(--ink-mute);font-size:20px;font-weight:300;}
+
+/* 曜日表 */
+.youbi-grid{display:flex;flex-direction:column;gap:8px;margin:16px 0;}
+.youbi-row{display:flex;align-items:center;gap:14px;background:var(--paper-deep);border:1px solid var(--line);border-radius:8px;padding:12px 16px;cursor:pointer;transition:border-color .15s,transform .15s;}
+.youbi-row:hover{border-color:var(--accent);transform:translateX(4px);}
+.youbi-kanji{font-family:'Shippori Mincho',serif;font-size:24px;font-weight:700;color:var(--ink);min-width:78px;}
+.youbi-body{flex:1;}
+.youbi-kana{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--ink-soft);}
+.youbi-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);}
+.youbi-cn{font-family:'Noto Serif TC',serif;font-size:14px;color:var(--accent);font-weight:600;}
+.youbi-play{flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid var(--accent-soft);background:var(--paper);color:var(--accent);font-size:13px;cursor:pointer;transition:background .15s;}
+.youbi-play:hover{background:var(--accent-pale);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">主題 · Date &amp; Days</div>
+    <div class="center">発　行　日　と　曜　日</div>
+    <div class="right">2026 / 06 / 14</div>
+  </header>
+
+  <h1 class="page-title">発行日と<span class="accent">曜日</span></h1>
+  <p class="page-subtitle">看懂「2026年6月7日」＋ 一週七天的日文</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>今日素材</strong><br>
+    文件上印著「<strong>発行日　2026年6月7日</strong>」。拆開來看，就學會了「年・月・日」怎麼唸，順便把一週七天一起記起來。
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">一、年・月・日</div>
+
+  <div class="section">
+    <div class="word-item" data-text="はっこうび">
+      <div class="word-content">
+        <div class="word-ja">発行日　はっこうび</div>
+        <div class="word-romaji">hak · kō · bi</div>
+        <div class="word-meaning">發行日期 — 文件、卡片、書籍上「製作／核發」的日期</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ねん">
+      <div class="word-content">
+        <div class="word-ja">年　ねん</div>
+        <div class="word-romaji">nen</div>
+        <div class="word-meaning">年 — 接在數字後面，例：2026年 → にせんにじゅうろく<strong>ねん</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="がつ">
+      <div class="word-content">
+        <div class="word-ja">月　がつ</div>
+        <div class="word-romaji">gatsu</div>
+        <div class="word-meaning">月 — 月份用，例：6月 → ろく<strong>がつ</strong>（注意不是「つき」）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="にち">
+      <div class="word-content">
+        <div class="word-ja">日　にち</div>
+        <div class="word-romaji">nichi</div>
+        <div class="word-meaning">日 — 日期的「日」，例：20日 → はつか／にじゅう<strong>にち</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">二、讀讀看這個日期</div>
+
+  <p style="margin-bottom:6px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    把「2026年6月7日」三段拆開，點每一塊聽發音：
+  </p>
+
+  <div class="date-break">
+    <div class="date-part" data-text="にせんにじゅうろくねん">
+      <div class="date-num">2026年</div>
+      <div class="date-read">にせんにじゅうろくねん</div>
+      <div class="date-romaji">nisen-nijūroku-nen</div>
+    </div>
+    <div class="date-sep">・</div>
+    <div class="date-part" data-text="ろくがつ">
+      <div class="date-num">6月</div>
+      <div class="date-read">ろくがつ</div>
+      <div class="date-romaji">roku-gatsu</div>
+    </div>
+    <div class="date-sep">・</div>
+    <div class="date-part" data-text="なのか">
+      <div class="date-num">7日</div>
+      <div class="date-read">なのか</div>
+      <div class="date-romaji">nanoka</div>
+    </div>
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>「日」的特例</strong><br>
+    當「日」是日期時，<strong>1～10 日</strong>有專屬的特殊唸法，不是規律的「○にち」。<br>
+    7日不是「しちにち」，而是 <strong>なのか（nanoka）</strong>。<br>
+    11 日以後才大多回到規律的「○にち」（例：14日 → じゅうよっか 又是特例、15日 → じゅうごにち）。先記住眼前這個 <strong>なのか</strong> 就好。
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">三、曜日（星期）</div>
+
+  <p style="margin-bottom:6px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    七天都以「<strong>曜日（ようび）</strong>」結尾，前面換一個字。點整列聽發音：
+  </p>
+
+  <div class="youbi-grid">
+    <div class="youbi-row" data-text="げつようび">
+      <div class="youbi-kanji">月曜日</div>
+      <div class="youbi-body">
+        <span class="youbi-kana">げつようび</span>　<span class="youbi-romaji">getsu-yōbi</span><br>
+        <span class="youbi-cn">星期一</span>
+      </div>
+      <button class="youbi-play" aria-label="播放">▶</button>
+    </div>
+
+    <div class="youbi-row" data-text="かようび">
+      <div class="youbi-kanji">火曜日</div>
+      <div class="youbi-body">
+        <span class="youbi-kana">かようび</span>　<span class="youbi-romaji">ka-yōbi</span><br>
+        <span class="youbi-cn">星期二</span>
+      </div>
+      <button class="youbi-play" aria-label="播放">▶</button>
+    </div>
+
+    <div class="youbi-row" data-text="すいようび">
+      <div class="youbi-kanji">水曜日</div>
+      <div class="youbi-body">
+        <span class="youbi-kana">すいようび</span>　<span class="youbi-romaji">sui-yōbi</span><br>
+        <span class="youbi-cn">星期三</span>
+      </div>
+      <button class="youbi-play" aria-label="播放">▶</button>
+    </div>
+
+    <div class="youbi-row" data-text="もくようび">
+      <div class="youbi-kanji">木曜日</div>
+      <div class="youbi-body">
+        <span class="youbi-kana">もくようび</span>　<span class="youbi-romaji">moku-yōbi</span><br>
+        <span class="youbi-cn">星期四</span>
+      </div>
+      <button class="youbi-play" aria-label="播放">▶</button>
+    </div>
+
+    <div class="youbi-row" data-text="きんようび">
+      <div class="youbi-kanji">金曜日</div>
+      <div class="youbi-body">
+        <span class="youbi-kana">きんようび</span>　<span class="youbi-romaji">kin-yōbi</span><br>
+        <span class="youbi-cn">星期五</span>
+      </div>
+      <button class="youbi-play" aria-label="播放">▶</button>
+    </div>
+
+    <div class="youbi-row" data-text="どようび">
+      <div class="youbi-kanji">土曜日</div>
+      <div class="youbi-body">
+        <span class="youbi-kana">どようび</span>　<span class="youbi-romaji">do-yōbi</span><br>
+        <span class="youbi-cn">星期六</span>
+      </div>
+      <button class="youbi-play" aria-label="播放">▶</button>
+    </div>
+
+    <div class="youbi-row" data-text="にちようび">
+      <div class="youbi-kanji">日曜日</div>
+      <div class="youbi-body">
+        <span class="youbi-kana">にちようび</span>　<span class="youbi-romaji">nichi-yōbi</span><br>
+        <span class="youbi-cn">星期日</span>
+      </div>
+      <button class="youbi-play" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>記憶小技巧</strong><br>
+    七天的字其實就是「<strong>月・火・水・木・金・土・日</strong>」＝ 七曜（日月＋五行）。<br>
+    順口溜：月火水木金土日（げつ・か・すい・もく・きん・ど・にち）。<br>
+    而本篇開頭那個發行日 <strong>2026年6月7日</strong>，正好是 <strong>日曜日（星期日）</strong>。
+  </div>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .date-part[data-text], .youbi-row[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn, .youbi-play');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    if (button) button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -28,6 +28,15 @@
 .youbi-cn{font-family:'Noto Serif TC',serif;font-size:14px;color:var(--accent);font-weight:600;}
 .youbi-play{flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid var(--accent-soft);background:var(--paper);color:var(--accent);font-size:13px;cursor:pointer;transition:background .15s;}
 .youbi-play:hover{background:var(--accent-pale);}
+
+/* 曜日由來表（七曜 × 五行 × 美少女戰士） */
+.origin-grid{display:flex;flex-direction:column;gap:8px;margin:16px 0;}
+.origin-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;background:var(--paper-deep);border:1px solid var(--line);border-radius:8px;padding:11px 16px;}
+.origin-row .o-day{font-family:'Shippori Mincho',serif;font-size:19px;font-weight:700;color:var(--ink);min-width:70px;}
+.origin-row .o-star{font-family:'Noto Serif TC',serif;font-size:14px;color:var(--ink-soft);min-width:140px;}
+.origin-row .o-senshi{font-family:'Noto Serif TC',serif;font-size:14px;color:var(--accent);font-weight:600;}
+.origin-row.is-sun{opacity:.72;}
+.origin-row.is-sun .o-senshi{color:var(--ink-mute);font-weight:400;font-style:italic;}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -141,6 +150,15 @@
   </p>
 
   <div class="youbi-grid">
+    <div class="youbi-row" data-text="にちようび">
+      <div class="youbi-kanji">日曜日</div>
+      <div class="youbi-body">
+        <span class="youbi-kana">にちようび</span>　<span class="youbi-romaji">nichi-yōbi</span><br>
+        <span class="youbi-cn">星期日</span>
+      </div>
+      <button class="youbi-play" aria-label="播放">▶</button>
+    </div>
+
     <div class="youbi-row" data-text="げつようび">
       <div class="youbi-kanji">月曜日</div>
       <div class="youbi-body">
@@ -195,21 +213,104 @@
       <button class="youbi-play" aria-label="播放">▶</button>
     </div>
 
-    <div class="youbi-row" data-text="にちようび">
-      <div class="youbi-kanji">日曜日</div>
-      <div class="youbi-body">
-        <span class="youbi-kana">にちようび</span>　<span class="youbi-romaji">nichi-yōbi</span><br>
-        <span class="youbi-cn">星期日</span>
-      </div>
-      <button class="youbi-play" aria-label="播放">▶</button>
-    </div>
   </div>
 
   <div class="note">
     📝 <strong>記憶小技巧</strong><br>
-    七天的字其實就是「<strong>月・火・水・木・金・土・日</strong>」＝ 七曜（日月＋五行）。<br>
-    順口溜：月火水木金土日（げつ・か・すい・もく・きん・ど・にち）。<br>
+    七天的字其實就是「<strong>日・月・火・水・木・金・土</strong>」＝ 七曜（日月＋五行）。<br>
+    順口溜：日月火水木金土（にち・げつ・か・すい・もく・きん・ど）。<br>
     而本篇開頭那個發行日 <strong>2026年6月7日</strong>，正好是 <strong>日曜日（星期日）</strong>。
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">四、由來（正式）</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;">
+    為什麼是「日月火水木金土」這七個字？它們合稱 <strong>七曜（しちよう）</strong>＝
+    <strong>太陽（日）・太陰（月）</strong>，加上肉眼可見的 <strong>五大行星</strong>。
+    而五大行星在東亞正好用 <strong>五行（火・水・木・金・土）</strong>來命名：<br>
+    火星・水星・木星・金星・土星 → 取第一個字，配上「曜日」，就成了星期。<br>
+    這套系統源自巴比倫，經希臘、印度（佛教<ruby>宿曜<rt>すくよう</rt></ruby>占星）傳入中國，平安時代到日本，
+    到明治時期（採七天制）變成日常用的星期。<strong>英文星期也是同一個行星源頭</strong>——
+    所以日文、英文的星期可以一顆行星一顆行星對起來（Sunday=日、Monday=月、Tuesday=火星 Mars…）。
+  </p>
+
+  <div class="origin-grid">
+    <div class="origin-row">
+      <span class="o-day">日曜日</span>
+      <span class="o-star">日 Sun・太陽</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">月曜日</span>
+      <span class="o-star">月 Moon・太陰</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">火曜日</span>
+      <span class="o-star">火星 Mars</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">水曜日</span>
+      <span class="o-star">水星 Mercury</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">木曜日</span>
+      <span class="o-star">木星 Jupiter</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">金曜日</span>
+      <span class="o-star">金星 Venus</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">土曜日</span>
+      <span class="o-star">土星 Saturn</span>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">五、趣味記憶 ── 美少女戰士</div>
+
+  <p style="margin-bottom:6px;color:var(--ink-soft);font-size:14px;line-height:1.9;">
+    這套行星命名也被《<strong>美少女戦士セーラームーン</strong>》借用——戰士全部以<strong>行星</strong>命名，
+    連姓氏都藏著那顆星的五行字。所以背星期時，可以順著一位戰士記一天（七天裡有六天對得上）：
+  </p>
+
+  <div class="origin-grid">
+    <div class="origin-row is-sun">
+      <span class="o-day">日曜日</span>
+      <span class="o-senshi">（太陽沒有對應的主要戰士）</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">月曜日</span>
+      <span class="o-senshi">セーラームーン（月野うさぎ）</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">火曜日</span>
+      <span class="o-senshi">セーラーマーズ（火野レイ）</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">水曜日</span>
+      <span class="o-senshi">セーラーマーキュリー（水野亜美）</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">木曜日</span>
+      <span class="o-senshi">セーラージュピター（木野まこと）</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">金曜日</span>
+      <span class="o-senshi">セーラーヴィーナス（愛野美奈子）</span>
+    </div>
+    <div class="origin-row">
+      <span class="o-day">土曜日</span>
+      <span class="o-senshi">セーラーサターン（土萠ほたる）</span>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>兩個小彩蛋</strong><br>
+    ① 內部戰士的姓氏直接埋了五行字：<strong>月</strong>野・<strong>火</strong>野・<strong>水</strong>野・<strong>木</strong>野。<br>
+    ② 金星例外——金星是「愛與美的女神 Venus」，所以姓氏不是「金野」而是 <strong>愛</strong>野（愛＝Venus 的雙關），
+    但她的星還是 <strong>金星（金曜日）</strong>。<br>
+    換句話說，背星期的時候，可以順著一位戰士記一天 🌙
   </div>
 
 </div>

@@ -79,30 +79,32 @@ Stats 與 calendar 會自動重算——`data-kana` / `data-words` / `data-date`
 
 **Step 5 — 確保 favicon link 存在**（特別是非複製 `lessons/_skeleton.html` 的手寫頁、或新類型的產生器頁）：最簡單做法是執行 `node scripts/add-favicon.mjs`（冪等，已有 `rel="icon"` 的頁會自動跳過；root 頁注入 `favicon.svg`、`lessons/` 與 `readings/` 注入 `../favicon.svg`）。favicon 功能已於 2026-05-17 完成（見 [docs/superpowers/specs/2026-05-17-favicon-design.md](docs/superpowers/specs/2026-05-17-favicon-design.md)），`_skeleton.html` 已內含該 link，但手寫新頁或新產生器樣板不會自動帶上。
 
-### TTS — Web Speech API
+### TTS — VOICEVOX 預生 mp3（主要）＋ speechSynthesis（fallback）
 
-All audio uses the browser's built-in `speechSynthesis`. No API key needed.
+**音檔一律用 VOICEVOX 離線預先生成 mp3，不靠瀏覽器即時合成。** 瀏覽器內建的
+`speechSynthesis` 只是在找不到對應 mp3（404）時的退路，不是主要方案。
 
-**Voice preference order (female Japanese voices only):**
-`Kyoko → O-ren → Hana`
+**新增／更新教材發音的工作流：**
+1. 可發音元素照舊帶 `data-text="<日文>"`（kanji+kana 混寫即可，VOICEVOX 自己判讀）。
+2. 開 VOICEVOX app（engine 自動上 `:50021`），跑 `node scripts/generate-audio.mjs`
+   （預設角色 = 春日部つむぎ ノーマル，speaker_id=8；強制重生加 `--force`）。
+   腳本會掃所有 lesson/reading HTML 的 `data-text`，增量生成 `audio/<sha256-16>.mp3`。
+3. **生完務必 Cmd+Shift+R 硬重整瀏覽器**——檔名 hash 不含參數，重生會覆寫同名檔，cache 不會自動失效。
 
-Fallback to any `ja`-lang voice if none of those three are found. Male voice `Otoya` is excluded.
+**單音不發音：** 單一假名（`data-text` 只有 1 個 kana）一律不生 mp3、也不綁 click→speak，
+kana 卡片純視覺對照。只有單字／句子（含外來語）才有發音。
 
-Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning).
+**客戶端：** 每頁載入 `js/tts.js`，用 `JTalk.speak(text, button, { rate })`。
+`JTalk` 先試 `audio/<hash>.mp3`，404 才 fallback 到 `speechSynthesis`。
 
-The standard TTS pattern used across lesson files:
-```js
-function getJapaneseVoice() {
-  const voices = speechSynthesis.getVoices();
-  const jaVoices = voices.filter(v => v.lang.startsWith('ja'));
-  return (
-    jaVoices.find(v => v.name.includes('Kyoko')) ||
-    jaVoices.find(v => v.name.includes('O-ren')) ||
-    jaVoices.find(v => v.name.includes('Hana'))  ||
-    jaVoices[0] || null
-  );
-}
-```
+**fallback 的語音偏好（女聲優先，僅在沒 mp3 時生效）：** `Kyoko → O-ren → Hana`，
+再退到任一 `ja` 語音；排除男聲 `Otoya`。
+
+**生成參數（寫死在 `scripts/generate-audio.mjs`）：** 依字長 speedScale、`volumeScale=1.0`
+＋兩段式峰值正規化拉到 -1.5 dBFS（不要用 loudnorm 或 volumeScale>1 去加大聲，會破音）。
+
+Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning)。
+綁 `.speed-control input` 控制傳給 `JTalk.speak` 的 `rate`。
 
 ### Design System
 

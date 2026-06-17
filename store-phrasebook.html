@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>店員さんとの会話帖 — 店員對話手帖</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+/* lessons 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* ── 書封面 ── */
+.book-cover{text-align:center;padding:40px 0 12px;border-bottom:2px solid var(--line);margin-bottom:32px;}
+.book-kicker{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);letter-spacing:.2em;font-size:14px;text-transform:uppercase;margin-bottom:18px;}
+.book-title{font-family:'Shippori Mincho',serif;font-weight:800;font-size:clamp(38px,7vw,60px);line-height:1.1;letter-spacing:.06em;color:var(--ink);margin-bottom:14px;}
+.book-title .accent{color:var(--accent);}
+.book-sub{font-family:'Noto Serif TC',serif;color:var(--ink-mute);font-size:16px;letter-spacing:.04em;}
+
+/* ── 目錄 ── */
+.toc{background:rgba(255,255,255,.5);border:1px solid var(--line);padding:20px 26px;margin-bottom:28px;}
+.toc-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:15px;color:var(--ink);letter-spacing:.1em;margin-bottom:14px;}
+.toc ol{list-style:none;margin:0;padding:0;}
+.toc li{display:flex;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px dotted var(--line);}
+.toc li:last-child{border-bottom:none;}
+.toc a{text-decoration:none;color:var(--ink-soft);font-size:15px;display:flex;align-items:baseline;gap:10px;width:100%;}
+.toc a:hover{color:var(--accent);}
+.toc .toc-no{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);min-width:54px;font-size:14px;}
+.toc .toc-ja{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink-mute);font-size:13px;margin-left:auto;}
+
+/* ── 章節徽章（divider 內） ── */
+.chapter{scroll-margin-top:16px;}
+.ch-badge{font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.18em;color:var(--accent);font-size:13px;text-transform:uppercase;}
+
+/* ── 店員問 / 你回 兩種 section 的左邊色帶 ── */
+.section.ask{border-left:3px solid var(--accent);}
+.section.reply{border-left:3px solid var(--accent-soft);}
+.section.vocab{border-left:3px solid var(--ink-mute);}
+.role-tag{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-left:8px;vertical-align:middle;}
+
+/* ── 記憶小創意盒 ── */
+.memo{background:linear-gradient(0deg,var(--bg-spot-1),rgba(255,255,255,.4));border:1px solid var(--accent-soft);border-left:3px solid var(--accent);padding:14px 18px;margin-bottom:8px;font-size:14px;color:var(--ink-soft);line-height:1.9;}
+.memo strong{color:var(--accent);}
+
+/* ── 萬用小抄 ── */
+.cheat{background:var(--accent);color:#fff;padding:24px 26px;margin-top:8px;}
+.cheat-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:16px;letter-spacing:.08em;margin-bottom:16px;}
+.cheat-grid{display:grid;gap:12px;}
+.cheat-row{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:10px;}
+.cheat-row:last-child{border-bottom:none;padding-bottom:0;}
+.cheat-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:600;min-width:170px;}
+.cheat-mean{font-family:'Noto Serif TC',serif;font-size:14px;opacity:.92;}
+
+/* ── 列印（PDF）── */
+@media print{
+  @page{margin:16mm 14mm;}
+  body{background:#fff;}
+  .back-link,.speed-control,.play-btn{display:none !important;}
+  .wrap{max-width:none;padding:0;}
+  .chapter{break-before:page;page-break-before:always;}
+  .section,.toc,.memo,.cheat,.word-item{break-inside:avoid;page-break-inside:avoid;}
+  .word-romaji,.word-meaning{color:#555 !important;}
+  .cheat{color:#fff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  /* 列印時把 Klee One 收斂成 Shippori Mincho，少內嵌一套中日字型、縮小 PDF */
+  .word-ja,.compare,.cheat-ja,.j-mark{font-family:'Shippori Mincho',serif !important;}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">日常会話 · Shopping</div>
+    <div class="center">会 話 帖</div>
+    <div class="right">2026 / 06 / 17</div>
+  </header>
+
+  <!-- 封面 -->
+  <div class="book-cover">
+    <div class="book-kicker">— Phrases for the Counter —</div>
+    <h1 class="book-title">店員さんとの<span class="accent">会話帖</span></h1>
+    <p class="book-sub">店員對話手帖 · 店員會問什麼、你可以怎麼回</p>
+  </div>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1.2">
+    <span class="speed-value" id="rateValue">1.2x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ic">💡 </span><strong>怎麼用這本手帖</strong><br>
+    每個場景分成兩半：<strong><span class="ic">🧑‍🍳 </span>店員會這樣問</strong> 與 <strong><span class="ic">🙋 </span>你可以這樣回</strong>。
+    你不用聽懂整句，抓到關鍵字、再說出對應那一句就好。點任一句即可用日語發音（九州そら）。
+  </div>
+
+  <!-- 目錄 -->
+  <nav class="toc">
+    <div class="toc-title">目 次 · 目錄</div>
+    <ol>
+      <li><a href="#ch0"><span class="toc-no">序章</span>進門開口的招呼<span class="toc-ja">あいさつ</span></a></li>
+      <li><a href="#ch1"><span class="toc-no">第一章</span>餐廳內用<span class="toc-ja">レストラン</span></a></li>
+      <li><a href="#ch2"><span class="toc-no">第二章</span>買咖啡（燕麥拿鐵）<span class="toc-ja">コーヒー</span></a></li>
+      <li><a href="#ch3"><span class="toc-no">第三章</span>花店買花<span class="toc-ja">花屋さん</span></a></li>
+      <li><a href="#ch4"><span class="toc-no">第四章</span>超市結帳<span class="toc-ja">スーパー</span></a></li>
+      <li><a href="#ch5"><span class="toc-no">第五章</span>便利商店<span class="toc-ja">コンビニ</span></a></li>
+      <li><a href="#ch6"><span class="toc-no">第六章</span>拉麵店<span class="toc-ja">ラーメン屋</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- ═══════════════ 序章 ═══════════════ -->
+  <section class="chapter" id="ch0">
+    <div class="divider"><span class="ch-badge">Prologue ·</span> 序章 · 進門開口的招呼</div>
+
+    <div class="section ask">
+      <div class="section-title"><span class="ic">🧑‍🍳 </span>店員會說（聽就好，點頭即可）</div>
+      <div class="word-item" data-text="いらっしゃいませ">
+        <div class="word-content">
+          <div class="word-ja">いらっしゃいませ</div>
+          <div class="word-romaji">irasshaimase</div>
+          <div class="word-meaning">歡迎光臨 — 一進門就會聽到，不用回話，點個頭就好</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section reply">
+      <div class="section-title"><span class="ic">🙋 </span>你開口時 <span class="role-tag">You</span></div>
+      <div class="word-item" data-text="すみません">
+        <div class="word-content">
+          <div class="word-ja">すみません</div>
+          <div class="word-romaji">sumimasen</div>
+          <div class="word-meaning">不好意思 — 叫店員、引起注意時用</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="お願いします">
+        <div class="word-content">
+          <div class="word-ja">お願いします</div>
+          <div class="word-romaji">onegai shimasu</div>
+          <div class="word-meaning">麻煩你了 — 點完餐、把東西遞過去時</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ありがとうございます">
+        <div class="word-content">
+          <div class="word-ja">ありがとうございます</div>
+          <div class="word-romaji">arigatou gozaimasu</div>
+          <div class="word-meaning">謝謝 — 拿到東西、離開時</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="memo"><span class="ic">🧠 </span><strong>記憶小創意</strong>：<span class="compare">すみません</span> 一句萬用——叫人、道歉、借過全靠它。先把這句記熟，走到哪都能開口。</div>
+  </section>
+
+  <!-- ═══════════════ 第一章 ═══════════════ -->
+  <section class="chapter" id="ch1">
+    <div class="divider"><span class="ch-badge">Chapter 1 ·</span> 餐廳內用 · レストランで食事</div>
+
+    <div class="section ask">
+      <div class="section-title"><span class="ic">🧑‍🍳 </span>店員會這樣問</div>
+      <div class="word-item" data-text="何名様ですか">
+        <div class="word-content">
+          <div class="word-ja">何名様ですか？</div>
+          <div class="word-romaji">nan-mei-sama desu ka?</div>
+          <div class="word-meaning">請問幾位？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ご注文はお決まりですか">
+        <div class="word-content">
+          <div class="word-ja">ご注文はお決まりですか？</div>
+          <div class="word-romaji">go-chuumon wa o-kimari desu ka?</div>
+          <div class="word-meaning">決定好要點什麼了嗎？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="以上でよろしいですか">
+        <div class="word-content">
+          <div class="word-ja">以上でよろしいですか？</div>
+          <div class="word-romaji">ijou de yoroshii desu ka?</div>
+          <div class="word-meaning">這樣就好了嗎？（確認點餐）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section reply">
+      <div class="section-title"><span class="ic">🙋 </span>你可以這樣回 <span class="role-tag">You</span></div>
+      <div class="word-item" data-text="一人です">
+        <div class="word-content">
+          <div class="word-ja">一人です</div>
+          <div class="word-romaji">hitori desu</div>
+          <div class="word-meaning">一位</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="二人です">
+        <div class="word-content">
+          <div class="word-ja">二人です</div>
+          <div class="word-romaji">futari desu</div>
+          <div class="word-meaning">兩位</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="これをください">
+        <div class="word-content">
+          <div class="word-ja">これをください</div>
+          <div class="word-romaji">kore o kudasai</div>
+          <div class="word-meaning">請給我這個（指著菜單）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="お水をください">
+        <div class="word-content">
+          <div class="word-ja">お水をください</div>
+          <div class="word-romaji">o-mizu o kudasai</div>
+          <div class="word-meaning">請給我水</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="以上です">
+        <div class="word-content">
+          <div class="word-ja">以上です</div>
+          <div class="word-romaji">ijou desu</div>
+          <div class="word-meaning">就這些（點完了）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section vocab">
+      <div class="section-title"><span class="ic">📒 </span>單字</div>
+      <div class="word-item" data-text="メニュー">
+        <div class="word-content"><div class="word-ja">メニュー</div><div class="word-romaji">menyuu</div><div class="word-meaning">菜單</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="注文">
+        <div class="word-content"><div class="word-ja">注文（ちゅうもん）</div><div class="word-romaji">chuumon</div><div class="word-meaning">點餐</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="お会計">
+        <div class="word-content"><div class="word-ja">お会計（かいけい）</div><div class="word-romaji">o-kaikei</div><div class="word-meaning">結帳</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="memo"><span class="ic">🧠 </span><strong>記憶小創意</strong>：何<span class="compare">名</span>様＝幾「名」客人。「名」就是中文算人數的量詞，一聽到「名様」就知道在問人數。</div>
+  </section>
+
+  <!-- ═══════════════ 第二章 ═══════════════ -->
+  <section class="chapter" id="ch2">
+    <div class="divider"><span class="ch-badge">Chapter 2 ·</span> 買咖啡（燕麥拿鐵）· コーヒーを買う</div>
+
+    <div class="section ask">
+      <div class="section-title"><span class="ic">🧑‍🍳 </span>店員會這樣問</div>
+      <div class="word-item" data-text="ホットとアイス、どちらになさいますか">
+        <div class="word-content">
+          <div class="word-ja">ホットとアイス、どちらになさいますか？</div>
+          <div class="word-romaji">hotto to aisu, dochira ni nasaimasu ka?</div>
+          <div class="word-meaning">熱的還是冰的，要哪一種？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="サイズはいかがなさいますか">
+        <div class="word-content">
+          <div class="word-ja">サイズはいかがなさいますか？</div>
+          <div class="word-romaji">saizu wa ikaga nasaimasu ka?</div>
+          <div class="word-meaning">尺寸要哪個？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="店内でお召し上がりですか">
+        <div class="word-content">
+          <div class="word-ja">店内でお召し上がりですか？</div>
+          <div class="word-romaji">ten-nai de o-meshiagari desu ka?</div>
+          <div class="word-meaning">在店內喝嗎？（內用／外帶）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section reply">
+      <div class="section-title"><span class="ic">🙋 </span>你可以這樣回 <span class="role-tag">You</span></div>
+      <div class="word-item" data-text="ホットのオーツミルクラテをください">
+        <div class="word-content">
+          <div class="word-ja">ホットのオーツミルクラテをください</div>
+          <div class="word-romaji">hotto no ootsu-miruku rate o kudasai</div>
+          <div class="word-meaning">請給我熱的燕麥拿鐵</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="アイスのオーツミルクラテをください">
+        <div class="word-content">
+          <div class="word-ja">アイスのオーツミルクラテをください</div>
+          <div class="word-romaji">aisu no ootsu-miruku rate o kudasai</div>
+          <div class="word-meaning">請給我冰的燕麥拿鐵</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="持ち帰りで">
+        <div class="word-content">
+          <div class="word-ja">持ち帰りで</div>
+          <div class="word-romaji">mochi-kaeri de</div>
+          <div class="word-meaning">外帶</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="Mサイズで">
+        <div class="word-content">
+          <div class="word-ja">Mサイズで</div>
+          <div class="word-romaji">emu saizu de</div>
+          <div class="word-meaning">中杯（M）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section vocab">
+      <div class="section-title"><span class="ic">📒 </span>單字</div>
+      <div class="word-item" data-text="ホット">
+        <div class="word-content"><div class="word-ja">ホット</div><div class="word-romaji">hotto</div><div class="word-meaning">熱（hot）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="アイス">
+        <div class="word-content"><div class="word-ja">アイス</div><div class="word-romaji">aisu</div><div class="word-meaning">冰（ice）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="オーツミルク">
+        <div class="word-content"><div class="word-ja">オーツミルク</div><div class="word-romaji">ootsu-miruku</div><div class="word-meaning">燕麥奶（oat milk）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ラテ">
+        <div class="word-content"><div class="word-ja">ラテ</div><div class="word-romaji">rate</div><div class="word-meaning">拿鐵（latte）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="サイズ">
+        <div class="word-content"><div class="word-ja">サイズ</div><div class="word-romaji">saizu</div><div class="word-meaning">尺寸（size）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="memo"><span class="ic">🧠 </span><strong>記憶小創意</strong>：咖啡店單字幾乎都是英文直接拼成片假名——<span class="compare">ホット</span>=hot、<span class="compare">アイス</span>=ice、<span class="compare">オーツ</span>=oats、<span class="compare">ラテ</span>=latte。唸快一點就是英文。</div>
+  </section>
+
+  <!-- ═══════════════ 第三章 ═══════════════ -->
+  <section class="chapter" id="ch3">
+    <div class="divider"><span class="ch-badge">Chapter 3 ·</span> 花店買花 · 花屋さん</div>
+
+    <div class="section ask">
+      <div class="section-title"><span class="ic">🧑‍🍳 </span>店員會這樣問</div>
+      <div class="word-item" data-text="プレゼントですか">
+        <div class="word-content">
+          <div class="word-ja">プレゼントですか？</div>
+          <div class="word-romaji">purezento desu ka?</div>
+          <div class="word-meaning">是要送禮的嗎？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ご予算はおいくらですか">
+        <div class="word-content">
+          <div class="word-ja">ご予算はおいくらですか？</div>
+          <div class="word-romaji">go-yosan wa o-ikura desu ka?</div>
+          <div class="word-meaning">預算大約多少？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ラッピングはいかがですか">
+        <div class="word-content">
+          <div class="word-ja">ラッピングはいかがですか？</div>
+          <div class="word-romaji">rappingu wa ikaga desu ka?</div>
+          <div class="word-meaning">要不要包裝？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section reply">
+      <div class="section-title"><span class="ic">🙋 </span>你可以這樣回 <span class="role-tag">You</span></div>
+      <div class="word-item" data-text="プレゼント用です">
+        <div class="word-content">
+          <div class="word-ja">プレゼント用です</div>
+          <div class="word-romaji">purezento-you desu</div>
+          <div class="word-meaning">送禮用的</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="自分用です">
+        <div class="word-content">
+          <div class="word-ja">自分用です</div>
+          <div class="word-romaji">jibun-you desu</div>
+          <div class="word-meaning">自己用的</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="この花をください">
+        <div class="word-content">
+          <div class="word-ja">この花をください</div>
+          <div class="word-romaji">kono hana o kudasai</div>
+          <div class="word-meaning">請給我這束花</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ラッピングをお願いします">
+        <div class="word-content">
+          <div class="word-ja">ラッピングをお願いします</div>
+          <div class="word-romaji">rappingu o onegai shimasu</div>
+          <div class="word-meaning">麻煩幫我包裝</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="予算は3000円ぐらいで">
+        <div class="word-content">
+          <div class="word-ja">予算は3000円ぐらいで</div>
+          <div class="word-romaji">yosan wa sanzen-en gurai de</div>
+          <div class="word-meaning">預算3000円左右</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section vocab">
+      <div class="section-title"><span class="ic">📒 </span>單字</div>
+      <div class="word-item" data-text="花束">
+        <div class="word-content"><div class="word-ja">花束（はなたば）</div><div class="word-romaji">hanataba</div><div class="word-meaning">花束</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="プレゼント">
+        <div class="word-content"><div class="word-ja">プレゼント</div><div class="word-romaji">purezento</div><div class="word-meaning">禮物（present）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ラッピング">
+        <div class="word-content"><div class="word-ja">ラッピング</div><div class="word-romaji">rappingu</div><div class="word-meaning">包裝（wrapping）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="予算">
+        <div class="word-content"><div class="word-ja">予算（よさん）</div><div class="word-romaji">yosan</div><div class="word-meaning">預算</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="memo"><span class="ic">🧠 </span><strong>記憶小創意</strong>：<span class="compare">花束</span>＝はな（花）＋たば（束）。中文「一束花」的「束」就是 <strong>たば</strong>，順序顛倒、意思一樣。</div>
+  </section>
+
+  <!-- ═══════════════ 第四章 ═══════════════ -->
+  <section class="chapter" id="ch4">
+    <div class="divider"><span class="ch-badge">Chapter 4 ·</span> 超市結帳 · スーパーのレジ</div>
+
+    <div class="section ask">
+      <div class="section-title"><span class="ic">🧑‍🍳 </span>店員會這樣問</div>
+      <div class="word-item" data-text="ポイントカードはお持ちですか">
+        <div class="word-content">
+          <div class="word-ja">ポイントカードはお持ちですか？</div>
+          <div class="word-romaji">pointo-kaado wa o-mochi desu ka?</div>
+          <div class="word-meaning">有集點卡嗎？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="袋はいりますか">
+        <div class="word-content">
+          <div class="word-ja">袋はいりますか？</div>
+          <div class="word-romaji">fukuro wa irimasu ka?</div>
+          <div class="word-meaning">需要袋子嗎？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="お支払いは現金ですか、カードですか">
+        <div class="word-content">
+          <div class="word-ja">お支払いは現金ですか、カードですか？</div>
+          <div class="word-romaji">o-shiharai wa genkin desu ka, kaado desu ka?</div>
+          <div class="word-meaning">付款是付現還是刷卡？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section reply">
+      <div class="section-title"><span class="ic">🙋 </span>你可以這樣回 <span class="role-tag">You</span></div>
+      <div class="word-item" data-text="大丈夫です">
+        <div class="word-content">
+          <div class="word-ja">大丈夫です</div>
+          <div class="word-romaji">daijoubu desu</div>
+          <div class="word-meaning">不用了（禮貌婉拒）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ありません">
+        <div class="word-content">
+          <div class="word-ja">ありません</div>
+          <div class="word-romaji">arimasen</div>
+          <div class="word-meaning">沒有（沒有集點卡）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="袋をください">
+        <div class="word-content">
+          <div class="word-ja">袋をください</div>
+          <div class="word-romaji">fukuro o kudasai</div>
+          <div class="word-meaning">請給我袋子</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="袋はいりません">
+        <div class="word-content">
+          <div class="word-ja">袋はいりません</div>
+          <div class="word-romaji">fukuro wa irimasen</div>
+          <div class="word-meaning">不用袋子</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="カードで">
+        <div class="word-content">
+          <div class="word-ja">カードで</div>
+          <div class="word-romaji">kaado de</div>
+          <div class="word-meaning">刷卡</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="現金で">
+        <div class="word-content">
+          <div class="word-ja">現金で</div>
+          <div class="word-romaji">genkin de</div>
+          <div class="word-meaning">付現</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section vocab">
+      <div class="section-title"><span class="ic">📒 </span>單字</div>
+      <div class="word-item" data-text="レジ袋">
+        <div class="word-content"><div class="word-ja">レジ袋（ぶくろ）</div><div class="word-romaji">reji-bukuro</div><div class="word-meaning">購物袋（收銀台的袋子）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ポイントカード">
+        <div class="word-content"><div class="word-ja">ポイントカード</div><div class="word-romaji">pointo-kaado</div><div class="word-meaning">集點卡（point card）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="現金">
+        <div class="word-content"><div class="word-ja">現金（げんきん）</div><div class="word-romaji">genkin</div><div class="word-meaning">現金</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="memo"><span class="ic">🧠 </span><strong>記憶小創意</strong>：店員問「要不要…？」時，一句 <span class="compare">大丈夫です</span> 就是禮貌的「不用」。被問集點卡、袋子、加熱…通通可以用它擋掉。</div>
+  </section>
+
+  <!-- ═══════════════ 第五章 ═══════════════ -->
+  <section class="chapter" id="ch5">
+    <div class="divider"><span class="ch-badge">Chapter 5 ·</span> 便利商店 · コンビニ</div>
+
+    <div class="section ask">
+      <div class="section-title"><span class="ic">🧑‍🍳 </span>店員會這樣問</div>
+      <div class="word-item" data-text="温めますか">
+        <div class="word-content">
+          <div class="word-ja">温めますか？</div>
+          <div class="word-romaji">atatamemasu ka?</div>
+          <div class="word-meaning">要幫你加熱嗎？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="お箸はおつけしますか">
+        <div class="word-content">
+          <div class="word-ja">お箸はおつけしますか？</div>
+          <div class="word-romaji">o-hashi wa o-tsuke shimasu ka?</div>
+          <div class="word-meaning">要附筷子嗎？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="袋はご一緒でよろしいですか">
+        <div class="word-content">
+          <div class="word-ja">袋はご一緒でよろしいですか？</div>
+          <div class="word-romaji">fukuro wa go-issho de yoroshii desu ka?</div>
+          <div class="word-meaning">東西放同一個袋子可以嗎？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section reply">
+      <div class="section-title"><span class="ic">🙋 </span>你可以這樣回 <span class="role-tag">You</span></div>
+      <div class="word-item" data-text="お願いします">
+        <div class="word-content">
+          <div class="word-ja">お願いします</div>
+          <div class="word-romaji">onegai shimasu</div>
+          <div class="word-meaning">麻煩你（要，例如要加熱）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="温めてください">
+        <div class="word-content">
+          <div class="word-ja">温めてください</div>
+          <div class="word-romaji">atatamete kudasai</div>
+          <div class="word-meaning">請幫我加熱</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="そのままで">
+        <div class="word-content">
+          <div class="word-ja">そのままで</div>
+          <div class="word-romaji">sono mama de</div>
+          <div class="word-meaning">就這樣就好（不用加熱）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="お箸をください">
+        <div class="word-content">
+          <div class="word-ja">お箸をください</div>
+          <div class="word-romaji">o-hashi o kudasai</div>
+          <div class="word-meaning">請給我筷子</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="大丈夫です">
+        <div class="word-content">
+          <div class="word-ja">大丈夫です</div>
+          <div class="word-romaji">daijoubu desu</div>
+          <div class="word-meaning">不用了</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section vocab">
+      <div class="section-title"><span class="ic">📒 </span>單字</div>
+      <div class="word-item" data-text="温める">
+        <div class="word-content"><div class="word-ja">温める（あたためる）</div><div class="word-romaji">atatameru</div><div class="word-meaning">加熱</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="お箸">
+        <div class="word-content"><div class="word-ja">お箸（はし）</div><div class="word-romaji">o-hashi</div><div class="word-meaning">筷子</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="スプーン">
+        <div class="word-content"><div class="word-ja">スプーン</div><div class="word-romaji">supuun</div><div class="word-meaning">湯匙（spoon）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="memo"><span class="ic">🧠 </span><strong>記憶小創意</strong>：あ<span class="compare">たた</span>める——聽到「あたた」就是「燙、加熱」。想成燙到喊「あた！」就記住了。</div>
+  </section>
+
+  <!-- ═══════════════ 第六章 ═══════════════ -->
+  <section class="chapter" id="ch6">
+    <div class="divider"><span class="ch-badge">Chapter 6 ·</span> 拉麵店 · ラーメン屋さん</div>
+
+    <div class="section ask">
+      <div class="section-title"><span class="ic">🧑‍🍳 </span>店員會這樣問</div>
+      <div class="word-item" data-text="食券は券売機でお願いします">
+        <div class="word-content">
+          <div class="word-ja">食券は券売機でお願いします</div>
+          <div class="word-romaji">shokken wa kenbaiki de onegai shimasu</div>
+          <div class="word-meaning">請先在售票機買餐券</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="麺の硬さはどうしますか">
+        <div class="word-content">
+          <div class="word-ja">麺の硬さはどうしますか？</div>
+          <div class="word-romaji">men no katasa wa dou shimasu ka?</div>
+          <div class="word-meaning">麵的硬度要怎樣？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="紙エプロンはお使いになりますか">
+        <div class="word-content">
+          <div class="word-ja">紙エプロンはお使いになりますか？</div>
+          <div class="word-romaji">kami-epuron wa o-tsukai ni narimasu ka?</div>
+          <div class="word-meaning">要用紙圍裙嗎？（防湯汁噴衣服的「圍巾」）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="替え玉はいかがですか">
+        <div class="word-content">
+          <div class="word-ja">替え玉はいかがですか？</div>
+          <div class="word-romaji">kaedama wa ikaga desu ka?</div>
+          <div class="word-meaning">要不要加麵？（只加麵不加湯）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section reply">
+      <div class="section-title"><span class="ic">🙋 </span>你可以這樣回 <span class="role-tag">You</span></div>
+      <div class="word-item" data-text="紙エプロンをお願いします">
+        <div class="word-content">
+          <div class="word-ja">紙エプロンをお願いします</div>
+          <div class="word-romaji">kami-epuron o onegai shimasu</div>
+          <div class="word-meaning">麻煩給我紙圍裙</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="大丈夫です">
+        <div class="word-content">
+          <div class="word-ja">大丈夫です</div>
+          <div class="word-romaji">daijoubu desu</div>
+          <div class="word-meaning">不用了</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="麺は硬めで">
+        <div class="word-content">
+          <div class="word-ja">麺は硬めで</div>
+          <div class="word-romaji">men wa katame de</div>
+          <div class="word-meaning">麵硬一點</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="普通で">
+        <div class="word-content">
+          <div class="word-ja">普通で</div>
+          <div class="word-romaji">futsuu de</div>
+          <div class="word-meaning">普通就好</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="替え玉お願いします">
+        <div class="word-content">
+          <div class="word-ja">替え玉お願いします</div>
+          <div class="word-romaji">kaedama onegai shimasu</div>
+          <div class="word-meaning">請幫我加一份麵</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="section vocab">
+      <div class="section-title"><span class="ic">📒 </span>單字</div>
+      <div class="word-item" data-text="券売機">
+        <div class="word-content"><div class="word-ja">券売機（けんばいき）</div><div class="word-romaji">kenbaiki</div><div class="word-meaning">售票機（買餐券的機器）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="食券">
+        <div class="word-content"><div class="word-ja">食券（しょっけん）</div><div class="word-romaji">shokken</div><div class="word-meaning">餐券</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="紙エプロン">
+        <div class="word-content"><div class="word-ja">紙エプロン</div><div class="word-romaji">kami-epuron</div><div class="word-meaning">紙圍裙（paper apron，防湯汁）</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="替え玉">
+        <div class="word-content"><div class="word-ja">替え玉（かえだま）</div><div class="word-romaji">kaedama</div><div class="word-meaning">加麵</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="麺">
+        <div class="word-content"><div class="word-ja">麺（めん）</div><div class="word-romaji">men</div><div class="word-meaning">麵</div></div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="memo"><span class="ic">🧠 </span><strong>記憶小創意</strong>：<span class="compare">替え玉</span>＝替（かえ・換）＋玉（だま・一球麵團），「再換一球麵」就是加麵。<br>「圍巾」其實是 <span class="compare">紙エプロン</span>＝paper apron，紙做的圍裙，防止拉麵湯噴到衣服。</div>
+  </section>
+
+  <!-- ═══════════════ 書末小抄 ═══════════════ -->
+  <div class="divider"><span class="ch-badge">Cheat Sheet ·</span> 萬用四句小抄</div>
+  <div class="cheat">
+    <div class="cheat-title">記住這四句，半數情況都能應付</div>
+    <div class="cheat-grid">
+      <div class="cheat-row"><div class="cheat-ja">〜をください</div><div class="cheat-mean">請給我〜（要東西、點餐）</div></div>
+      <div class="cheat-row"><div class="cheat-ja">〜をお願いします</div><div class="cheat-mean">麻煩你〜（更客氣的請求）</div></div>
+      <div class="cheat-row"><div class="cheat-ja">大丈夫です</div><div class="cheat-mean">不用了（禮貌婉拒任何提議）</div></div>
+      <div class="cheat-row"><div class="cheat-ja">〜で</div><div class="cheat-mean">就用這個（持ち帰りで・現金で・Mサイズで）</div></div>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ic">📝 </span><strong>關於句尾的 <span class="j-mark">で</span></strong><br>
+    回答結尾的 <span class="j-mark">で</span> 帶有「就用這個方式」的語氣，等於把後面的動詞省略掉
+    （例：持ち帰り<strong>で</strong>（＝外帶就好）、現金<strong>で</strong>（＝用現金付））。
+    短短一個 <span class="compare">で</span>，店員就懂了。
+  </div>
+</div>
+
+<script src="js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

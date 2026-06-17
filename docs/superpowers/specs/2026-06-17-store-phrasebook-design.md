@@ -73,12 +73,18 @@
 - generate-audio 以「文字 sha256」為檔名快取，與既有 id=8 mp3 共存；本書多數句子為新句，會新生 mp3。
   少數與既有課程重複的句子（如 持ち帰りで／店内で）會沿用既有 id=8 mp3，可接受。
 
-## PDF
+## PDF（書籍版，WeasyPrint）
 
-- 新增 `scripts/build-pdf.mjs`：用 `npx playwright` 的 chromium headless 開本機 HTML，印成 `store-phrasebook.pdf`。
-- `@media print`：隱藏 `.back-link` `.speed-control` `.play-btn`；每章 `break-before: page`；
-  維持羅馬拼音與中文，A4、適當邊距。
-- playwright 為一次性 `npx` 取得，不寫進專案（專案維持無 build / 無 dependencies 原則）。
+最終採 **WeasyPrint** 做真正的書籍排版（用戶選定）：
+- `scripts/build-book-pdf.mjs` + `book-print.css`：把 `store-phrasebook.html` 排成 **A5 小書**，
+  含頁碼、頁眉（書名）、目錄頁碼（`target-counter`）、`leader('. ')` 點線、章節扉頁（每章開新頁）。
+- 字型用 macOS 內建 **ヒラギノ明朝 / Songti / Baskerville**（離線可跑），WeasyPrint 自動 subset → PDF 約 **1.4MB**。
+- `book-print.css` 用 `!important` 蓋過頁面 inline `<style>`（WeasyPrint 的 `-s` 樣式優先序較低）。
+- emoji（互動版用）在 HTML 裡包成 `<span class="ic">`；瀏覽器照常顯示，`book-print.css` 設 `.ic{display:none}`
+  並改用印刷符號（▍店員問／▍你回／◆單字／❖記憶），因 WeasyPrint 不支援彩色 emoji。
+- 安裝：`brew install weasyprint`、`brew install poppler`（後者僅驗證用）。
+
+另保留 `scripts/build-pdf.mjs`（系統 Chrome headless 直接列印網頁的通用版，檔大、無頁碼），可用於其他頁面。
 
 ## index 連結
 

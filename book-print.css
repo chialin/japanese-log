@@ -1,0 +1,225 @@
+/* book-print.css — WeasyPrint 專用「書籍排版」樣式
+ * 只給 scripts/build-book-pdf.mjs 用，把 store-phrasebook.html 排成 A5 小書。
+ * 不影響瀏覽器裡的互動版（瀏覽器不會載這支）。
+ *
+ * 字型用 macOS 內建：ヒラギノ明朝（日文書的標準明體）＋ Songti（中文明體）＋ Baskerville（拉丁）。
+ * 全系統內建，離線可跑，且 WeasyPrint 會自動 subset → PDF 只有幾百 KB。
+ */
+
+/* ── 色票（與頁面一致，淡化一點當紙本） ── */
+:root{
+  --paper:#fffdfa; --ink:#2a1810; --ink-soft:#4a3020; --ink-mute:#9a7050;
+  --accent:#b85c28; --accent-soft:#e8b48a; --accent-pale:#f6e7d8; --line:#e8d4bf;
+}
+
+/* ── 開本與頁眉頁碼 ── */
+@page{
+  size: A5;
+  margin: 16mm 15mm 18mm;
+  @top-center{
+    content: "店員さんとの会話帖";
+    font-family: "Hiragino Mincho ProN", serif;
+    font-size: 7.5pt; letter-spacing: .18em; color: #b89878;
+    padding-bottom: 2mm;
+  }
+  @bottom-center{
+    content: counter(page);
+    font-family: "Baskerville", serif; font-style: italic;
+    font-size: 9pt; color: #9a7050;
+    padding-top: 3mm;
+  }
+}
+/* 封面：不要頁眉頁碼 */
+@page :first{
+  margin: 0;
+  @top-center{ content: none; }
+  @bottom-center{ content: none; }
+}
+
+/* ── 全域 reset（蓋掉 shared.css 的網頁版面） ── */
+*{ box-shadow: none !important; text-shadow: none !important; }
+html, body{
+  background: #fff !important;
+  color: var(--ink);
+  font-family: "Songti SC", "Hiragino Mincho ProN", serif;
+  font-size: 10.5pt; line-height: 1.7;
+}
+.wrap{ max-width: none !important; margin: 0 !important; padding: 0 !important; }
+
+/* 隱藏所有網頁互動元素 */
+.back-link, .speed-control, .play-btn, .masthead{ display: none !important; }
+
+/* 背景裝飾色塊（body::before 之類）關掉 */
+body::before, body::after, .wrap::before, .wrap::after{ display: none !important; }
+
+/* ── 封面（第一頁，置中、滿版） ── */
+.book-cover{
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center;
+  height: 210mm;            /* A5 高，獨佔一頁 */
+  margin: 0; padding: 0 18mm; border: none !important;
+  background: var(--accent);
+  color: #fff;
+  page-break-after: always;
+}
+.book-kicker{
+  font-family: "Baskerville", serif !important; font-style: italic;
+  letter-spacing: .3em; font-size: 11pt; text-transform: uppercase;
+  color: rgba(255,255,255,.85) !important; margin-bottom: 14mm;
+}
+.book-title{
+  font-family: "Hiragino Mincho ProN", serif !important; font-weight: 600;
+  font-size: 34pt; line-height: 1.25; letter-spacing: .08em;
+  color: #fff !important; margin-bottom: 8mm;
+}
+.book-title .accent{ color: #ffe1c4 !important; }
+.book-sub{
+  font-family: "Songti SC", serif !important; font-size: 11pt; line-height: 1.9;
+  color: rgba(255,255,255,.95) !important; letter-spacing: .04em;
+}
+
+/* ── 使用說明 tip：放封面後、目錄前自成一塊 ── */
+.tip{
+  border: none !important; border-left: 2pt solid var(--accent) !important;
+  background: var(--accent-pale) !important;
+  margin: 8mm 0 0 !important; padding: 5mm 6mm !important;
+  font-family: "Songti SC", serif; font-size: 9.5pt; line-height: 1.85; color: var(--ink-soft);
+}
+.tip strong{ color: var(--accent); }
+.j-mark{ background: var(--accent-pale); color: var(--accent); padding: 0 2px; }
+
+/* ── 目錄 ── */
+.toc{
+  break-before: page;
+  background: none !important; border: none !important; padding: 0 !important; margin: 0 !important;
+}
+.toc-title{
+  font-family: "Hiragino Mincho ProN", serif; font-weight: 600;
+  font-size: 16pt; letter-spacing: .2em; color: var(--ink);
+  text-align: center; margin-bottom: 10mm; padding-bottom: 4mm;
+  border-bottom: 1pt solid var(--line);
+}
+.toc ol{ margin: 0; padding: 0; }
+.toc li{ border: none !important; padding: 0 !important; margin: 0 0 5mm 0 !important; display: block !important; }
+.toc a{
+  display: flex !important; align-items: baseline; gap: 2mm;
+  color: var(--ink) !important; text-decoration: none;
+  font-family: "Songti SC", serif; font-size: 11pt;
+}
+.toc .toc-no{
+  font-family: "Baskerville", serif; font-style: italic; color: var(--accent);
+  min-width: 16mm; font-size: 9.5pt;
+}
+.toc .toc-ja{
+  font-family: "Hiragino Mincho ProN", serif; color: var(--ink-mute);
+  font-size: 8.5pt; margin: 0 2mm;
+}
+/* dot leader ＋ 目標頁碼（WeasyPrint 支援 target-counter） */
+.toc a::after{
+  content: leader('. ') target-counter(attr(href), page);
+  font-family: "Baskerville", serif; color: var(--ink-mute); font-size: 9.5pt;
+}
+
+/* ── 章節：每章開新頁 ── */
+.chapter{ break-before: page; }
+
+/* 章名（沿用 .divider） */
+.divider{
+  display: block !important; text-align: left;
+  font-family: "Hiragino Mincho ProN", serif !important; font-weight: 600;
+  font-size: 15pt; letter-spacing: .04em; color: var(--ink) !important;
+  margin: 0 0 6mm 0 !important; padding: 0 0 3mm 0;
+  border-bottom: 1.5pt solid var(--accent);
+}
+.divider::before, .divider::after{ display: none !important; } /* 砍掉左右橫線 */
+.divider .ch-badge{
+  display: block;
+  font-family: "Baskerville", serif; font-style: italic; text-transform: uppercase;
+  font-size: 8.5pt; letter-spacing: .2em; color: var(--accent); margin-bottom: 1.5mm;
+}
+
+/* ── 區塊：店員問 / 你回 / 單字 ── */
+.section{
+  background: none !important; border: none !important;
+  padding: 0 !important; margin: 0 0 5mm 0 !important;
+}
+.section-title{
+  font-family: "Hiragino Mincho ProN", serif !important; font-weight: 600;
+  font-size: 10.5pt; color: var(--accent) !important; letter-spacing: .04em;
+  margin-bottom: 2.5mm; padding-bottom: 1.5mm;
+  border-bottom: .5pt solid var(--line);
+}
+.role-tag{ display: none !important; }
+
+/* 區別「店員問 / 你回」用左邊細線 */
+.section.ask{ border-left: 2pt solid var(--accent) !important; padding-left: 4mm !important; }
+.section.reply{ border-left: 2pt solid var(--accent-soft) !important; padding-left: 4mm !important; }
+.section.vocab{ border-left: 2pt solid var(--line) !important; padding-left: 4mm !important; }
+
+/* ── 句子條目 ── */
+.word-item{
+  display: block !important; border: none !important;
+  padding: 1.6mm 0 !important; margin: 0 !important;
+  border-bottom: .5pt dotted var(--line) !important;
+  break-inside: avoid;
+}
+.word-item:last-child{ border-bottom: none !important; }
+.word-ja{
+  font-family: "Hiragino Mincho ProN", serif !important; font-weight: 600;
+  font-size: 12pt; color: var(--ink) !important; margin-bottom: .5mm; line-height: 1.5;
+}
+.word-romaji{
+  font-family: "Baskerville", serif !important; font-style: italic;
+  font-size: 9.5pt; color: var(--accent) !important; letter-spacing: .02em;
+}
+.word-meaning{
+  font-family: "Songti SC", serif !important; font-size: 9pt; color: var(--ink-soft) !important;
+  margin-top: .3mm;
+}
+.compare{
+  background: var(--accent-pale); color: var(--accent);
+  padding: 0 2px; font-family: "Hiragino Mincho ProN", serif;
+}
+
+/* ── 記憶小創意 ── */
+.memo{
+  background: var(--accent-pale) !important;
+  border: none !important; border-left: 2pt solid var(--accent) !important;
+  margin: 4mm 0 0 0 !important; padding: 3.5mm 5mm !important;
+  font-family: "Songti SC", serif; font-size: 9.5pt; line-height: 1.8; color: var(--ink-soft);
+  break-inside: avoid;
+}
+.memo strong{ color: var(--accent); }
+
+/* ── 萬用小抄 ── */
+.cheat{
+  background: var(--accent) !important; color: #fff !important;
+  margin: 6mm 0 0 0 !important; padding: 6mm 7mm !important;
+  break-inside: avoid;
+}
+.cheat-title{
+  font-family: "Hiragino Mincho ProN", serif; font-weight: 600;
+  font-size: 11pt; letter-spacing: .06em; margin-bottom: 4mm;
+}
+.cheat-row{ border-bottom: .5pt solid rgba(255,255,255,.3) !important; padding-bottom: 2.5mm; margin-bottom: 2.5mm; }
+.cheat-row:last-child{ border: none !important; margin: 0; padding: 0; }
+.cheat-ja{ font-family: "Hiragino Mincho ProN", serif; font-size: 13pt; min-width: 42mm; }
+.cheat-mean{ font-family: "Songti SC", serif; font-size: 9pt; }
+
+/* 書末註解 */
+.note{
+  background: none !important; border: none !important;
+  border-left: 2pt solid var(--line) !important;
+  margin: 5mm 0 0 0 !important; padding: 3mm 5mm !important;
+  font-family: "Songti SC", serif; font-size: 9pt; line-height: 1.8; color: var(--ink-soft);
+  break-inside: avoid;
+}
+.note strong{ color: var(--ink); }
+
+/* ── emoji：互動版才顯示；書籍版隱藏，改用印刷感符號 ── */
+.ic{ display: none !important; }
+.section.ask .section-title::before{ content: "▍"; color: var(--accent); margin-right: 1.5mm; }
+.section.reply .section-title::before{ content: "▍"; color: var(--accent-soft); margin-right: 1.5mm; }
+.section.vocab .section-title::before{ content: "◆"; color: var(--ink-mute); margin-right: 1.5mm; font-size: 8pt; }
+.memo strong::before{ content: "❖ "; color: var(--accent); }
+.tip strong:first-of-type::before{ content: "❖ "; color: var(--accent); }

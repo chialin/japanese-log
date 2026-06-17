@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜との — 和某人的某事</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 拆解表 */
+.breakdown{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.breakdown th,.breakdown td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+.breakdown th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.breakdown tr:last-child td{border-bottom:none;}
+.breakdown .c-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:600;color:var(--accent);white-space:nowrap;}
+.breakdown .c-roma{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:17px;white-space:nowrap;}
+.breakdown .c-role{color:var(--ink);font-weight:600;white-space:nowrap;}
+.breakdown .c-mean{color:var(--ink-soft);}
+.breakdown tr.key td{background:var(--accent-pale);}
+
+/* 公式盒 */
+.formula{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent);padding:20px 18px;margin-bottom:16px;text-align:center;}
+.formula .f-line{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:600;color:var(--ink);letter-spacing:.04em;line-height:1.9;}
+.formula .f-line .p{display:inline-block;background:var(--accent-pale);color:var(--accent);padding:1px 10px;border-radius:3px;margin:0 2px;}
+.formula .f-line .plus{color:var(--ink-mute);margin:0 6px;font-family:'Cormorant Garamond',serif;}
+.formula .f-eq{display:block;margin-top:10px;font-size:16px;color:var(--ink-soft);font-family:'Noto Serif TC',serif;}
+.formula .f-eq strong{color:var(--accent);}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">文法 · Grammar</div>
+    <div class="center">〜 と の</div>
+    <div class="right">2026 / 06 / 17</div>
+  </header>
+
+  <h1 class="page-title">和某人的某事 <span class="accent">〜との</span></h1>
+  <p class="page-subtitle">從今天做的「店員さんとの会話帖」拆出來的小文法</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    <span class="compare">さんとの</span> 不是一個單字，是 <strong>さん＋と＋の</strong> 黏在一起。
+    學會 <span class="j-mark">人 と の 名詞</span> 這個結構，就能說出「和某人的某件事」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、把書名拆開來看</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    書名 <span class="compare">店員さんとの会話帖</span> 看起來一長串，其實是六塊積木拼起來的。
+    關鍵是中間的 <span class="j-mark">と</span> 和 <span class="j-mark">の</span> 兩個助詞。
+  </p>
+
+  <table class="breakdown">
+    <thead>
+      <tr><th>日文</th><th>羅馬</th><th>角色</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="c-ja">店員</td><td class="c-roma">ten'in</td><td class="c-role">名詞</td><td class="c-mean">店員</td></tr>
+      <tr><td class="c-ja">さん</td><td class="c-roma">san</td><td class="c-role">敬稱</td><td class="c-mean">先生／小姐 — 接在人後面，比較客氣</td></tr>
+      <tr class="key"><td class="c-ja">と</td><td class="c-roma">to</td><td class="c-role">助詞</td><td class="c-mean">和／與 — 標出「一起做事的對象」</td></tr>
+      <tr class="key"><td class="c-ja">の</td><td class="c-roma">no</td><td class="c-role">助詞</td><td class="c-mean">的 — 把前面整串變成修飾後面名詞的「定語」</td></tr>
+      <tr><td class="c-ja">会話</td><td class="c-roma">kaiwa</td><td class="c-role">名詞</td><td class="c-mean">對話</td></tr>
+      <tr><td class="c-ja">帖</td><td class="c-roma">chō</td><td class="c-role">名詞</td><td class="c-mean">手帖／小冊</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 一塊一塊接起來：<br>
+    店員さん（店員）→ 店員さん<span class="j-mark">と</span>（<strong>和</strong>店員）→
+    店員さんと<span class="j-mark">の</span>会話（和店員<strong>的</strong>對話）→ 〜会話帖（〜會話手帖）。<br>
+    合起來就是 <strong>「和店員（對話）的會話手帖」</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、「人 ＋ と ＋ の ＋ 名詞」公式</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="j-mark">と</span> 本來是「和」，但後面再加一個 <span class="j-mark">の</span>，
+    就能把「和某人」整包拿去<strong>修飾一個名詞</strong>。
+  </p>
+
+  <div class="formula">
+    <div class="f-line">
+      <span class="p">人</span><span class="plus">＋</span><span class="p">と</span><span class="plus">＋</span><span class="p">の</span><span class="plus">＋</span><span class="p">名詞</span>
+      <span class="f-eq">＝ 和某人的<strong>某件事</strong>（某個名詞）</span>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ 小心分清楚：<br>
+    <span class="compare">AとB</span> 多半是「A<strong>和</strong>B」並列（蘋果和橘子）。<br>
+    但 <span class="compare">A との 名詞</span> 是「<strong>和 A 的</strong>～」，A 是動作對象，不是並列。
+    差別就在後面有沒有那個 <span class="j-mark">の</span>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、套用看看（點句子發音）</div>
+
+  <div class="section">
+    <div class="section-title">📖 人 との 名詞</div>
+
+    <div class="word-item" data-text="店員さんとの会話">
+      <div class="word-content">
+        <div class="word-ja">店員さん<span class="j-mark">との</span>会話</div>
+        <div class="word-romaji">ten'in-san to no kaiwa</div>
+        <div class="word-meaning">和店員的對話 ← 今天的書名就是這個</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="友達との約束">
+      <div class="word-content">
+        <div class="word-ja">友達<span class="j-mark">との</span>約束</div>
+        <div class="word-romaji">tomodachi to no yakusoku</div>
+        <div class="word-meaning">和朋友的約定</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="家族との時間">
+      <div class="word-content">
+        <div class="word-ja">家族<span class="j-mark">との</span>時間</div>
+        <div class="word-romaji">kazoku to no jikan</div>
+        <div class="word-meaning">和家人的時間</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="先生との面談">
+      <div class="word-content">
+        <div class="word-ja">先生<span class="j-mark">との</span>面談</div>
+        <div class="word-romaji">sensei to no mendan</div>
+        <div class="word-meaning">和老師的面談</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="母との電話">
+      <div class="word-content">
+        <div class="word-ja">母<span class="j-mark">との</span>電話</div>
+        <div class="word-romaji">haha to no denwa</div>
+        <div class="word-meaning">和媽媽的通話</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>記憶小創意</strong>：看到 <span class="compare">との</span> 就拆成「と（和）＋の（的）」，
+    從後面的名詞往前讀 ——「<strong>的</strong>○○、<strong>和</strong>誰」，意思馬上出來。
+  </div>
+
+  <!-- 回到今天做的手帖 -->
+  <a href="../store-phrasebook.html" class="next-link">
+    <span class="next-kicker">— 今天的手帖 / Same day —</span>
+    <span class="next-title">店員さんとの会話帖 <span class="next-arrow">→</span></span>
+    <span class="next-sub">這個文法的出處 — 店員會問什麼、你可以怎麼回</span>
+  </a>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

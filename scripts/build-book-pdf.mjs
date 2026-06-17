@@ -8,7 +8,8 @@
 //   brew install weasyprint        # 一次即可（已含 pango/cairo 等）
 //
 // 用法：
-//   node scripts/build-book-pdf.mjs                 # → store-phrasebook.pdf
+//   node scripts/build-book-pdf.mjs                 # → store-phrasebook.pdf（一般 A5 書）
+//   node scripts/build-book-pdf.mjs --eink          # → store-phrasebook-supernote.pdf（Supernote/灰階：大字高對比、填滿 3:4 螢幕）
 //   node scripts/build-book-pdf.mjs out.pdf         # 自訂輸出檔名
 //
 // 字型用 macOS 內建 ヒラギノ明朝 / Songti / Baskerville，離線可跑、PDF 會自動 subset（幾百 KB）。
@@ -19,9 +20,13 @@ import { spawn } from 'node:child_process';
 import path from 'node:path';
 
 const ROOT = process.cwd();
+const args = process.argv.slice(2);
+const EINK = args.includes('--eink');           // Supernote / 灰階 e-ink：大字、高對比、填滿 3:4 螢幕
+const posArg = args.find(a => !a.startsWith('--'));
+
 const INPUT = path.resolve(ROOT, 'store-phrasebook.html');
-const STYLE = path.resolve(ROOT, 'book-print.css');
-const OUTPUT = path.resolve(ROOT, process.argv[2] || 'store-phrasebook.pdf');
+const STYLE = path.resolve(ROOT, EINK ? 'book-eink.css' : 'book-print.css');
+const OUTPUT = path.resolve(ROOT, posArg || (EINK ? 'store-phrasebook-supernote.pdf' : 'store-phrasebook.pdf'));
 
 for (const [label, p] of [['HTML', INPUT], ['CSS', STYLE]]) {
   try { await access(p); }

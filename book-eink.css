@@ -1,0 +1,97 @@
+/* book-eink.css — Supernote / 灰階 e-ink 專用書籍樣式
+ * 在 book-print.css 之上做「大字 + 高對比」調整，給 scripts/build-book-pdf.mjs --eink 用。
+ *
+ * 為什麼這樣調：
+ *  - PDF 是向量文字，在 Supernote 的 226/300 PPI 下本來就會清晰銳利，沒有「解析度」要設。
+ *  - 真正影響閱讀的是：頁面尺寸（填滿 3:4 螢幕→字更大）、字級、灰階對比。
+ *  - Supernote A5X 螢幕 1404×1872px @226PPI ≈ 157.8×210.4mm（3:4），比真 A5(148×210) 略寬。
+ *    用 157.5×210mm 可填滿螢幕、不留黑邊。A5X2(1920×2560@300PPI) 同為 3:4，會等比放大填滿。
+ *  - 灰階裝置上「橘色字」會變成淺灰、看不清 → 羅馬拼音與重點字一律改深黑、加大。
+ */
+
+@import url("book-print.css");
+
+/* ── 頁面：填滿 Supernote 3:4 螢幕 ── */
+@page{
+  size: 157.5mm 210mm;           /* Supernote A5X 螢幕比例，填滿不留邊 */
+  margin: 11mm 11mm 13mm;
+  @top-center{
+    content: "店員さんとの会話帖";
+    font-family: "Hiragino Mincho ProN", serif;
+    font-size: 8pt; letter-spacing: .16em; color: #555;
+  }
+  @bottom-center{
+    content: counter(page);
+    font-family: "Baskerville", serif; font-style: italic;
+    font-size: 10pt; color: #333;
+  }
+}
+
+/* ── 全域：純黑字、放大 ── */
+html, body{ font-size: 12pt !important; color: #000 !important; line-height: 1.75 !important; }
+
+/* ── 句子條目：放大 + 高對比 ── */
+.word-ja{ font-size: 15.5pt !important; color: #000 !important; line-height: 1.5 !important; }
+.word-romaji{
+  font-family: "Baskerville", serif !important; font-style: italic;
+  font-size: 12.5pt !important; color: #1a1a1a !important;   /* 深色、放大 → 灰階看得清 */
+  letter-spacing: .01em;
+}
+.word-meaning{ font-size: 11pt !important; color: #222 !important; }
+.word-item{ padding: 2.2mm 0 !important; border-bottom-color: #bbb !important; }
+
+/* ── 標題 / 章名 ── */
+.section-title{ font-size: 12pt !important; color: #000 !important; border-bottom-color: #999 !important; }
+.divider{ font-size: 17pt !important; color: #000 !important; border-bottom-color: #000 !important; }
+.divider .ch-badge{ color: #444 !important; }
+
+/* 店員問/你回/單字：左邊條用深淺灰區分（灰階仍分得出） */
+.section.ask  { border-left-color: #000 !important; }
+.section.reply{ border-left-color: #888 !important; }
+.section.vocab{ border-left-color: #bbb !important; }
+.section.ask .section-title::before  { content: "■ " !important; color: #000 !important; }
+.section.reply .section-title::before{ content: "□ " !important; color: #000 !important; }
+.section.vocab .section-title::before{ content: "◆ " !important; color: #555 !important; }
+
+/* ── 記憶盒：淺灰底深黑字 ── */
+.memo{
+  background: #eee !important; color: #1a1a1a !important;
+  border-left-color: #000 !important; font-size: 10.5pt !important;
+}
+.memo strong{ color: #000 !important; }
+.memo strong::before{ content: "" !important; }   /* 去掉裝飾符號，純文字最清楚 */
+.compare{ background: #ddd !important; color: #000 !important; }
+.j-mark{ background: #ddd !important; color: #000 !important; }
+
+/* ── 萬用小抄：灰階下「橘底白字」會糊 → 改白底黑字＋粗黑框 ── */
+.cheat{ background: #fff !important; color: #000 !important; border: 1.5pt solid #000 !important; }
+.cheat-title{ color: #000 !important; }
+.cheat-row{ border-bottom-color: #999 !important; }
+.cheat-ja{ font-size: 14pt !important; color: #000 !important; }
+.cheat-mean{ color: #222 !important; font-size: 10.5pt !important; }
+
+/* ── 封面：灰階下橘底會變中灰、白字糊 → 改白底黑字＋黑框，最清楚 ── */
+.book-cover{
+  background: #fff !important; color: #000 !important;
+  border: 2.5pt solid #000 !important; height: 188mm !important;
+}
+.book-kicker{ color: #333 !important; }
+.book-title{ color: #000 !important; font-size: 33pt !important; }
+.book-title .accent{ color: #000 !important; }
+.book-sub{ color: #222 !important; }
+
+/* ── 使用說明 tip ── */
+.tip{ background: #f2f2f2 !important; border-left-color: #000 !important; color: #1a1a1a !important; font-size: 10.5pt !important; }
+.tip strong{ color: #000 !important; }
+.tip strong:first-of-type::before{ content: "" !important; }
+
+/* ── 目錄：深字、放大 ── */
+.toc-title{ color: #000 !important; border-bottom-color: #000 !important; }
+.toc a{ color: #000 !important; font-size: 12pt !important; }
+.toc .toc-no{ color: #000 !important; }
+.toc .toc-ja{ color: #555 !important; }
+.toc a::after{ color: #333 !important; }
+
+/* 註解 */
+.note{ color: #1a1a1a !important; border-left-color: #000 !important; font-size: 10pt !important; }
+.note strong{ color: #000 !important; }

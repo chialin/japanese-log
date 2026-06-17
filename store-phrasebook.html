@@ -53,11 +53,20 @@
 .cheat-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:600;min-width:170px;}
 .cheat-mean{font-family:'Noto Serif TC',serif;font-size:14px;opacity:.92;}
 
+/* ── 下載 PDF 按鈕 ── */
+.pdf-dl{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;
+  font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.06em;
+  font-size:15px;color:var(--accent);text-decoration:none;
+  border:1px solid var(--accent-soft);border-radius:999px;padding:7px 18px;
+  background:rgba(255,255,255,.5);transition:all .15s;}
+.pdf-dl:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.pdf-dl .ico{font-style:normal;}
+
 /* ── 列印（PDF）── */
 @media print{
   @page{margin:16mm 14mm;}
   body{background:#fff;}
-  .back-link,.speed-control,.play-btn{display:none !important;}
+  .back-link,.speed-control,.play-btn,.pdf-dl{display:none !important;}
   .wrap{max-width:none;padding:0;}
   .chapter{break-before:page;page-break-before:always;}
   .section,.toc,.memo,.cheat,.word-item{break-inside:avoid;page-break-inside:avoid;}
@@ -94,6 +103,10 @@
     <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1.2">
     <span class="speed-value" id="rateValue">1.2x</span>
   </div>
+
+  <a class="pdf-dl" href="store-phrasebook.pdf" download>
+    <span class="ico">📄</span> 下載書籍版 PDF（A5・可列印）
+  </a>
 
   <div class="tip">
     <span class="ic">💡 </span><strong>怎麼用這本手帖</strong><br>

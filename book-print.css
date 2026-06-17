@@ -47,7 +47,7 @@ html, body{
 .wrap{ max-width: none !important; margin: 0 !important; padding: 0 !important; }
 
 /* 隱藏所有網頁互動元素 */
-.back-link, .speed-control, .play-btn, .masthead{ display: none !important; }
+.back-link, .speed-control, .play-btn, .masthead, .pdf-dl{ display: none !important; }
 
 /* 背景裝飾色塊（body::before 之類）關掉 */
 body::before, body::after, .wrap::before, .wrap::after{ display: none !important; }

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>配信の解除 — ご利用の方はこちら</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 原文情境盒（仿通知畫面） */
+.screen{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 20px;margin-bottom:16px;}
+.screen .s-head{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);border-bottom:1px dashed var(--line);padding-bottom:10px;margin-bottom:12px;}
+.screen .s-row{display:flex;align-items:center;gap:10px;padding:8px 0;font-family:'Klee One','Shippori Mincho',serif;font-size:16px;color:var(--ink-soft);}
+.screen .s-row .s-arrow{color:var(--accent);font-weight:600;}
+
+/* 拆解表 */
+.breakdown{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.breakdown th,.breakdown td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+.breakdown th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.breakdown tr:last-child td{border-bottom:none;}
+.breakdown .c-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:600;color:var(--accent);white-space:nowrap;}
+.breakdown .c-roma{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:17px;white-space:nowrap;}
+.breakdown .c-role{color:var(--ink);font-weight:600;white-space:nowrap;}
+.breakdown .c-mean{color:var(--ink-soft);}
+.breakdown tr.key td{background:var(--accent-pale);}
+
+/* 公式盒 */
+.formula{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent);padding:20px 18px;margin-bottom:16px;text-align:center;}
+.formula .f-line{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--ink);letter-spacing:.04em;line-height:1.9;}
+.formula .f-line .p{display:inline-block;background:var(--accent-pale);color:var(--accent);padding:1px 10px;border-radius:3px;margin:0 2px;}
+.formula .f-line .plus{color:var(--ink-mute);margin:0 6px;font-family:'Cormorant Garamond',serif;}
+.formula .f-eq{display:block;margin-top:10px;font-size:16px;color:var(--ink-soft);font-family:'Noto Serif TC',serif;}
+.formula .f-eq strong{color:var(--accent);}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">生活日語 · Daily Japanese</div>
+    <div class="center">配 信 の 解 除</div>
+    <div class="right">2026 / 06 / 19</div>
+  </header>
+
+  <h1 class="page-title">取消通知 <span class="accent">ご利用の方はこちら</span></h1>
+  <p class="page-subtitle">在「取消推播通知」的頁面學到的敬語句型</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    <span class="compare">ご利用の方はこちら</span> 是日本網站／App 超常見的引導語，意思是
+    「<strong>使用（某服務）的人請看這邊</strong>」。學會 <span class="j-mark">名詞 を ご利用の方は こちら</span>
+    這個結構，看到分流選單就不會慌。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、原文情境</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這是在<strong>取消推播通知</strong>的畫面看到的。標題說明要做什麼，下面兩行則依「你用哪種方式」分流。
+  </p>
+
+  <div class="screen">
+    <div class="s-head" data-text="配信の解除">配信の解除</div>
+    <div class="s-row" data-text="PayPayアプリをご利用の方はこちら">
+      <span class="s-arrow">▸</span>PayPayアプリをご利用の方はこちら
+    </div>
+    <div class="s-row" data-text="ウェブをご利用の方はこちら">
+      <span class="s-arrow">▸</span>ウェブをご利用の方はこちら
+    </div>
+  </div>
+
+  <div class="note">
+    📝 整段白話：<br>
+    「<strong>要取消通知嗎？</strong> 用 PayPay App 的人按上面那條、用網頁的人按下面那條。」
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、把句子拆開來看</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    拿 <span class="compare">ウェブをご利用の方はこちら</span> 來拆。看起來很長，其實是七塊積木，
+    核心是中間那串敬語 <span class="j-mark">ご利用の方</span>。
+  </p>
+
+  <table class="breakdown">
+    <thead>
+      <tr><th>日文</th><th>羅馬</th><th>角色</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="c-ja">ウェブ</td><td class="c-roma">webu</td><td class="c-role">名詞</td><td class="c-mean">web／網頁（外來語，片假名）</td></tr>
+      <tr class="key"><td class="c-ja">を</td><td class="c-roma">o</td><td class="c-role">助詞</td><td class="c-mean">標出動作的對象（利用「什麼」）</td></tr>
+      <tr><td class="c-ja">ご</td><td class="c-roma">go</td><td class="c-role">美化前綴</td><td class="c-mean">加在漢語詞前的敬語，讓語氣客氣</td></tr>
+      <tr><td class="c-ja">利用</td><td class="c-roma">riyō</td><td class="c-role">名詞</td><td class="c-mean">使用・利用</td></tr>
+      <tr class="key"><td class="c-ja">の</td><td class="c-roma">no</td><td class="c-role">助詞</td><td class="c-mean">的 — 把「ご利用」變成修飾後面的定語</td></tr>
+      <tr><td class="c-ja">方</td><td class="c-roma">kata</td><td class="c-role">名詞(敬稱)</td><td class="c-mean">人（尊敬說法，比「人 ひと」客氣）</td></tr>
+      <tr class="key"><td class="c-ja">は</td><td class="c-roma">wa</td><td class="c-role">助詞</td><td class="c-mean">主題 — 「至於這種人嘛…」</td></tr>
+      <tr><td class="c-ja">こちら</td><td class="c-roma">kochira</td><td class="c-role">代名詞</td><td class="c-mean">這邊・這裡（也是客氣說法）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 一塊一塊接起來：<br>
+    ウェブを（把網頁）→ ウェブを<span class="j-mark">ご利用</span>（使用網頁）→
+    ウェブをご利用<span class="j-mark">の方</span>（使用網頁<strong>的人</strong>）→
+    〜<span class="j-mark">は</span>こちら（〜<strong>請看這邊</strong>）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、「名詞 ＋ をご利用の方は ＋ こちら」公式</div>
+
+  <div class="formula">
+    <div class="f-line">
+      <span class="p">名詞</span><span class="plus">＋</span><span class="p">を</span><span class="plus">＋</span><span class="p">ご利用の方は</span><span class="plus">＋</span><span class="p">こちら</span>
+      <span class="f-eq">＝ 使用〇〇的人，<strong>請看／請點這邊</strong></span>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ 兩個重點：<br>
+    1. <span class="compare">ご利用</span> 的「ご」是敬語前綴，<strong>對顧客講話時才加</strong>；自己用不會說「ご利用」。<br>
+    2. <span class="compare">方（かた）</span> 比 <span class="compare">人（ひと）</span> 客氣，店家／網站對客人一律用「方」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、套用看看（點句子發音）</div>
+
+  <div class="section">
+    <div class="section-title">📖 名詞 をご利用の方はこちら</div>
+
+    <div class="word-item" data-text="ウェブをご利用の方はこちら">
+      <div class="word-content">
+        <div class="word-ja">ウェブ<span class="j-mark">をご利用の方は</span>こちら</div>
+        <div class="word-romaji">webu o goriyō no kata wa kochira</div>
+        <div class="word-meaning">使用網頁的人請看這邊 ← 原文這句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="アプリをご利用の方はこちら">
+      <div class="word-content">
+        <div class="word-ja">アプリ<span class="j-mark">をご利用の方は</span>こちら</div>
+        <div class="word-romaji">apuri o goriyō no kata wa kochira</div>
+        <div class="word-meaning">使用 App 的人請看這邊</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="スマホをご利用の方はこちら">
+      <div class="word-content">
+        <div class="word-ja">スマホ<span class="j-mark">をご利用の方は</span>こちら</div>
+        <div class="word-romaji">sumaho o goriyō no kata wa kochira</div>
+        <div class="word-meaning">使用智慧型手機的人請看這邊</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カードをご利用の方はこちら">
+      <div class="word-content">
+        <div class="word-ja">カード<span class="j-mark">をご利用の方は</span>こちら</div>
+        <div class="word-romaji">kādo o goriyō no kata wa kochira</div>
+        <div class="word-meaning">使用信用卡的人請看這邊</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="はじめての方はこちら">
+      <div class="word-content">
+        <div class="word-ja">はじめて<span class="j-mark">の方は</span>こちら</div>
+        <div class="word-romaji">hajimete no kata wa kochira</div>
+        <div class="word-meaning">第一次使用的人請看這邊 — 沒有「を利用」，直接「の方は」也很常見</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、今日單字</div>
+
+  <div class="section">
+    <div class="section-title">📖 單字與發音</div>
+
+    <div class="word-item" data-text="配信">
+      <div class="word-content">
+        <div class="word-ja">配信　はいしん</div>
+        <div class="word-romaji">hai · shin</div>
+        <div class="word-meaning">推播・發送 — 把通知／影音內容送出去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="解除">
+      <div class="word-content">
+        <div class="word-ja">解除　かいじょ</div>
+        <div class="word-romaji">kai · jo</div>
+        <div class="word-meaning">解除・取消 — 把設定／狀態拿掉（如取消通知、解鎖）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="配信の解除">
+      <div class="word-content">
+        <div class="word-ja">配信の解除　はいしんのかいじょ</div>
+        <div class="word-romaji">haishin no kaijo</div>
+        <div class="word-meaning">取消推播 — 不要再收到通知</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="利用">
+      <div class="word-content">
+        <div class="word-ja">利用　りよう</div>
+        <div class="word-romaji">ri · yō</div>
+        <div class="word-meaning">使用・利用 — 加上「ご」變敬語「ご利用」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="こちら">
+      <div class="word-content">
+        <div class="word-ja">こちら</div>
+        <div class="word-romaji">ko · chi · ra</div>
+        <div class="word-meaning">這邊・這裡 — 「ここ」的客氣說法，常當按鈕連結文字</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>記憶小技巧</strong><br>
+    <strong>配信</strong>（はいしん）= 配 + 信，把訊息「配送」出去。<br>
+    <strong>解除</strong>（かいじょ）= 解 + 除，解開並除掉 → 取消。<br>
+    看到 <span class="compare">こちら</span> 別只想到「這位（人）」，在網頁上它幾乎都是
+    「<strong>這邊（連結／按鈕）</strong>」的意思。
+  </div>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .screen [data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    if (button) button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

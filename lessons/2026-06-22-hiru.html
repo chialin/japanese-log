@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>昼の三つの意味 — 白天・中午・正午</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 三個意思卡片 */
+.meaning-cards{display:flex;flex-direction:column;gap:14px;margin-bottom:20px;}
+.meaning-card{background:rgba(255,255,255,.65);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;border-radius:4px;}
+.meaning-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.meaning-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;font-weight:600;color:var(--accent);margin-bottom:4px;}
+.meaning-roma{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;margin-bottom:8px;}
+.meaning-zh{font-family:'Noto Serif TC',serif;color:var(--ink);font-size:15px;line-height:1.7;}
+.meaning-zh strong{color:var(--accent);}
+.meaning-tag{display:inline-block;background:var(--accent-pale);color:var(--accent);font-size:12px;font-weight:600;padding:2px 8px;border-radius:10px;margin-top:8px;font-family:'Noto Serif TC',serif;}
+
+/* 對照卡 */
+.vs-pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;background:rgba(255,255,255,.6);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;}
+.vs-item{text-align:center;}
+.vs-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:30px;font-weight:600;color:var(--accent);}
+.vs-roma{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;margin-bottom:4px;}
+.vs-zh{font-family:'Noto Serif TC',serif;color:var(--ink-soft);font-size:14px;}
+.vs-arrow{font-size:20px;color:var(--ink-mute);}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">單字 · Vocabulary</div>
+    <div class="center">昼　の　意　味</div>
+    <div class="right">2026 / 06 / 22</div>
+  </header>
+
+  <h1 class="page-title">昼 <span class="accent">ひる</span></h1>
+  <p class="page-subtitle">同一個字，三種意思——視語境切換</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    「昼」一個字有三種用法：白天的時段、早中晚的「中」、以及整點正午。<br>
+    加了 <span class="j-mark">お</span> 變成「お昼」後，語感更柔和、日常。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、昼 的三種意思</div>
+
+  <div class="meaning-cards">
+
+    <div class="meaning-card" data-text="ひる" id="m1">
+      <div class="meaning-num">Meaning 1</div>
+      <div class="meaning-ja">昼（ひる）</div>
+      <div class="meaning-roma">hiru</div>
+      <div class="meaning-zh">
+        從日升到日落的這段時間 → <strong>白天</strong><br>
+        對應反義詞是「夜（よる）」。
+      </div>
+      <span class="meaning-tag">↔ 夜（よる）</span>
+    </div>
+
+    <div class="meaning-card" data-text="ひる" id="m2">
+      <div class="meaning-num">Meaning 2</div>
+      <div class="meaning-ja">昼（ひる）</div>
+      <div class="meaning-roma">hiru</div>
+      <div class="meaning-zh">
+        把一天分成「早・中・晚」時，昼是<strong>中間那段</strong> → 中午<br>
+        早（あさ）・<strong>昼（ひる）</strong>・夜（よる）
+      </div>
+      <span class="meaning-tag">早・昼・夜 三分法</span>
+    </div>
+
+    <div class="meaning-card" data-text="おひる" id="m3">
+      <div class="meaning-num">Meaning 3</div>
+      <div class="meaning-ja">お昼（おひる）</div>
+      <div class="meaning-roma">o-hiru</div>
+      <div class="meaning-zh">
+        <strong>正中午 12 點</strong>，也可以指「午餐時間」。<br>
+        加了お讓說法更柔和，日常會話常用。
+      </div>
+      <span class="meaning-tag">正午 12:00</span>
+    </div>
+
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、昼 ↔ 夜 對照</div>
+
+  <div class="vs-pair">
+    <div class="vs-item" data-text="ひる">
+      <div class="vs-ja">昼</div>
+      <div class="vs-roma">hiru</div>
+      <div class="vs-zh">白天／中午</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="vs-arrow">↔</div>
+    <div class="vs-item" data-text="よる">
+      <div class="vs-ja">夜</div>
+      <div class="vs-roma">yoru</div>
+      <div class="vs-zh">夜晚</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、相關詞彙</div>
+
+  <div class="section">
+    <div class="section-title">📖 延伸單字</div>
+
+    <div class="word-item" data-text="お昼ごはん">
+      <div class="word-content">
+        <div class="word-ja">お昼ご飯（おひるごはん）</div>
+        <div class="word-romaji">o-hiru-go-han</div>
+        <div class="word-meaning">午餐</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ひるま">
+      <div class="word-content">
+        <div class="word-ja">昼間（ひるま）</div>
+        <div class="word-romaji">hiru-ma</div>
+        <div class="word-meaning">白天（強調整段時間）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ひるやすみ">
+      <div class="word-content">
+        <div class="word-ja">昼休み（ひるやすみ）</div>
+        <div class="word-romaji">hiru-yasumi</div>
+        <div class="word-meaning">午休、午休時間</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="まひる">
+      <div class="word-content">
+        <div class="word-ja">真昼（まひる）</div>
+        <div class="word-romaji">ma-hiru</div>
+        <div class="word-meaning">正午、大白天（比 お昼 更強調「正中間」）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、例句</div>
+
+  <div class="section">
+    <div class="section-title">💬 情境句</div>
+
+    <div class="word-item" data-text="昼はにぎやかですね">
+      <div class="word-content">
+        <div class="word-ja">昼はにぎやかですね。</div>
+        <div class="word-romaji">Hiru wa nigiyaka desu ne.</div>
+        <div class="word-meaning">白天很熱鬧呢。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お昼ごはんはもう食べましたか">
+      <div class="word-content">
+        <div class="word-ja">お昼ご飯はもう食べましたか？</div>
+        <div class="word-romaji">O-hiru-gohan wa mō tabemashita ka?</div>
+        <div class="word-meaning">你午飯吃了嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今日のお昼は十二時です">
+      <div class="word-content">
+        <div class="word-ja">今日のお昼は十二時です。</div>
+        <div class="word-romaji">Kyō no o-hiru wa jūni-ji desu.</div>
+        <div class="word-meaning">今天的正午是 12 點。（お昼 = 正午）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+
+  document.querySelectorAll('.vs-pair .vs-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

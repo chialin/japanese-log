@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>片假名 易混淆組 — 形狀比較</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* ── 比較 table ── */
+.cmp-table{width:100%;border-collapse:separate;border-spacing:0 0;margin-bottom:6px;}
+.cmp-table th{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;text-align:center;padding:6px 0 10px;font-weight:400;}
+.cmp-table td{background:rgba(255,255,255,.65);border:1px solid var(--line);padding:18px 14px 14px;text-align:center;vertical-align:top;}
+.cmp-table td:not(:last-child){border-right:none;}
+.cmp-table td:first-child{border-radius:4px 0 0 4px;}
+.cmp-table td:last-child{border-radius:0 4px 4px 0;}
+
+/* 大字 */
+.kana-big{font-family:'Klee One','Shippori Mincho',serif;font-size:72px;font-weight:600;line-height:1;color:var(--ink);display:block;margin-bottom:6px;}
+.kana-roma{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--accent);letter-spacing:.1em;display:block;margin-bottom:10px;}
+
+/* 想像圖（SVG 內嵌示意） */
+.mnemonic-img{display:flex;justify-content:center;margin:8px 0 10px;}
+.mnemonic-img svg{width:80px;height:80px;}
+
+/* 記法標籤 */
+.kana-tip{font-family:'Noto Serif TC',serif;font-size:13px;color:var(--ink-soft);line-height:1.6;min-height:48px;}
+.kana-tip strong{color:var(--accent);}
+
+/* 漢字來源標籤 */
+.kanji-ref{display:inline-block;margin-top:6px;font-size:12px;color:var(--ink-mute);font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.05em;}
+.kanji-ref strong{font-family:'Shippori Mincho',serif;font-style:normal;font-size:15px;color:var(--accent);}
+
+/* 箭頭區分 */
+.stroke-arrow{font-size:22px;color:var(--accent-soft);}
+
+/* 分組標題 */
+.group-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.2em;color:var(--ink-mute);text-transform:uppercase;margin:28px 0 4px;}
+
+/* 測一測 */
+.drill{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;margin-bottom:6px;font-family:'Shippori Mincho',serif;}
+.drill-q{font-size:28px;letter-spacing:.2em;color:var(--ink);margin-bottom:8px;}
+.drill-a{font-size:15px;color:var(--ink-mute);font-family:'Cormorant Garamond',serif;font-style:italic;display:none;margin-top:6px;letter-spacing:.08em;}
+.drill-toggle{background:none;border:1px solid var(--line);color:var(--ink-mute);font-size:13px;padding:4px 14px;cursor:pointer;font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.08em;margin-top:4px;}
+.drill-toggle:hover{border-color:var(--accent);color:var(--accent);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">片假名 · Katakana</div>
+    <div class="center">形 の 迷 宮</div>
+    <div class="right">2026 / 06 / 23</div>
+  </header>
+
+  <h1 class="page-title">易混淆 <span class="accent">片假名</span></h1>
+  <p class="page-subtitle">7 組外形相近的假名——看想像圖記住差別</p>
+
+  <div class="note">
+    📖 想先了解每個片假名是從哪個漢字演變而來？→ <a href="2026-05-17-katakana-jigen.html" style="color:var(--accent);">片假名字源一覧</a>
+  </div>
+
+  <div class="tip">
+    💡 <strong>怎麼用這頁</strong><br>
+    每組先看「想像圖」把形狀印進腦袋，再看右邊「記法」確認關鍵差異。<br>
+    最後在「測一測」把念音唸出聲，確認沒混淆。
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <div class="divider">一、ウ・ク・タ</div>
+  <p class="group-label">u · ku · ta — 都有點像「V」但細節不同</p>
+
+  <table class="cmp-table">
+    <thead><tr><th>ウ (u)</th><th>ク (ku)</th><th>タ (ta)</th></tr></thead>
+    <tbody><tr>
+      <td>
+        <span class="kana-big">ウ</span>
+        <span class="kana-roma">u</span>
+        <div class="mnemonic-img">
+          <!-- 帽子 + V形 -->
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">ウ</text>
+            <!-- 帽子提示 -->
+            <rect x="22" y="10" width="36" height="5" rx="2" fill="#c96830" opacity=".7"/>
+            <text x="40" y="9" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">帽子</text>
+          </svg>
+        </div>
+        <div class="kana-tip"><strong>屋頂有一點</strong>，像是「屋」字的發音起頭——ウ（u）。<br><span class="kanji-ref">漢字：<strong>宇</strong> → ウ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">ク</span>
+        <span class="kana-roma">ku</span>
+        <div class="mnemonic-img">
+          <!-- 沒帽子，右彎 -->
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">ク</text>
+            <line x1="20" y1="14" x2="60" y2="14" stroke="#e0c0a0" stroke-width="2" stroke-dasharray="4 3"/>
+            <text x="40" y="12" font-size="9" text-anchor="middle" fill="#aaa" font-family="sans-serif">（無帽）</text>
+          </svg>
+        </div>
+        <div class="kana-tip"><strong>想「久」的發音</strong>——「久」唸 く，ク 就是它。沒帽子，只有右邊一彎＋一短撇，兩筆。<br><span class="kanji-ref">漢字：<strong>久</strong>（く）→ ク</span></div>
+      </td>
+      <td>
+        <span class="kana-big">タ</span>
+        <span class="kana-roma">ta</span>
+        <div class="mnemonic-img">
+          <!-- 帽子 + 兩腿 -->
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">タ</text>
+            <rect x="22" y="10" width="36" height="5" rx="2" fill="#c96830" opacity=".7"/>
+            <text x="40" y="9" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">帽子</text>
+            <!-- 兩腿箭頭 -->
+            <text x="30" y="76" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">腿腿</text>
+          </svg>
+        </div>
+        <div class="kana-tip"><strong>像是外人的「他」</strong>——タ（ta）讀音接近「他」，形狀也帶著撇腿的姿態。<br><span class="kanji-ref">漢字：<strong>多</strong> → タ</span></div>
+      </td>
+    </tr></tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════ -->
+  <div class="divider">二、ヲ・フ・ユ</div>
+  <p class="group-label">wo · fu · yu — 都有橫線，數橫線就對了</p>
+
+  <table class="cmp-table">
+    <thead><tr><th>ヲ (wo)</th><th>フ (fu)</th><th>ユ (yu)</th></tr></thead>
+    <tbody><tr>
+      <td>
+        <span class="kana-big">ヲ</span>
+        <span class="kana-roma">wo</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">ヲ</text>
+            <text x="68" y="24" font-size="14" text-anchor="middle" fill="#c96830" font-family="sans-serif">—</text>
+            <text x="68" y="36" font-size="14" text-anchor="middle" fill="#c96830" font-family="sans-serif">—</text>
+            <text x="68" y="30" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">２橫</text>
+          </svg>
+        </div>
+        <div class="kana-tip"><strong>最複雜</strong>：上面<strong>兩橫</strong>，下面一撇往左鉤。幾乎只當助詞「を」的片假名用。<br><span class="kanji-ref">漢字：<strong>乎</strong> → ヲ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">フ</span>
+        <span class="kana-roma">fu</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">フ</text>
+            <text x="68" y="28" font-size="14" text-anchor="middle" fill="#c96830" font-family="sans-serif">—</text>
+            <text x="68" y="26" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">１橫</text>
+          </svg>
+        </div>
+        <div class="kana-tip">想像平假名 <strong>ふ</strong> 的簡化版——フ 就是把 ふ 的彎曲收乾淨，只留一橫一撇。<br><span class="kanji-ref">漢字：<strong>不</strong> → フ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">ユ</span>
+        <span class="kana-roma">yu</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">ユ</text>
+            <!-- 底部封閉 -->
+            <text x="40" y="75" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">杯底封閉</text>
+          </svg>
+        </div>
+        <div class="kana-tip">想「由」的發音——「由」唸 ゆ，ユ 就是它。<br><span class="kanji-ref">漢字：<strong>由</strong>（ゆ）→ ユ</span></div>
+      </td>
+    </tr></tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════ -->
+  <div class="divider">三、マ・ム</div>
+  <p class="group-label">ma · mu — 一個有直角，一個有圓弧</p>
+
+  <table class="cmp-table">
+    <thead><tr><th>マ (ma)</th><th>ム (mu)</th></tr></thead>
+    <tbody><tr>
+      <td>
+        <span class="kana-big">マ</span>
+        <span class="kana-roma">ma</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">マ</text>
+            <text x="40" y="76" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">直角 / 像 7</text>
+          </svg>
+        </div>
+        <div class="kana-tip"><strong>有直角感</strong>，像阿拉伯數字 <strong>7</strong> 加一撇。右腳往左下鉤。<br><span class="kanji-ref">漢字：<strong>末</strong> → マ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">ム</span>
+        <span class="kana-roma">mu</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">ム</text>
+            <text x="40" y="76" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">圓弧 / 蝸牛殼</text>
+          </svg>
+        </div>
+        <div class="kana-tip">想「牟」的發音——「牟」唸 む，ム 就是它。<br><span class="kanji-ref">漢字：<strong>牟</strong>（む）→ ム</span></div>
+      </td>
+    </tr></tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════ -->
+  <div class="divider">四、コ・ロ・ヨ</div>
+  <p class="group-label">ko · ro · yo — 都像方框，數邊和橫就對了</p>
+
+  <table class="cmp-table">
+    <thead><tr><th>コ (ko)</th><th>ロ (ro)</th><th>ヨ (yo)</th></tr></thead>
+    <tbody><tr>
+      <td>
+        <span class="kana-big">コ</span>
+        <span class="kana-roma">ko</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- コ shape: open left box, 2 horizontals -->
+            <line x1="20" y1="20" x2="55" y2="20" stroke="#c96830" stroke-width="3" stroke-linecap="round"/>
+            <line x1="55" y1="20" x2="55" y2="60" stroke="#c96830" stroke-width="3" stroke-linecap="round"/>
+            <line x1="20" y1="60" x2="55" y2="60" stroke="#c96830" stroke-width="3" stroke-linecap="round"/>
+            <text x="14" y="44" font-size="12" fill="#aaa" font-family="sans-serif">←開口</text>
+          </svg>
+        </div>
+        <div class="kana-tip">開口的「<strong>口</strong>」缺了左邊——コ 就是少一豎的口，發音 こ 也像「口」的起頭。<br><span class="kanji-ref">漢字：<strong>己</strong>（こ）→ コ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">ロ</span>
+        <span class="kana-roma">ro</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- ロ: closed box -->
+            <rect x="18" y="20" width="44" height="40" rx="2" stroke="#c96830" stroke-width="3" fill="none"/>
+            <text x="40" y="76" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">四面封閉</text>
+          </svg>
+        </div>
+        <div class="kana-tip"><strong>四面封閉</strong>的方框，像英文大寫 <strong>O</strong> 的方版。<br><span class="kanji-ref">漢字：<strong>呂</strong> → ロ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">ヨ</span>
+        <span class="kana-roma">yo</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- ヨ: 3 horizontals, open left -->
+            <line x1="20" y1="20" x2="55" y2="20" stroke="#c96830" stroke-width="3" stroke-linecap="round"/>
+            <line x1="55" y1="20" x2="55" y2="60" stroke="#c96830" stroke-width="3" stroke-linecap="round"/>
+            <line x1="20" y1="40" x2="55" y2="40" stroke="#c96830" stroke-width="3" stroke-linecap="round"/>
+            <line x1="20" y1="60" x2="55" y2="60" stroke="#c96830" stroke-width="3" stroke-linecap="round"/>
+            <text x="14" y="44" font-size="12" fill="#aaa" font-family="sans-serif">←開口</text>
+            <text x="62" y="44" font-size="9" fill="#c96830" font-family="sans-serif">中橫</text>
+          </svg>
+        </div>
+        <div class="kana-tip">也開口朝左，但比コ多一橫（共<strong>三橫</strong>）在中間，像英文 <strong>E</strong>。<br><span class="kanji-ref">漢字：<strong>與</strong> → ヨ</span></div>
+      </td>
+    </tr></tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════ -->
+  <div class="divider">五、シ・ツ</div>
+  <p class="group-label">shi · tsu — 整組旋轉 90°，方向是唯一差別</p>
+
+  <table class="cmp-table">
+    <thead><tr><th>シ (shi)</th><th>ツ (tsu)</th></tr></thead>
+    <tbody><tr>
+      <td>
+        <span class="kana-big">シ</span>
+        <span class="kana-roma">shi</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">シ</text>
+            <!-- horizontal arrows -->
+            <line x1="10" y1="38" x2="30" y2="38" stroke="#c96830" stroke-width="2" marker-end="url(#ah)"/>
+            <text x="18" y="34" font-size="9" fill="#c96830" font-family="sans-serif">橫撇</text>
+            <defs><marker id="ah" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c96830"/></marker></defs>
+          </svg>
+        </div>
+        <div class="kana-tip">撇是<strong>橫的</strong>——像躺著的臉 😌，兩短撇水平，大撇往右下。<br><span class="kanji-ref">漢字：<strong>之</strong> → シ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">ツ</span>
+        <span class="kana-roma">tsu</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">ツ</text>
+            <!-- vertical arrow -->
+            <line x1="22" y1="10" x2="22" y2="30" stroke="#c96830" stroke-width="2" marker-end="url(#av)"/>
+            <text x="30" y="22" font-size="9" fill="#c96830" font-family="sans-serif">豎撇</text>
+            <defs><marker id="av" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c96830"/></marker></defs>
+          </svg>
+        </div>
+        <div class="kana-tip">撇是<strong>豎的</strong>——像站著的臉 😎，兩短撇垂直，大撇往右下。<br><span class="kanji-ref">漢字：<strong>州</strong> → ツ</span></div>
+      </td>
+    </tr></tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════ -->
+  <div class="divider">六、ソ・ン</div>
+  <p class="group-label">so · n — 只差一撇的方向</p>
+
+  <table class="cmp-table">
+    <thead><tr><th>ソ (so)</th><th>ン (n)</th></tr></thead>
+    <tbody><tr>
+      <td>
+        <span class="kana-big">ソ</span>
+        <span class="kana-roma">so</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">ソ</text>
+            <!-- left-to-right arrow -->
+            <line x1="15" y1="20" x2="45" y2="42" stroke="#c96830" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="28" y="18" font-size="9" fill="#c96830" font-family="sans-serif">左→右下</text>
+          </svg>
+        </div>
+        <div class="kana-tip">短撇從<strong>左上</strong>往<strong>右下</strong>劃，像「 ／ 」。<br><span class="kanji-ref">漢字：<strong>曾</strong> → ソ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">ン</span>
+        <span class="kana-roma">n</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">ン</text>
+            <!-- right-to-left arrow -->
+            <line x1="48" y1="20" x2="22" y2="42" stroke="#c96830" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="34" y="18" font-size="9" fill="#c96830" font-family="sans-serif">右→左下</text>
+          </svg>
+        </div>
+        <div class="kana-tip">短撇從<strong>右上</strong>往<strong>左下</strong>劃，像「 ＼ 」。<br><span class="kanji-ref">漢字：<strong>尔</strong> → ン</span></div>
+      </td>
+    </tr></tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════ -->
+  <div class="divider">七、チ・テ</div>
+  <p class="group-label">chi · te — 下半部的腿數不同</p>
+
+  <table class="cmp-table">
+    <thead><tr><th>チ (chi)</th><th>テ (te)</th></tr></thead>
+    <tbody><tr>
+      <td>
+        <span class="kana-big">チ</span>
+        <span class="kana-roma">chi</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">チ</text>
+            <text x="40" y="76" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">兩撇翹腳</text>
+          </svg>
+        </div>
+        <div class="kana-tip">下面<strong>兩撇</strong>都朝右，像翹腳坐著 🦵🦵。整體較窄。<br><span class="kanji-ref">漢字：<strong>千</strong> → チ</span></div>
+      </td>
+      <td>
+        <span class="kana-big">テ</span>
+        <span class="kana-roma">te</span>
+        <div class="mnemonic-img">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" font-size="52" text-anchor="middle" font-family="serif" fill="#2a1810">テ</text>
+            <text x="40" y="76" font-size="9" text-anchor="middle" fill="#c96830" font-family="sans-serif">長橫＋一撇</text>
+          </svg>
+        </div>
+        <div class="kana-tip">下面是<strong>一長橫＋一撇</strong>，橫比較寬，整體像 T 字。<br><span class="kanji-ref">漢字：<strong>天</strong> → テ</span></div>
+      </td>
+    </tr></tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════ -->
+  <div class="divider">測一測</div>
+
+  <div class="drill">
+    <div class="drill-q">ウ　ク　タ　ヲ　フ　ユ　マ　ム　コ　ロ　ヨ　シ　ツ　ソ　ン　チ　テ</div>
+    <button class="drill-toggle" onclick="toggleAnswer(this)">顯示讀音</button>
+    <div class="drill-a">u · ku · ta · wo · fu · yu · ma · mu · ko · ro · yo · shi · tsu · so · n · chi · te</div>
+  </div>
+
+  <div class="drill">
+    <div class="drill-q">ツアー　シーン　コーヒー　ヨガ　テスト　チーズ　ユニーク　フユ　ソン　ムシ</div>
+    <button class="drill-toggle" onclick="toggleAnswer(this)">顯示讀音</button>
+    <div class="drill-a">tsu-a-a（tour）　shi-i-n（scene）　ko-o-hi-i（coffee）　yo-ga（yoga）　te-su-to（test）　chi-i-zu（cheese）　yu-ni-i-ku（unique）　fu-yu（冬天）　so-n（損）　mu-shi（蟲）</div>
+  </div>
+
+</div>
+
+<script>
+function toggleAnswer(btn) {
+  const drill = btn.closest('.drill');
+  const ans = drill.querySelector('.drill-a');
+  const shown = ans.style.display === 'block';
+  ans.style.display = shown ? 'none' : 'block';
+  btn.textContent = shown ? '顯示讀音' : '隱藏讀音';
+}
+</script>
+</body>
+</html>

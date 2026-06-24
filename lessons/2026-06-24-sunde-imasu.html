@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>すんでいます — 住在哪裡</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 文法結構公式框 */
+.formula{background:var(--paper-deep);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:18px 22px;margin:18px 0;font-family:'Shippori Mincho',serif;}
+.formula-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:8px;}
+.formula-main{font-size:20px;font-weight:700;color:var(--ink);line-height:1.8;}
+.formula-main .slot{color:var(--accent);}
+
+/* 対比表：に vs で */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{background:var(--paper-deep);border:1px solid var(--line);border-radius:8px;padding:16px 18px;}
+.vs-head{font-size:22px;font-weight:800;font-family:'Shippori Mincho',serif;color:var(--accent);margin-bottom:6px;}
+.vs-role{font-size:13px;color:var(--ink-mute);margin-bottom:12px;}
+.vs-ex{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--ink-soft);line-height:1.9;}
+
+/* て形活用表 */
+.conj-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+.conj-table th{background:var(--accent-pale);color:var(--ink-soft);font-weight:600;padding:8px 12px;text-align:left;font-family:'Noto Serif TC',serif;border-bottom:2px solid var(--line);}
+.conj-table td{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--ink-soft);font-family:'Shippori Mincho',serif;vertical-align:middle;}
+.conj-table td:first-child{font-size:17px;color:var(--ink);font-weight:600;}
+.conj-table tr:last-child td{border-bottom:none;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">文法 · Grammar</div>
+    <div class="center">住　在　哪　裡</div>
+    <div class="right">2026 / 06 / 24</div>
+  </header>
+
+  <h1 class="page-title">〜に <span class="accent">すんでいます</span></h1>
+  <p class="page-subtitle">て形 ＋ います — 表達「持續居住」的狀態</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇重點</strong><br>
+    「住在某個地方」用 <strong>場所 ＋ に ＋ すんでいます</strong>。<br>
+    でいます 不是新詞，是「て形 ＋ います」的音變組合，表示狀態持續。
+  </div>
+
+  <!-- ─── 一、文法公式 ─── -->
+  <div class="divider">一、文法公式</div>
+
+  <div class="formula">
+    <div class="formula-label">Structure</div>
+    <div class="formula-main">
+      <span class="slot">場所</span> に すんでいます
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;">
+    <span class="j-mark">に</span> 是表示「存在地點」的助詞，搭配居住、存在類動詞使用。<br>
+    <span class="j-mark">すんでいます</span> = すむ（住む）的て形 <strong>すんで</strong> ＋ <strong>います</strong>，表示「持續居住中」。
+  </p>
+
+  <!-- ─── 二、今日的句子 ─── -->
+  <div class="divider">二、今日の例文</div>
+
+  <div class="section">
+    <div class="section-title">📖 Duolingo 的兩個句子</div>
+
+    <div class="word-item" data-text="私のまちもとてもしずかです">
+      <div class="word-content">
+        <div class="word-ja">私のまちも とても しずかです。</div>
+        <div class="word-romaji">watashi no machi mo totemo shizuka desu</div>
+        <div class="word-meaning">我的城鎮<strong>也</strong>非常安靜。 — <span class="j-mark">も</span> 表示「也」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="はなさんはちいさいまちにすんでいます">
+      <div class="word-content">
+        <div class="word-ja">はなさんは ちいさいまちに すんでいます。</div>
+        <div class="word-romaji">Hana-san wa chiisai machi ni sunde imasu</div>
+        <div class="word-meaning">花小姐住在一個小城鎮。 — <span class="j-mark">に</span> 標記居住地點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─── 三、て形 ＋ います ─── -->
+  <div class="divider">三、て形 ＋ います とは？</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;">
+    「て形 ＋ います」有兩種意思，取決於動詞類型：
+  </p>
+
+  <table class="conj-table">
+    <tr>
+      <th>動詞</th>
+      <th>て形</th>
+      <th>〜ています</th>
+      <th>語感</th>
+    </tr>
+    <tr>
+      <td>たべる</td>
+      <td>たべて</td>
+      <td>たべています</td>
+      <td>正在吃（動作進行中）</td>
+    </tr>
+    <tr>
+      <td>はたらく</td>
+      <td>はたらいて</td>
+      <td>はたらいています</td>
+      <td>在工作（狀態持續中）</td>
+    </tr>
+    <tr>
+      <td>すむ</td>
+      <td>すんで</td>
+      <td>すんでいます</td>
+      <td>住在⋯（居住狀態持續）</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>口語縮略</strong><br>
+    日常對話常把「でいます」縮成「でます」：<br>
+    すんでいます → <strong>すんでます</strong>（意思一樣，更自然）
+  </div>
+
+  <!-- ─── 四、に vs で ─── -->
+  <div class="divider">四、に vs で — 地點助詞比較</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <div class="vs-head">に</div>
+      <div class="vs-role">存在・居住的地點</div>
+      <div class="vs-ex">
+        まちに <strong>すんでいます</strong><br>
+        <span style="font-size:12px;color:var(--ink-mute)">住在城鎮</span><br><br>
+        東京に <strong>います</strong><br>
+        <span style="font-size:12px;color:var(--ink-mute)">（人）在東京</span>
+      </div>
+    </div>
+    <div class="vs-col">
+      <div class="vs-head">で</div>
+      <div class="vs-role">動作發生的地點</div>
+      <div class="vs-ex">
+        まちで <strong>はたらきます</strong><br>
+        <span style="font-size:12px;color:var(--ink-mute)">在城鎮工作</span><br><br>
+        カフェで <strong>たべます</strong><br>
+        <span style="font-size:12px;color:var(--ink-mute)">在咖啡廳吃</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>記憶口訣</strong><br>
+    「<strong>に</strong>」用在你<strong>在哪裡存在</strong>（住、有、在）<br>
+    「<strong>で</strong>」用在你<strong>在哪裡行動</strong>（吃、工作、學習）
+  </div>
+
+  <!-- ─── 五、本課單字 ─── -->
+  <div class="divider">五、本課單字</div>
+
+  <div class="section">
+    <div class="section-title">📖 Vocabulary</div>
+
+    <div class="word-item" data-text="まち">
+      <div class="word-content">
+        <div class="word-ja">まち（町）</div>
+        <div class="word-romaji">machi</div>
+        <div class="word-meaning">城鎮、街道</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しずか">
+      <div class="word-content">
+        <div class="word-ja">しずか（静か）</div>
+        <div class="word-romaji">shizuka</div>
+        <div class="word-meaning">安靜 — な形容詞（しずかな まち = 安靜的城鎮）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="とても">
+      <div class="word-content">
+        <div class="word-ja">とても</div>
+        <div class="word-romaji">totemo</div>
+        <div class="word-meaning">非常、很</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ちいさい">
+      <div class="word-content">
+        <div class="word-ja">ちいさい（小さい）</div>
+        <div class="word-romaji">chiisai</div>
+        <div class="word-meaning">小的 — い形容詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="すんでいます">
+      <div class="word-content">
+        <div class="word-ja">すんでいます（住んでいます）</div>
+        <div class="word-romaji">sunde imasu</div>
+        <div class="word-meaning">住在⋯（すむ 的て形 ＋ います）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─── 六、練習 ─── -->
+  <div class="divider">六、練習造句</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;">
+    把「場所 ＋ に ＋ すんでいます」套進去：
+  </p>
+
+  <div class="section">
+    <div class="section-title">✏️ 套用練習</div>
+
+    <div class="word-item" data-text="たいぺいにすんでいます">
+      <div class="word-content">
+        <div class="word-ja">たいぺいに すんでいます。</div>
+        <div class="word-romaji">Taipeh ni sunde imasu</div>
+        <div class="word-meaning">我住在台北。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しずかなまちにすんでいます">
+      <div class="word-content">
+        <div class="word-ja">しずかなまちに すんでいます。</div>
+        <div class="word-romaji">shizuka na machi ni sunde imasu</div>
+        <div class="word-meaning">我住在一個安靜的城鎮。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="どこにすんでいますか">
+      <div class="word-content">
+        <div class="word-ja">どこに すんでいますか？</div>
+        <div class="word-romaji">doko ni sunde imasu ka</div>
+        <div class="word-meaning">你住在哪裡？ — <span class="j-mark">どこ</span> = 哪裡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

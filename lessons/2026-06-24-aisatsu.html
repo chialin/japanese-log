@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あいさつ — 日常問候語</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 時段標籤 */
+.time-badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.12em;color:var(--ink-mute);background:var(--paper-deep);border:1px solid var(--line);border-radius:3px;padding:2px 8px;margin-bottom:10px;text-transform:uppercase;}
+
+/* formal / casual 標籤 */
+.tag{display:inline-block;font-size:11px;font-family:'Noto Serif TC',serif;font-weight:600;padding:2px 7px;border-radius:3px;margin-left:6px;vertical-align:middle;}
+.tag-formal{background:#e8f0e8;color:#3a6040;}
+.tag-casual{background:var(--accent-pale);color:var(--accent);}
+
+/* 分欄對照（正式 vs 非正式） */
+.pair-block{background:var(--paper-deep);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin:10px 0;}
+.pair-formal{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px;}
+.pair-casual{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--ink-soft);margin-top:6px;display:flex;align-items:center;gap:8px;}
+.pair-meaning{font-size:13px;color:var(--ink-mute);margin-top:6px;line-height:1.7;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">日常表現 · Daily</div>
+    <div class="center">あ　い　さ　つ</div>
+    <div class="right">2026 / 06 / 24</div>
+  </header>
+
+  <h1 class="page-title">あいさつ <span class="accent">挨拶</span></h1>
+  <p class="page-subtitle">從早到晚的日常問候 — 正式與非正式對照</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>正式 vs 非正式</strong><br>
+    日語問候常有兩個版本：<span class="tag tag-formal">正式</span> 用在師長、陌生人、工作場合；<span class="tag tag-casual">輕鬆</span> 用在朋友、家人。
+  </div>
+
+  <!-- ─── 一、早安 ─── -->
+  <div class="divider">一、おはよう — 早安</div>
+
+  <div class="time-badge">Morning · 朝</div>
+
+  <div class="pair-block">
+    <div class="pair-formal">
+      <span>おはようございます</span>
+      <span class="tag tag-formal">正式</span>
+      <button class="play-btn" aria-label="播放" data-text="おはようございます">▶</button>
+    </div>
+    <div class="pair-casual">
+      <span>おはよう</span>
+      <span class="tag tag-casual">輕鬆</span>
+      <button class="play-btn" aria-label="播放" data-text="おはよう">▶</button>
+    </div>
+    <div class="pair-meaning">
+      o-ha-yō go-za-i-ma-su / o-ha-yō<br>
+      早安 — 早上見面的第一句
+    </div>
+  </div>
+
+  <!-- ─── 二、午安 ─── -->
+  <div class="divider">二、こんにちは — 午安・你好</div>
+
+  <div class="time-badge">Daytime · 昼</div>
+
+  <div class="pair-block">
+    <div class="pair-formal">
+      <span>こんにちは</span>
+      <span class="tag tag-formal">正式 ＆ 通用</span>
+      <button class="play-btn" aria-label="播放" data-text="こんにちは">▶</button>
+    </div>
+    <div class="pair-meaning">
+      kon-ni-chi-wa<br>
+      你好／午安 — 白天（上午結束後到傍晚前）使用<br>
+      <strong>注意：</strong>「は」在這裡念 <span class="j-mark">wa</span>，不念 ha（助詞用法遺留）
+    </div>
+  </div>
+
+  <!-- ─── 三、晚安問候 ─── -->
+  <div class="divider">三、こんばんは — 晚上好</div>
+
+  <div class="time-badge">Evening · 夜</div>
+
+  <div class="pair-block">
+    <div class="pair-formal">
+      <span>こんばんは</span>
+      <span class="tag tag-formal">正式 ＆ 通用</span>
+      <button class="play-btn" aria-label="播放" data-text="こんばんは">▶</button>
+    </div>
+    <div class="pair-meaning">
+      kon-ban-wa<br>
+      晚上好 — 天黑後見面使用<br>
+      同樣地，「は」念 <span class="j-mark">wa</span>
+    </div>
+  </div>
+
+  <!-- ─── 四、道晚安（睡前） ─── -->
+  <div class="divider">四、おやすみ — 晚安（睡前）</div>
+
+  <div class="time-badge">Bedtime · 就寢前</div>
+
+  <div class="pair-block">
+    <div class="pair-formal">
+      <span>おやすみなさい</span>
+      <span class="tag tag-formal">正式</span>
+      <button class="play-btn" aria-label="播放" data-text="おやすみなさい">▶</button>
+    </div>
+    <div class="pair-casual">
+      <span>おやすみ</span>
+      <span class="tag tag-casual">輕鬆</span>
+      <button class="play-btn" aria-label="播放" data-text="おやすみ">▶</button>
+    </div>
+    <div class="pair-meaning">
+      o-ya-su-mi-na-sa-i / o-ya-su-mi<br>
+      晚安 — 睡前說的，不是傍晚見面
+    </div>
+  </div>
+
+  <!-- ─── 五、道別 ─── -->
+  <div class="divider">五、さようなら・じゃあね — 再見</div>
+
+  <div class="pair-block">
+    <div class="pair-formal">
+      <span>さようなら</span>
+      <span class="tag tag-formal">正式</span>
+      <button class="play-btn" aria-label="播放" data-text="さようなら">▶</button>
+    </div>
+    <div class="pair-casual">
+      <span>じゃあね / またね</span>
+      <span class="tag tag-casual">輕鬆</span>
+      <button class="play-btn" aria-label="播放" data-text="じゃあね">▶</button>
+    </div>
+    <div class="pair-meaning">
+      sa-yō-na-ra / jā-ne / ma-ta-ne<br>
+      再見 — さようなら 帶有「長別離」感；朋友之間多用 じゃあね 或 またね（下次見）
+    </div>
+  </div>
+
+  <!-- ─── 六、謝謝 ─── -->
+  <div class="divider">六、ありがとう — 謝謝</div>
+
+  <div class="pair-block">
+    <div class="pair-formal">
+      <span>ありがとうございます</span>
+      <span class="tag tag-formal">正式</span>
+      <button class="play-btn" aria-label="播放" data-text="ありがとうございます">▶</button>
+    </div>
+    <div class="pair-casual">
+      <span>ありがとう</span>
+      <span class="tag tag-casual">輕鬆</span>
+      <button class="play-btn" aria-label="播放" data-text="ありがとう">▶</button>
+    </div>
+    <div class="pair-meaning">
+      a-ri-ga-tō go-za-i-ma-su / a-ri-ga-tō<br>
+      謝謝
+    </div>
+  </div>
+
+  <!-- ─── 七、對不起 ─── -->
+  <div class="divider">七、すみません — 不好意思・對不起</div>
+
+  <div class="pair-block">
+    <div class="pair-formal">
+      <span>すみません</span>
+      <span class="tag tag-formal">正式 ＆ 通用</span>
+      <button class="play-btn" aria-label="播放" data-text="すみません">▶</button>
+    </div>
+    <div class="pair-casual">
+      <span>ごめんなさい / ごめん</span>
+      <span class="tag tag-casual">道歉專用</span>
+      <button class="play-btn" aria-label="播放" data-text="ごめんなさい">▶</button>
+    </div>
+    <div class="pair-meaning">
+      su-mi-ma-sen / go-men-na-sa-i<br>
+      <strong>すみません</strong> = 打擾一下、借過、不好意思（萬用）<br>
+      <strong>ごめんなさい</strong> = 對不起（真心道歉，有自責意味）
+    </div>
+  </div>
+
+  <!-- ─── 八、初次見面 ─── -->
+  <div class="divider">八、はじめまして — 初次見面</div>
+
+  <div class="section">
+    <div class="section-title">📖 自我介紹組合</div>
+
+    <div class="word-item" data-text="はじめまして">
+      <div class="word-content">
+        <div class="word-ja">はじめまして</div>
+        <div class="word-romaji">ha-ji-me-ma-shi-te</div>
+        <div class="word-meaning">初次見面、你好（第一次見面才說）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="よろしくおねがいします">
+      <div class="word-content">
+        <div class="word-ja">よろしくおねがいします</div>
+        <div class="word-romaji">yo-ro-shi-ku o-ne-ga-i shi-ma-su</div>
+        <div class="word-meaning">請多指教 — 自我介紹最後必說，表示「往後請多關照」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おげんきですか">
+      <div class="word-content">
+        <div class="word-ja">おげんきですか？</div>
+        <div class="word-romaji">o-gen-ki de-su ka</div>
+        <div class="word-meaning">你好嗎？ — 久別重逢時用，不像英文 how are you 那樣天天說</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="げんきです">
+      <div class="word-content">
+        <div class="word-ja">げんきです。</div>
+        <div class="word-romaji">gen-ki de-su</div>
+        <div class="word-meaning">我很好。 — おげんきですか 的回答</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─── 速記表 ─── -->
+  <div class="divider">速記表</div>
+
+  <table style="width:100%;border-collapse:collapse;font-size:14px;">
+    <tr style="background:var(--accent-pale);">
+      <th style="padding:8px 12px;text-align:left;font-family:'Noto Serif TC',serif;border-bottom:2px solid var(--line);">時機</th>
+      <th style="padding:8px 12px;text-align:left;border-bottom:2px solid var(--line);">正式</th>
+      <th style="padding:8px 12px;text-align:left;border-bottom:2px solid var(--line);">輕鬆</th>
+    </tr>
+    <tr style="border-bottom:1px solid var(--line);">
+      <td style="padding:10px 12px;color:var(--ink-mute);">早上</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink);">おはようございます</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink-soft);">おはよう</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--line);">
+      <td style="padding:10px 12px;color:var(--ink-mute);">白天</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink);" colspan="2">こんにちは</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--line);">
+      <td style="padding:10px 12px;color:var(--ink-mute);">晚上（見面）</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink);" colspan="2">こんばんは</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--line);">
+      <td style="padding:10px 12px;color:var(--ink-mute);">睡前</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink);">おやすみなさい</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink-soft);">おやすみ</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--line);">
+      <td style="padding:10px 12px;color:var(--ink-mute);">再見</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink);">さようなら</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink-soft);">じゃあね・またね</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--line);">
+      <td style="padding:10px 12px;color:var(--ink-mute);">謝謝</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink);">ありがとうございます</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink-soft);">ありがとう</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--line);">
+      <td style="padding:10px 12px;color:var(--ink-mute);">打擾・借過</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink);" colspan="2">すみません</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px;color:var(--ink-mute);">道歉</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink);">ごめんなさい</td>
+      <td style="padding:10px 12px;font-family:'Shippori Mincho',serif;color:var(--ink-soft);">ごめん</td>
+    </tr>
+  </table>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // pair-block 裡的個別按鈕
+  document.querySelectorAll('.play-btn[data-text]').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      speak(button.dataset.text, button);
+    });
+  });
+
+  // word-item 整塊點擊
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

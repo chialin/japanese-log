@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水果攤日語 — 桃を買う</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 本頁照片 */
+.photo{margin:24px 0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 2px 12px rgba(80,40,10,.08);}
+.photo img{display:block;width:100%;height:auto;}
+.photo figcaption{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);text-align:center;padding:9px 12px;letter-spacing:.04em;}
+
+/* Anki 下載卡 */
+.deck-link{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:14px;transition:border-color .15s,background .15s,transform .15s;}
+.deck-link:hover{border-color:var(--accent);background:rgba(255,255,255,.85);transform:translateX(4px);}
+.deck-ic{font-size:30px;line-height:1;}
+.deck-body{flex:1;}
+.deck-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:4px;}
+.deck-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);}
+.deck-sub{display:block;font-size:13px;color:var(--ink-soft);margin-top:4px;}
+.deck-dl{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);font-size:15px;white-space:nowrap;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">主題 · 買い物</div>
+    <div class="center">水果攤の日本語</div>
+    <div class="right">2026 / 06 / 26</div>
+  </header>
+
+  <h1 class="page-title">水果攤日語 — <span class="accent">桃</span>を買う</h1>
+  <p class="page-subtitle">從山梨県的桃子價目牌學 8 個逛市場、買水果會用到的單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <figure class="photo">
+    <img src="../images/2026-06-26-momo.jpg" alt="山梨県產桃子的水果攤，價目牌寫著「訳あり特売！もも 380円（税込）」「1パック 個入り」">
+    <figcaption>山梨県・桃（日川白鳳）— 訳あり特売！380円（税込）／1パック</figcaption>
+  </figure>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    這些字全來自上面這張價目牌。看懂「訳あり」「税込」「売り切れ」，逛市場、超市挑特價品就不會買錯。
+  </div>
+
+  <div class="divider">一、水果攤 8 單字</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    點任一張卡片或 <span class="compare">▶</span> 就會唸出來。發音跟價目牌上的字一一對應。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🍑 単語</div>
+
+    <div class="word-item" data-text="もも">
+      <div class="word-content">
+        <div class="word-ja">桃（もも）</div>
+        <div class="word-romaji">momo</div>
+        <div class="word-meaning">桃子 — 牌子上的主角，山梨県名產</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あんず">
+      <div class="word-content">
+        <div class="word-ja">あんず</div>
+        <div class="word-romaji">anzu</div>
+        <div class="word-meaning">杏子 — 照片右邊那袋黃色的水果</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="えん">
+      <div class="word-content">
+        <div class="word-ja">円（えん）</div>
+        <div class="word-romaji">en</div>
+        <div class="word-meaning">日圓 — 380円、630円的「円」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ぜいこみ">
+      <div class="word-content">
+        <div class="word-ja">税込（ぜいこみ）</div>
+        <div class="word-romaji">zeikomi</div>
+        <div class="word-meaning">含稅 — 標價已含稅，這個價就是最後付的錢</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="とくばい">
+      <div class="word-content">
+        <div class="word-ja">特売（とくばい）</div>
+        <div class="word-romaji">tokubai</div>
+        <div class="word-meaning">特賣 — 限時特價，看到這兩字代表便宜</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="うりきれ">
+      <div class="word-content">
+        <div class="word-ja">売り切れ（うりきれ）</div>
+        <div class="word-romaji">urikire</div>
+        <div class="word-meaning">售完 — 賣光了。牌子小字寫「売り切れの場合はご容赦ください」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="わけあり">
+      <div class="word-content">
+        <div class="word-ja">訳あり（わけあり）</div>
+        <div class="word-romaji">wakeari</div>
+        <div class="word-meaning">有瑕疵的特價品 — 有點碰傷所以便宜賣，味道一樣好</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="パック">
+      <div class="word-content">
+        <div class="word-ja">パック</div>
+        <div class="word-romaji">pakku</div>
+        <div class="word-meaning">一盒／一包 — 「1パック ◯個入り」=一盒裝幾顆</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="divider">二、帶回家複習</div>
+
+  <p style="margin-bottom:4px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這 8 個字做成了 Anki 牌組（正面打讀音、翻面自動發音），下載匯入就能間隔複習。
+  </p>
+
+  <a href="../anki/momo-fruit.apkg" download="日文單字-水果攤.apkg" class="deck-link">
+    <span class="deck-ic">🃏</span>
+    <span class="deck-body">
+      <span class="deck-kicker">— Anki Deck —</span>
+      <span class="deck-title">日文單字｜水果攤（8 張）</span>
+      <span class="deck-sub">打字版 · 含真人發音 · 雙擊匯入 Anki</span>
+    </span>
+    <span class="deck-dl">下載 ↓</span>
+  </a>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

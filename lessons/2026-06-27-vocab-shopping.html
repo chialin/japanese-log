@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>網購單字 — 読む・注文・旬・送料・パソコン</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 漢字大字解析卡（借 onyomi-sensei 的 .kanji-spot 風格） */
+.kanji-spot{display:grid;grid-template-columns:auto 1fr;gap:0 20px;align-items:center;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;margin-bottom:12px;}
+.kanji-big{font-family:'Shippori Mincho',serif;font-size:52px;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em;}
+.kanji-info{display:flex;flex-direction:column;gap:4px;}
+.kanji-reading{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);}
+.kanji-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);}
+.kanji-meaning{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+
+/* 速記表 */
+.summary-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;}
+.summary-table th{background:var(--paper-deep);color:var(--ink-mute);font-weight:600;padding:8px 12px;text-align:left;border-bottom:2px solid var(--line);}
+.summary-table td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+.summary-table tr:last-child td{border-bottom:none;}
+.col-ja{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink);white-space:nowrap;}
+.col-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);}
+.col-zh{color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">主題 · 買い物</div>
+    <div class="center">網購 × 閱讀 単語</div>
+    <div class="right">2026 / 06 / 27</div>
+  </header>
+
+  <h1 class="page-title">今日の単語 — <span class="accent">読む・注文・旬</span></h1>
+  <p class="page-subtitle">パソコン・読む・注文・旬の時期・送料 — 5 個日常高頻單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    這 5 個字在網購、看商品頁、聊天時都非常常見。特別記住「旬」跟「送料」——台灣電商很少出現這兩個概念，日本超市 / 網路商城卻到處都是。
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">一、パソコン — PC 的日語說法</div>
+
+  <div class="note">
+    📝 <strong>PC → パソコン</strong><br>
+    英語 <em>Personal Computer</em> 縮成 <em>パーソナルコンピュータ</em>，再進一步縮寫成 <strong>パソコン（pasokon）</strong>。日本人日常幾乎不說「PC」，講電腦就說パソコン。手機另有一個字：<strong>スマホ</strong>（Smart Phone → スマートフォン → スマホ）。
+  </div>
+
+  <div class="section">
+    <div class="section-title">💻 單字</div>
+
+    <div class="word-item" data-text="パソコン">
+      <div class="word-content">
+        <div class="word-ja">パソコン</div>
+        <div class="word-romaji">pasokon</div>
+        <div class="word-meaning">電腦（PC） — Personal Computer 的和製縮寫</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="スマホ">
+      <div class="word-content">
+        <div class="word-ja">スマホ</div>
+        <div class="word-romaji">sumaho</div>
+        <div class="word-meaning">智慧型手機 — Smart Phone 的縮寫，順帶記一起</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">二、読む — 閱讀</div>
+
+  <div class="kanji-spot" data-text="よむ">
+    <div class="kanji-big">読</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">読む（よむ）</div>
+      <div class="kanji-romaji">yo · mu</div>
+      <div class="kanji-meaning">閱讀、唸（動詞）— 五段動詞，讀書、讀訊息都用這個字<br>
+        ます形：読み<strong>ます</strong>（yomimasu）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="本を読む">
+      <div class="word-content">
+        <div class="word-ja">本を読む。</div>
+        <div class="word-romaji">hon o yomu</div>
+        <div class="word-meaning">讀書。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="メニューを読みます">
+      <div class="word-content">
+        <div class="word-ja">メニューを読みます。</div>
+        <div class="word-romaji">menyuu o yomimasu</div>
+        <div class="word-meaning">讀菜單。（ます形，禮貌體）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">三、注文 — 點餐 / 下訂</div>
+
+  <div class="kanji-spot" data-text="ちゅうもん">
+    <div class="kanji-big">注文</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">注文（ちゅうもん）</div>
+      <div class="kanji-romaji">chuu · mon</div>
+      <div class="kanji-meaning">點餐；下訂單 — 餐廳點菜、網路購物都用<br>
+        動詞用法：注文する（suru 複合動詞）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🛒 例句</div>
+
+    <div class="word-item" data-text="注文してもいいですか">
+      <div class="word-content">
+        <div class="word-ja">注文してもいいですか？</div>
+        <div class="word-romaji">chuumon shite mo ii desu ka</div>
+        <div class="word-meaning">可以點餐了嗎？— 餐廳裡叫服務生的標準句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="注文を確認します">
+      <div class="word-content">
+        <div class="word-ja">注文を確認します。</div>
+        <div class="word-romaji">chuumon o kakunin shimasu</div>
+        <div class="word-meaning">確認訂單。— 網購結帳頁常見</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">四、旬の時期 — 當季盛產期</div>
+
+  <div class="kanji-spot" data-text="しゅん">
+    <div class="kanji-big">旬</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">旬（しゅん）</div>
+      <div class="kanji-romaji">shun</div>
+      <div class="kanji-meaning">食材最當季、最好吃的時期 — 台灣說「產季」「盛產」，日語用「旬」一個字就夠了<br>
+        組合：旬の<strong>時期</strong>（しゅんのじき）= 旬的時期、當季季節</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🍑 例句</div>
+
+    <div class="word-item" data-text="今は桃の旬です">
+      <div class="word-content">
+        <div class="word-ja">今は桃の旬です。</div>
+        <div class="word-romaji">ima wa momo no shun desu</div>
+        <div class="word-meaning">現在是桃子的產季。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="時期">
+      <div class="word-content">
+        <div class="word-ja">時期（じき）</div>
+        <div class="word-romaji">ji · ki</div>
+        <div class="word-meaning">時期、時節 — 常與旬搭配：旬の時期（最當季的時節）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="旬の野菜を買う">
+      <div class="word-content">
+        <div class="word-ja">旬の野菜を買う。</div>
+        <div class="word-romaji">shun no yasai o kau</div>
+        <div class="word-meaning">買當季蔬菜。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">五、送料 — 運費</div>
+
+  <div class="kanji-spot" data-text="そうりょう">
+    <div class="kanji-big">送料</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">送料（そうりょう）</div>
+      <div class="kanji-romaji">sou · ryou</div>
+      <div class="kanji-meaning">運費、郵費 — 網購必看！<br>
+        常見：送料<strong>無料</strong>（むりょう）= 免運費<br>
+        　　　送料<strong>込み</strong>（こみ）= 含運費</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📦 常見搭配</div>
+
+    <div class="word-item" data-text="送料無料">
+      <div class="word-content">
+        <div class="word-ja">送料無料</div>
+        <div class="word-romaji">souryou muryou</div>
+        <div class="word-meaning">免運費 — 日本電商最常見的促銷文字</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="送料込み">
+      <div class="word-content">
+        <div class="word-ja">送料込み</div>
+        <div class="word-romaji">souryou komi</div>
+        <div class="word-meaning">含運費 — 標價已包含運費</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="送料はいくらですか">
+      <div class="word-content">
+        <div class="word-ja">送料はいくらですか？</div>
+        <div class="word-romaji">souryou wa ikura desu ka</div>
+        <div class="word-meaning">運費是多少？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">まとめ — 今日 5 單字速覽</div>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>日語</th>
+        <th>讀音</th>
+        <th>意思</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">パソコン</td>
+        <td class="col-ro">pasokon</td>
+        <td class="col-zh">電腦（PC 的縮寫）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">読む</td>
+        <td class="col-ro">yomu</td>
+        <td class="col-zh">閱讀、唸</td>
+      </tr>
+      <tr>
+        <td class="col-ja">注文</td>
+        <td class="col-ro">chuumon</td>
+        <td class="col-zh">點餐、下訂單</td>
+      </tr>
+      <tr>
+        <td class="col-ja">旬（の時期）</td>
+        <td class="col-ro">shun (no jiki)</td>
+        <td class="col-zh">當季盛產期</td>
+      </tr>
+      <tr>
+        <td class="col-ja">送料</td>
+        <td class="col-ro">souryou</td>
+        <td class="col-zh">運費；送料無料＝免運</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    if (!button) return;
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>音読み vs 訓読み — 漢字的兩種讀法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 漢字大字解析卡 */
+.kanji-spot{display:grid;grid-template-columns:auto 1fr;gap:0 20px;align-items:center;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;margin-bottom:12px;}
+.kanji-big{font-family:'Shippori Mincho',serif;font-size:52px;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em;}
+.kanji-info{display:flex;flex-direction:column;gap:4px;}
+.kanji-reading{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);}
+.kanji-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);}
+.kanji-meaning{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+
+/* 音訓對比卡片 */
+.reading-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+.r-col{border:1px solid var(--line);border-radius:6px;padding:16px;background:rgba(255,255,255,.55);}
+.r-col.on{border-top:3px solid var(--accent);}
+.r-col.kun{border-top:3px solid var(--accent-soft);}
+.r-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.r-kana{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);}
+.r-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);margin:2px 0 6px;}
+.r-example{font-size:13px;color:var(--ink-soft);line-height:1.7;}
+.r-example em{font-family:'Shippori Mincho',serif;font-style:normal;font-weight:600;color:var(--ink);}
+
+/* 速記表 */
+.summary-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;}
+.summary-table th{background:var(--paper-deep);color:var(--ink-mute);font-weight:600;padding:8px 12px;text-align:left;border-bottom:2px solid var(--line);}
+.summary-table td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+.summary-table tr:last-child td{border-bottom:none;}
+.col-kanji{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--accent);text-align:center;}
+.col-on{font-family:'Shippori Mincho',serif;font-size:15px;font-weight:600;color:var(--ink);}
+.col-kun{font-family:'Shippori Mincho',serif;font-size:15px;font-weight:600;color:var(--ink-soft);}
+.col-note{font-size:13px;color:var(--ink-mute);}
+
+/* 規則卡 */
+.rule-box{background:var(--accent-pale);border:1px solid var(--accent-soft);border-radius:8px;padding:18px 20px;margin-bottom:14px;}
+.rule-title{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:8px;}
+.rule-body{font-size:14px;color:var(--ink-soft);line-height:1.8;}
+.rule-body em{font-family:'Shippori Mincho',serif;font-style:normal;font-weight:700;color:var(--ink);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">文法 · 漢字讀法</div>
+    <div class="center">音読み vs 訓読み</div>
+    <div class="right">2026 / 06 / 28</div>
+  </header>
+
+  <h1 class="page-title">音読み <span class="accent">&amp;</span> 訓読み</h1>
+  <p class="page-subtitle">同一個漢字，為什麼有時念這個、有時念那個？</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 今天的「<strong>通</strong>」就是最好的例子：通学路（<em>つう</em>がくろ）vs 通る（<em>とお</em>る）— 同一個字，讀音完全不同。這是因為漢字在日語裡有「兩套讀法」。
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">一、什麼是音読み？</div>
+
+  <div class="note">
+    📖 <strong>音読み（おんよみ）— 漢語音</strong><br>
+    從中國引進漢字時一起帶來的讀法，保留了古代漢語的發音痕跡。
+    日語裡的「つう・がく・こう・あん」這些音節感覺比較「硬」，通常就是音読み。
+  </div>
+
+  <div class="rule-box">
+    <div class="rule-title">📌 判斷規則 ①</div>
+    <div class="rule-body">
+      <em>漢字 ＋ 漢字</em> 組合的複合詞 → 幾乎都用音読み<br>
+      通学（つうがく）・図書館（としょかん）・学校（がっこう）・高安（こうあん）…
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">二、什麼是訓読み？</div>
+
+  <div class="note">
+    📖 <strong>訓読み（くんよみ）— 日語原音</strong><br>
+    日本原本就有的詞彙，後來借了漢字來寫。讀音是純日語，感覺比較「柔軟」，
+    常常後面會接假名（送り仮名）。
+  </div>
+
+  <div class="rule-box">
+    <div class="rule-title">📌 判斷規則 ②</div>
+    <div class="rule-body">
+      <em>漢字 ＋ ひらがな（送り仮名）</em> → 幾乎都是訓読み<br>
+      通<em>る</em>（とおる）・高<em>い</em>（たかい）・安<em>い</em>（やすい）・上<em>り</em>（のぼり）・下<em>り</em>（くだり）
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">三、今天學過的漢字 — 音 vs 訓</div>
+
+  <!-- 通 -->
+  <div class="kanji-spot">
+    <div class="kanji-big">通</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">音：つう／訓：とお・かよ</div>
+      <div class="kanji-romaji">on: tsū / kun: tō · kayo</div>
+      <div class="kanji-meaning">今天看到的三種用法全不同讀音</div>
+    </div>
+  </div>
+  <div class="reading-pair">
+    <div class="r-col on word-item" data-text="つうがくろ">
+      <div class="r-label">音読み</div>
+      <div class="r-kana">つう</div>
+      <div class="r-romaji">tsū</div>
+      <div class="r-example"><em>通学路</em>（つうがくろ）<br>通勤（つうきん）</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="r-col kun">
+      <div class="r-label">訓読み</div>
+      <div class="r-kana">とお・かよ</div>
+      <div class="r-romaji">tō · kayo</div>
+      <div class="r-example"><em>通る</em>（とおる）通過<br><em>通う</em>（かよう）往返通勤</div>
+    </div>
+  </div>
+
+  <!-- 学 -->
+  <div class="kanji-spot">
+    <div class="kanji-big">学</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">音：がく／訓：まな</div>
+      <div class="kanji-romaji">on: gaku / kun: mana</div>
+      <div class="kanji-meaning">學習、學校</div>
+    </div>
+  </div>
+  <div class="reading-pair">
+    <div class="r-col on word-item" data-text="がっこう">
+      <div class="r-label">音読み</div>
+      <div class="r-kana">がく</div>
+      <div class="r-romaji">gaku</div>
+      <div class="r-example"><em>学校</em>（がっこう）學校<br><em>通学路</em>（つうがくろ）</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="r-col kun word-item" data-text="まなぶ">
+      <div class="r-label">訓読み</div>
+      <div class="r-kana">まな</div>
+      <div class="r-romaji">mana</div>
+      <div class="r-example"><em>学ぶ</em>（まなぶ）學習<br>（後面接ぶ，是訓読み）</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- 高 -->
+  <div class="kanji-spot">
+    <div class="kanji-big">高</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">音：こう／訓：たか</div>
+      <div class="kanji-romaji">on: kō / kun: taka</div>
+      <div class="kanji-meaning">高、貴</div>
+    </div>
+  </div>
+  <div class="reading-pair">
+    <div class="r-col on word-item" data-text="こうえんじ">
+      <div class="r-label">音読み</div>
+      <div class="r-kana">こう</div>
+      <div class="r-romaji">kō</div>
+      <div class="r-example"><em>高円寺</em>（こうえんじ）<br>高校（こうこう）高中</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="r-col kun word-item" data-text="たかい">
+      <div class="r-label">訓読み</div>
+      <div class="r-kana">たか</div>
+      <div class="r-romaji">taka</div>
+      <div class="r-example"><em>高い</em>（たかい）貴的・高的<br>（後面接い，是訓読み）</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- 安 -->
+  <div class="kanji-spot">
+    <div class="kanji-big">安</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">音：あん／訓：やす</div>
+      <div class="kanji-romaji">on: an / kun: yasu</div>
+      <div class="kanji-meaning">安心、便宜</div>
+    </div>
+  </div>
+  <div class="reading-pair">
+    <div class="r-col on word-item" data-text="あんしん">
+      <div class="r-label">音読み</div>
+      <div class="r-kana">あん</div>
+      <div class="r-romaji">an</div>
+      <div class="r-example"><em>安心</em>（あんしん）放心<br>安全（あんぜん）安全</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="r-col kun word-item" data-text="やすい">
+      <div class="r-label">訓読み</div>
+      <div class="r-kana">やす</div>
+      <div class="r-romaji">yasu</div>
+      <div class="r-example"><em>安い</em>（やすい）便宜的<br>（後面接い，是訓読み）</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- 上 / 下 -->
+  <div class="kanji-spot">
+    <div class="kanji-big">上・下</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">上 音：じょう／訓：うえ・のぼ　下 音：か・げ／訓：した・くだ</div>
+      <div class="kanji-romaji">jō / ue · nobo ── ka · ge / shita · kuda</div>
+      <div class="kanji-meaning">今天學的上り・下り就是訓読み</div>
+    </div>
+  </div>
+  <div class="reading-pair">
+    <div class="r-col on word-item" data-text="じょうしゃ">
+      <div class="r-label">音読み</div>
+      <div class="r-kana">じょう・か</div>
+      <div class="r-romaji">jō · ka</div>
+      <div class="r-example"><em>乗車</em>（じょうしゃ）上車<br><em>降車</em>（こうしゃ）下車</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="r-col kun">
+      <div class="r-label">訓読み</div>
+      <div class="r-kana">のぼ・くだ</div>
+      <div class="r-romaji">nobo · kuda</div>
+      <div class="r-example"><em>上り</em>（のぼり）往都心<br><em>下り</em>（くだり）離都心</div>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">まとめ — 速覽表</div>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>漢字</th>
+        <th>音読み（漢字複合詞）</th>
+        <th>訓読み（漢字＋ひらがな）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kanji">通</td>
+        <td class="col-on">つう — 通学路・通勤</td>
+        <td class="col-kun">とお — 通る　かよ — 通う</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">学</td>
+        <td class="col-on">がく — 学校・通学</td>
+        <td class="col-kun">まな — 学ぶ</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">高</td>
+        <td class="col-on">こう — 高円寺・高校</td>
+        <td class="col-kun">たか — 高い</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">安</td>
+        <td class="col-on">あん — 安心・安全</td>
+        <td class="col-kun">やす — 安い</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">上</td>
+        <td class="col-on">じょう — 乗車（上車）</td>
+        <td class="col-kun">のぼ — 上り　うえ — 上</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">下</td>
+        <td class="col-on">か — 降車（下車）</td>
+        <td class="col-kun">くだ — 下り　した — 下</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="rule-box" style="margin-top:20px;">
+    <div class="rule-title">🧠 記憶口訣</div>
+    <div class="rule-body">
+      漢字接漢字 → <em>音読み</em>（硬、短、漢語感）<br>
+      漢字接ひらがな → <em>訓読み</em>（柔、長、日語感）<br><br>
+      例外確實存在，但這條規則覆蓋率超過 80%。
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    if (!button) return;
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京生活單字 — 通学路・図書館・高い・安い・上り・下り</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 漢字大字解析卡 */
+.kanji-spot{display:grid;grid-template-columns:auto 1fr;gap:0 20px;align-items:center;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;margin-bottom:12px;}
+.kanji-big{font-family:'Shippori Mincho',serif;font-size:52px;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em;}
+.kanji-info{display:flex;flex-direction:column;gap:4px;}
+.kanji-reading{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);}
+.kanji-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);}
+.kanji-meaning{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+
+/* 速記表 */
+.summary-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;}
+.summary-table th{background:var(--paper-deep);color:var(--ink-mute);font-weight:600;padding:8px 12px;text-align:left;border-bottom:2px solid var(--line);}
+.summary-table td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+.summary-table tr:last-child td{border-bottom:none;}
+.col-ja{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink);white-space:nowrap;}
+.col-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);}
+.col-zh{color:var(--ink-soft);}
+
+/* 對比組（高い vs 安い、上り vs 下り） */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.vs-col{background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:6px;padding:16px;}
+.vs-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">主題 · 東京生活</div>
+    <div class="center">通学路・図書館・電車 単語</div>
+    <div class="right">2026 / 06 / 28</div>
+  </header>
+
+  <h1 class="page-title">今日の単語 — <span class="accent">高円寺・中野・図書館</span></h1>
+  <p class="page-subtitle">通学路・王道・高円寺・中野・図書館・高い・安い・上り・下り・降車エリア — 10 個東京日常單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    今天的單字圍繞「東京生活」：中央線沿線的兩個站、圖書館、電車方向、價格形容詞。特別記住「上り／下り」——搭電車時只要看方向就全靠這兩個字了。
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">一、地名 — 中央線上的兩站</div>
+
+  <div class="note">
+    📍 <strong>高円寺 &amp; 中野</strong><br>
+    兩者都在 JR 中央線（Chūō Line）上，中野往東一站就是高円寺。中野以 <em>中野ブロードウェイ</em>（二次元聖地）聞名；高円寺是復古小店、古著、爵士樂的集散地。
+  </div>
+
+  <div class="section">
+    <div class="section-title">🗺 地名讀音</div>
+
+    <div class="word-item" data-text="高円寺">
+      <div class="word-content">
+        <div class="word-ja">高円寺（こうえんじ）</div>
+        <div class="word-romaji">Kō · en · ji</div>
+        <div class="word-meaning">東京都杉並區的車站與街區 — 古著、爵士、次文化聚集地</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="中野">
+      <div class="word-content">
+        <div class="word-ja">中野（なかの）</div>
+        <div class="word-romaji">Na · ka · no</div>
+        <div class="word-meaning">東京都中野區的車站與街區 — 中野ブロードウェイ所在地</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">二、通学路 — 上學路 / 通勤路</div>
+
+  <div class="kanji-spot" data-text="つうがくろ">
+    <div class="kanji-big">通学路</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">通学路（つうがくろ）</div>
+      <div class="kanji-romaji">tsuu · ga · ku · ro</div>
+      <div class="kanji-meaning">上學必經的道路 — 通（通往）＋ 学（學校）＋ 路（道路）<br>
+        引申：每天固定的通勤路線也可以這樣說<br>
+        <strong>類比</strong>：通勤路（つうきんろ）= 上班路</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🚶 例句</div>
+
+    <div class="word-item" data-text="これが毎日の通学路です">
+      <div class="word-content">
+        <div class="word-ja">これが毎日の通学路です。</div>
+        <div class="word-romaji">kore ga mainichi no tsūgakuro desu</div>
+        <div class="word-meaning">這就是我每天走的上學路。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">三、王道 — 正統、最常見的做法</div>
+
+  <div class="kanji-spot" data-text="おうどう">
+    <div class="kanji-big">王道</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">王道（おうどう）</div>
+      <div class="kanji-romaji">ō · dō</div>
+      <div class="kanji-meaning">① 正統之路、王者之道（原意）<br>
+        ② 【口語】最主流、最常見、最「標準」的選擇 — 日語日常用法常是②<br>
+        例：王道の組み合わせ = 經典搭配；王道展開 = 老套但讓人爽的劇情</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">👑 例句</div>
+
+    <div class="word-item" data-text="これが王道のルートです">
+      <div class="word-content">
+        <div class="word-ja">これが王道のルートです。</div>
+        <div class="word-romaji">kore ga ōdō no rūto desu</div>
+        <div class="word-meaning">這是最正統（最多人走）的路線。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="王道の組み合わせ">
+      <div class="word-content">
+        <div class="word-ja">王道の組み合わせ</div>
+        <div class="word-romaji">ōdō no kumiawase</div>
+        <div class="word-meaning">經典搭配 — 例如：拉麵配餃子是王道の組み合わせ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">四、図書館 — 圖書館</div>
+
+  <div class="kanji-spot" data-text="としょかん">
+    <div class="kanji-big">図書館</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">図書館（としょかん）</div>
+      <div class="kanji-romaji">to · sho · kan</div>
+      <div class="kanji-meaning">圖書館 — 図（圖）＋ 書（書）＋ 館（館）<br>
+        常用：図書館に行く（去圖書館）、図書館で勉強する（在圖書館讀書）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📚 例句</div>
+
+    <div class="word-item" data-text="図書館で本を読みます">
+      <div class="word-content">
+        <div class="word-ja">図書館で本を読みます。</div>
+        <div class="word-romaji">toshokan de hon o yomimasu</div>
+        <div class="word-meaning">在圖書館讀書。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="中野の図書館に行く">
+      <div class="word-content">
+        <div class="word-ja">中野の図書館に行く。</div>
+        <div class="word-romaji">Nakano no toshokan ni iku</div>
+        <div class="word-meaning">去中野的圖書館。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">五、高い・安い — 貴的・便宜的</div>
+
+  <div class="vs-grid">
+    <div class="vs-col word-item" data-text="たかい">
+      <div class="vs-label">貴 / 高</div>
+      <div class="word-content">
+        <div class="word-ja">高い（たかい）</div>
+        <div class="word-romaji">ta · ka · i</div>
+        <div class="word-meaning">貴的；也可以是「高的」（視語境）<br>
+          <em>値段が高い = 價格很貴</em></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="vs-col word-item" data-text="やすい">
+      <div class="vs-label">便宜 / 安</div>
+      <div class="word-content">
+        <div class="word-ja">安い（やすい）</div>
+        <div class="word-romaji">ya · su · i</div>
+        <div class="word-meaning">便宜的；也有「安全、放心」的原義<br>
+          <em>値段が安い = 價格很便宜</em></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💴 例句</div>
+
+    <div class="word-item" data-text="このカフェは高いですか">
+      <div class="word-content">
+        <div class="word-ja">このカフェは高いですか？</div>
+        <div class="word-romaji">kono kafe wa takai desu ka</div>
+        <div class="word-meaning">這間咖啡廳貴嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="高円寺は安い店が多いです">
+      <div class="word-content">
+        <div class="word-ja">高円寺は安い店が多いです。</div>
+        <div class="word-romaji">Kōenji wa yasui mise ga ōi desu</div>
+        <div class="word-meaning">高円寺有很多便宜的店。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">六、上り・下り・降車エリア — 電車方向與下車區</div>
+
+  <div class="note">
+    🚃 <strong>東京的電車方向</strong><br>
+    <strong>上り（のぼり）</strong> 是「往都心（東京站方向）」的列車；<strong>下り（くだり）</strong> 是「離開都心」的方向。以中央線為例：往新宿・東京 → 上り；往高尾 → 下り。
+  </div>
+
+  <div class="vs-grid">
+    <div class="vs-col word-item" data-text="上り">
+      <div class="vs-label">往都心 ↑</div>
+      <div class="word-content">
+        <div class="word-ja">上り（のぼり）</div>
+        <div class="word-romaji">no · bo · ri</div>
+        <div class="word-meaning">往東京都心方向的列車<br>
+          <em>上り線・上りホーム</em></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="vs-col word-item" data-text="下り">
+      <div class="vs-label">離都心 ↓</div>
+      <div class="word-content">
+        <div class="word-ja">下り（くだり）</div>
+        <div class="word-romaji">ku · da · ri</div>
+        <div class="word-meaning">離開東京都心方向的列車<br>
+          <em>下り線・下りホーム</em></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="kanji-spot" data-text="こうしゃエリア">
+    <div class="kanji-big" style="font-size:36px;">降車<br>エリア</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">降車エリア（こうしゃエリア）</div>
+      <div class="kanji-romaji">kō · sha · e · ri · a</div>
+      <div class="kanji-meaning">下車區域 — 降車（こうしゃ）= 下車；エリア = area（英語借字）<br>
+        常見於計程車／巴士的專用下客區標示<br>
+        <strong>類比</strong>：乗車（じょうしゃ）= 上車、乗降（じょうこう）= 上下車</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🚌 例句</div>
+
+    <div class="word-item" data-text="上りのホームはどこですか">
+      <div class="word-content">
+        <div class="word-ja">上りのホームはどこですか？</div>
+        <div class="word-romaji">nobori no hōmu wa doko desu ka</div>
+        <div class="word-meaning">往都心的月台在哪裡？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="降車エリアはここです">
+      <div class="word-content">
+        <div class="word-ja">降車エリアはここです。</div>
+        <div class="word-romaji">kōsha eria wa koko desu</div>
+        <div class="word-meaning">下車區在這裡。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">まとめ — 今日 10 單字速覽</div>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>日語</th>
+        <th>讀音</th>
+        <th>意思</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">通学路</td>
+        <td class="col-ro">tsūgakuro</td>
+        <td class="col-zh">上學路、通學路線</td>
+      </tr>
+      <tr>
+        <td class="col-ja">王道</td>
+        <td class="col-ro">ōdō</td>
+        <td class="col-zh">正統、最主流的選擇</td>
+      </tr>
+      <tr>
+        <td class="col-ja">高円寺</td>
+        <td class="col-ro">Kōenji</td>
+        <td class="col-zh">東京古著文化區（中央線）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">中野</td>
+        <td class="col-ro">Nakano</td>
+        <td class="col-zh">東京中野ブロードウェイ所在地</td>
+      </tr>
+      <tr>
+        <td class="col-ja">図書館</td>
+        <td class="col-ro">toshokan</td>
+        <td class="col-zh">圖書館</td>
+      </tr>
+      <tr>
+        <td class="col-ja">高い</td>
+        <td class="col-ro">takai</td>
+        <td class="col-zh">貴的；高的</td>
+      </tr>
+      <tr>
+        <td class="col-ja">安い</td>
+        <td class="col-ro">yasui</td>
+        <td class="col-zh">便宜的</td>
+      </tr>
+      <tr>
+        <td class="col-ja">上り</td>
+        <td class="col-ro">nobori</td>
+        <td class="col-zh">往都心方向的電車</td>
+      </tr>
+      <tr>
+        <td class="col-ja">下り</td>
+        <td class="col-ro">kudari</td>
+        <td class="col-zh">離都心方向的電車</td>
+      </tr>
+      <tr>
+        <td class="col-ja">降車エリア</td>
+        <td class="col-ro">kōsha eria</td>
+        <td class="col-zh">下車區域</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    if (!button) return;
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

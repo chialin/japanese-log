@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>モスバーガーで注文 — お席・店舗・QRコード・決済・現金不可</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 漢字大字解析卡 */
+.kanji-spot{display:grid;grid-template-columns:auto 1fr;gap:0 20px;align-items:center;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;margin-bottom:12px;}
+.kanji-big{font-family:'Shippori Mincho',serif;font-size:52px;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em;}
+.kanji-info{display:flex;flex-direction:column;gap:4px;}
+.kanji-reading{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);}
+.kanji-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);}
+.kanji-meaning{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+
+/* 速記表 */
+.summary-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;}
+.summary-table th{background:var(--paper-deep);color:var(--ink-mute);font-weight:600;padding:8px 12px;text-align:left;border-bottom:2px solid var(--line);}
+.summary-table td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+.summary-table tr:last-child td{border-bottom:none;}
+.col-ja{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink);white-space:nowrap;}
+.col-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);}
+.col-zh{color:var(--ink-soft);}
+
+/* 告示牌重現框 */
+.sign-box{background:var(--paper-deep);border:2px solid var(--accent-soft);border-radius:8px;padding:20px 24px;margin:16px 0;font-family:'Shippori Mincho',serif;}
+.sign-title{font-size:22px;font-weight:700;color:var(--ink);margin-bottom:12px;}
+.sign-step{font-size:15px;color:var(--ink-soft);margin:6px 0;line-height:1.8;}
+.sign-step strong{color:var(--accent);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">主題 · 外食</div>
+    <div class="center">モスバーガー × セルフオーダー</div>
+    <div class="right">2026 / 06 / 29</div>
+  </header>
+
+  <h1 class="page-title">今日の単語 — <span class="accent">お席・店舗・決済</span></h1>
+  <p class="page-subtitle">在モスバーガー從告示牌學到的 8 個單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>今日の場面</strong><br>
+    在モスバーガー坐下，桌上有一張「<strong>お席で注文</strong>」告示牌。掃 QR Code → 選店舗 → 輸入桌號 → 刷卡結帳。這一整套流程的日文，今天都學到了。
+  </div>
+
+  <!-- 告示牌原文重現 -->
+  <div class="sign-box">
+    <div class="sign-title">お席で注文</div>
+    <div class="sign-step">1. 右下の QR コードから「<strong>店内飲食店舗</strong>」の検索へアクセス</div>
+    <div class="sign-step">2. <strong>店舗</strong>・<strong>商品</strong>を選択</div>
+    <div class="sign-step">3. <strong>テーブル番号</strong>入力・<strong>決済</strong>（<strong>現金不可</strong>）<br>　　お席でお待ちください♪</div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">一、お席 — 您的座位</div>
+
+  <div class="note">
+    📝 <strong>席（せき）vs お席（おせき）</strong><br>
+    <strong>席</strong> 是「座位」，加了禮貌前綴 <strong>お</strong> 就變成 <strong>お席</strong>，商家對顧客說話時常用。
+    「お席でお待ちください」= 請在座位上等候。
+  </div>
+
+  <div class="note">
+    📝 <strong>待ち（まち）— 等候</strong><br>
+    <strong>待つ（まつ）</strong> 是動詞「等待」，<strong>待ち</strong> 是其ます形語幹，名詞化後表示「等候（的狀態）」。<br>
+    <strong>お待ちください</strong> = お＋待ち＋ください，是「請等候」的禮貌命令形，餐廳、店家極常用。<br>
+    比較：<strong>待ってください</strong>（te 形＋ください）= 請等一下，語感稍隨意；<strong>お待ちください</strong> 更正式、更服務業。
+  </div>
+
+  <div class="section">
+    <div class="section-title">🪑 單字與例句</div>
+
+    <div class="word-item" data-text="お席">
+      <div class="word-content">
+        <div class="word-ja">お席（おせき）</div>
+        <div class="word-romaji">o · se · ki</div>
+        <div class="word-meaning">您的座位（禮貌說法）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お席でお待ちください">
+      <div class="word-content">
+        <div class="word-ja">お席でお待ちください。</div>
+        <div class="word-romaji">o-seki de o-machi kudasai</div>
+        <div class="word-meaning">請在座位上稍候。— 餐廳告示牌超常見</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">二、店舗・店内 — 店面相關</div>
+
+  <div class="kanji-spot" data-text="てんぽ">
+    <div class="kanji-big">店舗</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">店舗（てんぽ）</div>
+      <div class="kanji-romaji">ten · po</div>
+      <div class="kanji-meaning">門市、店面 — 比「お店」正式，常出現在官方告示<br>
+        〇〇<strong>店</strong> = 某某分店（後面的「店」是簡稱）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🏪 順帶記：店内飲食</div>
+
+    <div class="word-item" data-text="店内飲食">
+      <div class="word-content">
+        <div class="word-ja">店内飲食（てんないいんしょく）</div>
+        <div class="word-romaji">tennai · inshoku</div>
+        <div class="word-meaning">內用、在店內飲食 — 對應「テイクアウト」（外帶）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="テイクアウト">
+      <div class="word-content">
+        <div class="word-ja">テイクアウト</div>
+        <div class="word-romaji">teiku-auto</div>
+        <div class="word-meaning">外帶 — Take Out 的外來語</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">三、検索 — 搜尋</div>
+
+  <div class="kanji-spot" data-text="けんさく">
+    <div class="kanji-big">検索</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">検索（けんさく）</div>
+      <div class="kanji-romaji">ken · saku</div>
+      <div class="kanji-meaning">搜尋、查詢 — 手機 App 或網頁的「搜尋功能」就是これ<br>
+        告示牌說「検索へアクセス」= 進入搜尋（頁面）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">四、商品・選択 — 選擇餐點</div>
+
+  <div class="section">
+    <div class="section-title">🍔 兩個動作字</div>
+
+    <div class="word-item" data-text="商品">
+      <div class="word-content">
+        <div class="word-ja">商品（しょうひん）</div>
+        <div class="word-romaji">shou · hin</div>
+        <div class="word-meaning">商品、品項 — 菜單上的每一樣餐點都是「商品」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="選択">
+      <div class="word-content">
+        <div class="word-ja">選択（せんたく）</div>
+        <div class="word-romaji">sen · taku</div>
+        <div class="word-meaning">選擇、選取 — App 介面上按「選択」就是點選確認</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="店舗と商品を選択してください">
+      <div class="word-content">
+        <div class="word-ja">店舗と商品を選択してください。</div>
+        <div class="word-romaji">tenpo to shouhin o sentaku shite kudasai</div>
+        <div class="word-meaning">請選擇門市與餐點品項。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">五、テーブル番号・決済・現金不可</div>
+
+  <div class="section">
+    <div class="section-title">💳 結帳三步驟關鍵字</div>
+
+    <div class="word-item" data-text="テーブル番号">
+      <div class="word-content">
+        <div class="word-ja">テーブル番号（テーブルばんごう）</div>
+        <div class="word-romaji">tēburu · bangou</div>
+        <div class="word-meaning">桌號 — テーブル（table）＋番号（號碼）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="決済">
+      <div class="word-content">
+        <div class="word-ja">決済（けっさい）</div>
+        <div class="word-romaji">kes · sai</div>
+        <div class="word-meaning">付款、結帳 — 比「支払い」更正式，App 結帳頁常用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="現金不可">
+      <div class="word-content">
+        <div class="word-ja">現金不可（げんきんふか）</div>
+        <div class="word-romaji">genkin · fuka</div>
+        <div class="word-meaning">不收現金 — 現金（genkin）＋不可（fuka，不行）；モスバーガーのセルフオーダーはカードのみ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>決済 vs 会計 — 都是「付錢」但場合不同</strong><br>
+    <strong>決済（けっさい）</strong>：系統 / 交易層面的「完成付款」，App、電子支付、刷卡時用，強調這筆錢的收付已成立。例：QRコード決済、オンライン決済。<br>
+    <strong>会計（かいけい）</strong>：餐廳裡叫人來結帳的動作，或收銀台本身。口語叫服務生：「<em>お会計をお願いします</em>」。也兼指會計師 / 財務部門。<br>
+    簡單記：餐廳叫人結帳 → <strong>会計</strong>；App / 刷卡完成付款 → <strong>決済</strong>。モスバーガーのセルフオーダーが「決済」なのは、アプリ上での電子決済だから。
+  </div>
+
+  <div class="note">
+    📝 <strong>不可（ふか）vs できません</strong><br>
+    <strong>不可</strong> 是書面語，常出現在告示、App 提示。口語說「できません」（無法）或「使えません」（不能用）。
+    看到「〇〇不可」就知道「○○ 不行 / 不接受」。
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">まとめ — 今日 8 單字速覽</div>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>日語</th>
+        <th>讀音</th>
+        <th>意思</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">お席</td>
+        <td class="col-ro">o-seki</td>
+        <td class="col-zh">您的座位（禮貌說法）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">店舗</td>
+        <td class="col-ro">tenpo</td>
+        <td class="col-zh">門市、店面</td>
+      </tr>
+      <tr>
+        <td class="col-ja">店内飲食</td>
+        <td class="col-ro">tennai inshoku</td>
+        <td class="col-zh">內用</td>
+      </tr>
+      <tr>
+        <td class="col-ja">検索</td>
+        <td class="col-ro">kensaku</td>
+        <td class="col-zh">搜尋</td>
+      </tr>
+      <tr>
+        <td class="col-ja">商品</td>
+        <td class="col-ro">shouhin</td>
+        <td class="col-zh">商品、餐點品項</td>
+      </tr>
+      <tr>
+        <td class="col-ja">選択</td>
+        <td class="col-ro">sentaku</td>
+        <td class="col-zh">選擇、選取</td>
+      </tr>
+      <tr>
+        <td class="col-ja">テーブル番号</td>
+        <td class="col-ro">tēburu bangou</td>
+        <td class="col-zh">桌號</td>
+      </tr>
+      <tr>
+        <td class="col-ja">決済</td>
+        <td class="col-ro">kessai</td>
+        <td class="col-zh">付款、結帳</td>
+      </tr>
+      <tr>
+        <td class="col-ja">現金不可</td>
+        <td class="col-ro">genkin fuka</td>
+        <td class="col-zh">不收現金</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    if (!button) return;
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -15,17 +15,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
 </head>
 <body>
-<div class="wrap"><a href="../index.html" class="back-link">← 返回 学習日誌</a>
-
-  <header class="masthead">
-    <div class="left">日常表達 · Daily</div>
-    <div class="center">今 日 の 学 習</div>
-    <div class="right">2026 / 05 / 02</div>
-  </header>
-
+<div class="wrap">
+<site-header></site-header>
+  
   <h1 class="page-title">あした</h1>
+<div class="page-meta">日常表達 · Daily · 2026 / 05 / 02</div>
   <p class="page-subtitle">明天 — 實用生活表達</p>
 
   <div id="warning" class="warning">
@@ -141,6 +138,7 @@
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
   </div>
+<site-footer></site-footer>
 </div>
 
 <script src="../js/tts.js"></script>

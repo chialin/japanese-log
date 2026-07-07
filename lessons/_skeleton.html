@@ -45,20 +45,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
 </head>
 <body>
 <div class="wrap">
-  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+<site-header></site-header>
 
-  <header class="masthead">
-    <!-- TODO: 三欄文字（左：類別、中：本課大標題、右：日期） -->
-    <div class="left">類別 · Category</div>
-    <div class="center">本　課　名　稱</div>
-    <div class="right">2026 / 05 / 13</div>
-  </header>
-
+  
   <!-- TODO: 大標題（中文 / 假名皆可），span.accent 是要染上強調色的字 -->
   <h1 class="page-title">本課標題 <span class="accent">重點字</span></h1>
+<div class="page-meta">類別 · Category · 2026 / 05 / 13</div>
   <p class="page-subtitle">一句話副標 — 說明本課要做什麼</p>
 
   <div class="speed-control">
@@ -105,6 +101,7 @@
     <span class="next-sub">一句話說明下一篇要學什麼</span>
   </a>
   -->
+<site-footer></site-footer>
 </div>
 
 <script src="../js/tts.js"></script>

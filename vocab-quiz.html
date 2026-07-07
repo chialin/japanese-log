@@ -57,19 +57,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="shared.css" />
+<script src="js/site-chrome.js" defer></script>
 </head>
 <body>
 <div class="wrap">
+<site-header></site-header>
 
-  <a href="index.html" class="back-link">← 返回 学習日誌</a>
 
-  <header class="masthead">
-    <div class="left">れんしゅう · Practice</div>
-    <div class="center">看 図 猜 詞</div>
-    <div class="right">N5 · 単語</div>
-  </header>
-
+  
   <h1 class="page-title">看圖猜<span class="accent">詞</span></h1>
+<div class="page-meta">れんしゅう · Practice · N5 · 単語</div>
   <p class="page-subtitle">看 emoji 選出正確的日文單字 · 答對會唸給你聽 🔊</p>
 
   <div class="speed-control">
@@ -119,6 +116,7 @@
     <button class="next-btn" id="restartBtn">↺ 再來一輪</button>
   </div>
 
+<site-footer></site-footer>
 </div>
 
 <script src="js/tts.js"></script>

@@ -14,17 +14,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
 </head>
 <body>
-<div class="wrap"><a href="../index.html" class="back-link">← 返回 学習日誌</a>
-
-  <header class="masthead">
-    <div class="left">五十音 · Gojuon</div>
-    <div class="center">行 の 練 習</div>
-    <div class="right">2026 / 05 / 03</div>
-  </header>
-
+<div class="wrap">
+<site-header></site-header>
+  
   <h1 class="page-title">な<span class="accent">行</span></h1>
+<div class="page-meta">五十音 · Gojuon · 2026 / 05 / 03</div>
   <p class="page-subtitle">な・に・ぬ・ね・の</p>
 
   <div class="speed-control">
@@ -197,6 +194,7 @@
       <button class="play-btn" data-text="なつの あさ">▶</button>
     </div>
   </div>
+<site-footer></site-footer>
 </div>
 
 <script src="../js/tts.js"></script>

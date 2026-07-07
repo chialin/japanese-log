@@ -33,25 +33,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
 </head>
 <body>
 <div class="wrap">
+<site-header></site-header>
 
-  <a href="../index.html" style="display:inline-flex;align-items:center;gap:6px;color:var(--ink-mute);text-decoration:none;font-size:14px;letter-spacing:.08em;margin-bottom:32px;font-family:'Cormorant Garamond',serif;font-style:italic;transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-mute)'">← 返回 学習日誌</a>
 
   <!-- 刊頭 -->
-  <header class="masthead">
-    <div class="left">No. 001 · 日本語</div>
-    <div class="center">今 日 の 読 書</div>
-    <div class="right">2026 / 05 / 05</div>
-  </header>
-
+  
   <!-- Hero 區 -->
   <section class="hero">
     <div class="hero-meta">
       <div>
         <div class="kicker">— Today's Reading —</div>
         <h1 class="hero-title">蝶<span class="accent">の</span>話</h1>
+<div class="page-meta">No. 001 · 日本語 · 2026 / 05 / 05</div>
         <p class="hero-sub">夢中總有父親的聲音。<br/>記下今天讀過的詞、聽過的故事，<br/>讓五十音慢慢長成風景。</p>
       </div>
       <div class="hero-foot">
@@ -214,6 +211,7 @@
     <div>明日も、また。</div>
   </footer>
 
+<site-footer></site-footer>
 </div>
 </body>
 </html>

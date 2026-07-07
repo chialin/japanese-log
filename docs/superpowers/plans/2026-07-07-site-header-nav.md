@@ -371,15 +371,20 @@ git commit -m "Add resources.html hub page linking phrasebook + slowpaper"
 // scripts/add-site-chrome.mjs
 //
 // 冪等地把全站頁面套上新的 <site-header>/<site-footer>：
-//   1. 插入 js/site-chrome.js 的 <script> include（緊接 shared.css <link> 之後）
-//   2. 移除舊的「← 返回 学習日誌」連結（class="back-link" 或早期版本的 inline style 寫法）
-//   3. 移除 <header class="masthead">…</header>，把裡面 left/right 文字合併成
+//   1. 移除舊的「← 返回 学習日誌」連結（class="back-link" 或早期版本的 inline style 寫法）
+//   2. 移除 <header class="masthead">…</header>，把裡面 left/right 文字合併成
 //      <div class="page-meta">{left} · {right}</div>，插在檔案第一個 </h1> 之後
 //      （抓不到 <h1> 的頁面——目前已知 slowpaper.html / my-name-katakana.html——
 //       印警告，交給後續手動處理，不自動插入）
-//   4. 在 <div class="wrap"> 或 <div class="container"> 開頭標籤後插入 <site-header></site-header>
-//   5. 在第一個 <script 標籤之前，找最後一個 </div>（也就是 wrap/container 收尾），
+//   3. 在 <div class="wrap"> 或 <div class="container"> 開頭標籤後插入 <site-header></site-header>
+//   4. 在第一個 <script 標籤之前，找最後一個 </div>（也就是 wrap/container 收尾），
 //      在它之前插入 <site-footer></site-footer>
+//      —— 這一步必須在插入 js/site-chrome.js 的 <script> include（第 5 步）**之前**
+//      執行：如果先插入 <head> 裡的 <script src=".../site-chrome.js">，
+//      「第一個 <script 標籤」就會變成那一行，把搜尋範圍整個收窄到 <head> 內，
+//      導致 </div> 永遠找不到、<site-footer> 插不進去。
+//   5. 插入 js/site-chrome.js 的 <script> include（緊接 shared.css <link> 之後，
+//      放在最後一步，才不會干擾第 4 步對「第一個 <script 標籤」的搜尋）
 //
 // 已含 <site-header 的檔案視為處理過，整檔 skip（可重複執行、冪等）。
 //
@@ -410,19 +415,10 @@ for (const file of files) {
   const prefix = file.includes('/') ? '../' : '';
   let out = src;
 
-  // 1. script include
-  const cssLineMatch = out.match(/^.*<link rel="stylesheet" href="(?:\.\.\/)?shared\.css"\s*\/?>.*$/m);
-  if (!cssLineMatch) {
-    console.error(`✗ ${file} — no shared.css link found, skipped entirely`);
-    continue;
-  }
-  const cssLine = cssLineMatch[0];
-  out = out.replace(cssLine, `${cssLine}\n<script src="${prefix}js/site-chrome.js" defer></script>`);
-
-  // 2. 移除舊的返回首頁連結（class="back-link" 或早期 inline-style 寫法）
+  // 1. 移除舊的返回首頁連結（class="back-link" 或早期 inline-style 寫法）
   out = out.replace(/[ \t]*<a href="(?:\.\.\/)?index\.html"[^>]*>[\s\S]*?返回[\s\S]*?<\/a>\n?/, '');
 
-  // 3. 移除 masthead，抓 left/right，插入 page-meta
+  // 2. 移除 masthead，抓 left/right，插入 page-meta
   const mastheadMatch = out.match(/<header class="masthead">[\s\S]*?<\/header>\n?/);
   if (mastheadMatch) {
     const block = mastheadMatch[0];
@@ -443,7 +439,7 @@ for (const file of files) {
     console.error(`✗ ${file} — no masthead found (unexpected)`);
   }
 
-  // 4. 插入 <site-header>：wrap/container 開頭標籤後
+  // 3. 插入 <site-header>：wrap/container 開頭標籤後
   const wrapOpenMatch = out.match(/<div class="(?:wrap|container)">\n?/);
   if (wrapOpenMatch) {
     out = out.replace(wrapOpenMatch[0], `${wrapOpenMatch[0]}<site-header></site-header>\n`);
@@ -451,7 +447,10 @@ for (const file of files) {
     console.error(`✗ ${file} — no .wrap/.container div found, site-header not inserted`);
   }
 
-  // 5. 插入 <site-footer>：第一個 <script 標籤之前最後一個 </div> 之前
+  // 4. 插入 <site-footer>：第一個 <script 標籤之前最後一個 </div> 之前
+  // 注意：這裡的 <script 搜尋必須在第 5 步插入 <head> 的 site-chrome.js <script> 之前執行，
+  // 否則「第一個 <script 標籤」會變成剛插入的那行，把搜尋範圍收窄到 <head> 內，
+  // 導致 </div> 找不到、<site-footer> 插不進去。
   const scriptIdx = out.search(/<script/);
   const searchRegion = scriptIdx === -1 ? out : out.slice(0, scriptIdx);
   const lastDivIdx = searchRegion.lastIndexOf('</div>');
@@ -459,6 +458,15 @@ for (const file of files) {
     console.error(`✗ ${file} — no closing </div> found, site-footer not inserted`);
   } else {
     out = out.slice(0, lastDivIdx) + '<site-footer></site-footer>\n' + out.slice(lastDivIdx);
+  }
+
+  // 5. script include（放最後一步，避免干擾第 4 步的 <script 搜尋）
+  const cssLineMatch = out.match(/^.*<link rel="stylesheet" href="(?:\.\.\/)?shared\.css"\s*\/?>.*$/m);
+  if (!cssLineMatch) {
+    console.error(`✗ ${file} — no shared.css link found, script include not inserted`);
+  } else {
+    const cssLine = cssLineMatch[0];
+    out = out.replace(cssLine, `${cssLine}\n<script src="${prefix}js/site-chrome.js" defer></script>`);
   }
 
   await writeFile(file, out, 'utf8');
@@ -478,6 +486,7 @@ Expected（依目前檔案數推算，實際數字以腳本輸出為準）：
 + credits.html
 + index.html
 + my-name-katakana.html
+skip resources.html
 + slowpaper.html
 + store-phrasebook.html
 + vocab-quiz.html
@@ -486,9 +495,9 @@ Expected（依目前檔案數推算，實際數字以腳本輸出為準）：
 ... (共 61 個 + 行)
 + readings/2026-05-05-reading-cho.html
 
-done: 61 changed, 0 skipped, 2 warnings (missing <h1>)
+done: 61 changed, 1 skipped, 2 warnings (missing <h1>)
 ```
-最後一行的 `2 warnings` 應該對應 `slowpaper.html` 和 `my-name-katakana.html`（腳本會印出這兩行 warning，內容包含各自的 left/right 文字，留給 Task 5 手動處理）。
+注意 `resources.html` 是 Task 3 新增的檔案，掃描時已經含 `<site-header`（Task 3 手寫進去的），所以第一次跑就會 `skip`，不算在 `61 changed` 裡——這是預期行為，不是 bug。最後一行的 `2 warnings` 應該對應 `slowpaper.html` 和 `my-name-katakana.html`（腳本會印出這兩行 warning，內容包含各自的 left/right 文字，留給 Task 5 手動處理）。
 
 - [ ] **Step 3: 驗證冪等性（重跑一次應該全部 skip）**
 
@@ -497,15 +506,16 @@ Expected:
 ```
 skip credits.html
 skip index.html
-... (61 行 skip)
+skip resources.html
+... (62 行 skip)
 
-done: 0 changed, 61 skipped, 0 warnings (missing <h1>)
+done: 0 changed, 62 skipped, 0 warnings (missing <h1>)
 ```
 
 - [ ] **Step 4: grep 驗證全站都有 `<site-header>`**
 
 Run: `grep -rl "<site-header" *.html lessons/*.html readings/*.html | wc -l`
-Expected: `61`
+Expected: `62`（61 個既有頁 + `resources.html`）
 
 - [ ] **Step 5: grep 驗證 masthead 完全消失**
 

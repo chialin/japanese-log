@@ -268,11 +268,79 @@ body::before {
   padding: 6px 10px; border: 1px solid var(--line);
 }
 
+/* ── Site header（全站導覽列，取代舊 masthead）── */
+.site-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 4px; margin: 0 0 32px;
+  background: var(--paper-deep);
+  border-bottom: 2px solid var(--accent);
+}
+.site-header.home-page { justify-content: flex-end; }
+.site-header .home-link {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  color: var(--ink-mute); text-decoration: none; font-size: 14px; letter-spacing: .1em;
+  transition: color .2s;
+}
+.site-header .home-link:hover { color: var(--accent); }
+.site-header .site-nav {
+  display: flex; gap: 18px;
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; letter-spacing: .08em;
+}
+.site-header .site-nav a { color: var(--ink-mute); text-decoration: none; transition: color .2s; }
+.site-header .site-nav a:hover { color: var(--accent); }
+.site-header .site-nav .sep { color: var(--line); }
+
+/* ── Page meta（標題正下方的類別＋日期，取代舊 masthead 三欄）── */
+.page-meta {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  color: var(--ink-mute); font-size: 14px; letter-spacing: .12em;
+  margin-bottom: 28px;
+}
+
+/* ── Footer（全站共用，原本只在 index.html）── */
+.footer-area {
+  margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  color: var(--ink-mute); font-size: 14px; letter-spacing: .1em;
+}
+.footer-area a { color: var(--accent); text-decoration: none; }
+.footer-area a:hover { text-decoration: underline; }
+.footer-area .seal {
+  width: 40px; height: 40px; border: 2px solid var(--accent); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 16px;
+  transform: rotate(-6deg);
+}
+
+/* ── Lesson/resource card list（原本只在 index.html 內嵌，現在 resources.html 也要用）── */
+.lesson-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.lesson-link {
+  display: block; background: rgba(255,255,255,.55); border: 1px solid var(--line);
+  border-left: 3px solid var(--accent); padding: 16px 20px; text-decoration: none; color: inherit;
+  transition: border-color .15s, background .15s, transform .15s;
+}
+.lesson-link:hover { border-color: var(--accent); background: rgba(255,255,255,.8); transform: translateX(4px); }
+.lesson-link[href^="readings/"] { border-left-color: var(--reading-accent); }
+.lesson-link[href^="readings/"]:hover { border-color: var(--reading-accent); }
+.lesson-meta {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; letter-spacing: .15em;
+  color: var(--ink-mute); text-transform: uppercase; margin-bottom: 4px;
+}
+.lesson-title {
+  font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 600; margin-bottom: 4px;
+  display: flex; align-items: center; gap: 8px;
+}
+.lesson-title .arrow { margin-left: auto; color: var(--ink-mute); transition: transform .15s; }
+.lesson-link:hover .lesson-title .arrow { color: var(--accent); transform: translateX(4px); }
+.lesson-summary { font-size: 14px; color: var(--ink-soft); }
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .wrap { padding: 32px 18px 64px; }
   .masthead { grid-template-columns: 1fr; text-align: center; gap: 10px; }
   .masthead .right { text-align: center; }
+  .site-header { flex-wrap: wrap; justify-content: center; gap: 10px; text-align: center; }
   .gojuon { gap: 6px; }
   .kana-big { font-size: 26px; }
   .kana-compare { grid-template-columns: 1fr; }

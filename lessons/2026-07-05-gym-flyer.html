@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ジム「Summerキャンペーン」— 入会・特典・体験・施設料・月会費</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 漢字大字解析卡 */
+.kanji-spot{display:grid;grid-template-columns:auto 1fr;gap:0 20px;align-items:center;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;margin-bottom:12px;}
+.kanji-big{font-family:'Shippori Mincho',serif;font-size:52px;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em;}
+.kanji-info{display:flex;flex-direction:column;gap:4px;}
+.kanji-reading{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);}
+.kanji-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);}
+.kanji-meaning{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+
+/* 速記表 */
+.summary-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;}
+.summary-table th{background:var(--paper-deep);color:var(--ink-mute);font-weight:600;padding:8px 12px;text-align:left;border-bottom:2px solid var(--line);}
+.summary-table td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+.summary-table tr:last-child td{border-bottom:none;}
+.col-ja{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink);white-space:nowrap;}
+.col-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);}
+.col-zh{color:var(--ink-soft);}
+
+/* 告示牌重現框 */
+.sign-box{background:var(--paper-deep);border:2px solid var(--accent-soft);border-radius:8px;padding:20px 24px;margin:16px 0;font-family:'Shippori Mincho',serif;}
+.sign-title{font-size:22px;font-weight:700;color:var(--ink);margin-bottom:12px;}
+.sign-step{font-size:15px;color:var(--ink-soft);margin:6px 0;line-height:1.8;}
+.sign-step strong{color:var(--accent);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
+
+  <header class="masthead">
+    <div class="left">主題 · 生活</div>
+    <div class="center">ジム広告 × キャンペーン</div>
+    <div class="right">2026 / 07 / 05</div>
+  </header>
+
+  <h1 class="page-title">今日の単語 — <span class="accent">Summerキャンペーン</span></h1>
+  <p class="page-subtitle">健身房入會傳單學到的 10 個單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>今日の場面</strong><br>
+    在健身房拿到一張「Summerキャンペーン」傳單，寫著「6/1〜7/31 キャンペーン期間中にご入会の方」，體驗費、年間施設料、月会費全部変成 0 円，還有 4 個特典。今天的單字都來自這張傳單。
+  </div>
+
+  <!-- 告示牌原文重現 -->
+  <div class="sign-box">
+    <div class="sign-title">Summerキャンペーン</div>
+    <div class="sign-step">6/1〜7/31 <strong>ご入会</strong>の方</div>
+    <div class="sign-step">特典1〜3 → <strong>0円</strong></div>
+    <div class="sign-step">特典4：オプションが1つ<strong>無料</strong></div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">一、入会・特典 — 加入與優惠</div>
+
+  <div class="section">
+    <div class="section-title">📋 單字與例句</div>
+
+    <div class="word-item" data-text="入会">
+      <div class="word-content">
+        <div class="word-ja">入会（にゅうかい）</div>
+        <div class="word-romaji">nyū · kai</div>
+        <div class="word-meaning">入會 — 入る（はいる，加入）＋ 会（かい，會、社團）；辦健身房、俱樂部會員時常用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="特典">
+      <div class="word-content">
+        <div class="word-ja">特典（とくてん）</div>
+        <div class="word-romaji">toku · ten</div>
+        <div class="word-meaning">優惠、贈禮 — 傳單上「特典1〜4」就是入會送的四項好處</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">二、体験 — 先試試看</div>
+
+  <div class="kanji-spot" data-text="たいけん">
+    <div class="kanji-big">体験</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">体験（たいけん）</div>
+      <div class="kanji-romaji">tai · ken</div>
+      <div class="kanji-meaning">體驗 — 体（からだ，身體）＋ 験（けん，試驗）；「体験料」就是體驗課程要付的費用</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">三、パーソナルトレーニング — 個人教練</div>
+
+  <div class="section">
+    <div class="section-title">🏋️ 單字與例句</div>
+
+    <div class="word-item" data-text="パーソナルトレーニング">
+      <div class="word-content">
+        <div class="word-ja">パーソナルトレーニング</div>
+        <div class="word-romaji">pāsonaru torēningu</div>
+        <div class="word-meaning">個人教練訓練 — 一對一由教練指導的健身課程，外來語直接音譯</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>体験料 vs 施設料 vs 月会費</strong><br>
+    <strong>体験料</strong>：第一次試上課的費用。<br>
+    <strong>施設料</strong>：使用健身房設施的年費。<br>
+    <strong>月会費</strong>：每個月要繳的會員費。<br>
+    傳單上這三項在活動期間全部都變成 0 円。
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">四、施設料・月会費 — 使用費與月費</div>
+
+  <div class="section">
+    <div class="section-title">💴 單字與例句</div>
+
+    <div class="word-item" data-text="施設料">
+      <div class="word-content">
+        <div class="word-ja">施設料（しせつりょう）</div>
+        <div class="word-romaji">shisetsu · ryō</div>
+        <div class="word-meaning">設施費 — 施設（しせつ，設施）＋ 料（りょう，費用）；健身房場地使用的相關費用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="月会費">
+      <div class="word-content">
+        <div class="word-ja">月会費（げっかいひ）</div>
+        <div class="word-romaji">gek · kaihi</div>
+        <div class="word-meaning">月費 — 月（げつ，月）＋ 会費（かいひ，會費）；每月固定要繳的會員費用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">五、オプション・無料・加圧</div>
+
+  <div class="section">
+    <div class="section-title">➕ 特典4 的選項</div>
+
+    <div class="word-item" data-text="オプション">
+      <div class="word-content">
+        <div class="word-ja">オプション</div>
+        <div class="word-romaji">opushon</div>
+        <div class="word-meaning">選項、附加項目 — 傳單上「オプションが1つ無料」表示可以在兩個選項中挑一個免費體驗</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="無料">
+      <div class="word-content">
+        <div class="word-ja">無料（むりょう）</div>
+        <div class="word-romaji">mu · ryō</div>
+        <div class="word-meaning">免費 — 無（む，沒有）＋ 料（りょう，費用）；對比「有料（ゆうりょう）」= 需付費</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="加圧トレーニング">
+      <div class="word-content">
+        <div class="word-ja">加圧トレーニング（かあつトレーニング）</div>
+        <div class="word-romaji">ka · atsu torēningu</div>
+        <div class="word-meaning">加壓訓練 — 加圧（かあつ，加壓）＋ トレーニング（訓練）；用專用帶子限制血流的訓練法，是特典4的選項之一</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">六、申し込み — 報名申請</div>
+
+  <div class="kanji-spot" data-text="もうしこみ">
+    <div class="kanji-big">申し込み</div>
+    <div class="kanji-info">
+      <div class="kanji-reading">申し込み（もうしこみ）</div>
+      <div class="kanji-romaji">mōshi · komi</div>
+      <div class="kanji-meaning">申請、報名 — 傳單上「体験申し込み」＝體驗申請，QR コードから申し込む＝從 QR code 申請</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">まとめ — 今日 10 單字速覽</div>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>日語</th>
+        <th>讀音</th>
+        <th>意思</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">入会</td>
+        <td class="col-ro">nyūkai</td>
+        <td class="col-zh">入會</td>
+      </tr>
+      <tr>
+        <td class="col-ja">特典</td>
+        <td class="col-ro">tokuten</td>
+        <td class="col-zh">優惠、贈禮</td>
+      </tr>
+      <tr>
+        <td class="col-ja">体験</td>
+        <td class="col-ro">taiken</td>
+        <td class="col-zh">體驗</td>
+      </tr>
+      <tr>
+        <td class="col-ja">パーソナルトレーニング</td>
+        <td class="col-ro">pāsonaru torēningu</td>
+        <td class="col-zh">個人教練訓練</td>
+      </tr>
+      <tr>
+        <td class="col-ja">施設料</td>
+        <td class="col-ro">shisetsuryō</td>
+        <td class="col-zh">設施費</td>
+      </tr>
+      <tr>
+        <td class="col-ja">月会費</td>
+        <td class="col-ro">gekkaihi</td>
+        <td class="col-zh">月費</td>
+      </tr>
+      <tr>
+        <td class="col-ja">オプション</td>
+        <td class="col-ro">opushon</td>
+        <td class="col-zh">選項、附加項目</td>
+      </tr>
+      <tr>
+        <td class="col-ja">無料</td>
+        <td class="col-ro">muryō</td>
+        <td class="col-zh">免費</td>
+      </tr>
+      <tr>
+        <td class="col-ja">加圧トレーニング</td>
+        <td class="col-ro">kaatsu torēningu</td>
+        <td class="col-zh">加壓訓練</td>
+      </tr>
+      <tr>
+        <td class="col-ja">申し込み</td>
+        <td class="col-ro">mōshikomi</td>
+        <td class="col-zh">申請、報名</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    if (!button) return;
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

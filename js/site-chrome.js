@@ -18,13 +18,15 @@ class SiteHeader extends HTMLElement {
       ? ''
       : `<a class="home-link" href="${prefix}index.html">學習日誌</a>`;
     this.innerHTML = `
-      <div class="site-header${home ? ' home-page' : ''}">
-        ${homeLink}
-        <nav class="site-nav">
-          <a href="${prefix}my-name-katakana.html">關於我</a><span class="sep">·</span>
-          <a href="${prefix}resources.html">資源</a><span class="sep">·</span>
-          <a href="${prefix}vocab-quiz.html">練習</a>
-        </nav>
+      <div class="site-header">
+        <div class="site-header-inner${home ? ' home-page' : ''}">
+          ${homeLink}
+          <nav class="site-nav">
+            <a href="${prefix}my-name-katakana.html">關於我</a><span class="sep">·</span>
+            <a href="${prefix}resources.html">資源</a><span class="sep">·</span>
+            <a href="${prefix}vocab-quiz.html">練習</a>
+          </nav>
+        </div>
       </div>
     `;
   }

@@ -241,26 +241,32 @@ body::before {
 }
 
 /* ── Site header（全站導覽列，取代舊 masthead）── */
+/* .site-header 用 100vw + 負 margin 貼齊「瀏覽器視窗」的真正邊緣（不受 .wrap/
+   .container 置中欄寬限制）；.site-header-inner 才是實際內容，寬度跟頁面欄位
+   對齊、內距用跟頁面內容一致的 32px，字距才不會太緊 */
 .site-header {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 16px 4px; margin: 0 0 32px;
+  width: 100vw; margin: -48px calc(50% - 50vw) 32px;
   background: var(--paper-deep);
   border-bottom: 2px solid var(--accent);
 }
-.site-header.home-page { justify-content: flex-end; }
-.site-header .home-link {
-  font-family: 'Cormorant Garamond', serif; font-style: italic;
-  color: var(--ink-mute); text-decoration: none; font-size: 14px; letter-spacing: .1em;
+.site-header-inner {
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 760px; margin: 0 auto; padding: 18px 32px;
+}
+.site-header-inner.home-page { justify-content: flex-end; }
+.site-header-inner .home-link {
+  font-family: 'Shippori Mincho', serif; font-weight: 600;
+  color: var(--ink-mute); text-decoration: none; font-size: 14px; letter-spacing: .05em;
   transition: color .2s;
 }
-.site-header .home-link:hover { color: var(--accent); }
-.site-header .site-nav {
-  display: flex; gap: 18px;
-  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; letter-spacing: .08em;
+.site-header-inner .home-link:hover { color: var(--accent); }
+.site-header-inner .site-nav {
+  display: flex; gap: 22px;
+  font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 14px; letter-spacing: .05em;
 }
-.site-header .site-nav a { color: var(--ink-mute); text-decoration: none; transition: color .2s; }
-.site-header .site-nav a:hover { color: var(--accent); }
-.site-header .site-nav .sep { color: var(--line); }
+.site-header-inner .site-nav a { color: var(--ink-mute); text-decoration: none; transition: color .2s; }
+.site-header-inner .site-nav a:hover { color: var(--accent); }
+.site-header-inner .site-nav .sep { color: var(--line); font-weight: 400; }
 
 /* ── Page meta（標題正下方的類別＋日期，取代舊 masthead 三欄）── */
 .page-meta {
@@ -310,7 +316,11 @@ body::before {
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .wrap { padding: 32px 18px 64px; }
-  .site-header { flex-wrap: wrap; justify-content: center; gap: 10px; text-align: center; }
+  .site-header { margin: -32px calc(50% - 50vw) 24px; }
+  .site-header-inner {
+    flex-wrap: wrap; justify-content: center; gap: 10px; text-align: center;
+    padding: 14px 18px;
+  }
   .gojuon { gap: 6px; }
   .kana-big { font-size: 26px; }
   .kana-compare { grid-template-columns: 1fr; }

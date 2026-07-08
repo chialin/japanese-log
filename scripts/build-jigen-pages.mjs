@@ -28,8 +28,6 @@ const PAGE_CSS = `
 .src-arrow{color:var(--ink-mute);margin:0 6px;font-size:14px;}
 .stroke{width:64px;height:64px;background:#fff;border:1px solid var(--line);display:block;}
 .tag-same{display:inline-block;padding:2px 8px;font-size:13px;font-weight:600;font-family:'Shippori Mincho',serif;background:var(--accent-pale);color:var(--accent);}
-.footer{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);text-align:center;}
-.footer a{color:var(--accent);text-decoration:none;}.footer a:hover{text-decoration:underline;}
 .attrib{margin-top:14px;font-size:12px;color:var(--ink-mute);font-style:normal;font-family:'Noto Serif TC',serif;}
 .attrib a{color:var(--ink-mute);}
 .next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
@@ -80,18 +78,13 @@ ${PAGE_CSS}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
 </head>
 <body>
 <div class="wrap">
-  <a href="../index.html" class="back-link">← 返回 学習日誌</a>
-
-  <header class="masthead">
-    <div class="left">文字解說 · Kana</div>
-    <div class="center">今 日 の 学 習</div>
-    <div class="right">2026 / 05 / 17</div>
-  </header>
-
+<site-header></site-header>
   <h1 class="page-title">${kindZh} 字<span class="accent">源</span></h1>
+<div class="page-meta">文字解說 · Kana · 2026 / 05 / 17</div>
   <p class="page-subtitle">${subtitle}</p>
 
   <div class="tip">
@@ -131,13 +124,11 @@ ${rows(data)}      </tbody>
     <span class="next-sub">${nextSub}</span>
   </a>
 
-  <div class="footer">
-    <a href="../index.html">← 回到首頁</a>　·　2026年5月17日　·　日本語学習日誌 🌸
-    <div class="attrib">
-      筆順圖出自 <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a>，
-      授權 <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC-BY-SA 3.0</a>。
-    </div>
+  <div class="attrib">
+    筆順圖出自 <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a>，
+    授權 <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC-BY-SA 3.0</a>。
   </div>
+<site-footer></site-footer>
 </div>
 </body>
 </html>

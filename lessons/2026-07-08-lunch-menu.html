@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>午餐菜單 — おすすめ・本日のランチプレート</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 漢字大字解析卡 */
+.kanji-spot{display:grid;grid-template-columns:auto 1fr;gap:0 20px;align-items:center;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;margin-bottom:12px;}
+.kanji-big{font-family:'Shippori Mincho',serif;font-size:52px;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em;}
+.kanji-info{display:flex;flex-direction:column;gap:4px;}
+.kanji-reading{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);}
+.kanji-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);}
+.kanji-meaning{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+
+/* 速記表 */
+.summary-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;}
+.summary-table th{background:var(--paper-deep);color:var(--ink-mute);font-weight:600;padding:8px 12px;text-align:left;border-bottom:2px solid var(--line);}
+.summary-table td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+.summary-table tr:last-child td{border-bottom:none;}
+.col-ja{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink);white-space:nowrap;}
+.col-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);}
+.col-zh{color:var(--ink-soft);}
+
+/* 告示牌重現框 */
+.sign-box{background:var(--paper-deep);border:2px solid var(--accent-soft);border-radius:8px;padding:20px 24px;margin:16px 0;font-family:'Shippori Mincho',serif;}
+.sign-title{font-size:22px;font-weight:700;color:var(--ink);margin-bottom:12px;}
+.sign-step{font-size:15px;color:var(--ink-soft);margin:6px 0;line-height:1.8;}
+.sign-step strong{color:var(--accent);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">午餐菜單 — <span class="accent">おすすめ</span></h1>
+<div class="page-meta">主題 · 生活 · 2026 / 07 / 08</div>
+  <p class="page-subtitle">「La Première Pousse」Lunch Time Menu 學到的 12 個單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>今日的場景</strong><br>
+    在咖啡店拿到一張「Lunch Time Menu」，寫著「本日のランチプレート」，由デリ風総菜、メイン料理、たっぷりサラダ組成，還可以選トッピング、加デザート盛り合わせ。今天的單字都來自這張菜單，裡面也藏著「推薦」的日文——おすすめ。
+  </div>
+
+  <!-- 菜單原文重現 -->
+  <div class="sign-box">
+    <div class="sign-title">本日のランチプレート</div>
+    <div class="sign-step">A：ランチプレート → <strong>¥1,210</strong></div>
+    <div class="sign-step">B：A ＋ ランチドリンク → <strong>¥1,430</strong></div>
+    <div class="sign-step">C：A ＋ デザート盛り合わせ → <strong>¥1,595</strong></div>
+    <div class="sign-step">D：A ＋ デザート盛り合わせ ＋ ランチドリンク → <strong>¥1,815</strong></div>
+    <div class="sign-step">トッピング（合鴨スモーク・サーモン・モッツァレラチーズ）<strong>おすすめ</strong>です</div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">一、おすすめ — 推薦</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    菜單最下面寫著「トッピングもおすすめです」——「おすすめ」就是中文的<span class="compare">推薦</span>。日常最常用的推薦說法就是這個字，比起漢字「推薦（すいせん）」更口語、更常出現在菜單和店員的話裡。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 單字與例句</div>
+
+    <div class="word-item" data-text="ランチプレート">
+      <div class="word-content">
+        <div class="word-ja">ランチプレート</div>
+        <div class="word-romaji">ranchi purēto</div>
+        <div class="word-meaning">午餐拼盤 — ランチ（英語 lunch，午餐；片假名菜單課複習過）＋ プレート（英語 plate，盤子）；主餐、配菜、沙拉裝在同一個盤子上的套餐形式</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おすすめ">
+      <div class="word-content">
+        <div class="word-ja">おすすめ</div>
+        <div class="word-romaji">o · susume</div>
+        <div class="word-meaning">推薦 — 動詞「勧める（すすめる，勸、推薦）」的名詞形加上美化語「お」；菜單、店員最常用的推薦說法</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="本日">
+      <div class="word-content">
+        <div class="word-ja">本日（ほんじつ）</div>
+        <div class="word-romaji">hon · jitsu</div>
+        <div class="word-meaning">今天（正式說法）— 比日常說的「今日（きょう）」更書面、更常出現在菜單、公告上</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">二、ランチプレート的三大要素</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    盤子旁邊用虛線標出三個部分：デリ風総菜、本日のメイン料理、たっぷりサラダ。「サラダ」之前在<span class="compare">サ行片假名</span>學過，這裡是複習＋新用法。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🍽️ 單字與例句</div>
+
+    <div class="word-item" data-text="総菜">
+      <div class="word-content">
+        <div class="word-ja">総菜（そうざい）</div>
+        <div class="word-romaji">sō · zai</div>
+        <div class="word-meaning">家常配菜、小菜 — 「デリ風総菜」＝西式熟食風的配菜，超市熟食區也常看到這個字</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="メイン料理">
+      <div class="word-content">
+        <div class="word-ja">メイン料理（めいんりょうり）</div>
+        <div class="word-romaji">mein ryōri</div>
+        <div class="word-meaning">主餐、主菜 — メイン（英語 main）＋ 料理（りょうり，料理）；「本日のメイン料理」＝今日主餐</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">三、デザート盛り合わせ・おかわり</div>
+
+  <div class="section">
+    <div class="section-title">🍮 單字與例句</div>
+
+    <div class="word-item" data-text="デザート盛り合わせ">
+      <div class="word-content">
+        <div class="word-ja">デザート盛り合わせ（でざーともりあわせ）</div>
+        <div class="word-romaji">dezāto moriawase</div>
+        <div class="word-meaning">綜合甜點拼盤 — デザート（甜點）＋ 盛り合わせ（もりあわせ，拼盤、什錦）；布丁配冰淇淋這種組合就是典型例子</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おかわり">
+      <div class="word-content">
+        <div class="word-ja">おかわり</div>
+        <div class="word-romaji">o · kawari</div>
+        <div class="word-meaning">再來一份、續加 — 菜單上「自家製酵母パンのおかわりは1つまで無料」＝手工酵母麵包可以免費續加一個；「無料」之前在健身房傳單學過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">四、トッピングを選ぶ — 挑選加料</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    可加購的三種トッピング：合鴨スモーク、サーモン、モッツァレラチーズ（「チーズ」之前在タ行片假名學過），選幾種要「裏面よりお選びください」。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🥐 單字與例句</div>
+
+    <div class="word-item" data-text="サーモン">
+      <div class="word-content">
+        <div class="word-ja">サーモン</div>
+        <div class="word-romaji">sāmon</div>
+        <div class="word-meaning">鮭魚、鮭魚片 — 英語 salmon 的外來語，常見於菜單的加料選項</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="合鴨">
+      <div class="word-content">
+        <div class="word-ja">合鴨（あいがも）</div>
+        <div class="word-romaji">ai · gamo</div>
+        <div class="word-meaning">合鴨（真鴨與家鴨的雜交種）— 「合鴨スモーク」＝煙燻合鴨，是這家店的招牌トッピング之一</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="うなぎ">
+      <div class="word-content">
+        <div class="word-ja">鰻（うなぎ）</div>
+        <div class="word-romaji">u · nagi</div>
+        <div class="word-meaning">鰻魚 — 跟合鴨、サーモン一樣是常見的日式食材蛋白質，蒲焼き（かばやき，蒲燒鰻）最有名；漢字筆畫多，日常常直接寫平假名うなぎ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="裏面">
+      <div class="word-content">
+        <div class="word-ja">裏面（うらめん）</div>
+        <div class="word-romaji">ura · men</div>
+        <div class="word-meaning">背面、反面 — 「裏面よりお選びください」＝請從背面（的選項）挑選，指菜單背面還有更多品項</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お選びください">
+      <div class="word-content">
+        <div class="word-ja">お選びください（おえらびください）</div>
+        <div class="word-romaji">o · erabi kudasai</div>
+        <div class="word-meaning">請挑選 — 動詞「選ぶ（えらぶ，挑選）」的敬語命令形；之前在摩斯漢堡點餐學過名詞「選択（せんたく）」，這裡是動詞版本</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>之前學過、這次又出現的字</strong><br>
+    <strong>サラダ／チーズ／パン</strong>：片假名行課程學過的單字，這裡是實際菜單裡的複習。<br>
+    <strong>税込（ぜいこみ）</strong>：牛丼、水蜜桃傳單都出現過，這張菜單右上角「＊価格は税込」也是同一個字。<br>
+    <strong>無料（むりょう）</strong>：健身房傳單學過，這裡指「麵包續加一個免費」。<br>
+    <strong>選択（せんたく）</strong>：摩斯漢堡點餐學過的名詞「選擇」，這裡搭配動詞「選ぶ」的敬語形式一起記。<br>
+    <strong>ランチ</strong>：片假名菜單課學過，這裡加上「タイム」「プレート」變成更完整的詞組。
+  </div>
+
+  <!-- ───────────────────────────── -->
+  <div class="divider">まとめ — 今日 12 單字速覽</div>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>日語</th>
+        <th>讀音</th>
+        <th>意思</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">ランチプレート</td>
+        <td class="col-ro">ranchi purēto</td>
+        <td class="col-zh">午餐拼盤</td>
+      </tr>
+      <tr>
+        <td class="col-ja">おすすめ</td>
+        <td class="col-ro">o susume</td>
+        <td class="col-zh">推薦</td>
+      </tr>
+      <tr>
+        <td class="col-ja">本日</td>
+        <td class="col-ro">honjitsu</td>
+        <td class="col-zh">今天（正式）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">総菜</td>
+        <td class="col-ro">sōzai</td>
+        <td class="col-zh">家常配菜、小菜</td>
+      </tr>
+      <tr>
+        <td class="col-ja">メイン料理</td>
+        <td class="col-ro">mein ryōri</td>
+        <td class="col-zh">主餐、主菜</td>
+      </tr>
+      <tr>
+        <td class="col-ja">デザート盛り合わせ</td>
+        <td class="col-ro">dezāto moriawase</td>
+        <td class="col-zh">綜合甜點拼盤</td>
+      </tr>
+      <tr>
+        <td class="col-ja">おかわり</td>
+        <td class="col-ro">o kawari</td>
+        <td class="col-zh">再來一份、續加</td>
+      </tr>
+      <tr>
+        <td class="col-ja">サーモン</td>
+        <td class="col-ro">sāmon</td>
+        <td class="col-zh">鮭魚</td>
+      </tr>
+      <tr>
+        <td class="col-ja">合鴨</td>
+        <td class="col-ro">aigamo</td>
+        <td class="col-zh">合鴨</td>
+      </tr>
+      <tr>
+        <td class="col-ja">鰻</td>
+        <td class="col-ro">unagi</td>
+        <td class="col-zh">鰻魚</td>
+      </tr>
+      <tr>
+        <td class="col-ja">裏面</td>
+        <td class="col-ro">uramen</td>
+        <td class="col-zh">背面、反面</td>
+      </tr>
+      <tr>
+        <td class="col-ja">お選びください</td>
+        <td class="col-ro">o erabi kudasai</td>
+        <td class="col-zh">請挑選</td>
+      </tr>
+    </tbody>
+  </table>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    if (!button) return;
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+    item.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

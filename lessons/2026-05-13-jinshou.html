@@ -334,13 +334,12 @@
     return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
   }
 
-  // pron-card：整張卡 + 播放按鈕
+  // pron-card：只有播放按鈕會唸
   document.querySelectorAll('.pron-card[data-text]').forEach(card => {
     const button = card.querySelector('.play-btn');
     const text = card.dataset.text;
     const handler = (e) => { e.stopPropagation(); speak(text, button); };
     button.addEventListener('click', handler);
-    card.addEventListener('click', handler);
   });
 
   // word-item：例句
@@ -349,7 +348,6 @@
     const text = item.dataset.text;
     const handler = (e) => { e.stopPropagation(); speak(text, button); };
     button.addEventListener('click', handler);
-    item.addEventListener('click', handler);
   });
 </script>
 </body>

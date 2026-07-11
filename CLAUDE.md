@@ -157,7 +157,7 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 #### 共通 JS 慣例
 
 - 每頁底部都有同一份 TTS init（見下節），並綁定 `.speed-control input` 控制 `rate`
-- 每個 `.kana-card`、`.word-item`、`.phrase`、`.number-card` 等元素帶 `data-text="<日文>"`，點擊就唸
+- 每個 `.kana-card`、`.word-item`、`.phrase`、`.number-card` 等元素帶 `data-text="<日文>"`，但只有內層 `.play-btn` 綁 click 發音——元素本身不綁，避免滑鼠拖曳選字複製時誤觸發音
 - 五十音行頁多一個 `.row-btn` 把該行 5 個 kana 連著唸；數字頁則用 `.count-all`
 
 ## Content Guidelines

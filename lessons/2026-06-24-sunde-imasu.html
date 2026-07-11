@@ -279,7 +279,6 @@
     const text = item.dataset.text;
     const handler = (e) => { e.stopPropagation(); speak(text, button); };
     button.addEventListener('click', handler);
-    item.addEventListener('click', handler);
   });
 </script>
 </body>

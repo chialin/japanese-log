@@ -5,3 +5,5 @@ node_modules/
 .idea/
 .claude/worktrees/
 .superpowers/
+anki/venv/
+anki/audio_cache/

@@ -1,0 +1,14 @@
+{
+  "n5-basic": {
+    "deck_name": "日文單字｜N5基礎",
+    "deck_id": 2059400501,
+    "file_prefix": "n5basic",
+    "csv": "data/n5-basic.csv"
+  },
+  "conversation": {
+    "deck_name": "日文單字｜生活會話",
+    "deck_id": 2059400502,
+    "file_prefix": "conversation",
+    "csv": "data/conversation.csv"
+  }
+}

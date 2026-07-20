@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日の単語 — 教室のことば</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">今日の単語 <span class="accent">教室のことば</span></h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 07 / 14</div>
+  <p class="page-subtitle">今天學的 7 個詞：課堂常用語 3 個＋生活單字 4 個</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    上課時常聽到的「質問はありますか」「くりかえしてください」「正解」，加上「家・いいえ・椅子・犬」四個生活單字。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、教室のことば</div>
+
+  <div class="section">
+    <div class="section-title">📖 單字</div>
+
+    <div class="word-item" data-text="質問はありますか">
+      <div class="word-content">
+        <div class="word-ja">質問はありますか？</div>
+        <div class="word-romaji">shitsumon wa arimasu ka</div>
+        <div class="word-meaning">有問題嗎？— 老師講解完常問的句子</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="くりかえしてください">
+      <div class="word-content">
+        <div class="word-ja">くりかえしてください</div>
+        <div class="word-romaji">kurikaeshite kudasai</div>
+        <div class="word-meaning">請再說一次、請重複 — 沒聽清楚時可以請對方再說一次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="正解">
+      <div class="word-content">
+        <div class="word-ja">正解（せいかい）</div>
+        <div class="word-romaji">seikai</div>
+        <div class="word-meaning">正確答案、答對了 — 老師確認答案時會說的詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、家と生活</div>
+
+  <div class="section">
+    <div class="section-title">📖 單字</div>
+
+    <div class="word-item" data-text="家">
+      <div class="word-content">
+        <div class="word-ja">家（いえ）</div>
+        <div class="word-romaji">ie</div>
+        <div class="word-meaning">家、房子 — 「い」「え」都是短音，兩拍唸得乾脆一點，別跟長音的「いいえ」搞混</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいえ">
+      <div class="word-content">
+        <div class="word-ja">いいえ</div>
+        <div class="word-romaji">iie</div>
+        <div class="word-meaning">不、不是 — 「はい」的反義詞 — 開頭「いい」是長音（い拉長一拍），跟短音的「家（いえ）」要分清楚</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="椅子">
+      <div class="word-content">
+        <div class="word-ja">椅子（いす）</div>
+        <div class="word-romaji">isu</div>
+        <div class="word-meaning">椅子</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="犬">
+      <div class="word-content">
+        <div class="word-ja">犬（いぬ）</div>
+        <div class="word-romaji">inu</div>
+        <div class="word-meaning">狗 — 平板型重音（0型）：「い」低、「ぬ」高，符號 ↘い↗ぬ 標示的就是這一低一高的走勢；後面接助詞（犬が、犬は…）音同樣維持高，不會再降下來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // 通用：所有帶 data-text 的元素 — 只有點 .play-btn 才會唸（避免滑鼠選字複製時誤觸發音）
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

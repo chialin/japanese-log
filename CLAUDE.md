@@ -87,7 +87,9 @@ Stats 與 calendar 會自動重算——`data-kana` / `data-words` / `data-date`
 **新增／更新教材發音的工作流：**
 1. 可發音元素照舊帶 `data-text="<日文>"`（kanji+kana 混寫即可，VOICEVOX 自己判讀）。
 2. 開 VOICEVOX app（engine 自動上 `:50021`），跑 `node scripts/generate-audio.mjs`
-   （預設角色 = 春日部つむぎ ノーマル，speaker_id=8；強制重生加 `--force`）。
+   （預設角色 = 波音リツ ノーマル，speaker_id=9，2026-07-20 起；強制重生加 `--force`。
+   2026-07-20 前的舊音檔多為春日部つむぎ(8)，store-phrasebook.html 用九州そら(16)——
+   重生舊頁時注意語者，別整批蓋成新聲）。
    腳本會掃所有 lesson/reading HTML 的 `data-text`，增量生成 `audio/<sha256-16>.mp3`。
 3. **生完務必 Cmd+Shift+R 硬重整瀏覽器**——檔名 hash 不含參數，重生會覆寫同名檔，cache 不會自動失效。
 

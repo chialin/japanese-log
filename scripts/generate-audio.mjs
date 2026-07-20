@@ -13,8 +13,8 @@
 // （孤立單音不再餵進來——所有頁面已移除單音 data-text，故無單音特殊處理。）
 //
 // 用法：
-//   node scripts/generate-audio.mjs                    # 用預設角色（春日部つむぎ ノーマル, id=8）
-//   node scripts/generate-audio.mjs --speaker 8        # 換角色
+//   node scripts/generate-audio.mjs                    # 用預設角色（波音リツ ノーマル, id=9）
+//   node scripts/generate-audio.mjs --speaker 16       # 換角色（例：store-phrasebook 用九州そら 16）
 //   node scripts/generate-audio.mjs --list-speakers    # 列出所有可選角色
 //   node scripts/generate-audio.mjs --force            # 強制重新生成（即使 cache 已存在）
 
@@ -34,7 +34,7 @@ const args = process.argv.slice(2);
 const force = args.includes('--force');
 const listOnly = args.includes('--list-speakers');
 const speakerIdx = args.indexOf('--speaker');
-const SPEAKER = speakerIdx >= 0 ? parseInt(args[speakerIdx + 1], 10) : 8;
+const SPEAKER = speakerIdx >= 0 ? parseInt(args[speakerIdx + 1], 10) : 9;
 const SPEED = 1.0;
 
 // ── 1. ping engine ───────────────────────

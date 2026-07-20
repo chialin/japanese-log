@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日の単語 — ペアのあいさつ</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 一對句子的外框：左邊一條漸層線把 Q/A 或 去/回 綁在一起 */
+.pair{border-left:3px solid var(--accent-soft);padding-left:14px;margin-bottom:22px;}
+.pair-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);margin-bottom:8px;}
+.pair .word-item{margin-bottom:8px;}
+
+/* 句子解剖：くりかえしてください 分段卡 */
+.breakdown{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch;margin:18px 0;}
+.seg{flex:1;min-width:110px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent);padding:14px 12px;text-align:center;}
+.seg-ja{font-family:'Shippori Mincho',serif;font-size:24px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.seg-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);margin-bottom:8px;}
+.seg-role{font-size:13px;color:var(--ink-soft);line-height:1.6;}
+.conj-flow{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;background:var(--accent-pale);padding:14px 18px;margin:14px 0;font-family:'Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--ink);}
+.conj-flow .arrow{color:var(--accent);font-size:22px;}
+.conj-flow small{display:block;font-size:12px;font-weight:400;color:var(--ink-mute);font-family:'Noto Serif TC',serif;}
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">今日の単語 <span class="accent">ペアのあいさつ</span></h1>
+  <div class="page-meta">句型 · Phrases · 2026 / 07 / 20</div>
+  <p class="page-subtitle">今天的句子全部成對出現：課堂三組一問一答＋居家三對招呼語＋「〜てください」句型解剖</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    這些句子都是「一句來、一句回」的固定搭配——記的時候整對一起背，聽到前半句就能自動接出後半句。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、教室のことば — 一問一答</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    線上課開場老師一定會問的三句確認句。問句結尾都是 <span class="j-mark">〜ますか</span>（嗎？），回答用 <span class="j-mark">〜ます</span>（肯定）或 <span class="j-mark">〜ません</span>（否定）。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 一問一答</div>
+
+    <div class="pair">
+      <div class="pair-label">— Pair 1 · 聲音確認 —</div>
+      <div class="word-item" data-text="聞こえますか">
+        <div class="word-content">
+          <div class="word-ja">聞（き）こえますか？</div>
+          <div class="word-romaji">kikoemasu ka</div>
+          <div class="word-meaning">聽得到嗎？— 線上課開場的聲音測試</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="はい、聞こえます">
+        <div class="word-content">
+          <div class="word-ja">はい、聞（き）こえます</div>
+          <div class="word-romaji">hai, kikoemasu</div>
+          <div class="word-meaning">聽得到 — 把「ますか」的か拿掉就是回答</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="pair-label">— Pair 2 · 畫面確認 —</div>
+      <div class="word-item" data-text="見えますか">
+        <div class="word-content">
+          <div class="word-ja">見（み）えますか？</div>
+          <div class="word-romaji">miemasu ka</div>
+          <div class="word-meaning">看得到嗎？— 跟上句同型：聞こえる（聽得到）／見える（看得到）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="はい、見えます">
+        <div class="word-content">
+          <div class="word-ja">はい、見（み）えます</div>
+          <div class="word-romaji">hai, miemasu</div>
+          <div class="word-meaning">看得到</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="pair-label">— Pair 3 · 有沒有問題 —</div>
+      <div class="word-item" data-text="ありません">
+        <div class="word-content">
+          <div class="word-ja">ありません</div>
+          <div class="word-romaji">arimasen</div>
+          <div class="word-meaning">沒有 — 「質問はありますか？」（7/14 學過）的標準回答；あります（有）的否定形</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、うちのあいさつ — 三對招呼語</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日本家庭每天必說的六句，永遠成對：一個人說前句，另一個人接後句。這六句都是固定慣用語，<strong>整句背起來</strong>，不用拆文法。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 招呼語</div>
+
+    <div class="pair">
+      <div class="pair-label">— 🚪 出門時 —</div>
+      <div class="word-item" data-text="いってきます">
+        <div class="word-content">
+          <div class="word-ja">いってきます</div>
+          <div class="word-romaji">ittekimasu</div>
+          <div class="word-meaning">我出門了 — 出門的人說（字面：去了就回來）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="いってらっしゃい">
+        <div class="word-content">
+          <div class="word-ja">いってらっしゃい</div>
+          <div class="word-romaji">itterasshai</div>
+          <div class="word-meaning">路上小心、慢走 — 留在家的人回</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="pair-label">— 🏠 回家時 —</div>
+      <div class="word-item" data-text="ただいま">
+        <div class="word-content">
+          <div class="word-ja">ただいま</div>
+          <div class="word-romaji">tadaima</div>
+          <div class="word-meaning">我回來了 — 回到家的人說</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="おかえりなさい">
+        <div class="word-content">
+          <div class="word-ja">おかえりなさい</div>
+          <div class="word-romaji">okaerinasai</div>
+          <div class="word-meaning">你回來啦 — 在家的人回；口語常簡化成「おかえり」</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div class="pair-label">— 🍚 吃飯時 —</div>
+      <div class="word-item" data-text="いただきます">
+        <div class="word-content">
+          <div class="word-ja">いただきます</div>
+          <div class="word-romaji">itadakimasu</div>
+          <div class="word-meaning">開動了 — 飯前說，對食物和做飯的人表達感謝</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item" data-text="ごちそうさまでした">
+        <div class="word-content">
+          <div class="word-ja">ごちそうさまでした</div>
+          <div class="word-romaji">gochisousama deshita</div>
+          <div class="word-meaning">我吃飽了、謝謝款待 — 飯後說，跟「いただきます」頭尾呼應</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、句子解剖 — くりかえしてください</div>
+
+  <div class="word-item" data-text="くりかえしてください">
+    <div class="word-content">
+      <div class="word-ja">くりかえしてください</div>
+      <div class="word-romaji">kurikaeshite kudasai</div>
+      <div class="word-meaning">請再說一次、請重複 — 7/14 學過整句，今天拆開看它是怎麼組出來的</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <p style="margin:16px 0 6px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這句其實是兩塊零件拼起來的：
+  </p>
+
+  <div class="breakdown">
+    <div class="seg">
+      <div class="seg-ja">くりかえして</div>
+      <div class="seg-romaji">kurikaeshite</div>
+      <div class="seg-role">動詞「くりかえす（重複）」的<strong>て形</strong><br>＝把動作「接」給後面的字</div>
+    </div>
+    <div class="seg">
+      <div class="seg-ja">ください</div>
+      <div class="seg-romaji">kudasai</div>
+      <div class="seg-role">請（給我）〜<br>接在て形後面＝<strong>請對方做這個動作</strong></div>
+    </div>
+  </div>
+
+  <p style="margin:6px 0;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「て形」是動詞的變化形之一。「くりかえす」結尾是 <span class="j-mark">す</span>，變て形時 <span class="j-mark">す</span> 要換成 <span class="j-mark">して</span>：
+  </p>
+
+  <div class="conj-flow">
+    <span>くりかえ<span style="color:var(--accent)">す</span><small>原形：重複</small></span>
+    <span class="arrow">→</span>
+    <span>くりかえ<span style="color:var(--accent)">して</span><small>て形</small></span>
+    <span class="arrow">＋</span>
+    <span>ください<small>請〜</small></span>
+  </div>
+
+  <div class="note">
+    📝 <strong>句型公式：動詞て形＋ください＝請（做）〜</strong><br>
+    這是日文最常用的「請求句型」。零件換掉就是新句子——用今天學的「見える／聞こえる」的同伴動詞「見る／聞く」來試：
+  </div>
+
+  <div class="section" style="margin-top:14px;">
+    <div class="section-title">📖 同句型練習</div>
+
+    <div class="word-item" data-text="見てください">
+      <div class="word-content">
+        <div class="word-ja">見（み）てください</div>
+        <div class="word-romaji">mite kudasai</div>
+        <div class="word-meaning">請看 — 見る → 見て ＋ ください</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="聞いてください">
+      <div class="word-content">
+        <div class="word-ja">聞（き）いてください</div>
+        <div class="word-romaji">kiite kudasai</div>
+        <div class="word-meaning">請聽 — 聞く → 聞いて ＋ ください</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // 通用：所有帶 data-text 的元素 — 只有點 .play-btn 才會唸（避免滑鼠選字複製時誤觸發音）
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

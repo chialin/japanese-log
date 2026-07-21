@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多読起步 — 閱讀清單</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.resource-card{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-bottom:14px;transition:border-color .15s,background .15s,transform .15s;}
+.resource-card:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.resource-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.1em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.resource-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.resource-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.resource-card:hover .resource-arrow{color:var(--accent);transform:translateX(4px);}
+.resource-sub{display:block;font-size:14px;color:var(--ink-soft);line-height:1.7;}
+.stage-list{margin:0 0 14px 0;padding-left:0;list-style:none;}
+.stage-list li{position:relative;padding:4px 0 4px 26px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+.stage-list li::before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:700;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">多読起步 <span class="accent">閱讀清單</span></h1>
+  <div class="page-meta">學習資源 · Reading List · 2026 / 07 / 21</div>
+  <p class="page-subtitle">五十音學完、日常單字與基礎助詞都碰過一輪 — 可以開始「多読」了</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>多読的規則只有三個</strong><br>
+    不查生字、看不懂就跳過、覺得無聊就換一本。目標是「大量接觸簡單日文」，不是精讀。
+  </div>
+
+  <div class="divider">一、從這個等級開始</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    平假名／片假名都已學完，助詞「は・が」與五段動詞變化也碰過，日常主題單字（購物、飲食、方向、自我介紹）也累積了一些。這個程度對應多読分級的
+    <span class="compare">レベル0</span>：句子短、幾乎全假名或有注音，重複率高，專為初學者設計。先別跳去 NHK 新聞或小說，會挫折。
+  </p>
+
+  <div class="divider">二、免費資源</div>
+
+  <a class="resource-card" href="https://tadoku.org/japanese/en/free-books-en/" target="_blank" rel="noopener">
+    <span class="resource-kicker">Level 0 · 最先讀這個</span>
+    <span class="resource-title">NPO多言語多読 — 無料の読み物 <span class="resource-arrow">→</span></span>
+    <span class="resource-sub">官方免費電子書庫，レベル0～4，全部附假名或無漢字，多數有音檔可跟讀。直接線上翻頁閱讀，也能下載 PDF。</span>
+  </a>
+
+  <a class="resource-card" href="https://archive.org/details/japanese-graded-readers-level-0-5-tadoku-ask" target="_blank" rel="noopener">
+    <span class="resource-kicker">Level 0–5 · 備用書庫</span>
+    <span class="resource-title">Internet Archive — Japanese Graded Readers <span class="resource-arrow">→</span></span>
+    <span class="resource-sub">同系列讀本的存檔版本，可線上瀏覽或借閱，tadoku.org 打不開時的備案。</span>
+  </a>
+
+  <a class="resource-card" href="https://news.web.nhk/news/easy/" target="_blank" rel="noopener">
+    <span class="resource-kicker">之後再讀 · 進階目標</span>
+    <span class="resource-title">NHK NEWS WEB EASY <span class="resource-arrow">→</span></span>
+    <span class="resource-sub">「やさしい日本語」新聞，有假名標註跟朗讀音檔，但實際上偏中級 —
+      先把上面兩個資源的 Level 0～1 讀順了，大約再學會一些常用動詞變化後再挑戰。</span>
+  </a>
+
+  <div class="divider">三、怎麼讀（避免半途而廢）</div>
+
+  <ul class="stage-list">
+    <li>先看圖，猜大意，再看文字 — 圖片是多読的重要提示</li>
+    <li>遇到不懂的字或文法，跳過就好，不要查字典中斷閱讀節奏</li>
+    <li>同一本可以重複讀 2–3 次，重複本身就是複習</li>
+    <li>每次讀 5–10 分鐘即可，重點是頻率而不是長度</li>
+    <li>完全看不懂表示等級太高，退回一級再讀</li>
+  </ul>
+
+  <div class="note">
+    📝 <strong>建議路徑</strong><br>
+    tadoku.org Level 0（2–4 週，選喜歡的主題多讀幾本）→ Level 1 → 開始摻雜幾篇 NHK NEWS WEB EASY，看得懂再拉高比例。
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+</script>
+</body>
+</html>

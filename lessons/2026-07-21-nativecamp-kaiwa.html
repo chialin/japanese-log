@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>口語練習 — 単語と挨拶</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 漢字拆解卡 */
+.kanji-spot{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;margin-bottom:16px;text-align:center;}
+.kanji-spot .big{font-family:'Klee One','Shippori Mincho',serif;font-size:64px;font-weight:600;color:var(--accent);line-height:1;margin-bottom:8px;}
+.kanji-spot .read{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink);}
+.kanji-spot .read .arrow{color:var(--ink-mute);margin:0 8px;}
+.kanji-spot .ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:4px;display:block;}
+.kanji-spot .desc{margin-top:10px;font-size:14px;color:var(--ink-soft);}
+
+/* 句子成分拆解 */
+.breakdown{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;justify-content:center;background:rgba(255,255,255,.55);border:1px solid var(--line);padding:20px 18px;margin-bottom:16px;}
+.bd-part{flex:1 1 90px;min-width:90px;text-align:center;padding:12px 8px;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--accent-soft);}
+.bd-part.key{border-top-color:var(--accent);background:var(--accent-pale);}
+.bd-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:600;color:var(--ink);line-height:1.3;}
+.bd-ja .okuri{color:var(--ink-mute);font-size:17px;}
+.bd-ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--accent);margin-top:2px;}
+.bd-role{font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;}
+@media (max-width:560px){.bd-part{flex:1 1 calc(50% - 8px);}}
+
+/* 讀音對照表 */
+.onyomi-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.onyomi-table th,.onyomi-table td{padding:12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.onyomi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.onyomi-table tr:last-child td{border-bottom:none;}
+.onyomi-table .col-kanji{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:600;color:var(--ink);width:110px;}
+.onyomi-table .col-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);width:130px;}
+.onyomi-table .col-meaning{color:var(--ink-soft);}
+.onyomi-table .hi{color:var(--accent);font-weight:600;}
+
+/* 禮貌度階梯 */
+.polite-scale{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px;margin-bottom:16px;}
+.ps-step{flex:1 1 140px;text-align:center;}
+.ps-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);}
+.ps-who{font-size:12px;color:var(--ink-mute);margin-top:4px;}
+.ps-arrow{color:var(--accent-soft);font-size:18px;flex:0 0 auto;}
+
+/* 行內高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">口語練習 <span class="accent">単語と挨拶</span></h1>
+  <div class="page-meta">会話 · NativeCamp · 2026 / 07 / 21</div>
+  <p class="page-subtitle">今日の課程回顧 — 漢字讀音複習與問候語</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、単語 — 漢字讀音複習</div>
+
+  <div class="section">
+    <div class="section-title">📖 課程單字</div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">海</div>
+        <div class="word-romaji">umi</div>
+        <div class="word-meaning">海</div>
+      </div>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">上</div>
+        <div class="word-romaji">ue</div>
+        <div class="word-meaning">上面／上方</div>
+      </div>
+    </div>
+
+    <div class="word-item">
+      <div class="word-content">
+        <div class="word-ja">牛</div>
+        <div class="word-romaji">ushi</div>
+        <div class="word-meaning">牛</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、今日の挨拶 — 問候語</div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="お元気ですか">
+      <div class="word-content">
+        <div class="word-ja">お元気ですか？</div>
+        <div class="word-romaji">o-genki desu ka</div>
+        <div class="word-meaning">你好嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="元気です">
+      <div class="word-content">
+        <div class="word-ja">元気です。</div>
+        <div class="word-romaji">genki desu</div>
+        <div class="word-meaning">我很好 — 回答「お元気ですか」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お久しぶりです">
+      <div class="word-content">
+        <div class="word-ja">お久しぶりです。</div>
+        <div class="word-romaji">o-hisashiburi desu</div>
+        <div class="word-meaning">好久不見</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="また会いましょう">
+      <div class="word-content">
+        <div class="word-ja">また会いましょう。</div>
+        <div class="word-romaji">mata aimashou</div>
+        <div class="word-meaning">下次再見面吧</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おやすみなさい">
+      <div class="word-content">
+        <div class="word-ja">おやすみなさい。</div>
+        <div class="word-romaji">oyasumi nasai</div>
+        <div class="word-meaning">晚安</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="さようなら">
+      <div class="word-content">
+        <div class="word-ja">さようなら。</div>
+        <div class="word-romaji">sayounara</div>
+        <div class="word-meaning">再見</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、拆解「お久しぶりです」— 久怎麼念</div>
+
+  <div class="breakdown">
+    <div class="bd-part">
+      <div class="bd-ja">お</div>
+      <div class="bd-ro">o</div>
+      <div class="bd-role">美化語接頭辭<br>加了更禮貌</div>
+    </div>
+    <div class="bd-part key">
+      <div class="bd-ja">久<span class="okuri">し</span></div>
+      <div class="bd-ro">hisa-shi</div>
+      <div class="bd-role">漢字「久」＝ひさ<br>「し」是送假名</div>
+    </div>
+    <div class="bd-part">
+      <div class="bd-ja">ぶり</div>
+      <div class="bd-ro">buri</div>
+      <div class="bd-role">振り<br>「隔了多久再度…」</div>
+    </div>
+    <div class="bd-part">
+      <div class="bd-ja">です</div>
+      <div class="bd-ro">desu</div>
+      <div class="bd-role">禮貌體結尾</div>
+    </div>
+  </div>
+
+  <div class="kanji-spot">
+    <div class="big">久</div>
+    <div class="read">訓讀<span class="arrow">→</span><span style="color:var(--accent);">ひさ</span></div>
+    <span class="ro">kun-yomi: hisa</span>
+    <div class="desc">
+      漢字「久」只承擔 <span class="j-mark">ひさ</span> 這兩拍，後面的「し」是<strong>送假名</strong>——寫在漢字後、用來標示詞尾變化的假名，不算在漢字的讀音裡。
+    </div>
+  </div>
+
+  <div class="note">
+    📝 語源是形容詞 <span class="compare">久しい（ひさしい）</span>＝「（時間）很久的」。「久しぶり」就是從這個字來的。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 同源詞</div>
+
+    <div class="word-item" data-text="久しい">
+      <div class="word-content">
+        <div class="word-ja">久しい（<span class="j-mark">ひさ</span>しい）</div>
+        <div class="word-romaji">hisashii</div>
+        <div class="word-meaning">（時間）很久的、久違的 — 形容詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="三年ぶり">
+      <div class="word-content">
+        <div class="word-ja">三年ぶり（さんねんぶり）</div>
+        <div class="word-romaji">san-nen buri</div>
+        <div class="word-meaning">隔了三年 — 「ぶり」也能接具體時間</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、「久」的兩種讀法</div>
+
+  <table class="onyomi-table">
+    <thead>
+      <tr><th>讀法</th><th>音</th><th>例詞</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kanji">訓讀</td>
+        <td class="col-kana"><span class="hi">ひさ</span></td>
+        <td class="col-meaning"><span class="hi">久</span>しぶり、<span class="hi">久</span>しい</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">音讀</td>
+        <td class="col-kana"><span class="hi">キュウ</span></td>
+        <td class="col-meaning">永<span class="hi">久</span>（えい<span class="hi">きゅう</span>）＝永久</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">音讀<br><span style="font-size:12px;color:var(--ink-mute);">吳音</span></td>
+        <td class="col-kana"><span class="hi">ク</span></td>
+        <td class="col-meaning"><span class="hi">久</span>遠（<span class="hi">く</span>おん）＝久遠</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    💡 <strong>規律</strong>：「久しぶり」是<strong>和語詞</strong>（日本固有詞）所以用訓讀 ひさ；「永久」是<strong>漢語詞</strong>（漢字＋漢字）所以用音讀 キュウ。同一個漢字在和語詞讀訓、在漢語詞讀音——這是日文漢字一字多讀的基本規律。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、禮貌度階梯</div>
+
+  <div class="polite-scale">
+    <div class="ps-step">
+      <div class="ps-ja">久しぶり</div>
+      <div class="ps-who">朋友、家人</div>
+    </div>
+    <div class="ps-arrow">→</div>
+    <div class="ps-step">
+      <div class="ps-ja">お久しぶり</div>
+      <div class="ps-who">熟識但客氣</div>
+    </div>
+    <div class="ps-arrow">→</div>
+    <div class="ps-step">
+      <div class="ps-ja"><span class="j-mark">お久しぶりです</span></div>
+      <div class="ps-who">長輩、上司、店員</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ 整句直譯是「（距離上次見面）隔了好久呢」——<strong>不是</strong>在問候對方好不好。要問近況要另外接 <span class="compare">お元気ですか</span>。
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -268,6 +268,27 @@ body::before {
 .site-header-inner .site-nav a:hover { color: var(--accent); }
 .site-header-inner .site-nav .sep { color: var(--line); font-weight: 400; }
 
+/* ── 全站發音音量（只在載入 tts.js 的頁面出現）── */
+.site-volume { display: flex; align-items: center; gap: 6px; margin-left: 4px; }
+.site-volume .vol-icon { font-size: 12px; line-height: 1; opacity: .75; }
+.site-volume .vol-slider {
+  -webkit-appearance: none; appearance: none;
+  width: 62px; height: 3px; border-radius: 2px;
+  background: var(--line); cursor: pointer; outline: none;
+}
+.site-volume .vol-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--accent); cursor: pointer; border: none;
+}
+.site-volume .vol-slider::-moz-range-thumb {
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--accent); cursor: pointer; border: none;
+}
+@media (max-width: 560px) {
+  .site-volume .vol-slider { width: 46px; }
+}
+
 /* ── Page meta（標題正下方的類別＋日期，取代舊 masthead 三欄）── */
 .page-meta {
   font-family: 'Cormorant Garamond', serif; font-style: italic;

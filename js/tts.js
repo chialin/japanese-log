@@ -20,6 +20,26 @@ window.JTalk = (function () {
     return './audio/';
   })();
 
+  // ── 播放音量（0–1，存 localStorage 跨頁記住）──
+  // 預設 0.5：使用者反映外接喇叭下原音量太大。音檔本身已正規化到 -1.5 dBFS，
+  // 不重生音檔、只在播放端衰減。
+  const VOL_KEY = 'jtalk-volume';
+  const DEFAULT_VOL = 0.5;
+  let _volume = (function () {
+    try {
+      const v = parseFloat(localStorage.getItem(VOL_KEY));
+      if (Number.isFinite(v) && v >= 0 && v <= 1) return v;
+    } catch {}
+    return DEFAULT_VOL;
+  })();
+  function getVolume() { return _volume; }
+  function setVolume(v) {
+    _volume = Math.min(1, Math.max(0, Number(v) || 0));
+    try { localStorage.setItem(VOL_KEY, _volume); } catch {}
+    if (_currentAudio) _currentAudio.volume = _volume;   // 播放中即時生效
+    return _volume;
+  }
+
   // ── 預載日文聲音（fallback 用）──
   let _jaVoice = null;
   function getJaVoice() {
@@ -89,6 +109,7 @@ window.JTalk = (function () {
       const url = AUDIO_BASE + filename;
       const audio = new Audio(url);
       audio.playbackRate = rate;
+      audio.volume = _volume;
       _currentAudio = audio;
 
       await new Promise((resolve, reject) => {
@@ -111,6 +132,7 @@ window.JTalk = (function () {
       u.lang = 'ja-JP';
       u.rate = rate;
       u.pitch = 1;
+      u.volume = _volume;
       const v = getJaVoice();
       if (v) u.voice = v;
       u.onend = () => { setBtnIdle(button); resolve(); };
@@ -119,5 +141,5 @@ window.JTalk = (function () {
     });
   }
 
-  return { speak, hashText, stopAll, AUDIO_BASE };
+  return { speak, hashText, stopAll, getVolume, setVolume, AUDIO_BASE };
 })();

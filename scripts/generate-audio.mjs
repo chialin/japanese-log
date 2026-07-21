@@ -115,13 +115,9 @@ async function synthesize(text) {
   const isShort = text.length <= 4 && !text.includes(' ');
   const synthText = isShort ? text + '。' : text;
 
-  // 依字長自動調 speedScale — 越短的越慢，避免 phoneme 太短聽起來「破」「促」
-  let speedScale = SPEED;
-  if (!text.includes(' ')) {
-    if (text.length === 1) speedScale = 0.55;
-    else if (text.length === 2) speedScale = 0.7;
-    else if (text.length <= 4) speedScale = 0.85;
-  }
+  // 一律 1x（2026-07-21）—— 原本依字長放慢（1字0.55／2字0.7／≤4字0.85），
+  // 但實測放慢反而拖沓不自然，使用者選擇統一正常語速。
+  const speedScale = SPEED;
 
   // step a: audio_query
   const queryRes = await fetch(

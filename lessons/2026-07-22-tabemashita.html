@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>口語練習 — 食べました</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 時態對照卡 */
+.tense-grid{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px;}
+.tense-card{flex:1 1 200px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:18px 20px;text-align:center;}
+.tense-card.past{border-top-color:var(--accent);background:var(--accent-pale);}
+.tense-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.12em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:8px;}
+.tense-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:28px;font-weight:600;color:var(--ink);line-height:1.3;}
+.tense-ja .tail{color:var(--accent);}
+.tense-ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-mute);margin-top:4px;}
+.tense-desc{font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.6;}
+
+/* 句子成分拆解 */
+.breakdown{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;justify-content:center;background:rgba(255,255,255,.55);border:1px solid var(--line);padding:20px 18px;margin-bottom:16px;}
+.bd-part{flex:1 1 90px;min-width:90px;text-align:center;padding:12px 8px;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--accent-soft);}
+.bd-part.key{border-top-color:var(--accent);background:var(--accent-pale);}
+.bd-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:600;color:var(--ink);line-height:1.3;}
+.bd-ja .okuri{color:var(--ink-mute);font-size:17px;}
+.bd-ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--accent);margin-top:2px;}
+.bd-role{font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;}
+@media (max-width:560px){.bd-part{flex:1 1 calc(50% - 8px);}}
+
+/* 重音（アクセント）圖 */
+.pitch-box{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:16px;text-align:center;}
+.pitch-row{display:inline-flex;align-items:flex-end;gap:4px;margin:6px 0 12px;}
+.pitch-mora{width:56px;text-align:center;}
+.pitch-track{position:relative;height:44px;}
+.pitch-bar{position:absolute;left:0;right:0;height:4px;background:var(--accent);top:6px;}
+.pitch-mora.low .pitch-bar{top:34px;background:var(--accent-soft);}
+.pitch-mora.particle .pitch-bar{background:var(--accent-soft);}
+.pitch-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;font-weight:600;color:var(--ink);}
+.pitch-mora.particle .pitch-kana{color:var(--ink-mute);}
+.pitch-name{font-family:'Shippori Mincho',serif;font-size:15px;font-weight:600;color:var(--accent);margin-bottom:4px;}
+.pitch-desc{font-size:14px;color:var(--ink-soft);line-height:1.8;}
+
+/* 長音對照表 */
+.onyomi-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.onyomi-table th,.onyomi-table td{padding:12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.onyomi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.onyomi-table tr:last-child td{border-bottom:none;}
+.onyomi-table .col-kanji{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:600;color:var(--ink);width:110px;}
+.onyomi-table .col-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);width:140px;}
+.onyomi-table .col-meaning{color:var(--ink-soft);}
+.onyomi-table .hi{color:var(--accent);font-weight:600;}
+
+/* 行內連結 */
+.inline-link{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft);}
+.inline-link:hover{border-bottom-color:var(--accent);}
+
+/* 錯誤示範 */
+.bad{color:var(--ink-mute);text-decoration:line-through;}
+
+/* 行內高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">口語練習 <span class="accent">食べました</span></h1>
+  <div class="page-meta">会話 · 口語課 · 2026 / 07 / 22</div>
+  <p class="page-subtitle">今日の課程回顧 — 禮貌形「ました」與普通形「た」、牛的重音、え與えい</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 過去的記號是 <span class="compare">た</span>——<strong>禮貌形</strong>寫成 <span class="compare">ます → ました</span>，<strong>普通形</strong>就是 <span class="compare">食べた</span>。<br>
+    ② 對誰講決定用哪一個，句子還沒結束時只能用普通形。<br>
+    ③ 順便：牛（うし）的重音、え 與 えい 的長音之別。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、ます → ました｜過去形</div>
+
+  <div class="tense-grid">
+    <div class="tense-card">
+      <div class="tense-label">現在形 · present</div>
+      <div class="tense-ja">食べ<span class="tail">ます</span></div>
+      <div class="tense-ro">tabemasu</div>
+      <div class="tense-desc">吃／要吃<br>（現在與未來共用）</div>
+    </div>
+    <div class="tense-card past">
+      <div class="tense-label">過去形 · past</div>
+      <div class="tense-ja">食べ<span class="tail">ました</span></div>
+      <div class="tense-ro">tabemashita</div>
+      <div class="tense-desc">吃了<br>（已經完成的事）</div>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 這條規則對<strong>所有動詞</strong>都成立：<span class="compare">飲みます → 飲みました</span>、<span class="compare">行きます → 行きました</span>。只要看到句尾是 <span class="j-mark">ます</span>，把它換成 <span class="j-mark">ました</span> 就是過去。
+  </div>
+
+  <table class="onyomi-table">
+    <thead>
+      <tr><th>現在</th><th>過去</th><th>例</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kanji">〜<span class="hi">ます</span></td>
+        <td class="col-kana">〜<span class="hi">ました</span></td>
+        <td class="col-meaning">食べ<span class="hi">ます</span> → 食べ<span class="hi">ました</span>（吃了）</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">〜<span class="hi">です</span></td>
+        <td class="col-kana">〜<span class="hi">でした</span></td>
+        <td class="col-meaning">元気<span class="hi">です</span> → 元気<span class="hi">でした</span>（那時很好）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    💡 <strong>ます 和 です 是什麼？</strong>都是<strong>助動詞</strong>——不是動詞、也不是形容動詞，本身沒有意思，只負責把句子變成禮貌形（<a class="inline-link" href="2026-07-22-teinei.html">丁寧形</a>）。
+    它們的過去形都以 <span class="j-mark">した</span> 收尾，所以記「禮貌形變過去 → 尾巴變 した」就對了。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>「した」只有這兩個結尾適用</strong>——僅限句尾是 <span class="compare">ます</span> 或 <span class="compare">です</span> 的禮貌形。
+    句子沒有 ます／です 的時候（普通形），過去是 <span class="j-mark">た</span>／<span class="j-mark">だ</span>：
+    <span class="compare">食べた</span>、<span class="compare">飲んだ</span>、<span class="compare">学生だった</span>。
+    「した」不是日文通用的過去記號，通用的是 <span class="j-mark">た</span>——ました／でした 裡面藏的也是它。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 動詞形</div>
+
+    <div class="word-item" data-text="食べます">
+      <div class="word-content">
+        <div class="word-ja">食べます（たべます）</div>
+        <div class="word-romaji">tabemasu</div>
+        <div class="word-meaning">吃 — 禮貌形・現在形</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="食べました">
+      <div class="word-content">
+        <div class="word-ja">食べました（たべました）</div>
+        <div class="word-romaji">tabemashita</div>
+        <div class="word-meaning">吃了 — 禮貌形・過去形</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 今日の会話</div>
+
+    <div class="word-item" data-text="何を食べましたか">
+      <div class="word-content">
+        <div class="word-ja">何を食べましたか？（なにを たべましたか）</div>
+        <div class="word-romaji">nani o tabemashita ka</div>
+        <div class="word-meaning">你吃了什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="冷麺を食べました">
+      <div class="word-content">
+        <div class="word-ja">冷麺を食べました。（れいめんを たべました）</div>
+        <div class="word-romaji">reimen o tabemashita</div>
+        <div class="word-meaning">我吃了冷麵。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="breakdown">
+    <div class="bd-part">
+      <div class="bd-ja">冷麺</div>
+      <div class="bd-ro">reimen</div>
+      <div class="bd-role">受詞<br>吃的東西</div>
+    </div>
+    <div class="bd-part">
+      <div class="bd-ja">を</div>
+      <div class="bd-ro">o</div>
+      <div class="bd-role">助詞<br>標示動作對象</div>
+    </div>
+    <div class="bd-part key">
+      <div class="bd-ja">食べ<span class="okuri">ました</span></div>
+      <div class="bd-ro">tabemashita</div>
+      <div class="bd-role">動詞・過去形<br>「吃了」</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 問句只要在句尾加 <span class="j-mark">か</span>：<span class="compare">食べました</span> →
+    <span class="compare">食べましたか？</span>。回答時把 <span class="compare">何</span> 換成實際吃的東西就行——問與答是同一個句型。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、普通形 と 禮貌形 — 對誰講</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    兩個的<strong>意思完全一樣</strong>（都是「吃了」），差別在<strong>對誰說</strong>——以及一個文法上的硬性規定。
+  </p>
+
+  <div class="note">
+    📝 <strong>名詞先講清楚</strong>：<span class="compare">普通形</span>（食べる／食べない／食べた／食べなかった）是課本和 JLPT 說明文法時用的詞，
+    對應的是 <span class="compare">禮貌形・丁寧形</span>（食べます…）。<br>
+    另外會看到的 <span class="compare">常體 ↔ 敬體</span> 是日本人國語課的講法，指的是<strong>整篇文章的文體</strong>——
+    範圍比較大，普通形是拿來寫常體的零件。兩套詞講的是同一件事的不同層次。
+  </div>
+
+  <div class="tense-grid">
+    <div class="tense-card">
+      <div class="tense-label">普通形 · plain</div>
+      <div class="tense-ja">食べ<span class="tail">た</span></div>
+      <div class="tense-ro">tabeta</div>
+      <div class="tense-desc">朋友、家人、同輩<br>聊天・日記・動畫字幕</div>
+    </div>
+    <div class="tense-card past">
+      <div class="tense-label">禮貌形 · polite</div>
+      <div class="tense-ja">食べ<span class="tail">ました</span></div>
+      <div class="tense-ro">tabemashita</div>
+      <div class="tense-desc">長輩、上司、老師、店員<br>口語課・工作・正式場合</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 同一件事的兩種講法</div>
+
+    <div class="word-item" data-text="昨日なに食べた">
+      <div class="word-content">
+        <div class="word-ja">昨日なに食べた？（きのう なに たべた）</div>
+        <div class="word-romaji">kinou nani tabeta</div>
+        <div class="word-meaning">昨天吃了什麼？ — 對朋友</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="冷麺食べた">
+      <div class="word-content">
+        <div class="word-ja">冷麺食べた。（れいめん たべた）</div>
+        <div class="word-romaji">reimen tabeta</div>
+        <div class="word-meaning">吃了冷麵。 — 對朋友（助詞を也常省略）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昨日何を食べましたか">
+      <div class="word-content">
+        <div class="word-ja">昨日何を食べましたか。（きのう なにを たべましたか）</div>
+        <div class="word-romaji">kinou nani o tabemashita ka</div>
+        <div class="word-meaning">昨天吃了什麼？ — 對老師</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ 用錯的後果不對稱：對長輩用普通形會顯得沒禮貌；對朋友一直用 ました 只是有點見外。
+    <strong>不確定的時候一律用 ました</strong>——這也是課本先教禮貌形的原因。
+  </div>
+
+  <p style="margin:22px 0 14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    比禮貌更硬性的一條：<strong>ました 只能放在句尾</strong>。句子還沒結束、後面還要接東西的時候，一律換回 <span class="compare">た</span>。
+  </p>
+
+  <table class="onyomi-table">
+    <thead>
+      <tr><th>⭕ 對</th><th>❌ 錯</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kana">食べ<span class="hi">た</span>ものは冷麺です</td>
+        <td class="col-kana"><span class="bad">食べましたもの…</span></td>
+        <td class="col-meaning">吃的東西是冷麵</td>
+      </tr>
+      <tr>
+        <td class="col-kana">冷麺を食べ<span class="hi">た</span>と思います</td>
+        <td class="col-kana"><span class="bad">食べましたと思います</span></td>
+        <td class="col-meaning">我想我吃了冷麵</td>
+      </tr>
+      <tr>
+        <td class="col-kana">食べ<span class="hi">た</span>ことがあります</td>
+        <td class="col-kana"><span class="bad">食べましたことが…</span></td>
+        <td class="col-meaning">曾經吃過</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 判斷方法：<strong>句號前面那一格才用禮貌形，其他全部普通形</strong>。
+    最常見的三種句中位置是——<strong>修飾名詞</strong>（食べた冷麺）、<strong>引用</strong>（<span class="j-mark">と思います</span>／<span class="j-mark">と言いました</span>）、
+    <strong>接句型</strong>（<span class="j-mark">とき</span>／<span class="j-mark">たら</span>／<span class="j-mark">ことがあります</span>）。<br>
+    所以普通形不是「隨便講話才用的」——它是文法零件，課本的句型說明會直接寫「<span class="compare">普通形＋と思います</span>」。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>例外：から・けど・が 可以接禮貌形</strong>——而且在客氣的場合更常見：
+    <span class="compare">時間がありませんから、行きません。</span>、
+    <span class="compare">雨が降っていますので、中止します。</span>
+    這幾個是連接兩個句子的接續詞，前面那半句本來就可以自己收尾，所以准許帶禮貌形。
+  </div>
+
+  <div class="breakdown">
+    <div class="bd-part">
+      <div class="bd-ja">食べ</div>
+      <div class="bd-ro">tabe-</div>
+      <div class="bd-role">動詞本體<br>「吃」的意思在這</div>
+    </div>
+    <div class="bd-part">
+      <div class="bd-ja">まし</div>
+      <div class="bd-ro">-mashi-</div>
+      <div class="bd-role">ます 的變化形<br>只加「禮貌」這一層</div>
+    </div>
+    <div class="bd-part key">
+      <div class="bd-ja">た</div>
+      <div class="bd-ro">-ta</div>
+      <div class="bd-role">過去的記號<br>兩種講法共用</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 所以不是要記兩套過去式——是記 <span class="j-mark">た</span>＝過去，再決定要不要墊上禮貌那一層。
+    <strong>現階段</strong>：跟老師講話一律 ました；<span class="compare">食べた</span> 先聽得懂就好（日劇動畫幾乎全是這個），
+    等學到「〜と思います」時它自然會變成必需品。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、今日の単語</div>
+
+  <div class="section">
+    <div class="section-title">📖 課程單字</div>
+
+    <div class="word-item" data-text="冷麺">
+      <div class="word-content">
+        <div class="word-ja">冷麺（れいめん）</div>
+        <div class="word-romaji">reimen</div>
+        <div class="word-meaning">冷麵 — cold noodle</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="復習">
+      <div class="word-content">
+        <div class="word-ja">復習（ふくしゅう）</div>
+        <div class="word-romaji">fukushuu</div>
+        <div class="word-meaning">複習 — 上課常聽到的詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <span class="compare">冷麺</span> 的「冷」讀 <span class="j-mark">れい</span>，正好是下面第五節要練的 <strong>えい 長音</strong>——唸成「レーメン」而不是「レ・イ・メン」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、重音 — 牛（うし）</div>
+
+  <div class="pitch-box">
+    <div class="pitch-name">平板型 — 低 → 高，之後不下降</div>
+    <div class="pitch-row">
+      <div class="pitch-mora low">
+        <div class="pitch-track"><div class="pitch-bar"></div></div>
+        <div class="pitch-kana">う</div>
+      </div>
+      <div class="pitch-mora">
+        <div class="pitch-track"><div class="pitch-bar"></div></div>
+        <div class="pitch-kana">し</div>
+      </div>
+      <div class="pitch-mora particle">
+        <div class="pitch-track"><div class="pitch-bar"></div></div>
+        <div class="pitch-kana">が</div>
+      </div>
+    </div>
+    <div class="pitch-desc">
+      第一拍 <span class="j-mark">う</span> 低、第二拍 <span class="j-mark">し</span> 抬高，<br>
+      後面接助詞（が・は・を）時<strong>仍然維持高音</strong>，全程不掉下來。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 聽聽看</div>
+
+    <div class="word-item" data-text="牛">
+      <div class="word-content">
+        <div class="word-ja">牛（うし）</div>
+        <div class="word-romaji">ushi</div>
+        <div class="word-meaning">牛 — う低 ↗ し高</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ 日文的重音是<strong>音的高低</strong>，不是中文的聲調、也不是英文的重讀。同樣兩拍的字，高低位置不同就是不同的詞——所以記單字時順便記高低。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、え と えい — え段長音</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    寫成 <span class="compare">えい</span> 的時候，實際上<strong>不是</strong>唸「え・い」兩個音，而是把「え」拉長成一拍半的「エー」。
+    但 <span class="compare">え</span> 後面接的若是別的假名（例如 き），那就各自獨立、沒有長音。
+  </p>
+
+  <table class="onyomi-table">
+    <thead>
+      <tr><th>寫法</th><th>讀音</th><th>實際發音</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kanji">絵</td>
+        <td class="col-kana"><span class="hi">え</span></td>
+        <td class="col-meaning">「え」— 單獨一拍，畫</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">駅</td>
+        <td class="col-kana"><span class="hi">え</span>き</td>
+        <td class="col-meaning">「え・き」— <strong>不是</strong>長音，兩拍各自獨立，車站</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">映画</td>
+        <td class="col-kana"><span class="hi">えい</span>が</td>
+        <td class="col-meaning">「エーガ」— えい 拉成長音，電影</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 例詞</div>
+
+    <div class="word-item" data-text="絵">
+      <div class="word-content">
+        <div class="word-ja">絵（え）</div>
+        <div class="word-romaji">e</div>
+        <div class="word-meaning">畫、圖 — 短短一拍</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="駅">
+      <div class="word-content">
+        <div class="word-ja">駅（えき）</div>
+        <div class="word-romaji">eki</div>
+        <div class="word-meaning">車站 — え＋き，非長音</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="映画">
+      <div class="word-content">
+        <div class="word-ja">映画（えいが）</div>
+        <div class="word-romaji">eiga</div>
+        <div class="word-meaning">電影 — 唸作「エーガ」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>已經學過的例子</strong>：<span class="compare">先生（せんせい）</span> 唸起來是「センセー」、<a class="inline-link" href="2026-07-22-teinei.html">丁寧（ていねい）</a> 是「テーネー」、
+    <span class="compare">冷麺（れいめん）</span> 是「レーメン」。え段後面出現的 <span class="j-mark">い</span>，
+    幾乎都是把前面那個音拉長的記號，不是獨立的一個「i」。
+  </div>
+
+  <a href="2026-07-22-teinei.html" class="next-link">
+    <span class="next-kicker">— Same day / 延伸 —</span>
+    <span class="next-title">丁寧 不是叮嚀 <span class="next-arrow">→</span></span>
+    <span class="next-sub">「丁寧形」的丁寧是什麼意思？中日同源分家、詞性用法與 テーネー 的唸法</span>
+  </a>
+
+  <a href="2026-07-21-kaiwa-aisatsu.html" class="next-link">
+    <span class="next-kicker">— Previous / 口語課 —</span>
+    <span class="next-title">口語練習 単語と挨拶 <span class="next-arrow">→</span></span>
+    <span class="next-sub">上一堂：問候語六句＋「お久しぶりです」的「久」怎麼念</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

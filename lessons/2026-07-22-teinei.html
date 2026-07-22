@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>丁寧 — 不是叮嚀</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 中日對照兩欄 */
+.vs-grid{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px;}
+.vs-col{flex:1 1 240px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:18px 20px;}
+.vs-col.ja{border-top-color:var(--accent);background:var(--accent-pale);}
+.vs-lang{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.12em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:8px;}
+.vs-word{font-family:'Klee One','Shippori Mincho',serif;font-size:30px;font-weight:600;color:var(--ink);line-height:1.2;}
+.vs-read{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-mute);margin-top:2px;}
+.vs-mean{font-size:14px;color:var(--ink-soft);margin-top:10px;line-height:1.8;}
+
+/* 漢字大字卡 */
+.kanji-spot{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;margin-bottom:16px;text-align:center;}
+.kanji-spot .big{font-family:'Klee One','Shippori Mincho',serif;font-size:56px;font-weight:600;color:var(--accent);line-height:1.1;margin-bottom:8px;}
+.kanji-spot .read{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink);}
+.kanji-spot .read .arrow{color:var(--ink-mute);margin:0 8px;}
+.kanji-spot .ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:4px;display:block;}
+.kanji-spot .desc{margin-top:10px;font-size:14px;color:var(--ink-soft);line-height:1.8;}
+
+/* 字源流向 */
+.flow{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:20px 18px;margin-bottom:16px;}
+.flow-head{text-align:center;font-family:'Shippori Mincho',serif;font-size:15px;font-weight:600;color:var(--accent);margin-bottom:16px;}
+.flow-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:center;margin-bottom:12px;}
+.flow-row:last-child{margin-bottom:0;}
+.flow-node{flex:1 1 130px;min-width:130px;text-align:center;padding:10px 8px;background:var(--paper);border:1px solid var(--line);}
+.flow-node.end{border-top:3px solid var(--accent);background:var(--accent-pale);}
+.flow-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:600;color:var(--ink);}
+.flow-note{font-size:12px;color:var(--ink-soft);margin-top:4px;line-height:1.5;}
+.flow-arrow{flex:0 0 auto;color:var(--accent-soft);font-size:18px;}
+@media (max-width:560px){.flow-node{flex:1 1 calc(50% - 10px);min-width:0;}}
+
+/* 表格 */
+.onyomi-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.onyomi-table th,.onyomi-table td{padding:12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.onyomi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.onyomi-table tr:last-child td{border-bottom:none;}
+.onyomi-table .col-kanji{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:600;color:var(--ink);width:130px;}
+.onyomi-table .col-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);width:150px;}
+.onyomi-table .col-meaning{color:var(--ink-soft);}
+.onyomi-table .hi{color:var(--accent);font-weight:600;}
+
+/* 行內高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">丁寧 <span class="accent">不是叮嚀</span></h1>
+  <div class="page-meta">語彙 · 概念 · 2026 / 07 / 22</div>
+  <p class="page-subtitle">同一個漢語詞，中日走向兩個意思 — ていねい 的意思、字源與發音</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    日文的 <span class="compare">丁寧（ていねい）</span>＝<strong>有禮貌、仔細</strong>，跟中文的「叮嚀（反覆囑咐）」沒有關係。
+    兩個字同源，但意思在中日兩邊各自走遠了。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、先講結論 — 中日對照</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <div class="vs-lang">中文 · chinese</div>
+      <div class="vs-word">叮嚀</div>
+      <div class="vs-read">dīng níng</div>
+      <div class="vs-mean">反覆囑咐、交代再三。<br>「媽媽叮嚀我早點回家。」</div>
+    </div>
+    <div class="vs-col ja">
+      <div class="vs-lang">日文 · japanese</div>
+      <div class="vs-word">丁寧</div>
+      <div class="vs-read">ていねい</div>
+      <div class="vs-mean">① 有禮貌、客氣<br>② 仔細、不馬虎<br><strong>完全沒有「囑咐」的意思。</strong></div>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ 這是典型的<strong>假朋友</strong>——漢字看得懂，反而更容易理解錯。看到日文的 丁寧 要直接想「polite / careful」，不要走中文那條路。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、日文「丁寧」的兩個方向</div>
+
+  <div class="kanji-spot">
+    <div class="big">丁寧</div>
+    <div class="read">てい<span class="arrow">＋</span>ねい</div>
+    <span class="ro">teinei — polite / careful</span>
+    <div class="desc">
+      一個是<strong>對人的態度</strong>（有禮貌），一個是<strong>對事的態度</strong>（做得仔細）。
+      兩個意思共用同一個字，靠上下文分辨。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 ① 有禮貌、客氣</div>
+
+    <div class="word-item" data-text="丁寧な言葉">
+      <div class="word-content">
+        <div class="word-ja">丁寧な言葉（ていねいな ことば）</div>
+        <div class="word-romaji">teinei na kotoba</div>
+        <div class="word-meaning">客氣的用語</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="丁寧に話します">
+      <div class="word-content">
+        <div class="word-ja">丁寧に話します（ていねいに はなします）</div>
+        <div class="word-romaji">teinei ni hanashimasu</div>
+        <div class="word-meaning">講話有禮貌</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ご丁寧にありがとうございます">
+      <div class="word-content">
+        <div class="word-ja">ご丁寧にありがとうございます</div>
+        <div class="word-romaji">go-teinei ni arigatou gozaimasu</div>
+        <div class="word-meaning">謝謝您這麼周到 — 收到用心的招待或回覆時說</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 ② 仔細、不馬虎</div>
+
+    <div class="word-item" data-text="丁寧に書きます">
+      <div class="word-content">
+        <div class="word-ja">丁寧に書きます（ていねいに かきます）</div>
+        <div class="word-romaji">teinei ni kakimasu</div>
+        <div class="word-meaning">工整地寫、仔細地寫</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="丁寧な仕事">
+      <div class="word-content">
+        <div class="word-ja">丁寧な仕事（ていねいな しごと）</div>
+        <div class="word-romaji">teinei na shigoto</div>
+        <div class="word-meaning">做得很細的活兒</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>詞性</strong>：丁寧 是<span class="compare">形容動詞（な形容詞）</span>——修飾名詞加 <span class="j-mark">な</span>（丁寧<strong>な</strong>言葉），
+    修飾動詞加 <span class="j-mark">に</span>（丁寧<strong>に</strong>書きます）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、字源 — 同一個詞，兩邊分家</div>
+
+  <div class="flow">
+    <div class="flow-head">古漢語「丁寧」＝ 行軍用的樂器（鉦），敲來反覆示警</div>
+    <div class="flow-row">
+      <div class="flow-node">
+        <div class="flow-ja">丁寧</div>
+        <div class="flow-note">樂器<br>反覆敲擊</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-ja">反覆告誡</div>
+        <div class="flow-note">引申義<br>一再交代</div>
+      </div>
+    </div>
+    <div class="flow-row">
+      <div class="flow-node end">
+        <div class="flow-ja">中文：叮嚀</div>
+        <div class="flow-note">加了口字旁<br>專表「囑咐」</div>
+      </div>
+      <div class="flow-node end">
+        <div class="flow-ja">日文：丁寧</div>
+        <div class="flow-note">慎重周到<br>→ 有禮貌・仔細</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 中文往「<strong>反覆地說</strong>」發展，日文往「<strong>慎重地對待</strong>」發展。
+    共同的核心是「不隨便、放在心上」——記這個共同點，兩邊就不會搞混。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、文法術語裡的「丁寧」</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    你在課本上看到的 <span class="compare">丁寧形</span>、<span class="compare">丁寧語</span>，用的就是「有禮貌」這個意思。
+  </p>
+
+  <table class="onyomi-table">
+    <thead>
+      <tr><th>敬語三類</th><th>讀音</th><th>做什麼</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kanji"><span class="hi">丁寧</span>語</td>
+        <td class="col-kana">ていねいご</td>
+        <td class="col-meaning">把句子講得客氣 — <span class="hi">です・ます</span>（最基礎，先學這個）</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">尊敬語</td>
+        <td class="col-kana">そんけいご</td>
+        <td class="col-meaning">抬高對方的動作 — 召し上がる（＝食べる）</td>
+      </tr>
+      <tr>
+        <td class="col-kanji">謙譲語</td>
+        <td class="col-kana">けんじょうご</td>
+        <td class="col-meaning">壓低自己的動作 — いただく（＝食べる）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 術語本身</div>
+
+    <div class="word-item" data-text="丁寧語">
+      <div class="word-content">
+        <div class="word-ja">丁寧語（ていねいご）</div>
+        <div class="word-romaji">teineigo</div>
+        <div class="word-meaning">禮貌語 — 敬語三類中最基礎的一層</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 所以「<strong>丁寧形</strong>」＝用了 です・ます 的句子形式，也就是本站統一叫的<strong>禮貌形</strong>；
+    對應的是 <span class="compare">普通形</span>（食べる／食べた）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、發音陷阱 — ていねい 唸「テーネー」</div>
+
+  <div class="kanji-spot">
+    <div class="big">ていねい</div>
+    <div class="read">てい・ねい<span class="arrow">→</span><span style="color:var(--accent);">テー・ネー</span></div>
+    <span class="ro">tei-nei → tee-nee</span>
+    <div class="desc">
+      <strong>てい</strong> 和 <strong>ねい</strong> 都是「え段＋い」，兩個都要拉長，
+      <strong>不是</strong>唸成 te-i-ne-i 四拍分開。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 聽聽看</div>
+
+    <div class="word-item" data-text="丁寧">
+      <div class="word-content">
+        <div class="word-ja">丁寧（ていねい）</div>
+        <div class="word-romaji">teinei</div>
+        <div class="word-meaning">有禮貌的、仔細的 — 唸作「テーネー」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 同一條規則的其他例子：<span class="compare">先生（せんせい）→ センセー</span>、
+    <span class="compare">冷麺（れいめん）→ レーメン</span>、<span class="compare">映画（えいが）→ エーガ</span>。
+  </div>
+
+  <a href="2026-07-22-tabemashita.html" class="next-link">
+    <span class="next-kicker">— Same day / 回到 —</span>
+    <span class="next-title">口語練習 食べました <span class="next-arrow">→</span></span>
+    <span class="next-sub">禮貌形 ました ↔ 普通形 た、牛的重音，以及 え／えい 長音那一節</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

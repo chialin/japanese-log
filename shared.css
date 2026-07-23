@@ -240,53 +240,74 @@ body::before {
   padding: 6px 10px; border: 1px solid var(--line);
 }
 
-/* ── Site header（全站導覽列，取代舊 masthead）── */
+/* ── Site header（全站導覽列，三分組膠囊）── */
 /* .site-header 用 100vw + 負 margin 貼齊「瀏覽器視窗」的真正邊緣（不受 .wrap/
    .container 置中欄寬限制）；.site-header-inner 才是實際內容，寬度跟頁面欄位
-   對齊、內距用跟頁面內容一致的 32px，字距才不會太緊 */
+   對齊、內距用跟頁面內容一致的 32px，字距才不會太緊。
+   底色與膠囊全用 var(--accent-*) token，各頁主題（棕橘／深紅／海軍藍）自動配色 */
 .site-header {
   width: 100vw; margin: -48px calc(50% - 50vw) 32px;
-  background: var(--paper-deep);
+  background: var(--accent-pale);
   border-bottom: 2px solid var(--accent);
 }
 .site-header-inner {
-  display: flex; justify-content: space-between; align-items: center;
-  max-width: 760px; margin: 0 auto; padding: 18px 32px;
+  display: flex; justify-content: space-between; align-items: center; gap: 14px;
+  max-width: 760px; margin: 0 auto; padding: 15px 32px;
 }
-.site-header-inner.home-page { justify-content: flex-end; }
-.site-header-inner .home-link {
+/* 品牌落款（首頁為 .brand span，其他頁為 .home-link 連結）*/
+.site-header-inner .home-link,
+.site-header-inner .brand {
   font-family: 'Shippori Mincho', serif; font-weight: 600;
-  color: var(--ink-mute); text-decoration: none; font-size: 14px; letter-spacing: .05em;
-  transition: color .2s;
+  color: var(--accent); text-decoration: none; font-size: 18px; letter-spacing: .05em;
+  flex-shrink: 0; transition: color .2s;
 }
-.site-header-inner .home-link:hover { color: var(--accent); }
-.site-header-inner .site-nav {
-  display: flex; gap: 22px;
-  font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 14px; letter-spacing: .05em;
-}
-.site-header-inner .site-nav a { color: var(--ink-mute); text-decoration: none; transition: color .2s; }
-.site-header-inner .site-nav a:hover { color: var(--accent); }
-.site-header-inner .site-nav .sep { color: var(--line); font-weight: 400; }
+.site-header-inner .home-link:hover { color: var(--ink); }
 
-/* ── 全站發音音量（只在載入 tts.js 的頁面出現）── */
-.site-volume { display: flex; align-items: center; gap: 6px; margin-left: 4px; }
-.site-volume .vol-icon { font-size: 12px; line-height: 1; opacity: .75; }
-.site-volume .vol-slider {
+/* 導覽膠囊 */
+.site-header-inner .site-nav {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--paper); border-radius: 999px;
+  padding: 7px 10px; box-shadow: 0 2px 8px rgba(120, 60, 20, .10);
+}
+.site-header-inner .site-nav a {
+  font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 14px; letter-spacing: .05em;
+  color: var(--ink-soft); text-decoration: none;
+  padding: 5px 13px; border-radius: 999px; transition: background .2s, color .2s;
+}
+.site-header-inner .site-nav a:hover { color: var(--accent); }
+.site-header-inner .site-nav a.active { background: var(--accent-pale); color: var(--accent); }
+
+/* ── 控制膠囊：全站發音音量（只在載入 tts.js 的頁面出現）── */
+.site-control {
+  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+  background: var(--paper); border-radius: 999px;
+  padding: 8px 14px; box-shadow: 0 2px 8px rgba(120, 60, 20, .10);
+}
+.site-control .vol-icon { display: flex; color: var(--accent); transition: opacity .2s; }
+.site-control.muted .vol-icon { opacity: .35; } /* 靜音回饋 */
+.site-control .vol-slider {
   -webkit-appearance: none; appearance: none;
   width: 62px; height: 3px; border-radius: 2px;
-  background: var(--line); cursor: pointer; outline: none;
+  background: var(--line); cursor: pointer; outline: none; accent-color: var(--accent);
 }
-.site-volume .vol-slider::-webkit-slider-thumb {
+.site-control .vol-slider::-webkit-slider-thumb {
   -webkit-appearance: none; appearance: none;
   width: 11px; height: 11px; border-radius: 50%;
   background: var(--accent); cursor: pointer; border: none;
 }
-.site-volume .vol-slider::-moz-range-thumb {
+.site-control .vol-slider::-moz-range-thumb {
   width: 11px; height: 11px; border-radius: 50%;
   background: var(--accent); cursor: pointer; border: none;
 }
+
+/* 手機版 M1：品牌＋控制同排，導覽膠囊整寬換到第二排置中 */
 @media (max-width: 560px) {
-  .site-volume .vol-slider { width: 46px; }
+  .site-header-inner { flex-wrap: wrap; padding: 12px 20px; gap: 11px; }
+  .site-header-inner .home-link,
+  .site-header-inner .brand { order: 1; font-size: 16px; }
+  .site-control { order: 2; }
+  .site-header-inner .site-nav { order: 3; width: 100%; justify-content: center; }
+  .site-control .vol-slider { width: 54px; }
 }
 
 /* ── Page meta（標題正下方的類別＋日期，取代舊 masthead 三欄）── */

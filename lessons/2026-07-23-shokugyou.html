@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彼は消防士です — 職業 + は〜です</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 句型骨架 A は B です */
+.frame{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:16px;text-align:center;}
+.frame-line{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;font-weight:600;color:var(--ink);line-height:1.5;letter-spacing:.02em;}
+.frame-line .slot{color:var(--accent);border-bottom:2px dashed var(--accent-soft);padding:0 4px;}
+.frame-line .fix{color:var(--ink-mute);}
+.frame-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;letter-spacing:.05em;margin-top:8px;}
+.frame-desc{font-size:14px;color:var(--ink-soft);margin-top:12px;line-height:1.8;text-align:left;}
+
+/* 職業大字卡 */
+.job-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.job-grid{grid-template-columns:1fr;}}
+.job-card{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 16px;transition:background .15s,border-color .15s;}
+.job-card:hover{background:rgba(255,255,255,.85);}
+.job-icon{font-size:30px;flex-shrink:0;line-height:1;}
+.job-body{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0;}
+.job-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:600;color:var(--ink);line-height:1.2;}
+.job-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:14px;color:var(--ink-mute);}
+.job-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;}
+.job-meaning{color:var(--ink-soft);font-size:13px;margin-top:2px;}
+.job-card .play-btn{flex-shrink:0;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);width:130px;}
+.cheat .col-kana{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink-mute);width:150px;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">彼は消防士です <span class="accent">職業</span></h1>
+  <div class="page-meta">語彙 · 職業 · 2026 / 07 / 23</div>
+  <p class="page-subtitle">用「〜は〜です」介紹別人的職業 — 消防士・先生・保育士・警察官</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ①「<span class="compare">A は B です</span>」＝「A 是 B」，介紹身份、職業最常用的句型；<br>
+    ② 當助詞的 <span class="j-mark">は</span> 唸 <strong>wa</strong>（不是 ha）；<br>
+    ③ 主詞用上一課學的 <span class="compare">彼（かれ）</span>／<span class="compare">彼女（かのじょ）</span>，後面換職業單字就能造一堆句子。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、句型骨架 — A は B です</div>
+
+  <div class="frame">
+    <div class="frame-line"><span class="slot">彼</span> <span class="fix">は</span> <span class="slot">消防士</span> <span class="fix">です</span></div>
+    <div class="frame-ro">kare <strong>wa</strong> shouboushi desu</div>
+    <div class="frame-desc">
+      <strong>彼（かれ）</strong>＝主詞（誰）／ <span class="j-mark">は</span>＝主題助詞（唸 wa）／
+      <strong>消防士</strong>＝身份（是什麼）／ <strong>です</strong>＝禮貌的「是」。<br>
+      只要把兩個 <span class="slot" style="border:none;">底線</span> 的字換掉，就能介紹任何人的職業。
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>は 當助詞時唸 wa</strong><br>
+    「彼<strong>は</strong>」寫作 は，但唸 <strong>wa</strong>。這是日文的固定規則：は 當主題助詞時一律讀 wa，其他時候（例如 はな＝花）才讀 ha。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、職業單字 — 今天的四個</div>
+
+  <div class="job-grid">
+    <div class="job-card" data-text="消防士">
+      <div class="job-icon">🚒</div>
+      <div class="job-body">
+        <div class="job-ja">消防士</div>
+        <div class="job-kana">しょうぼうし</div>
+        <div class="job-romaji">shouboushi</div>
+        <div class="job-meaning">消防員</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="先生">
+      <div class="job-icon">🧑‍🏫</div>
+      <div class="job-body">
+        <div class="job-ja">先生</div>
+        <div class="job-kana">せんせい</div>
+        <div class="job-romaji">sensei</div>
+        <div class="job-meaning">老師（也用來稱醫生、律師）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="保育士">
+      <div class="job-icon">🧸</div>
+      <div class="job-body">
+        <div class="job-ja">保育士</div>
+        <div class="job-kana">ほいくし</div>
+        <div class="job-romaji">hoikushi</div>
+        <div class="job-meaning">保育員（托兒所／幼兒園照顧幼兒）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="警察官">
+      <div class="job-icon">👮</div>
+      <div class="job-body">
+        <div class="job-ja">警察官</div>
+        <div class="job-kana">けいさつかん</div>
+        <div class="job-romaji">keisatsukan</div>
+        <div class="job-meaning">警察（口語也常說 お巡りさん）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>字尾的規律</strong>：<span class="compare">〜士（し）</span> 常指需要專業資格的職業（消防士・保育士・弁護士）；
+    <span class="compare">〜官（かん）</span> 常指公務系統的職務（警察官・外交官）。看到字尾能大致猜出是哪一類。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、完整例句 — 套進句型</div>
+
+  <div class="section">
+    <div class="section-title">📖 他／她 是〜</div>
+
+    <div class="word-item" data-text="彼は消防士です">
+      <div class="word-content">
+        <div class="word-ja">彼<span class="j-mark">は</span>消防士です</div>
+        <div class="word-romaji">kare <strong>wa</strong> shouboushi desu</div>
+        <div class="word-meaning">他是消防員 — かれは しょうぼうし です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女は先生です">
+      <div class="word-content">
+        <div class="word-ja">彼女<span class="j-mark">は</span>先生です</div>
+        <div class="word-romaji">kanojo <strong>wa</strong> sensei desu</div>
+        <div class="word-meaning">她是老師 — かのじょは せんせい です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女は保育士です">
+      <div class="word-content">
+        <div class="word-ja">彼女<span class="j-mark">は</span>保育士です</div>
+        <div class="word-romaji">kanojo <strong>wa</strong> hoikushi desu</div>
+        <div class="word-meaning">她是保育員 — かのじょは ほいくし です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼は警察官です">
+      <div class="word-content">
+        <div class="word-ja">彼<span class="j-mark">は</span>警察官です</div>
+        <div class="word-romaji">kare <strong>wa</strong> keisatsukan desu</div>
+        <div class="word-meaning">他是警察 — かれは けいさつかん です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、同一句型 — 講國籍 〜人</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「A は B です」不只講職業，把 B 換成 <span class="compare">國名＋人（じん）</span> 就是講國籍。
+    課堂上出現的 <strong>台湾人</strong> 就是這樣來的。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 國籍</div>
+
+    <div class="word-item" data-text="台湾人">
+      <div class="word-content">
+        <div class="word-ja">台湾人</div>
+        <div class="word-romaji">taiwanjin</div>
+        <div class="word-meaning">台灣人 — 台湾（たいわん）＋人（じん）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は台湾人です">
+      <div class="word-content">
+        <div class="word-ja">私<span class="j-mark">は</span>台湾人です</div>
+        <div class="word-romaji">watashi <strong>wa</strong> taiwanjin desu</div>
+        <div class="word-meaning">我是台灣人 — わたしは たいわんじん です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>〜人 的讀音</strong>：國籍的「人」唸 <span class="compare">じん</span>（台湾人・日本人・アメリカ人），
+    跟單獨的「人（ひと＝人／那個人）」不一樣。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · Cheat sheet</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>漢字</th><th>假名</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">消防士</td><td class="col-kana">しょうぼうし</td><td class="col-mean">消防員</td></tr>
+      <tr><td class="col-ja">先生</td><td class="col-kana">せんせい</td><td class="col-mean">老師</td></tr>
+      <tr><td class="col-ja">保育士</td><td class="col-kana">ほいくし</td><td class="col-mean">保育員</td></tr>
+      <tr><td class="col-ja">警察官</td><td class="col-kana">けいさつかん</td><td class="col-mean">警察</td></tr>
+      <tr><td class="col-ja">台湾人</td><td class="col-kana">たいわんじん</td><td class="col-mean">台灣人</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    💡 <strong>一句話帶走</strong>：<span class="compare">A は B です</span> ＝ A 是 B。
+    B 放職業就是介紹工作，放「國名＋人」就是介紹國籍。は 記得唸 <strong>wa</strong>。
+  </div>
+
+  <a href="2026-07-23-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Same day · 同一天 —</span>
+    <span class="next-title">口語練習 その他 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一堂課的另一半：名字＋さん、知ってます 口語省略、期間 三か月</span>
+  </a>
+
+  <a href="2026-05-13-jinshou.html" class="next-link">
+    <span class="next-kicker">— 複習 / Review —</span>
+    <span class="next-title">人稱代名詞 彼・彼女 <span class="next-arrow">→</span></span>
+    <span class="next-sub">本課主詞用到的 かれ／かのじょ，回去看「我、你、他」怎麼分</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // job-card + word-item：只有播放按鈕會唸
+  document.querySelectorAll('.job-card[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>口語練習 — さん・知ってます・三か月</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 句子成分拆解 */
+.breakdown{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;justify-content:center;background:rgba(255,255,255,.55);border:1px solid var(--line);padding:20px 18px;margin-bottom:16px;}
+.bd-part{flex:1 1 100px;min-width:100px;text-align:center;padding:12px 8px;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--accent-soft);}
+.bd-part.key{border-top-color:var(--accent);background:var(--accent-pale);}
+.bd-part.drop{opacity:.55;}
+.bd-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:600;color:var(--ink);line-height:1.3;}
+.bd-ja .okuri{color:var(--ink-mute);font-size:17px;}
+.bd-ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--accent);margin-top:2px;}
+.bd-role{font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;}
+.bd-arrow{flex:0 0 auto;display:flex;align-items:center;color:var(--accent-soft);font-size:20px;}
+@media (max-width:560px){.bd-part{flex:1 1 calc(50% - 8px);}}
+
+/* 助數詞表 */
+.counter-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.counter-table th,.counter-table td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.counter-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.counter-table tr:last-child td{border-bottom:none;}
+.counter-table .col-num{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);width:110px;}
+.counter-table .col-read{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink);}
+.counter-table .col-read .hi{color:var(--accent);font-weight:600;}
+.counter-table tr.sokuon td{background:var(--accent-pale);}
+
+/* 行內高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.bad{color:var(--ink-mute);text-decoration:line-through;}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">口語練習 <span class="accent">その他</span></h1>
+  <div class="page-meta">口語 · 会話 · 2026 / 07 / 23</div>
+  <p class="page-subtitle">今日の口語課その他 — 名前＋さん、知ってます（口語省略）、期間 三か月</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇三個點</strong><br>
+    ① 叫別人：名字＋<span class="compare">さん</span>（外國名字寫片假名）；<br>
+    ② <span class="compare">知ってます</span>＝我知道（口語把 知って<strong>い</strong>ます 的 い 省掉）；<br>
+    ③ 講一段期間用 <span class="compare">〜か月</span>：三か月＝三個月。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、名前 ＋ さん — 稱呼</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    叫對方或提到第三人，在名字後面加 <span class="j-mark">さん</span> 表示禮貌，中文的「先生／小姐」都涵蓋在內。
+    外國名字要寫<strong>片假名</strong>——你的名字就是 <span class="compare">スカーレット</span>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 你的名字</div>
+
+    <div class="word-item" data-text="スカーレットさん">
+      <div class="word-content">
+        <div class="word-ja">スカーレット<span class="j-mark">さん</span></div>
+        <div class="word-romaji">sukaaretto-san</div>
+        <div class="word-meaning">Scarlett 小姐 — 別人這樣叫你</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="田中さん">
+      <div class="word-content">
+        <div class="word-ja">田中<span class="j-mark">さん</span></div>
+        <div class="word-romaji">tanaka-san</div>
+        <div class="word-meaning">田中先生／小姐 — 日本人的姓也一樣加さん</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>さん 不能加在自己身上</strong><br>
+    自我介紹說 <span class="bad">わたしはスカーレットさんです</span> 是錯的，要說
+    <span class="compare">わたしはスカーレットです</span>。さん 是抬舉<strong>對方</strong>的，講自己不用。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、知ってます — 我知道</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    完整形是 <span class="compare">知っています</span>，日常口語常把中間的 <strong>い</strong> 省掉，變成 <span class="compare">知ってます</span>。
+    意思一樣，只是更輕鬆自然。
+  </p>
+
+  <div class="breakdown">
+    <div class="bd-part">
+      <div class="bd-ja">知って</div>
+      <div class="bd-ro">shitte</div>
+      <div class="bd-role">動詞て形<br>「知道」</div>
+    </div>
+    <div class="bd-part drop">
+      <div class="bd-ja">い</div>
+      <div class="bd-ro">i</div>
+      <div class="bd-role">口語省略<br>掉這個</div>
+    </div>
+    <div class="bd-part key">
+      <div class="bd-ja">ます</div>
+      <div class="bd-ro">masu</div>
+      <div class="bd-role">禮貌結尾<br>保留</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 肯定 — 知ってます</div>
+
+    <div class="word-item" data-text="知ってます">
+      <div class="word-content">
+        <div class="word-ja">知ってます</div>
+        <div class="word-romaji">shittemasu</div>
+        <div class="word-meaning">我知道 —（完整：知っています shitteimasu）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>否定不是「知ってません」</strong><br>
+    「我不知道」要說 <span class="compare">知りません</span>（shirimasen），<strong>不是</strong> <span class="bad">知ってません</span>。
+    這是日文的固定搭配，肯定用「知って(い)ます」、否定卻跳回原形「知りません」。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 否定 — 知りません</div>
+
+    <div class="word-item" data-text="知りません">
+      <div class="word-content">
+        <div class="word-ja">知りません</div>
+        <div class="word-romaji">shirimasen</div>
+        <div class="word-meaning">我不知道 — 記住這個特殊的否定形</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、三か月 — 期間「幾個月」</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    講「經過幾個月」用助數詞 <span class="j-mark">〜か月</span>（唸 かげつ）。
+    <span class="compare">三か月＝さんかげつ＝三個月</span>。也常寫成 <strong>３ヶ月</strong>（小さい ヶ）。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 三個月</div>
+
+    <div class="word-item" data-text="三か月">
+      <div class="word-content">
+        <div class="word-ja">三か月</div>
+        <div class="word-romaji">sankagetsu</div>
+        <div class="word-meaning">三個月 — 一段期間的長度</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本語を三か月勉強しました">
+      <div class="word-content">
+        <div class="word-ja">日本語を三か月勉強しました</div>
+        <div class="word-romaji">nihongo o sankagetsu benkyou shimashita</div>
+        <div class="word-meaning">學了三個月日文 — 期間直接放在動詞前，不用助詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>か月（期間）≠ 月（日期）</strong><br>
+    「三か月（さんかげつ）」是<strong>一段長度</strong>；「三月（さん<strong>がつ</strong>）」是<strong>三月份</strong>那個月。
+    同一個「月」字，讀音和意思都不同。
+  </div>
+
+  <table class="counter-table">
+    <thead>
+      <tr><th>數量</th><th>讀音</th><th>備註</th></tr>
+    </thead>
+    <tbody>
+      <tr class="sokuon"><td class="col-num">一か月</td><td class="col-read"><span class="hi">いっ</span>かげつ</td><td>促音</td></tr>
+      <tr><td class="col-num">二か月</td><td class="col-read">にかげつ</td><td></td></tr>
+      <tr><td class="col-num">三か月</td><td class="col-read">さんかげつ</td><td>← 今日</td></tr>
+      <tr><td class="col-num">四か月</td><td class="col-read">よんかげつ</td><td></td></tr>
+      <tr class="sokuon"><td class="col-num">六か月</td><td class="col-read"><span class="hi">ろっ</span>かげつ</td><td>促音（＝半年）</td></tr>
+      <tr class="sokuon"><td class="col-num">十か月</td><td class="col-read"><span class="hi">じゅっ</span>かげつ</td><td>促音</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 促音（っ）出現在 <strong>1・6・8・10</strong> — 唸的時候中間卡一拍，「いっかげつ・ろっかげつ・じゅっかげつ」，跟數字後面直接接不一樣。
+  </div>
+
+  <a href="2026-07-23-shokugyou.html" class="next-link">
+    <span class="next-kicker">— Same day · 同一天 —</span>
+    <span class="next-title">彼は消防士です — 職業 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一堂課的另一半：用「A は B です」介紹職業與國籍</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

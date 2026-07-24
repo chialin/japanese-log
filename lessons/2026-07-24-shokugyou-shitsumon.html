@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彼はプログラマーですか — 職業を尋ねる 〜ですか？</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 句型骨架 A は B ですか */
+.frame{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:16px;text-align:center;}
+.frame-line{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;font-weight:600;color:var(--ink);line-height:1.5;letter-spacing:.02em;}
+.frame-line .slot{color:var(--accent);border-bottom:2px dashed var(--accent-soft);padding:0 4px;}
+.frame-line .fix{color:var(--ink-mute);}
+.frame-line .q{color:var(--accent);font-weight:700;background:var(--accent-pale);padding:0 6px;border-radius:2px;}
+.frame-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;letter-spacing:.05em;margin-top:8px;}
+.frame-desc{font-size:14px;color:var(--ink-soft);margin-top:12px;line-height:1.8;text-align:left;}
+
+/* 職業大字卡 */
+.job-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.job-grid{grid-template-columns:1fr;}}
+.job-card{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 16px;transition:background .15s,border-color .15s;}
+.job-card:hover{background:rgba(255,255,255,.85);}
+.job-icon{font-size:30px;flex-shrink:0;line-height:1;}
+.job-body{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0;}
+.job-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:600;color:var(--ink);line-height:1.2;}
+.job-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:14px;color:var(--ink-mute);}
+.job-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;}
+.job-meaning{color:var(--ink-soft);font-size:13px;margin-top:2px;}
+.job-card .play-btn{flex-shrink:0;}
+.job-card .kata-tag{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;letter-spacing:.08em;color:var(--accent);background:var(--accent-pale);border-radius:2px;padding:0 5px;margin-left:6px;vertical-align:middle;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.bad{color:var(--ink-mute);text-decoration:line-through;}
+
+/* 速記表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);width:130px;}
+.cheat .col-kana{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink-mute);width:150px;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">彼はプログラマーですか <span class="accent">職業を尋ねる</span></h1>
+  <div class="page-meta">口語 · 会話 · 2026 / 07 / 24</div>
+  <p class="page-subtitle">昨日の「A は B です」に か をつけて疑問文に — 美容師・歌手・バリスタ・プログラマー</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 昨天的「<span class="compare">A は B です</span>」句尾加一個 <span class="j-mark">か</span> 就變成問句：<span class="compare">A は B ですか？</span>（A 是 B 嗎？）；<br>
+    ② 問「你」用 <span class="compare">あなた</span>，問別人用 <span class="compare">彼／彼女</span>；<br>
+    ③ 外來語職業（バリスタ・プログラマー）一律寫<strong>片假名</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、句型骨架 — A は B ですか？</div>
+
+  <div class="frame">
+    <div class="frame-line"><span class="slot">彼</span> <span class="fix">は</span> <span class="slot">プログラマー</span> <span class="fix">です</span><span class="q">か</span></div>
+    <div class="frame-ro">kare <strong>wa</strong> puroguramaa desu <strong>ka</strong></div>
+    <div class="frame-desc">
+      跟昨天的肯定句一模一樣，只是句尾多加一個 <span class="j-mark">か</span>——它就是日文的「嗎？」。<br>
+      有了 <span class="q" style="background:none;padding:0;">か</span>，語尾自然上揚，寫的時候<strong>不加 ？也行</strong>（か 已經表示疑問），但初學階段習慣寫 <strong>か？</strong> 幫助自己記得是問句。
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>回答不用重複整句</strong><br>
+    被問「彼はプログラマーですか？」時，肯定回 <span class="compare">はい、そうです</span>（是的，沒錯），
+    否定回 <span class="compare">いいえ、ちがいます</span>（不，不是）。不必把整句再講一遍。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、職業單字 — 今天的五個</div>
+
+  <div class="job-grid">
+    <div class="job-card" data-text="学生">
+      <div class="job-icon">🎓</div>
+      <div class="job-body">
+        <div class="job-ja">学生</div>
+        <div class="job-kana">がくせい</div>
+        <div class="job-romaji">gakusei</div>
+        <div class="job-meaning">學生</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="美容師">
+      <div class="job-icon">💇</div>
+      <div class="job-body">
+        <div class="job-ja">美容師</div>
+        <div class="job-kana">びようし</div>
+        <div class="job-romaji">biyoushi</div>
+        <div class="job-meaning">美髮師／美容師</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="歌手">
+      <div class="job-icon">🎤</div>
+      <div class="job-body">
+        <div class="job-ja">歌手</div>
+        <div class="job-kana">かしゅ</div>
+        <div class="job-romaji">kashu</div>
+        <div class="job-meaning">歌手</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="バリスタ">
+      <div class="job-icon">☕</div>
+      <div class="job-body">
+        <div class="job-ja">バリスタ<span class="kata-tag">外来語</span></div>
+        <div class="job-kana">ばりすた</div>
+        <div class="job-romaji">barisuta</div>
+        <div class="job-meaning">咖啡師 — barista</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="プログラマー">
+      <div class="job-icon">💻</div>
+      <div class="job-body">
+        <div class="job-ja">プログラマー<span class="kata-tag">外来語</span></div>
+        <div class="job-kana">ぷろぐらまー</div>
+        <div class="job-romaji">puroguramaa</div>
+        <div class="job-meaning">程式設計師 — programmer</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>外來語寫片假名，不寫平假名</strong><br>
+    「programmer」正確寫法是 <span class="compare">プログラマー</span>，<strong>不是</strong> <span class="bad">ぷろぐらまー</span>。
+    凡是外來語（バリスタ・プログラマー・コーヒー…）一律用片假名；上面卡片裡的平假名只是給你標讀音用。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、完整例句 — 套進問句</div>
+
+  <div class="section">
+    <div class="section-title">📖 你／他／她 是〜嗎？</div>
+
+    <div class="word-item" data-text="あなたは学生ですか">
+      <div class="word-content">
+        <div class="word-ja">あなた<span class="j-mark">は</span>学生です<span class="j-mark">か</span></div>
+        <div class="word-romaji">anata <strong>wa</strong> gakusei desu <strong>ka</strong></div>
+        <div class="word-meaning">你是學生嗎？ — あなたは がくせい ですか</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼は美容師ですか">
+      <div class="word-content">
+        <div class="word-ja">彼<span class="j-mark">は</span>美容師です<span class="j-mark">か</span></div>
+        <div class="word-romaji">kare <strong>wa</strong> biyoushi desu <strong>ka</strong></div>
+        <div class="word-meaning">他是美容師嗎？ — かれは びようし ですか</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女は歌手ですか">
+      <div class="word-content">
+        <div class="word-ja">彼女<span class="j-mark">は</span>歌手です<span class="j-mark">か</span></div>
+        <div class="word-romaji">kanojo <strong>wa</strong> kashu desu <strong>ka</strong></div>
+        <div class="word-meaning">她是歌手嗎？ — かのじょは かしゅ ですか</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女はバリスタですか">
+      <div class="word-content">
+        <div class="word-ja">彼女<span class="j-mark">は</span>バリスタです<span class="j-mark">か</span></div>
+        <div class="word-romaji">kanojo <strong>wa</strong> barisuta desu <strong>ka</strong></div>
+        <div class="word-meaning">她是咖啡師嗎？ — かのじょは ばりすた ですか</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼はプログラマーですか">
+      <div class="word-content">
+        <div class="word-ja">彼<span class="j-mark">は</span>プログラマーです<span class="j-mark">か</span></div>
+        <div class="word-romaji">kare <strong>wa</strong> puroguramaa desu <strong>ka</strong></div>
+        <div class="word-meaning">他是程式設計師嗎？ — かれは ぷろぐらまー ですか</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、其他單字 — 親・お菓子・お金</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    課堂上另外冒出來的三個日常名詞。其中 <span class="compare">お菓子</span>、<span class="compare">お金</span> 前面的
+    <span class="j-mark">お</span> 是禮貌的接頭語，加了讓語氣柔和，日常幾乎都連著唸。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 日常名詞</div>
+
+    <div class="word-item" data-text="親">
+      <div class="word-content">
+        <div class="word-ja">親</div>
+        <div class="word-romaji">oya</div>
+        <div class="word-meaning">父母／雙親 — 泛指爸媽（りょうしん＝両親 也是雙親）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お菓子">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark">お</span>菓子</div>
+        <div class="word-romaji">okashi</div>
+        <div class="word-meaning">點心／零食／糖果餅乾 — お＋菓子</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お金">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark">お</span>金</div>
+        <div class="word-romaji">okane</div>
+        <div class="word-meaning">錢 — お＋金（かね）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>お 這個接頭語</strong>：加在名詞前讓語氣有禮貌、柔和，像 <span class="compare">お金・お菓子・お茶・お水</span>。
+    這些字現在幾乎都固定連著 お 一起用，單講「金（かね）」反而顯得生硬。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · Cheat sheet</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>寫法</th><th>假名</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">学生</td><td class="col-kana">がくせい</td><td class="col-mean">學生</td></tr>
+      <tr><td class="col-ja">美容師</td><td class="col-kana">びようし</td><td class="col-mean">美容師</td></tr>
+      <tr><td class="col-ja">歌手</td><td class="col-kana">かしゅ</td><td class="col-mean">歌手</td></tr>
+      <tr><td class="col-ja">バリスタ</td><td class="col-kana">ばりすた</td><td class="col-mean">咖啡師 barista</td></tr>
+      <tr><td class="col-ja">プログラマー</td><td class="col-kana">ぷろぐらまー</td><td class="col-mean">程式設計師 programmer</td></tr>
+      <tr><td class="col-ja">親</td><td class="col-kana">おや</td><td class="col-mean">父母</td></tr>
+      <tr><td class="col-ja">お菓子</td><td class="col-kana">おかし</td><td class="col-mean">點心／零食</td></tr>
+      <tr><td class="col-ja">お金</td><td class="col-kana">おかね</td><td class="col-mean">錢</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    💡 <strong>一句話帶走</strong>：肯定句句尾加 <span class="j-mark">か</span> 就變問句 ——
+    <span class="compare">B です</span>（是 B）→ <span class="compare">B ですか？</span>（是 B 嗎？）。
+  </div>
+
+  <a href="2026-07-23-shokugyou.html" class="next-link">
+    <span class="next-kicker">— 前情提要 / Previously —</span>
+    <span class="next-title">彼は消防士です — 職業 <span class="next-arrow">→</span></span>
+    <span class="next-sub">今天的問句就是從昨天的「A は B です」延伸來的，先把肯定句記熟</span>
+  </a>
+
+  <a href="2026-05-13-jinshou.html" class="next-link">
+    <span class="next-kicker">— 複習 / Review —</span>
+    <span class="next-title">人稱代名詞 あなた・彼・彼女 <span class="next-arrow">→</span></span>
+    <span class="next-sub">問句主詞用到的「你、他、她」，回去看怎麼分</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // job-card + word-item：只有播放按鈕會唸
+  document.querySelectorAll('.job-card[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

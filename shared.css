@@ -54,21 +54,48 @@ body::before {
   margin-bottom: 32px;
 }
 
-/* ── Speed control (TTS) ── */
+/* ── Speed control (TTS) — 慢/原速/快 三段膠囊，靠右併入 meta 行 ──
+   markup 在各頁仍是舊 range slider；js/site-chrome.js 於載入時就地升級成膠囊，
+   原本的 <input type="range"> / .speed-value 隱藏保留，當 speak() 讀取的資料來源。 */
+
+/* 標題下方 meta 與速度控制併成一行：日期靠左、膠囊靠右 */
+.meta-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px 20px; flex-wrap: wrap; margin-bottom: 28px;
+}
+.meta-row .page-meta { margin-bottom: 0; }
+
 .speed-control {
-  display: flex; align-items: center; gap: 12px;
-  padding: 14px 20px; background: rgba(255,255,255,.6);
-  border: 1px solid var(--line); margin-bottom: 28px;
+  display: inline-flex; align-items: center; gap: 12px;
+  margin: 0 0 28px auto;          /* 沒併入 meta-row 時的 fallback：靠右 */
 }
-.speed-control label {
+.meta-row .speed-control { margin: 0; }
+
+/* 升級後隱藏原本的 label / slider / 數值 */
+.speed-control > label,
+.speed-control > input[type="range"],
+.speed-control > .speed-value { display: none; }
+
+.speed-control .speed-label {
   font-family: 'Cormorant Garamond', serif; font-style: italic;
-  font-size: 14px; color: var(--ink-soft); white-space: nowrap; letter-spacing: .08em;
+  font-size: 14px; color: var(--ink-mute); white-space: nowrap; letter-spacing: .1em;
 }
-.speed-control input { flex: 1; accent-color: var(--accent); }
-.speed-value {
-  min-width: 40px; text-align: right; color: var(--accent);
-  font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic;
-  font-variant-numeric: tabular-nums;
+.speed-seg {
+  display: inline-flex; align-items: center; gap: 2px;
+  padding: 3px; border-radius: 999px;
+  background: rgba(255,255,255,.6); border: 1px solid var(--line);
+}
+.speed-seg button {
+  appearance: none; border: none; background: none; cursor: pointer;
+  font-family: 'Noto Serif TC', 'Shippori Mincho', serif;
+  font-size: 13px; letter-spacing: .06em; line-height: 1; color: var(--ink-soft);
+  padding: 6px 15px; border-radius: 999px; white-space: nowrap;
+  transition: color .15s, background .15s;
+}
+.speed-seg button:hover { color: var(--accent); }
+.speed-seg button.active {
+  background: var(--accent); color: #fff; font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,.14);
 }
 
 /* ── Divider ── */

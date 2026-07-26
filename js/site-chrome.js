@@ -82,3 +82,73 @@ class SiteFooter extends HTMLElement {
 
 customElements.define('site-header', SiteHeader);
 customElements.define('site-footer', SiteFooter);
+
+// ── 速度控制升級：把各頁舊 range slider 就地換成「慢/原速/快」三段膠囊 ──
+// 各頁 markup 仍是 <div class="speed-control"> 內含 <input type="range">；
+// 這裡隱藏原元件、疊上膠囊，並把選到的 rate 寫回 input（dispatch input），
+// 讓每頁既有的 speak() ＝ JTalk.speak(..., { rate: input.value }) 不需改動照常運作。
+// rate 用 localStorage('jtalk-rate') 跨頁記住（比照音量）。
+// 段值都落在各頁 range 的 step 網格上（主課程 step=0.1 / kana 頁 step=0.05），
+// 避免 input.value 被瀏覽器吸附而與 localStorage 記的值不一致。
+const SPEED_SEGMENTS = [
+  { label: '慢',   rate: 0.8 },
+  { label: '原速', rate: 1.0 },
+  { label: '快',   rate: 1.2 },
+];
+const DEFAULT_RATE = 1.0; // 無記憶時一律原速（2026-06-24 定案的預設 1x）
+
+function upgradeSpeedControl(sc) {
+  if (sc.dataset.upgraded) return;
+  const input = sc.querySelector('input[type="range"]');
+  if (!input) return;
+  sc.dataset.upgraded = '1';
+
+  // 初始 rate：優先 localStorage（跨頁記住），否則預設原速 —— 不看各頁寫死的 value
+  let rate = DEFAULT_RATE;
+  try {
+    const v = parseFloat(localStorage.getItem('jtalk-rate'));
+    if (Number.isFinite(v)) rate = v;
+  } catch {}
+  const nearest = SPEED_SEGMENTS.reduce((a, b) =>
+    Math.abs(b.rate - rate) < Math.abs(a.rate - rate) ? b : a);
+
+  function applyRate(r) {
+    input.value = r;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    try { localStorage.setItem('jtalk-rate', r); } catch {}
+  }
+  applyRate(nearest.rate); // 讓每頁 speak() 一開始就讀到正確 rate
+
+  const label = document.createElement('span');
+  label.className = 'speed-label';
+  label.textContent = '速度';
+
+  const seg = document.createElement('div');
+  seg.className = 'speed-seg';
+  SPEED_SEGMENTS.forEach(s => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = s.label;
+    if (s === nearest) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      seg.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+      btn.classList.add('active');
+      applyRate(s.rate);
+    });
+    seg.appendChild(btn);
+  });
+
+  sc.append(label, seg);
+
+  // 併入 meta 行：日期靠左、膠囊靠右（同一列）
+  const meta = document.querySelector('.page-meta');
+  if (meta && meta.parentNode && !meta.closest('.meta-row')) {
+    const row = document.createElement('div');
+    row.className = 'meta-row';
+    meta.parentNode.insertBefore(row, meta);
+    row.appendChild(meta);
+    row.appendChild(sc);
+  }
+}
+
+document.querySelectorAll('.speed-control').forEach(upgradeSpeedControl);

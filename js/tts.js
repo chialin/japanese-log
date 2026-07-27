@@ -5,7 +5,7 @@
 //   2. 找不到（404）→ fallback 到瀏覽器內建 speechSynthesis（Kyoko/O-ren）
 //
 // 使用方式：
-//   <script src="../js/tts.js"></script>   // lessons/, readings/ 路徑
+//   <script src="../js/tts.js"></script>   // lessons/, readings/, tadoku/ 等子目錄
 //   <script src="js/tts.js"></script>       // 根目錄路徑
 //
 //   await JTalk.speak('ほんを よむ', button, { rate: 0.8 });
@@ -13,10 +13,16 @@
 // hash 演算法跟 scripts/generate-audio.mjs 必須一致：sha256(text utf8) 前 16 字元
 
 window.JTalk = (function () {
-  // 自動推測 audio/ 路徑（lessons/* 或 readings/* 在子目錄，要回上一層）
+  // audio/ 路徑從本 script 自己的 src 推導（<script src> 已含正確的相對深度），
+  // 子目錄再深、部署在子路徑都對。
+  // 舊版是寫死 '/lessons/' + '/readings/' 清單，新增 tadoku/ 時漏改 → 404 →
+  // 整頁靜悄悄退回 speechSynthesis 機器音。別再改回列舉式。
   const AUDIO_BASE = (function () {
-    const p = location.pathname;
-    if (p.includes('/lessons/') || p.includes('/readings/')) return '../audio/';
+    const s = document.currentScript;
+    if (s && s.src) {
+      const base = s.src.replace(/[?#].*$/, '').replace(/js\/tts\.js$/, 'audio/');
+      if (base !== s.src) return base;
+    }
     return './audio/';
   })();
 

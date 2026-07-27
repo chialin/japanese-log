@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ミニ多読 — 花を買いました</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* tadoku/* 統一用藤色，跟 tadoku.html 同一套 */
+:root{--paper:#f8f6fc;--paper-deep:#ece7f5;--ink:#241f33;--ink-soft:#473f60;--ink-mute:#7d7396;--accent:#7a68a6;--accent-soft:#b8aad6;--accent-pale:#ece7f7;--line:#ddd5ec;--bg-spot-1:#f4f1fa;--bg-spot-2:#e8e2f2;}
+
+/* 一句一景：插圖在上、句子在下（仿 tadoku 分級讀本一頁一景） */
+.scene{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:22px 24px;margin-bottom:16px;transition:border-color .15s;}
+.scene:hover{border-color:var(--accent-soft);}
+.scene-img{display:block;margin:0 auto 16px;max-width:100%;max-height:180px;width:auto;}
+.scene-body{display:flex;align-items:center;gap:16px;}
+.scene-text{flex:1;}
+.scene-text .japanese{font-size:24px;line-height:1.55;margin-bottom:4px;}
+.scene-text .meaning{margin-top:4px;}
+
+/* 圖片出處 */
+.credit{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-mute);line-height:1.8;}
+.credit a{color:var(--accent);}
+
+@media(max-width:600px){
+  .scene{padding:18px 16px;}
+  .scene-text .japanese{font-size:20px;}
+  .scene-img{max-height:150px;}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">ミニ多読 <span class="accent">花を買いました</span></h1>
+  <div class="page-meta">閱讀練習 · Mini Tadoku · 2026 / 07 / 27</div>
+  <p class="page-subtitle">一句一景，短短的小故事 — 先看圖猜意思，再看日文</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="scene" data-text="スカーレットさんは日本語を勉強しています">
+    <img class="scene-img" src="../images/tadoku/study_nihongo.png" alt="日本語を勉強する人のイラスト" loading="lazy">
+    <div class="scene-body">
+      <div class="scene-text">
+        <div class="japanese">スカーレットさんは日本語を勉強しています。</div>
+        <div class="romaji">Sukaaretto-san wa nihongo o benkyou shite imasu.</div>
+        <div class="meaning">Scarlett 正在學日文。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene" data-text="コーヒーがすきです">
+    <img class="scene-img" src="../images/tadoku/coffee_ippuku_woman1.png" alt="コーヒーで一服している女性のイラスト" loading="lazy">
+    <div class="scene-body">
+      <div class="scene-text">
+        <div class="japanese">コーヒーがすきです。</div>
+        <div class="romaji">Koohii ga suki desu.</div>
+        <div class="meaning">喜歡喝咖啡。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene" data-text="今日、吉祥寺へ行きました">
+    <img class="scene-img" src="../images/tadoku/train_jousya_woman.png" alt="電車に乗る女性のイラスト" loading="lazy">
+    <div class="scene-body">
+      <div class="scene-text">
+        <div class="japanese">今日、吉祥寺（きちじょうじ）へ行きました。</div>
+        <div class="romaji">Kyou, Kichijouji e ikimashita.</div>
+        <div class="meaning">今天去了吉祥寺。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene" data-text="花を買いました">
+    <img class="scene-img" src="../images/tadoku/tatemono_hanaya.png" alt="花屋の建物のイラスト" loading="lazy">
+    <div class="scene-body">
+      <div class="scene-text">
+        <div class="japanese">花を買いました。</div>
+        <div class="romaji">Hana o kaimashita.</div>
+        <div class="meaning">買了花。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene" data-text="この花を買います">
+    <img class="scene-img" src="../images/tadoku/present_hanataba_flower_girl.png" alt="花束を持つ女性のイラスト" loading="lazy">
+    <div class="scene-body">
+      <div class="scene-text">
+        <div class="japanese">「この花を買います。」</div>
+        <div class="romaji">"Kono hana o kaimasu."</div>
+        <div class="meaning">「我要買這一束花。」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene" data-text="660円です">
+    <img class="scene-img" src="../images/tadoku/job_hanaya.png" alt="花屋の店員さんのイラスト" loading="lazy">
+    <div class="scene-body">
+      <div class="scene-text">
+        <div class="japanese">「660円です。」</div>
+        <div class="romaji">"Roppyaku rokujuu en desu."</div>
+        <div class="meaning">「660 元。」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene" data-text="ありがとうございます">
+    <img class="scene-img" src="../images/tadoku/aisatsu_arigatou.png" alt="「ありがとう」と言っている人のイラスト" loading="lazy">
+    <div class="scene-body">
+      <div class="scene-text">
+        <div class="japanese">「ありがとうございます。」</div>
+        <div class="romaji">"Arigatou gozaimasu."</div>
+        <div class="meaning">「謝謝。」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene" data-text="また会いましょう">
+    <img class="scene-img" src="../images/tadoku/byebye_girl.png" alt="手を振る女の子のイラスト" loading="lazy">
+    <div class="scene-body">
+      <div class="scene-text">
+        <div class="japanese">「また会いましょう。」</div>
+        <div class="romaji">"Mata aimashou."</div>
+        <div class="meaning">「下次再見。」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="credit">
+    插圖：<a href="https://www.irasutoya.com/" target="_blank" rel="noopener">いらすとや</a>（かわいいフリー素材集）
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.scene[data-text]').forEach(scene => {
+    const button = scene.querySelector('.play-btn');
+    const text = scene.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

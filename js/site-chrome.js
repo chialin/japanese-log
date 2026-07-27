@@ -3,7 +3,7 @@
 // Web Component，模板字串內嵌在這支檔案裡（不用 fetch，file:// 開檔也沒有 CORS 問題）
 
 function siteChromePrefix() {
-  return /\/(lessons|readings)\//.test(location.pathname) ? '../' : '';
+  return /\/(lessons|readings|tadoku)\//.test(location.pathname) ? '../' : '';
 }
 
 function isHomePage() {
@@ -46,7 +46,7 @@ class SiteHeader extends HTMLElement {
           <nav class="site-nav">
             ${navItem('my-name-katakana.html', '關於我')}
             ${navItem('resources.html', '資源')}
-            ${navItem('vocab-quiz.html', '練習')}
+            ${navItem('tadoku.html', '多読')}
           </nav>
           ${control}
         </div>

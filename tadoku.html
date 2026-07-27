@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多読 · Tadoku — 四つのルールと小さな読み物</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+/* 多読頁 藤色色票（跟其他類型區隔開，shared.css 註解裡的第四套配色） */
+:root{--paper:#f8f6fc;--paper-deep:#ece7f5;--ink:#241f33;--ink-soft:#473f60;--ink-mute:#7d7396;--accent:#7a68a6;--accent-soft:#b8aad6;--accent-pale:#ece7f7;--line:#ddd5ec;--bg-spot-1:#f4f1fa;--bg-spot-2:#e8e2f2;}
+
+/* 四原則卡片 */
+.rule-list{list-style:none;display:grid;gap:10px;margin-bottom:18px;}
+.rule-item{display:flex;align-items:baseline;gap:16px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:15px 20px;}
+.rule-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:28px;line-height:1;color:var(--accent);min-width:20px;}
+.rule-body{flex:1;}
+.rule-ja{display:block;font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);letter-spacing:.03em;margin-bottom:4px;}
+.rule-cn{display:block;font-size:14px;color:var(--ink-soft);line-height:1.7;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<script src="js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">多 <span class="accent">読</span></h1>
+  <div class="page-meta">多読 · Tadoku</div>
+  <p class="page-subtitle">目的不是讀懂每一個字，而是讓日文不用先翻成中文就能懂</p>
+
+  <div class="divider">多読の四つのルール</div>
+
+  <ol class="rule-list">
+    <li class="rule-item">
+      <span class="rule-num">1</span>
+      <span class="rule-body">
+        <span class="rule-ja">やさしいレベルから読む</span>
+        <span class="rule-cn">從簡單的等級開始讀 — 覺得太簡單才是對的起點</span>
+      </span>
+    </li>
+    <li class="rule-item">
+      <span class="rule-num">2</span>
+      <span class="rule-body">
+        <span class="rule-ja">辞書を引かないで読む</span>
+        <span class="rule-cn">不查字典 — 查字典會打斷閱讀節奏，靠上下文猜就好</span>
+      </span>
+    </li>
+    <li class="rule-item">
+      <span class="rule-num">3</span>
+      <span class="rule-body">
+        <span class="rule-ja">わからないところは、とばして読む</span>
+        <span class="rule-cn">看不懂的地方就跳過 — 不用每個字都懂，抓大意就好</span>
+      </span>
+    </li>
+    <li class="rule-item">
+      <span class="rule-num">4</span>
+      <span class="rule-body">
+        <span class="rule-ja">進まなくなったら、他の本を読む</span>
+        <span class="rule-cn">讀不下去就換一本 — 覺得吃力或無聊，換下一本不算放棄</span>
+      </span>
+    </li>
+  </ol>
+
+  <div class="note">
+    📝 出自 <strong>NPO多言語多読</strong>（tadoku.org）的「多読の四原則」。
+    延伸閱讀：<a href="lessons/2026-07-21-tadoku-reading-list.html">多読起步 — 免費讀本清單</a>。
+  </div>
+
+  <div class="divider">小さな読み物</div>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="tadoku/2026-07-27-tadoku-kami.html">
+        <div class="lesson-meta">ミニ多読 · Mini Tadoku · 2026 / 07 / 27</div>
+        <div class="lesson-title">花を買いました <span class="arrow">→</span></div>
+        <div class="lesson-summary">用學過的單字寫的迷你多読小故事 — 吉祥寺で花を買う，一句一景</div>
+      </a>
+    </li>
+  </ul>
+
+<site-footer></site-footer>
+</div>
+</body>
+</html>

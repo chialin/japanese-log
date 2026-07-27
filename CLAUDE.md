@@ -21,10 +21,17 @@ There is no build, lint, or test step. Development workflow:
 ```
 index.html                       ← 首頁：stats + calendar + log（棕色主題）
 shared.css                       ← 全站共用元件樣式（masthead/word-item/play-btn/...）
+resources.html                   ← 資源入口：多読起步清單、看圖猜詞測驗、店員對話帖、練字帖（棕色主題）
+vocab-quiz.html                  ← 看圖猜詞單字測驗（棕色主題，從 resources.html 連過去）
+tadoku.html                      ← 多読入口：自製迷你多読小故事清單（藤色主題）
 my-name-katakana.html            ← 「私の名前」自我介紹（藍色主題）
 lessons/YYYY-MM-DD-topic.html    ← 每日課程（棕色主題）
-readings/YYYY-MM-DD-topic.html   ← 閱讀筆記（深紅主題）
+readings/YYYY-MM-DD-topic.html   ← 閱讀筆記（深紅主題，真實日文短文素材）
+tadoku/YYYY-MM-DD-topic.html     ← 自製迷你多読小故事（藤色主題，跟 tadoku.html 同一套；同時仍列進 index.html 的 log/calendar）
+images/tadoku/*.png              ← 多読故事的插圖（いらすとや，自存不直連）
 ```
+
+全站導覽列固定三個入口：關於我（`my-name-katakana.html`）／資源（`resources.html`）／多読（`tadoku.html`）——導覽列上寫「多読」不是「練習」，因為這個入口目前只放自製多読小故事，看圖猜詞單字測驗改放進「資源」。
 
 每個 HTML 都長同一個樣子：
 1. 自己的 `<style>` 裡只放 `:root` 色票（其餘版面交給 `shared.css`）
@@ -53,7 +60,8 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
 | 類型 | 放在 | 起手用什麼 |
 |------|------|------|
 | `lessons/*`（每日課程，含五十音行／主題／文法／概念） | `lessons/YYYY-MM-DD-<slug>.html` | **複製 [`lessons/_skeleton.html`](lessons/_skeleton.html)**，依「子類型」加上對應 CSS 區塊（見下表） |
-| 閱讀筆記 | `readings/YYYY-MM-DD-topic.html` | 複製 [reading-cho](readings/2026-05-05-reading-cho.html) |
+| 閱讀筆記（真實日文短文） | `readings/YYYY-MM-DD-topic.html` | 複製 [reading-cho](readings/2026-05-05-reading-cho.html) |
+| 自製迷你多読小故事（掛在多読入口底下） | `tadoku/YYYY-MM-DD-topic.html` | 複製 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)，並在 [tadoku.html](tadoku.html) 的 `<ul>` 加一個 `<li>` 卡片 |
 | 一次性介紹頁 | 根目錄 | 複製 [my-name-katakana](my-name-katakana.html) |
 
 **Step 2 — 把 skeleton 內所有 `TODO:` 註解區塊填掉**（標題、masthead、divider、word-item …），不需要的 `<section>` 整段刪。色票寫死在 `:root`，**不要改**。
@@ -73,11 +81,11 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
 </li>
 ```
 
-`lesson-meta` 結尾的 `· Lesson` / `· Reading` 是純文字標籤，給人讀的；機器靠 `href` 前綴 (`readings/` / `lessons/` / `my-name-katakana.html`) 自動換左邊框顏色（CSS attribute selector）。
+`lesson-meta` 結尾的 `· Lesson` / `· Reading` 是純文字標籤，給人讀的；機器靠 `href` 前綴 (`readings/` / `tadoku/` / `lessons/` / `my-name-katakana.html`) 自動換左邊框顏色（CSS attribute selector，見 shared.css 的 `.lesson-link[href^="..."]` 規則）。
 
 Stats 與 calendar 會自動重算——`data-kana` / `data-words` / `data-date` 提供即可，新月份不必動 calendar 邏輯。
 
-**Step 5 — 確保 favicon link 存在**（特別是非複製 `lessons/_skeleton.html` 的手寫頁、或新類型的產生器頁）：最簡單做法是執行 `node scripts/add-favicon.mjs`（冪等，已有 `rel="icon"` 的頁會自動跳過；root 頁注入 `favicon.svg`、`lessons/` 與 `readings/` 注入 `../favicon.svg`）。favicon 功能已於 2026-05-17 完成（見 [docs/superpowers/specs/2026-05-17-favicon-design.md](docs/superpowers/specs/2026-05-17-favicon-design.md)），`_skeleton.html` 已內含該 link，但手寫新頁或新產生器樣板不會自動帶上。
+**Step 5 — 確保 favicon link 存在**（特別是非複製 `lessons/_skeleton.html` 的手寫頁、或新類型的產生器頁）：最簡單做法是執行 `node scripts/add-favicon.mjs`（冪等，已有 `rel="icon"` 的頁會自動跳過；root 頁注入 `favicon.svg`、`lessons/`／`readings/`／`tadoku/` 注入 `../favicon.svg`）。favicon 功能已於 2026-05-17 完成（見 [docs/superpowers/specs/2026-05-17-favicon-design.md](docs/superpowers/specs/2026-05-17-favicon-design.md)），`_skeleton.html` 已內含該 link，但手寫新頁或新產生器樣板不會自動帶上。
 
 ### TTS — VOICEVOX 預生 mp3（主要）＋ speechSynthesis（fallback）
 
@@ -128,6 +136,9 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 | `index.html` + `lessons/*` | 棕橘 / 茶色 | `#fdf6f0` | `#c96830` |
 | `my-name-katakana.html`（自我介紹） | 海軍藍 | `#f2f6fb` | `#2a5f9e` |
 | `readings/*`（閱讀筆記） | 深紅 / 暗朱 | `#f4ece0` | `#8b3a3a` |
+| `tadoku.html`、`tadoku/*`（自製迷你多読） | 藤色 / 淡紫 | `#f8f6fc` | `#7a68a6` |
+
+`tadoku/*` 是自製的迷你多読小故事（例如 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)），不教新單字（`index.html` 對應 `data-words="0"`），色票跟 `tadoku.html` 一樣用藤色，但仍列進 `index.html` 的每日 log／calendar（跟 `readings/*` 一樣是「log 裡混不同色票類型」的做法）。`vocab-quiz.html` 改連在 `resources.html` 底下，用回一般棕橘色票。
 
 完整變數請看 [shared.css](shared.css) 用到的這組（每頁都要備齊）：
 `--paper`, `--paper-deep`, `--ink`, `--ink-soft`, `--ink-mute`, `--accent`, `--accent-soft`, `--accent-pale`, `--line`, `--bg-spot-1`, `--bg-spot-2`。
@@ -136,6 +147,7 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 ```css
 --reading-accent: #8b3a3a;  /* readings/* 卡片左邊框 */
 --about-accent:   #2a5f9e;  /* my-name-katakana.html 卡片左邊框 */
+--tadoku-accent:  #7a68a6;  /* tadoku/* 卡片左邊框（shared.css 用 .lesson-link[href^="tadoku/"] 選取） */
 ```
 
 #### 類型 → 樣板對照
@@ -155,6 +167,28 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 | 假名概念 | [kana](lessons/2026-05-04-kana.html) | 自有 `.tree-box` `.branch-card` (hira/kata) / `.compare-table` / `.example-row` + `.ex-hira` `.ex-kata` |
 | 自我介紹（片假名） | [my-name-katakana](my-name-katakana.html) | 自有 `.card`（藍色主題、結構接近 reading hero） |
 | 閱讀筆記 | [reading-cho](readings/2026-05-05-reading-cho.html) | `.hero` + `.hero-title` `.hero-sub` `.hero-meta` / `.vertical-text` + `.vertical-card` / `.particles` + `.particle` / `.row` + `.kana` + `.translate` / `.grammar` |
+
+#### 多読故事的插圖（いらすとや）
+
+`tadoku/*` 一句一景，每景上方放一張插圖，仿 tadoku 分級讀本的「一頁一景」。插圖一律用 **[いらすとや](https://www.irasutoya.com/)**（原版 tadoku 讀本用的就是這套）。
+
+**規則：**
+- **一定要下載自存到 `images/tadoku/`，不要直連他們的 CDN。** 檔名沿用いらすとや原檔名（例如 `study_nihongo.png`），方便回溯出處。
+- **只能從 irasutoya.com 本站下載**——他們的 FAQ 明講不要拿第三方網站上的いらすとや圖（「外部のサイトでいらすとやの素材と思われる画像をダウンロードして利用をすることもトラブルの元となりますのでご遠慮ください」）。
+- 授權：個人／商業都免費。**商業用途單一作品超過 21 張要付費**——本站是個人學習日誌，不受此限，但別無限制地加圖。禁止「把素材本身當商品轉售」。
+- 頁尾要放一行 `.credit` 標示出處（非強制，但該做）。
+
+**找圖的方法**（搜尋頁是 JS 動態載入，抓不到，要用 Blogger JSON feed）：
+
+```bash
+curl -s "https://www.irasutoya.com/feeds/posts/default?q=<關鍵字URL編碼>&alt=json&max-results=6"
+```
+
+回傳 JSON 裡每個 `entry.content.$t` 內含 `<img src="...">`，那就是圖片網址。網址中的 `/s400/` 是尺寸參數，統一取 `s400` 即可（頁面顯示約 180px 高，s400 足夠清晰）。
+
+**HTML 結構**（見 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)）：`.scene[data-text]` 包住 `.scene-img` ＋ `.scene-body`（內含 `.scene-text` 的 `.japanese`／`.romaji`／`.meaning` ＋ `.play-btn`）。JS 綁 `.scene[data-text]`，不是 `.phrase`。
+
+> ⚠️ `.japanese` / `.romaji` / `.meaning` 是 shared.css 既有的 class（`.japanese` 為 20px）；`.phrase-ja` / `.phrase-romaji` 是**另一組**給 `.phrase` 用的。兩組別混用，寫錯會變成沒有作用的死碼。
 
 #### 共通 JS 慣例
 

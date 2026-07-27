@@ -1,7 +1,7 @@
 /* ============================================================
    shared.css — 日本語学習ログ 共用樣式
    套用範圍：lessons/*.html, readings/*.html, my-name-katakana.html, index.html
-   每個頁面另有 <style> 定義自己的 :root 色調（粉色 / 棕色 / 藍色 / 紅色）
+   每個頁面另有 <style> 定義自己的 :root 色調（棕色 / 藍色 / 深紅 / 藤色）
    ============================================================ */
 
 /* ── Klee One — 教科書風日文字（給例句、單字、kana 用，標題仍用 Shippori Mincho）── */
@@ -368,8 +368,12 @@ body::before {
   transition: border-color .15s, background .15s, transform .15s;
 }
 .lesson-link:hover { border-color: var(--accent); background: rgba(255,255,255,.8); transform: translateX(4px); }
-.lesson-link[href^="readings/"] { border-left-color: var(--reading-accent); }
-.lesson-link[href^="readings/"]:hover { border-color: var(--reading-accent); }
+/* 分類色只定義在 index.html；其他頁沒定義時 fallback 回該頁自己的 --accent
+   （少了 fallback 會解析失敗、變成 currentColor 的深色邊框） */
+.lesson-link[href^="readings/"] { border-left-color: var(--reading-accent, var(--accent)); }
+.lesson-link[href^="readings/"]:hover { border-color: var(--reading-accent, var(--accent)); }
+.lesson-link[href^="tadoku/"] { border-left-color: var(--tadoku-accent, var(--accent)); }
+.lesson-link[href^="tadoku/"]:hover { border-color: var(--tadoku-accent, var(--accent)); }
 .lesson-meta {
   font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; letter-spacing: .15em;
   color: var(--ink-mute); text-transform: uppercase; margin-bottom: 4px;

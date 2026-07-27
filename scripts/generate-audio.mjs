@@ -66,7 +66,7 @@ async function listSpeakers() {
 
 // ── 3. 掃 HTML 收集 data-text ────────────
 async function collectTexts() {
-  const dirs = ['lessons', 'readings'];
+  const dirs = ['lessons', 'readings', 'tadoku'];
   const files = [];
   for (const dir of dirs) {
     try {

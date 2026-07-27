@@ -3,7 +3,7 @@
 //
 // 冪等注入 favicon link 到全站 HTML 的 <head>（緊接 <title> 行之後）。
 // GitHub Pages 為專案頁，不能依賴根網域 /favicon.ico，故用相對路徑：
-//   根目錄頁 → favicon.svg ；lessons/ 與 readings/ → ../favicon.svg
+//   根目錄頁 → favicon.svg ；lessons/、readings/、tadoku/ → ../favicon.svg
 // 已含 rel="icon" 的檔會 skip（jigen 頁由 build 樣板提供，會在此 skip）。
 //
 // 用法： node scripts/add-favicon.mjs   （從 repo root 執行）
@@ -27,6 +27,7 @@ const files = [
   ...(await htmlFilesIn('.')),
   ...(await htmlFilesIn('lessons')),
   ...(await htmlFilesIn('readings')),
+  ...(await htmlFilesIn('tadoku')),
 ].sort();
 
 let injected = 0, skipped = 0;

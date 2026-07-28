@@ -128,6 +128,20 @@ kana 卡片純視覺對照。只有單字／句子（含外來語）才有發音
 Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning)。
 綁 `.speed-control input` 控制傳給 `JTalk.speak` 的 `rate`。
 
+### EPUB — 給 Supernote A5X 離線閱讀
+
+`node scripts/build-epub.mjs [輸出路徑.epub]`（2026-07-28 新增）把某一天的課程**重新編排**成一本 EPUB，
+不是把網頁直接倒出來——章節結構、內容與速記表都手寫在腳本裡（`chapters` 陣列 ＋ `VOCAB`），
+要出別天的就改那份資料再跑。輸出檔已列入 `.gitignore`，不進 repo。
+
+排版是針對 **Supernote A5X（1404×1872、10.3" E-ink 灰階）** 調的，改動前先理解這些限制：
+- **不靠顏色分辨資訊**（灰階螢幕），改用邊框粗細：`.alert` 粗實線左邊、`.note` 雙線左邊
+- **不要用底色填滿**，E-ink 上會變成髒網點；只用白底 ＋ 1px 邊框
+- 字級一律 `em`（保留裝置自己的縮放）、行距 1.85、插圖寬 32% 並用 `sips` 轉灰階
+- 版面用 `<table>` 而非 flex/grid（E-ink 閱讀器支援參差）
+- 同時輸出 EPUB3 `nav.xhtml` 與 EPUB2 `toc.ncx`，目次才一定讀得到
+- 打包時 `mimetype` 必須是 zip 第一項且**不壓縮**（`zip -X0`），否則部分閱讀器不認
+
 ### Design System
 
 #### 字體（全站統一）

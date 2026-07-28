@@ -25,6 +25,15 @@
 
 /* 指北針示意圖 */
 .compass{text-align:center;margin:20px auto 8px;font-size:64px;line-height:1;user-select:none;}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -165,6 +174,12 @@
     方向 + <strong>に</strong> → 表示在某個方向（靜態位置）：ひだりに あります<br>
     方向 + <strong>へ</strong> → 表示往某個方向移動：きたへ いきます
   </div>
+
+  <a href="2026-07-28-hikkoshi-kaiwa.html" class="next-link">
+    <span class="next-kicker">— 後來又用到 / Comes back later —</span>
+    <span class="next-title">日本に引っ越ししました — 近況を話す <span class="next-arrow">→</span></span>
+    <span class="next-sub">7/28 的會話課再遇到 北・南・東・西，那邊補了車站出口（北口・南口・東口・西口）以及地名裡改唸音讀的情況（東京＝とうきょう）</span>
+  </a>
 
 <site-footer></site-footer>
 </div>

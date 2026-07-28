@@ -11,11 +11,11 @@
     --reading-accent:#8b3a3a;--tadoku-accent:#7a68a6;}.container{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:48px 32px 80px;}/* ── Masthead ── */
   /* ── Hero title ── */
   .hero{text-align:center;margin-bottom:48px;}.hero-kicker{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);letter-spacing:.15em;font-size:14px;margin-bottom:14px;}.hero h1{font-family:'Shippori Mincho',serif;font-weight:800;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:.03em;color:var(--ink);margin-bottom:10px;}.hero h1 .accent{color:var(--accent);}.hero .subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:16px;letter-spacing:.12em;}/* ── Stats ── */
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:48px;}.stat{background:rgba(255,255,255,.6);padding:20px 8px;text-align:center;}.stat-value{font-family:'Shippori Mincho',serif;font-size:36px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1;margin-bottom:6px;}.stat-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;}/* ── Section divider ── */
+  /* ── Section divider ── */
   /* ── Calendar ── */
   .cal-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px;}.cal-month{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:16px;}.cal-month-title{text-align:center;font-size:14px;letter-spacing:.25em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}.cal-dow{text-align:center;font-size:14px;letter-spacing:.08em;color:var(--ink-mute);text-transform:uppercase;padding-bottom:5px;font-family:'Cormorant Garamond',serif;}.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink);font-family:'Cormorant Garamond',serif;}.cal-day.has-lesson{background:var(--accent-pale);color:var(--accent);font-weight:700;cursor:pointer;transition:background .15s;}.cal-day.has-lesson:hover{background:var(--accent);color:white;}.cal-day.has-lesson.active{background:var(--accent);color:white;}/* ── Calendar popup ── */
   .cal-popup{display:none;background:rgba(255,255,255,.8);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 18px;margin-bottom:32px;}.cal-popup.visible{display:block;}.cal-popup-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:10px;}.cal-popup-item{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:14px;transition:color .1s;}.cal-popup-item:last-child{border-bottom:none;}.cal-popup-item:hover{color:var(--accent);}.cal-popup-arrow{margin-left:auto;color:var(--ink-mute);font-size:14px;}/* ── Lesson list ── */
-  @media(max-width:600px){.container{padding:32px 18px 64px;}.hero h1{font-size:36px;}.cal-wrap{grid-template-columns:1fr;}.stat-value{font-size:28px;}}
+  @media(max-width:600px){.container{padding:32px 18px 64px;}.hero h1{font-size:36px;}.cal-wrap{grid-template-columns:1fr;}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,22 +35,6 @@
     <p class="subtitle">每天一點點 · One step at a time</p>
   </div>
 
-  <!-- data-kana-base / data-words-base：開始記錄前就學的底數 -->
-  <div class="stats" id="stats" data-kana-base="0" data-words-base="0">
-    <div class="stat">
-      <div class="stat-value" id="stat-lessons">—</div>
-      <div class="stat-label">Lessons</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" id="stat-words">—</div>
-      <div class="stat-label">Words</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" id="stat-kana">—</div>
-      <div class="stat-label">Kana</div>
-    </div>
-  </div>
-
   <div class="divider" style="margin-bottom:20px;">学習カレンダー · Calendar</div>
   <div class="cal-wrap" id="cal-wrap"></div>
   <div class="cal-popup" id="cal-popup">
@@ -61,6 +45,30 @@
   <div class="divider" style="margin-bottom:16px;">學習紀錄 · Log</div>
 
   <ul class="lesson-list" id="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-28-lesson8-kore-sore-are.html"
+         data-kana="0" data-words="9" data-date="2026-07-28">
+        <div class="lesson-meta">2026 · Jul 28 · Tue · Lesson</div>
+        <div class="lesson-title">レッスン8 これ・それ・あれ <span class="arrow">→</span></div>
+        <div class="lesson-summary">指示詞三層距離（我這邊／你那邊／都很遠）＋ これは車です・これはスマホです ＋ 單字 車・スマホ・携帯・靴 ＋ 數字 ８・１４</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-28-hikkoshi-kaiwa.html"
+         data-kana="0" data-words="26" data-date="2026-07-28">
+        <div class="lesson-meta">2026 · Jul 28 · Tue · Lesson</div>
+        <div class="lesson-title">日本に引っ越ししました — 近況を話す <span class="arrow">→</span></div>
+        <div class="lesson-summary">おかえりなさい／ただいま（不只用在家，視訊課也能用）＋ 辭職・搬家・幾時（３か月前）＋ 助詞 や／か ＋ 夫vsご主人 ＋ 方位 北南東西 ＋ き・く 單字整理 ＋ 色 黄色・黒・青</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-28-kita-koto-ga-arimasu.html"
+         data-kana="0" data-words="4" data-date="2026-07-28">
+        <div class="lesson-meta">2026 · Jul 28 · Tue · Lesson</div>
+        <div class="lesson-title">日本に来たことがありますか — 問經驗 <span class="arrow">→</span></div>
+        <div class="lesson-summary">〜たことがあります 問經驗句型 ＋ 回答 何回もあります ＋ 追問地點 どこに行きましたか → 九州</div>
+      </a>
+    </li>
     <li>
       <a class="lesson-link" href="tadoku/2026-07-27-tadoku-kami.html"
          data-kana="0" data-words="0" data-date="2026-07-27">
@@ -79,10 +87,10 @@
     </li>
     <li>
       <a class="lesson-link" href="lessons/2026-07-24-shokugyou-shitsumon.html"
-         data-kana="0" data-words="8" data-date="2026-07-24">
+         data-kana="0" data-words="9" data-date="2026-07-24">
         <div class="lesson-meta">2026 · Jul 24 · Fri · Lesson</div>
         <div class="lesson-title">彼はプログラマーですか — 職業を尋ねる <span class="arrow">→</span></div>
-        <div class="lesson-summary">今日の口語課：昨天的「A は B です」句尾加 か 變問句「A は B ですか？」＋新職業 美容師・歌手・バリスタ・プログラマー（外來語寫片假名）＋日常名詞 親・お菓子・お金（お 接頭語）</div>
+        <div class="lesson-summary">今日の口語課：昨天的「A は B です」句尾加 か 變問句「A は B ですか？」＋新職業 美容師・歌手・バリスタ・プログラマー・看護師（外來語寫片假名）＋日常名詞 親・お菓子・お金（お 接頭語）</div>
       </a>
     </li>
     <li>
@@ -607,20 +615,6 @@
 </div>
 
 <script>
-  /* ── Stats ── */
-  const stats   = document.getElementById('stats');
-  const lessons = document.querySelectorAll('.lesson-link[data-kana]');
-  const kanaBase  = parseInt(stats.dataset.kanaBase)  || 0;
-  const wordsBase = parseInt(stats.dataset.wordsBase) || 0;
-  let totalKana = kanaBase, totalWords = wordsBase;
-  lessons.forEach(l => {
-    totalKana  += parseInt(l.dataset.kana)  || 0;
-    totalWords += parseInt(l.dataset.words) || 0;
-  });
-  document.getElementById('stat-lessons').textContent = lessons.length;
-  document.getElementById('stat-words').textContent   = totalWords;
-  document.getElementById('stat-kana').textContent    = totalKana;
-
   /* ── Build lesson map by date ── */
   const byDate = {};
   document.querySelectorAll('.lesson-link[data-date]').forEach(link => {

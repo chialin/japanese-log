@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本に来たことがありますか — 問經驗的句型</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 句型骨架 */
+.frame{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:16px;text-align:center;}
+.frame-line{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;font-weight:600;color:var(--ink);line-height:1.5;letter-spacing:.02em;}
+.frame-line .slot{color:var(--accent);border-bottom:2px dashed var(--accent-soft);padding:0 4px;}
+.frame-line .fix{color:var(--ink-mute);}
+.frame-line .q{color:var(--accent);font-weight:700;background:var(--accent-pale);padding:0 6px;border-radius:2px;}
+.frame-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;letter-spacing:.05em;margin-top:8px;}
+.frame-desc{font-size:14px;color:var(--ink-soft);margin-top:12px;line-height:1.8;text-align:left;}
+
+/* 單字大字卡 */
+.job-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.job-grid{grid-template-columns:1fr;}}
+.job-card{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 16px;transition:background .15s,border-color .15s;}
+.job-card:hover{background:rgba(255,255,255,.85);}
+.job-icon{font-size:30px;flex-shrink:0;line-height:1;}
+.job-body{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0;}
+.job-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:600;color:var(--ink);line-height:1.2;}
+.job-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:14px;color:var(--ink-mute);}
+.job-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;}
+.job-meaning{color:var(--ink-soft);font-size:13px;margin-top:2px;}
+.job-card .play-btn{flex-shrink:0;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:56px;font-family:'Shippori Mincho',serif;font-size:13px;font-weight:600;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.bad{color:var(--ink-mute);text-decoration:line-through;}
+
+/* 速記表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);width:170px;}
+.cheat .col-kana{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink-mute);width:170px;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">日本に来たことがありますか <span class="accent">問經驗</span></h1>
+  <div class="page-meta">口語 · 会話 · 2026 / 07 / 28</div>
+  <p class="page-subtitle">「你有沒有來過日本？」— 〜たことがあります 問經驗，回答用 何回もあります，追問地點用 どこに → 九州</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="compare">〜たことがあります</span> ＝「曾經做過〜」，問「有沒有過這個經驗」；<br>
+    ② 回答不用重講整句，直接 <span class="compare">あります</span>／<span class="compare">何回もあります</span>／<span class="compare">ありません</span>；<br>
+    ③ 追問地點用 <span class="compare">どこに</span>（往哪裡），不是 どこで。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、句型骨架 — 〜たことがありますか</div>
+
+  <div class="frame">
+    <div class="frame-line"><span class="slot">日本</span> <span class="fix">に</span> <span class="slot">来た</span> <span class="fix">ことがあります</span><span class="q">か</span></div>
+    <div class="frame-ro">nihon <strong>ni</strong> kita <strong>koto ga arimasu ka</strong></div>
+    <div class="frame-desc">
+      拆開看就是三塊：<span class="j-mark">動詞的た形</span> ＋ <span class="j-mark">こと</span>（這件事）＋ <span class="j-mark">があります</span>（存在）——
+      直譯是「有沒有『來過日本』這件事」，也就是中文的<strong>「你有來過日本嗎？」</strong><br>
+      重點在「<strong>經驗</strong>」，不是在問現在或未來，所以動詞一定要先變成過去的 <span class="compare">た形</span>：
+      来ます → <span class="compare">来た</span>、行きます → <span class="compare">行った</span>、食べます → <span class="compare">食べた</span>。
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>為什麼是「日本<span class="j-mark">に</span>」？</strong><br>
+    <span class="compare">に</span> 標的是<strong>移動的終點</strong>（往哪裡去／來）。来ます・行きます 這類移動動詞前面都配 に。<br>
+    對照：<span class="compare">日本<span class="j-mark">で</span>食べました</span>（在日本吃了）——<span class="compare">で</span> 才是「動作發生的場所」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、怎麼回答 — 有／很多次／沒有</div>
+
+  <div class="section">
+    <div class="section-title">📖 三種回法</div>
+
+    <div class="word-item" data-text="はい、あります">
+      <div class="word-content">
+        <div class="word-ja">はい、あります</div>
+        <div class="word-romaji">hai, arimasu</div>
+        <div class="word-meaning">有的（去過）— 最基本的肯定，不用把整句重複一遍</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="何回もあります">
+      <div class="word-content">
+        <div class="word-ja">何回<span class="j-mark">も</span>あります</div>
+        <div class="word-romaji">nankai <strong>mo</strong> arimasu</div>
+        <div class="word-meaning">去過好幾次 — なんかい も あります（何回＝幾次，加 も 變「好幾次」）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいえ、ありません">
+      <div class="word-content">
+        <div class="word-ja">いいえ、ありません</div>
+        <div class="word-romaji">iie, arimasen</div>
+        <div class="word-meaning">沒有（沒去過）— あります 的否定是 ありません</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>何回 vs 何回も</strong><br>
+    <span class="compare">何回ですか</span>＝「幾次？」（在<strong>問</strong>次數）；
+    <span class="compare">何回もあります</span>＝「好幾次」（在<strong>答</strong>，強調次數多）。<br>
+    差別就在那個 <span class="j-mark">も</span>——它把疑問詞變成「不特定的很多」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、今日單字</div>
+
+  <div class="job-grid">
+    <div class="job-card" data-text="何回">
+      <div class="job-icon">🔁</div>
+      <div class="job-body">
+        <div class="job-ja">何回</div>
+        <div class="job-kana">なんかい</div>
+        <div class="job-romaji">nankai</div>
+        <div class="job-meaning">幾次 — 何（なん＝什麼）＋回（かい＝次）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="どこに">
+      <div class="job-icon">📍</div>
+      <div class="job-body">
+        <div class="job-ja">どこ<span class="j-mark">に</span></div>
+        <div class="job-kana">どこに</div>
+        <div class="job-romaji">doko ni</div>
+        <div class="job-meaning">去哪裡（往哪裡）— どこ＝哪裡，配移動動詞用 に</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="job-card" data-text="九州">
+      <div class="job-icon">🗾</div>
+      <div class="job-body">
+        <div class="job-ja">九州</div>
+        <div class="job-kana">きゅうしゅう</div>
+        <div class="job-romaji">kyuushuu</div>
+        <div class="job-meaning">九州 — 日本最南邊的大島（福岡・熊本・鹿児島都在這）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、完整對話 — 課堂上的那一段</div>
+
+  <div class="dialog">
+    <div class="turn" data-text="日本に来たことがありますか">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">日本<span class="j-mark">に</span>来たことがあります<span class="j-mark">か</span></div>
+        <div class="turn-romaji">nihon ni kita koto ga arimasu ka</div>
+        <div class="turn-meaning">你有來過日本嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="はい、何回もあります">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、何回<span class="j-mark">も</span>あります</div>
+        <div class="turn-romaji">hai, nankai mo arimasu</div>
+        <div class="turn-meaning">有，去過好幾次。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="どこに行きましたか">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">どこ<span class="j-mark">に</span>行きました<span class="j-mark">か</span></div>
+        <div class="turn-romaji">doko ni ikimashita ka</div>
+        <div class="turn-meaning">你去了哪裡？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="九州に行きました">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">九州<span class="j-mark">に</span>行きました</div>
+        <div class="turn-romaji">kyuushuu ni ikimashita</div>
+        <div class="turn-meaning">我去了九州。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 換句話說 — 把單字套進去</div>
+
+    <div class="word-item" data-text="九州に行ったことがあります">
+      <div class="word-content">
+        <div class="word-ja">九州<span class="j-mark">に</span>行った<span class="j-mark">ことがあります</span></div>
+        <div class="word-romaji">kyuushuu ni itta koto ga arimasu</div>
+        <div class="word-meaning">我去過九州。 — 行きます 的た形是 行った（促音）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · Cheat sheet</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>寫法</th><th>假名</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">〜たことがあります</td><td class="col-kana">〜た ことが あります</td><td class="col-mean">曾經做過〜（經驗）</td></tr>
+      <tr><td class="col-ja">何回も</td><td class="col-kana">なんかいも</td><td class="col-mean">好幾次</td></tr>
+      <tr><td class="col-ja">どこに</td><td class="col-kana">どこに</td><td class="col-mean">去哪裡（往哪裡）</td></tr>
+      <tr><td class="col-ja">九州</td><td class="col-kana">きゅうしゅう</td><td class="col-mean">九州</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    💡 <strong>一句話帶走</strong>：想問「有沒有做過某件事」，就把動詞換成<span class="j-mark">た形</span>再接
+    <span class="compare">ことがありますか</span> —— 来た＋ことがありますか、行った＋ことがありますか、食べた＋ことがありますか。
+  </div>
+
+  <a href="2026-07-24-shokugyou-shitsumon.html" class="next-link">
+    <span class="next-kicker">— 複習 / Review —</span>
+    <span class="next-title">彼はプログラマーですか — 職業を尋ねる <span class="next-arrow">→</span></span>
+    <span class="next-sub">問句的基本框架「A は B ですか？」，回答用 はい、そうです／いいえ、ちがいます</span>
+  </a>
+
+  <a href="2026-07-27-kau-yomu-kiku.html" class="next-link">
+    <span class="next-kicker">— 前情提要 / Previously —</span>
+    <span class="next-title">今日の動詞 買います・読みます・聞きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">ます形動詞先熟了，才好把它們變成今天的た形</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // job-card / word-item / turn：只有播放按鈕會唸
+  document.querySelectorAll('.job-card[data-text], .word-item[data-text], .turn[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

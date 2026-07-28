@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本に引っ越ししました — 近況を話す会話</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 句型骨架 */
+.frame{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:16px;text-align:center;}
+.frame-line{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;font-weight:600;color:var(--ink);line-height:1.5;letter-spacing:.02em;}
+.frame-line .slot{color:var(--accent);border-bottom:2px dashed var(--accent-soft);padding:0 4px;}
+.frame-line .fix{color:var(--ink-mute);}
+.frame-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;letter-spacing:.05em;margin-top:8px;}
+.frame-desc{font-size:14px;color:var(--ink-soft);margin-top:12px;line-height:1.8;text-align:left;}
+
+/* 單字大字卡 */
+.job-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.job-grid{grid-template-columns:1fr;}}
+.job-card{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 16px;transition:background .15s,border-color .15s;}
+.job-card:hover{background:rgba(255,255,255,.85);}
+.job-icon{font-size:30px;flex-shrink:0;line-height:1;}
+.job-body{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0;}
+.job-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:600;color:var(--ink);line-height:1.2;}
+.job-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:14px;color:var(--ink-mute);}
+.job-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;}
+.job-meaning{color:var(--ink-soft);font-size:13px;margin-top:2px;}
+.job-card .play-btn{flex-shrink:0;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:56px;font-family:'Shippori Mincho',serif;font-size:13px;font-weight:600;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+/* 方位羅盤 */
+.compass{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:400px;margin:0 auto 16px;}
+.compass .cell{background:rgba(255,255,255,.6);border:1px solid var(--line);padding:14px 8px;text-align:center;}
+.compass .cell.empty{background:none;border:none;}
+.compass .cell.center{background:var(--accent-pale);border-color:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-family:'Shippori Mincho',serif;font-size:13px;color:var(--accent);letter-spacing:.1em;}
+.dir-kanji{font-family:'Klee One','Shippori Mincho',serif;font-size:30px;font-weight:600;color:var(--ink);line-height:1.1;cursor:default;}
+.dir-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:13px;color:var(--ink-mute);margin-top:2px;}
+.dir-mean{font-size:12px;color:var(--ink-soft);margin-top:1px;}
+.compass .play-btn{margin-top:6px;}
+
+/* 顏色卡 */
+.color-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.color-grid{grid-template-columns:1fr 1fr;}}
+.color-card{background:rgba(255,255,255,.6);border:1px solid var(--line);padding:14px 10px;text-align:center;}
+.swatch{width:100%;height:44px;border:1px solid rgba(0,0,0,.12);margin-bottom:10px;}
+.color-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--ink);}
+.color-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:13px;color:var(--ink-mute);}
+.color-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:13px;letter-spacing:.05em;}
+.color-card .play-btn{margin-top:8px;}
+
+/* き・く 單字整理 */
+.kk-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.kk-grid{grid-template-columns:1fr;}}
+.kk-col{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:14px 16px 6px;}
+.kk-head{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:600;color:var(--accent);text-align:center;padding-bottom:10px;border-bottom:1px dashed var(--line);margin-bottom:4px;letter-spacing:.08em;}
+.kk-item{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);}
+.kk-item:last-child{border-bottom:none;}
+.kk-body{flex:1;min-width:0;}
+.kk-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;font-weight:600;color:var(--ink);line-height:1.2;}
+.kk-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;color:var(--ink-mute);margin-top:2px;}
+.kk-beat{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;letter-spacing:.08em;color:var(--accent);background:var(--accent-pale);border-radius:2px;padding:0 5px;margin-left:8px;vertical-align:middle;}
+.kk-mean{font-size:13px;color:var(--ink-soft);margin-top:3px;}
+.kk-item .play-btn{flex-shrink:0;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.bad{color:var(--ink-mute);text-decoration:line-through;}
+
+/* 對照兩欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.vs-grid{grid-template-columns:1fr;}}
+.vs-col{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:16px 18px;}
+.vs-head{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.vs-sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:13px;letter-spacing:.05em;margin-bottom:10px;}
+.vs-body{font-size:14px;color:var(--ink-soft);line-height:1.8;}
+
+/* 速記表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);width:150px;}
+.cheat .col-kana{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink-mute);width:160px;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">日本に引っ越ししました <span class="accent">近況を話す</span></h1>
+  <div class="page-meta">口語 · 会話 · 2026 / 07 / 28</div>
+  <p class="page-subtitle">おかえりなさい／ただいま（不只用在家）＋ 辭職・搬家・多久了 — 一整段自我近況的會話，外加方位與顏色</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 出門回來的固定組合：<span class="compare">おかえりなさい</span>（你回來啦）↔ <span class="compare">ただいま</span>（我回來了）；<br>
+    ② 講近況用<strong>過去式</strong>：<span class="compare">やめました</span>（辭掉了）、<span class="compare">引っ越ししました</span>（搬家了）；<br>
+    ③ 兩個新助詞：<span class="j-mark">や</span>（舉例式的「和」）、<span class="j-mark">か</span>（A か B ＝A 或 B）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、「回到原本的地方」的招呼 — おかえりなさい／ただいま</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這組招呼<strong>不只用在家</strong>。只要是「<span class="j-mark">離開一下又回到原本的地方</span>」都成立——
+    回家、回辦公室、回座位，甚至<strong>視訊課上離開鏡頭後又回來</strong>，老師都會說一句 おかえりなさい。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <div class="vs-head">おかえりなさい</div>
+      <div class="vs-sub">okaerinasai</div>
+      <div class="vs-body">
+        「你回來啦！」<br>
+        <strong>留在原地的人</strong>對<strong>剛回來的人</strong>說。熟一點可以只說 <span class="compare">おかえり</span>。
+      </div>
+    </div>
+    <div class="vs-col">
+      <div class="vs-head">ただいま</div>
+      <div class="vs-sub">tadaima</div>
+      <div class="vs-body">
+        「我回來了。」<br>
+        <strong>回來的那一方</strong>說。完整說法是 <span class="compare">ただいま帰りました</span>，日常只講前半。
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 一組一起唸</div>
+
+    <div class="word-item" data-text="おかえりなさい">
+      <div class="word-content">
+        <div class="word-ja">おかえりなさい</div>
+        <div class="word-romaji">okaerinasai</div>
+        <div class="word-meaning">你回來啦 — お＋帰り＋なさい，留在原地的人說</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ただいま">
+      <div class="word-content">
+        <div class="word-ja">ただいま</div>
+        <div class="word-romaji">tadaima</div>
+        <div class="word-meaning">我回來了 — 回來的那一方說，回家／回座位／回到鏡頭前都能用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>哪些場合會聽到</strong><br>
+    ・<strong>視訊課</strong>：你離開鏡頭一下再回來 → 老師「おかえりなさい」／你「ただいま」<br>
+    ・<strong>家裡</strong>：家人進門 → 「おかえり」（熟人之間省略 なさい）<br>
+    ・<strong>公司</strong>：同事出差或外出回來 → 「おかえりなさい」<br>
+    反過來，<strong>出發的那一刻</strong>是另一組：走的人說 <span class="compare">いってきます</span>，
+    留下的人說 <span class="compare">いってらっしゃい</span>——四句一起記最好用。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、近況 — 辭職了、搬到日本了</div>
+
+  <div class="frame">
+    <div class="frame-line"><span class="slot">日本</span> <span class="fix">に</span> <span class="slot">引っ越し</span> <span class="fix">しました</span></div>
+    <div class="frame-ro">nihon <strong>ni</strong> hikkoshi shimashita</div>
+    <div class="frame-desc">
+      <span class="compare">引っ越し（ひっこし）</span>＝搬家，是名詞；後面接 <span class="compare">します</span> 就變成動詞「搬家」。
+      這種「名詞＋します」的動詞很多：<span class="compare">勉強します</span>（唸書）、<span class="compare">仕事します</span>（工作）。<br>
+      搬去的目的地一樣用 <span class="j-mark">に</span>（移動終點）——跟上一課「日本<span class="j-mark">に</span>来ました」同一個用法。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 講最近發生的事（都用過去式 〜ました）</div>
+
+    <div class="word-item" data-text="最近仕事をやめました">
+      <div class="word-content">
+        <div class="word-ja">最近、仕事<span class="j-mark">を</span>やめました</div>
+        <div class="word-romaji">saikin, shigoto <strong>o</strong> yamemashita</div>
+        <div class="word-meaning">最近把工作辭掉了。 — さいきん しごとを やめました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本に引っ越ししました">
+      <div class="word-content">
+        <div class="word-ja">日本<span class="j-mark">に</span>引っ越ししました</div>
+        <div class="word-romaji">nihon <strong>ni</strong> hikkoshi shimashita</div>
+        <div class="word-meaning">搬到日本來了。 — にほんに ひっこし しました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="夫の仕事です">
+      <div class="word-content">
+        <div class="word-ja">夫<span class="j-mark">の</span>仕事です</div>
+        <div class="word-romaji">otto <strong>no</strong> shigoto desu</div>
+        <div class="word-meaning">是因為我先生的工作。 — おっとの しごと です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>やめました 有兩個漢字</strong><br>
+    <span class="compare">辞めました</span>＝辭掉（工作、職位）；<span class="compare">止めました</span>＝停止（做某事）。<br>
+    這裡講的是辭職，寫成 <span class="compare">仕事を辞めました</span>；口語常常就直接寫假名 やめました。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、いつ？ — ３か月前・４月</div>
+
+  <div class="frame">
+    <div class="frame-line"><span class="slot">３</span> <span class="fix">か月</span> <span class="fix">前</span></div>
+    <div class="frame-ro">san <strong>kagetsu</strong> mae</div>
+    <div class="frame-desc">
+      <span class="j-mark">か月</span>（かげつ）＝「〜個月」的計量單位，<span class="j-mark">前</span>（まえ）＝「〜之前」。
+      合起來 <span class="compare">３か月前</span>＝三個月前。<br>
+      同套用法：<span class="compare">１年前</span>（一年前）、<span class="compare">２週間前</span>（兩週前）、<span class="compare">５分前</span>（五分鐘前）。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 時間的講法</div>
+
+    <div class="word-item" data-text="三か月前">
+      <div class="word-content">
+        <div class="word-ja">３か月前</div>
+        <div class="word-romaji">sankagetsu mae</div>
+        <div class="word-meaning">三個月前 — さんかげつまえ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="四月">
+      <div class="word-content">
+        <div class="word-ja">４月</div>
+        <div class="word-romaji">shigatsu</div>
+        <div class="word-meaning">四月 — <strong>しがつ</strong>，不是 よんがつ（月份的 4 一律唸 し）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一年か二年">
+      <div class="word-content">
+        <div class="word-ja">１年<span class="j-mark">か</span>２年</div>
+        <div class="word-romaji">ichinen <strong>ka</strong> ninen</div>
+        <div class="word-meaning">一年或兩年 — A か B ＝ A 或 B（不確定的兩選一）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>兩個不同的「か」</strong><br>
+    句尾的 <span class="j-mark">か</span>＝疑問（ですか？）；<strong>夾在兩個名詞中間</strong>的 <span class="j-mark">か</span>＝「或者」。<br>
+    <span class="compare">１年か２年</span>（一年或兩年）、<span class="compare">コーヒーかお茶</span>（咖啡或茶）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、家族の呼び方 — 夫 vs ご主人</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <div class="vs-head">夫</div>
+      <div class="vs-sub">otto — 講自己的</div>
+      <div class="vs-body">
+        <strong>我先生</strong>。跟別人提到自己老公時用。<br>
+        例：<span class="compare">夫の仕事です</span>（是我先生的工作）。<br>
+        口語也有人講 <span class="compare">主人（しゅじん）</span>。
+      </div>
+    </div>
+    <div class="vs-col">
+      <div class="vs-head">ご主人</div>
+      <div class="vs-sub">goshujin — 講對方的</div>
+      <div class="vs-body">
+        <strong>您先生</strong>。問對方的老公時用，前面的 <span class="j-mark">ご</span> 是敬語接頭語。<br>
+        例：<span class="compare">ご主人はお元気ですか</span>（您先生好嗎？）。
+      </div>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>別把 ご主人 用在自己老公身上</strong><br>
+    ご主人 是抬高<strong>對方</strong>家人的說法。講自己的老公要說 <span class="compare">夫</span>，
+    說成 <span class="bad">私のご主人</span> 等於在對自己人用敬語，聽起來很怪。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 兩個一起唸</div>
+
+    <div class="word-item" data-text="夫">
+      <div class="word-content">
+        <div class="word-ja">夫</div>
+        <div class="word-romaji">otto</div>
+        <div class="word-meaning">（我的）先生、丈夫</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ご主人">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark">ご</span>主人</div>
+        <div class="word-romaji">goshujin</div>
+        <div class="word-meaning">（您的）先生 — ごしゅじん</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、日本語の勉強 — 少し・まぁまぁ</div>
+
+  <div class="section">
+    <div class="section-title">📖 被問「會日文嗎？」的招數</div>
+
+    <div class="word-item" data-text="日本語を勉強しています">
+      <div class="word-content">
+        <div class="word-ja">日本語<span class="j-mark">を</span>勉強しています</div>
+        <div class="word-romaji">nihongo <strong>o</strong> benkyou shite imasu</div>
+        <div class="word-meaning">我正在學日文。 — 〜ています＝持續在做（不是只有今天）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="少しわかります">
+      <div class="word-content">
+        <div class="word-ja">少しわかります</div>
+        <div class="word-romaji">sukoshi wakarimasu</div>
+        <div class="word-meaning">懂一點點。 — 少し（すこし）＝一點點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="まあまあです">
+      <div class="word-content">
+        <div class="word-ja">まぁまぁです</div>
+        <div class="word-romaji">maamaa desu</div>
+        <div class="word-meaning">還可以、普普通通。 — 不好也不壞的萬用回答</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>少し vs まぁまぁ</strong>：<span class="compare">少し</span> 是<strong>量少</strong>（只會一點）；
+    <span class="compare">まぁまぁ</span> 是<strong>程度普通</strong>（沒有到好，但也不差）。被稱讚日文好的時候兩個都很好用。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、聞こえます — 「聽得見」不是「聽」</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <div class="vs-head">聞きます</div>
+      <div class="vs-sub">kikimasu — 主動去聽</div>
+      <div class="vs-body">
+        自己<strong>刻意</strong>去聽：<span class="compare">音楽を聞きます</span>（聽音樂）。<br>
+        前面用 <span class="j-mark">を</span>。
+      </div>
+    </div>
+    <div class="vs-col">
+      <div class="vs-head">聞こえます</div>
+      <div class="vs-sub">kikoemasu — 自然聽得見</div>
+      <div class="vs-body">
+        聲音<strong>自己傳進耳朵</strong>：<span class="compare">音が聞こえます</span>（聽得見聲音）。<br>
+        前面用 <span class="j-mark">が</span>，不是を。
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 上課實用句</div>
+
+    <div class="word-item" data-text="聞こえます">
+      <div class="word-content">
+        <div class="word-ja">聞こえます</div>
+        <div class="word-romaji">kikoemasu</div>
+        <div class="word-meaning">聽得見。 — 視訊上課被問「聽得到嗎」就這樣答</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="聞こえました">
+      <div class="word-content">
+        <div class="word-ja">聞こえました</div>
+        <div class="word-romaji">kikoemashita</div>
+        <div class="word-meaning">（剛剛）聽到了。 — 過去式</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="すみません、聞こえません">
+      <div class="word-content">
+        <div class="word-ja">すみません、聞こえません</div>
+        <div class="word-romaji">sumimasen, kikoemasen</div>
+        <div class="word-meaning">不好意思，我聽不到。 — 否定 聞こえません</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、方位 — 北・南・東・西</div>
+
+  <div class="compass">
+    <div class="cell empty"></div>
+    <div class="cell" data-text="北">
+      <div class="dir-kanji">北</div>
+      <div class="dir-kana">きた</div>
+      <div class="dir-mean">北 · kita</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="cell empty"></div>
+
+    <div class="cell" data-text="西">
+      <div class="dir-kanji">西</div>
+      <div class="dir-kana">にし</div>
+      <div class="dir-mean">西 · nishi</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="cell center">方位<br>ほうい</div>
+    <div class="cell" data-text="東">
+      <div class="dir-kanji">東</div>
+      <div class="dir-kana">ひがし</div>
+      <div class="dir-mean">東 · higashi</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="cell empty"></div>
+    <div class="cell" data-text="南">
+      <div class="dir-kanji">南</div>
+      <div class="dir-kana">みなみ</div>
+      <div class="dir-mean">南 · minami</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="cell empty"></div>
+  </div>
+
+  <div class="note">
+    📝 <strong>車站出口天天用</strong>：<span class="compare">北口（きたぐち）</span>、<span class="compare">南口（みなみぐち）</span>、
+    <span class="compare">東口（ひがしぐち）</span>、<span class="compare">西口（にしぐち）</span>。<br>
+    但地名裡常常改唸<strong>音讀</strong>：東京（<strong>とう</strong>きょう）、西日本（<strong>にし</strong>にほん）、北海道（<strong>ほっ</strong>かいどう）。
+  </div>
+
+  <a href="2026-06-01-directions.html" class="next-link">
+    <span class="next-kicker">— 這個學過 / Already covered —</span>
+    <span class="next-title">方向のことば 東・西・南・北・左・右 <span class="next-arrow">→</span></span>
+    <span class="next-sub">6/1 就整理過方位詞，那頁還多了 左・右 與問路例句（みぎに まがって ください、きたへ いきます），順便複習「方向＋に」表位置、「方向＋へ」表移動</span>
+  </a>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kk">八、き・く で始まることば — 一起記</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    今天散在各處的幾個單字，開頭都是 <span class="j-mark">き</span> 或 <span class="j-mark">く</span>，
+    而且都是「越加越長」的關係——把它們排在一起，一次就記牢。
+  </p>
+
+  <div class="kk-grid">
+    <div class="kk-col">
+      <div class="kk-head">き 組</div>
+      <div class="kk-item" data-text="木">
+        <div class="kk-body">
+          <div class="kk-ja">木</div>
+          <div class="kk-kana">き<span class="kk-beat">1 拍</span></div>
+          <div class="kk-mean">樹、木頭 — ki</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="kk-item" data-text="北">
+        <div class="kk-body">
+          <div class="kk-ja">北</div>
+          <div class="kk-kana">きた<span class="kk-beat">2 拍</span></div>
+          <div class="kk-mean">北 — kita（き＋た）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="kk-item" data-text="黄色">
+        <div class="kk-body">
+          <div class="kk-ja">黄色</div>
+          <div class="kk-kana">きいろ<span class="kk-beat">3 拍</span></div>
+          <div class="kk-mean">黃色 — kiiro（き 拉長＋ろ）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="kk-col">
+      <div class="kk-head">く 組</div>
+      <div class="kk-item" data-text="国">
+        <div class="kk-body">
+          <div class="kk-ja">国</div>
+          <div class="kk-kana">くに<span class="kk-beat">2 拍</span></div>
+          <div class="kk-mean">國家 — kuni</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="kk-item" data-text="靴">
+        <div class="kk-body">
+          <div class="kk-ja">靴</div>
+          <div class="kk-kana">くつ<span class="kk-beat">2 拍</span></div>
+          <div class="kk-mean">鞋子 — kutsu</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="kk-item" data-text="車">
+        <div class="kk-body">
+          <div class="kk-ja">車</div>
+          <div class="kk-kana">くるま<span class="kk-beat">3 拍</span></div>
+          <div class="kk-mean">車子 — kuruma</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>怎麼分</strong><br>
+    <span class="compare">き</span> 一個音就是<strong>木</strong>；加 た 變<strong>北</strong>；把き拉長再加ろ變<strong>黃色</strong>。<br>
+    <span class="compare">く</span> 這邊三個都是名詞：<strong>くに</strong>（國）／<strong>くつ</strong>（鞋）／<strong>くるま</strong>（車）——
+    くに 和 くつ 都是兩拍最容易互換，記「<strong>つ</strong>＝鞋子踩地的聲音」就分得開。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">九、色 — 何色が好きですか</div>
+
+  <div class="color-grid">
+    <div class="color-card" data-text="黄色">
+      <div class="swatch" style="background:#f2c744;"></div>
+      <div class="color-ja">黄色</div>
+      <div class="color-kana">きいろ</div>
+      <div class="color-romaji">kiiro</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="color-card" data-text="黒">
+      <div class="swatch" style="background:#2a2622;"></div>
+      <div class="color-ja">黒</div>
+      <div class="color-kana">くろ</div>
+      <div class="color-romaji">kuro</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="color-card" data-text="青">
+      <div class="swatch" style="background:#2f5f9e;"></div>
+      <div class="color-ja">青</div>
+      <div class="color-kana">あお</div>
+      <div class="color-romaji">ao</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 問喜歡什麼顏色</div>
+
+    <div class="word-item" data-text="何色が好きですか">
+      <div class="word-content">
+        <div class="word-ja">何色<span class="j-mark">が</span>好きです<span class="j-mark">か</span></div>
+        <div class="word-romaji">naniiro <strong>ga</strong> suki desu <strong>ka</strong></div>
+        <div class="word-meaning">你喜歡什麼顏色？ — なにいろ が すき ですか</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="青が好きです">
+      <div class="word-content">
+        <div class="word-ja">青<span class="j-mark">が</span>好きです</div>
+        <div class="word-romaji">ao <strong>ga</strong> suki desu</div>
+        <div class="word-meaning">我喜歡藍色。 — 「喜歡的對象」用 が 不是 を</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="黒い靴です">
+      <div class="word-content">
+        <div class="word-ja">黒い靴です</div>
+        <div class="word-romaji">kuroi kutsu desu</div>
+        <div class="word-meaning">是黑色的鞋子。 — 黒→黒い（形容詞形）修飾名詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>好き 前面是 が</strong><br>
+    中文說「我喜歡<strong>藍色</strong>」像是受詞，但日文的 好き 是<strong>形容詞</strong>（喜歡的），
+    所以講成 <span class="compare">青<span class="j-mark">が</span>好きです</span>，<strong>不是</strong> <span class="bad">青を好きです</span>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">十、完整對話 — 串起來唸一遍</div>
+
+  <div class="dialog">
+    <div class="turn" data-text="おかえりなさい">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">おかえりなさい</div>
+        <div class="turn-romaji">okaerinasai</div>
+        <div class="turn-meaning">你回來啦。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ただいま">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">ただいま</div>
+        <div class="turn-romaji">tadaima</div>
+        <div class="turn-meaning">我回來了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="お仕事はどうですか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">お仕事<span class="j-mark">は</span>どうですか</div>
+        <div class="turn-romaji">oshigoto wa dou desu ka</div>
+        <div class="turn-meaning">工作還好嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="最近やめました。日本に引っ越ししました">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">最近やめました。日本<span class="j-mark">に</span>引っ越ししました</div>
+        <div class="turn-romaji">saikin yamemashita. nihon ni hikkoshi shimashita</div>
+        <div class="turn-meaning">最近辭掉了。搬到日本來了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="どこですか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">どこですか</div>
+        <div class="turn-romaji">doko desu ka</div>
+        <div class="turn-meaning">在哪裡呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="東京の中央線、荻窪です">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">東京<span class="j-mark">の</span>中央線、荻窪です</div>
+        <div class="turn-romaji">toukyou no chuuousen, ogikubo desu</div>
+        <div class="turn-meaning">東京的中央線，荻窪。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="いつですか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">いつですか</div>
+        <div class="turn-romaji">itsu desu ka</div>
+        <div class="turn-meaning">什麼時候（搬的）？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="三か月前、四月です。夫の仕事です">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">３か月前、４月です。夫<span class="j-mark">の</span>仕事です</div>
+        <div class="turn-romaji">sankagetsu mae, shigatsu desu. otto no shigoto desu</div>
+        <div class="turn-meaning">三個月前，四月。因為我先生的工作。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="荻窪はどうですか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">荻窪<span class="j-mark">は</span>どうですか</div>
+        <div class="turn-romaji">ogikubo wa dou desu ka</div>
+        <div class="turn-meaning">荻窪怎麼樣？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="平和です。とても静かです">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">平和です。とても静かです</div>
+        <div class="turn-romaji">heiwa desu. totemo shizuka desu</div>
+        <div class="turn-meaning">很安寧，非常安靜。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="渋谷や新宿はとても人が多いです">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">渋谷<span class="j-mark">や</span>新宿はとても人<span class="j-mark">が</span>多いです</div>
+        <div class="turn-romaji">shibuya ya shinjuku wa totemo hito ga ooi desu</div>
+        <div class="turn-meaning">澀谷、新宿那種地方人非常多。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="日本に何年いますか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">日本<span class="j-mark">に</span>何年いますか</div>
+        <div class="turn-romaji">nihon ni nannen imasu ka</div>
+        <div class="turn-meaning">會在日本待幾年？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="一年か二年です。今、日本語を勉強しています">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">１年<span class="j-mark">か</span>２年です。今、日本語<span class="j-mark">を</span>勉強しています</div>
+        <div class="turn-romaji">ichinen ka ninen desu. ima, nihongo o benkyou shite imasu</div>
+        <div class="turn-meaning">一年或兩年。現在正在學日文。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>や 和 と 的差別</strong><br>
+    <span class="j-mark">と</span>＝把東西<strong>全部列完</strong>：渋谷と新宿（就這兩個）。<br>
+    <span class="j-mark">や</span>＝<strong>舉幾個例子</strong>，言下之意還有別的：渋谷や新宿（澀谷、新宿<strong>之類的</strong>）。<br>
+    這句用 や，因為人多的地方不只這兩個。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · Cheat sheet</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>寫法</th><th>假名</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">おかえりなさい</td><td class="col-kana">おかえりなさい</td><td class="col-mean">你回來啦（留在原地的人說）</td></tr>
+      <tr><td class="col-ja">ただいま</td><td class="col-kana">ただいま</td><td class="col-mean">我回來了（回來的那一方說）</td></tr>
+      <tr><td class="col-ja">仕事</td><td class="col-kana">しごと</td><td class="col-mean">工作</td></tr>
+      <tr><td class="col-ja">やめました</td><td class="col-kana">やめました</td><td class="col-mean">辭掉了（辞めました）</td></tr>
+      <tr><td class="col-ja">引っ越し</td><td class="col-kana">ひっこし</td><td class="col-mean">搬家（＋します 變動詞）</td></tr>
+      <tr><td class="col-ja">中央線</td><td class="col-kana">ちゅうおうせん</td><td class="col-mean">中央線</td></tr>
+      <tr><td class="col-ja">東京</td><td class="col-kana">とうきょう</td><td class="col-mean">東京</td></tr>
+      <tr><td class="col-ja">荻窪</td><td class="col-kana">おぎくぼ</td><td class="col-mean">荻窪（中央線車站）</td></tr>
+      <tr><td class="col-ja">３か月前</td><td class="col-kana">さんかげつまえ</td><td class="col-mean">三個月前</td></tr>
+      <tr><td class="col-ja">４月</td><td class="col-kana">しがつ</td><td class="col-mean">四月</td></tr>
+      <tr><td class="col-ja">夫</td><td class="col-kana">おっと</td><td class="col-mean">（我的）先生</td></tr>
+      <tr><td class="col-ja">ご主人</td><td class="col-kana">ごしゅじん</td><td class="col-mean">（您的）先生</td></tr>
+      <tr><td class="col-ja">平和</td><td class="col-kana">へいわ</td><td class="col-mean">和平、安寧</td></tr>
+      <tr><td class="col-ja">静か</td><td class="col-kana">しずか</td><td class="col-mean">安靜</td></tr>
+      <tr><td class="col-ja">多い</td><td class="col-kana">おおい</td><td class="col-mean">多的</td></tr>
+      <tr><td class="col-ja">〜や〜</td><td class="col-kana">や</td><td class="col-mean">〜之類的（舉例列舉）</td></tr>
+      <tr><td class="col-ja">A か B</td><td class="col-kana">か</td><td class="col-mean">A 或 B</td></tr>
+      <tr><td class="col-ja">勉強しています</td><td class="col-kana">べんきょうしています</td><td class="col-mean">正在學習</td></tr>
+      <tr><td class="col-ja">少し</td><td class="col-kana">すこし</td><td class="col-mean">一點點</td></tr>
+      <tr><td class="col-ja">まぁまぁ</td><td class="col-kana">まぁまぁ</td><td class="col-mean">還可以、普普</td></tr>
+      <tr><td class="col-ja">聞こえます</td><td class="col-kana">きこえます</td><td class="col-mean">聽得見</td></tr>
+      <tr><td class="col-ja">木</td><td class="col-kana">き</td><td class="col-mean">樹、木頭</td></tr>
+      <tr><td class="col-ja">靴</td><td class="col-kana">くつ</td><td class="col-mean">鞋子（く組一起記）</td></tr>
+      <tr><td class="col-ja">車</td><td class="col-kana">くるま</td><td class="col-mean">車子（く組一起記）</td></tr>
+      <tr><td class="col-ja">北・南</td><td class="col-kana">きた・みなみ</td><td class="col-mean">北、南</td></tr>
+      <tr><td class="col-ja">東・西</td><td class="col-kana">ひがし・にし</td><td class="col-mean">東、西</td></tr>
+      <tr><td class="col-ja">黄色</td><td class="col-kana">きいろ</td><td class="col-mean">黃色</td></tr>
+      <tr><td class="col-ja">黒</td><td class="col-kana">くろ</td><td class="col-mean">黑色</td></tr>
+      <tr><td class="col-ja">青</td><td class="col-kana">あお</td><td class="col-mean">藍色</td></tr>
+      <tr><td class="col-ja">国</td><td class="col-kana">くに</td><td class="col-mean">國家</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    💡 <strong>一句話帶走</strong>：講近況就是「時間點 ＋ 過去式」——
+    <span class="compare">３か月前に日本に引っ越ししました</span>。把時間放前面，動詞放最後，句子就成立了。
+  </div>
+
+  <a href="2026-07-28-lesson8-kore-sore-are.html" class="next-link">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">レッスン8 これ・それ・あれ <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一堂課後半的課本進度：指示詞與 これは車です</span>
+  </a>
+
+  <a href="2026-07-28-kita-koto-ga-arimasu.html" class="next-link">
+    <span class="next-kicker">— 前情提要 / Previously —</span>
+    <span class="next-title">日本に来たことがありますか — 問經驗 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一天上午的經驗句型，跟今天的「引っ越ししました」剛好接在一起</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  // 所有帶 data-text 的卡片：只有播放按鈕會唸
+  document.querySelectorAll('.job-card[data-text], .word-item[data-text], .turn[data-text], .cell[data-text], .color-card[data-text], .kk-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

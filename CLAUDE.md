@@ -19,7 +19,7 @@ There is no build, lint, or test step. Development workflow:
 ### File Structure
 
 ```
-index.html                       ← 首頁：stats + calendar + log（棕色主題）
+index.html                       ← 首頁：calendar + log（棕色主題）
 shared.css                       ← 全站共用元件樣式（masthead/word-item/play-btn/...）
 resources.html                   ← 資源入口：多読起步清單、看圖猜詞測驗、店員對話帖、練字帖（棕色主題）
 vocab-quiz.html                  ← 看圖猜詞單字測驗（棕色主題，從 resources.html 連過去）
@@ -40,16 +40,15 @@ images/tadoku/*.png              ← 多読故事的插圖（いらすとや，�
 
 新增頁面**必先選定類型**——類型決定色票、目錄位置、可用樣板區塊。
 
-### index.html — How Stats and Calendar Work
-
-Stats (Lessons / Words / Kana) are **computed at runtime from HTML attributes** — there is no separate data file.
+### index.html — How the Calendar Works
 
 Each `<a class="lesson-link">` in `#lesson-list` carries:
-- `data-kana="5"` — number of kana taught in that lesson
-- `data-words="8"` — number of vocabulary words
-- `data-date="2026-05-03"` — ISO date (drives the calendar)
+- `data-date="2026-05-03"` — ISO date（**唯一會被 JS 讀到的屬性**，驅動 calendar）
+- `data-kana="5"` / `data-words="8"` — 該課的假名數／單字數，**目前純紀錄用、不會顯示**
 
-The `<div class="stats" id="stats">` element has `data-kana-base` and `data-words-base` for any kana/words learned before the log started.
+> 首頁原本頂端有一組 Lessons / Words / Kana 統計方塊（由 `data-kana`／`data-words` 即時加總），
+> **2026-07-28 已移除**（含 `.stats` CSS、`#stats` 區塊與加總 JS）。`data-kana` / `data-words` 保留在
+> `<li>` 上當作紀錄，新增課程時照填即可；要不要再拿來做視覺化再說。
 
 The calendar is built dynamically from `data-date` attributes. The script **auto-detects the two most recent months** that contain at least one lesson and renders only those two — no manual update needed when a new month starts.
 
@@ -83,7 +82,7 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
 
 `lesson-meta` 結尾的 `· Lesson` / `· Reading` 是純文字標籤，給人讀的；機器靠 `href` 前綴 (`readings/` / `tadoku/` / `lessons/` / `my-name-katakana.html`) 自動換左邊框顏色（CSS attribute selector，見 shared.css 的 `.lesson-link[href^="..."]` 規則）。
 
-Stats 與 calendar 會自動重算——`data-kana` / `data-words` / `data-date` 提供即可，新月份不必動 calendar 邏輯。
+Calendar 會自動重算——`data-date` 提供即可，新月份不必動 calendar 邏輯（`data-kana` / `data-words` 目前不顯示，照填當紀錄）。
 
 **Step 5 — 確保 favicon link 存在**（特別是非複製 `lessons/_skeleton.html` 的手寫頁、或新類型的產生器頁）：最簡單做法是執行 `node scripts/add-favicon.mjs`（冪等，已有 `rel="icon"` 的頁會自動跳過；root 頁注入 `favicon.svg`、`lessons/`／`readings/`／`tadoku/` 注入 `../favicon.svg`）。favicon 功能已於 2026-05-17 完成（見 [docs/superpowers/specs/2026-05-17-favicon-design.md](docs/superpowers/specs/2026-05-17-favicon-design.md)），`_skeleton.html` 已內含該 link，但手寫新頁或新產生器樣板不會自動帶上。
 

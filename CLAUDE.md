@@ -26,7 +26,7 @@ vocab-quiz.html                  ← 看圖猜詞單字測驗（棕色主題，�
 tadoku.html                      ← 多読入口：自製迷你多読小故事清單（藤色主題）
 my-name-katakana.html            ← 「私の名前」自我介紹（藍色主題）
 lessons/YYYY-MM-DD-topic.html    ← 每日課程（棕色主題）
-readings/YYYY-MM-DD-topic.html   ← 閱讀筆記（深紅主題，真實日文短文素材）
+readings/YYYY-MM-DD-topic.html   ← 閱讀筆記（深紅主題，真實日文短文素材；目前目錄為空）
 tadoku/YYYY-MM-DD-topic.html     ← 自製迷你多読小故事（藤色主題，跟 tadoku.html 同一套；同時仍列進 index.html 的 log/calendar）
 images/tadoku/*.png              ← 多読故事的插圖（いらすとや，自存不直連）
 ```
@@ -72,7 +72,7 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
 | 類型 | 放在 | 起手用什麼 |
 |------|------|------|
 | `lessons/*`（每日課程，含五十音行／主題／文法／概念） | `lessons/YYYY-MM-DD-<slug>.html` | **複製 [`lessons/_skeleton.html`](lessons/_skeleton.html)**，依「子類型」加上對應 CSS 區塊（見下表） |
-| 閱讀筆記（真實日文短文） | `readings/YYYY-MM-DD-topic.html` | 複製 [reading-cho](readings/2026-05-05-reading-cho.html) |
+| 閱讀筆記（真實日文短文） | `readings/YYYY-MM-DD-topic.html` | **目前沒有現存範例**（唯一一篇 2026-05-05「蝶の話」已於 2026-07-28 刪除，要撈舊版看 `git log -- readings/`）；色票與 `shared.css` 的 `readings/` 規則都還在，新頁比照 `tadoku/*` 結構再套深紅色票 |
 | 自製迷你多読小故事（掛在多読入口底下） | `tadoku/YYYY-MM-DD-topic.html` | 複製 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)，並在 [tadoku.html](tadoku.html) 的 `<ul>` 加一個 `<li>` 卡片 |
 | 一次性介紹頁 | 根目錄 | 複製 [my-name-katakana](my-name-katakana.html) |
 
@@ -178,11 +178,11 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 | 文法 — 詞彙概念（人稱／音讀） | [jinshou](lessons/2026-05-13-jinshou.html), [onyomi-sensei](lessons/2026-05-13-onyomi-sensei.html) | 自製 `.pron-card` / `.job-card`（漢字大＋假名小＋羅馬＋意思的卡片）/ `.kanji-spot` 單字大字解析 / 速記表沿用 `.joshi-table` 同款 |
 | 假名概念 | [kana](lessons/2026-05-04-kana.html) | 自有 `.tree-box` `.branch-card` (hira/kata) / `.compare-table` / `.example-row` + `.ex-hira` `.ex-kata` |
 | 自我介紹（片假名） | [my-name-katakana](my-name-katakana.html) | 自有 `.card`（藍色主題、結構接近 reading hero） |
-| 閱讀筆記 | [reading-cho](readings/2026-05-05-reading-cho.html) | `.hero` + `.hero-title` `.hero-sub` `.hero-meta` / `.vertical-text` + `.vertical-card` / `.particles` + `.particle` / `.row` + `.kana` + `.translate` / `.grammar` |
+| 閱讀筆記 | *（已無現存頁，樣式僅存於 git 歷史）* | `.hero` + `.hero-title` `.hero-sub` `.hero-meta` / `.vertical-text` + `.vertical-card` / `.particles` + `.particle` / `.row` + `.kana` + `.translate` / `.grammar` |
 
 #### 多読故事的插圖（いらすとや）
 
-`tadoku/*` 一句一景，每景上方放一張插圖，仿 tadoku 分級讀本的「一頁一景」。插圖一律用 **[いらすとや](https://www.irasutoya.com/)**（原版 tadoku 讀本用的就是這套）。
+`tadoku/*` 一句話（或一組對白）配一張插圖，圖放在上方，仿 tadoku 分級讀本「一頁一個場景」的做法。插圖一律用 **[いらすとや](https://www.irasutoya.com/)**（原版 tadoku 讀本用的就是這套）。
 
 **規則：**
 - **一定要下載自存到 `images/tadoku/`，不要直連他們的 CDN。** 檔名沿用いらすとや原檔名（例如 `study_nihongo.png`），方便回溯出處。

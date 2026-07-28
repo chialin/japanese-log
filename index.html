@@ -25,6 +25,15 @@
   .ms-body:hover .ms-arrow{color:var(--accent);transform:translateX(3px);}
   .ms-note{font-size:14px;color:var(--ink-soft);margin-top:3px;line-height:1.7;}
   .ms-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;letter-spacing:.12em;color:var(--accent);background:var(--accent-pale);border-radius:2px;padding:1px 7px;text-transform:uppercase;}
+  /* ── EPUB 下載列（不是 .lesson-link，日曆／清單邏輯會略過它）── */
+  .dl-link{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.45);border:1px dashed var(--accent-soft);padding:14px 18px;text-decoration:none;color:inherit;transition:background .15s,border-color .15s;}
+  .dl-link:hover{background:rgba(255,255,255,.75);border-color:var(--accent);}
+  .dl-icon{font-size:22px;line-height:1;flex-shrink:0;}
+  .dl-body{flex:1;min-width:0;}
+  .dl-title{display:block;font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;color:var(--ink);}
+  .dl-sub{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);letter-spacing:.05em;margin-top:2px;}
+  .dl-arrow{color:var(--ink-mute);font-size:15px;flex-shrink:0;transition:transform .15s,color .15s;}
+  .dl-link:hover .dl-arrow{color:var(--accent);transform:translateY(2px);}
   /* ── Section divider ── */
   /* ── Calendar ── */
   .cal-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px;}.cal-month{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:16px;}.cal-month-title{text-align:center;font-size:14px;letter-spacing:.25em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}.cal-dow{text-align:center;font-size:14px;letter-spacing:.08em;color:var(--ink-mute);text-transform:uppercase;padding-bottom:5px;font-family:'Cormorant Garamond',serif;}.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink);font-family:'Cormorant Garamond',serif;}.cal-day.has-lesson{background:var(--accent-pale);color:var(--accent);font-weight:700;cursor:pointer;transition:background .15s;}.cal-day.has-lesson:hover{background:var(--accent);color:white;}.cal-day.has-lesson.active{background:var(--accent);color:white;}/* ── Calendar popup ── */
@@ -97,6 +106,16 @@
   <div class="divider" style="margin-bottom:16px;">學習紀錄 · Log</div>
 
   <ul class="lesson-list" id="lesson-list">
+    <li>
+      <a class="dl-link" href="epub/japanese-log-2026-07-28.epub" download>
+        <span class="dl-icon">📕</span>
+        <span class="dl-body">
+          <span class="dl-title">7/28 電子書版（EPUB）</span>
+          <span class="dl-sub">當天三課重新編排成五章 + 單字表 · 400 KB · 適合 Supernote／Kindle 等閱讀器</span>
+        </span>
+        <span class="dl-arrow">↓</span>
+      </a>
+    </li>
     <li>
       <a class="lesson-link" href="tadoku/2026-07-28-tadoku-hikkoshi.html"
          data-kana="0" data-words="0" data-date="2026-07-28">

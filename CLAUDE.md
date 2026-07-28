@@ -132,7 +132,13 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 
 `node scripts/build-epub.mjs [輸出路徑.epub]`（2026-07-28 新增）把某一天的課程**重新編排**成一本 EPUB，
 不是把網頁直接倒出來——章節結構、內容與速記表都手寫在腳本裡（`chapters` 陣列 ＋ `VOCAB`），
-要出別天的就改那份資料再跑。輸出檔已列入 `.gitignore`，不進 repo。
+要出別天的就改那份資料再跑。
+
+**產物要進版控**：輸出固定放 `epub/`（預設路徑，資料夾不存在會自動建），
+並且**跟著 commit** —— `index.html` 的 Log 最上面有一列 `.dl-link` 下載卡直接連過去
+（`href="epub/xxx.epub" download`），GitHub Pages 直接當靜態檔案送出，不需要另開頁面。
+`.gitignore` 只擋根目錄誤產出的 `/*.epub`。
+新增別天的電子書時，記得同步加一張 `.dl-link`（它不是 `.lesson-link`，日曆與清單邏輯會略過）。
 
 排版是針對 **Supernote A5X（1404×1872、10.3" E-ink 灰階）** 調的，改動前先理解這些限制：
 - **不靠顏色分辨資訊**（灰階螢幕），改用邊框粗細：`.alert` 粗實線左邊、`.note` 雙線左邊

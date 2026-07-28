@@ -18,7 +18,8 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const OUT = process.argv[2] || path.join(ROOT, 'japanese-log-2026-07-28.epub');
+// 一定要轉成絕對路徑：打包時 zip 是在暫存目錄裡執行的，相對路徑會指到別的地方
+const OUT = path.resolve(process.argv[2] || path.join(ROOT, 'epub', 'japanese-log-2026-07-28.epub'));
 
 const BOOK = {
   title: '日本語学習日誌 — 2026年7月28日',
@@ -658,6 +659,7 @@ ${chapters.map(c => `  <itemref idref="${c.id}"/>`).join('\n')}
 `);
 
 // 打包：mimetype 不壓縮且必須排第一
+fs.mkdirSync(path.dirname(OUT), { recursive: true });
 if (fs.existsSync(OUT)) fs.rmSync(OUT);
 execFileSync('zip', ['-X0', '-q', OUT, 'mimetype'], { cwd: tmp });
 execFileSync('zip', ['-Xr9D', '-q', OUT, 'META-INF', 'OEBPS'], { cwd: tmp });

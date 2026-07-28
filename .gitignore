@@ -7,4 +7,4 @@ node_modules/
 .superpowers/
 anki/venv/
 anki/audio_cache/
-*.epub
+/*.epub

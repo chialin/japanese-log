@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ミニ多読 — 日本に引っ越ししました（会話）</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* tadoku/* 統一用藤色，跟 tadoku.html 同一套 */
+:root{--paper:#f8f6fc;--paper-deep:#ece7f5;--ink:#241f33;--ink-soft:#473f60;--ink-mute:#7d7396;--accent:#7a68a6;--accent-soft:#b8aad6;--accent-pale:#ece7f7;--line:#ddd5ec;--bg-spot-1:#f4f1fa;--bg-spot-2:#e8e2f2;}
+
+/* 一景一段：插圖在上、對話在下 */
+.scene{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:22px 24px;margin-bottom:16px;transition:border-color .15s;}
+.scene:hover{border-color:var(--accent-soft);}
+.scene-img{display:block;margin:0 auto 16px;max-width:100%;max-height:180px;width:auto;}
+
+/* 一來一往的對白 */
+.turn{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;padding-bottom:0;}
+.turn:first-of-type{padding-top:0;}
+.who{flex-shrink:0;width:44px;font-family:'Shippori Mincho',serif;font-size:13px;font-weight:600;color:var(--accent);padding-top:6px;letter-spacing:.05em;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink);line-height:1.55;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:14px;margin-top:4px;}
+.turn .play-btn{flex-shrink:0;}
+
+/* 圖片出處 */
+.credit{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-mute);line-height:1.8;}
+.credit a{color:var(--accent);}
+
+/* 回課程頁 */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+
+@media(max-width:600px){
+  .scene{padding:18px 16px;}
+  .turn-ja{font-size:19px;}
+  .scene-img{max-height:150px;}
+  .who{width:38px;font-size:12px;}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">ミニ多読 <span class="accent">日本に引っ越ししました</span></h1>
+  <div class="page-meta">閱讀練習 · Mini Tadoku · 会話 · 2026 / 07 / 28</div>
+  <p class="page-subtitle">一景一段的對話 — 久しぶりに会った二人が近況を話す。先看圖猜情境，再讀日文</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/home_kitaku_girl.png" alt="帰宅する女の子のイラスト" loading="lazy">
+
+    <div class="turn" data-text="おかえりなさい">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">おかえりなさい。</div>
+        <div class="turn-romaji">Okaerinasai.</div>
+        <div class="turn-meaning">你回來啦。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ただいま">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">ただいま。</div>
+        <div class="turn-romaji">Tadaima.</div>
+        <div class="turn-meaning">我回來了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/taisyoku_hanataba_young_woman.png" alt="退職する女性のイラスト" loading="lazy">
+
+    <div class="turn" data-text="お仕事はどうですか">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">お仕事はどうですか。</div>
+        <div class="turn-romaji">Oshigoto wa dou desu ka.</div>
+        <div class="turn-meaning">工作還好嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="最近やめました。日本に引っ越ししました">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">最近やめました。日本に引っ越ししました。</div>
+        <div class="turn-romaji">Saikin yamemashita. Nihon ni hikkoshi shimashita.</div>
+        <div class="turn-meaning">最近辭掉了。搬到日本來了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/car_truck_hikkoshi.png" alt="引っ越しのトラックのイラスト" loading="lazy">
+
+    <div class="turn" data-text="いつですか">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">いつですか。</div>
+        <div class="turn-romaji">Itsu desu ka.</div>
+        <div class="turn-meaning">什麼時候（搬的）？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="三か月前、四月です。夫の仕事です">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">３か月前、４月です。夫の仕事です。</div>
+        <div class="turn-romaji">Sankagetsu mae, shigatsu desu. Otto no shigoto desu.</div>
+        <div class="turn-meaning">三個月前，四月。因為我先生的工作。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/train_jousya_woman.png" alt="電車に乗る女性のイラスト" loading="lazy">
+
+    <div class="turn" data-text="どこですか">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">どこですか。</div>
+        <div class="turn-romaji">Doko desu ka.</div>
+        <div class="turn-meaning">（搬到）哪裡呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="東京の中央線、荻窪です">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">東京の中央線、荻窪（おぎくぼ）です。</div>
+        <div class="turn-romaji">Toukyou no Chuuousen, Ogikubo desu.</div>
+        <div class="turn-meaning">東京的中央線，荻窪。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/train_manin_business.png" alt="満員電車のイラスト" loading="lazy">
+
+    <div class="turn" data-text="荻窪はどうですか">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">荻窪はどうですか。</div>
+        <div class="turn-romaji">Ogikubo wa dou desu ka.</div>
+        <div class="turn-meaning">荻窪怎麼樣？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="平和です。とても静かです">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">平和です。とても静かです。</div>
+        <div class="turn-romaji">Heiwa desu. Totemo shizuka desu.</div>
+        <div class="turn-meaning">很安寧，非常安靜。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="渋谷や新宿はとても人が多いです">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">渋谷や新宿はとても人が多いです。</div>
+        <div class="turn-romaji">Shibuya ya Shinjuku wa totemo hito ga ooi desu.</div>
+        <div class="turn-meaning">澀谷、新宿那種地方人非常多。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/study_nihongo.png" alt="日本語を勉強する人のイラスト" loading="lazy">
+
+    <div class="turn" data-text="日本に何年いますか">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">日本に何年いますか。</div>
+        <div class="turn-romaji">Nihon ni nannen imasu ka.</div>
+        <div class="turn-meaning">會在日本待幾年？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="一年か二年です。今、日本語を勉強しています">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">１年か２年です。今、日本語を勉強しています。</div>
+        <div class="turn-romaji">Ichinen ka ninen desu. Ima, nihongo o benkyou shite imasu.</div>
+        <div class="turn-meaning">一年或兩年。現在正在學日文。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <a href="../lessons/2026-07-28-hikkoshi-kaiwa.html" class="next-link">
+    <span class="next-kicker">— 出處 / From the lesson —</span>
+    <span class="next-title">日本に引っ越ししました — 近況を話す <span class="next-arrow">→</span></span>
+    <span class="next-sub">這段對話的文法拆解在課程頁：〜に引っ越しします、〜か月前、A か B、や vs と、夫 vs ご主人</span>
+  </a>
+
+  <div class="credit">
+    插圖：<a href="https://www.irasutoya.com/" target="_blank" rel="noopener">いらすとや</a>（かわいいフリー素材集）
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.turn[data-text]').forEach(turn => {
+    const button = turn.querySelector('.play-btn');
+    const text = turn.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

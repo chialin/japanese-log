@@ -10,7 +10,21 @@
 :root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;/* reading & about accent colours for type badges */
     --reading-accent:#8b3a3a;--tadoku-accent:#7a68a6;}.container{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:48px 32px 80px;}/* ── Masthead ── */
   /* ── Hero title ── */
-  .hero{text-align:center;margin-bottom:48px;}.hero-kicker{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);letter-spacing:.15em;font-size:14px;margin-bottom:14px;}.hero h1{font-family:'Shippori Mincho',serif;font-weight:800;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:.03em;color:var(--ink);margin-bottom:10px;}.hero h1 .accent{color:var(--accent);}.hero .subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:16px;letter-spacing:.12em;}/* ── Stats ── */
+  .hero{text-align:center;margin-bottom:48px;}.hero-kicker{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);letter-spacing:.15em;font-size:14px;margin-bottom:14px;}.hero h1{font-family:'Shippori Mincho',serif;font-weight:800;font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:.03em;color:var(--ink);margin-bottom:10px;}.hero h1 .accent{color:var(--accent);}.hero .subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:16px;letter-spacing:.12em;}/* ── Milestones（大事件時間軸）── */
+  .milestones{list-style:none;margin:0 0 40px;padding:0 0 0 26px;position:relative;}
+  .milestones::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line);}
+  .ms{position:relative;padding:0 0 20px;}
+  .ms:last-child{padding-bottom:0;}
+  .ms::before{content:"";position:absolute;left:-25px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:2px solid var(--accent-soft);}
+  .ms.current::before{background:var(--accent);border-color:var(--accent);}
+  .ms-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.12em;color:var(--ink-mute);margin-bottom:2px;}
+  .ms-body{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:inherit;}
+  .ms-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);transition:color .15s;}
+  .ms-body:hover .ms-title{color:var(--accent);}
+  .ms-arrow{color:var(--ink-mute);font-size:14px;transition:transform .15s,color .15s;}
+  .ms-body:hover .ms-arrow{color:var(--accent);transform:translateX(3px);}
+  .ms-note{font-size:14px;color:var(--ink-soft);margin-top:3px;line-height:1.7;}
+  .ms-badge{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;letter-spacing:.12em;color:var(--accent);background:var(--accent-pale);border-radius:2px;padding:1px 7px;text-transform:uppercase;}
   /* ── Section divider ── */
   /* ── Calendar ── */
   .cal-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px;}.cal-month{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:16px;}.cal-month-title{text-align:center;font-size:14px;letter-spacing:.25em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}.cal-dow{text-align:center;font-size:14px;letter-spacing:.08em;color:var(--ink-mute);text-transform:uppercase;padding-bottom:5px;font-family:'Cormorant Garamond',serif;}.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink);font-family:'Cormorant Garamond',serif;}.cal-day.has-lesson{background:var(--accent-pale);color:var(--accent);font-weight:700;cursor:pointer;transition:background .15s;}.cal-day.has-lesson:hover{background:var(--accent);color:white;}.cal-day.has-lesson.active{background:var(--accent);color:white;}/* ── Calendar popup ── */
@@ -42,9 +56,56 @@
     <div id="cal-popup-items"></div>
   </div>
 
+  <div class="divider" style="margin-bottom:20px;">歩み · Milestones</div>
+
+  <!-- 大事件時間軸：學習階段的轉折點才放這裡（新的假名系統、新的上課形式…），
+       一般每日課程只進下面的 Log。最新一筆加 class="current"。 -->
+  <ol class="milestones">
+    <li class="ms">
+      <div class="ms-date">2026 · Apr 29</div>
+      <a class="ms-body" href="lessons/2026-04-29-a-row.html">
+        <span class="ms-title">開始學平假名</span>
+        <span class="ms-arrow">→</span>
+      </a>
+      <div class="ms-note">從 あ行 起步，五十音一行一行推進</div>
+    </li>
+    <li class="ms">
+      <div class="ms-date">2026 · May 14</div>
+      <a class="ms-body" href="lessons/2026-05-14-katakana-a-row.html">
+        <span class="ms-title">開始學片假名</span>
+        <span class="ms-arrow">→</span>
+      </a>
+      <div class="ms-note">ア行接手，外來語正式進入教材</div>
+    </li>
+    <li class="ms">
+      <div class="ms-date">2026 · Jul 10</div>
+      <a class="ms-body" href="lessons/2026-07-10-jikoshoukai.html">
+        <span class="ms-title">開始上口語課 — 每次 10 分鐘</span>
+        <span class="ms-arrow">→</span>
+      </a>
+      <div class="ms-note">從自我紹介開始，第一次開口跟老師對話</div>
+    </li>
+    <li class="ms current">
+      <div class="ms-date">2026 · Jul 28 <span class="ms-badge">now</span></div>
+      <a class="ms-body" href="lessons/2026-07-28-hikkoshi-kaiwa.html">
+        <span class="ms-title">口語課延長為 30 分鐘</span>
+        <span class="ms-arrow">→</span>
+      </a>
+      <div class="ms-note">課上長一點，增加開口說日文的時間</div>
+    </li>
+  </ol>
+
   <div class="divider" style="margin-bottom:16px;">學習紀錄 · Log</div>
 
   <ul class="lesson-list" id="lesson-list">
+    <li>
+      <a class="lesson-link" href="tadoku/2026-07-28-tadoku-hikkoshi.html"
+         data-kana="0" data-words="0" data-date="2026-07-28">
+        <div class="lesson-meta">2026 · Jul 28 · Tue · Reading</div>
+        <div class="lesson-title">ミニ多読 日本に引っ越ししました（会話） <span class="arrow">→</span></div>
+        <div class="lesson-summary">口語課那段近況對話整理成多読 — 辭職・搬到荻窪・東京印象・學日文，一景一段配插圖</div>
+      </a>
+    </li>
     <li>
       <a class="lesson-link" href="lessons/2026-07-28-lesson8-kore-sore-are.html"
          data-kana="0" data-words="9" data-date="2026-07-28">

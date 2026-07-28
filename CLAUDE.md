@@ -50,6 +50,19 @@ Each `<a class="lesson-link">` in `#lesson-list` carries:
 > **2026-07-28 已移除**（含 `.stats` CSS、`#stats` 區塊與加總 JS）。`data-kana` / `data-words` 保留在
 > `<li>` 上當作紀錄，新增課程時照填即可；要不要再拿來做視覺化再說。
 
+### index.html — Milestones（歩み 大事件時間軸）
+
+日曆上方有一條 `<ol class="milestones">` 時間軸，記錄**學習階段的轉折點**——不是每日課程，
+而是「換了新的假名系統」「上課形式改變」這種大事件（2026-07-28 新增）。純靜態 HTML，沒有 JS。
+
+新增一筆時：
+1. 在 `<ol class="milestones">` **末尾**追加 `<li class="ms">`（舊→新排序，跟下面的 Log 相反）
+2. 把上一筆的 `class="ms current"` 改回 `class="ms"`，並移除它 `.ms-date` 裡的 `<span class="ms-badge">now</span>`
+3. 新的那筆掛 `class="ms current"` ＋ `now` badge（實心圓點＋標籤靠這兩個）
+4. `.ms-body` 的 `href` 指向那天的代表課程頁
+
+判斷標準：**這件事會讓之後的學習內容長得不一樣**才放進來，否則只進 Log。
+
 The calendar is built dynamically from `data-date` attributes. The script **auto-detects the two most recent months** that contain at least one lesson and renders only those two — no manual update needed when a new month starts.
 
 ### Adding a New Page

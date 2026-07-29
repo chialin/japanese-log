@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>口語練習 — 昼ごはんとお茶漬け</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 單字表格/簡表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);width:160px;font-weight:600;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">口語練習 <span class="accent">昼ごはんとお茶漬け</span></h1>
+  <div class="page-meta">口語 · 会話 · 2026 / 07 / 29</div>
+  <p class="page-subtitle">今日の口語課 — 在家做午餐、茶泡飯與簡單的日常對話</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 表示天氣熱用 <span class="compare">暑いです</span>，原因連接詞用 <span class="j-mark">〜から／ですから</span>（因為...所以...）；<br>
+    ② 動作場所用 <span class="j-mark">家で</span>，人數／同行狀態用 <span class="j-mark">二人で</span>；<br>
+    ③ 列舉名詞用助詞 <span class="j-mark">と</span>（野菜と 魚と ごはん）；<br>
+    ④ 動詞過去形 <span class="compare">作りました</span>（做/製作了）；<br>
+    ⑤ 喜好表示 <span class="j-mark">〜が好きです</span>，狀態形容 <span class="compare">かんたんです</span>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、単語 — 新單字整理</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    對話中出現的新單字與相關詞彙彙整。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 単語リスト</div>
+
+    <div class="word-item" data-text="今日">
+      <div class="word-content">
+        <div class="word-ja">今日（きょう）</div>
+        <div class="word-romaji">kyou</div>
+        <div class="word-meaning">今天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="とても">
+      <div class="word-content">
+        <div class="word-ja">とても</div>
+        <div class="word-romaji">totemo</div>
+        <div class="word-meaning">非常、很</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="暑い">
+      <div class="word-content">
+        <div class="word-ja">暑（あつ）い</div>
+        <div class="word-romaji">atsui</div>
+        <div class="word-meaning">熱（天氣熱） — い形容詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ですから">
+      <div class="word-content">
+        <div class="word-ja">ですから／〜から</div>
+        <div class="word-romaji">desukara / ~kara</div>
+        <div class="word-meaning">所以 / 因為...所以... — 原因理由的連接詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昼ごはん">
+      <div class="word-content">
+        <div class="word-ja">昼（ひる）ごはん</div>
+        <div class="word-romaji">hirugohan</div>
+        <div class="word-meaning">午餐 — 昼（中午）＋ ごはん（飯）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="家">
+      <div class="word-content">
+        <div class="word-ja">家（うち／いえ）</div>
+        <div class="word-romaji">uchi / ie</div>
+        <div class="word-meaning">家、家裡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="二人">
+      <div class="word-content">
+        <div class="word-ja">二人（ふたり）</div>
+        <div class="word-romaji">futari</div>
+        <div class="word-meaning">兩個人 — 人數量詞（一人：ひとり / 二人：ふたり）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いっしょに">
+      <div class="word-content">
+        <div class="word-ja">いっしょに</div>
+        <div class="word-romaji">issho ni</div>
+        <div class="word-meaning">一起</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="作りました">
+      <div class="word-content">
+        <div class="word-ja">作（つく）りました</div>
+        <div class="word-romaji">tsukurimashita</div>
+        <div class="word-meaning">做了 / 製作了 — 作ります 的過去形</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お茶漬け">
+      <div class="word-content">
+        <div class="word-ja">お茶漬（ちゃづ）け／茶漬</div>
+        <div class="word-romaji">ochazuke</div>
+        <div class="word-meaning">茶泡飯 — 日本傳統將茶水淋在米飯上的料理</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="野菜">
+      <div class="word-content">
+        <div class="word-ja">野菜（やさい）</div>
+        <div class="word-romaji">yasai</div>
+        <div class="word-meaning">蔬菜</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="魚">
+      <div class="word-content">
+        <div class="word-ja">魚（さかな）</div>
+        <div class="word-romaji">sakana</div>
+        <div class="word-meaning">魚</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ごはん">
+      <div class="word-content">
+        <div class="word-ja">ごはん</div>
+        <div class="word-romaji">gohan</div>
+        <div class="word-meaning">白飯 / 餐點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="好き">
+      <div class="word-content">
+        <div class="word-ja">好（す）き</div>
+        <div class="word-romaji">suki</div>
+        <div class="word-meaning">喜歡 — な形容詞（〜が好きです）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="簡単">
+      <div class="word-content">
+        <div class="word-ja">簡単（かんたん）</div>
+        <div class="word-romaji">kantan</div>
+        <div class="word-meaning">簡單 — な形容詞（かんたんです）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、会話・例文 — 對話與句子</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    今日與日文老師練習的對話句子：
+  </p>
+
+  <div class="section">
+    <div class="section-title">💬 練習句子</div>
+
+    <div class="word-item" data-text="今日はとても暑いです">
+      <div class="word-content">
+        <div class="word-ja">今日（きょう）は とても 暑（あつ）いです。</div>
+        <div class="word-romaji">kyou wa totemo atsui desu.</div>
+        <div class="word-meaning">今天非常熱。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ですから家で昼ごはんを作りました">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark">ですから</span>、家（うち）で 昼（ひる）ごはんを 作（つく）りました。</div>
+        <div class="word-romaji">desukara, ie de hirugohan o tsukurimashita.</div>
+        <div class="word-meaning">所以，在家裡做了午餐。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今日はとても暑いですから家で昼ごはんを作りました">
+      <div class="word-content">
+        <div class="word-ja">今日（きょう）は とても 暑（あつ）いです<span class="j-mark">から</span>、家（うち）で 昼（ひる）ごはんを 作（つく）りました。</div>
+        <div class="word-romaji">kyou wa totemo atsui desu kara, ie de hirugohan o tsukurimashita.</div>
+        <div class="word-meaning">因為今天非常熱，所以在家裡做了午餐。（完整原因連貫句）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昼ごはんを家で食べました">
+      <div class="word-content">
+        <div class="word-ja">昼（ひる）ごはんを <span class="j-mark">家（うち）で</span> 食（た）べました。</div>
+        <div class="word-romaji">hirugohan o ie de tabemashita.</div>
+        <div class="word-meaning">在家裡吃了午餐。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="二人でいっしょに作りました">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark">二人（ふたり）で</span> いっしょに 作（つく）りました。</div>
+        <div class="word-romaji">futari de issho ni tsukurimashita.</div>
+        <div class="word-meaning">兩個人一起做了（午餐）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="野菜と魚とごはんを食べました">
+      <div class="word-content">
+        <div class="word-ja">野菜（やさい）<span class="j-mark">と</span> 魚（さかな）<span class="j-mark">と</span> ごはんを 食べました。</div>
+        <div class="word-romaji">yasai to sakana to gohan o tabemashita.</div>
+        <div class="word-meaning">吃了蔬菜、魚和白飯。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お茶漬けが好きです">
+      <div class="word-content">
+        <div class="word-ja">お茶漬（ちゃづ）け<span class="j-mark">が</span> 好（す）きです。</div>
+        <div class="word-romaji">ochazuke ga suki desu.</div>
+        <div class="word-meaning">我喜歡茶泡飯。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="かんたんです">
+      <div class="word-content">
+        <div class="word-ja">かんたんです。</div>
+        <div class="word-romaji">kantan desu.</div>
+        <div class="word-meaning">很簡單（做法很簡單）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、文法・助詞のポイント — 重點解析</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>助詞／句型</th><th>用法與語意</th><th>本課例句</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">い形容詞 ＋ <span class="j-mark">です</span></td>
+        <td class="col-mean">表示天氣／狀態（禮貌形）</td>
+        <td class="col-mean">暑い<span class="j-mark">です</span>（天氣很熱）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">句尾 ＋ <span class="j-mark">から</span> / <span class="j-mark">ですから</span></td>
+        <td class="col-mean">表示原因理由「因為...所以...」</td>
+        <td class="col-mean">暑いです<span class="j-mark">から</span>（因為很熱）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">場所 ＋ <span class="j-mark">で</span></td>
+        <td class="col-mean">表示動作發生的地點（在...）</td>
+        <td class="col-mean">家<span class="j-mark">で</span> 食べました（在家吃）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">人數 ＋ <span class="j-mark">で</span></td>
+        <td class="col-mean">表示執行動作的人數限制／狀態</td>
+        <td class="col-mean">二人<span class="j-mark">で</span> 作りました（兩人一起做）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">名詞 ＋ <span class="j-mark">と</span></td>
+        <td class="col-mean">並列名詞「和」</td>
+        <td class="col-mean">野菜<span class="j-mark">と</span> 魚<span class="j-mark">と</span> ごはん（蔬菜、魚與飯）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">名詞 ＋ <span class="j-mark">が 好きです</span></td>
+        <td class="col-mean">表示喜好的對象（用 が 標示）</td>
+        <td class="col-mean">お茶漬け<span class="j-mark">が</span> 好きです（喜歡茶泡飯）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">動詞ます形 → <span class="j-mark">ました</span></td>
+        <td class="col-mean">禮貌過去式（表示動作已完成）</td>
+        <td class="col-mean">作ります → 作り<span class="j-mark">ました</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="2026-07-28-hikkoshi-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Previous Lesson —</span>
+    <span class="next-title">日本に引っ越ししました — 近況を話す <span class="next-arrow">→</span></span>
+    <span class="next-sub">おかえりなさい／ただいま ＋ 近況與搬家對話</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    if (button && text) {
+      const handler = (e) => { e.stopPropagation(); speak(text, button); };
+      button.addEventListener('click', handler);
+    }
+  });
+</script>
+</body>
+</html>

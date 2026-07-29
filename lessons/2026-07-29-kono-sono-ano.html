@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>この・その・あの — この本は古いです</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 對照兩欄 / 網格 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.vs-grid{grid-template-columns:1fr;}}
+.vs-col{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:16px 18px;}
+.vs-head{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.vs-sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:13px;letter-spacing:.05em;margin-bottom:10px;}
+.vs-body{font-size:14px;color:var(--ink-soft);line-height:1.8;}
+
+/* 反義詞卡 */
+.opp-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+@media (max-width:520px){.opp-grid{grid-template-columns:1fr;}}
+.opp-card{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.6);border:1px solid var(--line);padding:14px 16px;}
+.opp-item{text-align:center;}
+.opp-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:600;color:var(--ink);}
+.opp-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:13px;}
+.opp-zh{font-size:12px;color:var(--ink-soft);margin-top:2px;}
+.opp-arrow{color:var(--accent);font-size:20px;font-weight:bold;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);width:160px;font-weight:600;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">この・その・あの <span class="accent">形容詞與指示連體詞</span></h1>
+  <div class="page-meta">教科書 · 指示詞 · 2026 / 07 / 29</div>
+  <p class="page-subtitle">修飾名詞的指示連體詞 ＋ い形容詞描述 — この本は古いです／あの家は大きいです</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="compare">これ／それ／あれ</span> 是<strong>名詞</strong>（後面可直接加 は）；<span class="compare">この／その／あの</span> 是<strong>連體詞</strong>，後面<strong>一定要接名詞</strong>（這個 N / 那個 N）；<br>
+    ② 句型：<span class="compare">この／その／あの ＋ 名詞 ＋ は ＋ い形容詞 ＋ です。</span><br>
+    ③ 兩組常用反義形容詞：<span class="compare">古い</span>（舊）↔ <span class="compare">新しい</span>（新）；<span class="compare">大きい</span>（大）↔ <span class="compare">小さい</span>（小）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、これ vs この の差別</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <div class="vs-head">これ・それ・あれ</div>
+      <div class="vs-sub">Demonstrative Pronoun (代名詞)</div>
+      <div class="vs-body">
+        本身就是<strong>名詞</strong>，可獨立當句子的主詞：<br>
+        ・<span class="compare">これ</span>は 車です。（這是車子。）<br>
+        ・<span class="compare">それ</span>は 本です。（那是書。）
+      </div>
+    </div>
+    <div class="vs-col">
+      <div class="vs-head">この・その・あの</div>
+      <div class="vs-sub">Demonstrative Determiner (連體詞)</div>
+      <div class="vs-body">
+        後面<strong>必須緊接名詞</strong>，用來修飾該名詞：<br>
+        ・<span class="compare">この本</span>は 古いです。（這本書很舊。）<br>
+        ・<span class="compare">あの車</span>は 新しいです。（那台車很新。）
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、形容詞 (い形容詞) — 反義詞對照</div>
+
+  <div class="opp-grid">
+    <div class="opp-card">
+      <div class="opp-item" data-text="古い">
+        <div class="opp-ja">古い（ふるい）</div>
+        <div class="opp-ro">furui</div>
+        <div class="opp-zh">舊的</div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="opp-arrow">↔</div>
+      <div class="opp-item" data-text="新しい">
+        <div class="opp-ja">新（あたら）しい</div>
+        <div class="opp-ro">atarashii</div>
+        <div class="opp-zh">新的</div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-item" data-text="大きい">
+        <div class="opp-ja">大（おお）きい</div>
+        <div class="opp-ro">ookii</div>
+        <div class="opp-zh">大的</div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="opp-arrow">↔</div>
+      <div class="opp-item" data-text="小さい">
+        <div class="opp-ja">小（ちい）さい</div>
+        <div class="opp-ro">chiisai</div>
+        <div class="opp-zh">小的</div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、単語 — 本課單字整理</div>
+
+  <div class="section">
+    <div class="section-title">📖 単語リスト</div>
+
+    <div class="word-item" data-text="この">
+      <div class="word-content">
+        <div class="word-ja">この ＋ 名詞</div>
+        <div class="word-romaji">kono + N</div>
+        <div class="word-meaning">這個...（說話者身邊）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="その">
+      <div class="word-content">
+        <div class="word-ja">その ＋ 名詞</div>
+        <div class="word-romaji">sono + N</div>
+        <div class="word-meaning">那個...（聽話者身邊）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あの">
+      <div class="word-content">
+        <div class="word-ja">あの ＋ 名詞</div>
+        <div class="word-romaji">ano + N</div>
+        <div class="word-meaning">那個...（雙方遠處）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="本">
+      <div class="word-content">
+        <div class="word-ja">本（ほん）</div>
+        <div class="word-romaji">hon</div>
+        <div class="word-meaning">書本</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="絵">
+      <div class="word-content">
+        <div class="word-ja">絵（え）</div>
+        <div class="word-romaji">e</div>
+        <div class="word-meaning">圖畫、畫作</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="家">
+      <div class="word-content">
+        <div class="word-ja">家（いえ／うち）</div>
+        <div class="word-romaji">ie / uchi</div>
+        <div class="word-meaning">房子、家</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="車">
+      <div class="word-content">
+        <div class="word-ja">車（くるま）</div>
+        <div class="word-romaji">kuruma</div>
+        <div class="word-meaning">汽車</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="パソコン">
+      <div class="word-content">
+        <div class="word-ja">パソコン</div>
+        <div class="word-romaji">pasokon</div>
+        <div class="word-meaning">電腦（個人電腦，Personal Computer）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="くつ">
+      <div class="word-content">
+        <div class="word-ja">くつ／靴</div>
+        <div class="word-romaji">kutsu</div>
+        <div class="word-meaning">鞋子</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、会話・例文 — 練習句子列舉</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    今日與日文老師練習的對話句子：
+  </p>
+
+  <div class="section">
+    <div class="section-title">💬 練習句子</div>
+
+    <div class="word-item" data-text="この本は古いです">
+      <div class="word-content">
+        <div class="word-ja">この 本（ほん）は 古（ふる）いです。</div>
+        <div class="word-romaji">kono hon wa furui desu.</div>
+        <div class="word-meaning">這本書很舊。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="この絵は小さいです">
+      <div class="word-content">
+        <div class="word-ja">この 絵（え）は 小（ちい）さいです。</div>
+        <div class="word-romaji">kono e wa chiisai desu.</div>
+        <div class="word-meaning">這幅畫很小。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あの家は大きいです">
+      <div class="word-content">
+        <div class="word-ja">あの 家（いえ）は 大（おお）きいです。</div>
+        <div class="word-romaji">ano ie wa ookii desu.</div>
+        <div class="word-meaning">那間房子很大（遠處）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あの車は新しいです">
+      <div class="word-content">
+        <div class="word-ja">あの 車（くるま）は 新（あたら）しいです。</div>
+        <div class="word-romaji">ano kuruma wa atarashii desu.</div>
+        <div class="word-meaning">那台車很新（遠處）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そのパソコンは古いです">
+      <div class="word-content">
+        <div class="word-ja">その パソコンは 古（ふる）いです。</div>
+        <div class="word-romaji">sono pasokon wa furui desu.</div>
+        <div class="word-meaning">你那邊那台電腦很舊（對方手上/旁邊）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そのくつは新しいです">
+      <div class="word-content">
+        <div class="word-ja">その くつは 新（あたら）しいです。</div>
+        <div class="word-romaji">sono kutsu wa atarashii desu.</div>
+        <div class="word-meaning">你那雙鞋子很新（對方身上/身邊）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、文法・指示詞與形容詞簡表</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>指示連體詞</th><th>對應位置</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><span class="j-mark">この</span> ＋ 名詞</td>
+        <td class="col-mean">這個（自己身邊）</td>
+        <td class="col-mean">この本は 古いです（這本書很舊）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><span class="j-mark">その</span> ＋ 名詞</td>
+        <td class="col-mean">那個（對方身邊）</td>
+        <td class="col-mean">そのパソコンは 古いです（你那台電腦很舊）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><span class="j-mark">あの</span> ＋ 名詞</td>
+        <td class="col-mean">那個（雙方遠處）</td>
+        <td class="col-mean">あの家は 大きいです（那間房子很大）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="2026-07-29-hirugohan-chazuke.html" class="next-link">
+    <span class="next-kicker">— Same Day Lesson 1 —</span>
+    <span class="next-title">口語練習 昼ごはんとお茶漬け <span class="next-arrow">→</span></span>
+    <span class="next-sub">在家做午餐、茶泡飯與因果句型 〜から／ですから</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .opp-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    if (button && text) {
+      const handler = (e) => { e.stopPropagation(); speak(text, button); };
+      button.addEventListener('click', handler);
+    }
+  });
+</script>
+</body>
+</html>

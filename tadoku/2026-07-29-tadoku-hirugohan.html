@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ミニ多読 — 昼ごはんとお茶漬け（会話）</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* tadoku/* 統一用藤色，跟 tadoku.html 同一套 */
+:root{--paper:#f8f6fc;--paper-deep:#ece7f5;--ink:#241f33;--ink-soft:#473f60;--ink-mute:#7d7396;--accent:#7a68a6;--accent-soft:#b8aad6;--accent-pale:#ece7f7;--line:#ddd5ec;--bg-spot-1:#f4f1fa;--bg-spot-2:#e8e2f2;}
+
+/* 一個場景一張圖：插圖在上、對話在下 */
+.scene{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:22px 24px;margin-bottom:16px;transition:border-color .15s;}
+.scene:hover{border-color:var(--accent-soft);}
+.scene-img{display:block;margin:0 auto 16px;max-width:100%;max-height:220px;width:auto;border-radius:6px;}
+
+/* 一來一往的對白 */
+.turn{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;padding-bottom:0;}
+.turn:first-of-type{padding-top:0;}
+.who{flex-shrink:0;width:44px;font-family:'Shippori Mincho',serif;font-size:13px;font-weight:600;color:var(--accent);padding-top:6px;letter-spacing:.05em;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink);line-height:1.55;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:14px;margin-top:4px;}
+.turn .play-btn{flex-shrink:0;}
+
+/* 回對應課程頁 */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+
+@media(max-width:600px){
+  .scene{padding:18px 16px;}
+  .turn-ja{font-size:19px;}
+  .scene-img{max-height:160px;}
+  .who{width:38px;font-size:12px;}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">ミニ多読 <span class="accent">昼ごはんとお茶漬け</span></h1>
+  <div class="page-meta">閱讀練習 · Mini Tadoku · 会話 · 2026 / 07 / 29</div>
+  <p class="page-subtitle">暑い日に家で昼ごはんを作る話 — 一個場景一張圖，先看圖猜情境，再讀日文</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <!-- 場景一：熱天氣與下廚 -->
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/tadoku_hot_summer.jpg" alt="暑い日に家で昼ごはんを作るイラスト" loading="lazy">
+
+    <div class="turn" data-text="今日はとても暑いですね">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">今日はとても暑いですね。</div>
+        <div class="turn-romaji">Kyou wa totemo atsui desu ne.</div>
+        <div class="turn-meaning">今天非常熱呢。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ですから、家で昼ごはんを作りました">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">ですから、家で昼ごはんを作りました。二人でいっしょに作りました。</div>
+        <div class="turn-romaji">Desukara, ie de hirugohan o tsukurimashita. Futari de issho ni tsukurimashita.</div>
+        <div class="turn-meaning">所以，在家裡做了午餐。兩個人一起做了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- 場景二：茶泡飯與美味午餐 -->
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/tadoku_ochazuke_meal.jpg" alt="美味しそうなお茶漬けのイラスト" loading="lazy">
+
+    <div class="turn" data-text="何を作りましたか">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">何を作りましたか。</div>
+        <div class="turn-romaji">Nani o tsukurimashita ka.</div>
+        <div class="turn-meaning">做了什麼呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="野菜と魚とごはんを食べました。お茶漬けが好きです">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">野菜と魚とごはんを食べました。お茶漬けが好きです。かんたんです。</div>
+        <div class="turn-romaji">Yasai to sakana to gohan o tabemashita. Ochazuke ga suki desu. Kantan desu.</div>
+        <div class="turn-meaning">吃了蔬菜、魚和白飯。我喜歡茶泡飯，做法很簡單。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- 場景三：指引設施位置 -->
+  <div class="scene">
+    <img class="scene-img" src="../images/tadoku/tadoku_location_map.jpg" alt="街の案内イラスト" loading="lazy">
+
+    <div class="turn" data-text="バス停はどこですか">
+      <div class="who">Ａ</div>
+      <div class="turn-body">
+        <div class="turn-ja">バス停はどこですか。</div>
+        <div class="turn-romaji">Basutei wa doko desu ka.</div>
+        <div class="turn-meaning">公車站是在哪裡呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="バス停はここです。学校はそこです。図書館はあそこです">
+      <div class="who">Ｂ</div>
+      <div class="turn-body">
+        <div class="turn-ja">バス停はここです。学校はそこです。図書館はあそこです。</div>
+        <div class="turn-romaji">Basutei wa koko desu. Gakkou wa soko desu. Toshokan wa asoko desu.</div>
+        <div class="turn-meaning">公車站是在這裡。學校是在那裡。圖書館是在那裡（遠處）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <a href="../tadoku.html" class="next-link">
+    <span class="next-kicker">— Return to List —</span>
+    <span class="next-title">多読故事清單 <span class="next-arrow">→</span></span>
+    <span class="next-sub">查看所有自製迷你多読小故事</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.turn[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    if (button && text) {
+      const handler = (e) => { e.stopPropagation(); speak(text, button); };
+      button.addEventListener('click', handler);
+    }
+  });
+</script>
+</body>
+</html>

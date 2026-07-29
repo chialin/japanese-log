@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ここ・そこ・あそこ — 場所の指示詞</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 距離/位置示意卡 */
+.distance{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+@media (max-width:560px){.distance{grid-template-columns:1fr;}}
+.dist-card{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:18px 16px;text-align:center;}
+.dist-word{font-family:'Klee One','Shippori Mincho',serif;font-size:34px;font-weight:600;color:var(--accent);line-height:1.1;}
+.dist-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:4px;}
+.dist-mean{font-family:'Shippori Mincho',serif;font-size:17px;color:var(--ink);margin-top:8px;}
+.dist-where{font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.7;}
+.dist-pic{font-size:26px;margin-top:10px;letter-spacing:.15em;}
+.dist-card .play-btn{margin-top:10px;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);width:160px;font-weight:600;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">ここ・そこ・あそこ <span class="accent">場所の指示詞</span></h1>
+  <div class="page-meta">教科書 · 場所指示詞 · 2026 / 07 / 29</div>
+  <p class="page-subtitle">指示場所的代名詞 — バス停はここです／学校はそこです／図書館はあそこです</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="compare">これ／それ／あれ</span> 指示<strong>物品</strong>；<span class="compare">ここ／そこ／あそこ</span> 指示<strong>場所／位置</strong>；<br>
+    ② 句型：<span class="compare">施設・場所 ＋ は ＋ ここ／そこ／あそこ ＋ です。</span>（某某設施在哪裡）；<br>
+    ③ 距離層次：<span class="compare">ここ</span>（我身邊）／<span class="compare">そこ</span>（你身邊）／<span class="compare">あそこ</span>（雙方遠處）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、場所指示詞 — ここ・そこ・あそこ</div>
+
+  <div class="distance">
+    <div class="dist-card" data-text="ここ">
+      <div class="dist-word">ここ</div>
+      <div class="dist-romaji">koko</div>
+      <div class="dist-mean">這裡</div>
+      <div class="dist-where">說話者<strong>所在的位置</strong><br>（我身邊、我這區）</div>
+      <div class="dist-pic">📍🙋 &nbsp; 🧍</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="dist-card" data-text="そこ">
+      <div class="dist-word">そこ</div>
+      <div class="dist-romaji">soko</div>
+      <div class="dist-mean">那裡（你那邊）</div>
+      <div class="dist-where">聽話者<strong>所在的位置</strong><br>（你那邊、你身邊）</div>
+      <div class="dist-pic">🙋 &nbsp; 📍🧍</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="dist-card" data-text="あそこ">
+      <div class="dist-word">あそこ</div>
+      <div class="dist-romaji">asoko</div>
+      <div class="dist-mean">那裡（遠處）</div>
+      <div class="dist-where">離<strong>雙方都遠</strong>的位置<br>（在那邊、對面遠處）</div>
+      <div class="dist-pic">🙋🧍 &nbsp; … 📍</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、単語 — 本課單字整理</div>
+
+  <div class="section">
+    <div class="section-title">📖 単語リスト</div>
+
+    <div class="word-item" data-text="ここ">
+      <div class="word-content">
+        <div class="word-ja">ここ</div>
+        <div class="word-romaji">koko</div>
+        <div class="word-meaning">這裡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そこ">
+      <div class="word-content">
+        <div class="word-ja">そこ</div>
+        <div class="word-romaji">soko</div>
+        <div class="word-meaning">那裡（對方那邊）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あそこ">
+      <div class="word-content">
+        <div class="word-ja">あそこ</div>
+        <div class="word-romaji">asoko</div>
+        <div class="word-meaning">那裡（遠處）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="絵">
+      <div class="word-content">
+        <div class="word-ja">絵（え）</div>
+        <div class="word-romaji">e</div>
+        <div class="word-meaning">畫作、圖畫</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="写真">
+      <div class="word-content">
+        <div class="word-ja">写真（しゃしん）</div>
+        <div class="word-romaji">shashin</div>
+        <div class="word-meaning">照片</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="警察">
+      <div class="word-content">
+        <div class="word-ja">警察（けいさつ）</div>
+        <div class="word-romaji">keisatsu</div>
+        <div class="word-meaning">警察 / 警察局</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="煙">
+      <div class="word-content">
+        <div class="word-ja">煙（けむり）</div>
+        <div class="word-romaji">kemuri</div>
+        <div class="word-meaning">煙、煙霧</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="消しゴム">
+      <div class="word-content">
+        <div class="word-ja">消（け）しゴム</div>
+        <div class="word-romaji">keshigomu</div>
+        <div class="word-meaning">橡皮擦</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="会社">
+      <div class="word-content">
+        <div class="word-ja">会社（かいしゃ）</div>
+        <div class="word-romaji">kaisha</div>
+        <div class="word-meaning">公司</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="自動販売機">
+      <div class="word-content">
+        <div class="word-ja">自動販売機（じどうはんばいき）</div>
+        <div class="word-romaji">jidouhanbaiki</div>
+        <div class="word-meaning">自動販賣機</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="病院">
+      <div class="word-content">
+        <div class="word-ja">病院（びょういん）</div>
+        <div class="word-romaji">byouin</div>
+        <div class="word-meaning">醫院</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="蕭">
+      <div class="word-content">
+        <div class="word-ja">蕭（しょう）さん</div>
+        <div class="word-romaji">shou-san</div>
+        <div class="word-meaning">蕭先生/小姐（姓氏）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="バス停">
+      <div class="word-content">
+        <div class="word-ja">バス停（てい）</div>
+        <div class="word-romaji">basutei</div>
+        <div class="word-meaning">公車站</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="学校">
+      <div class="word-content">
+        <div class="word-ja">学校（がっこう）</div>
+        <div class="word-romaji">gakkou</div>
+        <div class="word-meaning">學校</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="図書館">
+      <div class="word-content">
+        <div class="word-ja">図書館（としょかん）</div>
+        <div class="word-romaji">toshokan</div>
+        <div class="word-meaning">圖書館</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、会話・例文 — 練習句子列舉</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    今日與日文老師練習的對話句子：
+  </p>
+
+  <div class="section">
+    <div class="section-title">💬 練習句子</div>
+
+    <div class="word-item" data-text="バス停はここです">
+      <div class="word-content">
+        <div class="word-ja">バス停（てい）は <span class="j-mark">ここ</span>です。</div>
+        <div class="word-romaji">basutei wa koko desu.</div>
+        <div class="word-meaning">公車站是在這裡（我身邊）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="学校はそこです">
+      <div class="word-content">
+        <div class="word-ja">学校（がっこう）は <span class="j-mark">そこ</span>です。</div>
+        <div class="word-romaji">gakkou wa soko desu.</div>
+        <div class="word-meaning">學校是在那裡（你那邊）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="図書館はあそこです">
+      <div class="word-content">
+        <div class="word-ja">図書館（としょかん）は <span class="j-mark">あそこ</span>です。</div>
+        <div class="word-romaji">toshokan wa asoko desu.</div>
+        <div class="word-meaning">圖書館是在那裡（雙方遠處）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="病院はあそこです">
+      <div class="word-content">
+        <div class="word-ja">病院（びょういん）は <span class="j-mark">あそこ</span>です。</div>
+        <div class="word-romaji">byouin wa asoko desu.</div>
+        <div class="word-meaning">醫院是在那裡（雙方遠處）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、文法・指示詞三對照簡表</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>種類</th><th>近稱（我身邊）</th><th>中稱（你身邊）</th><th>遠稱（遠處）</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">物品代名詞</td>
+        <td class="col-mean">これ（這個）</td>
+        <td class="col-mean">それ（那個）</td>
+        <td class="col-mean">あれ（那個）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">連體詞（修飾名詞）</td>
+        <td class="col-mean">この＋名詞（這...）</td>
+        <td class="col-mean">その＋名詞（那...）</td>
+        <td class="col-mean">あの＋名詞（那...）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">場所代名詞</td>
+        <td class="col-mean"><span class="j-mark">ここ</span>（這裡）</td>
+        <td class="col-mean"><span class="j-mark">そこ</span>（那裡）</td>
+        <td class="col-mean"><span class="j-mark">あそこ</span>（那裡）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="2026-07-29-kono-sono-ano.html" class="next-link">
+    <span class="next-kicker">— Same Day Lesson 2 —</span>
+    <span class="next-title">この・その・あの — 形容詞與指示連體詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">この本は古いです／あの家は大きいです</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    if (button && text) {
+      const handler = (e) => { e.stopPropagation(); speak(text, button); };
+      button.addEventListener('click', handler);
+    }
+  });
+</script>
+</body>
+</html>

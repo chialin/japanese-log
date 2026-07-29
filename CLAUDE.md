@@ -170,11 +170,12 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 | `readings/*`（閱讀筆記） | 深紅 / 暗朱 | `#f4ece0` | `#8b3a3a` |
 | `tadoku.html`、`tadoku/*`（自製迷你多読） | 藤色 / 淡紫 | `#f8f6fc` | `#7a68a6` |
 
-#### 漢字注音（Furigana / HTML Ruby）
+#### 漢字注音（Furigana / HTML Ruby）與插圖出處標示
 
 * 生成或編寫任何含漢字標音的頁面（如 `tadoku/*` 或 `lessons/*`）時，**直接在 HTML 樣板內寫入 `<ruby>漢字<rt>平假名</rt></ruby>` 標籤**。
 * 不依賴事後 JS 腳本轉換，維持靜態 HTML 直出的架構。
 * `<rt>` 一律標示**平假名 (Hiragana)**，字型顏色由 CSS (`var(--accent)`) 統一發揮調控。
+* 多読頁面的 `.credit` 必須標示兩種插圖來源：`插圖來源：<a href="https://www.irasutoya.com/" target="_blank" rel="noopener">いらすとや</a>（かわいいフリー素材集） ｜ AI 生成客製插圖（AI Generated Illustration）`
 
 `tadoku/*` 是自製的迷你多読小故事（例如 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)），不教新單字（`index.html` 對應 `data-words="0"`），色票跟 `tadoku.html` 一樣用藤色，但仍列進 `index.html` 的每日 log／calendar（跟 `readings/*` 一樣是「log 裡混不同色票類型」的做法）。`vocab-quiz.html` 改連在 `resources.html` 底下，用回一般棕橘色票。
 

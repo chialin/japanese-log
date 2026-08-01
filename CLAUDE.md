@@ -242,3 +242,5 @@ curl -s "https://www.irasutoya.com/feeds/posts/default?q=<關鍵字URL編碼>&al
 - 五十音行（行）課程每頁恰好 5 個 kana：附羅馬拼音、發音重點、單字、用已學 kana 拼出來的簡單句子。
 - 主題課程（數字／季節／句型／假名概念）專注在日常實用。
 - 閱讀筆記（readings/）拿真實日文短文當素材，標出假名讀法、單字、助詞、文法句型。
+- **課後複習小測驗 (Self-Quiz)**：每日課程講義與筆記末尾必須附上「課後複習小測驗（Self-Quiz）」，提供 3~5 題造句或單字翻譯測驗，並以可折疊 HTML `<details><summary>🔍 點擊查看解答</summary>...</details>` 附上解答。
+

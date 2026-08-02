@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>週末行動與過去式 — 夫と漫画のイベントに行きました</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票 */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);width:170px;font-weight:600;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.7;}
+
+ruby{ruby-align:center;}rt{font-size:0.55em;color:var(--accent);font-weight:500;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">週末行動與過去式 <span class="accent">夫と漫画のイベントに行きました</span></h1>
+  <div class="page-meta">對話 · Conversation · 2026 / 08 / 02</div>
+  <p class="page-subtitle">詢問與回答過去行動（助詞「と」「に」「を」、い形容詞過去式「〜かったです」、習慣表達「普通」）</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 詢問與回答過去動作：<span class="compare">昨日は 何をしましたか？</span> / <span class="compare">〜に 行きました</span>；<br>
+    ② 動作同行者與目的地助詞：<span class="compare">〜と</span>（和…）、<span class="compare">〜に</span>（目的地）；<br>
+    ③ い形容詞過去式：去 <span class="compare">い</span> ＋ <span class="compare">かったです</span>（<span class="compare">おもしろかったです</span>）；<br>
+    ④ 日常習慣表達：<span class="compare">普通</span>（通常）＋ <span class="compare">〜動詞ます</span>（<span class="compare">漫画を 読みます</span>）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、課堂對話實例 (会話)</div>
+
+  <div class="section">
+    <div class="section-title">💬 每日對話紀錄</div>
+
+    <div class="word-item" data-text="きのうは なにを しましたか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は <ruby>何<rt>なに</rt></ruby>を しましたか？</div>
+        <div class="word-romaji">kinou wa nani o shimashita ka?</div>
+        <div class="word-meaning">昨天做了什麼呢？（詢問過去發生的動作）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おっとと まんがの いべんとに いきました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>夫<rt>おっと</rt></ruby>と <ruby>漫画<rt>まんが</rt></ruby>の イベントに <ruby>行<rt>い</rt></ruby>きました。</div>
+        <div class="word-romaji">otto to manga no ibento ni ikimashita.</div>
+        <div class="word-meaning">我和丈夫去了漫畫活動。（と：和…、に：往…目的地）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おもしろかったです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>面白<rt>おもしろ</rt></ruby>かったです。</div>
+        <div class="word-romaji">omoshirokatta desu.</div>
+        <div class="word-meaning">當時很有趣。（面白（おもしろ）い 過去式）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="わたしは ふつう にほんの まんがを よみます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は <ruby>普通<rt>ふつう</rt></ruby> <ruby>日本<rt>にほん</rt></ruby>の <ruby>漫画<rt>まんが</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます。</div>
+        <div class="word-romaji">watashi wa futsuu nihon no manga o yomimasu.</div>
+        <div class="word-meaning">我通常看日本漫畫。（普通：通常、習慣動作）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しゅうかんじゃんぷ">
+      <div class="word-content">
+        <div class="word-ja"><ruby>週刊<rt>しゅうかん</rt></ruby>ジャンプ</div>
+        <div class="word-romaji">shūkan janpu</div>
+        <div class="word-meaning">週刊少年Jump（日本知名的週刊少年漫畫雜誌）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、重點單字 (単語)</div>
+
+  <table class="cheat">
+    <thead>
+      <tr>
+        <th>日文 (假名/漢字)</th>
+        <th>讀音</th>
+        <th>詞性</th>
+        <th>中文釋義</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>昨日<rt>きのう</rt></ruby></td>
+        <td>kinou</td>
+        <td>名詞</td>
+        <td class="col-mean">昨天</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>夫<rt>おっと</rt></ruby></td>
+        <td>otto</td>
+        <td>名詞</td>
+        <td class="col-mean">丈夫（稱呼自己的丈夫）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>漫画<rt>まんが</rt></ruby></td>
+        <td>manga</td>
+        <td>名詞</td>
+        <td class="col-mean">漫畫</td>
+      </tr>
+      <tr>
+        <td class="col-ja">イベント</td>
+        <td>ibento</td>
+        <td>名詞</td>
+        <td class="col-mean">活動 / event（外來語）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>行<rt>い</rt></ruby>く / <ruby>行<rt>い</rt></ruby>きます</td>
+        <td>ikimasu</td>
+        <td>動詞 (Ⅰ類)</td>
+        <td class="col-mean">去（過去式：行きました）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>面白<rt>おもしろ</rt></ruby>い</td>
+        <td>omoshiroi</td>
+        <td>い形容詞</td>
+        <td class="col-mean">有趣的 / 好玩的（過去式：おもしろかったです）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>私<rt>わたし</rt></ruby></td>
+        <td>watashi</td>
+        <td>代名詞</td>
+        <td class="col-mean">我</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>普通<rt>ふつう</rt></ruby></td>
+        <td>futsuu</td>
+        <td>副詞 / 名詞</td>
+        <td class="col-mean">通常、平時、一般</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>日本<rt>にほん</rt></ruby></td>
+        <td>nihon</td>
+        <td>名詞</td>
+        <td class="col-mean">日本</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>読<rt>よ</rt></ruby>む / <ruby>読<rt>よ</rt></ruby>みます</td>
+        <td>yomimasu</td>
+        <td>動詞 (Ⅰ類)</td>
+        <td class="col-mean">閱讀、看（書/漫畫）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>週刊<rt>しゅうかん</rt></ruby>ジャンプ</td>
+        <td>shūkan janpu</td>
+        <td>專有名詞</td>
+        <td class="col-mean">週刊少年Jump（日本著名少年漫畫雜誌）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <div class="section-title">🔊 發音與朗讀練習</div>
+
+    <div class="word-item" data-text="きのう">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby></div>
+        <div class="word-romaji">kinou</div>
+        <div class="word-meaning">昨天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おっと">
+      <div class="word-content">
+        <div class="word-ja"><ruby>夫<rt>おっと</rt></ruby></div>
+        <div class="word-romaji">otto</div>
+        <div class="word-meaning">丈夫（稱呼自己的丈夫）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="まんがの いべんと">
+      <div class="word-content">
+        <div class="word-ja"><ruby>漫画<rt>まんが</rt></ruby>の イベント</div>
+        <div class="word-romaji">manga no ibento</div>
+        <div class="word-meaning">漫畫活動</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ふつう">
+      <div class="word-content">
+        <div class="word-ja"><ruby>普通<rt>ふつう</rt></ruby></div>
+        <div class="word-romaji">futsuu</div>
+        <div class="word-meaning">通常、平常</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しゅうかんじゃんぷ">
+      <div class="word-content">
+        <div class="word-ja"><ruby>週刊<rt>しゅうかん</rt></ruby>ジャンプ</div>
+        <div class="word-romaji">shūkan janpu</div>
+        <div class="word-meaning">週刊少年Jump</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、核心文法與句型解析 (文法・文型)</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    本課重點在於如何表達<strong>過去發生的事件與個人體驗</strong>，並結合<strong>助詞的使用</strong>與<strong>日常習慣</strong>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">1. [時間] は 何をしましたか？（詢問過去動作）</div>
+    <p style="font-size:14px;color:var(--ink-soft);line-height:1.7;margin-bottom:12px;">
+      動詞 <span class="compare">します</span>（做）的過去否定與肯定形分別為 <span class="compare">しました</span> 與 <span class="compare">しませんでした</span>。<br>
+      搭配時間副詞（如 <span class="compare">昨日</span>、<span class="compare">先週</span>）來詢問過去發生的事情。
+    </p>
+    <div class="word-item" data-text="きのうは なにを しましたか">
+      <div class="word-content">
+        <div class="word-ja">昨日は 何を しましたか？</div>
+        <div class="word-romaji">kinou wa nani o shimashita ka?</div>
+        <div class="word-meaning">昨天做了什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2. [對象] と [地點] に 行きました（陪伴者與目的地）</div>
+    <p style="font-size:14px;color:var(--ink-soft);line-height:1.7;margin-bottom:12px;">
+      ・<strong>助詞 <span class="compare">と</span></strong>：表示動作的共同同行對象（「和…一起」）。<br>
+      ・<strong>助詞 <span class="compare">に</span></strong>：表示移動的「目的地 / 移動方向」。<br>
+      ・<span class="compare">行きました</span> 為 <span class="compare">行きます</span>（去）的過去式。
+    </p>
+    <div class="word-item" data-text="おっとと イベントに いきました">
+      <div class="word-content">
+        <div class="word-ja">夫<span class="j-mark">と</span> イベント<span class="j-mark">に</span> 行きました。</div>
+        <div class="word-romaji">otto to ibento ni ikimashita.</div>
+        <div class="word-meaning">和丈夫去了活動現場。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3. い形容詞過去式：〜かったです</div>
+    <p style="font-size:14px;color:var(--ink-soft);line-height:1.7;margin-bottom:12px;">
+      い形容詞描述過去的狀態或感受時，將字尾的 <span class="compare">い</span> 去掉，加上 <span class="compare">かったです</span>。<br>
+      例：<span class="compare">面白い</span> ➔ <span class="compare">おもしろかったです</span>（當時很有趣）。
+    </p>
+    <div class="word-item" data-text="おもしろかったです">
+      <div class="word-content">
+        <div class="word-ja">面白かったです。</div>
+        <div class="word-romaji">omoshirokatta desu.</div>
+        <div class="word-meaning">當時很有趣。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4. [主詞] は 普通 [賓詞] を [動詞]（日常習慣表達）</div>
+    <p style="font-size:14px;color:var(--ink-soft);line-height:1.7;margin-bottom:12px;">
+      <span class="compare">普通（ふつう）</span> 放於動詞前作為副詞，表示「平時、通常、習慣上」。<br>
+      動詞使用非過去式 <span class="compare">〜ます</span> 表示平時重複進行的常態或習慣。
+    </p>
+    <div class="word-item" data-text="わたしは ふつう にほんの まんがを よみます">
+      <div class="word-content">
+        <div class="word-ja">私は 普通 日本の 漫画を 読みます。</div>
+        <div class="word-romaji">watashi wa futsuu nihon no manga o yomimasu.</div>
+        <div class="word-meaning">我通常看日本漫畫。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、隨堂練習 (練習問題)</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">📝 隨堂自我測驗</div>
+    <ol class="quiz-ol">
+      <li>
+        <strong>填空練習：選出正確的助詞（と / に / を）與動詞變化</strong><br>
+        ⓐ 昨日は 友達（　　）映画館（　　）行きました。<br>
+        ⓑ 私は 普通 日本の雑誌（　　）読みます。<br>
+        ⓒ 昨日のイベントは とても（　　　　　　）です。（面白い 的過去式）
+      </li>
+      <li style="margin-top:12px;">
+        <strong>日翻日（中譯日練習）：</strong><br>
+        ⓐ 昨天做了什麼？<br>
+        ⓑ 我和丈夫去了公園。（公園：こうえん）<br>
+        ⓒ 我通常看雜誌。（雜誌：雑誌 / ざっし）
+      </li>
+      <li style="margin-top:12px;">
+        <strong>問答模擬：</strong><br>
+        問：昨日は 何をしましたか？<br>
+        答：（請嘗試運用「人＋と＋地點＋に行きました」與「感想＋かったです」回答！）
+      </li>
+    </ol>
+
+    <details class="quiz-ans">
+      <summary>點擊查看答案與解析</summary>
+      <p><strong>填空解答：</strong></p>
+      <p>ⓐ 昨日は 友達<span class="j-mark">と</span> 映画館<span class="j-mark">に</span> 行きました。（與友達一起，目標地點是電影院）</p>
+      <p>ⓑ 私は 普通 日本の雑誌<span class="j-mark">を</span> 読みます。（動作的對象標示助詞 を）</p>
+      <p>ⓒ 昨日のイベントは とても<span class="j-mark">おもしろかったです</span>。（去 い 換 かったです）</p>
+      <hr style="border:none;border-top:1px solid var(--line);margin:10px 0;">
+      <p><strong>翻譯解答：</strong></p>
+      <p>ⓐ 昨日は 何を しましたか？</p>
+      <p>ⓑ 夫と 公園に 行きました。</p>
+      <p>ⓒ 私は 普通 雑誌を 読みます。</p>
+    </details>
+  </div>
+
+  <a href="../index.html" class="next-link">
+    <span class="next-kicker">— Back to Home —</span>
+    <span class="next-title">返回學習日誌首頁 <span class="next-arrow">→</span></span>
+    <span class="next-sub">查看所有單字、文法課與學習歷程</span>
+  </a>
+
+</div>
+</body>
+</html>

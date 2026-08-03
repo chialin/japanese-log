@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今日の単語 — 五十音單字、18與20歲讀音與時間問句</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票 */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);width:160px;font-weight:600;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+ruby{ruby-align:center;}rt{font-size:0.55em;color:var(--accent);font-weight:500;}
+
+.link-card{display:flex;align-items:center;justify-content:space-between;background:var(--accent-pale);border:1px solid var(--accent-soft);border-radius:6px;padding:14px 18px;margin-top:20px;text-decoration:none;color:var(--ink);transition:all .15s;}
+.link-card:hover{background:var(--accent-soft);color:white;}
+.link-card-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:16px;}
+.link-card-desc{font-size:13px;color:var(--ink-soft);margin-top:2px;}
+.link-card:hover .link-card-desc{color:rgba(255,255,255,0.9);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">今日の単語 <span class="accent">生活單字・年齡與時間</span></h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 08 / 03</div>
+  <p class="page-subtitle">整理今日基礎單字（す・し・せ 行）、18歲與20歲（はたち）特例讀音，以及時間與星期問句</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.9">
+    <span class="speed-value" id="rateValue">0.9x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要點速覽</strong><br>
+    ① <strong>日常食物與名詞</strong>：<span class="compare">酢</span>、<span class="compare">寿司</span>、<span class="compare">塩</span>、<span class="compare">砂糖</span>、<span class="compare">仕事</span>、<span class="compare">砂</span>、<span class="compare">背中</span>、<span class="compare">先生</span>、<span class="compare">世界</span>；<br>
+    ② <strong>年齡讀音特例</strong>：18歲唸作 <span class="compare">じゅうはっさい</span>（促音變調）；20歲唸作 <span class="compare">はたち</span>（特例讀音）；<br>
+    ③ <strong>時間與星期</strong>：<span class="compare">なん時ですか？</span>、<span class="compare">なん曜日ですか？</span> 及其時間報時方法。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、基礎生活單字 (単語)</div>
+
+  <div class="section">
+    <div class="section-title">📖 調味料與食物</div>
+
+    <div class="word-item" data-text="す">
+      <div class="word-content">
+        <div class="word-ja"><ruby>酢<rt>す</rt></ruby></div>
+        <div class="word-romaji">su</div>
+        <div class="word-meaning">醋 — 調味料</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="すし">
+      <div class="word-content">
+        <div class="word-ja"><ruby>寿司<rt>すし</rt></ruby></div>
+        <div class="word-romaji">sushi</div>
+        <div class="word-meaning">壽司</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しお">
+      <div class="word-content">
+        <div class="word-ja"><ruby>塩<rt>しお</rt></ruby></div>
+        <div class="word-romaji">shio</div>
+        <div class="word-meaning">鹽 — 調味料</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="さとう">
+      <div class="word-content">
+        <div class="word-ja"><ruby>砂糖<rt>さとう</rt></ruby></div>
+        <div class="word-romaji">satou</div>
+        <div class="word-meaning">砂糖 — 調味料</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 常見名詞</div>
+
+    <div class="word-item" data-text="すな">
+      <div class="word-content">
+        <div class="word-ja"><ruby>砂<rt>すな</rt></ruby></div>
+        <div class="word-romaji">suna</div>
+        <div class="word-meaning">沙子</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しごと">
+      <div class="word-content">
+        <div class="word-ja"><ruby>仕事<rt>しごと</rt></ruby></div>
+        <div class="word-romaji">shigoto</div>
+        <div class="word-meaning">工作</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="せなか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>背中<rt>せなか</rt></ruby></div>
+        <div class="word-romaji">senaka</div>
+        <div class="word-meaning">後背、背部</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="せんせい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>先生<rt>せんせい</rt></ruby></div>
+        <div class="word-romaji">sensei</div>
+        <div class="word-meaning">老師、醫師、尊稱</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="せかい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>世界<rt>せかい</rt></ruby></div>
+        <div class="word-romaji">sekai</div>
+        <div class="word-meaning">世界</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、數字與年齡讀音特例 (年齢の読み方)</div>
+
+  <table class="cheat">
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>日文與讀音</th>
+        <th>羅馬拼音</th>
+        <th>說明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">18 (數字)</td>
+        <td class="col-mean"><ruby>十<rt>じゅう</rt>八<rt>はち</rt></ruby></td>
+        <td class="col-mean">juuhachi</td>
+        <td class="col-mean">數字十八的標準讀法</td>
+      </tr>
+      <tr>
+        <td class="col-ja">18歲</td>
+        <td class="col-mean"><ruby>18<rt>じゅうはっ</rt>歳<rt>さい</rt></ruby></td>
+        <td class="col-mean">juuhassai</td>
+        <td class="col-mean"><strong>促音化音變</strong>：ち＋さい → はっさい</td>
+      </tr>
+      <tr>
+        <td class="col-ja">20歲</td>
+        <td class="col-mean"><ruby>20歳<rt>はたち</rt></ruby></td>
+        <td class="col-mean">hatachi</td>
+        <td class="col-mean"><strong>成年初代特例讀音</strong>（習慣讀作 はたち）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    🔖 <strong>「はたち」怎麼記</strong><br>
+    ① <strong>はた ＝ 古代日語的「二十」</strong>——同一個 はた 也活在 <ruby>二十日<rt>はつか</rt></ruby>（20 號）裡。
+    兩個綁在一起背：<span class="compare">はつか（20日）／はたち（20歲）</span>。<br>
+    ② <strong>ち ＝ 表年齡的接尾詞</strong>——跟 <ruby>三十路<rt>みそじ</rt></ruby>（30 歲）、<ruby>四十路<rt>よそじ</rt></ruby>（40 歲）的 じ 同一個來源。
+    排成一列就不覺得是例外了：はた<strong>ち</strong> ／ みそ<strong>じ</strong> ／ よそ<strong>じ</strong>——はたち 只是這串和語數詞裡唯一留在日常口語的那個。<br>
+    ③ <strong>諧音掛鉤</strong>：<ruby>旗<rt>はた</rt></ruby>が<ruby>立<rt>た</rt></ruby>ち —— 20 歲成人式，立起一面成年的旗子。<br>
+    ④ <code>20歳</code> 正式計數時也可讀 にじゅっさい，但講年齡日常一律 <span class="compare">はたち</span>。
+    這跟 18歳 的<strong>促音變</strong>（じゅうはち ＋ さい → じゅうは<strong>っ</strong>さい）是兩種不同機制，分開記。
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 年齡單字與句型</div>
+
+    <div class="word-item" data-text="じゅうはっさい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>18<rt>じゅうはっ</rt>歳<rt>さい</rt></ruby></div>
+        <div class="word-romaji">juuhassai</div>
+        <div class="word-meaning">18 歲 — <strong>促音音變</strong>（じゅうはち ＋ さい → じゅうはっさい）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="わたしは じゅうはっさいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は <ruby>18<rt>じゅうはっ</rt>歳<rt>さい</rt></ruby>です。</div>
+        <div class="word-romaji">watashi wa juuhassai desu</div>
+        <div class="word-meaning">我 18 歲。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いもうとは じゅうはっさいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>妹<rt>いもうと</rt></ruby>は <ruby>18<rt>じゅうはっ</rt>歳<rt>さい</rt></ruby>です。</div>
+        <div class="word-romaji">imouto wa juuhassai desu</div>
+        <div class="word-meaning">妹妹 18 歲。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あなたも はたちです">
+      <div class="word-content">
+        <div class="word-ja">あなたも <ruby>20歳<rt>はたち</rt></ruby>です。</div>
+        <div class="word-romaji">anata mo hatachi desu</div>
+        <div class="word-meaning">你也是 20 歲。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、時間與星期問句 (時間と曜日)</div>
+
+  <div class="section">
+    <div class="section-title">❓ 詢問時間與答話</div>
+
+    <div class="word-item" data-text="なんじですか">
+      <div class="word-content">
+        <div class="word-ja">なん<ruby>時<rt>じ</rt></ruby>ですか？</div>
+        <div class="word-romaji">nan ji desu ka</div>
+        <div class="word-meaning">現在幾點了？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="じゅういちじ きゅうふん">
+      <div class="word-content">
+        <div class="word-ja"><ruby>11<rt>じゅういち</rt>時<rt>じ</rt></ruby> <ruby>9<rt>きゅう</rt>分<rt>ふん</rt></ruby>（11:09）</div>
+        <div class="word-romaji">juuichiji kyuufun</div>
+        <div class="word-meaning">11點9分（分讀作 きゅうふん）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="じゅうさんじ にじゅうきゅうふん">
+      <div class="word-content">
+        <div class="word-ja"><ruby>13<rt>じゅうさん</rt>時<rt>じ</rt></ruby> <ruby>29<rt>にじゅうきゅう</rt>分<rt>ふん</rt></ruby>（13:29）</div>
+        <div class="word-romaji">juusanji nijuukyuufun</div>
+        <div class="word-meaning">13點29分</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="じゅうさんじ さんじゅっぷん">
+      <div class="word-content">
+        <div class="word-ja"><ruby>13<rt>じゅうさん</rt>時<rt>じ</rt></ruby> <ruby>30<rt>さんじゅっ</rt>分<rt>ぷん</rt></ruby> / 13<ruby>時<rt>じ</rt>半<rt>はん</rt></ruby>（13:30）</div>
+        <div class="word-romaji">juusanji sanjuppun / juusanji han</div>
+        <div class="word-meaning">13點30分 / 13點半（30分讀促音 さんじゅっぷん）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">❓ 詢問星期</div>
+
+    <div class="word-item" data-text="なんようびですか">
+      <div class="word-content">
+        <div class="word-ja">なん<ruby>曜日<rt>ようび</rt></ruby>ですか？</div>
+        <div class="word-romaji">nan youbi desu ka</div>
+        <div class="word-meaning">今天是星期幾？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、延伸專題頁面</div>
+
+  <a class="link-card" href="2026-08-03-colors.html">
+    <div>
+      <div class="link-card-title">🎨 色のまとめ — 綠色與常見顏色專頁 →</div>
+      <div class="link-card-desc">點擊查看今天學到的「緑（みどり）」、「信号（しんごう）」以及日文常見顏色的名詞與形容詞整理</div>
+    </div>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

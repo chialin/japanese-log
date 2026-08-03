@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本生活、氣候與近期讀書 — 日本の生活・天気と読書</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票 */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:56px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);width:220px;font-weight:600;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.7;}
+
+ruby{ruby-align:center;}rt{font-size:0.55em;color:var(--accent);font-weight:500;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">日本生活、氣候與近期讀書 <span class="accent">日本の生活・天気と読書</span></h1>
+  <div class="page-meta">對話 · Conversation · 2026 / 08 / 03</div>
+  <p class="page-subtitle">與朋友聊聊日本生活適應（慣れましたか）、氣候轉變（涼しかったです）與最近閱讀的書籍（金庸、台湾漫遊鉄道のふたり、Tadoku）</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇重點學習</strong><br>
+    ① 詢問與回答生活適應：<span class="compare">日本の生活に慣れましたか？</span> / <span class="compare">少し慣れました</span>；<br>
+    ② 經歷與狀態詢問：<span class="compare">カルチャーショックはありましたか？</span> / <span class="compare">最近は忙しいです</span>；<br>
+    ③ 天氣變化與過去式：<span class="compare">一昨日は雨が降りましたから、涼しかったです</span>；<br>
+    ④ 讀書主題與書名描述：<span class="compare">〜という小説</span>、<span class="compare">絵本</span>、<span class="compare">ebook</span>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、課堂情境對話 (会話)</div>
+
+  <div class="dialog">
+    <div class="turn" data-text="いまは にほんに すんでいますよね にほんの せいかつには なれましたか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今<rt>いま</rt></ruby>は <ruby>日本<rt>にほん</rt></ruby>に <ruby>住<rt>す</rt></ruby>んでいますよね。<ruby>日本<rt>にほん</rt></ruby>の <ruby>生活<rt>せいかつ</rt></ruby>には <ruby>慣<rt>な</rt></ruby>れましたか？</div>
+        <div class="turn-romaji">ima wa nihon ni sunde imasu yo ne. nihon no seikatsu ni wa naremashita ka?</div>
+        <div class="turn-meaning">你現在住在日本對吧？習慣日本的生活了嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="はい いまは にほんに すんでいます すこし なれました">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、<ruby>今<rt>いま</rt></ruby>は <ruby>日本<rt>にほん</rt></ruby>に <ruby>住<rt>す</rt></ruby>んでいます。<ruby>少<rt>すこ</rt></ruby>し <ruby>慣<rt>な</rt></ruby>れました。</div>
+        <div class="turn-romaji">hai, ima wa nihon ni sunde imasu. sukoshi naremashita.</div>
+        <div class="turn-meaning">是的，我現在住在日本。已經稍微習慣了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="よかったですね かるちゃーしょっくは ありましたか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">よかったですね！カルチャーショックは ありましたか？</div>
+        <div class="turn-romaji">yokatta desu ne! karuchā shokku wa arimashita ka?</div>
+        <div class="turn-meaning">太好了！有遇到文化衝擊（Culture shock）嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="はい すこし りました さいきんは いそがしいですが まいにち たのしいです">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、<ruby>少<rt>すこ</rt></ruby>しありました（笑）。<ruby>最近<rt>さいきん</rt></ruby>は <ruby>忙<rt>いそが</rt></ruby>しいですが、<ruby>毎日<rt>まいにち</rt></ruby> <ruby>好<rt>す</rt></ruby>きなことをしています。</div>
+        <div class="turn-romaji">hai, sukoshi arimashita. saikin wa isogashii desu ga, mainichi tsukushite imasu.</div>
+        <div class="turn-meaning">有，有一點點（笑）。最近雖然有點忙，但每天過得很充實開心。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="そうですか きょうも あついですね">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">そうですか。<ruby>今日<rt>きょう</rt></ruby>も <ruby>暑<rt>あつ</rt></ruby>いですね。</div>
+        <div class="turn-romaji">sou desu ka. kyou mo atsui desu ne.</div>
+        <div class="turn-meaning">這樣啊。今天也很熱呢。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="そうですね でも おとといは あめが ふりましたから すずしかったです きょうも すこし すずしいですね">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">そうですね。でも <ruby>一昨日<rt>おととい</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>りましたから、<ruby>涼<rt>すず</rt></ruby>しかったです。<ruby>今日<rt>きょう</rt></ruby>も <ruby>少<rt>すこ</rt></ruby>し <ruby>涼<rt>すず</rt></ruby>しいですね。</div>
+        <div class="turn-romaji">sou desu ne. demo ototoi wa ame ga furimashita kara, suzushikatta desu. kyou mo sukoshi suzushii desu ne.</div>
+        <div class="turn-meaning">對呀。不過前天下雨了，所以挺涼爽的。今天也有一點涼爽呢。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="たしかに さいきん ほんを よみましたか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">確（たしか）に！<ruby>最近<rt>さいきん</rt></ruby>、<ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みましたか？</div>
+        <div class="turn-romaji">tashika ni! saikin, hon o yomimashita ka?</div>
+        <div class="turn-meaning">確實！最近你有讀書嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="はい ほんを よみました きんようの ぶじゅつの しょうせつが すきです あと さいきん にんきな たいわんまんゆう てつどうの ふたり という しょうせつを よみました">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、<ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みました。<ruby>金庸<rt>きんよう</rt></ruby>の <ruby>武術<rt>ぶじゅつ</rt></ruby>の <ruby>小説<rt>しょうせつ</rt></ruby>が <ruby>好<rt>す</rt></ruby>きです。あと、<ruby>最近<rt>さいきん</rt></ruby> <ruby>人気<rt>にんき</rt></ruby>な『<ruby>台湾<rt>たいわん</rt></ruby><ruby>漫遊<rt>まんゆう</rt></ruby><ruby>鉄道<rt>てつどう</rt></ruby>のふたり』（<ruby>楊双子<rt>ようそうし</rt></ruby>著、<ruby>三浦裕子<rt>みうらゆうこ</rt></ruby>訳）という <ruby>小説<rt>しょうせつ</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みました。</div>
+        <div class="turn-romaji">hai, hon o yomimashita. kinyou no bujutsu no shousetsu ga suki desu. ato, saikin ninki na "taiwan manyuu tetsudou no futari" to iu shousetsu o yomimashita.</div>
+        <div class="turn-meaning">是的，我讀了書。我喜歡金庸的武俠小說。另外，我也讀了最近很熱門的《台灣漫遊鐵道之雙人》（楊雙子著、三浦裕子譯）這本小說。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="すごいですね かみの ほんですか それとも いーぶっく ですか">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja">すごいですね！<ruby>紙<rt>かみ</rt></ruby>の <ruby>本<rt>ほん</rt></ruby>ですか、それとも ebook（<ruby>電子<rt>でんし</rt></ruby><ruby>書籍<rt>しょせき</rt></ruby>）ですか？</div>
+        <div class="turn-romaji">sugoi desu ne! kami no hon desu ka, soretomo ebook desu ka?</div>
+        <div class="turn-meaning">好厲害！是紙本書還是 ebook（電子書）呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="いーぶっくで よみました さいきんは えほんや ただくの むりょう さいとの いーぶっくも よんでいます">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">ebook で <ruby>読<rt>よ</rt></ruby>みました。<ruby>最近<rt>さいきん</rt></ruby>は <ruby>絵本<rt>えほん</rt></ruby>や、<a href="https://tadoku.org/japanese/en/free-books-en/" target="_blank" rel="noopener">Tadoku の無料サイト</a> の ebook も <ruby>読<rt>よ</rt></ruby>んでいます。</div>
+        <div class="turn-romaji">ebook de yomimashita. saikin wa ehon ya Tadoku no muryou saito no ebook mo yonde imasu.</div>
+        <div class="turn-meaning">我是讀 ebook。最近我也在讀繪本，還有 Tadoku 免費網站上的電子書。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="たいわんと おなじ ほんを にほんごで よむのも おもしろそうですね すばらしい ですね">
+      <div class="who">A</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>台湾<rt>たいわん</rt></ruby>と <ruby>同<rt>おな</rt></ruby>じ <ruby>本<rt>ほん</rt></ruby>を <ruby>日本語<rt>にほんご</rt></ruby>で <ruby>読<rt>よ</rt></ruby>むのも <ruby>面白<rt>おもしろ</rt></ruby>そうですね！すばらしいです！</div>
+        <div class="turn-romaji">taiwan to onaji hon o nihongo de yomu no mo omoshirosou desu ne! subarashii desu!</div>
+        <div class="turn-meaning">讀和台灣相同的書的日文版感覺也很吸引人呢！太棒了！</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ありがとうございます すこしずつ がんばります">
+      <div class="who">B</div>
+      <div class="turn-body">
+        <div class="turn-ja">ありがとうございます！<ruby>少<rt>すこ</rt></ruby>しずつ <ruby>頑張<rt>がんば</rt></ruby>ります。</div>
+        <div class="turn-romaji">arigatou gozaimasu! sukoshi zutsu gambarimasu.</div>
+        <div class="turn-meaning">謝謝！我會一步一步努力加油的。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、重點單字表 (単語)</div>
+
+  <table class="cheat">
+    <thead>
+      <tr>
+        <th>日文 (漢字/假名)</th>
+        <th>讀音 (Romaji)</th>
+        <th>詞性</th>
+        <th>中文釋義與補充</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>慣<rt>な</rt></ruby>れる / <ruby>慣<rt>な</rt></ruby>れました</td>
+        <td>naremasu</td>
+        <td>動詞 (Ⅱ類)</td>
+        <td class="col-mean">習慣於…（「名詞 ＋ に慣れる」）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">カルチャーショック</td>
+        <td>karuchā shokku</td>
+        <td>名詞</td>
+        <td class="col-mean">文化衝擊（Culture shock）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>最近<rt>さいきん</rt></ruby></td>
+        <td>saikin</td>
+        <td>名詞 / 副詞</td>
+        <td class="col-mean">最近（近來）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>忙<rt>いそが</rt></ruby>しい</td>
+        <td>isogashii</td>
+        <td>い形容詞</td>
+        <td class="col-mean">忙碌的（busy）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>同<rt>おな</rt></ruby>じ</td>
+        <td>onaji</td>
+        <td>名詞 / 形動</td>
+        <td class="col-mean">相同的、一樣的（the same）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>少<rt>すこ</rt></ruby>し</td>
+        <td>sukoshi</td>
+        <td>副詞</td>
+        <td class="col-mean">一點點、稍微（a little）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>人気<rt>にんき</rt></ruby>（人気な）</td>
+        <td>ninki</td>
+        <td>名詞 / な形容詞</td>
+        <td class="col-mean">受歡迎的、熱門的（popular）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>一昨日<rt>おとtoi</rt></ruby></td>
+        <td>ototoi</td>
+        <td>名詞</td>
+        <td class="col-mean">前天（the day before yesterday）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>涼<rt>すず</rt></ruby>しい</td>
+        <td>suzushii</td>
+        <td>い形容詞</td>
+        <td class="col-mean">涼爽的（過去式：涼しかったです）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>武術<rt>ぶじゅつ</rt></ruby></td>
+        <td>bujutsu</td>
+        <td>名詞</td>
+        <td class="col-mean">武術（金庸的武俠小說常用表達）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>小説<rt>しょうせつ</rt></ruby></td>
+        <td>shousetsu</td>
+        <td>名詞</td>
+        <td class="col-mean">小說（novel）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>絵本<rt>えほん</rt></ruby></td>
+        <td>ehon</td>
+        <td>名詞</td>
+        <td class="col-mean">繪本、圖畫書（picture book）</td>
+      </tr>
+      <tr>
+        <td class="col-ja">ebook / <ruby>電子<rt>でんし</rt></ruby><ruby>書籍<rt>しょせき</rt></ruby></td>
+        <td>e-bukku</td>
+        <td>名詞</td>
+        <td class="col-mean">電子書（ebook）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、文法重點與句型拆解</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:15px;line-height:1.8;">
+    本課對話運用了生活對話中最常出現的適應狀態、天氣轉變及書籍引用說明：
+  </p>
+
+  <div class="section">
+    <div class="section-title">📌 1. 狀態與習慣：〜に慣れました（習慣了…）</div>
+    <p style="font-size:14px;color:var(--ink-soft);line-height:1.7;">
+      助詞使用 <span class="j-mark">に</span> 表示習慣的對象。<br>
+      例：<span class="compare">日本の生活に 慣れましたか？</span>（習慣日本的生活了嗎？）<br>
+      例：<span class="compare">仕事に 慣れました。</span>（習慣工作了。）
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📌 2. 天氣與形容詞過去式：涼しかったです</div>
+    <p style="font-size:14px;color:var(--ink-soft);line-height:1.7;">
+      「い形容詞」描述過去狀態時，去掉字尾 <span class="j-mark">い</span> 改加 <span class="j-mark">かったです</span>。<br>
+      例：涼しい（涼爽） → <span class="compare">涼しかったです</span>（當時很涼爽）<br>
+      例：暑い（熱） → <span class="compare">暑かったです</span>（當時很熱）<br>
+      複習前天句型：<span class="compare">一昨日は雨が降りましたから、涼しかったです。</span>（因為前天下雨了，所以很涼爽。）
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📌 3. 名詞修飾與引用：〜という名詞</div>
+    <p style="font-size:14px;color:var(--ink-soft);line-height:1.7;">
+      要介紹專有名詞或書名時，使用 <span class="j-mark">〜という [名詞]</span> 構造，意思是「叫做…的[名詞]」。<br>
+      例：<span class="compare">『台湾漫遊鉄道のふたり』という 小説</span>（叫做《台灣漫遊鐵道之雙人》的小說）<br>
+      例：<span class="compare">最近人気な 小説</span>（最近熱門的小說）
+    </p>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、隨堂自我檢測 (クイズ)</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示回答日文</div>
+    <ol class="quiz-ol">
+      <li>你習慣日本的生活了嗎？（提示：生活、慣れる）</li>
+      <li>前天下雨了，所以很涼爽。（提示：一昨日、雨が降る、涼しい）</li>
+      <li>我最近讀了叫做 Tadoku 的電子書。（提示：最近、〜という、ebook）</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>點擊觀看參考答案</summary>
+      <p>
+        1. 日本の生活に 慣れましたか？<br>
+        2. 一昨日は 雨が降りましたから、涼しかったです。<br>
+        3. 最近、Tadoku という ebook を 読みました。
+      </p>
+    </details>
+  </div>
+
+  <site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.turn[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

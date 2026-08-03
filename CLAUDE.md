@@ -175,6 +175,11 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 * 生成或編寫任何含漢字標音的頁面（如 `tadoku/*` 或 `lessons/*`）時，**直接在 HTML 樣板內寫入 `<ruby>漢字<rt>平假名</rt></ruby>` 標籤**。
 * 不依賴事後 JS 腳本轉換，維持靜態 HTML 直出的架構。
 * `<rt>` 一律標示**平假名 (Hiragana)**，字型顏色由 CSS (`var(--accent)`) 統一發揮調控。
+* **ruby / rt 的樣式統一寫在 [shared.css](shared.css)**（`ruby{margin-inline:.25em;line-height:2.1}`、`rt{font-size:.55em;letter-spacing:-.02em}`），舊頁 `<style>` 裡殘留的同名規則會被後載入的 shared.css 蓋掉，新頁不必再抄一份。
+* **讀音要逐段對齊，不要整串壓在一個 base 上**——rt 比 base 寬時會往兩側溢出去擠到鄰字。
+  例：`<ruby>18<rt>じゅうはっ</rt>歳<rt>さい</rt></ruby>`、`<ruby>29<rt>にじゅうきゅう</rt>分<rt>ふん</rt></ruby>`，
+  而不是 `<ruby>18歳<rt>じゅうはっさい</rt></ruby>` 或把數字留在 ruby 外面（`29<ruby>分<rt>にじゅうきゅうふん</rt></ruby>`）。
+  熟字訓（20歳＝はたち、一昨日＝おととい）無法拆，維持整組標即可。
 * 多読頁面的 `.credit` 必須標示兩種插圖來源：`插圖來源：<a href="https://www.irasutoya.com/" target="_blank" rel="noopener">いらすとや</a>（かわいいフリー素材集） ｜ AI 生成客製插圖（AI Generated Illustration）`
 
 `tadoku/*` 是自製的迷你多読小故事（例如 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)），不教新單字（`index.html` 對應 `data-words="0"`），色票跟 `tadoku.html` 一樣用藤色，但仍列進 `index.html` 的每日 log／calendar（跟 `readings/*` 一樣是「log 裡混不同色票類型」的做法）。`vocab-quiz.html` 改連在 `resources.html` 底下，用回一般棕橘色票。

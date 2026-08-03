@@ -100,11 +100,11 @@ p { margin: .5em 0; }
 .vs .sub { font-size: .85em; font-style: italic; color: #555; margin-bottom: .3em; }
 
 /* ── 表格（速記表） ── */
-table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: .95em; }
-th, td { border: 1px solid #666; padding: .45em .5em; text-align: left; vertical-align: top; }
+table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: .95em; word-break: break-word; }
+th, td { border: 1px solid #666; padding: .45em .5em; text-align: left; vertical-align: top; word-break: break-word; }
 th { border-bottom-width: 2px; font-weight: bold; }
-td.w { font-size: 1.15em; white-space: nowrap; }
-td.k { color: #333; white-space: nowrap; }
+td.w { font-size: 1.15em; font-weight: bold; }
+td.k { color: #333; }
 
 /* ── 對話 ── */
 .scene { margin: 1.6em 0; page-break-inside: avoid; }

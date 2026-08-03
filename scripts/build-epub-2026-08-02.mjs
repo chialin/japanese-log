@@ -26,59 +26,74 @@ const BOOK = {
   uuid: 'urn:uuid:2026-08-02-japanese-log-a5',
 };
 
-const CSS = `/* Supernote A5（10.3" E-ink 灰階高對比中大字型 - 中日雙語相容） */
+const CSS = `/* Supernote A5（10.3" E-ink 灰階高對比中大字型 - 縮放流式排版） */
 @page { margin: 0; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "YuMincho", "Noto Serif CJK JP", "Noto Serif CJK TC", "Noto Sans CJK JP", "Songti TC", serif, sans-serif;
-  font-size: 1.15em;
-  line-height: 1.85;
-  margin: 0 5%;
+  font-size: 1em;
+  line-height: 1.75;
+  margin: 0 3%;
   color: #000;
   text-align: justify;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
-/* 優先套用包含完整日文假名與漢字的中日通用字庫，防止缺字豆腐塊 */
-.ja, .kana, ruby, rt, td.w, td.k {
+/* 優先套用中日相容字庫 */
+.ja, .kana, ruby, rt, .vocab-ja, .vocab-kana {
   font-family: "Hiragino Mincho ProN", "YuMincho", "Noto Serif CJK JP", "Noto Sans CJK JP", "Hiragino Sans", serif, sans-serif;
 }
 
 h1 {
-  font-size: 1.75em; line-height: 1.35; margin: 0 0 .3em;
+  font-size: 1.6em; line-height: 1.35; margin: 0 0 .5em;
   border-bottom: 3px solid #000; padding-bottom: .3em;
   page-break-before: always; break-before: page;
 }
-h1 .sub { display: block; font-size: .6em; font-weight: normal; letter-spacing: .1em; margin-top: .4em; }
+h1 .sub { display: block; font-size: .65em; font-weight: normal; letter-spacing: .1em; margin-top: .4em; }
 
 h2 {
-  font-size: 1.3em; margin: 1.8em 0 .6em; padding-left: .5em;
-  border-left: 6px solid #000;
+  font-size: 1.25em; margin: 1.5em 0 .5em; padding-left: .4em;
+  border-left: 5px solid #000;
 }
-h3 { font-size: 1.1em; margin: 1.4em 0 .4em; font-weight: bold; }
+h3 { font-size: 1.05em; margin: 1.2em 0 .3em; font-weight: bold; }
 
-p { margin: .6em 0; }
+p { margin: .5em 0; }
 
-.item { margin: 1.1em 0; padding: .2em 0 .2em .8em; border-left: 2px solid #666; page-break-inside: avoid; }
-.ja { font-size: 1.35em; line-height: 1.6; font-weight: bold; }
-.kana { font-size: .95em; color: #333; }
-.romaji { font-size: .9em; font-style: italic; color: #444; letter-spacing: .02em; }
-.cn { font-size: .95em; margin-top: .2em; color: #111; }
+/* 句子與條目：彈性縮排，允許隨字型放大自動分頁與換行 */
+.item {
+  margin: 1em 0;
+  padding: .3em 0 .3em .6em;
+  border-left: 3px solid #666;
+}
+.ja { font-size: 1.25em; line-height: 1.5; font-weight: bold; word-break: break-word; }
+.kana { font-size: .95em; color: #333; word-break: break-word; }
+.romaji { font-size: .9em; font-style: italic; color: #444; word-break: break-word; }
+.cn { font-size: .95em; margin-top: .2em; color: #111; word-break: break-word; }
 
-.frame { border: 2px solid #000; padding: 1em 1.2em; margin: 1.3em 0; page-break-inside: avoid; }
-.frame .ja { font-size: 1.45em; text-align: center; }
+/* 單字表：改用可重排流式卡片，字型放大時自動換行不會擠壓破版 */
+.vocab-list { margin: 1em 0; padding: 0; list-style: none; }
+.vocab-item {
+  border: 1px solid #444;
+  padding: .7em .9em;
+  margin-bottom: .8em;
+  background: #fff;
+}
+.vocab-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4em .8em; border-bottom: 1px solid #ccc; padding-bottom: .3em; margin-bottom: .4em; }
+.vocab-ja { font-size: 1.25em; font-weight: bold; }
+.vocab-kana { font-size: .95em; color: #333; }
+.vocab-pos { font-size: .85em; background: #eee; padding: .1em .4em; border-radius: 2px; border: 1px solid #aaa; }
+.vocab-cn { font-size: .95em; color: #111; }
+
+.frame { border: 2px solid #000; padding: .8em 1em; margin: 1.1em 0; }
+.frame .ja { font-size: 1.35em; text-align: center; }
 .frame .romaji { text-align: center; }
-.frame .desc { font-size: .95em; margin-top: .8em; }
+.frame .desc { font-size: .95em; margin-top: .6em; }
 
-.note, .alert { border: 1px solid #444; padding: .8em 1em; margin: 1.2em 0; font-size: 1em; page-break-inside: avoid; }
-.alert { border: 2px solid #000; border-left-width: 8px; }
-.note { border-left-width: 8px; border-left-style: solid; border-left-color: #000; }
+.note, .alert { border: 1px solid #444; padding: .7em .9em; margin: 1em 0; font-size: .95em; }
+.alert { border: 2px solid #000; border-left-width: 6px; }
+.note { border-left-width: 6px; border-left-style: solid; border-left-color: #000; }
 .note .head, .alert .head { font-weight: bold; display: block; margin-bottom: .3em; font-size: 1.05em; }
-
-table { width: 100%; border-collapse: collapse; margin: 1.2em 0; font-size: 1em; }
-th, td { border: 1px solid #444; padding: .55em .6em; text-align: left; vertical-align: top; }
-th { border-bottom: 2px solid #000; font-weight: bold; background: #eee; }
-td.w { font-size: 1.2em; font-weight: bold; white-space: nowrap; }
-td.k { color: #222; white-space: nowrap; }
 
 .cover { text-align: center; margin-top: 20%; }
 .cover .t { font-size: 2.2em; line-height: 1.4; border-bottom: 3px solid #000; border-top: 3px solid #000; padding: .6em 0; }
@@ -162,29 +177,106 @@ const ch1Xhtml = page('一、課堂對話實例', `
 const ch2Xhtml = page('二、重點單字表', `
 <h1>二、重點單字表 <span class="sub">単語 (Tango)</span></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>日文 (漢字/假名)</th>
-      <th>假名 / 讀音</th>
-      <th>詞性</th>
-      <th>中文釋義</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="w">昨日</td><td class="k">きのう (kinou)</td><td>名詞</td><td>昨天</td></tr>
-    <tr><td class="w">夫</td><td class="k">おっと (otto)</td><td>名詞</td><td>丈夫（稱呼自己的丈夫）</td></tr>
-    <tr><td class="w">漫画</td><td class="k">まんが (manga)</td><td>名詞</td><td>漫畫</td></tr>
-    <tr><td class="w">イベント</td><td class="k">いべんと (ibento)</td><td>名詞</td><td>活動 / event</td></tr>
-    <tr><td class="w">行く / 行きます</td><td class="k">いきます (ikimasu)</td><td>動詞 (Ⅰ類)</td><td>去（過去式：行きました）</td></tr>
-    <tr><td class="w">面白い</td><td class="k">おもしろい (omoshiroi)</td><td>い形容詞</td><td>有趣的（過去式：おもしろかったです）</td></tr>
-    <tr><td class="w">私</td><td class="k">わたし (watashi)</td><td>代名詞</td><td>我</td></tr>
-    <tr><td class="w">普通</td><td class="k">ふつう (futsuu)</td><td>副詞/名詞</td><td>通常、平時、一般</td></tr>
-    <tr><td class="w">日本</td><td class="k">にほん (nihon)</td><td>名詞</td><td>日本</td></tr>
-    <tr><td class="w">読む / 読みます</td><td class="k">よみます (yomimasu)</td><td>動詞 (Ⅰ類)</td><td>看、閱讀（書/漫畫）</td></tr>
-    <tr><td class="w">週刊ジャンプ</td><td class="k">しゅうかんじゃんぷ</td><td>專有名詞</td><td>週刊少年Jump</td></tr>
-  </tbody>
-</table>
+<div class="vocab-list">
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">昨日</span>
+      <span class="vocab-kana">きのう (kinou)</span>
+      <span class="vocab-pos">名詞</span>
+    </div>
+    <div class="vocab-cn">昨天</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">夫</span>
+      <span class="vocab-kana">おっと (otto)</span>
+      <span class="vocab-pos">名詞</span>
+    </div>
+    <div class="vocab-cn">丈夫（稱呼自己的丈夫）</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">漫画</span>
+      <span class="vocab-kana">まんが (manga)</span>
+      <span class="vocab-pos">名詞</span>
+    </div>
+    <div class="vocab-cn">漫畫</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">イベント</span>
+      <span class="vocab-kana">いべんと (ibento)</span>
+      <span class="vocab-pos">名詞</span>
+    </div>
+    <div class="vocab-cn">活動 / event</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">行く / 行きます</span>
+      <span class="vocab-kana">いきます (ikimasu)</span>
+      <span class="vocab-pos">動詞 (Ⅰ類)</span>
+    </div>
+    <div class="vocab-cn">去（過去式：行きました）</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">面白い</span>
+      <span class="vocab-kana">おもしろい (omoshiroi)</span>
+      <span class="vocab-pos">い形容詞</span>
+    </div>
+    <div class="vocab-cn">有趣的（過去式：おもしろかったです）</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">私</span>
+      <span class="vocab-kana">わたし (watashi)</span>
+      <span class="vocab-pos">代名詞</span>
+    </div>
+    <div class="vocab-cn">我</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">普通</span>
+      <span class="vocab-kana">ふつう (futsuu)</span>
+      <span class="vocab-pos">副詞/名詞</span>
+    </div>
+    <div class="vocab-cn">通常、平時、一般</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">日本</span>
+      <span class="vocab-kana">にほん (nihon)</span>
+      <span class="vocab-pos">名詞</span>
+    </div>
+    <div class="vocab-cn">日本</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">読む / 読みます</span>
+      <span class="vocab-kana">よみます (yomimasu)</span>
+      <span class="vocab-pos">動詞 (Ⅰ類)</span>
+    </div>
+    <div class="vocab-cn">看、閱讀（書/漫畫）</div>
+  </div>
+
+  <div class="vocab-item">
+    <div class="vocab-header">
+      <span class="vocab-ja">週刊ジャンプ</span>
+      <span class="vocab-kana">しゅうかんじゃんぷ</span>
+      <span class="vocab-pos">專有名詞</span>
+    </div>
+    <div class="vocab-cn">週刊少年Jump（日本著名的少年漫畫雜誌）</div>
+  </div>
+</div>
 `);
 
 const ch3Xhtml = page('三、核心文法與句型解析', `

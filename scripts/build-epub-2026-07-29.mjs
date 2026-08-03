@@ -54,31 +54,31 @@ h3 { font-size: 1.05em; margin: 1.5em 0 .4em; }
 
 p { margin: .5em 0; }
 
-.item { margin: 1em 0; padding: .1em 0 .1em .8em; border-left: 2px solid #999; page-break-inside: avoid; }
-.ja { font-size: 1.3em; line-height: 1.6; }
-.kana { font-size: .95em; color: #444; }
-.romaji { font-size: .9em; font-style: italic; color: #555; letter-spacing: .03em; }
-.cn { font-size: .95em; margin-top: .15em; }
+.item { margin: 1em 0; padding: .1em 0 .1em .8em; border-left: 2px solid #999; }
+.ja { font-size: 1.3em; line-height: 1.6; word-break: break-word; }
+.kana { font-size: .95em; color: #444; word-break: break-word; }
+.romaji { font-size: .9em; font-style: italic; color: #555; letter-spacing: .03em; word-break: break-word; }
+.cn { font-size: .95em; margin-top: .15em; word-break: break-word; }
 
-.frame { border: 2px solid #000; padding: .9em 1em; margin: 1.2em 0; page-break-inside: avoid; }
+.frame { border: 2px solid #000; padding: .9em 1em; margin: 1.2em 0; }
 .frame .ja { font-size: 1.45em; text-align: center; }
 .frame .romaji { text-align: center; }
 .frame .desc { font-size: .95em; margin-top: .8em; }
 
-.note, .alert { border: 1px solid #666; padding: .7em .9em; margin: 1.1em 0; font-size: .95em; page-break-inside: avoid; }
+.note, .alert { border: 1px solid #666; padding: .7em .9em; margin: 1.1em 0; font-size: .95em; }
 .alert { border: 1px solid #000; border-left-width: 8px; }
 .note { border-left-width: 8px; border-left-style: double; }
 .note .head, .alert .head { font-weight: bold; display: block; margin-bottom: .3em; }
 
-.vs { border: 1px solid #666; padding: .7em .9em; margin: .8em 0; page-break-inside: avoid; }
+.vs { border: 1px solid #666; padding: .7em .9em; margin: .8em 0; }
 .vs .head { font-size: 1.2em; font-weight: bold; }
 .vs .sub { font-size: .85em; font-style: italic; color: #555; margin-bottom: .3em; }
 
-table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: .95em; }
-th, td { border: 1px solid #666; padding: .45em .5em; text-align: left; vertical-align: top; }
+table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: .95em; word-break: break-word; }
+th, td { border: 1px solid #666; padding: .45em .5em; text-align: left; vertical-align: top; word-break: break-word; }
 th { border-bottom-width: 2px; font-weight: bold; }
-td.w { font-size: 1.15em; white-space: nowrap; }
-td.k { color: #333; white-space: nowrap; }
+td.w { font-size: 1.15em; font-weight: bold; }
+td.k { color: #333; }
 
 .lead { font-size: .95em; margin: .6em 0 1em; }
 hr { border: none; border-top: 1px solid #999; margin: 2em 0; }

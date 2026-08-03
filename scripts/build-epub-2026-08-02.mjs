@@ -26,16 +26,21 @@ const BOOK = {
   uuid: 'urn:uuid:2026-08-02-japanese-log-a5',
 };
 
-const CSS = `/* Supernote A5（10.3" E-ink 灰階高對比中大字型） */
+const CSS = `/* Supernote A5（10.3" E-ink 灰階高對比中大字型 - 中日雙語相容） */
 @page { margin: 0; }
 
 body {
-  font-family: "Noto Serif CJK TC", "Noto Serif TC", "Songti TC", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "YuMincho", "Noto Serif CJK JP", "Noto Serif CJK TC", "Noto Sans CJK JP", "Songti TC", serif, sans-serif;
   font-size: 1.15em;
   line-height: 1.85;
   margin: 0 5%;
   color: #000;
   text-align: justify;
+}
+
+/* 優先套用包含完整日文假名與漢字的中日通用字庫，防止缺字豆腐塊 */
+.ja, .kana, ruby, rt, td.w, td.k {
+  font-family: "Hiragino Mincho ProN", "YuMincho", "Noto Serif CJK JP", "Noto Sans CJK JP", "Hiragino Sans", serif, sans-serif;
 }
 
 h1 {

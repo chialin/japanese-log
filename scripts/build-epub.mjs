@@ -48,12 +48,16 @@ const CSS = `/* Supernote A5X（1404×1872）灰階閱讀用 */
 @page { margin: 0; }
 
 body {
-  font-family: "Noto Serif CJK TC", "Noto Serif TC", "Songti TC", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "YuMincho", "Noto Serif CJK JP", "Noto Serif CJK TC", "Noto Sans CJK JP", "Songti TC", serif, sans-serif;
   font-size: 1em;
   line-height: 1.85;
   margin: 0 5%;
   color: #000;
   text-align: justify;
+}
+
+.ja, .kana, ruby, rt, td.w, td.k {
+  font-family: "Hiragino Mincho ProN", "YuMincho", "Noto Serif CJK JP", "Noto Sans CJK JP", "Hiragino Sans", serif, sans-serif;
 }
 
 /* ── 標題階層 ── */

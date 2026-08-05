@@ -200,7 +200,7 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 
 #### 記憶小撇步 `.mnemonic`（2026-08-05 新增）
 
-**自己想出來的聯想／諧音記法**用 `.mnemonic`，紅框（`#d92818`，鮮紅、5px 左邊框）＋淡紅底，跟課本內容（棕橘的
+**自己想出來的聯想／諧音記法**用 `.mnemonic`，**貼紙樣式**——鮮紅 `#d92818` 2px 圓角外框（`border-radius:16px`）＋ 白底 ＋ 淺紅投影，跟課本內容（棕橘的
 `.tip` / `.note` / `.alert`）明確區隔——紅色＝「這是我自己的聯想，不是老師教的」。
 
 ```html

@@ -224,9 +224,11 @@ rt {
    紅色是「這是我自己的聯想，不是課本教的」的標記，全站統一。 */
 .mnemonic {
   --memo: #d92818;
-  background: rgba(217,40,24,.07);
-  border: 1px solid rgba(217,40,24,.4); border-left: 5px solid var(--memo);
-  padding: 16px 20px; margin-bottom: 16px;
+  /* 貼紙感：圓角 ＋ 白底外圈 ＋ 淺投影，像貼上去的一張小紙 */
+  background: rgba(255,255,255,.75);
+  border: 2px solid var(--memo); border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(217,40,24,.14);
+  padding: 18px 22px; margin: 4px 0 20px;
   font-size: 14px; color: var(--ink-soft); line-height: 1.9;
 }
 .mnemonic strong { color: var(--memo); }

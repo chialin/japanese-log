@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日にち — 1日〜31日的唸法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 日期卡片格子 */
+.hi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin:16px 0;}
+.hi-card{background:var(--paper-deep);border:1px solid var(--line);border-radius:8px;padding:12px 10px 10px;text-align:center;transition:border-color .15s,transform .15s;}
+.hi-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+.hi-card.is-irr{border-left:3px solid var(--accent);}
+.hi-num{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);}
+.hi-kana{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin-top:4px;line-height:1.5;}
+.hi-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-mute);margin-top:2px;}
+.hi-play{margin-top:8px;width:32px;height:32px;border-radius:50%;border:1px solid var(--accent-soft);background:var(--paper);color:var(--accent);font-size:12px;cursor:pointer;transition:background .15s;}
+.hi-play:hover{background:var(--accent-pale);}
+
+/* 圖例 */
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin:10px 0 0;font-size:13px;color:var(--ink-mute);}
+.legend span::before{content:'';display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle;}
+.legend .lg-irr::before{background:var(--accent);}
+.legend .lg-reg::before{background:var(--line);}
+
+/* 速記表 */
+.hi-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+.hi-table th,.hi-table td{border:1px solid var(--line);padding:9px 12px;text-align:left;}
+.hi-table th{background:var(--paper-deep);font-family:'Noto Serif TC',serif;font-weight:600;color:var(--ink);}
+.hi-table td{color:var(--ink-soft);}
+.hi-table td strong{color:var(--accent);}
+
+/* Self-Quiz */
+details.quiz{background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 18px;margin-top:10px;}
+details.quiz summary{cursor:pointer;font-family:'Noto Serif TC',serif;font-size:14px;color:var(--accent);font-weight:600;}
+details.quiz p{margin:10px 0 0;font-size:14px;color:var(--ink-soft);line-height:1.9;}
+.q-item{margin:16px 0 0;font-size:15px;color:var(--ink);line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">日にち ── <span class="accent">1日〜31日</span></h1>
+<div class="page-meta">主題 · Days of the Month · 2026 / 08 / 05</div>
+  <p class="page-subtitle">把一整個月的日期唸法一次補齊</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    日期的「日」大部分規則地唸 <strong>〜にち</strong>，但 <strong>1〜10 日、14 日、20 日、24 日</strong>
+    是必須硬背的特殊唸法。先把這 13 個背起來，其他就自動會了。
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">一、先看規則</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;">
+    日期分兩套系統：<br>
+    ① <strong>和語數詞</strong>（ひとつ・ふたつ 那一套的變形）→ 用在 <span class="compare">1〜10 日</span> 與 <span class="compare">14・20・24 日</span>，
+    結尾多半是 <strong>〜か</strong>。<br>
+    ② <strong>漢語數詞 ＋ にち</strong> → 其餘全部，例：15日 → じゅうご<strong>にち</strong>。
+  </p>
+
+  <div class="note">
+    📝 <strong>「月」和「日」都不是唸「つき／ひ」</strong><br>
+    6月 → ろく<strong>がつ</strong>（不是 ろくつき）、15日 → じゅうご<strong>にち</strong>（不是 じゅうごひ）。
+    「日」單獨當「天數」時才會出現別的唸法。
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">二、1日〜10日（特殊唸法，必背）</div>
+
+  <p style="margin-bottom:6px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這十個沒有規則可循，點卡片上的 ▶ 反覆聽：
+  </p>
+
+  <div class="hi-grid">
+    <div class="hi-card is-irr" data-text="ついたち"><div class="hi-num">1日</div><div class="hi-kana">ついたち</div><div class="hi-romaji">tsuitachi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="ふつか"><div class="hi-num">2日</div><div class="hi-kana">ふつか</div><div class="hi-romaji">futsuka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="みっか"><div class="hi-num">3日</div><div class="hi-kana">みっか</div><div class="hi-romaji">mikka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="よっか"><div class="hi-num">4日</div><div class="hi-kana">よっか</div><div class="hi-romaji">yokka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="いつか"><div class="hi-num">5日</div><div class="hi-kana">いつか</div><div class="hi-romaji">itsuka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="むいか"><div class="hi-num">6日</div><div class="hi-kana">むいか</div><div class="hi-romaji">muika</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="なのか"><div class="hi-num">7日</div><div class="hi-kana">なのか</div><div class="hi-romaji">nanoka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="ようか"><div class="hi-num">8日</div><div class="hi-kana">ようか</div><div class="hi-romaji">yōka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="ここのか"><div class="hi-num">9日</div><div class="hi-kana">ここのか</div><div class="hi-romaji">kokonoka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="とおか"><div class="hi-num">10日</div><div class="hi-kana">とおか</div><div class="hi-romaji">tōka</div><button class="hi-play" aria-label="播放">▶</button></div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>最容易搞混的兩組</strong><br>
+    ・<strong>4日 よっか</strong> vs <strong>8日 ようか</strong> — 只差一個小 っ／長音，聽的時候特別留意。<br>
+    ・<strong>1日 ついたち</strong> 完全看不出「一」，它來自「月立ち（つきたち）」＝新月升起的那天。
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">三、11日〜31日</div>
+
+  <p style="margin-bottom:6px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    橘色左邊框 ＝ 還是特殊唸法（14・20・24），其餘都是「數字 ＋ にち」的規則型：
+  </p>
+
+  <div class="legend">
+    <span class="lg-irr">特殊唸法（要背）</span>
+    <span class="lg-reg">規則型：數字 ＋ にち</span>
+  </div>
+
+  <div class="hi-grid">
+    <div class="hi-card" data-text="じゅういちにち"><div class="hi-num">11日</div><div class="hi-kana">じゅういちにち</div><div class="hi-romaji">jūichi-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="じゅうににち"><div class="hi-num">12日</div><div class="hi-kana">じゅうににち</div><div class="hi-romaji">jūni-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="じゅうさんにち"><div class="hi-num">13日</div><div class="hi-kana">じゅうさんにち</div><div class="hi-romaji">jūsan-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="じゅうよっか"><div class="hi-num">14日</div><div class="hi-kana">じゅうよっか</div><div class="hi-romaji">jūyokka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="じゅうごにち"><div class="hi-num">15日</div><div class="hi-kana">じゅうごにち</div><div class="hi-romaji">jūgo-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="じゅうろくにち"><div class="hi-num">16日</div><div class="hi-kana">じゅうろくにち</div><div class="hi-romaji">jūroku-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="じゅうしちにち"><div class="hi-num">17日</div><div class="hi-kana">じゅうしちにち</div><div class="hi-romaji">jūshichi-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="じゅうはちにち"><div class="hi-num">18日</div><div class="hi-kana">じゅうはちにち</div><div class="hi-romaji">jūhachi-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="じゅうくにち"><div class="hi-num">19日</div><div class="hi-kana">じゅうくにち</div><div class="hi-romaji">jūku-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="はつか"><div class="hi-num">20日</div><div class="hi-kana">はつか</div><div class="hi-romaji">hatsuka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="にじゅういちにち"><div class="hi-num">21日</div><div class="hi-kana">にじゅういちにち</div><div class="hi-romaji">nijūichi-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="にじゅうににち"><div class="hi-num">22日</div><div class="hi-kana">にじゅうににち</div><div class="hi-romaji">nijūni-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="にじゅうさんにち"><div class="hi-num">23日</div><div class="hi-kana">にじゅうさんにち</div><div class="hi-romaji">nijūsan-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card is-irr" data-text="にじゅうよっか"><div class="hi-num">24日</div><div class="hi-kana">にじゅうよっか</div><div class="hi-romaji">nijūyokka</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="にじゅうごにち"><div class="hi-num">25日</div><div class="hi-kana">にじゅうごにち</div><div class="hi-romaji">nijūgo-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="にじゅうろくにち"><div class="hi-num">26日</div><div class="hi-kana">にじゅうろくにち</div><div class="hi-romaji">nijūroku-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="にじゅうしちにち"><div class="hi-num">27日</div><div class="hi-kana">にじゅうしちにち</div><div class="hi-romaji">nijūshichi-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="にじゅうはちにち"><div class="hi-num">28日</div><div class="hi-kana">にじゅうはちにち</div><div class="hi-romaji">nijūhachi-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="にじゅうくにち"><div class="hi-num">29日</div><div class="hi-kana">にじゅうくにち</div><div class="hi-romaji">nijūku-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="さんじゅうにち"><div class="hi-num">30日</div><div class="hi-kana">さんじゅうにち</div><div class="hi-romaji">sanjū-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+    <div class="hi-card" data-text="さんじゅういちにち"><div class="hi-num">31日</div><div class="hi-kana">さんじゅういちにち</div><div class="hi-romaji">sanjūichi-nichi</div><button class="hi-play" aria-label="播放">▶</button></div>
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">四、三個踩雷點</div>
+
+  <table class="hi-table">
+    <tr><th>日期</th><th>唸法</th><th>為什麼要注意</th></tr>
+    <tr><td>17日 / 27日</td><td><strong>じゅうしちにち</strong> / <strong>にじゅうしちにち</strong></td><td>「7」用 <strong>しち</strong>，不是 なな</td></tr>
+    <tr><td>19日 / 29日</td><td><strong>じゅうくにち</strong> / <strong>にじゅうくにち</strong></td><td>「9」用 <strong>く</strong>，不是 きゅう</td></tr>
+    <tr><td>14日 / 24日</td><td><strong>じゅうよっか</strong> / <strong>にじゅうよっか</strong></td><td>尾巴回到和語的 <strong>よっか</strong>，不是 〜よんにち</td></tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>4日・14日・24日 是同一組</strong><br>
+    只要看到個位數是 4，就一律 <strong>よっか</strong>。20日 <strong>はつか</strong> 則是完全獨立的一個，
+    跟 2日 ふつか 長得像但不同（はつ vs ふつ）。
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">五、放進句子裡</div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="きょうは はちがつ いつかです">
+      <div class="word-content">
+        <div class="word-ja">今日は 八月 五日です</div>
+        <div class="word-romaji">kyō wa hachi-gatsu itsuka desu</div>
+        <div class="word-meaning">今天是八月五日。 — 「〜は〜です」最基本的日期句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="たんじょうびは なんがつ なんにちですか">
+      <div class="word-content">
+        <div class="word-ja">誕生日は 何月 何日ですか</div>
+        <div class="word-romaji">tanjōbi wa nan-gatsu nan-nichi desu ka</div>
+        <div class="word-meaning">生日是幾月幾號？ — 問日期就用「何月何日（なんがつ なんにち）」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="わたしの たんじょうびは じゅうがつ ついたちです">
+      <div class="word-content">
+        <div class="word-ja">私の 誕生日は 十月 一日です</div>
+        <div class="word-romaji">watashi no tanjōbi wa jū-gatsu tsuitachi desu</div>
+        <div class="word-meaning">我的生日是十月一日。 — 注意 1日 唸 ついたち</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="にじゅうよっかの ごごは ひまです">
+      <div class="word-content">
+        <div class="word-ja">二十四日の 午後は ひまです</div>
+        <div class="word-romaji">nijūyokka no gogo wa hima desu</div>
+        <div class="word-meaning">24 號下午有空。 — 日期後接 <span class="j-mark">の</span> 修飾後面的名詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────── -->
+  <div class="divider">六、課後複習小測驗（Self-Quiz）</div>
+
+  <div class="q-item">1. 把日期唸出來：<strong>3日・6日・9日</strong></div>
+  <details class="quiz"><summary>🔍 點擊查看解答</summary>
+    <p>みっか（mikka）／むいか（muika）／ここのか（kokonoka）</p>
+  </details>
+
+  <div class="q-item">2. <strong>14日</strong> 和 <strong>20日</strong> 分別怎麼唸？</div>
+  <details class="quiz"><summary>🔍 點擊查看解答</summary>
+    <p>14日 → じゅうよっか（jūyokka）／20日 → はつか（hatsuka）。兩個都是特殊唸法，不是「じゅうよんにち」「にじゅうにち」。</p>
+  </details>
+
+  <div class="q-item">3. 翻成日文：<strong>今天是七月八日。</strong></div>
+  <details class="quiz"><summary>🔍 點擊查看解答</summary>
+    <p>今日は 七月 八日です。（きょうは しちがつ ようかです）— 7月是 しちがつ、8日是 ようか。</p>
+  </details>
+
+  <div class="q-item">4. 下面哪一個唸錯了？<br>
+    ① 19日 じゅうきゅうにち　② 25日 にじゅうごにち　③ 30日 さんじゅうにち</div>
+  <details class="quiz"><summary>🔍 點擊查看解答</summary>
+    <p>① 錯。19日 要唸 <strong>じゅうくにち</strong>（9 用 く，不用 きゅう）。②③ 都正確。</p>
+  </details>
+
+  <div class="q-item">5. 用日文問對方：<strong>你的生日是幾月幾號？</strong></div>
+  <details class="quiz"><summary>🔍 點擊查看解答</summary>
+    <p>誕生日は 何月 何日ですか。（たんじょうびは なんがつ なんにちですか）</p>
+  </details>
+
+  <a href="2026-06-14-hakkoubi-youbi.html" class="next-link" style="display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;">
+    <span style="display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;">— Related —</span>
+    <span style="display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;">発行日と曜日 <span style="margin-left:auto;color:var(--ink-mute);">→</span></span>
+    <span style="display:block;font-size:14px;color:var(--ink-soft);">年・月・日的組合方式 ＋ 一週七天（月〜日曜日）</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .hi-card[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn, .hi-play');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    if (button) button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

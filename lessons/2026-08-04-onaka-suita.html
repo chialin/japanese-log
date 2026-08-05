@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お腹が空いた — 身體狀態句與が</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 對話 */
+.dialogue{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:18px;}
+.turn{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex:0 0 44px;font-family:'Shippori Mincho',serif;font-size:13px;font-weight:600;color:var(--accent);border:1px solid var(--accent-soft);border-radius:2px;padding:2px 0;text-align:center;margin-top:4px;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:2.1;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:16px;margin-top:2px;}
+.turn-meaning{font-size:14px;color:var(--ink-soft);margin-top:4px;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.joshi-table th,.joshi-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.joshi-table tr:last-child td{border-bottom:none;}
+.joshi-table .col-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--accent);width:52px;text-align:center;}
+.joshi-table .col-role{color:var(--ink);font-weight:600;width:120px;}
+.joshi-table .col-meaning{color:var(--ink-soft);}
+.romaji-inline{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);}
+
+/* 跨頁 next-link */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">お腹<span class="accent">が</span>空いた — 身體狀態怎麼講</h1>
+  <div class="page-meta">文法・單字 · Grammar &amp; Vocabulary · 2026 / 08 / 04</div>
+  <p class="page-subtitle">が 的主格用法・常體 vs 丁寧體・身體部位單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 身體狀態句的主語一律用 <span class="compare">が</span>，不是 は
+    ② <span class="compare">空いた／空きました</span> 只差丁寧度，意思一樣
+    ③ 講「現在餓」卻要用<strong>過去式</strong> — 原因在第三節。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、課堂上的這一句</div>
+
+  <div class="dialogue">
+    <div class="turn" data-text="あっ、おなかが すきました">
+      <div class="who">私</div>
+      <div class="turn-body">
+        <div class="turn-ja">あっ、お<ruby>腹<rt>なか</rt></ruby><span class="j-mark">が</span> <ruby>空<rt>す</rt></ruby>きました。</div>
+        <div class="turn-romaji">a', onaka ga sukimashita</div>
+        <div class="turn-meaning">啊，我肚子餓了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、が — 為什麼不是「は」？</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    講<strong>身體狀態、感覺、能力</strong>的時候，那個「哪裡怎麼了」的部分要用 <span class="j-mark">が</span>。
+    這是固定的，不用想太多，先當公式背下來。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>助詞</th><th>句子</th><th>功能</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kana">が</td>
+        <td>お腹<span class="j-mark">が</span> 空いた<br>お腹<span class="j-mark">が</span> 痛い<br><ruby>背中<rt>せなか</rt></ruby><span class="j-mark">が</span> 痛い</td>
+        <td class="col-meaning"><strong>主格</strong> — 誰／哪個部位怎麼了</td>
+      </tr>
+      <tr>
+        <td class="col-kana">は</td>
+        <td><ruby>私<rt>わたし</rt></ruby><span class="j-mark">は</span> …</td>
+        <td class="col-meaning"><strong>主題</strong> — 整句在談的對象</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning">
+    ⚠️ <strong>身體不舒服的句子，主語用「が」不用「は」</strong><br>
+    ○ お腹<span class="j-mark">が</span> 痛いです　／　○ <ruby>背中<rt>せなか</rt></ruby><span class="j-mark">が</span> 痛いです<br>
+    ✗ お腹<u>は</u> 痛いです（文法上不是錯，但語感會變成「肚子的話是痛的（別的地方不痛）」的對比）
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、お腹が空いた vs 空きました — 差在哪？</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    兩句<strong>意思完全一樣</strong>，都是「肚子餓了」。差別只在<strong>丁寧度</strong>，不在意思。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>形</th><th>句子</th><th>對誰講</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-role">常體（普通形）</td>
+        <td>お<ruby>腹<rt>なか</rt></ruby><span class="j-mark">が</span> <ruby>空<rt>す</rt></ruby>いた<br><span class="romaji-inline">onaka ga suita</span></td>
+        <td class="col-meaning">家人、朋友、自言自語</td>
+      </tr>
+      <tr>
+        <td class="col-role">丁寧體（ます形）</td>
+        <td>お<ruby>腹<rt>なか</rt></ruby><span class="j-mark">が</span> <ruby>空<rt>す</rt></ruby>きました<br><span class="romaji-inline">onaka ga sukimashita</span></td>
+        <td class="col-meaning">老師、店員、不熟的人</td>
+      </tr>
+      <tr>
+        <td class="col-role">丁寧・狀態</td>
+        <td>お<ruby>腹<rt>なか</rt></ruby><span class="j-mark">が</span> <ruby>空<rt>す</rt></ruby>いています<br><span class="romaji-inline">onaka ga suite imasu</span></td>
+        <td class="col-meaning">更禮貌，強調「現在正處於餓的狀態」</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>為什麼是「過去式」？— 初學最容易卡的一點</strong><br>
+    中文說「我<strong>很</strong>餓」是現在的狀態，日文卻用<strong>過去式</strong>。<br><br>
+    因為「<ruby>空<rt>す</rt></ruby>く」是<strong>變化動詞</strong>，原意是「（空間）變空」。肚子從有東西 →
+    變空，這個<strong>變化已經完成了</strong>，所以用過去式 <span class="compare">た／ました</span>。
+    正好對應中文的「<strong>了</strong>」。<br><br>
+    ✗ お腹が <u>空きます</u> ← 這是「（等一下）肚子會餓」，講現在的餓是<strong>錯的</strong><br>
+    ○ お腹が <strong>空いた／空きました</strong> ← 已經餓了
+  </div>
+
+  <div class="note">
+    📝 <strong>同款邏輯的兄弟句 — 一起背</strong><br>
+    這幾個都是「變化完成 → 用過去式」，講現在的狀態一律用 た／ました。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 常體 ／ 丁寧體 對照練習</div>
+
+    <div class="word-item" data-text="つかれた">
+      <div class="word-content">
+        <div class="word-ja"><ruby>疲<rt>つか</rt></ruby>れた ／ <ruby>疲<rt>つか</rt></ruby>れました</div>
+        <div class="word-romaji">tsukareta / tsukaremashita</div>
+        <div class="word-meaning">累了（常體／丁寧體）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="のどが かわいた">
+      <div class="word-content">
+        <div class="word-ja">のど<span class="j-mark">が</span> <ruby>渇<rt>かわ</rt></ruby>いた ／ <ruby>渇<rt>かわ</rt></ruby>きました</div>
+        <div class="word-romaji">nodo ga kawaita / kawakimashita</div>
+        <div class="word-meaning">口渴了 — 跟肚子餓是一組的，主詞用「のど（喉嚨）」不是お腹</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おなか すいた">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>腹<rt>なか</rt></ruby> <ruby>空<rt>す</rt></ruby>いた〜</div>
+        <div class="word-romaji">onaka suita〜</div>
+        <div class="word-meaning">超口語版 —「お」跟「が」都省掉，朋友間、小孩最常講</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おなかが ぺこぺこです">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>腹<rt>なか</rt></ruby><span class="j-mark">が</span> ぺこぺこです</div>
+        <div class="word-romaji">onaka ga pekopeko desu</div>
+        <div class="word-meaning">餓扁了 — 擬態語，很生活的說法</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おなかが いっぱいです">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>腹<rt>なか</rt></ruby><span class="j-mark">が</span> いっぱいです</div>
+        <div class="word-romaji">onaka ga ippai desu</div>
+        <div class="word-meaning">吃飽了 — 跟「空いた」正好相反。被問「もう<ruby>一杯<rt>いっぱい</rt></ruby>どうですか？」時用得到</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、新單字</div>
+
+  <div class="section">
+    <div class="section-title">📖 身體與狀態</div>
+
+    <div class="word-item" data-text="お腹">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>腹<rt>なか</rt></ruby></div>
+        <div class="word-romaji">onaka</div>
+        <div class="word-meaning">肚子 — 頭上的「お」是固定的美化語，不會拿掉</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おなかが すいた">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>腹<rt>なか</rt></ruby><span class="j-mark">が</span> <ruby>空<rt>す</rt></ruby>いた</div>
+        <div class="word-romaji">onaka ga suita</div>
+        <div class="word-meaning">肚子餓了（常體）／丁寧體＝お腹が空きました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お腹が痛い">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>腹<rt>なか</rt></ruby><span class="j-mark">が</span> <ruby>痛<rt>いた</rt></ruby>い</div>
+        <div class="word-romaji">onaka ga itai</div>
+        <div class="word-meaning">肚子痛。丁寧體＝お腹が痛いです</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="背中">
+      <div class="word-content">
+        <div class="word-ja"><ruby>背中<rt>せなか</rt></ruby></div>
+        <div class="word-romaji">senaka</div>
+        <div class="word-meaning">背部、背後 — 例：<ruby>背中<rt>せなか</rt></ruby>が いたい＝背痛</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="世界">
+      <div class="word-content">
+        <div class="word-ja"><ruby>世界<rt>せかい</rt></ruby></div>
+        <div class="word-romaji">sekai</div>
+        <div class="word-meaning">世界 — 跟 背中（せなか）都從「せ」開頭，一起記</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、課後複習小測驗（Self-Quiz）</div>
+
+  <div class="section">
+    <div class="section-title">✍️ 填助詞／翻譯</div>
+
+    <p style="color:var(--ink-soft);font-size:14.5px;line-height:2;">
+      <strong>1.</strong> 填助詞：お腹（　） 空きました。<br>
+      <strong>2.</strong> 「お腹が空いた」跟「お腹が空きました」差在哪？<br>
+      <strong>3.</strong> 為什麼講「現在肚子餓」要用過去式？<br>
+      <strong>4.</strong> 翻成日文（對老師講）：我背痛。<br>
+      <strong>5.</strong> 「吃飽了」怎麼說？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>
+        <strong>1.</strong> お腹<strong>が</strong> 空きました。身體狀態句的主語用 が。<br><br>
+        <strong>2.</strong> 意思一模一樣，只差<strong>丁寧度</strong>：空いた＝常體（朋友、家人），空きました＝丁寧體（老師、店員）。<br><br>
+        <strong>3.</strong> 因為「<ruby>空<rt>す</rt></ruby>く」是<strong>變化動詞</strong>（肚子變空），變化<strong>已經完成</strong>了，所以用 た／ました，對應中文的「餓<strong>了</strong>」。講「空きます」會變成「等一下會餓」。<br><br>
+        <strong>4.</strong> <ruby>背中<rt>せなか</rt></ruby><strong>が</strong> <ruby>痛<rt>いた</rt></ruby>いです。<br><br>
+        <strong>5.</strong> お<ruby>腹<rt>なか</rt></ruby>が いっぱいです。（口語可講 お腹いっぱい）
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-05-10-joshi-wa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">日文助詞入門 — は・が・の・を・か <span class="next-arrow">→</span></span>
+    <span class="next-sub">回頭複習 が 的主格用法，以及 は（主題）vs が（主格）的完整對照</span>
+  </a>
+
+  <a href="2026-08-04-mokutekichi-ni.html" class="next-link">
+    <span class="next-kicker">— Same day —</span>
+    <span class="next-title">目的地 ＋ に — 主人について日本に来ました <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一天的另一半：目的地＋に／へ、〜について，以及丈夫的三種說法</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .turn[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    if (!button) return;
+    button.addEventListener('click', (e) => { e.stopPropagation(); speak(text, button); });
+  });
+</script>
+</body>
+</html>

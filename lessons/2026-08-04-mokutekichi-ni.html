@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>目的地 ＋ に — 「主人について日本に来ました」</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 對話 */
+.dialogue{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:18px;}
+.turn{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex:0 0 44px;font-family:'Shippori Mincho',serif;font-size:13px;font-weight:600;color:var(--accent);border:1px solid var(--accent-soft);border-radius:2px;padding:2px 0;text-align:center;margin-top:4px;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:2.1;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:16px;margin-top:2px;}
+.turn-meaning{font-size:14px;color:var(--ink-soft);margin-top:4px;}
+
+/* 助詞速記表 */
+.joshi-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.joshi-table th,.joshi-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.joshi-table tr:last-child td{border-bottom:none;}
+.joshi-table .col-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--accent);width:52px;text-align:center;}
+.joshi-table .col-role{color:var(--ink);font-weight:600;width:120px;}
+.joshi-table .col-meaning{color:var(--ink-soft);}
+
+/* 丈夫三種說法卡片 */
+.husband-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:16px;}
+.h-card{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:18px 18px 16px;}
+.h-card .h-kanji{font-family:'Klee One','Shippori Mincho',serif;font-size:32px;color:var(--ink);line-height:1.6;}
+.h-card .h-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:17px;margin-top:2px;}
+.h-card .h-tag{display:inline-block;font-size:12px;color:var(--accent);background:var(--accent-pale);padding:1px 7px;border-radius:2px;margin-top:8px;}
+.h-card .h-note{font-size:13.5px;color:var(--ink-soft);line-height:1.85;margin-top:8px;}
+.h-card .play-btn{margin-top:10px;}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">目的地 ＋ <span class="accent">に</span> — 我跟著先生來日本</h1>
+  <div class="page-meta">文法・會話 · Grammar &amp; Conversation · 2026 / 08 / 04</div>
+  <p class="page-subtitle">について・目的地に／へ — 從一段課堂對話拆助詞</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="compare">目的地 ＋ に／へ</span>＝去／來到某個地方　②「<span class="compare">〜について</span>」＝跟著某人一起（這個 に 不能換 へ）　③ 人在哪裡決定用 <strong>来ました</strong> 還是 <strong>行きます</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、課堂對話</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先生問「為什麼來日本？」，把昨天的句子接起來就是這段。<span class="j-mark">に</span> 已標色，先聽整段，再看下面的拆解。
+  </p>
+
+  <div class="dialogue">
+
+    <div class="turn" data-text="どうして にほんに 来ましたか">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">どうして <ruby>日本<rt>にほん</rt></ruby><span class="j-mark">に</span> <ruby>来<rt>き</rt></ruby>ましたか。</div>
+        <div class="turn-romaji">dōshite Nihon ni kimashita ka</div>
+        <div class="turn-meaning">你為什麼來日本呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="わたしは 主人について にほんに 来ました">
+      <div class="who">私</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>私<rt>わたし</rt></ruby>は、<ruby>主人<rt>しゅじん</rt></ruby>について <ruby>日本<rt>にほん</rt></ruby><span class="j-mark">に</span> <ruby>来<rt>き</rt></ruby>ました。</div>
+        <div class="turn-romaji">watashi wa, shujin ni tsuite Nihon ni kimashita</div>
+        <div class="turn-meaning">我是跟著先生來日本的。（人已經在日本 → 用「来ました」）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="わたしは 主人について にほんに 行きます">
+      <div class="who">私</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>私<rt>わたし</rt></ruby>は、<ruby>主人<rt>しゅじん</rt></ruby>について <ruby>日本<rt>にほん</rt></ruby><span class="j-mark">に</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="turn-romaji">watashi wa, shujin ni tsuite Nihon ni ikimasu</div>
+        <div class="turn-meaning">我要跟著先生去日本。（人還在台灣 → 用「行きます」）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="にほんは 目的地です">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>日本<rt>にほん</rt></ruby>は<ruby>目的地<rt>もくてきち</rt></ruby>です。<ruby>目的地<rt>もくてきち</rt></ruby>＋に・へ ですね。</div>
+        <div class="turn-romaji">Nihon wa mokutekichi desu. mokutekichi purasu ni / e desu ne</div>
+        <div class="turn-meaning">日本是「目的地」。目的地後面接 に 或 へ 喔。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>来ました vs 行きます — 看你站在哪裡</strong><br>
+    同一件事，<strong>人已經在日本</strong>講「日本<span class="j-mark">に</span> 来ました」（來到這裡）；<br>
+    <strong>人還在台灣</strong>講「日本<span class="j-mark">に</span> 行きます」（去那裡）。<strong>に 不變，動詞才變。</strong>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、に — 這段對話裡出現了兩次，功能不同</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>助詞</th><th>在句子裡</th><th>功能</th><th>怎麼記</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-kana">に</td>
+        <td>日本<span class="j-mark">に</span> 来ました／行きます</td>
+        <td class="col-role">目的地・到達點</td>
+        <td class="col-meaning">移動動詞（行く・来る・帰る・着く）前面那個地方，掛 に。<strong>換成 へ 也對</strong>（強調方向）。</td>
+      </tr>
+      <tr>
+        <td class="col-kana">に</td>
+        <td>主人<span class="j-mark">に</span> ついて</td>
+        <td class="col-role">動作的對象</td>
+        <td class="col-meaning">「跟著<u>誰</u>」的那個誰，掛 に。這個 に <strong>不能換成 へ</strong>（へ 只表示方向）。</td>
+      </tr>
+      <tr>
+        <td class="col-kana">は</td>
+        <td>私<span class="j-mark">は</span> …</td>
+        <td class="col-role">主題</td>
+        <td class="col-meaning">「我這人嘛 →」整句在談的對象。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 <strong>目的地 ＋ に／へ 的差別</strong><br>
+    ・<span class="compare">に</span>＝強調<strong>到達點</strong>（重點在終點，最常用）<br>
+    ・<span class="compare">へ</span>（唸 <strong>e</strong>）＝強調<strong>方向／過程</strong>（朝那邊去）<br>
+    日常會話兩個幾乎可以互換，先養成用 <strong>に</strong> 的習慣就好。<br>
+    ※「主人<strong>に</strong>ついて」的 に 是對象，不是目的地 → 不能換 へ。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 目的地 ＋ に 換句練習</div>
+
+    <div class="word-item" data-text="学校に 行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>学校<rt>がっこう</rt></ruby><span class="j-mark">に</span> <ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">gakkō ni ikimasu</div>
+        <div class="word-meaning">去學校</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="台湾に 帰ります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>台湾<rt>たいわん</rt></ruby><span class="j-mark">に</span> <ruby>帰<rt>かえ</rt></ruby>ります</div>
+        <div class="word-romaji">Taiwan ni kaerimasu</div>
+        <div class="word-meaning">回台灣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="東京へ 行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>東京<rt>とうきょう</rt></ruby><span class="j-mark">へ</span> <ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">Tōkyō e ikimasu</div>
+        <div class="word-meaning">往東京去（へ 唸 e，強調方向）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="主人について 台湾に 帰ります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>主人<rt>しゅじん</rt></ruby>について <ruby>台湾<rt>たいわん</rt></ruby><span class="j-mark">に</span> <ruby>帰<rt>かえ</rt></ruby>ります</div>
+        <div class="word-romaji">shujin ni tsuite Taiwan ni kaerimasu</div>
+        <div class="word-meaning">跟著先生回台灣（一句裡兩個 に，功能不同）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、新單字</div>
+
+  <div class="section">
+    <div class="section-title">📖 這堂課出現的新詞</div>
+
+    <div class="word-item" data-text="目的地">
+      <div class="word-content">
+        <div class="word-ja"><ruby>目的地<rt>もくてきち</rt></ruby></div>
+        <div class="word-romaji">mokutekichi</div>
+        <div class="word-meaning">目的地 — 目的（もくてき）＋地（ち）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ついて">
+      <div class="word-content">
+        <div class="word-ja">〜について（<ruby>付<rt>つ</rt></ruby>いて）</div>
+        <div class="word-romaji">〜 ni tsuite</div>
+        <div class="word-meaning">跟著〜、隨著〜（人 ＋ に ついて）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、「丈夫」的三種說法</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    對話裡用的是 <span class="compare">主人</span>。日文講「（自己的）丈夫」主要有這三個詞，差在<strong>正式度</strong>與<strong>對誰講</strong>。
+  </p>
+
+  <div class="husband-grid">
+
+    <div class="h-card" data-text="主人">
+      <div class="h-kanji"><ruby>主人<rt>しゅじん</rt></ruby></div>
+      <div class="h-romaji">shujin</div>
+      <div class="h-tag">最禮貌・對外</div>
+      <div class="h-note">跟外人、長輩、老師講自己先生時最常用，語氣客氣。原意是「一家之主」，年輕世代有人覺得舊，但課堂與職場仍是標準說法。<br><strong>別人的先生 →「ご主人」</strong></div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="h-card" data-text="夫">
+      <div class="h-kanji"><ruby>夫<rt>おっと</rt></ruby></div>
+      <div class="h-romaji">otto</div>
+      <div class="h-tag">中性・書面</div>
+      <div class="h-note">最中性的說法，寫文章、填表格、正式場合都安全，沒有上下關係的味道。近年愈來愈多人用它取代「主人」。<br><strong>別人的先生 →「夫さん」不說</strong>，改用 ご主人／旦那さん</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="h-card" data-text="旦那">
+      <div class="h-kanji"><ruby>旦那<rt>だんな</rt></ruby></div>
+      <div class="h-romaji">danna</div>
+      <div class="h-tag">口語・輕鬆</div>
+      <div class="h-note">跟朋友聊天時的隨性說法，帶點親暱。<strong>不要對長輩或正式場合用</strong>。<br><strong>別人的先生 →「旦那さん」</strong>（比 ご主人 輕鬆一些）</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>指自己的</th><th>指別人的</th><th>場合</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-kana">主人</td><td>しゅじん ○</td><td>ご主人（ごしゅじん）</td><td class="col-meaning">對外禮貌，課堂／職場標準</td></tr>
+      <tr><td class="col-kana">夫</td><td>おっと ○</td><td>✗（不用）</td><td class="col-meaning">中性、書面、正式文件</td></tr>
+      <tr><td class="col-kana">旦那</td><td>だんな ○</td><td>旦那さん（だんなさん）</td><td class="col-meaning">朋友間閒聊，不用於正式場合</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 三種說法各造一句</div>
+
+    <div class="word-item" data-text="主人について にほんに 来ました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>主人<rt>しゅじん</rt></ruby>について <ruby>日本<rt>にほん</rt></ruby>に <ruby>来<rt>き</rt></ruby>ました</div>
+        <div class="word-romaji">shujin ni tsuite Nihon ni kimashita</div>
+        <div class="word-meaning">（對老師說）我跟著先生來日本的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="夫は 会社員です">
+      <div class="word-content">
+        <div class="word-ja"><ruby>夫<rt>おっと</rt></ruby>は <ruby>会社員<rt>かいしゃいん</rt></ruby>です</div>
+        <div class="word-romaji">otto wa kaishain desu</div>
+        <div class="word-meaning">（填表／正式介紹）我先生是上班族</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="旦那と 一緒に 行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>旦那<rt>だんな</rt></ruby>と <ruby>一緒<rt>いっしょ</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">danna to issho ni ikimasu</div>
+        <div class="word-meaning">（跟朋友聊天）我要跟我老公一起去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ご主人は お元気ですか">
+      <div class="word-content">
+        <div class="word-ja">ご<ruby>主人<rt>しゅじん</rt></ruby>は お<ruby>元気<rt>げんき</rt></ruby>ですか</div>
+        <div class="word-romaji">goshujin wa ogenki desu ka</div>
+        <div class="word-meaning">（問對方）您先生好嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、課後複習小測驗（Self-Quiz）</div>
+
+  <div class="section">
+    <div class="section-title">✍️ 填助詞／翻譯</div>
+
+    <p style="color:var(--ink-soft);font-size:14.5px;line-height:2;">
+      <strong>1.</strong> 填助詞：私は 主人（　） ついて 日本（　） 来ました。<br>
+      <strong>2.</strong> 翻成日文（人還在台灣）：我要跟先生去東京。<br>
+      <strong>3.</strong> 「日本に 来ました」跟「日本に 行きます」差在哪裡？<br>
+      <strong>4.</strong> 填助詞（に 還是 へ？兩個都可以嗎）：東京（　） 行きます。／ 主人（　） ついて 行きます。<br>
+      <strong>5.</strong> 對老師講自己的先生，用哪一個詞？問對方的先生又要怎麼說？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>
+        <strong>1.</strong> 主人<strong>に</strong> ついて 日本<strong>に</strong> 来ました。<br>
+        前一個 に＝動作的對象（跟著誰），後一個 に＝目的地（到哪裡）。第二個換成 へ 也可以。<br><br>
+        <strong>2.</strong> 主人について <ruby>東京<rt>とうきょう</rt></ruby>に 行きます。（東京へ 行きます 也可）<br><br>
+        <strong>3.</strong> 說話的人站在哪裡。人<strong>已經在日本</strong>→ 来ました（來到這裡）；人<strong>還在台灣</strong>→ 行きます（去那裡）。助詞 に 不變。<br><br>
+        <strong>4.</strong> 東京<strong>に</strong>／<strong>へ</strong> 行きます — 兩個<strong>都可以</strong>（目的地）。<br>
+        主人<strong>に</strong> ついて 行きます — 只能用 <strong>に</strong>，這個 に 是動作的對象，不是目的地。<br><br>
+        <strong>5.</strong> 自己的先生用「<ruby>主人<rt>しゅじん</rt></ruby>」（或正式的「<ruby>夫<rt>おっと</rt></ruby>」）；問對方的先生要加敬語 →「ご<ruby>主人<rt>しゅじん</rt></ruby>」。「<ruby>旦那<rt>だんな</rt></ruby>」太隨性，不對老師用。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-05-10-joshi-2.html" class="next-link" style="display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;">
+    <span style="display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;">— Related —</span>
+    <span style="display:block;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;">日文助詞 II — に・で・へ・と・も →</span>
+    <span style="display:block;font-size:14px;color:var(--ink-soft);">回頭複習 に 的三種「點」，以及 に vs で、に vs へ 的完整對照</span>
+  </a>
+
+  <a href="2026-08-04-onaka-suita.html" class="next-link" style="display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;">
+    <span style="display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;">— Same day —</span>
+    <span style="display:block;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;">お腹が空いた — 身體狀態怎麼講 →</span>
+    <span style="display:block;font-size:14px;color:var(--ink-soft);">同一天的另一半：が 的主格用法、常體 vs 丁寧體，以及身體部位單字</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .turn[data-text], .h-card[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    if (!button) return;
+    button.addEventListener('click', (e) => { e.stopPropagation(); speak(text, button); });
+  });
+</script>
+</body>
+</html>

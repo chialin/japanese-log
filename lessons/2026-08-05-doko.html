@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>どこですか — 問路與交通工具</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.bad{color:var(--ink-mute);text-decoration:line-through;}
+
+/* 句型骨架 */
+.frame{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:16px;text-align:center;}
+.frame-line{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;font-weight:600;color:var(--ink);line-height:1.6;letter-spacing:.02em;}
+.frame-line .slot{color:var(--accent);border-bottom:2px dashed var(--accent-soft);padding:0 6px;}
+.frame-line .fix{color:var(--ink-mute);}
+.frame-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;letter-spacing:.05em;margin-top:8px;}
+.frame-desc{font-size:14px;color:var(--ink-soft);margin-top:12px;line-height:1.8;text-align:left;}
+
+/* 疑問詞四人組 */
+.q-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px;}
+.q-card{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:14px 12px;text-align:center;}
+.q-card.now{border-top-color:var(--accent);background:var(--accent-pale);}
+.q-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:28px;font-weight:600;color:var(--ink);line-height:1.3;}
+.q-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;}
+.q-mean{font-size:13px;color:var(--ink-soft);margin-top:4px;}
+
+/* 頻率刻度 */
+.freq{background:rgba(255,255,255,.6);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;}
+.freq-row{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);}
+.freq-row:last-child{border-bottom:none;}
+.freq-bar{flex:0 0 92px;height:9px;background:var(--accent-pale);position:relative;}
+.freq-bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);}
+.freq-ja{flex:0 0 175px;font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:600;color:var(--ink);}
+.freq-ro{flex:0 0 84px;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;}
+.freq-mean{flex:1;font-size:13.5px;color:var(--ink-soft);}
+@media (max-width:560px){.freq-row{flex-wrap:wrap;gap:8px}.freq-ja,.freq-ro{flex:0 0 auto}.freq-mean{flex:1 0 100%}}
+
+/* 速記表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);width:150px;}
+.cheat .col-kana{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink-mute);width:160px;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">どこ</span>ですか — 問路與交通工具</h1>
+  <div class="page-meta">句型・會話 · Pattern &amp; Conversation · 2026 / 08 / 05</div>
+  <p class="page-subtitle">〜はどこですか・乗ります・使います・よく／時々</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="compare">〜はどこですか</span>＝〜在哪裡（出門在外最好用的一句）
+    ② <span class="compare">バスに乗ります</span> — 搭車的助詞是 <strong>に</strong> 不是 を
+    ③ <span class="compare">よく／時々</span>＝經常／有時候。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、〜は どこですか — 問「在哪裡」</div>
+
+  <div class="frame">
+    <div class="frame-line">
+      <span class="slot">地方</span><span class="fix">は どこですか。</span>
+    </div>
+    <div class="frame-ro">〈basho〉 wa doko desu ka</div>
+    <div class="frame-desc">
+      問路只要換前面那個詞就好，後半永遠不變。<br>
+      <span class="j-mark">は</span> 標出「我要問的是這個東西」，<strong>どこ</strong> 就是「哪裡」。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 換地方就好</div>
+
+    <div class="word-item" data-text="ゆうびんきょくは どこですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>郵便局<rt>ゆうびんきょく</rt></ruby><span class="j-mark">は</span> どこですか</div>
+        <div class="word-romaji">yūbinkyoku wa doko desu ka</div>
+        <div class="word-meaning">郵局在哪裡？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="えきは どこですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>駅<rt>えき</rt></ruby><span class="j-mark">は</span> どこですか</div>
+        <div class="word-romaji">eki wa doko desu ka</div>
+        <div class="word-meaning">車站在哪裡？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="トイレは どこですか">
+      <div class="word-content">
+        <div class="word-ja">トイレ<span class="j-mark">は</span> どこですか</div>
+        <div class="word-romaji">toire wa doko desu ka</div>
+        <div class="word-meaning">廁所在哪裡？ — 使用頻率最高的一句，先背這句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="バスていは どこですか">
+      <div class="word-content">
+        <div class="word-ja">バス<ruby>停<rt>てい</rt></ruby><span class="j-mark">は</span> どこですか</div>
+        <div class="word-romaji">basutei wa doko desu ka</div>
+        <div class="word-meaning">公車站在哪裡？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ここは どこですか">
+      <div class="word-content">
+        <div class="word-ja">ここ<span class="j-mark">は</span> どこですか</div>
+        <div class="word-romaji">koko wa doko desu ka</div>
+        <div class="word-meaning">這裡是哪裡？ — 迷路時用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>どこ 在疑問詞家族裡的位置</strong><br>
+    每個疑問詞問的東西不同，句型都一樣是「〜は ○○ ですか」。
+  </div>
+
+  <div class="q-grid">
+    <div class="q-card now">
+      <div class="q-ja">どこ</div>
+      <div class="q-ro">doko</div>
+      <div class="q-mean">哪裡（地點）</div>
+    </div>
+    <div class="q-card">
+      <div class="q-ja">なに / なん</div>
+      <div class="q-ro">nani / nan</div>
+      <div class="q-mean">什麼（東西）</div>
+    </div>
+    <div class="q-card">
+      <div class="q-ja">だれ</div>
+      <div class="q-ro">dare</div>
+      <div class="q-mean">誰（人）</div>
+    </div>
+    <div class="q-card">
+      <div class="q-ja">いつ</div>
+      <div class="q-ro">itsu</div>
+      <div class="q-mean">什麼時候（時間）</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>回答用 ここ・そこ・あそこ</strong><br>
+    問 <strong>どこ</strong>，答的人會用 <span class="compare">ここ</span>（這裡）／<span class="compare">そこ</span>（那裡）／<span class="compare">あそこ</span>（那邊）。
+    這組指示詞在 <a href="2026-07-29-koko-soko-asoko.html" style="color:var(--accent);">7/29 的課</a> 學過。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、バスに 乗ります — 搭車用「に」</div>
+
+  <div class="frame">
+    <div class="frame-line">
+      <span class="slot">交通工具</span><span class="fix">に <ruby>乗<rt>の</rt></ruby>ります</span>
+    </div>
+    <div class="frame-ro">〈norimono〉 ni norimasu</div>
+    <div class="frame-desc">
+      「搭乘」的助詞是 <span class="j-mark">に</span>。想成<strong>「上到車子這個點」</strong>——
+      跟目的地的 に 一樣，都是「落在某個點上」的感覺。
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>不是「を」，是「に」</strong><br>
+    ○ バス<span class="j-mark">に</span> <ruby>乗<rt>の</rt></ruby>ります　　✗ <span class="bad">バスを 乗ります</span><br>
+    中文說「搭<u>公車</u>」，公車像受詞，很容易脫口說成 を。日文的「乗る」<strong>不吃受詞</strong>，
+    要用 に 標出上車的地方。<br>
+    對照：<strong>下車</strong>是 バス<span class="j-mark">を</span> <ruby>降<rt>お</rt></ruby>ります（離開某個空間用 を）。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 乗ります／降ります</div>
+
+    <div class="word-item" data-text="のります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>乗<rt>の</rt></ruby>ります</div>
+        <div class="word-romaji">norimasu</div>
+        <div class="word-meaning">搭乘、上車 — 常體＝<ruby>乗<rt>の</rt></ruby>る</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="バスに のりますか">
+      <div class="word-content">
+        <div class="word-ja">バス<span class="j-mark">に</span> <ruby>乗<rt>の</rt></ruby>りますか</div>
+        <div class="word-romaji">basu ni norimasu ka</div>
+        <div class="word-meaning">你搭公車嗎？ — 句尾 か＝疑問</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="でんしゃに のります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電車<rt>でんしゃ</rt></ruby><span class="j-mark">に</span> <ruby>乗<rt>の</rt></ruby>ります</div>
+        <div class="word-romaji">densha ni norimasu</div>
+        <div class="word-meaning">搭電車</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="えきで でんしゃを おります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>駅<rt>えき</rt></ruby><span class="j-mark">で</span> <ruby>電車<rt>でんしゃ</rt></ruby><span class="j-mark">を</span> <ruby>降<rt>お</rt></ruby>ります</div>
+        <div class="word-romaji">eki de densha o orimasu</div>
+        <div class="word-meaning">在車站下電車 — 上車用 に，下車用 を</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、よく・時々 — 多常做</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    昨天學的「<ruby>週<rt>しゅう</rt></ruby>に2、3<ruby>回<rt>かい</rt></ruby>」是<strong>講明確次數</strong>；
+    這裡的 よく・時々 是<strong>不講數字的模糊說法</strong>，日常會話更常用。放在<strong>動詞前面</strong>。
+  </p>
+
+  <div class="freq">
+    <div class="freq-row">
+      <span class="freq-bar"><i style="width:92%"></i></span>
+      <span class="freq-ja">いつも</span>
+      <span class="freq-ro">itsumo</span>
+      <span class="freq-mean">總是、每次都</span>
+    </div>
+    <div class="freq-row">
+      <span class="freq-bar"><i style="width:70%"></i></span>
+      <span class="freq-ja">よく</span>
+      <span class="freq-ro">yoku</span>
+      <span class="freq-mean">經常、常常 — <strong>今天的重點</strong></span>
+    </div>
+    <div class="freq-row">
+      <span class="freq-bar"><i style="width:40%"></i></span>
+      <span class="freq-ja"><ruby>時々<rt>ときどき</rt></ruby></span>
+      <span class="freq-ro">tokidoki</span>
+      <span class="freq-mean">有時候 — <strong>今天的重點</strong></span>
+    </div>
+    <div class="freq-row">
+      <span class="freq-bar"><i style="width:16%"></i></span>
+      <span class="freq-ja">あまり〜ません</span>
+      <span class="freq-ro">amari</span>
+      <span class="freq-mean">不太〜（後面一定接否定）</span>
+    </div>
+    <div class="freq-row">
+      <span class="freq-bar"><i style="width:0%"></i></span>
+      <span class="freq-ja">ぜんぜん〜ません</span>
+      <span class="freq-ro">zenzen</span>
+      <span class="freq-mean">完全不〜（後面一定接否定）</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="ときどき">
+      <div class="word-content">
+        <div class="word-ja"><ruby>時々<rt>ときどき</rt></ruby></div>
+        <div class="word-romaji">tokidoki</div>
+        <div class="word-meaning">有時候 — 「時」重複兩次，第二個濁化成 <strong>どき</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="でんしゃを よく つかいます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電車<rt>でんしゃ</rt></ruby><span class="j-mark">を</span> よく <ruby>使<rt>つか</rt></ruby>います</div>
+        <div class="word-romaji">densha o yoku tsukaimasu</div>
+        <div class="word-meaning">我常搭電車 —「使う」是<strong>及物動詞</strong>，所以這裡用 <span class="j-mark">を</span></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ときどき バスに のります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>時々<rt>ときどき</rt></ruby> バス<span class="j-mark">に</span> <ruby>乗<rt>の</rt></ruby>ります</div>
+        <div class="word-romaji">tokidoki basu ni norimasu</div>
+        <div class="word-meaning">我有時候搭公車</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="つかいます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>使<rt>つか</rt></ruby>います</div>
+        <div class="word-romaji">tsukaimasu</div>
+        <div class="word-meaning">使用 — 常體＝<ruby>使<rt>つか</rt></ruby>う</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>「乗ります」跟「使います」助詞不一樣</strong><br>
+    ○ 電車<span class="j-mark">に</span> <ruby>乗<rt>の</rt></ruby>ります（上到車上）<br>
+    ○ 電車<span class="j-mark">を</span> <ruby>使<rt>つか</rt></ruby>います（把電車當工具用）<br>
+    兩句意思接近，但動詞不同、助詞就不同 — 記動詞的時候要<strong>連助詞一起記</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、小會話 — 把今天的湊起來</div>
+
+  <div class="section">
+    <div class="section-title">💬 郵局怎麼走</div>
+
+    <div class="word-item" data-text="すみません、ゆうびんきょくは どこですか">
+      <div class="word-content">
+        <div class="word-ja">すみません、<ruby>郵便局<rt>ゆうびんきょく</rt></ruby><span class="j-mark">は</span> どこですか。</div>
+        <div class="word-romaji">sumimasen, yūbinkyoku wa doko desu ka</div>
+        <div class="word-meaning">不好意思，請問郵局在哪裡？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="えきの ちかくです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>駅<rt>えき</rt></ruby><span class="j-mark">の</span> <ruby>近<rt>ちか</rt></ruby>くです。</div>
+        <div class="word-romaji">eki no chikaku desu</div>
+        <div class="word-meaning">在車站附近。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="バスに のりますか">
+      <div class="word-content">
+        <div class="word-ja">バス<span class="j-mark">に</span> <ruby>乗<rt>の</rt></ruby>りますか。</div>
+        <div class="word-romaji">basu ni norimasu ka</div>
+        <div class="word-meaning">要搭公車嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいえ、あるいて いきます">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">iie, aruite ikimasu</div>
+        <div class="word-meaning">不用，我走路去。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · Cheat sheet</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>單字／句型</th><th>讀音</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">どこ</td><td class="col-kana">どこ</td><td class="col-mean">哪裡</td></tr>
+      <tr><td class="col-ja">〜はどこですか</td><td class="col-kana">〜は どこですか</td><td class="col-mean">〜在哪裡？</td></tr>
+      <tr><td class="col-ja">郵便局</td><td class="col-kana">ゆうびんきょく</td><td class="col-mean">郵局</td></tr>
+      <tr><td class="col-ja">駅</td><td class="col-kana">えき</td><td class="col-mean">車站</td></tr>
+      <tr><td class="col-ja">電車</td><td class="col-kana">でんしゃ</td><td class="col-mean">電車</td></tr>
+      <tr><td class="col-ja">バス</td><td class="col-kana">ばす</td><td class="col-mean">公車</td></tr>
+      <tr><td class="col-ja">乗ります</td><td class="col-kana">のります</td><td class="col-mean">搭乘（〜<strong>に</strong> 乗ります）</td></tr>
+      <tr><td class="col-ja">降ります</td><td class="col-kana">おります</td><td class="col-mean">下車（〜<strong>を</strong> 降ります）</td></tr>
+      <tr><td class="col-ja">使います</td><td class="col-kana">つかいます</td><td class="col-mean">使用（〜<strong>を</strong> 使います）</td></tr>
+      <tr><td class="col-ja">よく</td><td class="col-kana">よく</td><td class="col-mean">經常</td></tr>
+      <tr><td class="col-ja">時々</td><td class="col-kana">ときどき</td><td class="col-mean">有時候</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗（Self-Quiz）</div>
+
+  <div class="section">
+    <div class="section-title">✍️ 填助詞／翻譯</div>
+
+    <p style="color:var(--ink-soft);font-size:14.5px;line-height:2;">
+      <strong>1.</strong> 翻成日文：請問郵局在哪裡？<br>
+      <strong>2.</strong> 填助詞：バス（　） <ruby>乗<rt>の</rt></ruby>りますか。／ <ruby>電車<rt>でんしゃ</rt></ruby>（　） <ruby>使<rt>つか</rt></ruby>います。<br>
+      <strong>3.</strong> 為什麼「搭公車」不能說 <span class="bad">バスを乗ります</span>？<br>
+      <strong>4.</strong> 翻成日文：我有時候搭公車。<br>
+      <strong>5.</strong> よく 跟 時々 哪一個比較頻繁？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>
+        <strong>1.</strong> すみません、<ruby>郵便局<rt>ゆうびんきょく</rt></ruby><strong>は</strong> どこですか。<br><br>
+        <strong>2.</strong> バス<strong>に</strong> 乗りますか。／ 電車<strong>を</strong> 使います。<br>
+        「乗る」用 に（上到某個點），「使う」是及物動詞用 を。<br><br>
+        <strong>3.</strong> 因為「<ruby>乗<rt>の</rt></ruby>る」不吃受詞，交通工具是「上車的落點」而不是被動作的對象，所以用 <strong>に</strong>。
+        中文的「搭公車」讓人直覺想用 を，這是台灣人最常犯的錯。<br><br>
+        <strong>4.</strong> <ruby>時々<rt>ときどき</rt></ruby> バス<strong>に</strong> <ruby>乗<rt>の</rt></ruby>ります。（頻率副詞放動詞前面）<br><br>
+        <strong>5.</strong> <strong>よく</strong> 比較頻繁。順序是 いつも ＞ よく ＞ 時々 ＞ あまり〜ません ＞ ぜんぜん〜ません。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-04-mokutekichi-ni.html" class="next-link">
+    <span class="next-kicker">— Related · 2026/08/04 —</span>
+    <span class="next-title">目的地 ＋ に — 主人について日本に来ました <span class="next-arrow">→</span></span>
+    <span class="next-sub">「乗ります」的 に 跟目的地的 に 是同一種「點」的感覺，一起看更清楚</span>
+  </a>
+
+  <a href="2026-08-05-renshuu-kaiwa.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">練習と会話 — 週に2、3回 <span class="next-arrow">→</span></span>
+    <span class="next-sub">講明確次數的「期間に〜回」，跟這頁的 よく／時々 是一組的</span>
+  </a>
+
+  <a href="2026-08-05-hinichi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">日にち — 1日〜31日的唸法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">ついたち・ふつか…とおか 的特殊唸法</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    if (!button) return;
+    button.addEventListener('click', (e) => { e.stopPropagation(); speak(text, button); });
+  });
+</script>
+</body>
+</html>

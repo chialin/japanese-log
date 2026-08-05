@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>練習と会話 — 週に2、3回 ＋ た 的單字</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 句型骨架 */
+.frame{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin-bottom:16px;text-align:center;}
+.frame-line{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;font-weight:600;color:var(--ink);line-height:1.6;letter-spacing:.02em;}
+.frame-line .slot{color:var(--accent);border-bottom:2px dashed var(--accent-soft);padding:0 6px;}
+.frame-line .fix{color:var(--ink-mute);}
+.frame-ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;letter-spacing:.05em;margin-top:8px;}
+.frame-desc{font-size:14px;color:var(--ink-soft);margin-top:12px;line-height:1.8;text-align:left;}
+
+/* た 單字大字卡 */
+.ta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:16px;}
+.ta-card{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:18px 16px 14px;text-align:center;}
+.ta-kanji{font-family:'Klee One','Shippori Mincho',serif;font-size:44px;font-weight:600;color:var(--ink);line-height:1.3;}
+.ta-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--accent);margin-top:4px;}
+.ta-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:15px;letter-spacing:.05em;}
+.ta-mean{font-size:14px;color:var(--ink-soft);margin-top:6px;line-height:1.7;}
+.ta-card .play-btn{margin-top:10px;}
+
+/* 速記表 */
+.cheat{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.cheat th,.cheat td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.cheat th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.cheat tr:last-child td{border-bottom:none;}
+.cheat .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);width:130px;}
+.cheat .col-kana{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink-mute);width:150px;}
+.cheat .col-mean{color:var(--ink-soft);}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><ruby>練習<rt>れんしゅう</rt></ruby>と<ruby>会話<rt>かいわ</rt></ruby> — <span class="accent">週に2、3回</span></h1>
+  <div class="page-meta">單字・句型 · Vocabulary &amp; Pattern · 2026 / 08 / 05</div>
+  <p class="page-subtitle">練習・会話・あとで ＋ 頻率說法 ＋ た 開頭的單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="compare">期間 ＋ に ＋ 次數</span>＝多久做幾次（<strong>又一個 に 的用法</strong>）
+    ② <span class="compare">〜のあとで</span>＝做完某事之後
+    ③ た 開頭的三個單字：たまご・たき・たんぼ。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、今天的核心單字</div>
+
+  <div class="section">
+    <div class="section-title">📖 練習・会話・あと</div>
+
+    <div class="word-item" data-text="れんしゅう">
+      <div class="word-content">
+        <div class="word-ja"><ruby>練習<rt>れんしゅう</rt></ruby></div>
+        <div class="word-romaji">renshū</div>
+        <div class="word-meaning">練習 — 加 します 就變動詞：<ruby>練習<rt>れんしゅう</rt></ruby>します（練習）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="かいわ">
+      <div class="word-content">
+        <div class="word-ja"><ruby>会話<rt>かいわ</rt></ruby></div>
+        <div class="word-romaji">kaiwa</div>
+        <div class="word-meaning">會話、對話 — 会（見面）＋話（說話）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あとで">
+      <div class="word-content">
+        <div class="word-ja"><ruby>後<rt>あと</rt></ruby>で</div>
+        <div class="word-romaji">ato de</div>
+        <div class="word-meaning">之後、待會兒 — 單講「あとで」＝等一下再說</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="かいわの れんしゅうを します">
+      <div class="word-content">
+        <div class="word-ja"><ruby>会話<rt>かいわ</rt></ruby><span class="j-mark">の</span> <ruby>練習<rt>れんしゅう</rt></ruby><span class="j-mark">を</span> します</div>
+        <div class="word-romaji">kaiwa no renshū o shimasu</div>
+        <div class="word-meaning">做會話練習 — 名詞＋を＋します</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="れんしゅうの あとで、かいわします">
+      <div class="word-content">
+        <div class="word-ja"><ruby>練習<rt>れんしゅう</rt></ruby><span class="j-mark">の</span> <ruby>後<rt>あと</rt></ruby>で、<ruby>会話<rt>かいわ</rt></ruby>します</div>
+        <div class="word-romaji">renshū no ato de, kaiwa shimasu</div>
+        <div class="word-meaning">練習之後，來對話 —「名詞 ＋ の ＋ あとで」＝做完某事之後</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、一週間に2、3回 — 多久做幾次</div>
+
+  <div class="frame">
+    <div class="frame-line">
+      <span class="slot">期間</span><span class="fix">に</span> <span class="slot">次數</span><span class="fix">、〜します</span>
+    </div>
+    <div class="frame-ro">〈kikan〉ni 〈kaisū〉, 〜shimasu</div>
+    <div class="frame-desc">
+      「多久之內做幾次」＝<strong>期間 ＋ に ＋ 次數</strong>。這個 <span class="j-mark">に</span> 是<strong>頻率</strong>用法，
+      跟昨天學的「目的地 ＋ に」是同一個字、不同功能。<br>
+      次數用「<ruby>回<rt>かい</rt></ruby>」數：1回（いっかい）・2回（にかい）・3回（さんかい）。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 頻率例句</div>
+
+    <div class="word-item" data-text="いっしゅうかんに に、さんかい れんしゅうします">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一週間<rt>いっしゅうかん</rt></ruby><span class="j-mark">に</span> 2、3<ruby>回<rt>かい</rt></ruby> <ruby>練習<rt>れんしゅう</rt></ruby>します</div>
+        <div class="word-romaji">isshūkan ni ni-san-kai renshū shimasu</div>
+        <div class="word-meaning">一週練習兩三次 — 口語也常省成「<ruby>週<rt>しゅう</rt></ruby>に2、3回」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しゅうに に、さんかい かいわの れんしゅうを します">
+      <div class="word-content">
+        <div class="word-ja"><ruby>週<rt>しゅう</rt></ruby><span class="j-mark">に</span> 2、3<ruby>回<rt>かい</rt></ruby> <ruby>会話<rt>かいわ</rt></ruby>の<ruby>練習<rt>れんしゅう</rt></ruby>をします</div>
+        <div class="word-romaji">shū ni ni-san-kai kaiwa no renshū o shimasu</div>
+        <div class="word-meaning">一週做兩三次會話練習</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いちにちに いっかい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一日<rt>いちにち</rt></ruby><span class="j-mark">に</span> <ruby>一回<rt>いっかい</rt></ruby></div>
+        <div class="word-romaji">ichinichi ni ikkai</div>
+        <div class="word-meaning">一天一次 — 注意促音：いち<strong>かい</strong> ✗ → いっ<strong>かい</strong> ○</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いっかげつに さんかい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby><span class="j-mark">に</span> 3<ruby>回<rt>かい</rt></ruby></div>
+        <div class="word-romaji">ikkagetsu ni san-kai</div>
+        <div class="word-meaning">一個月三次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>到目前為止的 に — 已經四種了</strong><br>
+    ① 目的地：日本<span class="j-mark">に</span> 行きます　② 對象：主人<span class="j-mark">に</span> ついて<br>
+    ③ 時間點：7時<span class="j-mark">に</span> おきます　④ <strong>頻率：週<span class="j-mark">に</span> 2、3回</strong>（今天新增）<br>
+    共通的感覺都是「<strong>點</strong>」——落在哪個地方、哪個時間、哪個範圍裡的幾次。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、た 開頭的單字</div>
+
+  <div class="ta-grid">
+
+    <div class="ta-card" data-text="たまご">
+      <div class="ta-kanji"><ruby>卵<rt>たまご</rt></ruby></div>
+      <div class="ta-kana">たまご</div>
+      <div class="ta-romaji">tamago</div>
+      <div class="ta-mean">蛋 — 食用的蛋寫「卵」，生物學的寫「玉子」也通（餐廳菜單常見 玉子）</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="ta-card" data-text="たき">
+      <div class="ta-kanji"><ruby>滝<rt>たき</rt></ruby></div>
+      <div class="ta-kana">たき</div>
+      <div class="ta-romaji">taki</div>
+      <div class="ta-mean">瀑布 — 部首是「氵（水）」，右邊是「竜（龍）」，水像龍一樣落下</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="ta-card" data-text="たんぼ">
+      <div class="ta-kanji"><ruby>田<rt>た</rt></ruby>んぼ</div>
+      <div class="ta-kana">たんぼ</div>
+      <div class="ta-romaji">tanbo</div>
+      <div class="ta-mean">田、稻田 — 單一個「田」唸 <strong>た</strong>，日常講田地多半說「田んぼ」</div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <div class="tip">
+    💡 <strong>「田」在名字裡最常見</strong><br>
+    山田（やま<strong>だ</strong>）、田中（<strong>た</strong>なか）、本田（ほん<strong>だ</strong>）——
+    放在後面時多半濁化成 <strong>だ</strong>，放前面維持 <strong>た</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、其他單字 — ペン・教会</div>
+
+  <div class="section">
+    <div class="section-title">📖 物と場所</div>
+
+    <div class="word-item" data-text="ペン">
+      <div class="word-content">
+        <div class="word-ja">ペン</div>
+        <div class="word-romaji">pen</div>
+        <div class="word-meaning">筆、原子筆 — 外來語（英語 pen）。<ruby>鉛筆<rt>えんぴつ</rt></ruby>＝鉛筆，<ruby>筆<rt>ふで</rt></ruby>＝毛筆，三個不一樣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ペンで かきます">
+      <div class="word-content">
+        <div class="word-ja">ペン<span class="j-mark">で</span> <ruby>書<rt>か</rt></ruby>きます</div>
+        <div class="word-romaji">pen de kakimasu</div>
+        <div class="word-meaning">用筆寫 — <span class="j-mark">で</span>＝用什麼工具（跟 に 不同）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きょうかい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>教会<rt>きょうかい</rt></ruby></div>
+        <div class="word-romaji">kyōkai</div>
+        <div class="word-meaning">教堂、教會 — 教（教導）＋会（聚會）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きょうかいに いきます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>教会<rt>きょうかい</rt></ruby><span class="j-mark">に</span> <ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">kyōkai ni ikimasu</div>
+        <div class="word-meaning">去教堂 — 目的地＋に（昨天學的）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しゅうに いっかい きょうかいに いきます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>週<rt>しゅう</rt></ruby><span class="j-mark">に</span> 1<ruby>回<rt>かい</rt></ruby> <ruby>教会<rt>きょうかい</rt></ruby><span class="j-mark">に</span> <ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">shū ni ikkai kyōkai ni ikimasu</div>
+        <div class="word-meaning">一週去一次教堂 — 一句裡兩個 に：頻率 ＋ 目的地</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速 記 表 · Cheat sheet</div>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>單字</th><th>讀音</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">練習</td><td class="col-kana">れんしゅう</td><td class="col-mean">練習（＋します＝動詞）</td></tr>
+      <tr><td class="col-ja">会話</td><td class="col-kana">かいわ</td><td class="col-mean">會話、對話</td></tr>
+      <tr><td class="col-ja">後で</td><td class="col-kana">あとで</td><td class="col-mean">之後、待會兒</td></tr>
+      <tr><td class="col-ja">卵</td><td class="col-kana">たまご</td><td class="col-mean">蛋</td></tr>
+      <tr><td class="col-ja">滝</td><td class="col-kana">たき</td><td class="col-mean">瀑布</td></tr>
+      <tr><td class="col-ja">田んぼ</td><td class="col-kana">たんぼ</td><td class="col-mean">田、稻田（單字「田」＝た）</td></tr>
+      <tr><td class="col-ja">ペン</td><td class="col-kana">ぺん</td><td class="col-mean">筆、原子筆（外來語）</td></tr>
+      <tr><td class="col-ja">教会</td><td class="col-kana">きょうかい</td><td class="col-mean">教堂、教會</td></tr>
+      <tr><td class="col-ja">〜回</td><td class="col-kana">〜かい</td><td class="col-mean">次數（1回＝いっかい）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗（Self-Quiz）</div>
+
+  <div class="section">
+    <div class="section-title">✍️ 填助詞／翻譯</div>
+
+    <p style="color:var(--ink-soft);font-size:14.5px;line-height:2;">
+      <strong>1.</strong> 填助詞：<ruby>週<rt>しゅう</rt></ruby>（　） 2、3<ruby>回<rt>かい</rt></ruby> <ruby>練習<rt>れんしゅう</rt></ruby>します。<br>
+      <strong>2.</strong> 翻成日文：一週去一次教堂。<br>
+      <strong>3.</strong> 「一回」怎麼唸？為什麼不是「いちかい」？<br>
+      <strong>4.</strong> 填助詞：ペン（　） <ruby>書<rt>か</rt></ruby>きます。／ <ruby>教会<rt>きょうかい</rt></ruby>（　） <ruby>行<rt>い</rt></ruby>きます。<br>
+      <strong>5.</strong> 蛋、瀑布、田 的日文各是什麼？（都是 た 開頭）
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>
+        <strong>1.</strong> 週<strong>に</strong> 2、3回 練習します。期間 ＋ <strong>に</strong> ＋ 次數。<br><br>
+        <strong>2.</strong> <ruby>週<rt>しゅう</rt></ruby>に 1<ruby>回<rt>かい</rt></ruby>、<ruby>教会<rt>きょうかい</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。（前面的 に＝頻率，後面的 に＝目的地）<br><br>
+        <strong>3.</strong> <strong>いっかい</strong>。「いち」後面接 か行會產生<strong>促音</strong>，いち＋かい → いっかい。同款的還有 一か月（いっかげつ）。<br><br>
+        <strong>4.</strong> ペン<strong>で</strong> 書きます（で＝用什麼工具）／ 教会<strong>に</strong> 行きます（に＝目的地，換 へ 也可）。<br><br>
+        <strong>5.</strong> 蛋＝<ruby>卵<rt>たまご</rt></ruby>、瀑布＝<ruby>滝<rt>たき</rt></ruby>、田＝<ruby>田<rt>た</rt></ruby>／<ruby>田<rt>た</rt></ruby>んぼ。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-04-mokutekichi-ni.html" class="next-link">
+    <span class="next-kicker">— Related · 2026/08/04 —</span>
+    <span class="next-title">目的地 ＋ に — 主人について日本に来ました <span class="next-arrow">→</span></span>
+    <span class="next-sub">に 的另外兩種用法（目的地／動作對象），跟今天的「頻率 に」對照著看</span>
+  </a>
+
+  <a href="2026-08-05-hinichi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">日にち — 1日〜31日的唸法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">ついたち・ふつか…とおか 的特殊唸法，跟今天的「〜回」一起記數量詞</span>
+  </a>
+
+  <a href="2026-08-05-doko.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">どこですか — 問路與交通工具 <span class="next-arrow">→</span></span>
+    <span class="next-sub">〜はどこですか ＋ バスに乗ります 的 に ＋ 頻率副詞 よく／時々</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .ta-card[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    if (!button) return;
+    button.addEventListener('click', (e) => { e.stopPropagation(); speak(text, button); });
+  });
+</script>
+</body>
+</html>

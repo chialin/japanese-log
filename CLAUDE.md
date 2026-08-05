@@ -196,7 +196,25 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 
 #### 類型 → 樣板對照
 
-各類頁面共用 `shared.css` 的這組基礎結構：`.wrap` / `.masthead` / `.back-link` / `.page-title` / `.page-subtitle` / `.speed-control` / `.divider` / `.tip` `.note` `.alert` `.warning` / `.compare` / `.play-btn`。
+各類頁面共用 `shared.css` 的這組基礎結構：`.wrap` / `.masthead` / `.back-link` / `.page-title` / `.page-subtitle` / `.speed-control` / `.divider` / `.tip` `.note` `.alert` `.warning` / `.compare` / `.play-btn` / `.next-link`。
+
+#### 跨頁連結卡 `.next-link`（2026-08-05 統一）
+
+`.next-link` ＋ `.next-kicker` `.next-title` `.next-arrow` `.next-sub` 已收進 **shared.css**，新頁直接用 class，
+**不要再寫 inline style**（舊頁 `<style>` 裡的同名副本先留著，會被後載入的 shared.css 蓋掉）。
+
+**同一天的另一堂課**一律加 `.same-day`，kicker 文字固定寫 `— 同一天 / Same day —`：
+
+```html
+<a href="2026-08-04-onaka-suita.html" class="next-link same-day">
+  <span class="next-kicker">— 同一天 / Same day —</span>
+  <span class="next-title">頁面標題 <span class="next-arrow">→</span></span>
+  <span class="next-sub">一句話說明</span>
+</a>
+```
+
+`.same-day` 會把左邊框、kicker、hover 箭頭換成青綠 `#4a7c6f`（＋淡青底），跟一般卡（棕橘 `--accent`）
+一眼分得出來。其餘用途的 kicker 文字不限（Related / Prev / 複習 / 前情提要 …），但都維持預設棕橘。
 
 剩下的依「子類型」挑用對應區塊：
 

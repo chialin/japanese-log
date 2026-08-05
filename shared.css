@@ -403,6 +403,40 @@ rt {
 .lesson-link:hover .lesson-title .arrow { color: var(--accent); transform: translateX(4px); }
 .lesson-summary { font-size: 14px; color: var(--ink-soft); }
 
+/* ── 跨頁連結卡 next-link ──
+   基礎樣式（各頁 <style> 裡多半也有一份同名規則，這裡是統一版本）。
+   .same-day＝同一天的另一堂課，改用青綠色標示，跟一般 Related 卡區隔。
+   統一寫法：kicker 一律寫「— 同一天 / Same day —」。 */
+.next-link {
+  display: block; background: rgba(255,255,255,.55);
+  border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  padding: 18px 22px; text-decoration: none; color: inherit; margin-top: 24px;
+  transition: border-color .15s, background .15s, transform .15s;
+}
+.next-link:hover { border-color: var(--accent); background: rgba(255,255,255,.8); transform: translateX(4px); }
+.next-kicker {
+  display: block; font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 13px; letter-spacing: .15em; color: var(--ink-mute);
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.next-title {
+  display: flex; align-items: center; font-family: 'Shippori Mincho', serif;
+  font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 6px;
+}
+.next-arrow { margin-left: auto; color: var(--ink-mute); transition: transform .15s, color .15s; }
+.next-link:hover .next-arrow { color: var(--accent); transform: translateX(4px); }
+.next-sub { display: block; font-size: 14px; color: var(--ink-soft); }
+
+/* 同一天的課 — 青綠色 */
+.next-link.same-day {
+  --sameday: #4a7c6f;
+  border-left-color: var(--sameday);
+  background: rgba(74,124,111,.05);
+}
+.next-link.same-day:hover { border-color: var(--sameday); background: rgba(74,124,111,.1); }
+.next-link.same-day .next-kicker { color: var(--sameday); }
+.next-link.same-day:hover .next-arrow { color: var(--sameday); }
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .wrap { padding: 32px 18px 64px; }

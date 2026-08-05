@@ -254,6 +254,7 @@ rt {
 .kanji-tile:hover { border-color: var(--accent); }
 .kanji-tile.hot { border-color: var(--accent-soft); background: var(--accent-pale); }
 .kanji-tile.on { background: var(--accent); border-color: var(--accent); }
+.kanji-tile.filtered-out { display: none; }
 .kt-char { display: block; font-family: 'Klee One','Shippori Mincho',serif; font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1.15; }
 .kt-n { display: block; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 11px; color: var(--ink-mute); }
 .kanji-tile.on .kt-char, .kanji-tile.on .kt-n { color: #fff; }

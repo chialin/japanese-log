@@ -8,11 +8,15 @@ const FILTERS = [
   { key: 'taigi', label: '台語線索' },
 ];
 
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
 const tile = ([ch, e]) => {
   const cls = 'kanji-tile' + (e.days >= 3 ? ' hot' : '');
-  return `<button class="${cls}" data-kanji="${ch}" data-days="${e.days}" ` +
+  const days = Number(e.days) || 0;
+  return `<button class="${cls}" data-kanji="${esc(ch)}" data-days="${days}" ` +
     `data-multi="${e.multi ? 1 : 0}" data-taigi="${e.taigi ? 1 : 0}">` +
-    `<span class="kt-char">${ch}</span><span class="kt-n">${e.days}</span></button>`;
+    `<span class="kt-char">${esc(ch)}</span><span class="kt-n">${days}</span></button>`;
 };
 
 export function renderIndexPage(entries) {

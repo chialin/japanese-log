@@ -196,7 +196,23 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 
 #### 類型 → 樣板對照
 
-各類頁面共用 `shared.css` 的這組基礎結構：`.wrap` / `.masthead` / `.back-link` / `.page-title` / `.page-subtitle` / `.speed-control` / `.divider` / `.tip` `.note` `.alert` `.warning` / `.compare` / `.play-btn` / `.next-link`。
+各類頁面共用 `shared.css` 的這組基礎結構：`.wrap` / `.masthead` / `.back-link` / `.page-title` / `.page-subtitle` / `.speed-control` / `.divider` / `.tip` `.note` `.alert` `.warning` `.mnemonic` / `.compare` / `.play-btn` / `.next-link`。
+
+#### 記憶小撇步 `.mnemonic`（2026-08-05 新增）
+
+**自己想出來的聯想／諧音記法**用 `.mnemonic`，紅框（`#a8352c`）＋淡紅底，跟課本內容（棕橘的
+`.tip` / `.note` / `.alert`）明確區隔——紅色＝「這是我自己的聯想，不是老師教的」。
+
+```html
+<div class="mnemonic">
+  🧠 <strong>我的記憶小撇步 — 標題</strong><br>
+  內容（裡面的 <span class="compare">…</span> 與 <a> 會自動跟著變紅）
+</div>
+```
+
+範例見 [doko](lessons/2026-08-05-doko.html) 的「郵便局＝ゆうびん＋台語的局(kiok)」。
+⚠️ 台羅的入聲調符（U+030D，如 `kio̍k`）在 Klee One / Shippori Mincho 下會顯示成豆腐框，
+寫台語拼音時**去掉調符**（`kiok`／`ioh`）。
 
 #### 跨頁連結卡 `.next-link`（2026-08-05 統一）
 
@@ -213,8 +229,8 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 </a>
 ```
 
-`.same-day` 會把左邊框、kicker、hover 箭頭換成青綠 `#4a7c6f`（＋淡青底），跟一般卡（棕橘 `--accent`）
-一眼分得出來。其餘用途的 kicker 文字不限（Related / Prev / 複習 / 前情提要 …），但都維持預設棕橘。
+`.same-day` 會把左邊框、kicker、hover 箭頭換成金茶 `#a9762a`（＋淡金底）——跟主色 `--accent`（棕橘 `#c96830`）
+同屬暖色系但偏黃，一眼分得出來又不跳出配色。其餘用途的 kicker 文字不限（Related / Prev / 複習 / 前情提要 …），但都維持預設棕橘。
 
 剩下的依「子類型」挑用對應區塊：
 

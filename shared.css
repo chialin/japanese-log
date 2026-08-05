@@ -219,6 +219,20 @@ rt {
   font-size: 14px; color: var(--ink-soft); line-height: 1.85;
 }
 
+/* ── 自己想出來的記憶小撇步（紅框，跟一般 tip/note 區隔）──
+   用法：<div class="mnemonic">🧠 <strong>標題</strong><br>內容</div>
+   紅色是「這是我自己的聯想，不是課本教的」的標記，全站統一。 */
+.mnemonic {
+  --memo: #a8352c;
+  background: rgba(168,53,44,.05);
+  border: 1px solid rgba(168,53,44,.3); border-left: 3px solid var(--memo);
+  padding: 16px 20px; margin-bottom: 16px;
+  font-size: 14px; color: var(--ink-soft); line-height: 1.9;
+}
+.mnemonic strong { color: var(--memo); }
+.mnemonic .compare { background: rgba(168,53,44,.1); color: var(--memo); }
+.mnemonic a { color: var(--memo); }
+
 /* ── Highlight inline ── */
 .compare {
   display: inline-block; background: var(--accent-pale);
@@ -427,18 +441,18 @@ rt {
 .next-link:hover .next-arrow { color: var(--accent); transform: translateX(4px); }
 .next-sub { display: block; font-size: 14px; color: var(--ink-soft); }
 
-/* 同一天的課 — 青綠色 */
+/* 同一天的課 — 金茶色（跟主色 --accent #c96830 同屬暖色系，但偏黃、不會認錯）*/
 .next-link.same-day {
-  --sameday: #4a7c6f;
-  /* 四邊都要改：只換 border-left 的話，上下右會留著暖橘的 --line，
-     hover 時才一次全變綠，跳色很明顯 */
-  border-color: rgba(74,124,111,.3);
+  --sameday: #a9762a;
+  /* 四邊都要改：只換 border-left 的話，上下右會留著 --line，
+     hover 時才一次全變色，跳色很明顯 */
+  border-color: rgba(169,118,42,.3);
   border-left-color: var(--sameday);
-  background: rgba(74,124,111,.05);
+  background: rgba(169,118,42,.05);
 }
 .next-link.same-day:hover {
   border-color: var(--sameday);
-  background: rgba(74,124,111,.1);
+  background: rgba(169,118,42,.1);
 }
 .next-link.same-day .next-kicker { color: var(--sameday); }
 .next-link.same-day:hover .next-arrow { color: var(--sameday); }

@@ -80,7 +80,7 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
 
 **Step 3 — 加子類型專屬 CSS／HTML 區塊**（從下方「子類型 → 樣板對照」表挑最近的範本，把它的 `<style>` 與結構複製過來）。
 
-**Step 4 — 在 `index.html` `<ul id="lesson-list">` 開頭插入新 `<li>`**（新→舊排序）：
+**Step 4 — 在 `index.html` `<ul id="lesson-list">` 插入新 `<li>`，位置由日期決定**：
 
 ```html
 <li>
@@ -92,6 +92,23 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
   </a>
 </li>
 ```
+
+**排序規則（清單一律新→舊）：**
+- **不是無條件插到最前面**——先看清單第一筆的 `data-date`，把新 `<li>` 放到**它自己日期該在的位置**。
+- **同一天有多篇**時，新的那篇放在該日其他篇的**最前面**（同日之間＝新→舊）。
+- **補寫前幾天的課**時更要注意，往下找到對應日期再插入。
+- 改完用這行驗一次，有輸出就是有錯位：
+
+```bash
+grep -o 'data-date="[0-9-]*"' index.html | sed 's/data-date="//;s/"//' | awk 'p!="" && $0>p {print "順序錯: "p" -> "$0} {p=$0}'
+```
+
+> 2026-08-05 踩過一次：新增 8/4 兩篇時照舊插到 `<ul>` 開頭，但當時最上面已經是
+> 8/5 的課，結果 8/4 壓在 8/5 上面（commit `efba4ed` 修正）。
+> Calendar 靠 `data-date` 動態計算，不受清單順序影響，所以**錯了只會在 Log 這一段看出來**。
+>
+> 另外，清單中間夾著幾張 `.dl-link`（EPUB／PDF 下載卡），它們沒有 `data-date`、
+> 位置是跟著對應那天的課程手動擺的，重排時不要把它們一起搬走。
 
 `lesson-meta` 結尾的 `· Lesson` / `· Reading` 是純文字標籤，給人讀的；機器靠 `href` 前綴 (`readings/` / `tadoku/` / `lessons/` / `my-name-katakana.html`) 自動換左邊框顏色（CSS attribute selector，見 shared.css 的 `.lesson-link[href^="..."]` 規則）。
 

@@ -8,3 +8,4 @@ node_modules/
 anki/venv/
 anki/audio_cache/
 /*.epub
+.cache/

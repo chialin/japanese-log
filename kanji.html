@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>漢字音讀對照 — 學過的字互相連結</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+/* 由 scripts/build-kanji.mjs 產生，請勿手動編輯 */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<script src="js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">漢字<span class="accent">音讀</span>對照</h1>
+  <div class="page-meta">資源 · Kanji Index · 自動產生</div>
+  <p class="page-subtitle">學過的字在哪些課出現過、各唸什麼 — 點漢字看詳細</p>
+
+  <div class="tip">
+    💡 <strong>怎麼用</strong><br>
+    橘底＝出現 3 天以上的高頻字。點任一個字，下方會展開它的<strong>讀音分支</strong>與<strong>你遇到它的順序</strong>。
+    音讀（棕橘）多半跟台語相通，訓讀（金茶）是日文固有詞。
+  </div>
+
+  <div class="kanji-filters">
+      <button class="kanji-filter on" data-filter="all">全部 <span class="kf-n">210</span></button>
+      <button class="kanji-filter" data-filter="hot">3 天以上 <span class="kf-n">14</span></button>
+      <button class="kanji-filter" data-filter="multi">多音字 <span class="kf-n">20</span></button>
+      <button class="kanji-filter" data-filter="taigi">台語線索 <span class="kf-n">91</span></button>
+  </div>
+
+  <div class="kanji-grid" id="kanji-grid">
+    <button class="kanji-tile hot" data-kanji="日" data-days="8" data-multi="1" data-taigi="1"><span class="kt-char">日</span><span class="kt-n">8</span></button>
+    <button class="kanji-tile hot" data-kanji="本" data-days="6" data-multi="0" data-taigi="1"><span class="kt-char">本</span><span class="kt-n">6</span></button>
+    <button class="kanji-tile hot" data-kanji="人" data-days="4" data-multi="1" data-taigi="1"><span class="kt-char">人</span><span class="kt-n">4</span></button>
+    <button class="kanji-tile hot" data-kanji="今" data-days="4" data-multi="0" data-taigi="1"><span class="kt-char">今</span><span class="kt-n">4</span></button>
+    <button class="kanji-tile hot" data-kanji="会" data-days="4" data-multi="1" data-taigi="0"><span class="kt-char">会</span><span class="kt-n">4</span></button>
+    <button class="kanji-tile hot" data-kanji="何" data-days="4" data-multi="1" data-taigi="0"><span class="kt-char">何</span><span class="kt-n">4</span></button>
+    <button class="kanji-tile hot" data-kanji="私" data-days="4" data-multi="0" data-taigi="0"><span class="kt-char">私</span><span class="kt-n">4</span></button>
+    <button class="kanji-tile hot" data-kanji="行" data-days="4" data-multi="0" data-taigi="1"><span class="kt-char">行</span><span class="kt-n">4</span></button>
+    <button class="kanji-tile hot" data-kanji="一" data-days="3" data-multi="1" data-taigi="1"><span class="kt-char">一</span><span class="kt-n">3</span></button>
+    <button class="kanji-tile hot" data-kanji="中" data-days="3" data-multi="1" data-taigi="0"><span class="kt-char">中</span><span class="kt-n">3</span></button>
+    <button class="kanji-tile hot" data-kanji="夫" data-days="3" data-multi="0" data-taigi="0"><span class="kt-char">夫</span><span class="kt-n">3</span></button>
+    <button class="kanji-tile hot" data-kanji="書" data-days="3" data-multi="1" data-taigi="0"><span class="kt-char">書</span><span class="kt-n">3</span></button>
+    <button class="kanji-tile hot" data-kanji="車" data-days="3" data-multi="1" data-taigi="0"><span class="kt-char">車</span><span class="kt-n">3</span></button>
+    <button class="kanji-tile hot" data-kanji="近" data-days="3" data-multi="1" data-taigi="1"><span class="kt-char">近</span><span class="kt-n">3</span></button>
+    <button class="kanji-tile" data-kanji="世" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">世</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="事" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">事</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="二" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">二</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="京" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">京</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="仕" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">仕</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="停" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">停</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="最" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">最</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="台" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">台</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="好" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">好</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="子" data-days="2" data-multi="1" data-taigi="1"><span class="kt-char">子</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="学" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">学</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="宿" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">宿</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="小" data-days="2" data-multi="1" data-taigi="0"><span class="kt-char">小</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="新" data-days="2" data-multi="1" data-taigi="1"><span class="kt-char">新</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="昨" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">昨</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="時" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">時</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="暑" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">暑</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="曜" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">曜</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="月" data-days="2" data-multi="1" data-taigi="1"><span class="kt-char">月</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="東" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">東</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="校" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">校</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="気" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">気</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="湾" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">湾</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="漫" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">漫</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="界" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">界</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="白" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">白</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="社" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">社</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="空" data-days="2" data-multi="1" data-taigi="0"><span class="kt-char">空</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="絵" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">絵</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="背" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">背</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="自" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">自</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="茶" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">茶</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="菜" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">菜</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="語" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">語</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="読" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">読</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="週" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">週</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="野" data-days="2" data-multi="0" data-taigi="0"><span class="kt-char">野</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="降" data-days="2" data-multi="1" data-taigi="0"><span class="kt-char">降</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="電" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">電</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="面" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">面</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="食" data-days="2" data-multi="0" data-taigi="1"><span class="kt-char">食</span><span class="kt-n">2</span></button>
+    <button class="kanji-tile" data-kanji="三" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">三</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="主" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">主</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="乗" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">乗</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="付" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">付</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="住" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">住</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="作" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">作</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="使" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">使</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="便" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">便</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="信" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">信</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="元" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">元</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="先" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">先</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="八" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">八</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="公" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">公</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="内" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">内</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="円" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">円</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="写" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">写</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="分" data-days="1" data-multi="1" data-taigi="1"><span class="kt-char">分</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="刊" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">刊</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="前" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">前</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="勉" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">勉</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="動" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">動</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="十" data-days="1" data-multi="1" data-taigi="0"><span class="kt-char">十</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="半" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">半</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="単" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">単</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="卵" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">卵</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="双" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">双</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="古" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">古</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="号" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">号</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="司" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">司</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="吉" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">吉</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="同" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">同</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="和" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">和</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="員" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">員</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="四" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">四</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="回" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">回</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="図" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">図</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="園" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">園</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="地" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">地</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="塩" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">塩</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="声" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">声</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="売" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">売</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="多" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">多</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="大" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">大</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="央" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">央</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="妹" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">妹</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="家" data-days="1" data-multi="1" data-taigi="0"><span class="kt-char">家</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="容" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">容</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="察" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">察</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="寺" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">寺</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="寿" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">寿</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="少" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">少</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="局" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">局</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="帰" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">帰</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="平" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">平</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="年" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">年</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="店" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">店</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="庸" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">庸</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="引" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">引</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="張" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">張</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="強" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">強</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="形" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">形</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="後" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">後</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="忙" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">忙</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="慣" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">慣</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="放" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">放</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="教" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">教</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="旗" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">旗</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="旦" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">旦</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="昼" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">昼</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="普" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">普</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="来" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">来</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="杯" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">杯</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="楊" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">楊</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="機" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">機</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="武" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">武</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="歩" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">歩</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="歳" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">歳</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="毎" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">毎</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="活" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">活</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="浦" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">浦</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="消" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">消</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="涼" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">涼</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="渇" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">渇</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="渋" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">渋</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="滝" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">滝</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="漬" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">漬</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="煙" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">煙</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="生" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">生</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="田" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">田</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="画" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">画</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="疲" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">疲</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="病" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">病</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="痛" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">痛</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="的" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">的</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="目" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">目</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="真" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">真</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="砂" data-days="1" data-multi="1" data-taigi="0"><span class="kt-char">砂</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="祥" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">祥</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="祭" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">祭</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="窪" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">窪</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="立" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">立</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="筆" data-days="1" data-multi="1" data-taigi="1"><span class="kt-char">筆</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="簡" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">簡</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="籍" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">籍</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="米" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">米</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="糖" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">糖</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="紙" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">紙</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="紫" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">紫</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="緑" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">緑</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="緒" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">緒</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="線" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">線</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="練" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">練</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="習" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">習</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="腹" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">腹</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="色" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">色</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="花" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">花</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="荻" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">荻</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="菓" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">菓</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="薬" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">薬</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="術" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">術</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="裕" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">裕</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="詞" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">詞</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="話" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">話</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="説" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">説</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="誰" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">誰</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="警" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">警</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="谷" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">谷</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="販" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">販</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="買" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">買</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="赤" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">赤</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="越" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">越</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="路" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">路</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="転" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">転</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="送" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">送</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="通" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">通</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="遊" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">遊</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="道" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">道</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="那" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">那</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="郵" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">郵</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="酢" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">酢</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="金" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">金</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="鉄" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">鉄</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="鉛" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">鉛</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="間" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">間</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="院" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">院</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="雨" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">雨</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="青" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">青</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="静" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">静</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="音" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">音</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="頑" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">頑</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="館" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">館</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="駅" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">駅</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="魚" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">魚</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="黄" data-days="1" data-multi="0" data-taigi="0"><span class="kt-char">黄</span><span class="kt-n">1</span></button>
+    <button class="kanji-tile" data-kanji="黒" data-days="1" data-multi="0" data-taigi="1"><span class="kt-char">黒</span><span class="kt-n">1</span></button>
+  </div>
+
+  <div id="kanji-detail"></div>
+
+  <p class="kanji-credit">
+    讀音資料來自 <a href="http://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>
+    © EDRDG，授權 CC BY-SA 4.0。
+  </p>
+
+<site-footer></site-footer>
+</div>
+
+<script src="js/kanji-data.js"></script>
+<script src="js/kanji-page.js"></script>
+</body>
+</html>

@@ -11,6 +11,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { scanAll } from './lib/kanji-scan.mjs';
 import { buildKanjiData } from './lib/kanji-build.mjs';
+import { renderIndexPage } from './lib/kanji-render.mjs';
 
 const dict = JSON.parse(await readFile('data/kanji-readings.json', 'utf8'));
 const records = await scanAll();
@@ -34,6 +35,8 @@ await writeFile(
     'window.KANJI_INDEX = ' + JSON.stringify(index) + ';\n',
   'utf8'
 );
+
+await writeFile('kanji.html', renderIndexPage(entries), 'utf8');
 
 const hot = entries.filter(([, e]) => e.days >= 3).length;
 console.log(`✅ ${entries.length} 個漢字（出現 3 天以上：${hot}）`);

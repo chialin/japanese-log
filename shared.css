@@ -235,6 +235,62 @@ rt {
 .mnemonic .compare { background: rgba(217,40,24,.13); color: var(--memo); }
 .mnemonic a { color: var(--memo); }
 
+/* ── 漢字音讀對照（kanji.html ＋ 課程頁徽章）── */
+.kanji-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.kanji-filter {
+  font-family: 'Noto Serif TC', serif; font-size: 13px; cursor: pointer;
+  background: rgba(255,255,255,.6); border: 1px solid var(--line);
+  color: var(--ink-soft); padding: 5px 12px;
+}
+.kanji-filter.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.kanji-filter .kf-n { font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: .75; }
+
+.kanji-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); gap: 6px; margin-bottom: 24px; }
+.kanji-tile {
+  background: rgba(255,255,255,.7); border: 1px solid var(--line);
+  padding: 8px 2px 6px; text-align: center; cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.kanji-tile:hover { border-color: var(--accent); }
+.kanji-tile.hot { border-color: var(--accent-soft); background: var(--accent-pale); }
+.kanji-tile.on { background: var(--accent); border-color: var(--accent); }
+.kt-char { display: block; font-family: 'Klee One','Shippori Mincho',serif; font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1.15; }
+.kt-n { display: block; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 11px; color: var(--ink-mute); }
+.kanji-tile.on .kt-char, .kanji-tile.on .kt-n { color: #fff; }
+
+.kcard { background: rgba(255,255,255,.6); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 20px 22px; margin-bottom: 16px; }
+.khead { display: flex; align-items: center; gap: 16px; border-bottom: 1px dashed var(--line); padding-bottom: 12px; margin-bottom: 12px; }
+.kbig { font-family: 'Klee One','Shippori Mincho',serif; font-size: 52px; font-weight: 700; line-height: 1; color: var(--ink); }
+.kmeta { flex: 1; }
+.ktag { display: inline-block; background: var(--accent-pale); color: var(--accent); font-size: 11px; padding: 1px 8px; margin-right: 4px; }
+.kcount { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-mute); font-size: 13px; margin-top: 4px; }
+.klbl { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-mute); margin: 12px 0 4px; }
+.kbranch { display: flex; align-items: flex-start; gap: 10px; padding: 6px 0; font-size: 14px; }
+.kb-rd { flex: 0 0 84px; text-align: center; font-family: 'Klee One','Shippori Mincho',serif; font-weight: 700; font-size: 16px; background: var(--accent-pale); color: var(--accent); padding: 3px 10px; }
+.kbranch.kun .kb-rd { background: #f5e6cf; color: #a9762a; }
+.kb-words { flex: 1; color: var(--ink-soft); line-height: 1.9; padding-top: 3px; }
+.ktimeline { position: relative; padding-left: 16px; }
+.ktimeline::before { content: ''; position: absolute; left: 3px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+.kev { position: relative; padding: 5px 0; font-size: 13.5px; color: var(--ink-soft); }
+.kev::before { content: ''; position: absolute; left: -16px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.kev-d { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-mute); font-size: 12px; margin-right: 8px; }
+.kev a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+.kanji-credit { font-size: 12px; color: var(--ink-mute); margin-top: 20px; }
+.kanji-credit a { color: var(--accent); }
+
+/* 課程頁徽章（Task 8） */
+.kanji-chip {
+  display: inline-block; background: rgba(255,255,255,.85); border: 1px solid var(--accent-soft);
+  border-radius: 3px; color: var(--accent); font-size: 12px; padding: 1px 7px;
+  text-decoration: none; margin-left: 6px; white-space: nowrap;
+}
+.kanji-chip:hover { background: var(--accent-pale); }
+.kanji-footer {
+  background: rgba(255,255,255,.5); border-left: 3px solid var(--accent-soft);
+  padding: 12px 18px; margin-top: 24px; font-size: 14px; color: var(--ink-soft); line-height: 1.9;
+}
+.kanji-footer a { color: var(--accent); }
+
 /* ── Highlight inline ── */
 .compare {
   display: inline-block; background: var(--accent-pale);

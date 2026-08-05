@@ -430,10 +430,16 @@ rt {
 /* 同一天的課 — 青綠色 */
 .next-link.same-day {
   --sameday: #4a7c6f;
+  /* 四邊都要改：只換 border-left 的話，上下右會留著暖橘的 --line，
+     hover 時才一次全變綠，跳色很明顯 */
+  border-color: rgba(74,124,111,.3);
   border-left-color: var(--sameday);
   background: rgba(74,124,111,.05);
 }
-.next-link.same-day:hover { border-color: var(--sameday); background: rgba(74,124,111,.1); }
+.next-link.same-day:hover {
+  border-color: var(--sameday);
+  background: rgba(74,124,111,.1);
+}
 .next-link.same-day .next-kicker { color: var(--sameday); }
 .next-link.same-day:hover .next-arrow { color: var(--sameday); }
 

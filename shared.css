@@ -223,14 +223,14 @@ rt {
    用法：<div class="mnemonic">🧠 <strong>標題</strong><br>內容</div>
    紅色是「這是我自己的聯想，不是課本教的」的標記，全站統一。 */
 .mnemonic {
-  --memo: #a8352c;
-  background: rgba(168,53,44,.05);
-  border: 1px solid rgba(168,53,44,.3); border-left: 3px solid var(--memo);
+  --memo: #d92818;
+  background: rgba(217,40,24,.07);
+  border: 1px solid rgba(217,40,24,.4); border-left: 5px solid var(--memo);
   padding: 16px 20px; margin-bottom: 16px;
   font-size: 14px; color: var(--ink-soft); line-height: 1.9;
 }
 .mnemonic strong { color: var(--memo); }
-.mnemonic .compare { background: rgba(168,53,44,.1); color: var(--memo); }
+.mnemonic .compare { background: rgba(217,40,24,.13); color: var(--memo); }
 .mnemonic a { color: var(--memo); }
 
 /* ── Highlight inline ── */

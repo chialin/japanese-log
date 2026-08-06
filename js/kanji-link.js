@@ -14,7 +14,7 @@
   const link = (ch) => prefix + 'kanji.html#' + encodeURIComponent(ch);
 
   // ① 徽章：掛在含 ruby 的卡片上
-  const CARDS = '.word-item, .turn, .ta-card, .phrase, .job-card, .kk-item';
+  const CARDS = '.word-item, .turn, .ta-card, .scene';
   const seenAll = new Set();
 
   document.querySelectorAll('ruby').forEach((ruby) => {
@@ -31,7 +31,10 @@
       a.href = link(ch);
       a.textContent = `${ch} ×${idx[ch]} →`;
       const btn = card.querySelector('.play-btn');
-      card.insertBefore(a, btn || null);
+      // btn 不一定是 card 的直接子節點（例如 .scene 的 .play-btn 包在 .scene-body 裡），
+      // insertBefore 只認直接子節點，所以插入點要用 btn 實際的 parentNode。
+      const target = btn ? btn.parentNode : card;
+      target.insertBefore(a, btn || null);
     }
   });
 

@@ -116,6 +116,13 @@ Calendar 會自動重算——`data-date` 提供即可，新月份不必動 cale
 
 **Step 5 — 確保 favicon link 存在**（特別是非複製 `lessons/_skeleton.html` 的手寫頁、或新類型的產生器頁）：最簡單做法是執行 `node scripts/add-favicon.mjs`（冪等，已有 `rel="icon"` 的頁會自動跳過；root 頁注入 `favicon.svg`、`lessons/`／`readings/`／`tadoku/` 注入 `../favicon.svg`）。favicon 功能已於 2026-05-17 完成（見 [docs/superpowers/specs/2026-05-17-favicon-design.md](docs/superpowers/specs/2026-05-17-favicon-design.md)），`_skeleton.html` 已內含該 link，但手寫新頁或新產生器樣板不會自動帶上。
 
+**Step 6 — 跑 `node scripts/build-kanji.mjs`**：重新產生 `kanji.html`、`js/kanji-data.js`、
+`js/kanji-index.js`（掃全站 `<ruby>` 標音），產物**跟著這次的課程一起 commit**。
+跟 `generate-audio.mjs` 同性質——內容改了就要重跑。
+
+> 只有在出現**全新的漢字**時才需要另外跑一次 `node scripts/fetch-kanjidic.mjs`
+> 更新 `data/kanji-readings.json`（會連網下載 KANJIDIC2）。腳本會列出查無讀音的字。
+
 ### TTS — VOICEVOX 預生 mp3（主要）＋ speechSynthesis（fallback）
 
 **音檔一律用 VOICEVOX 離線預先生成 mp3，不靠瀏覽器即時合成。** 瀏覽器內建的
@@ -230,6 +237,16 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 範例見 [doko](lessons/2026-08-05-doko.html) 的「郵便局＝ゆうびん＋台語的局(kiok)」。
 ⚠️ 台羅的入聲調符（U+030D，如 `kio̍k`）在 Klee One / Shippori Mincho 下會顯示成豆腐框，
 寫台語拼音時**去掉調符**（`kiok`／`ioh`）。
+
+#### 漢字音讀對照（2026-08-05 新增）
+
+[kanji.html](kanji.html) 是**產物，不要手改**——由 `node scripts/build-kanji.mjs` 從全站
+`<ruby>` 標音自動產生。課程頁的漢字徽章與頁尾「本課出現的漢字」由 `js/kanji-link.js`
+在執行期插入（掛在 `js/site-chrome.js` 上），**新頁不必做任何事**就會自己長出來。
+
+要讓一個漢字進入這個系統，唯一條件是**在課程頁用 `<ruby>` 標音**。內文裡沒標音的漢字不會被收。
+
+音讀＝`--accent` 棕橘、訓讀＝`#a9762a` 金茶、台語線索＝`.mnemonic` 紅貼紙，與全站一致。
 
 #### 跨頁連結卡 `.next-link`（2026-08-05 統一）
 

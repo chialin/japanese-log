@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>そこは〜ですよ — 評論一個地方 ＋ つ 開頭單字</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞／重點高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 句型骨架方塊 */
+.frame{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);padding:20px 22px;margin:18px 0;text-align:center;}
+.frame-ja{font-family:'Shippori Mincho',serif;font-size:24px;color:var(--ink);line-height:2.2;}
+.frame-slot{display:inline-block;min-width:5em;border-bottom:2px dashed var(--accent);color:var(--accent);}
+.frame-note{font-size:13px;color:var(--ink-mute);margin-top:10px;font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.08em;}
+
+/* 對照兩欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0;}
+.vs-col{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:16px 18px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);margin-bottom:10px;}
+.vs-col p{font-size:14px;color:var(--ink-soft);line-height:1.95;}
+@media(max-width:600px){.vs-grid{grid-template-columns:1fr;}}
+
+/* 速記表（沿用 joshi-table 同款） */
+.joshi-table{width:100%;border-collapse:collapse;margin-top:14px;background:rgba(255,255,255,.5);}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:10px 12px;text-align:left;font-size:14.5px;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);width:22%;}
+.col-kana{color:var(--accent);font-size:14px;width:24%;}
+.col-mean{color:var(--ink-soft);}
+
+/* Self-Quiz 折疊解答 */
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">そこは<span class="accent">〜ですよ</span> — 評論一個地方</h1>
+  <div class="page-meta">句型 ＋ 單字 · Pattern &amp; Vocabulary · 2026 / 08 / 06</div>
+  <p class="page-subtitle">混んでいます・空いています・高い・安い・寒い・暑い・近い・遠い ＋ 釣り・爪・机</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    一個「そこは〜ですよ」的骨架，換裡面的詞就能評論任何地方。重點是分清楚哪些詞要接
+    <strong>〜ています</strong>（動詞），哪些直接接 <strong>です</strong>（い形容詞）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、句型骨架</div>
+
+  <div class="frame">
+    <div class="frame-ja">そこ<span class="j-mark">は</span> <span class="frame-slot">　　　</span> ですよ。</div>
+    <div class="frame-note">soko wa ____ desu yo. — 那裡是⋯⋯喔</div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">そこ</span>＝離聽話者近的「那裡」（見
+    <a href="2026-07-29-koko-soko-asoko.html" style="color:var(--accent);">7/29 的 ここ・そこ・あそこ</a>）。
+    句尾的 <span class="j-mark">よ</span> 是<strong>提醒對方</strong>的語氣 —— 我知道、你可能不知道，所以告訴你。
+    去掉 よ 就只是平述句。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、狀態動詞 — 混んでいます・空いています</div>
+
+  <div class="section">
+    <div class="section-title">📖 人多／人少</div>
+
+    <div class="word-item" data-text="そこは 混んでいますよ">
+      <div class="word-content">
+        <div class="word-ja">そこは <ruby>混<rt>こ</rt></ruby>んでいますよ</div>
+        <div class="word-romaji">soko wa konde imasu yo</div>
+        <div class="word-meaning">那裡很擠喔 — 混む（こむ）＝擁擠</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そこは 空いていますよ">
+      <div class="word-content">
+        <div class="word-ja">そこは <ruby>空<rt>す</rt></ruby>いていますよ</div>
+        <div class="word-romaji">soko wa suite imasu yo</div>
+        <div class="word-meaning">那裡很空喔、有位子喔 — 空く（すく）＝變空</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>〜ています ＝ 狀態持續，不是「正在做動作」</strong><br>
+    中文說「那裡在擠」很怪，但日文的 混んでいます 就是「現在處於擠的狀態」。
+    同樣的還有 <ruby>結婚<rt>けっこん</rt></ruby>しています（＝已婚狀態，不是正在舉行婚禮）。
+  </div>
+
+  <div class="note">
+    📝 <strong>空く 你其實學過了</strong><br>
+    お<ruby>腹<rt>なか</rt></ruby>が すいた ＝ 肚子空了 ＝ 餓了。同一個動詞 <strong>空く</strong>，
+    主詞從「店」換成「肚子」而已 —— 見
+    <a href="2026-08-04-onaka-suita.html" style="color:var(--accent);">8/4 的 おなかすいた</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、い形容詞 — 直接接 です</div>
+
+  <div class="section">
+    <div class="section-title">📖 貴／便宜・冷／熱・近／遠</div>
+
+    <div class="word-item" data-text="そこは 高いですよ">
+      <div class="word-content">
+        <div class="word-ja">そこは <ruby>高<rt>たか</rt></ruby>いですよ</div>
+        <div class="word-romaji">soko wa takai desu yo</div>
+        <div class="word-meaning">那裡很貴喔（也可以是「很高」，看情境）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そこは 安いですよ">
+      <div class="word-content">
+        <div class="word-ja">そこは <ruby>安<rt>やす</rt></ruby>いですよ</div>
+        <div class="word-romaji">soko wa yasui desu yo</div>
+        <div class="word-meaning">那裡很便宜喔</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そこは 寒いですよ">
+      <div class="word-content">
+        <div class="word-ja">そこは <ruby>寒<rt>さむ</rt></ruby>いですよ</div>
+        <div class="word-romaji">soko wa samui desu yo</div>
+        <div class="word-meaning">那裡很冷喔</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そこは 暑いですよ">
+      <div class="word-content">
+        <div class="word-ja">そこは <ruby>暑<rt>あつ</rt></ruby>いですよ</div>
+        <div class="word-romaji">soko wa atsui desu yo</div>
+        <div class="word-meaning">那裡很熱喔</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そこは 近いですよ">
+      <div class="word-content">
+        <div class="word-ja">そこは <ruby>近<rt>ちか</rt></ruby>いですよ</div>
+        <div class="word-romaji">soko wa chikai desu yo</div>
+        <div class="word-meaning">那裡很近喔</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そこは 遠いですよ">
+      <div class="word-content">
+        <div class="word-ja">そこは <ruby>遠<rt>とお</rt></ruby>いですよ</div>
+        <div class="word-romaji">soko wa tooi desu yo</div>
+        <div class="word-meaning">那裡很遠喔</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>遠い 是 とお<span style="color:var(--accent)">お</span>い（お，不是う）</strong><br>
+    長音的部分寫 <strong>お</strong>，不是 う。這是少數不照「う 表長音」規則的字之一。
+    同款的還有 <ruby>大<rt>おお</rt></ruby>きい（大的）、<ruby>氷<rt>こおり</rt></ruby>（冰）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、兩種詞不要混用</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>動詞 → 〜ています</h4>
+      <p>
+        <ruby>混<rt>こ</rt></ruby>む → 混んで<strong>います</strong><br>
+        <ruby>空<rt>す</rt></ruby>く → 空いて<strong>います</strong><br><br>
+        表示「現在處於某狀態」。
+      </p>
+    </div>
+    <div class="vs-col">
+      <h4>い形容詞 → 直接 です</h4>
+      <p>
+        <ruby>高<rt>たか</rt></ruby>い → 高い<strong>です</strong><br>
+        <ruby>寒<rt>さむ</rt></ruby>い → 寒い<strong>です</strong><br><br>
+        已經有「い」結尾，不需要動詞變化。
+      </p>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>×高いでいます</strong> 是錯的。い形容詞不能接 〜ています。<br>
+    否定則是把「い」換成「くない」：<strong>高くないです</strong>（不貴）、<strong>寒くないです</strong>（不冷）。
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>三個「あつい」・兩個「冷」</strong><br>
+    <strong>暑い</strong>（あつい）＝天氣熱 ｜ <strong>熱い</strong>（あつい）＝東西燙（このお<ruby>茶<rt>ちゃ</rt></ruby>は熱いです）｜
+    <ruby>熱<rt>ねつ</rt></ruby>がある＝發燒<br>
+    <strong>寒い</strong>（さむい）＝天氣冷 ｜ <strong>冷たい</strong>（つめたい）＝東西冰<br>
+    讀音一樣，靠漢字分。所以「そこは寒いですよ」是說那個地方冷，不是東西冰。
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>安い（やすい）≠ 易しい（やさしい）</strong><br>
+    差一個 <strong>さ</strong>，一個是「便宜」，一個是「簡單」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、單字 — つ 開頭三兄弟</div>
+
+  <div class="section">
+    <div class="word-item" data-text="釣り">
+      <div class="word-content">
+        <div class="word-ja"><ruby>釣<rt>つ</rt></ruby>り</div>
+        <div class="word-romaji">tsuri</div>
+        <div class="word-meaning">釣魚 — 動詞是 <ruby>釣<rt>つ</rt></ruby>る。「釣りに行きます」＝去釣魚</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="爪">
+      <div class="word-content">
+        <div class="word-ja"><ruby>爪<rt>つめ</rt></ruby></div>
+        <div class="word-romaji">tsume</div>
+        <div class="word-meaning">指甲 — <ruby>爪<rt>つめ</rt></ruby>を <ruby>切<rt>き</rt></ruby>ります（剪指甲）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="机">
+      <div class="word-content">
+        <div class="word-ja"><ruby>机<rt>つくえ</rt></ruby></div>
+        <div class="word-romaji">tsukue</div>
+        <div class="word-meaning">書桌 — 指讀書寫字的桌子；吃飯的餐桌叫 テーブル</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、音讀線索</div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 鼻音尾 -n 一律變 ん</strong><br>
+    台語有 -n／-ng 尾的漢字，音讀幾乎都收 <span class="compare">ん</span>：<br>
+    <strong>混</strong> hun → <strong>こん</strong>（混雑 こんざつ＝擁擠）｜
+    <strong>寒</strong> han → <strong>かん</strong>（寒気 かんき）｜
+    <strong>近</strong> kin → <strong>きん</strong>（近所 きんじょ、最近 さいきん）｜
+    <strong>遠</strong> uan → <strong>えん</strong>（遠足 えんそく）｜
+    <strong>安</strong> an → <strong>あん</strong>（安心 あんしん）<br>
+    這條規律超穩，看到台語鼻音尾就先猜 ん。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 其他幾個</strong><br>
+    <strong>高</strong> 台語 ko → <strong>こう</strong>（高校 こうこう、最高 さいこう）｜
+    <strong>暑</strong> 台語 su → <strong>しょ</strong>（暑中見舞い しょちゅうみまい）
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>但今天的單字讀音全是訓讀</strong><br>
+    たかい・やすい・さむい・あつい・ちかい・とおい・つり・つめ・つくえ —— 這些都是日文固有詞，
+    跟漢字音<strong>沒有關係</strong>。音讀線索只在<strong>複合詞</strong>（混雑・近所・遠足）派上用場，
+    單獨的形容詞跟名詞還是要另外背。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速記表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>日文</th><th>讀音</th><th>意思／備註</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">混んでいます</td><td class="col-kana">こんでいます</td><td class="col-mean">擁擠（動詞 混む ＋ ています）</td></tr>
+      <tr><td class="col-ja">空いています</td><td class="col-kana">すいています</td><td class="col-mean">空、有位子（動詞 空く ＋ ています）</td></tr>
+      <tr><td class="col-ja">高い</td><td class="col-kana">たかい</td><td class="col-mean">貴的／高的</td></tr>
+      <tr><td class="col-ja">安い</td><td class="col-kana">やすい</td><td class="col-mean">便宜的（≠ 易しい やさしい）</td></tr>
+      <tr><td class="col-ja">寒い</td><td class="col-kana">さむい</td><td class="col-mean">冷的（天氣）；東西冰＝冷たい</td></tr>
+      <tr><td class="col-ja">暑い</td><td class="col-kana">あつい</td><td class="col-mean">熱的（天氣）；東西燙＝熱い</td></tr>
+      <tr><td class="col-ja">近い</td><td class="col-kana">ちかい</td><td class="col-mean">近的</td></tr>
+      <tr><td class="col-ja">遠い</td><td class="col-kana">とおい</td><td class="col-mean">遠的（と<strong>お</strong>い，不是とうい）</td></tr>
+      <tr><td class="col-ja">釣り</td><td class="col-kana">つり</td><td class="col-mean">釣魚（動詞 釣る）</td></tr>
+      <tr><td class="col-ja">爪</td><td class="col-kana">つめ</td><td class="col-mean">指甲</td></tr>
+      <tr><td class="col-ja">机</td><td class="col-kana">つくえ</td><td class="col-mean">書桌（餐桌＝テーブル）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗（Self-Quiz）</div>
+
+  <div class="section">
+    <div class="section-title">✍️ 造句／翻譯</div>
+
+    <p style="color:var(--ink-soft);font-size:14.5px;line-height:2;">
+      <strong>1.</strong> 翻成日文：那裡很擠喔。／那裡很空喔。<br>
+      <strong>2.</strong> 下面哪一句是錯的？為什麼？<br>
+      　（a）そこは 高いですよ。　（b）そこは 高いでいますよ。　（c）そこは 混んでいますよ。<br>
+      <strong>3.</strong> 「那裡不冷喔」怎麼說？（い形容詞的否定）<br>
+      <strong>4.</strong> 這杯茶很燙 — 用「あつい」，但要寫哪個漢字？<br>
+      <strong>5.</strong> 寫出讀音：釣り・爪・机
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>
+        <strong>1.</strong> そこは <ruby>混<rt>こ</rt></ruby>んでいますよ。／ そこは <ruby>空<rt>す</rt></ruby>いていますよ。<br><br>
+        <strong>2.</strong> <strong>（b）</strong> 錯。高い 是<strong>い形容詞</strong>，不能接 〜ています，直接接 です 就好 → 高いです。
+        〜ています 只給動詞用（混む・空く）。<br><br>
+        <strong>3.</strong> そこは <ruby>寒<rt>さむ</rt></ruby><strong>くない</strong>ですよ。い形容詞否定＝把「い」換成「くない」。<br><br>
+        <strong>4.</strong> このお<ruby>茶<rt>ちゃ</rt></ruby>は <strong>熱い</strong>です。東西燙用「熱」，天氣熱才用「暑」。<br><br>
+        <strong>5.</strong> <ruby>釣<rt>つ</rt></ruby>り＝つり、<ruby>爪<rt>つめ</rt></ruby>＝つめ、<ruby>机<rt>つくえ</rt></ruby>＝つくえ。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-05-renshuu-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related · 2026/08/05 —</span>
+    <span class="next-title">練習と会話 — 週に2、3回 <span class="next-arrow">→</span></span>
+    <span class="next-sub">前一天的課，順便複習 た 開頭單字與頻率說法</span>
+  </a>
+
+  <a href="2026-07-29-koko-soko-asoko.html" class="next-link">
+    <span class="next-kicker">— Related · 2026/07/29 —</span>
+    <span class="next-title">ここ・そこ・あそこ <span class="next-arrow">→</span></span>
+    <span class="next-sub">今天骨架開頭的「そこ」是哪一種距離？回去確認一次</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

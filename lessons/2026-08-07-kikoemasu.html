@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聞こえますか — 聽得到 vs 去聽 ＋ 見えます</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 三分對照卡 */
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0;}
+.tri-col{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:16px 14px;text-align:center;}
+.tri-col.mid{border-top-color:var(--accent);}
+.tri-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.12em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:8px;}
+.tri-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:600;color:var(--ink);line-height:1.4;}
+.tri-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:13px;color:var(--accent);margin-top:2px;}
+.tri-mean{font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.7;}
+@media(max-width:640px){.tri{grid-template-columns:1fr;}}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--ink);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;white-space:nowrap;}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">聞こえますか</span> — 聽得到 vs 去聽</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 07</div>
+  <p class="page-subtitle">聞きます／聞こえます／聞けます 的差別，以及長得一模一樣的 見ます／見えます／見られます</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    三個動詞的差別在<strong>「有沒有意志」</strong>：我主動去聽（聞きます）／聲音自己傳進來（聞こえます）／
+    我有能力聽（聞けます）。<strong>助詞會跟著換</strong>，這是判斷用錯沒的最快方法。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、三個「聽」</div>
+
+  <div class="tri">
+    <div class="tri-col">
+      <div class="tri-label">意志 · Volition</div>
+      <div class="tri-ja"><ruby>聞<rt>き</rt></ruby>きます</div>
+      <div class="tri-kana">kikimasu</div>
+      <div class="tri-mean">主動去聽<br>（也指「問」）</div>
+    </div>
+    <div class="tri-col mid">
+      <div class="tri-label">自然 · Spontaneous</div>
+      <div class="tri-ja"><ruby>聞<rt>き</rt></ruby>こえます</div>
+      <div class="tri-kana">kikoemasu</div>
+      <div class="tri-mean">聲音自己<br>傳進耳朵</div>
+    </div>
+    <div class="tri-col">
+      <div class="tri-label">可能 · Potential</div>
+      <div class="tri-ja"><ruby>聞<rt>き</rt></ruby>けます</div>
+      <div class="tri-kana">kikemasu</div>
+      <div class="tri-mean">能夠聽<br>（有辦法聽到）</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>助詞會跟著換 — 這是最快的判斷法</strong><br>
+    <span class="compare">聞きます</span> 用 <span class="j-mark">を</span>（動作的對象）→ <ruby>音楽<rt>おんがく</rt></ruby><strong>を</strong> 聞きます<br>
+    <span class="compare">聞こえます</span> 用 <span class="j-mark">が</span>（自然發生的主語）→ <ruby>音<rt>おと</rt></ruby><strong>が</strong> 聞こえます<br>
+    <span class="compare">聞けます</span> 也用 <span class="j-mark">が</span>（可能形一律把 を 換成 が）→ 音楽<strong>が</strong> 聞けます
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、聞こえますか — 最實用的那句</div>
+
+  <div class="section">
+    <div class="section-title">📞 講電話、視訊、隔房間喊人</div>
+
+    <div class="word-item" data-text="聞こえますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>聞<rt>き</rt></ruby>こえますか？</div>
+        <div class="word-romaji">kikoemasu ka?</div>
+        <div class="word-meaning">（我的聲音）聽得到嗎？ — 聲音自己傳過去，跟對方想不想聽無關</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="はい、聞こえます">
+      <div class="word-content">
+        <div class="word-ja">はい、<ruby>聞<rt>き</rt></ruby>こえます。</div>
+        <div class="word-romaji">hai, kikoemasu.</div>
+        <div class="word-meaning">嗯，聽得到。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="すみません、よく聞こえません">
+      <div class="word-content">
+        <div class="word-ja">すみません、よく<ruby>聞<rt>き</rt></ruby>こえません。</div>
+        <div class="word-romaji">sumimasen, yoku kikoemasen.</div>
+        <div class="word-meaning">抱歉，聽不太清楚。 — <span class="compare">よく</span>＝好好地、清楚地</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="へんな音が聞こえます">
+      <div class="word-content">
+        <div class="word-ja">へんな<ruby>音<rt>おと</rt></ruby><span class="j-mark">が</span> <ruby>聞<rt>き</rt></ruby>こえます。</div>
+        <div class="word-romaji">hen na oto ga kikoemasu.</div>
+        <div class="word-meaning">聽到奇怪的聲音。 — 不是你去聽，是它自己傳來的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>否定：聞こえません</strong><br>
+    ます形的否定就是把 <span class="j-mark">ます</span> 換成 <span class="j-mark">ません</span>。
+    「聽不到」＝<strong>聞こえません</strong>，不是「聞きません」（那是「我不聽」，有拒絕的意思）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、聞きます — 主動去聽（也是「問」）</div>
+
+  <div class="section">
+    <div class="section-title">🎧 你自己動手</div>
+
+    <div class="word-item" data-text="音楽を聞きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>音楽<rt>おんがく</rt></ruby><span class="j-mark">を</span> <ruby>聞<rt>き</rt></ruby>きます。</div>
+        <div class="word-romaji">ongaku o kikimasu.</div>
+        <div class="word-meaning">我聽音樂。 — 我打開來聽的，有意志。<a href="2026-07-27-kau-yomu-kiku.html" style="color:var(--accent);">7/27 學過</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="先生に聞きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>先生<rt>せんせい</rt></ruby><span class="j-mark">に</span> <ruby>聞<rt>き</rt></ruby>きます。</div>
+        <div class="word-romaji">sensei ni kikimasu.</div>
+        <div class="word-meaning">我問老師。 — 同一個字也是「問」，對象用 に</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ちょっと聞いてもいいですか">
+      <div class="word-content">
+        <div class="word-ja">ちょっと<ruby>聞<rt>き</rt></ruby>いてもいいですか？</div>
+        <div class="word-romaji">chotto kiite mo ii desu ka?</div>
+        <div class="word-meaning">可以請教一下嗎？ — 開口問路、問店員之前的萬用開場</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>同一句話，助詞決定意思</strong><br>
+    <ruby>先生<rt>せんせい</rt></ruby><span class="j-mark">に</span>聞きます ＝ <strong>問</strong>老師<br>
+    <ruby>先生<rt>せんせい</rt></ruby><span class="j-mark">の</span><ruby>話<rt>はなし</rt></ruby><span class="j-mark">を</span>聞きます ＝ <strong>聽</strong>老師說話<br>
+    に＝問的對象，を＝聽的內容。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、看的那組長得一模一樣</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「看」跟「聽」是完全平行的一組，一起記省一半力氣。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th>類型</th><th>聽</th><th>看</th><th>助詞</th></tr>
+    <tr>
+      <td>主動（有意志）</td>
+      <td class="col-ja"><ruby>聞<rt>き</rt></ruby>きます</td>
+      <td class="col-ja"><ruby>見<rt>み</rt></ruby>ます</td>
+      <td><span class="j-mark">を</span></td>
+    </tr>
+    <tr>
+      <td>自然發生</td>
+      <td class="col-ja"><ruby>聞<rt>き</rt></ruby>こえます</td>
+      <td class="col-ja"><ruby>見<rt>み</rt></ruby>えます</td>
+      <td><span class="j-mark">が</span></td>
+    </tr>
+    <tr>
+      <td>可能（有能力）</td>
+      <td class="col-ja"><ruby>聞<rt>き</rt></ruby>けます</td>
+      <td class="col-ja"><ruby>見<rt>み</rt></ruby>られます</td>
+      <td><span class="j-mark">が</span></td>
+    </tr>
+  </table>
+
+  <div class="section">
+    <div class="section-title">👀 見えます 的例句</div>
+
+    <div class="word-item" data-text="富士山が見えます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>富士山<rt>ふじさん</rt></ruby><span class="j-mark">が</span> <ruby>見<rt>み</rt></ruby>えます。</div>
+        <div class="word-romaji">fujisan ga miemasu.</div>
+        <div class="word-meaning">看得到富士山。 — 不是你努力去看，是它就在那裡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ここから海が見えます">
+      <div class="word-content">
+        <div class="word-ja">ここから<ruby>海<rt>うみ</rt></ruby><span class="j-mark">が</span> <ruby>見<rt>み</rt></ruby>えます。</div>
+        <div class="word-romaji">koko kara umi ga miemasu.</div>
+        <div class="word-meaning">從這裡看得到海。 — <span class="compare">から</span>＝從哪裡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="よく見えません">
+      <div class="word-content">
+        <div class="word-ja">よく<ruby>見<rt>み</rt></ruby>えません。</div>
+        <div class="word-romaji">yoku miemasen.</div>
+        <div class="word-meaning">看不太清楚。 — 跟「よく聞こえません」同一個造法</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>見えます vs 見られます 的差別</strong><br>
+    <span class="compare">見えます</span>＝東西<strong>在視線裡</strong>，眼睛自然收到（富士山が見えます）。<br>
+    <span class="compare">見られます</span>＝<strong>有機會／有條件</strong>去看（この<ruby>映画<rt>えいが</rt></ruby>はネットで見られます＝這部電影網路上看得到）。<br>
+    聽的那組同理：<strong>聞こえます</strong>＝聲音傳到了；<strong>聞けます</strong>＝有辦法聽到。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、音讀線索</div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 聞・音・見</strong><br>
+    <strong>聞</strong> 台語 bun → 音讀 <span class="compare">ぶん</span>（<ruby>新聞<rt>しんぶん</rt></ruby>、<ruby>見聞<rt>けんぶん</rt></ruby>）—— 又是鼻音尾 -n → ん<br>
+    <strong>音</strong> 台語 im → 音讀 <span class="compare">おん</span>（<ruby>音楽<rt>おんがく</rt></ruby>、<ruby>発音<rt>はつおん</rt></ruby>）<br>
+    <strong>見</strong> 台語 kian → 音讀 <span class="compare">けん</span>（<ruby>見学<rt>けんがく</rt></ruby>＝參觀、意見 いけん）<br>
+    三個字的音讀全部收 <strong>ん</strong>，跟前面學過的 混こん・寒かん・近きん・遠えん 同一條規律。
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>日文的「新聞」＝報紙</strong><br>
+    <ruby>新聞<rt>しんぶん</rt></ruby> 不是中文的「新聞」，那個叫 <strong>ニュース</strong>（news）。
+    日文的 聞 保留了古義「聽到的消息」。
+  </div>
+
+  <div class="alert">
+    ⚠️ 但 きく／きこえる／みる／みえる 都是<strong>訓讀</strong>（日文固有詞），跟漢字音無關。
+    音讀線索只在複合詞（新聞・音楽・見学）派上用場。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速記表</div>
+
+  <table class="joshi-table">
+    <tr><th>日文</th><th>讀音</th><th>意思／助詞</th></tr>
+    <tr><td class="col-ja">聞きます</td><td>ききます</td><td>主動聽／問 — 〜<strong>を</strong>／〜<strong>に</strong></td></tr>
+    <tr><td class="col-ja">聞こえます</td><td>きこえます</td><td>聽得到（自然）— 〜<strong>が</strong></td></tr>
+    <tr><td class="col-ja">聞こえません</td><td>きこえません</td><td>聽不到</td></tr>
+    <tr><td class="col-ja">聞けます</td><td>きけます</td><td>能夠聽 — 〜<strong>が</strong></td></tr>
+    <tr><td class="col-ja">見ます</td><td>みます</td><td>看 — 〜<strong>を</strong></td></tr>
+    <tr><td class="col-ja">見えます</td><td>みえます</td><td>看得到（自然）— 〜<strong>が</strong></td></tr>
+    <tr><td class="col-ja">見られます</td><td>みられます</td><td>有機會看 — 〜<strong>が</strong></td></tr>
+    <tr><td class="col-ja">音</td><td>おと</td><td>聲音（物體發出的）</td></tr>
+    <tr><td class="col-ja">よく</td><td>—</td><td>好好地、清楚地</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗（Self-Quiz）</div>
+
+  <div class="section">
+    <div class="section-title">✍️ 填助詞／翻譯</div>
+
+    <p style="color:var(--ink-soft);font-size:14.5px;line-height:2;">
+      <strong>1.</strong> 填助詞：<ruby>音楽<rt>おんがく</rt></ruby>（　）<ruby>聞<rt>き</rt></ruby>きます。／ <ruby>音<rt>おと</rt></ruby>（　）<ruby>聞<rt>き</rt></ruby>こえます。<br>
+      <strong>2.</strong> 視訊時要問「聽得到嗎？」，該用哪一個？為什麼？<br>
+      <strong>3.</strong> 「聞きません」和「聞こえません」差在哪？<br>
+      <strong>4.</strong> 翻成日文：從這裡看得到海。<br>
+      <strong>5.</strong> 日文的「新聞」是什麼意思？中文的「新聞」日文怎麼說？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>
+        <strong>1.</strong> 音楽<strong>を</strong>聞きます（主動，用 を）／ 音<strong>が</strong>聞こえます（自然發生，用 が）。<br><br>
+        <strong>2.</strong> <strong>聞こえますか</strong>。聲音是自己傳過去的，跟對方想不想聽無關。
+        問「聞きますか」會變成「你要不要聽？」，意思完全跑掉。<br><br>
+        <strong>3.</strong> <strong>聞きません</strong>＝我不聽（有意志的拒絕）；<strong>聞こえません</strong>＝聽不到（能力／狀況做不到）。<br><br>
+        <strong>4.</strong> ここから<ruby>海<rt>うみ</rt></ruby><strong>が</strong><ruby>見<rt>み</rt></ruby>えます。（見えます 用 が，不是 を）<br><br>
+        <strong>5.</strong> <ruby>新聞<rt>しんぶん</rt></ruby>＝<strong>報紙</strong>；中文的「新聞」是 <strong>ニュース</strong>。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-07-kankouchi-he.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">観光地へ行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">場所＋へ、山・観光地・温泉 的高低アクセント，首・手首・足首 一次收齊</span>
+  </a>
+
+  <a href="2026-08-07-kuyakusho-te.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">区役所で申し込みました <span class="next-arrow">→</span></span>
+    <span class="next-sub">公家機關、申し込みました ＋ て 開頭單字 手・手首・手紙</span>
+  </a>
+
+  <a href="2026-07-27-kau-yomu-kiku.html" class="next-link">
+    <span class="next-kicker">— Related · 2026/07/27 —</span>
+    <span class="next-title">今日の動詞 — 買います・読みます・聞きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">聞きます 第一次出現的地方，回去對照「主動聽」的用法</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

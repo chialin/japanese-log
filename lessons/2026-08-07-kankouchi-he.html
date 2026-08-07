@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>観光地へ行きます — 場所＋へ ＋ 高低アクセント</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 高低アクセント 標示 */
+.pitch{display:inline-flex;align-items:flex-end;font-family:'Klee One','Shippori Mincho',serif;font-size:21px;line-height:1.1;letter-spacing:.02em;}
+.pitch span{padding:3px 1px 2px;}
+.pitch .hi{border-top:2px solid var(--accent);}
+.pitch .lo{border-bottom:2px solid var(--accent-soft);}
+.pitch .drop{border-top:2px solid var(--accent);border-right:2px solid var(--accent);}
+.pitch-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.1em;color:var(--ink-mute);margin-left:10px;text-transform:uppercase;}
+
+/* 三分對照卡 */
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0;}
+.tri-col{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);padding:16px 14px;text-align:center;}
+.tri-col.mid{border-top-color:var(--accent);}
+.tri-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.12em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:8px;}
+.tri-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:600;color:var(--ink);line-height:1.4;}
+.tri-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:13px;color:var(--accent);margin-top:2px;}
+.tri-mean{font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.7;}
+@media(max-width:640px){.tri{grid-template-columns:1fr;}}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--ink);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;white-space:nowrap;}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">観光地</span>へ行きます</h1>
+  <div class="page-meta">文法 · 單字 · 2026 / 08 / 07</div>
+  <p class="page-subtitle">場所＋へ／に ＝ 往某地去，加上旅行三個地方 山・観光地・温泉，第一次認真標高低アクセント</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="compare">場所 ＋ へ／に</span>＝ to + place，兩個都對　② 旅行三個場所單字，順便學<strong>怎麼標高低音</strong>
+    ③ <span class="compare">一緒</span> 跟 <span class="compare">同じ</span> 中文都翻成「一樣」，但用法不同　④ 首・手首・足首 一次收齊。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、場所 ＋ へ／に ＝ to + place</div>
+
+  <div class="tip">
+    📖 課本進度：Grammar for Daily Conversation ／ 助詞「へ」 ／ p.28、p.35
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這條 <a href="2026-08-04-mokutekichi-ni.html" style="color:var(--accent);">8/4 已經學過</a>，今天課本再走一次 ——
+    移動動詞（行きます・来ます・帰ります）前面的那個<strong>地方</strong>，掛 <span class="j-mark">に</span> 或 <span class="j-mark">へ</span>，
+    <strong>兩個都可以</strong>。
+  </p>
+
+  <div class="alert">
+    ⚠️ <strong>へ 當助詞時唸 <span class="compare">e</span>，不唸 he</strong><br>
+    寫成 へ、唸成 え。跟 <a href="2026-05-10-joshi-wa.html" style="color:var(--accent);">は 當助詞唸 wa</a> 同一種「寫一個唸另一個」的老規矩。
+  </div>
+
+  <div class="section">
+    <div class="section-title">🚃 に／へ 換著用都通</div>
+
+    <div class="word-item" data-text="山へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>山<rt>やま</rt></ruby><span class="j-mark">へ</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">yama e ikimasu.</div>
+        <div class="word-meaning">去山上。 — 換成「山<strong>に</strong>行きます」也完全正確</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="温泉へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>温泉<rt>おんせん</rt></ruby><span class="j-mark">へ</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">onsen e ikimasu.</div>
+        <div class="word-meaning">去泡溫泉。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="観光地へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>観光地<rt>かんこうち</rt></ruby><span class="j-mark">へ</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">kankouchi e ikimasu.</div>
+        <div class="word-meaning">去觀光景點。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>差別很細，但有</strong><br>
+    <span class="compare">に</span>＝把重點放在<strong>抵達的那一點</strong>（終點）；
+    <span class="compare">へ</span>＝把重點放在<strong>方向</strong>（朝那邊去）。<br>
+    寫地址、寫信封、寫「〜へ」的標語時幾乎都用 へ；日常口語兩個都聽得到。
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>不是所有 に 都能換成 へ</strong><br>
+    只有「<strong>目的地</strong>的 に」可以換。<br>
+    <ruby>主人<rt>しゅじん</rt></ruby><span class="j-mark">に</span>ついて<ruby>行<rt>い</rt></ruby>きます（跟著先生去）—— 這個 に 是<strong>對象</strong>，<span class="compare">不能</span>換成 へ。<br>
+    <ruby>先生<rt>せんせい</rt></ruby><span class="j-mark">に</span><ruby>聞<rt>き</rt></ruby>きます（問老師）—— 也是對象，同樣不能換。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、旅行三個場所 ＋ 高低アクセント</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日文沒有中文那種四聲，但有<strong>高低兩階</strong>。每個字的哪幾拍高、哪幾拍低是固定的，
+    唸錯不會聽不懂，但會很明顯「不是日本人的節奏」。下面用<strong>上面一條線＝高</strong>、<strong>下面一條線＝低</strong>來標。
+  </p>
+
+  <div class="section">
+    <div class="section-title">⛰️ 山（やま）— 低高，後面的助詞掉下來</div>
+
+    <div class="word-item" data-text="山">
+      <div class="word-content">
+        <div class="word-ja"><ruby>山<rt>やま</rt></ruby></div>
+        <div style="margin:6px 0 4px;">
+          <span class="pitch"><span class="lo">や</span><span class="drop">ま</span><span class="lo">が</span></span>
+          <span class="pitch-note">尾高型</span>
+        </div>
+        <div class="word-romaji">yama</div>
+        <div class="word-meaning">山 — や 低、ま 高，<strong>助詞一接上去就掉回低</strong>（やまが↓）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="観光地">
+      <div class="word-content">
+        <div class="word-ja"><ruby>観光地<rt>かんこうち</rt></ruby></div>
+        <div style="margin:6px 0 4px;">
+          <span class="pitch"><span class="lo">か</span><span class="hi">ん</span><span class="hi">こ</span><span class="drop">う</span><span class="lo">ち</span></span>
+          <span class="pitch-note">中高型</span>
+        </div>
+        <div class="word-romaji">kankouchi</div>
+        <div class="word-meaning">觀光景點 — <strong>かんこう</strong> 撐在高處，最後的 <strong>ち</strong> 掉下來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="温泉">
+      <div class="word-content">
+        <div class="word-ja"><ruby>温泉<rt>おんせん</rt></ruby></div>
+        <div style="margin:6px 0 4px;">
+          <span class="pitch"><span class="lo">お</span><span class="hi">ん</span><span class="hi">せ</span><span class="hi">ん</span><span class="hi">が</span></span>
+          <span class="pitch-note">平板型</span>
+        </div>
+        <div class="word-romaji">onsen</div>
+        <div class="word-meaning">溫泉 — 課堂上標的是<strong>一路平平不掉</strong>，助詞接上去也維持高</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>三種型態，記這三個字就等於記了三個範本</strong><br>
+    <span class="compare">尾高</span>（山）：詞尾高，但<strong>助詞一接就掉</strong><br>
+    <span class="compare">中高</span>（観光地）：中間高，<strong>詞還沒唸完就掉</strong><br>
+    <span class="compare">平板</span>（温泉）：第一拍之後<strong>一路高到底，不掉</strong><br>
+    另外還有<span class="compare">頭高</span>（第一拍最高，馬上掉），例如 <ruby>雨<rt>あめ</rt></ruby>（あ↑め↓）。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>字典跟課堂標的不一定一樣</strong><br>
+    高低音有地區差（東京 vs 關西）、也會隨世代變。<span class="compare">温泉</span> 有些辭典標成頭高（お↑んせん↓）。
+    <strong>以老師課堂上唸的為準</strong>，這頁記的是課堂版本。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、一緒 vs 同じ — 中文都是「一樣」</div>
+
+  <div class="tri">
+    <div class="tri-col mid">
+      <div class="tri-label">一起做 · Together</div>
+      <div class="tri-ja"><ruby>一緒<rt>いっしょ</rt></ruby>に</div>
+      <div class="tri-kana">issho ni</div>
+      <div class="tri-mean">跟誰<strong>一起</strong>做某事<br>後面接<strong>動詞</strong></div>
+    </div>
+    <div class="tri-col">
+      <div class="tri-label">相同 · Same</div>
+      <div class="tri-ja"><ruby>同<rt>おな</rt></ruby>じ</div>
+      <div class="tri-kana">onaji</div>
+      <div class="tri-mean">兩個東西<strong>相同</strong><br>後面接<strong>名詞</strong></div>
+    </div>
+    <div class="tri-col">
+      <div class="tri-label">重疊 · Overlap</div>
+      <div class="tri-ja"><ruby>一緒<rt>いっしょ</rt></ruby>です</div>
+      <div class="tri-kana">issho desu</div>
+      <div class="tri-mean">口語裡也可以<br>＝「一樣」</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🧳 例句</div>
+
+    <div class="word-item" data-text="旦那と一緒に温泉へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>旦那<rt>だんな</rt></ruby><span class="j-mark">と</span> <ruby>一緒<rt>いっしょ</rt></ruby>に <ruby>温泉<rt>おんせん</rt></ruby><span class="j-mark">へ</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">danna to issho ni onsen e ikimasu.</div>
+        <div class="word-meaning">和先生一起去泡溫泉。 — <span class="compare">〜と一緒に</span>＝跟〜一起，<a href="2026-08-04-mokutekichi-ni.html" style="color:var(--accent);">8/4 出現過</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私と同じです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby><span class="j-mark">と</span> <ruby>同<rt>おな</rt></ruby>じです。</div>
+        <div class="word-romaji">watashi to onaji desu.</div>
+        <div class="word-meaning">跟我一樣。 — 比較「相同」用 同じ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="同じ観光地へ行きました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>同<rt>おな</rt></ruby>じ <ruby>観光地<rt>かんこうち</rt></ruby><span class="j-mark">へ</span> <ruby>行<rt>い</rt></ruby>きました。</div>
+        <div class="word-romaji">onaji kankouchi e ikimashita.</div>
+        <div class="word-meaning">去了同一個觀光景點。 — 同じ 直接接名詞，<strong>中間不加 な、也不加 の</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>同じ 是特例：接名詞時不加 な</strong><br>
+    別的な形容詞會說 <ruby>静<rt>しず</rt></ruby>か<strong>な</strong><ruby>町<rt>まち</rt></ruby>，但 同じ 直接說 <strong>同じ町</strong>，不是「同じな町」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、首の仲間 — 首・手首・足首</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <a href="2026-08-07-kuyakusho-te.html" style="color:var(--accent);">同一天前面那堂課</a>學了 手首，
+    這裡把整組補完 —— 日文把「細細的、連接處的那一段」都叫 <strong>首</strong>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🧍 三個部位</div>
+
+    <div class="word-item" data-text="首">
+      <div class="word-content">
+        <div class="word-ja"><ruby>首<rt>くび</rt></ruby></div>
+        <div class="word-romaji">kubi</div>
+        <div class="word-meaning">脖子 — 本體</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="手首">
+      <div class="word-content">
+        <div class="word-ja"><ruby>手首<rt>てくび</rt></ruby></div>
+        <div style="margin:6px 0 4px;">
+          <span class="pitch"><span class="lo">て</span><span class="hi">く</span><span class="drop">び</span></span>
+          <span class="pitch-note">中高／尾高</span>
+        </div>
+        <div class="word-romaji">tekubi</div>
+        <div class="word-meaning">手腕 — 手 ＋ 首 ＝「手的脖子」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="足首">
+      <div class="word-content">
+        <div class="word-ja"><ruby>足首<rt>あしくび</rt></ruby></div>
+        <div class="word-romaji">ashikubi</div>
+        <div class="word-meaning">腳踝 — 足 ＋ 首 ＝「腳的脖子」，同一套造字法</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>「首」的日文腦</strong><br>
+    中文說手<strong>腕</strong>、腳<strong>踝</strong>，各有各的字；日文一律用 <strong>首</strong> ——
+    因為它抓的是「<strong>比兩頭細、可以轉</strong>」這個形狀概念，不是身體位置。
+    記住這個邏輯，之後看到 <ruby>瓶<rt>びん</rt></ruby>の<ruby>首<rt>くび</rt></ruby>（瓶頸）也不會意外。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、観光地 vs 看護師 — 超容易混</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <ruby>観光地<rt>かんこうち</rt></ruby> 跟 <a href="2026-07-24-shokugyou-shitsumon.html" style="color:var(--accent);">7/24 學過的</a>
+    <ruby>看護師<rt>かんごし</rt></ruby> 聽起來很像 —— 因為「<strong>観</strong>」和「<strong>看</strong>」音讀都是 <span class="compare">かん</span>，開頭完全一樣。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th></th><th>観光地</th><th>看護師</th></tr>
+    <tr><td>讀音</td><td class="col-ja">かん・<strong>こう</strong>・<strong>ち</strong></td><td class="col-ja">かん・<strong>ご</strong>・<strong>し</strong></td></tr>
+    <tr><td>拍數</td><td><strong>5 拍</strong>（こう 算兩拍）</td><td><strong>4 拍</strong></td></tr>
+    <tr><td>第二段</td><td><strong>こう</strong> — 清音 ＋ 長音</td><td><strong>ご</strong> — 濁音 ＋ 短音</td></tr>
+    <tr><td>結尾</td><td><strong>ち</strong>（地）</td><td><strong>し</strong>（師）</td></tr>
+    <tr><td>高低</td><td>かんこう↓ち（中高）</td><td>かんごし（平板）</td></tr>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>三個地方都要一起換，錯一個就聽成另一個字</strong><br>
+    <span class="compare">清濁</span>こう ↔ ご　／　<span class="compare">長短</span>有長音 ↔ 沒長音　／　<span class="compare">結尾</span>ち ↔ し<br>
+    最好認的是<strong>長度</strong>：観光地要唸得「長一點、拖一下」，看護師是短促的四拍。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 用漢字拆回去</strong><br>
+    <strong>観光・地</strong>＝觀光的<strong>地</strong>方 → 地 台語 <span class="compare">te</span> → <span class="compare">ち</span>（<ruby>地図<rt>ちず</rt></ruby>、<ruby>目的地<rt>もくてきち</rt></ruby>）<br>
+    <strong>看護・師</strong>＝看護的<strong>師</strong>傅 → 師 台語 <span class="compare">su</span> → <span class="compare">し</span>（<ruby>美容師<rt>びようし</rt></ruby>、<ruby>教師<rt>きょうし</rt></ruby>）<br>
+    ⇒ 想不起來時，先問「這是<strong>地方</strong>還是<strong>人</strong>」，答案就出來了：地方收 <strong>ち</strong>、人收 <strong>し</strong>。
+  </div>
+
+  <div class="tip">
+    💡 字尾的 <span class="compare">〜師</span>（美容師・教師・看護師）＝有專業技術的人；
+    字尾的 <span class="compare">〜地</span>（観光地・目的地・<ruby>住宅地<rt>じゅうたくち</rt></ruby>）＝某種用途的地方。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、音讀線索</div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 今天這批全是鼻音尾</strong><br>
+    <strong>山</strong> 台語 san → 音讀 <span class="compare">さん</span>（<ruby>富士山<rt>ふじさん</rt></ruby>、<ruby>火山<rt>かざん</rt></ruby>）<br>
+    <strong>温</strong> 台語 un → 音讀 <span class="compare">おん</span>（<ruby>温泉<rt>おんせん</rt></ruby>、<ruby>温度<rt>おんど</rt></ruby>）<br>
+    <strong>泉</strong> 台語 tsuan → 音讀 <span class="compare">せん</span>（温泉）<br>
+    <strong>観</strong> 台語 kuan → 音讀 <span class="compare">かん</span>（観光・観客）　<strong>看</strong> 台語 khan → <span class="compare">かん</span>（看護師）<br>
+    <strong>光</strong> 台語 kong → 音讀 <span class="compare">こう</span>（観光・<ruby>光線<rt>こうせん</rt></ruby>）—— <strong>-ng 尾常變成長音 こう／とう</strong><br>
+    ⇒ 台語收 <strong>-n</strong> 的字，日文幾乎都收 <strong>ん</strong>；收 <strong>-ng</strong> 的字，日文常拉成 <strong>う</strong> 長音。
+  </div>
+
+  <div class="alert">
+    ⚠️ 但 <strong>やま</strong>（山）、<strong>くび</strong>（首）、<strong>おなじ</strong>（同じ）是<strong>訓讀</strong>，
+    日文自己的固有詞，跟漢字音對不上 —— 這種就別硬套台語，用字形跟情境去記。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速記表</div>
+
+  <table class="joshi-table">
+    <tr><th>日文</th><th>讀音</th><th>意思／備註</th></tr>
+    <tr><td class="col-ja">場所＋へ</td><td>〜え</td><td>往某地去（へ 唸 e），可換成 に</td></tr>
+    <tr><td class="col-ja">山</td><td>やま</td><td>山 — 尾高（やま↓が）</td></tr>
+    <tr><td class="col-ja">観光地</td><td>かんこうち</td><td>觀光景點 — 中高（かんこう↓ち）</td></tr>
+    <tr><td class="col-ja">温泉</td><td>おんせん</td><td>溫泉 — 課堂標平板（不掉）</td></tr>
+    <tr><td class="col-ja">一緒に</td><td>いっしょに</td><td>一起（接動詞）— 〜<strong>と</strong>一緒に</td></tr>
+    <tr><td class="col-ja">同じ</td><td>おなじ</td><td>相同（接名詞，不加 な）</td></tr>
+    <tr><td class="col-ja">首</td><td>くび</td><td>脖子</td></tr>
+    <tr><td class="col-ja">手首</td><td>てくび</td><td>手腕</td></tr>
+    <tr><td class="col-ja">足首</td><td>あしくび</td><td>腳踝</td></tr>
+    <tr><td class="col-ja">看護師</td><td>かんごし</td><td>護理師</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗（Self-Quiz）</div>
+
+  <div class="section">
+    <div class="section-title">✍️ 填助詞／翻譯</div>
+
+    <p style="color:var(--ink-soft);font-size:14.5px;line-height:2;">
+      <strong>1.</strong> 助詞「へ」當助詞時要唸什麼？<br>
+      <strong>2.</strong> 下面兩個 に，哪一個可以換成 へ？<br>
+      　　(a) <ruby>温泉<rt>おんせん</rt></ruby>（に）<ruby>行<rt>い</rt></ruby>きます　(b) <ruby>先生<rt>せんせい</rt></ruby>（に）<ruby>聞<rt>き</rt></ruby>きます<br>
+      <strong>3.</strong> 翻成日文：和先生一起去觀光景點。<br>
+      <strong>4.</strong> 「同じ町」還是「同じな町」？為什麼？<br>
+      <strong>5.</strong> 手腕、腳踝的日文各是什麼？為什麼都有「首」？<br>
+      <strong>6.</strong> かんこうち 和 かんごし 差在哪三個地方？各是什麼意思？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>
+        <strong>1.</strong> 唸 <strong>え（e）</strong>，不是 he。跟 は 當助詞唸 wa 同一種老規矩。<br><br>
+        <strong>2.</strong> 只有 <strong>(a)</strong>。溫泉是<strong>目的地</strong> → 温泉<strong>へ</strong>行きます 也對。
+        (b) 的 に 是<strong>問的對象</strong>，へ 只表示方向，不能換。<br><br>
+        <strong>3.</strong> <ruby>旦那<rt>だんな</rt></ruby><strong>と</strong><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>観光地<rt>かんこうち</rt></ruby><strong>へ</strong><ruby>行<rt>い</rt></ruby>きます。
+        （主人と… 也可以；へ 換 に 也對）<br><br>
+        <strong>4.</strong> <strong>同じ町</strong>。同じ 是特例，接名詞時<strong>不加 な</strong>（一般な形容詞才會，如 静かな町）。<br><br>
+        <strong>5.</strong> 手腕＝<strong>手首（てくび）</strong>、腳踝＝<strong>足首（あしくび）</strong>。
+        日文的「首」抓的是「比兩頭細、可以轉」的形狀，不是身體位置，所以手跟腳都能用。<br><br>
+        <strong>6.</strong> <ruby>観光地<rt>かんこうち</rt></ruby>＝觀光景點（<strong>地方</strong>）、<ruby>看護師<rt>かんごし</rt></ruby>＝護理師（<strong>人</strong>）。
+        三個差別：<strong>こう（清音＋長音）↔ ご（濁音＋短音）</strong>、<strong>5 拍 ↔ 4 拍</strong>、<strong>結尾 ち ↔ し</strong>。
+        判斷法：地方收 ち、人收 し。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-07-kuyakusho-te.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">区役所で申し込みました <span class="next-arrow">→</span></span>
+    <span class="next-sub">手・手首・手紙 第一次出現的地方</span>
+  </a>
+
+  <a href="2026-08-07-kikoemasu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">聞こえますか — 聽得到 vs 去聽 <span class="next-arrow">→</span></span>
+    <span class="next-sub">先生に聞きます 的「に」也是不能換成 へ 的那種</span>
+  </a>
+
+  <a href="2026-08-04-mokutekichi-ni.html" class="next-link">
+    <span class="next-kicker">— Related · 2026/08/04 —</span>
+    <span class="next-title">目的地に／へ ＋ 〜について <span class="next-arrow">→</span></span>
+    <span class="next-sub">に vs へ 的完整對照，以及「〜と一緒に」第一次出現</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

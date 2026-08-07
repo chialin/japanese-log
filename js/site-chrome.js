@@ -152,3 +152,18 @@ function upgradeSpeedControl(sc) {
 }
 
 document.querySelectorAll('.speed-control').forEach(upgradeSpeedControl);
+
+// ── 漢字連結：只在課程／閱讀／多読頁載入，先載 index 再載邏輯 ──
+(function () {
+  if (!/\/(lessons|readings|tadoku)\//.test(location.pathname)) return;
+  const prefix = '../';
+  const load = (src) =>
+    new Promise((res) => {
+      const s = document.createElement('script');
+      s.src = prefix + src;
+      s.onload = res;
+      s.onerror = res;          // 檔案不存在也不能擋住頁面
+      document.head.appendChild(s);
+    });
+  load('js/kanji-index.js').then(() => load('js/kanji-link.js'));
+})();

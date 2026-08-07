@@ -1515,7 +1515,7 @@ grep -n "class=\"res-\|<li>\|<a class" resources.html | head -20
 - [ ] **Step 4: 跑完整驗收（規格的 10 條標準）**
 
 ```bash
-node --test scripts/test/
+node --test scripts/test/*.test.mjs
 node scripts/build-kanji.mjs
 ```
 

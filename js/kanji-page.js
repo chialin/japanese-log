@@ -40,6 +40,15 @@
       (same ? `<br>同款收 ${esc(e.taigi.coda)} 的字：${esc(same)}` : '') + `</div>`;
   }
 
+  function renderMissing(ch) {
+    detail.innerHTML =
+      `<div class="kcard">
+        <div class="khead"><div class="kbig">${esc(ch)}</div></div>
+        <p>這個字還不在表裡（可能是剛寫的新課還沒跑 <code>node scripts/build-kanji.mjs</code>）。</p>
+      </div>`;
+    grid.querySelectorAll('.kanji-tile').forEach((b) => b.classList.remove('on'));
+  }
+
   function render(ch) {
     const e = data[ch];
     if (!e) return;
@@ -56,12 +65,12 @@
           <div class="kbig">${esc(ch)}</div>
           <div class="kmeta">
             <div>${tags.map((t) => `<span class="ktag">${t}</span>`).join(' ')}</div>
-            <div class="kcount">遇過 ${e.days} 天 · ${Object.keys(e.on).length + Object.keys(e.kun).length} 種讀音</div>
+            <div class="kcount">遇過 ${e.days} 天${Object.keys(e.on).length + Object.keys(e.kun).length ? ` · ${Object.keys(e.on).length + Object.keys(e.kun).length} 種讀音` : ''}</div>
           </div>
         </div>
         ${Object.keys(e.on).length ? `<div class="klbl">— 音讀 · On —</div>${branchRows(e.on, 'on')}` : ''}
         ${Object.keys(e.kun).length ? `<div class="klbl">— 訓讀 · Kun —</div>${branchRows(e.kun, 'kun')}` : ''}
-        ${e.other.length ? `<div class="klbl">— 其他（熟字訓等）—</div>
+        ${e.other.length ? `<div class="klbl">— 其他（拆不開的讀法）—</div>
           <div class="kbranch other"><span class="kb-words">${e.other.map(esc).join('・')}</span></div>` : ''}
         <div class="klbl">— 你遇到它的順序 —</div>
         <div class="ktimeline">${timeline.map((t) =>
@@ -78,8 +87,8 @@
     const btn = ev.target.closest('.kanji-tile');
     if (!btn) return;
     const ch = btn.dataset.kanji;
-    history.replaceState(null, '', '#' + encodeURIComponent(ch));
     render(ch);
+    try { history.replaceState(null, '', '#' + encodeURIComponent(ch)); } catch {}
     detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 
@@ -101,6 +110,13 @@
 
   const fromHash = decodeURIComponent(location.hash.slice(1));
   const first = grid.querySelector('.kanji-tile');
-  render(data[fromHash] ? fromHash : first && first.dataset.kanji);
-  if (data[fromHash]) detail.scrollIntoView({ block: 'start' });
+  if (fromHash && data[fromHash]) {
+    render(fromHash);
+    detail.scrollIntoView({ block: 'start' });
+  } else if (fromHash) {
+    renderMissing(fromHash);
+    detail.scrollIntoView({ block: 'start' });
+  } else {
+    render(first && first.dataset.kanji);
+  }
 })();

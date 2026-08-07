@@ -13,7 +13,7 @@ import { gunzipSync } from 'node:zlib';
 import { parseKanjidic } from './lib/kanjidic-parse.mjs';
 import { collectKanji } from './lib/kanji-scan.mjs';
 
-const URL = 'http://www.edrdg.org/kanjidic/kanjidic2.xml.gz';
+const URL = 'https://www.edrdg.org/kanjidic/kanjidic2.xml.gz';
 const CACHE = '.cache/kanjidic2.xml.gz';
 const OUT = 'data/kanji-readings.json';
 const force = process.argv.includes('--force');

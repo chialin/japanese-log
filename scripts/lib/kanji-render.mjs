@@ -61,6 +61,7 @@ export function renderIndexPage(entries) {
     💡 <strong>怎麼用</strong><br>
     橘底＝出現 3 天以上的高頻字。點任一個字，下方會展開它的<strong>讀音分支</strong>與<strong>你遇到它的順序</strong>。
     音讀（棕橘）多半跟台語相通，訓讀（金茶）是日文固有詞。
+    約一成的詞拆不開（熟字訓、音便、字典缺漏），會整組收在「其他」。
   </div>
 
   <div class="kanji-filters">
@@ -74,7 +75,7 @@ export function renderIndexPage(entries) {
   <div id="kanji-detail"></div>
 
   <p class="kanji-credit">
-    讀音資料來自 <a href="http://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>
+    讀音資料來自 <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener">KANJIDIC2</a>
     © EDRDG，授權 CC BY-SA 4.0。
   </p>
 

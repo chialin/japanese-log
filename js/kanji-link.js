@@ -14,7 +14,7 @@
   const link = (ch) => prefix + 'kanji.html#' + encodeURIComponent(ch);
 
   // ① 徽章：掛在含 ruby 的卡片上
-  const CARDS = '.word-item, .turn, .ta-card, .scene';
+  const CARDS = '.word-item, .turn, .ta-card, .scene, td.col-ja';
   const seenAll = new Set();
 
   document.querySelectorAll('ruby').forEach((ruby) => {
@@ -38,9 +38,10 @@
     }
   });
 
-  // ② 頁尾行
-  if (seenAll.size) {
-    const list = [...seenAll]
+  // ② 頁尾行 — 只列表裡實際有的字，避免連到 kanji.html#新 卻沒資料
+  const seen = [...seenAll].filter((ch) => idx[ch] != null);
+  if (seen.length) {
+    const list = seen
       .sort((a, b) => (idx[b] || 0) - (idx[a] || 0))
       .map((ch) => `<a href="${link(ch)}">${ch}</a>`)
       .join('・');

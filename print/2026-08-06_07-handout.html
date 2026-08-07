@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--
+  紙本講義原稿 — 2026/08/06 + 08/07 兩天教材重新編排
+  用 WeasyPrint 輸出 A5 PDF：
+    weasyprint print/2026-08-06_07-handout.html pdf/2026-08-06_07-handout.pdf
+
+  排版原則（跟網頁版不同，刻意重寫）：
+  - 不用 <ruby>（WeasyPrint 不支援 ruby 佈局），讀音一律寫成 漢字（かな）
+  - 不用底色填滿，只用細框線與粗左邊；黑白列印也讀得出來
+  - 字型走 macOS 內建，離線可跑
+-->
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>そこは〜ですよ／区役所で申し込みました — 8月6・7日 講義</title>
+<style>
+@page {
+  size: A5;
+  margin: 14mm 13mm 16mm;
+  @bottom-center {
+    content: counter(page);
+    font-family: 'Baskerville', serif;
+    font-size: 9pt;
+    color: #777;
+  }
+  @top-right {
+    content: "日本語ノート · 2026年8月";
+    font-family: 'Hiragino Mincho ProN', serif;
+    font-size: 7.5pt;
+    color: #999;
+  }
+}
+@page :first { @top-right { content: ""; } @bottom-center { content: ""; } }
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'Hiragino Mincho ProN', 'Songti TC', serif;
+  font-size: 10pt;
+  line-height: 1.72;
+  color: #1a1a1a;
+  margin: 0;
+}
+.ja { font-family: 'Hiragino Mincho ProN', serif; }
+.ro { font-family: 'Baskerville', serif; font-style: italic; color: #666; }
+
+/* ── 封面 ── */
+.cover { height: 100%; display: flex; flex-direction: column; justify-content: center; text-align: center; page-break-after: always; }
+.cover-rule { width: 40mm; border-top: 1.5pt solid #333; margin: 0 auto 10mm; }
+.cover h1 { font-size: 21pt; font-weight: 600; line-height: 1.5; margin: 0 0 6mm; letter-spacing: .04em; }
+.cover .sub { font-size: 10pt; color: #555; line-height: 2; margin-bottom: 12mm; }
+.cover .date { font-family: 'Baskerville', serif; font-style: italic; font-size: 10pt; color: #777; letter-spacing: .12em; }
+
+/* ── 目次 ── */
+.toc { page-break-after: always; }
+.toc h2 { font-size: 13pt; letter-spacing: .1em; border-bottom: 1pt solid #333; padding-bottom: 2mm; margin-bottom: 6mm; }
+.toc ol { list-style: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 3.5mm; font-size: 10pt; }
+.toc .n { font-family: 'Baskerville', serif; font-style: italic; color: #888; margin-right: 3mm; }
+.toc .d { display: block; font-size: 8.5pt; color: #777; margin-left: 8mm; line-height: 1.6; }
+
+/* ── 章節 ── */
+h2.chap { font-size: 14pt; font-weight: 600; letter-spacing: .06em; border-bottom: 1.5pt solid #333; padding-bottom: 2mm; margin: 0 0 5mm; page-break-after: avoid; }
+h3 { font-size: 11pt; font-weight: 600; margin: 5mm 0 2.5mm; padding-left: 2.5mm; border-left: 3pt solid #333; page-break-after: avoid; }
+p { margin: 0 0 3mm; }
+.lead { font-size: 9.5pt; color: #444; margin-bottom: 4mm; }
+.chap-start { page-break-before: always; }
+
+/* ── 句型骨架 ── */
+.frame { border: 1pt solid #333; padding: 3mm 4mm; text-align: center; margin: 3mm 0 4mm; page-break-inside: avoid; }
+.frame .big { font-size: 15pt; line-height: 1.7; }
+.frame .slot { border-bottom: 1pt dashed #666; padding: 0 4mm; }
+.frame .ro { display: block; font-size: 8.5pt; margin-top: 1.5mm; }
+
+/* ── 單字／例句條目 ── */
+.item { border-bottom: .5pt solid #ccc; padding: 1.8mm 0; page-break-inside: avoid; }
+.item:last-child { border-bottom: none; }
+.item .l1 { font-size: 12pt; line-height: 1.6; }
+.item .l2 { font-size: 8.5pt; font-family: 'Baskerville', serif; font-style: italic; color: #666; }
+.item .l3 { font-size: 9pt; color: #333; line-height: 1.7; }
+.kana { font-size: 9pt; color: #555; }
+
+/* ── 表格 ── */
+table { width: 100%; border-collapse: collapse; margin: 3mm 0 5mm; font-size: 9pt; page-break-inside: avoid; }
+th, td { border: .5pt solid #999; padding: 1.8mm 2.5mm; text-align: left; vertical-align: top; }
+th { font-weight: 600; border-bottom: 1pt solid #333; }
+td.w { white-space: nowrap; font-size: 10pt; }
+
+/* ── 提示框（靠邊框粗細分類，不用顏色） ── */
+.box { padding: 2.5mm 3.5mm; margin: 3mm 0; font-size: 9pt; line-height: 1.75; page-break-inside: avoid; }
+.box .hd { font-weight: 600; display: block; margin-bottom: 1.5mm; font-size: 9.5pt; }
+.box.warn { border-left: 3pt solid #333; border-top: .5pt solid #999; border-right: .5pt solid #999; border-bottom: .5pt solid #999; }
+.box.note { border-left: 1pt double #333; border-top: .5pt solid #ccc; border-bottom: .5pt solid #ccc; }
+.box.mne { border: 1.5pt solid #333; border-radius: 3mm; }
+
+/* ── 對照兩欄 ── */
+.vs { display: flex; gap: 4mm; margin: 4mm 0; page-break-inside: avoid; }
+.vs > div { flex: 1; border: .5pt solid #999; padding: 3mm; font-size: 9pt; }
+.vs h4 { margin: 0 0 2mm; font-size: 9.5pt; border-bottom: .5pt solid #ccc; padding-bottom: 1mm; }
+
+/* ── 測驗 ── */
+.quiz { border: .5pt solid #999; padding: 4mm; margin-top: 4mm; }
+.quiz ol { margin: 0; padding-left: 6mm; font-size: 9.5pt; line-height: 2.2; }
+.ans { border-top: 1pt dashed #666; margin-top: 4mm; padding-top: 3mm; font-size: 8.5pt; color: #333; line-height: 1.9; }
+.ans .hd { font-weight: 600; display: block; margin-bottom: 1.5mm; }
+.blank { border-bottom: .5pt solid #666; display: inline-block; min-width: 28mm; }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 封面 ══════════ -->
+<section class="cover">
+  <div class="cover-rule"></div>
+  <h1>そこは〜ですよ<br>区役所で申し込みました</h1>
+  <div class="sub">
+    評論一個地方的句型骨架 ／ 公家機關與辦手續<br>
+    ＋ つ・て 開頭的六個單字
+  </div>
+  <div class="date">2026 . 08 . 06 — 08 . 07</div>
+  <div class="cover-rule" style="margin-top:10mm;margin-bottom:0;"></div>
+</section>
+
+<!-- ══════════ 目次 ══════════ -->
+<section class="toc">
+  <h2>目次</h2>
+  <ol>
+    <li><span class="n">I</span>そこは〜ですよ — 評論一個地方
+      <span class="d">句型骨架／狀態動詞 vs い形容詞／四組容易混的字</span></li>
+    <li><span class="n">II</span>区役所で申し込みました — 辦手續
+      <span class="d">区役所・市役所／申し込みました 的四種形／カフェ</span></li>
+    <li><span class="n">III</span>單字 — つ 與 て 開頭
+      <span class="d">釣り・爪・机／手・手首・手紙</span></li>
+    <li><span class="n">IV</span>音讀線索總整理
+      <span class="d">台語鼻音尾 -n → ん／入聲 -k → く・きょく</span></li>
+    <li><span class="n">V</span>速記表</li>
+    <li><span class="n">VI</span>課後複習小測驗</li>
+  </ol>
+</section>
+
+<!-- ══════════ I ══════════ -->
+<section class="chap-start">
+<h2 class="chap">I　そこは〜ですよ — 評論一個地方</h2>
+
+<p class="lead">
+  一個骨架，換裡面的詞就能評論任何地方。真正的重點不是單字，而是分清楚
+  <strong>哪些詞要接「〜ています」</strong>（動詞），<strong>哪些直接接「です」</strong>（い形容詞）。
+</p>
+
+<div class="frame">
+  <div class="big ja">そこは <span class="slot">　　　</span> ですよ。</div>
+  <span class="ro">soko wa ____ desu yo. — 那裡是⋯⋯喔</span>
+</div>
+
+<p class="lead">
+  <strong>そこ</strong>＝離聽話者近的「那裡」。句尾的 <strong>よ</strong> 是提醒對方的語氣 ——
+  我知道、你可能不知道，所以告訴你。去掉 よ 就只是平述。
+</p>
+
+<h3>① 狀態動詞 — 混む・空く</h3>
+
+<div class="item">
+  <div class="l1 ja">そこは混んでいますよ。<span class="kana">（こんで）</span></div>
+  <div class="l2">soko wa konde imasu yo</div>
+  <div class="l3">那裡很擠喔 — 混む（こむ）＝擁擠</div>
+</div>
+<div class="item">
+  <div class="l1 ja">そこは空いていますよ。<span class="kana">（すいて）</span></div>
+  <div class="l2">soko wa suite imasu yo</div>
+  <div class="l3">那裡很空喔、有位子喔 — 空く（すく）＝變空</div>
+</div>
+
+<div class="box warn">
+  <span class="hd">〜ています ＝ 狀態持續，不是「正在做動作」</span>
+  中文說「那裡在擠」很怪，但日文的 混んでいます 就是「現在處於擠的狀態」。
+  同款的還有 結婚しています（けっこん）＝已婚狀態，不是正在舉行婚禮。
+</div>
+
+<div class="box note">
+  <span class="hd">空く 其實學過了</span>
+  お腹（なか）がすいた ＝ 肚子空了 ＝ 餓了。同一個動詞「空く」，主詞從「店」換成「肚子」而已。
+</div>
+
+<h3>② い形容詞 — 直接接 です</h3>
+
+<div class="item"><div class="l1 ja">そこは高いですよ。<span class="kana">（たかい）</span></div>
+  <div class="l2">takai</div><div class="l3">很貴喔（也可以是「很高」，看情境）</div></div>
+<div class="item"><div class="l1 ja">そこは安いですよ。<span class="kana">（やすい）</span></div>
+  <div class="l2">yasui</div><div class="l3">很便宜喔</div></div>
+<div class="item"><div class="l1 ja">そこは寒いですよ。<span class="kana">（さむい）</span></div>
+  <div class="l2">samui</div><div class="l3">很冷喔（天氣）</div></div>
+<div class="item"><div class="l1 ja">そこは暑いですよ。<span class="kana">（あつい）</span></div>
+  <div class="l2">atsui</div><div class="l3">很熱喔（天氣）</div></div>
+<div class="item"><div class="l1 ja">そこは近いですよ。<span class="kana">（ちかい）</span></div>
+  <div class="l2">chikai</div><div class="l3">很近喔</div></div>
+<div class="item"><div class="l1 ja">そこは遠いですよ。<span class="kana">（とおい）</span></div>
+  <div class="l2">tooi</div><div class="l3">很遠喔</div></div>
+
+<div class="vs">
+  <div>
+    <h4>動詞 → 〜ています</h4>
+    混む → 混んで<strong>います</strong><br>
+    空く → 空いて<strong>います</strong><br><br>
+    表示「現在處於某狀態」。
+  </div>
+  <div>
+    <h4>い形容詞 → 直接 です</h4>
+    高い → 高い<strong>です</strong><br>
+    寒い → 寒い<strong>です</strong><br><br>
+    已經有「い」結尾，不用動詞變化。
+  </div>
+</div>
+
+<div class="box warn">
+  <span class="hd">×高いでいます 是錯的</span>
+  い形容詞不能接「〜ています」。否定則是把「い」換成「くない」：
+  高くないです（不貴）、寒くないです（不冷）。
+</div>
+
+<h3>③ 四組容易混的字</h3>
+
+<table>
+  <tr><th style="width:26%">寫法</th><th style="width:22%">讀音</th><th>用在哪</th></tr>
+  <tr><td class="w ja">暑い</td><td>あつい</td><td>天氣熱 — 夏は暑いです</td></tr>
+  <tr><td class="w ja">熱い</td><td>あつい</td><td>東西燙 — このお茶は熱いです</td></tr>
+  <tr><td class="w ja">寒い</td><td>さむい</td><td>天氣冷</td></tr>
+  <tr><td class="w ja">冷たい</td><td>つめたい</td><td>東西冰</td></tr>
+  <tr><td class="w ja">安い</td><td>やすい</td><td>便宜</td></tr>
+  <tr><td class="w ja">易しい</td><td>やさしい</td><td>簡單（差一個 さ）</td></tr>
+  <tr><td class="w ja">遠い</td><td>とお い</td><td>長音寫 <strong>お</strong> 不是 う（同款：大きい・氷）</td></tr>
+</table>
+
+<div class="box note">
+  <span class="hd">暑い 和「夏」不一樣</span>
+  暑い（あつい）是<strong>形容詞</strong>「熱的」；夏（なつ）是<strong>名詞</strong>「夏天」。
+  兩個要一起出現：<span class="ja">夏は暑いです。</span>（夏天很熱。）
+</div>
+</section>
+
+<!-- ══════════ II ══════════ -->
+<section class="chap-start">
+<h2 class="chap">II　区役所で申し込みました</h2>
+
+<p class="lead">
+  日本的行政層級：東京 23 區這種「区」去 <strong>区役所</strong>，其他市（橫濱市、京都市…）去
+  <strong>市役所</strong>。住民票、國民健康保險、搬家的轉入／轉出手續，都在這裡辦。
+</p>
+
+<h3>① 兩個「役所」</h3>
+
+<div class="item"><div class="l1 ja">区役所<span class="kana">（くやくしょ）</span></div>
+  <div class="l2">ku-yaku-sho</div><div class="l3">區公所</div></div>
+<div class="item"><div class="l1 ja">市役所<span class="kana">（しやくしょ）</span></div>
+  <div class="l2">shi-yaku-sho</div><div class="l3">市公所、市政府</div></div>
+<div class="item"><div class="l1 ja">区役所はどこですか。</div>
+  <div class="l2">kuyakusho wa doko desu ka</div><div class="l3">請問區公所在哪裡？（沿用「〜はどこですか」問路句型）</div></div>
+
+<div class="box note">
+  <span class="hd">記一次通兩個</span>
+  差別只在第一個字（区／市），後面的<strong>役所（やくしょ）</strong>完全一樣。
+</div>
+
+<h3>② 申し込みました — 我申請了</h3>
+
+<div class="frame">
+  <div class="big ja">申し込みました</div>
+  <span class="ro">mōshikomimashita — 申請了</span>
+</div>
+
+<p class="lead">
+  <strong>申す</strong>（說、請求）＋<strong>込む</strong>（放進去）＝「把請求送進去」＝申請。
+</p>
+
+<table>
+  <tr><th style="width:28%">形</th><th style="width:40%">日文</th><th>意思</th></tr>
+  <tr><td>辭書形</td><td class="w ja">申し込む</td><td>申請（原形）</td></tr>
+  <tr><td>丁寧形</td><td class="w ja">申し込みます</td><td>要申請／會申請</td></tr>
+  <tr><td>丁寧・過去</td><td class="w ja">申し込みました</td><td><strong>申請了</strong>（已完成）</td></tr>
+  <tr><td>名詞形</td><td class="w ja">申し込み</td><td>申請、報名（表格上的那個）</td></tr>
+</table>
+
+<div class="box note">
+  <span class="hd">ます → ました</span>
+  丁寧形的過去式，就是把「ます」換成「ました」。這條規則所有動詞通用。
+</div>
+
+<div class="item"><div class="l1 ja">区役所で申し込みました。</div>
+  <div class="l2">kuyakusho de mōshikomimashita</div>
+  <div class="l3">我在區公所申請了。 — <strong>で</strong>＝動作發生的場所</div></div>
+<div class="item"><div class="l1 ja">市役所で国民健康保険を申し込みました。</div>
+  <div class="l2">shiyakusho de kokumin kenkō hoken o mōshikomimashita</div>
+  <div class="l3">我在市公所申請了國民健康保險。</div></div>
+<div class="item"><div class="l1 ja">ネットで申し込みましたか。</div>
+  <div class="l2">netto de mōshikomimashita ka</div>
+  <div class="l3">你是在網路上申請的嗎？</div></div>
+
+<h3>③ カフェ — 辦完事去坐一下</h3>
+
+<div class="item"><div class="l1 ja">カフェ</div>
+  <div class="l2">kafe（← 法語 café）</div>
+  <div class="l3">咖啡廳 — 是 <strong>フェ</strong>（フ＋小さいェ），不是「カフエ」</div></div>
+<div class="item"><div class="l1 ja">区役所の近くにカフェがあります。</div>
+  <div class="l2">kuyakusho no chikaku ni kafe ga arimasu</div>
+  <div class="l3">區公所附近有一間咖啡廳。（近く ← 用到 I 章的「近い」）</div></div>
+<div class="item"><div class="l1 ja">あとでカフェへ行きます。</div>
+  <div class="l2">ato de kafe e ikimasu</div>
+  <div class="l3">等一下要去咖啡廳。</div></div>
+
+<div class="box warn">
+  <span class="hd">カフェ vs 喫茶店（きっさてん）</span>
+  カフェ＝現代咖啡廳（星巴克那種）；喫茶店＝昭和風老派咖啡館，通常有厚片吐司跟布丁。
+</div>
+</section>
+
+<!-- ══════════ III ══════════ -->
+<section class="chap-start">
+<h2 class="chap">III　單字 — つ 與 て 開頭</h2>
+
+<h3>① つ 開頭三兄弟</h3>
+
+<div class="item"><div class="l1 ja">釣り<span class="kana">（つり）</span></div>
+  <div class="l2">tsuri</div><div class="l3">釣魚 — 動詞是 釣る。「釣りに行きます」＝去釣魚</div></div>
+<div class="item"><div class="l1 ja">爪<span class="kana">（つめ）</span></div>
+  <div class="l2">tsume</div><div class="l3">指甲 — 爪を切ります（きります）＝剪指甲</div></div>
+<div class="item"><div class="l1 ja">机<span class="kana">（つくえ）</span></div>
+  <div class="l2">tsukue</div><div class="l3">書桌 — 讀書寫字的桌子；吃飯的餐桌叫 テーブル</div></div>
+
+<h3>② て 開頭三個字 — 都從「手」長出來</h3>
+
+<div class="item"><div class="l1 ja">手<span class="kana">（て）</span></div>
+  <div class="l2">te</div><div class="l3">手 — 手を洗います（あらいます）＝洗手</div></div>
+<div class="item"><div class="l1 ja">手首<span class="kana">（てくび）</span></div>
+  <div class="l2">te-kubi</div><div class="l3">手腕 — 手＋首（脖子）＝「手的脖子」。同理 足首（あしくび）＝腳踝</div></div>
+<div class="item"><div class="l1 ja">手紙<span class="kana">（てがみ）</span></div>
+  <div class="l2">te-gami</div><div class="l3"><strong>信</strong>，不是衛生紙！紙（かみ）接在字後面濁化成 がみ</div></div>
+
+<div class="box warn">
+  <span class="hd">手紙 ≠ 衛生紙</span>
+  日文的 手紙（てがみ）＝<strong>信</strong>。衛生紙是 ティッシュ（面紙）／トイレットペーパー（捲筒紙）。
+  用「親手寫在紙上」去記。
+</div>
+
+<div class="box note">
+  <span class="hd">連濁（れんだく）</span>
+  かみ → がみ 這種「後面的字變濁音」在複合詞裡很常見，跟濁音那課的規則同源。
+</div>
+
+<div class="item"><div class="l1 ja">手を洗いました。</div><div class="l2">te o araimashita</div><div class="l3">我洗手了。</div></div>
+<div class="item"><div class="l1 ja">手首が痛いです。</div><div class="l2">tekubi ga itai desu</div><div class="l3">我手腕痛。（看醫生很好用；痛い 也是い形容詞）</div></div>
+<div class="item"><div class="l1 ja">友達に手紙を書きました。</div><div class="l2">tomodachi ni tegami o kakimashita</div><div class="l3">我寫了信給朋友。 — <strong>に</strong>＝給誰</div></div>
+</section>
+
+<!-- ══════════ IV ══════════ -->
+<section class="chap-start">
+<h2 class="chap">IV　音讀線索總整理</h2>
+
+<p class="lead">
+  日語漢字音（音讀）跟台語都保留了中古漢語的層次，對應比中文普通話整齊。
+  這兩天的教材剛好把兩條主要規律都碰到了。
+</p>
+
+<div class="box mne">
+  <span class="hd">規律一：台語鼻音尾 -n／-ng → 日語收 ん</span>
+  混 hun → <strong>こん</strong>（混雑 こんざつ＝擁擠）　｜　寒 han → <strong>かん</strong>（寒気 かんき）<br>
+  近 kin → <strong>きん</strong>（近所 きんじょ・最近 さいきん）　｜　遠 uan → <strong>えん</strong>（遠足 えんそく）<br>
+  安 an → <strong>あん</strong>（安心 あんしん）
+</div>
+
+<div class="box mne">
+  <span class="hd">規律二：台語入聲 -k → 日語 く／きょく</span>
+  役 ik → <strong>やく</strong>（役所 やくしょ）　｜　局 kiok → <strong>きょく</strong>（郵便局 ゆうびんきょく）<br>
+  順著這條，<strong>区役所</strong>幾乎是台語直翻：<br>
+  区 khu → く　＋　役 ik → やく　＋　所 soo → しょ　＝　<strong>くやくしょ</strong><br>
+  市 tshi → し　＋　役所　＝　<strong>しやくしょ</strong>
+</div>
+
+<div class="box mne">
+  <span class="hd">規律三：同一個字，訓讀與音讀兩張臉</span>
+  手 —— 訓讀 <strong>て</strong>（手・手首・手紙，配日本詞）；音讀 <strong>しゅ</strong>（握手 あくしゅ・選手 せんしゅ，配漢語詞）。<br>
+  台語「手」tshiu → しゅ。分辨法：<strong>單獨用或配日本詞 → て；配漢語詞 → しゅ</strong>。
+</div>
+
+<div class="box warn">
+  <span class="hd">但形容詞對不上，別硬湊</span>
+  たかい・やすい・さむい・あつい・ちかい・とおい・つり・つめ・つくえ 全是<strong>訓讀</strong>（日文固有詞），
+  跟漢字音沒有關係。音讀線索只在<strong>複合詞</strong>（混雑・近所・遠足・役所）派上用場。
+</div>
+</section>
+
+<!-- ══════════ V ══════════ -->
+<section class="chap-start">
+<h2 class="chap">V　速記表</h2>
+
+<h3>句型詞（8/6）</h3>
+<table>
+  <tr><th style="width:34%">日文</th><th style="width:30%">讀音</th><th>意思／備註</th></tr>
+  <tr><td class="w ja">混んでいます</td><td>こんでいます</td><td>擁擠（動詞 混む ＋ ています）</td></tr>
+  <tr><td class="w ja">空いています</td><td>すいています</td><td>空、有位子（動詞 空く ＋ ています）</td></tr>
+  <tr><td class="w ja">高い</td><td>たかい</td><td>貴的／高的</td></tr>
+  <tr><td class="w ja">安い</td><td>やすい</td><td>便宜的（≠ 易しい やさしい）</td></tr>
+  <tr><td class="w ja">寒い</td><td>さむい</td><td>冷（天氣）；東西冰＝冷たい</td></tr>
+  <tr><td class="w ja">暑い</td><td>あつい</td><td>熱（天氣）；東西燙＝熱い</td></tr>
+  <tr><td class="w ja">近い</td><td>ちかい</td><td>近的</td></tr>
+  <tr><td class="w ja">遠い</td><td>とおい</td><td>遠的（とお い，不是とうい）</td></tr>
+  <tr><td class="w ja">釣り</td><td>つり</td><td>釣魚（動詞 釣る）</td></tr>
+  <tr><td class="w ja">爪</td><td>つめ</td><td>指甲</td></tr>
+  <tr><td class="w ja">机</td><td>つくえ</td><td>書桌（餐桌＝テーブル）</td></tr>
+</table>
+
+<h3>辦手續（8/7）</h3>
+<table>
+  <tr><th style="width:34%">日文</th><th style="width:30%">讀音</th><th>意思／備註</th></tr>
+  <tr><td class="w ja">区役所</td><td>くやくしょ</td><td>區公所</td></tr>
+  <tr><td class="w ja">市役所</td><td>しやくしょ</td><td>市公所</td></tr>
+  <tr><td class="w ja">申し込みました</td><td>もうしこみました</td><td>申請了（ます→ました）</td></tr>
+  <tr><td class="w ja">カフェ</td><td>—</td><td>咖啡廳（≠ 喫茶店）</td></tr>
+  <tr><td class="w ja">手</td><td>て</td><td>手</td></tr>
+  <tr><td class="w ja">手首</td><td>てくび</td><td>手腕</td></tr>
+  <tr><td class="w ja">手紙</td><td>てがみ</td><td>信（不是衛生紙）</td></tr>
+</table>
+</section>
+
+<!-- ══════════ VI ══════════ -->
+<section class="chap-start">
+<h2 class="chap">VI　課後複習小測驗</h2>
+
+<div class="quiz">
+  <ol>
+    <li>翻成日文：那裡很擠喔。／那裡很空喔。</li>
+    <li>哪一句錯了，為什麼？<br>
+      （a）そこは高いですよ。　（b）そこは高いでいますよ。　（c）そこは混んでいますよ。</li>
+    <li>「那裡不冷喔」怎麼說？</li>
+    <li>這杯茶很燙 — 用「あつい」，但要寫哪個漢字？</li>
+    <li>「我在區公所申請了。」日文怎麼說？空格填助詞：区役所<span class="blank"></span>申し込みました。</li>
+    <li>「手紙」是什麼意思？中文的「衛生紙」日文又怎麼說？</li>
+    <li>「てくび」漢字怎麼寫？為什麼是這兩個字？</li>
+    <li>寫出讀音：釣り・爪・机</li>
+    <li>用台語推：区役所的「役」為什麼讀 やく？</li>
+  </ol>
+
+  <div class="ans">
+    <span class="hd">解答</span>
+    <strong>1.</strong> そこは混んでいますよ。／そこは空いていますよ。<br>
+    <strong>2.</strong> （b）錯。高い 是い形容詞，不能接〜ています，直接接 です → 高いです。〜ています 只給動詞用。<br>
+    <strong>3.</strong> そこは寒くないですよ。（い形容詞否定＝「い」換成「くない」）<br>
+    <strong>4.</strong> このお茶は<strong>熱い</strong>です。東西燙用「熱」，天氣熱才用「暑」。<br>
+    <strong>5.</strong> 区役所<strong>で</strong>申し込みました。で＝動作發生的場所。<br>
+    <strong>6.</strong> 手紙（てがみ）＝<strong>信</strong>；衛生紙是 ティッシュ／トイレットペーパー。<br>
+    <strong>7.</strong> <strong>手首</strong>。手＋首（脖子）＝「手的脖子」＝手腕；同理 足首＝腳踝。<br>
+    <strong>8.</strong> つり・つめ・つくえ。<br>
+    <strong>9.</strong> 台語「役」是入聲 ik，入聲 -k 對應日語的 く → やく。跟 局 kiok → きょく 同一條規律。
+  </div>
+</div>
+</section>
+
+</body>
+</html>

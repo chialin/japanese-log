@@ -371,16 +371,7 @@ rt {
   display: flex; justify-content: space-between; align-items: center; gap: 14px;
   max-width: 760px; margin: 0 auto; padding: 15px 32px;
 }
-/* 品牌落款（首頁為 .brand span，其他頁為 .home-link 連結）*/
-.site-header-inner .home-link,
-.site-header-inner .brand {
-  font-family: 'Shippori Mincho', serif; font-weight: 600;
-  color: var(--accent); text-decoration: none; font-size: 18px; letter-spacing: .05em;
-  flex-shrink: 0; transition: color .2s;
-}
-.site-header-inner .home-link:hover { color: var(--ink); }
-
-/* 導覽膠囊 */
+/* 導覽膠囊（第一項是「回首頁」的家圖示，後面接分頁）*/
 .site-header-inner .site-nav {
   display: flex; align-items: center; gap: 6px;
   background: var(--paper); border-radius: 999px;
@@ -394,7 +385,19 @@ rt {
 .site-header-inner .site-nav a:hover { color: var(--accent); }
 .site-header-inner .site-nav a.active { background: var(--accent-pale); color: var(--accent); }
 
-/* ── 控制膠囊：全站發音音量（只在載入 tts.js 的頁面出現）── */
+/* 家圖示：永遠是 accent 橘（跟文字分頁的 ink-soft 區隔開），hover 淡出 */
+.site-header-inner .site-nav a.nav-home {
+  display: flex; align-items: center; color: var(--accent);
+  padding: 5px 11px; transition: opacity .2s, background .2s;
+}
+.site-header-inner .site-nav a.nav-home:hover { opacity: .6; color: var(--accent); }
+.site-header-inner .site-nav a.nav-home.active { background: var(--accent-pale); opacity: 1; }
+/* 家與分頁之間的細分隔線 */
+.site-header-inner .site-nav .nav-sep {
+  width: 1px; height: 16px; background: var(--line); margin: 0 3px; flex-shrink: 0;
+}
+
+/* ── 控制膠囊：全站發音音量（每一頁都顯示，值存 localStorage）── */
 .site-control {
   display: flex; align-items: center; gap: 8px; flex-shrink: 0;
   background: var(--paper); border-radius: 999px;
@@ -417,13 +420,11 @@ rt {
   background: var(--accent); cursor: pointer; border: none;
 }
 
-/* 手機版 M1：品牌＋控制同排，導覽膠囊整寬換到第二排置中 */
+/* 手機版 M1：導覽膠囊（含家圖示）整寬排第一排，音量膠囊置中換到第二排 */
 @media (max-width: 560px) {
-  .site-header-inner { flex-wrap: wrap; padding: 12px 20px; gap: 11px; }
-  .site-header-inner .home-link,
-  .site-header-inner .brand { order: 1; font-size: 16px; }
+  .site-header-inner { flex-wrap: wrap; justify-content: center; padding: 12px 20px; gap: 11px; }
+  .site-header-inner .site-nav { order: 1; width: 100%; justify-content: center; }
   .site-control { order: 2; }
-  .site-header-inner .site-nav { order: 3; width: 100%; justify-content: center; }
   .site-control .vol-slider { width: 54px; }
 }
 

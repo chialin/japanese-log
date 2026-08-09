@@ -16,15 +16,15 @@ class SiteHeader extends HTMLElement {
     const home = isHomePage();
     // 目前頁面：導覽對應項高亮（用絕對 pathname 判斷，與 prefix 無關）
     const isActive = (file) => location.pathname.endsWith('/' + file);
-    // 品牌：非首頁為「回學習日誌」連結，首頁為不可點落款
-    const brand = home
-      ? `<span class="brand">學習日誌</span>`
-      : `<a class="home-link" href="${prefix}index.html">學習日誌</a>`;
+    // 首頁入口：家的圖示，收在導覽膠囊最左邊（Lucide house）
+    const houseIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.2 12 3l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>`;
+    const homeNav =
+      `<a class="nav-home${home ? ' active' : ''}" href="${prefix}index.html" aria-label="回學習日誌">${houseIcon}</a>` +
+      `<span class="nav-sep" aria-hidden="true"></span>`;
     const navItem = (file, label) =>
       `<a href="${prefix}${file}"${isActive(file) ? ' class="active"' : ''}>${label}</a>`;
 
-    // 只有載了 tts.js 的頁面才顯示音量控制（index 等頁沒有發音功能）
-    const hasTTS = !!document.querySelector('script[src$="tts.js"]');
+    // 音量控制：全站每頁都顯示（值寫進 localStorage，沒發音的頁面調整也會被記住）
     const stored = (function () {
       try {
         const v = parseFloat(localStorage.getItem('jtalk-volume'));
@@ -33,18 +33,19 @@ class SiteHeader extends HTMLElement {
     })();
     // 耳機 icon（Lucide headphones，取代舊 🔈/🔇 emoji）
     const headphones = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5a9 9 0 0 1 18 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>`;
-    const control = hasTTS ? `
+    const control = `
             <div class="site-control${stored === 0 ? ' muted' : ''}" title="發音音量">
               <span class="vol-icon">${headphones}</span>
               <input type="range" class="vol-slider" min="0" max="1" step="0.05"
                      value="${stored}" aria-label="發音音量">
-            </div>` : '';
+            </div>`;
     this.innerHTML = `
       <div class="site-header">
         <div class="site-header-inner${home ? ' home-page' : ''}">
-          ${brand}
           <nav class="site-nav">
-            ${navItem('my-name-katakana.html', '關於我')}
+            ${homeNav}
+            ${navItem('grammar.html', '文法')}
+            ${navItem('kanji.html', '漢字')}
             ${navItem('resources.html', '資源')}
             ${navItem('tadoku.html', '多読')}
           </nav>
@@ -72,7 +73,7 @@ class SiteFooter extends HTMLElement {
     const prefix = siteChromePrefix();
     this.innerHTML = `
       <footer class="footer-area">
-        <div><a href="https://chialin.me">chialin.me</a> · <a href="https://blog.chialin.me">blog</a> · <a href="${prefix}credits.html">credits</a></div>
+        <div><a href="${prefix}my-name-katakana.html">關於我</a> · <a href="https://chialin.me">chialin.me</a> · <a href="https://blog.chialin.me">blog</a> · <a href="${prefix}credits.html">credits</a></div>
         <div class="seal">日</div>
         <div>毎日少しずつ。</div>
       </footer>

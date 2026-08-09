@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>什麼是五段動詞 — 字尾置換成哪一段，決定否定／禮貌／假設／邀約</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 互動盒 */
+.lab{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent);padding:20px 18px;margin-bottom:20px;}
+.lab-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:10px;text-align:center;}
+
+/* 動詞 / 變化形 按鈕列 */
+.btn-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:8px;}
+.pick{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink-soft);background:var(--paper-deep);border:1px solid var(--line);border-radius:999px;padding:7px 16px;cursor:pointer;transition:all .15s;}
+.pick:hover{border-color:var(--accent);color:var(--accent);}
+.pick.on{background:var(--accent);border-color:var(--accent);color:#fff;}
+.pick .pick-sub{font-family:'Noto Serif TC',serif;font-size:11px;font-weight:400;opacity:.8;margin-left:4px;}
+.row-caption{text-align:center;font-size:13px;color:var(--ink-mute);margin:4px 0 14px;font-family:'Noto Serif TC',serif;}
+
+/* 五十音「行」直欄 */
+.dan-col{display:flex;flex-direction:column;gap:7px;max-width:340px;margin:0 auto 18px;}
+.dan-cell{display:grid;grid-template-columns:54px 1fr 64px;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:10px;transition:transform .25s,background .25s,box-shadow .25s,border-color .25s;}
+.dan-cell .dan-name{font-family:'Noto Serif TC',serif;font-size:13px;color:var(--ink-mute);}
+.dan-cell .dan-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:30px;font-weight:700;color:var(--ink);text-align:center;}
+.dan-cell .dan-rom{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ink-mute);text-align:right;}
+.dan-cell.active{background:var(--accent);border-color:var(--accent);transform:translateX(10px);box-shadow:0 6px 16px rgba(201,104,48,.28);}
+.dan-cell.active .dan-name,.dan-cell.active .dan-kana,.dan-cell.active .dan-rom{color:#fff;}
+
+/* 結果面板 */
+.result{background:var(--accent-pale);border:1px solid var(--accent-soft);border-radius:10px;padding:18px;text-align:center;position:relative;}
+.result-form{font-family:'Noto Serif TC',serif;font-size:13px;color:var(--accent);font-weight:600;margin-bottom:8px;}
+.result-word{font-family:'Klee One','Shippori Mincho',serif;font-size:34px;font-weight:700;color:var(--ink);line-height:1.3;}
+.result-word .r-stem{color:var(--ink);}
+.result-word .r-mid{color:var(--accent);}
+.result-word .r-suf{color:var(--ink-mute);}
+.result-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;color:var(--ink-soft);margin-top:4px;}
+.result-rom{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ink-mute);margin-top:2px;}
+.result-cn{font-family:'Noto Serif TC',serif;font-size:14px;color:var(--ink-soft);margin-top:8px;}
+.result .play-btn{margin:12px auto 0;}
+
+/* 速記表 */
+.breakdown{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.breakdown th,.breakdown td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.breakdown th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.breakdown tr:last-child td{border-bottom:none;}
+.breakdown .c-dan{font-family:'Klee One','Shippori Mincho',serif;font-weight:700;color:var(--accent);white-space:nowrap;}
+.breakdown .c-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);white-space:nowrap;}
+.breakdown .c-ja b{color:var(--accent);}
+.breakdown .c-mean{color:var(--ink-soft);}
+.breakdown tr.key td{background:var(--accent-pale);}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">什麼是<span class="accent">五段動詞</span></h1>
+<div class="page-meta">文法 · Grammar · 2026 / 08 / 09</div>
+  <p class="page-subtitle">字尾置換成哪一段，就決定這句話是否定、禮貌、假設還是邀約</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日文動詞分成<strong>三類</strong>，這一頁只講最大的一類：<strong>五段動詞</strong>。
+    先補<strong>行與段</strong>的先備知識，再立<strong>原形的鐵律</strong>（一），
+    看<strong>五段實際在做什麼</strong>（二），最後動手練（三）。
+    <a href="2026-08-09-godan-vs-ichidan.html" style="color:var(--accent);"><strong>怎麼跟一段區分</strong></a>收在同一天的另一篇。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">先備知識：行與段是兩個軸</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    後面每一句都會用到「行」和「段」，先分清楚。
+    五十音表有<strong>兩個方向</strong>：直的是<strong>行</strong>（か行・ま行・ら行…，決定子音），
+    橫的是<strong>段</strong>（あ・い・う・え・お，決定母音）。
+    每個假名都是「某行 × 某段」的交會格。
+  </p>
+
+  <figure style="margin:0 0 18px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent);padding:20px 14px 16px;">
+    <svg viewBox="0 0 430 316" width="100%" style="max-width:430px;display:block;margin:0 auto;font-family:'Klee One','Shippori Mincho',serif;" role="img" aria-label="行與段的十字交叉圖：か行直欄與い段橫列交會在き">
+      <!-- 段（橫列）底色：い段 -->
+      <rect x="0" y="84" width="430" height="44" fill="var(--accent-pale)"/>
+      <!-- 行（直欄）底色：か行 -->
+      <rect x="72" y="0" width="104" height="284" fill="var(--accent-pale)" opacity=".75"/>
+
+      <!-- 欄標題 -->
+      <text x="124" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="var(--accent)">か行</text>
+      <text x="234" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink-mute)">ま行</text>
+      <text x="344" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink-mute)">ら行</text>
+
+      <!-- 列標題 -->
+      <text x="62" y="64"  text-anchor="end" font-size="14" fill="var(--ink-mute)">あ段</text>
+      <text x="62" y="114" text-anchor="end" font-size="14" font-weight="700" fill="var(--accent)">い段</text>
+      <text x="62" y="164" text-anchor="end" font-size="14" fill="var(--ink-mute)">う段</text>
+      <text x="62" y="214" text-anchor="end" font-size="14" fill="var(--ink-mute)">え段</text>
+      <text x="62" y="264" text-anchor="end" font-size="14" fill="var(--ink-mute)">お段</text>
+
+      <!-- 格子 -->
+      <g font-size="22" text-anchor="middle" fill="var(--ink)">
+        <rect x="72"  y="34"  width="104" height="44" fill="none" stroke="var(--line)"/><text x="124" y="64">か</text>
+        <rect x="182" y="34"  width="104" height="44" fill="none" stroke="var(--line)"/><text x="234" y="64">ま</text>
+        <rect x="292" y="34"  width="104" height="44" fill="none" stroke="var(--line)"/><text x="344" y="64">ら</text>
+
+        <rect x="182" y="84"  width="104" height="44" fill="none" stroke="var(--line)"/><text x="234" y="114">み</text>
+        <rect x="292" y="84"  width="104" height="44" fill="none" stroke="var(--line)"/><text x="344" y="114">り</text>
+
+        <rect x="72"  y="134" width="104" height="44" fill="none" stroke="var(--line)"/><text x="124" y="164">く</text>
+        <rect x="182" y="134" width="104" height="44" fill="none" stroke="var(--line)"/><text x="234" y="164">む</text>
+        <rect x="292" y="134" width="104" height="44" fill="none" stroke="var(--line)"/><text x="344" y="164">る</text>
+
+        <rect x="72"  y="184" width="104" height="44" fill="none" stroke="var(--line)"/><text x="124" y="214">け</text>
+        <rect x="182" y="184" width="104" height="44" fill="none" stroke="var(--line)"/><text x="234" y="214">め</text>
+        <rect x="292" y="184" width="104" height="44" fill="none" stroke="var(--line)"/><text x="344" y="214">れ</text>
+
+        <rect x="72"  y="234" width="104" height="44" fill="none" stroke="var(--line)"/><text x="124" y="264">こ</text>
+        <rect x="182" y="234" width="104" height="44" fill="none" stroke="var(--line)"/><text x="234" y="264">も</text>
+        <rect x="292" y="234" width="104" height="44" fill="none" stroke="var(--line)"/><text x="344" y="264">ろ</text>
+      </g>
+
+      <!-- 交叉點：き -->
+      <rect x="72" y="84" width="104" height="44" fill="var(--accent)"/>
+      <text x="124" y="115" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">き</text>
+
+      <!-- 註解 -->
+      <text x="0" y="300" font-size="13" fill="var(--ink-soft)" font-family="'Noto Serif TC',serif">
+        書<tspan font-weight="700">く</tspan>（結尾在か行，鎖死）＋ 要接ます（い段）＝ 交會格 き
+      </text>
+      <text x="0" y="314" font-size="13" fill="var(--ink-soft)" font-family="'Noto Serif TC',serif">
+        所以是 書<tspan fill="var(--accent)" font-weight="700">き</tspan>ます。
+      </text>
+    </svg>
+    <figcaption style="text-align:center;font-size:13px;color:var(--ink-mute);margin-top:12px;line-height:1.7;font-family:'Noto Serif TC',serif;">
+      直欄＝<strong>行</strong>（子音，由原形結尾決定，固定不動）<br>
+      橫列＝<strong>段</strong>（母音，由你要接的字尾決定，會置換）
+    </figcaption>
+  </figure>
+
+  <table class="breakdown">
+    <thead>
+      <tr><th>軸</th><th>決定什麼</th><th>由誰決定</th><th>會變嗎</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="c-dan">行<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">か／ま／ら</span></td><td class="c-mean">用哪條「梯子」（子音）</td><td class="c-mean"><strong>動詞原形的結尾假名</strong></td><td class="c-mean">❌ 固定不變</td></tr>
+      <tr class="key"><td class="c-dan">段<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">あいうえお</span></td><td class="c-mean">梯子上的第幾格（母音）</td><td class="c-mean"><strong>你要接的字尾</strong>（ない／ます…）</td><td class="c-mean">✅ 隨語法置換</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 <strong>「行」看原形結尾</strong>：書<span class="j-mark">く</span>的く在 か行、
+    飲<span class="j-mark">む</span>的む在 ま行、帰<span class="j-mark">る</span>的る在 ら行。
+    結尾是什麼，整個動詞就鎖在那一行裡置換。
+  </div>
+
+  <div class="tip">
+    💡 <strong>一句話收</strong>：<br>
+    <strong>「行」看原形結尾、固定不動；「段」看你要接什麼、逐段置換。</strong>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、鐵律：動詞原形一定以「う段」結尾</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    講五段之前，先記一條<strong>沒有例外的規則</strong>：
+    日文動詞的<strong>辭書形</strong>（字典查到的原形），結尾<strong>一定</strong>是
+    <span class="j-mark">う段</span>的假名。這是文法規定，不是巧合。
+  </p>
+
+  <div class="tip">
+    💡 <strong>先分清楚兩個詞</strong><br>
+    <strong>辭書形</strong>＝字典上的原形（書く・飲む・食べる）。<br>
+    <strong>ます形</strong>＝禮貌說法（書きます・飲みます・食べます）。<br>
+    <strong>判斷動詞屬於哪一類，永遠看辭書形，不看 ます形。</strong>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    う段就是五十音表<strong>由上往下數第三排</strong>，共 14 個音：
+  </p>
+
+  <div class="formula">
+    <div class="f-line" style="font-size:20px;">
+      <span class="f-eq" style="margin-top:0;">
+        <span class="j-mark">う</span> <span class="j-mark">く</span> <span class="j-mark">ぐ</span>
+        <span class="j-mark">す</span> ず <span class="j-mark">つ</span> づ
+        <span class="j-mark">ぬ</span> ふ <span class="j-mark">ぶ</span> ぷ
+        <span class="j-mark">む</span> ゆ <span class="j-mark">る</span>
+      </span>
+      <span class="f-eq" style="font-size:14px;">高亮的 9 個＝實際會當動詞結尾的；淡的 5 個（ず・づ・ふ・ぷ・ゆ）沒有動詞用</span>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <strong>為什麼是 9 個不是 14 個？</strong>
+    不是文法禁止剩下那 5 個，而是日文詞彙<strong>自然演變的結果</strong>：就是沒有動詞長成那樣。
+    記那 9 個就夠。
+  </p>
+
+  <div class="note">
+    📝 <strong>反過來想</strong>：あ段（あ・か・が・さ・た・な・ま・ら・わ…）
+    <strong>永遠不會</strong>出現在辭書形結尾，它只在<strong>變化之後</strong>才出現，
+    像書<strong>か</strong>ない、飲<strong>ま</strong>ない。看到あ段結尾，就一定<strong>不是</strong>原形。
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這 9 個結尾還<strong>順便告訴你它走哪一行</strong>，看到結尾就知道在哪條梯子上置換：
+  </p>
+
+  <table class="breakdown">
+    <thead>
+      <tr><th>結尾</th><th>行</th><th>例</th><th>結尾</th><th>行</th><th>例</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="c-ja">う</td><td class="c-dan">あ行</td><td class="c-ja">買う</td><td class="c-ja">ぬ</td><td class="c-dan">な行</td><td class="c-ja">死ぬ</td></tr>
+      <tr><td class="c-ja">く</td><td class="c-dan">か行</td><td class="c-ja">書く</td><td class="c-ja">ぶ</td><td class="c-dan">ば行</td><td class="c-ja">遊ぶ</td></tr>
+      <tr><td class="c-ja">ぐ</td><td class="c-dan">が行</td><td class="c-ja">泳ぐ</td><td class="c-ja">む</td><td class="c-dan">ま行</td><td class="c-ja">飲む</td></tr>
+      <tr><td class="c-ja">す</td><td class="c-dan">さ行</td><td class="c-ja">話す</td><td class="c-ja">る<span style="color:var(--accent);font-size:13px;">＊</span></td><td class="c-dan">ら行</td><td class="c-ja">乗る</td></tr>
+      <tr><td class="c-ja">つ</td><td class="c-dan">た行</td><td class="c-ja">待つ</td><td class="c-mean" colspan="3"></td></tr>
+    </tbody>
+  </table>
+
+  <p style="margin:-6px 0 16px;color:var(--ink-mute);font-size:13px;line-height:1.7;">
+    <span style="color:var(--accent);">＊</span> 前 8 個結尾一看就是五段；
+    只有 <strong>る</strong> 結尾要多判斷一次（可能是一段），那題留給
+    <a href="2026-08-09-godan-vs-ichidan.html" style="color:var(--accent);">同一天的另一篇</a>。
+  </p>
+
+  <div class="note">
+    📝 對照你之前學過的 <span class="compare">要る</span>：字尾 <span class="j-mark">る</span>
+    在 ら行・う段，變 ます形就置換成<strong>い段</strong>的 <span class="j-mark">り</span>，
+    成為 要<strong>り</strong>ます。同一條規則。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、五段動詞在幹嘛</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    知道原形停在<strong>う段</strong>，「五段」就好懂了。
+    變化時<strong>字幹完全不動</strong>，只有<strong>最後一顆假名</strong>離開う段，
+    在<strong>同一行</strong>的 あ・い・う・え・お 之間置換，再接字尾。
+    <strong>五段＝這 5 個位置它全都會用到</strong>，名字就是這樣來的。
+  </p>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    重點是<strong>「置換成哪一段」等於「這句話要表達什麼」</strong>。
+    拿 <span class="compare">住む</span> 當例子，字幹「住」不動，字尾置換成不同段就是五種意思：
+  </p>
+
+  <table class="breakdown">
+    <thead>
+      <tr><th>置換成哪一段</th><th>住む</th><th>形</th><th>這句話在幹嘛</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="c-dan">あ段</td><td class="c-ja">住<b>ま</b>ない</td><td>ない形</td><td class="c-mean">否定：不住</td></tr>
+      <tr class="key"><td class="c-dan">い段</td><td class="c-ja">住<b>み</b>ます</td><td>ます形</td><td class="c-mean">禮貌：（我）住</td></tr>
+      <tr><td class="c-dan">う段</td><td class="c-ja">住<b>む</b></td><td>辞書形</td><td class="c-mean">原形、字典長相（起點）</td></tr>
+      <tr><td class="c-dan">え段</td><td class="c-ja">住<b>め</b>ば</td><td>仮定形</td><td class="c-mean">假設：如果住的話</td></tr>
+      <tr><td class="c-dan">お段</td><td class="c-ja">住<b>も</b>う</td><td>意向形</td><td class="c-mean">邀約／打算：住吧</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 <strong>え段一格身兼兩職</strong>——別的教材可能寫「え段＝命令形」，跟上表不衝突，
+    <strong>是後面接什麼決定它是哪一種</strong>：
+    <table class="breakdown" style="margin:10px 0 0;">
+      <thead><tr><th>形</th><th>長相</th><th>例</th></tr></thead>
+      <tbody>
+        <tr><td class="c-dan">仮定形</td><td class="c-mean">え段 <strong>＋ば</strong></td><td class="c-ja">住<b>め</b>ば・書<b>け</b>ば</td></tr>
+        <tr><td class="c-dan">命令形</td><td class="c-mean">え段 <strong>單獨結束</strong>，什麼都不接</td><td class="c-ja">住<b>め</b>・書<b>け</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>命令形很粗暴</strong>，是「給我寫！」的語氣，日常對話幾乎只出現在生氣、
+    運動場加油、標語上。要拜託人請用 て形：書い<strong>てください</strong>。
+    知道它長什麼樣就好，先不要拿來用。
+  </div>
+
+  <div class="note">
+    📝 <strong>お段那格的名字有兩種寫法</strong>：<span class="compare">意向形</span>（台灣教材、日本語教育界）
+    和 <span class="compare">意志形</span>（日本學校文法的譯法）<strong>是同一個東西</strong>，
+    都是 お段 ＋ う。意思含邀約（一緒に行こう）和自己的打算（そろそろ寝よう）。
+  </div>
+
+  <div class="tip">
+    💡 <strong>一句話收</strong>：五段動詞的變化，就是<strong>用「字尾停在第幾段」來表達語氣</strong>。
+    否定往上（あ段）、禮貌往下一格（い段）、假設與命令都在（え段）、邀約到底（お段）。
+  </div>
+
+  <div class="note">
+    📝 <span class="compare">住んでいます</span> 你在
+    <a href="2026-06-24-sunde-imasu.html" style="color:var(--accent);">6/24 那課</a>用過。
+    「住んで」也是 住む 變出來的，屬於<strong>て形</strong>，另一種音變，不在這五格裡。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、動手玩：選動詞、選變化形</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先選一個動詞，再點 6 個變化形，看那一行<strong>哪一格亮起來</strong>，
+    那就是字尾現在置換成的假名。
+  </p>
+
+  <div class="lab">
+    <div class="lab-label">① 選動詞</div>
+    <div class="btn-row" id="verbBtns"></div>
+    <div class="row-caption" id="rowCaption"></div>
+
+    <div class="dan-col" id="danCol"></div>
+
+    <div class="lab-label" style="margin-top:6px;">② 選變化形</div>
+    <div class="btn-row" id="formBtns"></div>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <div class="alert">
+    ⚠️ 被置換的<strong>只有最後一個假名</strong>。字幹（書・飲・住・帰）不變，
+    動的是 く／む／る 這顆字尾假名，在自己的行裡上下跳。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先自己想過再看解答。
+  </p>
+
+  <ol style="color:var(--ink-soft);font-size:15px;line-height:2;padding-left:22px;">
+    <li>下面哪一個<strong>不可能</strong>是動詞辭書形：飲む／読ま／作る／話す？為什麼？</li>
+    <li><strong>泳ぐ</strong> 的字尾在哪一行？ます形怎麼寫？</li>
+    <li>把 <strong>住む</strong> 變成「不住」和「住吧」，並說出各置換成哪一段。</li>
+    <li><strong>待つ</strong> 的「如果等的話」怎麼說？「給我等著！」又是哪一個？兩者差在哪？</li>
+    <li>為什麼 書きます 的「き」不是「か」也不是「く」？用行與段各講一句。</li>
+  </ol>
+
+  <details style="margin-top:16px;">
+    <summary style="cursor:pointer;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);">🔍 點擊查看解答</summary>
+    <div style="margin-top:12px;color:var(--ink-soft);font-size:15px;line-height:1.9;">
+      <p><strong>1.</strong> <strong>読ま</strong>。ま 是<strong>あ段</strong>，辭書形不可能以あ段結尾。
+      它其實是 読む 變化後的樣子（読まない 的前半）。</p>
+      <p><strong>2.</strong> 結尾 <span class="j-mark">ぐ</span> 在 <strong>が行</strong>。
+      置換成い段的 ぎ，成為 泳<strong>ぎ</strong>ます。</p>
+      <p><strong>3.</strong> 不住＝住<strong>ま</strong>ない（<strong>あ段</strong>）；住吧＝住<strong>も</strong>う（<strong>お段</strong>）。</p>
+      <p><strong>4.</strong> 兩個都置換成<strong>え段</strong>的 て（待つ 的つ在た行）：
+      加ば是<strong>仮定形</strong> 待<strong>て</strong>ば；<strong>什麼都不加</strong>就是
+      <strong>命令形</strong> 待<strong>て</strong>。差別只在後面接不接東西。</p>
+      <p><strong>5.</strong> <strong>行</strong>：原形 書く 結尾是く，所以整個動詞鎖在<strong>か行</strong>。
+      <strong>段</strong>：要接ます，所以停在<strong>い段</strong>。か行 × い段的交會格就是 <strong>き</strong>。</p>
+    </div>
+  </details>
+
+  <a href="2026-08-09-godan-vs-ichidan.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">那「食べる」呢？五段 vs 一段 <span class="next-arrow">→</span></span>
+    <span class="next-sub">る 結尾兩邊都可能，這一篇教你怎麼分</span>
+  </a>
+</div>
+
+<!-- 隱藏區：讓 generate-audio.mjs 掃得到所有變化形（產生 mp3） -->
+<div hidden aria-hidden="true">
+  <span data-text="書かない"></span><span data-text="書きます"></span><span data-text="書く"></span><span data-text="書けば"></span><span data-text="書こう"></span>
+  <span data-text="飲まない"></span><span data-text="飲みます"></span><span data-text="飲む"></span><span data-text="飲めば"></span><span data-text="飲もう"></span>
+  <span data-text="帰らない"></span><span data-text="帰ります"></span><span data-text="帰る"></span><span data-text="帰れば"></span><span data-text="帰ろう"></span>
+  <span data-text="住まない"></span><span data-text="住みます"></span><span data-text="住む"></span><span data-text="住めば"></span><span data-text="住もう"></span>
+  <span data-text="書け"></span><span data-text="飲め"></span><span data-text="住め"></span><span data-text="帰れ"></span>
+</div>
+<site-footer></site-footer>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => { rateValue.textContent = rateSlider.value + 'x'; });
+  function speak(text, button) { return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) }); }
+
+  // ── 資料 ──────────────────────────────
+  const DAN = ['あ段','い段','う段','え段','お段'];
+
+  const VERBS = {
+    kaku: { dict:'書く', mean:'寫', rowName:'か行', stemK:'書', stemKana:'か', stemRom:'ka',
+            kana:['か','き','く','け','こ'], rom:['ka','ki','ku','ke','ko'] },
+    nomu: { dict:'飲む', mean:'喝', rowName:'ま行', stemK:'飲', stemKana:'の', stemRom:'no',
+            kana:['ま','み','む','め','も'], rom:['ma','mi','mu','me','mo'] },
+    sumu: { dict:'住む', mean:'住', rowName:'ま行', stemK:'住', stemKana:'す', stemRom:'su',
+            kana:['ま','み','む','め','も'], rom:['ma','mi','mu','me','mo'] },
+    kaeru:{ dict:'帰る', mean:'回家', rowName:'ら行', stemK:'帰', stemKana:'かえ', stemRom:'kae',
+            kana:['ら','り','る','れ','ろ'], rom:['ra','ri','ru','re','ro'] },
+  };
+
+  const FORMS = [
+    { id:'nai',  dan:0, label:'ない形', sufKana:'ない', sufRom:'nai', cn:'否定（不～）' },
+    { id:'masu', dan:1, label:'ます形', sufKana:'ます', sufRom:'masu', cn:'禮貌說法（最常用）' },
+    { id:'dict', dan:2, label:'辞書形', sufKana:'',     sufRom:'',     cn:'字典原形' },
+    { id:'ba',   dan:3, label:'仮定形', sufKana:'ば',   sufRom:'ba',   cn:'如果～的話' },
+    { id:'mei',  dan:3, label:'命令形', sufKana:'',     sufRom:'',     cn:'給我～！（語氣很兇，先別用）' },
+    { id:'you',  dan:4, label:'意向形', sufKana:'う',   sufRom:'u',    cn:'～吧（邀約／打算）' },
+  ];
+
+  let curVerb = 'kaku';
+  let curForm = 'masu';
+
+  const verbBtns = document.getElementById('verbBtns');
+  const formBtns = document.getElementById('formBtns');
+  const danCol   = document.getElementById('danCol');
+  const rowCaption = document.getElementById('rowCaption');
+  const result   = document.getElementById('result');
+
+  // 建按鈕
+  Object.entries(VERBS).forEach(([key, v]) => {
+    const b = document.createElement('button');
+    b.className = 'pick';
+    b.innerHTML = v.dict + '<span class="pick-sub">' + v.mean + '</span>';
+    b.onclick = () => { curVerb = key; render(); };
+    b.dataset.verb = key;
+    verbBtns.appendChild(b);
+  });
+  FORMS.forEach(f => {
+    const b = document.createElement('button');
+    b.className = 'pick';
+    b.textContent = f.label;
+    b.onclick = () => { curForm = f.id; render(); };
+    b.dataset.form = f.id;
+    formBtns.appendChild(b);
+  });
+
+  function assemble(v, f) {
+    const word = v.stemK + v.kana[f.dan] + f.sufKana;          // 漢字寫法（= data-text）
+    const kana = v.stemKana + v.kana[f.dan] + f.sufKana;        // 全假名讀法
+    const rom  = v.stemRom + v.rom[f.dan] + f.sufRom;           // 羅馬
+    return { word, kana, rom };
+  }
+
+  function render() {
+    const v = VERBS[curVerb];
+    const f = FORMS.find(x => x.id === curForm);
+
+    // 按鈕 on 狀態
+    verbBtns.querySelectorAll('.pick').forEach(b => b.classList.toggle('on', b.dataset.verb === curVerb));
+    formBtns.querySelectorAll('.pick').forEach(b => b.classList.toggle('on', b.dataset.form === curForm));
+
+    rowCaption.innerHTML = '字尾「' + v.kana[2] + '」在 <strong>' + v.rowName + '</strong> 上置換';
+
+    // 直欄
+    danCol.innerHTML = '';
+    v.kana.forEach((k, i) => {
+      const cell = document.createElement('div');
+      cell.className = 'dan-cell' + (i === f.dan ? ' active' : '');
+      cell.innerHTML =
+        '<span class="dan-name">' + DAN[i] + '</span>' +
+        '<span class="dan-kana">' + k + '</span>' +
+        '<span class="dan-rom">' + v.rom[i] + '</span>';
+      danCol.appendChild(cell);
+    });
+
+    // 結果
+    const a = assemble(v, f);
+    result.innerHTML =
+      '<div class="result-form">' + f.label + '（' + DAN[f.dan] + '）</div>' +
+      '<div class="result-word"><span class="r-stem">' + v.stemK + '</span>' +
+        '<span class="r-mid">' + v.kana[f.dan] + '</span>' +
+        '<span class="r-suf">' + f.sufKana + '</span></div>' +
+      '<div class="result-kana">' + a.kana + '</div>' +
+      '<div class="result-rom">' + a.rom + '</div>' +
+      '<div class="result-cn">' + f.cn + '</div>' +
+      '<button class="play-btn" aria-label="播放">▶</button>';
+    const btn = result.querySelector('.play-btn');
+    btn.onclick = () => speak(a.word, btn);
+  }
+
+  render();
+</script>
+</body>
+</html>

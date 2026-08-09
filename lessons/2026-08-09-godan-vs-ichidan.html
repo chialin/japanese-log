@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五段 vs 一段 — 那「食べる」呢？る 結尾怎麼分</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 互動盒 */
+.lab{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent);padding:20px 18px;margin-bottom:20px;}
+.lab-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:10px;text-align:center;}
+
+/* 動詞 / 變化形 按鈕列 */
+.btn-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:8px;}
+.pick{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink-soft);background:var(--paper-deep);border:1px solid var(--line);border-radius:999px;padding:7px 16px;cursor:pointer;transition:all .15s;}
+.pick:hover{border-color:var(--accent);color:var(--accent);}
+.pick.on{background:var(--accent);border-color:var(--accent);color:#fff;}
+.pick .pick-sub{font-family:'Noto Serif TC',serif;font-size:11px;font-weight:400;opacity:.8;margin-left:4px;}
+.row-caption{text-align:center;font-size:13px;color:var(--ink-mute);margin:4px 0 14px;font-family:'Noto Serif TC',serif;}
+
+/* 五十音「行」直欄 */
+.dan-col{display:flex;flex-direction:column;gap:7px;max-width:340px;margin:0 auto 18px;}
+.dan-cell{display:grid;grid-template-columns:54px 1fr 64px;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:10px;transition:transform .25s,background .25s,box-shadow .25s,border-color .25s;}
+.dan-cell .dan-name{font-family:'Noto Serif TC',serif;font-size:13px;color:var(--ink-mute);}
+.dan-cell .dan-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:30px;font-weight:700;color:var(--ink);text-align:center;}
+.dan-cell .dan-rom{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ink-mute);text-align:right;}
+.dan-cell.active{background:var(--accent);border-color:var(--accent);transform:translateX(10px);box-shadow:0 6px 16px rgba(201,104,48,.28);}
+.dan-cell.active .dan-name,.dan-cell.active .dan-kana,.dan-cell.active .dan-rom{color:#fff;}
+
+/* 結果面板 */
+.result{background:var(--accent-pale);border:1px solid var(--accent-soft);border-radius:10px;padding:18px;text-align:center;position:relative;}
+.result-form{font-family:'Noto Serif TC',serif;font-size:13px;color:var(--accent);font-weight:600;margin-bottom:8px;}
+.result-word{font-family:'Klee One','Shippori Mincho',serif;font-size:34px;font-weight:700;color:var(--ink);line-height:1.3;}
+.result-word .r-stem{color:var(--ink);}
+.result-word .r-mid{color:var(--accent);}
+.result-word .r-suf{color:var(--ink-mute);}
+.result-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;color:var(--ink-soft);margin-top:4px;}
+.result-rom{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ink-mute);margin-top:2px;}
+.result-cn{font-family:'Noto Serif TC',serif;font-size:14px;color:var(--ink-soft);margin-top:8px;}
+.result .play-btn{margin:12px auto 0;}
+
+/* 速記表 */
+.breakdown{width:100%;border-collapse:collapse;background:rgba(255,255,255,.6);border:1px solid var(--line);margin-bottom:16px;font-size:14px;}
+.breakdown th,.breakdown td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;}
+.breakdown th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;letter-spacing:.05em;}
+.breakdown tr:last-child td{border-bottom:none;}
+.breakdown .c-dan{font-family:'Klee One','Shippori Mincho',serif;font-weight:700;color:var(--accent);white-space:nowrap;}
+.breakdown .c-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;font-weight:600;color:var(--ink);white-space:nowrap;}
+.breakdown .c-ja b{color:var(--accent);}
+.breakdown .c-mean{color:var(--ink-soft);}
+.breakdown tr.key td{background:var(--accent-pale);}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">五段 vs <span class="accent">一段</span>：那「食べる」呢</h1>
+<div class="page-meta">文法 · Grammar · 2026 / 08 / 09</div>
+  <p class="page-subtitle">る 結尾兩邊都可能，這是唯一需要多判斷一次的地方</p>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">上一篇</a>講完五段動詞在幹嘛，
+    這一篇處理剩下的問題：<strong>怎麼知道眼前這個動詞是不是五段。</strong>
+    先破除一個常見誤會（一），再解決 <span class="j-mark">る</span> 結尾（二），
+    最後收成一張三步流程（三）。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、先破除誤會：寫法不影響變化</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    五段變化管的是<strong>「聲音怎麼變」</strong>，<strong>跟有沒有寫漢字無關</strong>。
+    字幹換成假名、甚至外來語片假名，規則照跑。
+  </p>
+
+  <table class="breakdown">
+    <thead>
+      <tr><th>部位</th><th>可以是什麼</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="c-dan">字幹<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">不變的核心</span></td><td class="c-mean">漢字、平假名、<strong>或片假名</strong>（外來語時）</td></tr>
+      <tr class="key"><td class="c-dan">字尾<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">會被置換的送假名</span></td><td class="c-mean"><strong>永遠是平假名</strong>，不會是片假名</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 <strong>被置換的那顆字尾假名</strong>一定是平假名（か・き・く…），
+    片假名只出現在<strong>前面不動的字幹</strong>（外來語動詞）。<br>
+    例：ググる（google 一下）的 ます形是 ググ<strong>り</strong>ます、サボる（翹掉）是
+    サボ<strong>り</strong>ます。字幹片假名，字尾照樣用平假名置換。
+  </div>
+
+  <div class="tip">
+    💡 <strong>判斷永遠看「音」，不看寫法。</strong>
+    只要結尾是 <span class="j-mark">う・く・ぐ・す・つ・ぬ・ぶ・む</span>，
+    就能百分之百斷定它是五段，也知道怎麼變。<br>
+    <strong>只剩最後一個麻煩：る 結尾。</strong>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、那「食べる」呢？認識一段動詞</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    來解決那個麻煩。<span class="compare">食べる</span> 結尾是
+    <span class="j-mark">る</span>，<strong>る 明明也是う段</strong>，為什麼不是五段？
+  </p>
+
+  <div class="tip">
+    💡 <strong>答案：う段結尾只是入場券，不是分類依據。</strong><br>
+    <strong>所有</strong>動詞都以う段結尾，一段、不規則也不例外。
+    う・く・ぐ・す・つ・ぬ・ぶ・む 這 8 個<strong>百分之百是五段</strong>，
+    但 <span class="j-mark">る</span> <strong>兩邊都有可能</strong>，
+    是<strong>唯一需要再判斷一次的結尾</strong>。
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <strong>る 結尾怎麼分？看る「前面那個音」落在哪一段：</strong>
+  </p>
+
+  <table class="breakdown">
+    <thead>
+      <tr><th>る 前面的音</th><th>類型</th><th>例</th><th>ます形</th></tr>
+    </thead>
+    <tbody>
+      <tr class="key"><td class="c-dan">い段 or え段<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">i / e</span></td><td class="c-mean"><strong>一段</strong></td><td class="c-ja">食<b>べ</b>る（<em>be</em>／え段）<br>見る（<em>mi</em>／い段）</td><td class="c-ja">食べます<br>見ます</td></tr>
+      <tr><td class="c-dan">あ・う・お段<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">a / u / o</span></td><td class="c-mean"><strong>五段</strong></td><td class="c-ja">分か<b>る</b>（<em>ka</em>／あ段）<br>作<b>る</b>（つく／<em>ku</em>／う段）<br>乗<b>る</b>（の／<em>no</em>／お段）</td><td class="c-ja">分かります<br>作ります<br>乗ります</td></tr>
+    </tbody>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>這條規則有例外，而且都是常用字</strong>：る 前面是い／え段、看起來像一段，
+    <strong>其實是五段</strong>，包括
+    <span class="compare">帰る</span>（かえる／回家）、<span class="compare">要る</span>（いる／需要）、
+    <span class="compare">入る</span>（はいる）、<span class="compare">走る</span>（はしる）、
+    <span class="compare">切る</span>（きる）、<span class="compare">知る</span>（しる）。<br>
+    所以是 帰<strong>り</strong>ます、要<strong>り</strong>ます（不是「帰ます」）。這幾個只能硬記。
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <strong>為什麼叫「一段」？</strong>因為它<strong>不置換</strong>：る 直接拿掉，
+    剩下的部分永遠停在<strong>同一段</strong>（食べる 的<strong>べ</strong>、見る 的<strong>み</strong>，從頭到尾不動）。
+    五段用 5 個位置，一段只用 1 個。
+  </p>
+
+  <table class="breakdown">
+    <thead>
+      <tr><th>類型</th><th>怎麼做</th><th>ます形</th><th>ない形</th></tr>
+    </thead>
+    <tbody>
+      <tr class="key"><td class="c-dan">五段<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">住む</span></td><td class="c-mean">字尾<strong>置換</strong>成目標段，再接字尾</td><td class="c-ja">住<b>み</b>ます</td><td class="c-ja">住<b>ま</b>ない</td></tr>
+      <tr><td class="c-dan">一段<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">食べる</span></td><td class="c-mean">直接<strong>去掉る</strong>，再接字尾</td><td class="c-ja">食べます</td><td class="c-ja">食べない</td></tr>
+      <tr><td class="c-dan">不規則<br><span style="font-weight:400;color:var(--ink-mute);font-size:12px;">する・来る</span></td><td class="c-mean">只有這 2 個，硬背</td><td class="c-ja">します<br>来ます</td><td class="c-ja">しない<br>来ない</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、三步判斷流程</div>
+
+  <div class="formula">
+    <div class="f-line" style="font-size:16px;">
+      <span class="f-eq" style="margin-top:0;">① 是 <strong>する</strong> 或 <strong>来る</strong> 嗎？　是，就是<strong>不規則</strong>。</span>
+      <span class="f-eq">② 結尾是 <span class="j-mark">う・く・ぐ・す・つ・ぬ・ぶ・む</span>？　是，就是<strong>五段</strong>，不用再想。</span>
+      <span class="f-eq">③ 結尾是 <span class="j-mark">る</span>？　看前面一個音：<br>い段／え段是<strong>一段</strong>，あ／う／お段是<strong>五段</strong>。</span>
+      <span class="f-eq" style="font-size:14px;color:var(--ink-mute);">（③ 記得扣掉 帰る・要る・入る・走る・切る・知る 那組例外）</span>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 初學階段<strong>不必每次都推</strong>：課本和字典通常會直接標
+    「五段／I 類」「一段／II 類」「不規則／III 類」。這張流程是給沒標註時用的。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先自己想過再看解答。第 3 題是陷阱題。
+  </p>
+
+  <ol style="color:var(--ink-soft);font-size:15px;line-height:2;padding-left:22px;">
+    <li><strong>寝る</strong>（ねる／睡覺）是五段還是一段？為什麼？</li>
+    <li><strong>起きる</strong>（おきる／起床）呢？ます形怎麼寫？</li>
+    <li><strong>走る</strong>（はしる）看起來像哪一類？實際上是哪一類？ます形？</li>
+    <li><strong>サボる</strong> 是幾段？ます形怎麼寫？（提示：先看結尾的音）</li>
+    <li>用三步流程判斷 <strong>来る</strong>、<strong>飲む</strong>、<strong>見る</strong> 各是哪一類。</li>
+  </ol>
+
+  <details style="margin-top:16px;">
+    <summary style="cursor:pointer;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);">🔍 點擊查看解答</summary>
+    <div style="margin-top:12px;color:var(--ink-soft);font-size:15px;line-height:1.9;">
+      <p><strong>1.</strong> <strong>一段</strong>。結尾是 る，看前面：<span class="j-mark">ね</span> 是<strong>え段</strong>。
+      所以直接去る，成為 寝ます、寝ない。</p>
+      <p><strong>2.</strong> <strong>一段</strong>。る 前面是 <span class="j-mark">き</span>（い段），
+      去る 就好，成為 起きます。</p>
+      <p><strong>3.</strong> る 前面是 <span class="j-mark">し</span>（い段），<strong>看起來像一段</strong>，
+      但它是<strong>例外的五段</strong>，所以是 走<strong>り</strong>ます（不是「走ます」）。</p>
+      <p><strong>4.</strong> <strong>五段</strong>。片假名只是字幹，結尾 る 前面是
+      <span class="j-mark">ボ</span>（お段），所以置換成り，成為 サボ<strong>り</strong>ます。</p>
+      <p><strong>5.</strong> 来る＝<strong>不規則</strong>（第①步就攔下）；
+      飲む＝<strong>五段</strong>（第②步，む）；
+      見る＝<strong>一段</strong>（第③步，る 前面是 み／い段）。</p>
+    </div>
+  </details>
+
+  <a href="2026-08-09-godan-doushi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">什麼是五段動詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">回去看五段的五個段各代表什麼語氣，以及行與段的十字圖</span>
+  </a>
+</div>
+
+<site-footer></site-footer>
+
+</body>
+</html>

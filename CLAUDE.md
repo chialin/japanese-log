@@ -31,7 +31,13 @@ tadoku/YYYY-MM-DD-topic.html     ← 自製迷你多読小故事（藤色主題�
 images/tadoku/*.png              ← 多読故事的插圖（いらすとや，自存不直連）
 ```
 
-全站導覽列固定三個入口：關於我（`my-name-katakana.html`）／資源（`resources.html`）／多読（`tadoku.html`）——導覽列上寫「多読」不是「練習」，因為這個入口目前只放自製多読小故事，看圖猜詞單字測驗改放進「資源」。
+全站導覽列固定四個入口（2026-08-09 起）：文法（`grammar.html`）／漢字（`kanji.html`）／資源（`resources.html`）／多読（`tadoku.html`）。
+「關於我」（`my-name-katakana.html`）**已從導覽列移到頁尾**（`site-footer` 第一個連結）。
+導覽列上寫「多読」不是「練習」，因為這個入口只放自製多読小故事，看圖猜詞單字測驗放進「資源」。
+
+`grammar.html` 是**手寫**的文法索引頁（不是產物），沿用 lessons 棕橘色票，按主題分四區：
+動詞・活用／助詞／指示詞・代名詞／音的規則。**新增文法課時要手動加一張卡進去**——
+它跟 `index.html` 的 log 是兩份清單，log 照日期、這裡照主題。
 
 每個 HTML 都長同一個樣子：
 1. 自己的 `<style>` 裡只放 `:root` 色票（其餘版面交給 `shared.css`）

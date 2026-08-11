@@ -226,7 +226,30 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 
 #### 類型 → 樣板對照
 
-各類頁面共用 `shared.css` 的這組基礎結構：`.wrap` / `.masthead` / `.back-link` / `.page-title` / `.page-subtitle` / `.speed-control` / `.divider` / `.tip` `.note` `.alert` `.warning` `.mnemonic` / `.compare` / `.play-btn` / `.next-link`。
+各類頁面共用 `shared.css` 的這組基礎結構：`.wrap` / `.masthead` / `.back-link` / `.page-title` / `.page-subtitle` / `.speed-control` / `.divider` / `.tip` `.note` `.alert` `.warning` `.mnemonic` / `.compare` / `.play-btn` / `.next-link` / `.acc`（高低アクセント）。
+
+#### 高低アクセント `.acc`（2026-08-11 收進 shared.css）
+
+**全站只有這一套重音標記樣式，不要在頁面裡另外自創示意圖**（底線／色塊／階梯圖）。
+CSS 在 [shared.css](shared.css)（`.acc` / `.acc-k` / `.ar` / `.ar-legend` / `.acc-note`），新頁直接用 class。
+
+符號照老師板書：`↗` 往上升、`↘` 往下掉、`→` 維持平平的，**箭頭標在它作用的那個音前面**；
+平板型兩頭都是 `→`。標記**掛在單字卡 `.word-content` 內**，放在 `.word-romaji` 與 `.word-meaning` 之間。
+
+```html
+<div class="word-item" data-text="山">
+  <div class="word-content">
+    <div class="word-ja"><ruby>山<rt>やま</rt></ruby></div>
+    <div>
+      <span class="acc"><span class="acc-k"><span class="ar">↘</span>や<span class="ar">↗</span>ま</span></span>
+      <span class="acc-note">尾高型</span>
+    </div>
+    <div class="word-romaji">yama</div>
+    …
+```
+
+範例見 [kankouchi-he](lessons/2026-08-07-kankouchi-he.html)（尾高／中高／平板三型齊全）與
+[masu-kei-tango](lessons/2026-08-11-masu-kei-tango.html)（映画＝→えーが→）。
 
 #### 記憶小撇步 `.mnemonic`（2026-08-05 新增）
 

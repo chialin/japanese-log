@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>過去・現在・現在進行 — 日文只有兩個時制</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 四格時制表 */
+.tense-grid{display:grid;grid-template-columns:88px 1fr 1fr;gap:8px;margin:18px 0 22px;}
+.tense-grid > div{padding:12px 14px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;}
+.tense-grid .tg-head{background:var(--accent-pale);font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);font-size:13px;text-align:center;display:flex;align-items:center;justify-content:center;}
+.tense-grid .tg-side{background:var(--accent-pale);font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);font-size:13px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.5;}
+.tg-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:700;color:var(--ink);line-height:1.4;}
+.tg-ja b{color:var(--accent);}
+.tg-rom{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);margin-top:2px;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;white-space:nowrap;color:var(--ink);}
+.joshi-table .col-ja b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+
+/* 拆解圖：食べて ＋ います */
+.split-box{display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:20px 18px 18px;margin:18px 0;text-align:center;}
+.split-tok{font-family:'Klee One','Shippori Mincho',serif;font-size:28px;font-weight:700;line-height:1.5;}
+.split-plus{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;color:var(--ink-mute);padding-top:6px;}
+.split-arrow{font-size:20px;line-height:1.3;}
+.split-label{font-size:13px;line-height:1.8;color:var(--ink-soft);}
+.split-label strong{font-family:'Shippori Mincho',serif;font-size:15px;}
+.split-col.sb-a{color:var(--ink-mute);}
+.split-col.sb-b{color:var(--accent);}
+.split-col.sb-a .split-tok{color:var(--ink);}
+@media(max-width:520px){.split-box{grid-template-columns:1fr;}.split-plus{display:none;}}
+
+/* 兩張臉對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;}
+.vs-col li{font-size:14px;color:var(--ink-soft);line-height:2;}
+.vs-col li b{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;color:var(--ink);font-weight:600;}
+@media(max-width:600px){.vs-grid{grid-template-columns:1fr;}.tense-grid{grid-template-columns:72px 1fr;}.tense-grid .tg-head:first-of-type{display:none;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">過去</span>・現在・現在進行</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 09</div>
+  <p class="page-subtitle">日文其實只有兩個時制 — 剩下的用「ています」補完</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 日文<strong>沒有未來式</strong>——只有「過去」和「非過去」兩種，四個尾巴全包。<br>
+    ② <span class="compare">今、食べます</span> 不是「正在吃」，是「等一下就吃」。<br>
+    ③ 「正在～」要用 <span class="compare">て形 ＋ います</span>；而且 ています 有<strong>兩種意思</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、日文只有兩個時制</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    中文腦第一個要拆掉的想法是「現在式／過去式／未來式」三分法。
+    日文只分 <strong>過去</strong> 和 <strong>非過去</strong>（現在＋未來擠在同一格），
+    動詞不管哪一類，都只是把 <span class="j-mark">ます</span> 那個尾巴換掉。
+  </p>
+
+  <div class="tense-grid">
+    <div class="tg-head"></div>
+    <div class="tg-head">肯定</div>
+    <div class="tg-head">否定</div>
+
+    <div class="tg-side">非過去<br>現在／未來</div>
+    <div>
+      <div class="tg-ja"><ruby>食<rt>た</rt></ruby>べ<b>ます</b></div>
+      <div class="tg-rom">tabemasu — 吃／要吃</div>
+    </div>
+    <div>
+      <div class="tg-ja">食べ<b>ません</b></div>
+      <div class="tg-rom">tabemasen — 不吃</div>
+    </div>
+
+    <div class="tg-side">過去</div>
+    <div>
+      <div class="tg-ja">食べ<b>ました</b></div>
+      <div class="tg-rom">tabemashita — 吃了</div>
+    </div>
+    <div>
+      <div class="tg-ja">食べ<b>ませんでした</b></div>
+      <div class="tg-rom">tabemasen deshita — 沒吃</div>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 過去記號只有一個「た」</strong><br>
+    ます → まし<span class="compare">た</span>、です → でし<span class="compare">た</span>、
+    普通形也是 食べ<span class="compare">た</span>・行っ<span class="compare">た</span>。<br>
+    <strong>看到 た 就想到「已經」</strong>——這條線一路通到底，不會再有第二個過去記號。<br>
+    否定的過去也只是把兩塊疊起來：<strong>ません ＋ でした</strong>，不用另外背。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一之二、那「ています」不就是第三個？</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    很合理的疑問——「現在」「過去」「現在進行」，看起來不就三種嗎？
+    答案是：<strong>ています 不是時制，它是另一個維度</strong>。日文有兩套東西同時在跑：
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:78px;"></th><th style="width:120px;">名稱</th><th>在回答什麼</th><th style="width:150px;">選項</th></tr>
+    <tr>
+      <td><strong>第一層</strong></td>
+      <td class="col-ja"><ruby>時制<rt>じせい</rt></ruby><br><span style="font-size:12px;color:var(--ink-mute);">テンス</span></td>
+      <td>這件事<strong>相對於現在</strong>，在什麼時候？</td>
+      <td>過去 / 非過去<br><strong style="color:var(--accent);">只有 2 個</strong></td>
+    </tr>
+    <tr>
+      <td><strong>第二層</strong></td>
+      <td class="col-ja"><ruby>相<rt>そう</rt></ruby><br><span style="font-size:12px;color:var(--ink-mute);">アスペクト</span></td>
+      <td>這個動作<strong>進行到哪個階段</strong>？</td>
+      <td>還沒開始 / 進行中 /<br>做完留下狀態</td>
+    </tr>
+  </table>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <strong>ています 屬於第二層</strong>，所以「日文只有兩個時制」這句話沒有錯。
+  </p>
+
+  <div class="note">
+    📝 <strong>最硬的證據：ています 自己還要再選一次時制</strong><br>
+    如果 ています 是第三個時制，它就不可能<strong>再被</strong>時制標記——但它會。
+  </div>
+
+  <table class="joshi-table">
+    <tr><th style="width:190px;">句子</th><th style="width:110px;">時制</th><th>相</th></tr>
+    <tr><td class="col-ja">食べ<b>ます</b></td><td>非過去</td><td>一般</td></tr>
+    <tr><td class="col-ja">食べ<b>ました</b></td><td><strong>過去</strong></td><td>一般</td></tr>
+    <tr><td class="col-ja">食べて<b>います</b></td><td>非過去</td><td><strong>進行</strong></td></tr>
+    <tr class="key"><td class="col-ja">食べて<b>いました</b></td><td><strong>過去</strong></td><td><strong>進行</strong></td></tr>
+  </table>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    看最後一列：<strong>「過去」＋「進行」兩個標記同時掛在一句話上</strong>。
+    能疊在一起，就代表它們不是同一組選項——<strong>不是三選一，是 2 × 2 ＝ 四格</strong>。
+  </p>
+
+  <div class="split-box">
+    <div class="split-col sb-a">
+      <div class="split-tok"><ruby>食<rt>た</rt></ruby>べて</div>
+      <div class="split-arrow">↑</div>
+      <div class="split-label"><strong>相</strong><br>永遠不變<br>本身沒有時態</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div class="split-col sb-b">
+      <div class="split-tok">います</div>
+      <div class="split-arrow">↑</div>
+      <div class="split-label"><strong>時制</strong><br>います／いました／いません<br>過去或現在由這裡決定</div>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 時制是「什麼時候」，相是「做到哪」</strong><br>
+    <strong>時制</strong>決定你站在時間軸的哪一點；<strong>相</strong>決定你看到的是
+    「還沒動」「動到一半」還是「動完了留著」。<br>
+    兩個問題<strong>不衝突</strong>，所以可以同時回答——這就是為什麼它們能疊起來。
+  </div>
+
+  <div class="tip">
+    💡 <strong>回頭看本篇要記的三件事，其實只有兩層</strong><br>
+    ① 只有過去／非過去 → <strong>時制</strong><br>
+    ② 今、食べます ≠ 正在吃 → 時制<strong>不等於</strong>相（這是兩層之間的橋）<br>
+    ③ 正在～ ＝ て形＋います → <strong>相</strong><br>
+    中文一個「現在」把兩層混在一起，日文把它們拆開了，<strong>所以你不能拿時制去表達進行</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、「非過去」一個形當三個用</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    既然現在跟未來共用一格，那要怎麼分？<strong>靠時間副詞，不靠動詞。</strong>
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 同一個「ます」，三種時間</div>
+
+    <div class="word-item" data-text="明日、日本へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>明日<rt>あした</rt></ruby>、<ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">ashita, nihon e ikimasu</div>
+        <div class="word-meaning">明天要去日本 — <strong>未來</strong>（靠「明日」判斷）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="毎日、コーヒーを飲みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>毎日<rt>まいにち</rt></ruby>、コーヒーを<ruby>飲<rt>の</rt></ruby>みます</div>
+        <div class="word-romaji">mainichi, koohii o nomimasu</div>
+        <div class="word-meaning">每天喝咖啡 — <strong>習慣</strong>（靠「毎日」判斷）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今、食べます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>食<rt>た</rt></ruby>べます</div>
+        <div class="word-romaji">ima, tabemasu</div>
+        <div class="word-meaning">我現在就要吃了 — <strong>馬上要做</strong>（不是「正在吃」）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>最常見的初學者錯誤</strong><br>
+    「<span class="compare">今、食べます</span>」<strong>不等於</strong>「我正在吃」。
+    ます 是非過去，講的是「還沒發生、等一下要發生」。<br>
+    要說「正在吃」，只有一條路 → <strong>食べています</strong>（第四節）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、過去式 ました</div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="昨日、寿司を食べました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>、<ruby>寿司<rt>すし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べました</div>
+        <div class="word-romaji">kinou, sushi o tabemashita</div>
+        <div class="word-meaning">昨天吃了壽司</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昨日、何も食べませんでした">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>、<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べませんでした</div>
+        <div class="word-romaji">kinou, nani mo tabemasen deshita</div>
+        <div class="word-meaning">昨天什麼都沒吃</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p style="margin:16px 0 8px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    順手把<strong>名詞句</strong>和<strong>い形容詞</strong>一起收掉，它們也走同一個「た」：
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:110px;">詞性</th><th>現在</th><th>過去</th></tr>
+    <tr>
+      <td>名詞</td>
+      <td class="col-ja"><ruby>学生<rt>がくせい</rt></ruby>です</td>
+      <td class="col-ja"><ruby>学生<rt>がくせい</rt></ruby><b>でした</b></td>
+    </tr>
+    <tr>
+      <td>い形容詞</td>
+      <td class="col-ja"><ruby>高<rt>たか</rt></ruby>いです</td>
+      <td class="col-ja"><ruby>高<rt>たか</rt></ruby><b>かったです</b></td>
+    </tr>
+  </table>
+
+  <div class="warning">
+    ⚠️ い形容詞的過去<strong>不是</strong>「<s>高いでした</s>」。
+    い 要先變成 <span class="compare">かった</span>，です 留在最後不動 → <strong>高かったです</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、現在進行式 ＝ て形 ＋ います</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「正在～」日文沒有專屬的動詞變化，是<strong>兩塊拼起來的</strong>：
+    先把動詞變成 <span class="j-mark">て形</span>，後面掛一個 <span class="j-mark">います</span>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 進行中</div>
+
+    <div class="word-item" data-text="今、ご飯を食べています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>、ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べています</div>
+        <div class="word-romaji">ima, gohan o tabete imasu</div>
+        <div class="word-meaning">我正在吃飯</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="雨が降っています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っています</div>
+        <div class="word-romaji">ame ga futte imasu</div>
+        <div class="word-meaning">正在下雨</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="さっき、ご飯を食べていました">
+      <div class="word-content">
+        <div class="word-ja">さっき、ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べていました</div>
+        <div class="word-romaji">sakki, gohan o tabete imashita</div>
+        <div class="word-meaning">我剛才正在吃飯 — <strong>過去進行</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>要變過去，動的是最後那個「います」</strong><br>
+    います → いました（過去）、います → いません（否定）。
+    前面的 <strong>「食べて」永遠不動</strong>。<br>
+    <strong>時態永遠住在句子的最後一個字。</strong>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、ています 的兩張臉</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這是本課最重要的一段。同樣是 ています，意思分兩種——
+    <strong>由動詞本身決定，不是你選的</strong>。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>Ⓐ 動作進行中</h4>
+      <div class="vs-sub">這個動作可以「一直做下去」</div>
+      <ul>
+        <li><b><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます</b><br>正在看書</li>
+        <li><b><ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っています</b><br>正在下雨</li>
+        <li><b><ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いています</b><br>正在聽音樂</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>Ⓑ 結果狀態還留著</h4>
+      <div class="vs-sub">動作一瞬間就結束，但結果掛在那裡</div>
+      <ul>
+        <li><b><ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます</b><br>住在日本（不是正在搬）</li>
+        <li><b><ruby>結婚<rt>けっこん</rt></ruby>しています</b><br>已婚（不是正在辦婚禮）</li>
+        <li><b><ruby>窓<rt>まど</rt></ruby>が<ruby>開<rt>あ</rt></ruby>いています</b><br>窗戶開著</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 開關與燈</strong><br>
+    Ⓐ ＝ <strong>按著開關不放</strong>（動作本身在持續）<br>
+    Ⓑ ＝ <strong>按一下開關，燈就一直亮著</strong>（動作結束了，狀態還在）<br>
+    判斷方法：問自己「這個動作能不能持續十分鐘？」<br>
+    「読む」可以讀十分鐘 → Ⓐ；「住む」不是一直在做的動作 → Ⓑ。<br>
+    <strong>兩種都是在說「現在這個狀態成立」，所以日文用同一個形。</strong>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>「知道」是這組的頭號考題</strong><br>
+    <span class="compare"><ruby>知<rt>し</rt></ruby>っています</span>＝知道　⭕<br>
+    <s>知ります</s> ＝「我（之後）要去知道」，不通 ❌<br>
+    但是否定卻不對稱：「不知道」是 <span class="compare">知りません</span>，
+    <strong>不說</strong> <s>知っていません</s>。這組直接背起來。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、四句話一次看懂 — 用「住みます」跑一輪</div>
+
+  <div class="section">
+    <div class="section-title">📖 同一個動詞，四種時間感</div>
+
+    <div class="word-item" data-text="来年、日本に住みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>来年<rt>らいねん</rt></ruby>、<ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>みます</div>
+        <div class="word-romaji">rainen, nihon ni sumimasu</div>
+        <div class="word-meaning">明年<strong>要</strong>住到日本 — 非過去（還沒住）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="去年、日本に住みました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>去年<rt>きょねん</rt></ruby>、<ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>みました</div>
+        <div class="word-romaji">kyonen, nihon ni sumimashita</div>
+        <div class="word-meaning">去年住過 — 當成<strong>一個事件</strong>來講</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今、日本に住んでいます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます</div>
+        <div class="word-romaji">ima, nihon ni sunde imasu</div>
+        <div class="word-meaning">現在人就在日本住 — <strong>狀態（Ⓑ）</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="去年、日本に住んでいました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>去年<rt>きょねん</rt></ruby>、<ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいました</div>
+        <div class="word-romaji">kyonen, nihon ni sunde imashita</div>
+        <div class="word-meaning">去年那陣子<strong>一直住著</strong> — 過去持續的狀態</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>ました vs ていました</strong><br>
+    <strong>ました</strong>＝事件發生了（一個點）　｜　<strong>ていました</strong>＝那段期間狀態持續（一條線）<br>
+    另外別忘了助詞：住む 配 <span class="j-mark">に</span> 不是 で——
+    「に」是把自己「放在」那個點上，詳見 <a href="2026-06-24-sunde-imasu.html" style="color:var(--accent);">6/24 的〜に すんでいます</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">速記表</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:96px;">形態</th><th style="width:190px;">食べます</th><th>意思</th></tr>
+    <tr><td>非過去</td><td class="col-ja">食べ<b>ます</b></td><td>要吃／都吃（現在・未來・習慣）</td></tr>
+    <tr><td>非過去否定</td><td class="col-ja">食べ<b>ません</b></td><td>不吃</td></tr>
+    <tr><td>過去</td><td class="col-ja">食べ<b>ました</b></td><td>吃了</td></tr>
+    <tr><td>過去否定</td><td class="col-ja">食べ<b>ませんでした</b></td><td>沒吃</td></tr>
+    <tr class="key"><td>進行／狀態</td><td class="col-ja">食べ<b>ています</b></td><td>正在吃（て形 ＋ います）</td></tr>
+    <tr class="key"><td>過去進行</td><td class="col-ja">食べ<b>ていました</b></td><td>那時正在吃</td></tr>
+    <tr class="key"><td>進行否定</td><td class="col-ja">食べ<b>ていません</b></td><td>沒在吃</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <ol style="color:var(--ink-soft);font-size:14px;line-height:2.2;padding-left:22px;">
+    <li>「昨天沒有喝咖啡」怎麼說？（コーヒー・飲みます）</li>
+    <li>「今、テレビを見ます」和「今、テレビを見ています」差在哪？</li>
+    <li>哪一句對？<br>
+      ａ.　<ruby>私<rt>わたし</rt></ruby>は<ruby>田中<rt>たなか</rt></ruby>さんを<ruby>知<rt>し</rt></ruby>ります。<br>
+      ｂ.　<ruby>私<rt>わたし</rt></ruby>は<ruby>田中<rt>たなか</rt></ruby>さんを<ruby>知<rt>し</rt></ruby>っています。</li>
+    <li>「<ruby>窓<rt>まど</rt></ruby>が<ruby>開<rt>あ</rt></ruby>いています」是「正在開窗」還是「窗開著」？</li>
+    <li>「這家店去年很貴」怎麼說？（<ruby>高<rt>たか</rt></ruby>い的過去）</li>
+    <li>「食べていました」裡面，哪一塊在管時制？為什麼 ています 不算第三個時制？</li>
+  </ol>
+
+  <details style="margin-top:14px;background:rgba(255,255,255,.5);border:1px solid var(--line);padding:14px 18px;">
+    <summary style="cursor:pointer;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);">🔍 點擊查看解答</summary>
+    <ol style="color:var(--ink-soft);font-size:14px;line-height:2.1;padding-left:22px;margin-top:12px;">
+      <li><strong><ruby>昨日<rt>きのう</rt></ruby>、コーヒーを<ruby>飲<rt>の</rt></ruby>みませんでした。</strong></li>
+      <li>前者＝「我現在<strong>要去看</strong>電視」（非過去，還沒開始）；後者＝「我<strong>正在看</strong>電視」（進行中）。</li>
+      <li><strong>ｂ 對。</strong>「知る」是瞬間動詞，「知道」是結果狀態，固定用 知っています。ａ 會變成「我之後要去認識田中先生」。<br>
+        補充：否定要說 <strong>知りません</strong>，不說 知っていません。</li>
+      <li><strong>窗開著。</strong>「開く」一瞬間就完成，ています 在這裡是結果殘留（Ⓑ）。</li>
+      <li><strong>この<ruby>店<rt>みせ</rt></ruby>は<ruby>去年<rt>きょねん</rt></ruby><ruby>高<rt>たか</rt></ruby>かったです。</strong>い形容詞的過去是 い→かった，不是「高いでした」。</li>
+      <li>管時制的是<strong>最後的「いました」</strong>；前面的「食べて」是<strong>相</strong>，永遠不變也沒有時態。
+        ています 之所以不算第三個時制，是因為它<strong>還能再被時制標記</strong>（います／いました）——
+        能疊在一起就代表兩者不是同一組選項，是 <strong>2（時制）× 2（相）</strong>。</li>
+    </ol>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-09-godan-doushi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">什麼是五段動詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">ます 前面那個音怎麼來的，這篇往回補上動詞分類的底層</span>
+  </a>
+
+  <a href="2026-06-24-sunde-imasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜に すんでいます <span class="next-arrow">→</span></span>
+    <span class="next-sub">「住んでいます」配助詞 に 的完整說明</span>
+  </a>
+
+  <a href="2026-07-22-tabemashita.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">口語練習 食べました <span class="next-arrow">→</span></span>
+    <span class="next-sub">禮貌形「ました」與普通形「た」的差別</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

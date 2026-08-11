@@ -517,6 +517,37 @@ rt {
 .next-link.same-day .next-kicker { color: var(--sameday); }
 .next-link.same-day:hover .next-arrow { color: var(--sameday); }
 
+/* ── 高低アクセント（重音）— 照老師板書的箭頭寫法 ──
+   全站唯一一套重音標記樣式，不要在頁面裡另外自創示意圖（底線／色塊／階梯圖）。
+   符號：↗ 往上升、↘ 往下掉、→ 維持平平的；箭頭標在「它作用的那個音前面」。
+   平板型兩頭都是 →（→おんせん→、→えーが→）。
+
+   <span class="acc"><span class="acc-k">
+     <span class="ar">↘</span>や<span class="ar">↗</span>ま
+   </span></span>
+
+   .ar-legend 給正文說明箭頭意思用；.acc-note 是標記右邊的小字註（例：平板型・尾高型）。 */
+.acc {
+  display: inline-flex; align-items: center; background: var(--accent-pale);
+  border-radius: 999px; padding: 9px 24px; margin: 8px 0 4px;
+  font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 22px; color: var(--ink);
+}
+.acc-w { font-weight: 600; letter-spacing: .04em; }
+.acc-k { letter-spacing: .01em; white-space: nowrap; }
+.acc-k .ar { color: var(--ink-mute); font-size: .78em; padding: 0 .12em; vertical-align: .06em; }
+.acc-note {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 12px;
+  letter-spacing: .1em; color: var(--ink-mute); margin-left: 12px; text-transform: uppercase;
+}
+.ar-legend { white-space: nowrap; font-weight: 600; color: var(--ink); }
+.ar-legend .ar {
+  font-family: 'Klee One', 'Shippori Mincho', serif; color: var(--accent);
+  font-size: 1.15em; padding: 0 .1em;
+}
+@media (max-width: 520px) {
+  .acc { font-size: 19px; padding: 8px 18px; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .wrap { padding: 32px 18px 64px; }

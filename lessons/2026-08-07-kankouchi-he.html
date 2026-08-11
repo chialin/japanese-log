@@ -11,18 +11,7 @@
 
 .j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
 
-/* 高低アクセント — 照老師板書的箭頭寫法 */
-.acc{display:inline-flex;align-items:center;background:var(--accent-pale);
-  border-radius:999px;padding:9px 24px;margin:8px 0 4px;
-  font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink);}
-.acc-w{font-weight:600;letter-spacing:.04em;}
-.acc-k{letter-spacing:.01em;white-space:nowrap;}
-.acc-k .ar{color:var(--ink-mute);font-size:.78em;padding:0 .12em;vertical-align:.06em;}
-.pitch-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
-  letter-spacing:.1em;color:var(--ink-mute);margin-left:12px;text-transform:uppercase;}
-.ar-legend{white-space:nowrap;font-weight:600;color:var(--ink);}
-.ar-legend .ar{font-family:'Klee One','Shippori Mincho',serif;color:var(--accent);font-size:1.15em;padding:0 .1em;}
-@media(max-width:520px){.acc{font-size:19px;gap:14px;padding:8px 18px;}}
+/* 高低アクセント（.acc / .acc-k / .ar / .ar-legend）已移入 shared.css */
 
 /* 三分對照卡 */
 .tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0;}
@@ -152,7 +141,7 @@ details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
         <div class="word-ja"><ruby>山<rt>やま</rt></ruby></div>
         <div>
           <span class="acc"><span class="acc-k"><span class="ar">↘</span>や<span class="ar">↗</span>ま</span></span>
-          <span class="pitch-note">尾高型</span>
+          <span class="acc-note">尾高型</span>
         </div>
         <div class="word-romaji">yama</div>
         <div class="word-meaning">山 — や 低、ま 高，<strong>助詞一接上去就掉回低</strong>（やまが↓）</div>
@@ -165,7 +154,7 @@ details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
         <div class="word-ja"><ruby>観光地<rt>かんこうち</rt></ruby></div>
         <div>
           <span class="acc"><span class="acc-k"><span class="ar">↗</span>かんこう<span class="ar">↘</span>ち</span></span>
-          <span class="pitch-note">中高型</span>
+          <span class="acc-note">中高型</span>
         </div>
         <div class="word-romaji">kankouchi</div>
         <div class="word-meaning">觀光景點 — <strong>かんこう</strong> 撐在高處，最後的 <strong>ち</strong> 掉下來</div>
@@ -178,7 +167,7 @@ details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
         <div class="word-ja"><ruby>温泉<rt>おんせん</rt></ruby></div>
         <div>
           <span class="acc"><span class="acc-k"><span class="ar">→</span>おんせん<span class="ar">→</span></span></span>
-          <span class="pitch-note">平板型</span>
+          <span class="acc-note">平板型</span>
         </div>
         <div class="word-romaji">onsen</div>
         <div class="word-meaning">溫泉 — 課堂上標的是<strong>一路平平不掉</strong>，助詞接上去也維持高</div>
@@ -286,7 +275,7 @@ details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin-top:10px;}
         <div class="word-ja"><ruby>手首<rt>てくび</rt></ruby></div>
         <div>
           <span class="acc"><span class="acc-k"><span class="ar">↗</span>てく<span class="ar">↘</span>び</span></span>
-          <span class="pitch-note">中高型</span>
+          <span class="acc-note">中高型</span>
         </div>
         <div class="word-romaji">tekubi</div>
         <div class="word-meaning">手腕 — 手 ＋ 首 ＝「手的脖子」</div>

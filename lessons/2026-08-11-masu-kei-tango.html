@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>買う→買います・行く→行きます ＋ 新單字 — Lesson</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 變化流程：原形 → ます形 */
+.conj-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;background:rgba(255,255,255,.55);border:1px solid var(--line);padding:20px 18px;margin:16px 0;}
+.conj-box{text-align:center;min-width:104px;}
+.conj-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;font-weight:600;color:var(--ink);line-height:1.5;}
+.conj-ja .sw{color:var(--accent);border-bottom:2px solid var(--accent-soft);}
+.conj-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);margin-top:2px;}
+.conj-label{font-size:12px;color:var(--ink-mute);letter-spacing:.08em;margin-top:4px;}
+.conj-arrow{font-size:22px;color:var(--accent);}
+
+/* 段位對照小表 */
+.dan-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;}
+.dan-table th,.dan-table td{border:1px solid var(--line);padding:9px 10px;text-align:left;}
+.dan-table th{background:var(--accent-pale);color:var(--ink);font-weight:600;font-size:13px;letter-spacing:.05em;}
+.dan-table td.ja{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;}
+.dan-table td.ja b{color:var(--accent);}
+
+/* 高低アクセント（.acc / .acc-k / .ar / .ar-legend / .acc-note）在 shared.css */
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>います、<span class="accent"><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby>きます</span></h1>
+<div class="page-meta">動詞・活用 ＋ 單字 · Verbs &amp; Vocabulary · 2026 / 08 / 11</div>
+  <p class="page-subtitle">兩個五段動詞的マス形實作，加上「に」指目的地，再收五個新單字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    <ruby>五段<rt>ごだん</rt></ruby>動詞變マス形只有一個動作：<strong>把字尾的「う段」換成同一行的「い段」，再加ます</strong>。<br>
+    今天用 <ruby>買<rt>か</rt></ruby>う 和 <ruby>行<rt>い</rt></ruby>く 各走一次，並複習目的地助詞 <span class="j-mark">に</span>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、買う ⇒ 買います</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">買う</span> 是 <strong>わ行</strong>（う・い・う・え・お ← 現代日語的わ行只剩 わ 和 を，中間那格就是 <strong>い</strong>）。
+    所以字尾 <strong>う → い</strong>，變成 <span class="compare">かいます</span>。<br>
+    ⚠️ 常見錯：不會變成「かうます」，也不會變成「かわます」。
+  </p>
+
+  <div class="conj-flow">
+    <div class="conj-box">
+      <div class="conj-ja">か<span class="sw">う</span></div>
+      <div class="conj-romaji">ka<strong>u</strong></div>
+      <div class="conj-label">原形（辭書形）</div>
+    </div>
+    <div class="conj-arrow">→</div>
+    <div class="conj-box">
+      <div class="conj-ja">か<span class="sw">い</span></div>
+      <div class="conj-romaji">ka<strong>i</strong></div>
+      <div class="conj-label">う段 → い段</div>
+    </div>
+    <div class="conj-arrow">→</div>
+    <div class="conj-box">
+      <div class="conj-ja">かい<span class="sw">ます</span></div>
+      <div class="conj-romaji">kaimasu</div>
+      <div class="conj-label">マス形（禮貌）</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 買う 的例句</div>
+
+    <div class="word-item" data-text="パソコンを買います">
+      <div class="word-content">
+        <div class="word-ja">パソコンを<ruby>買<rt>か</rt></ruby>います</div>
+        <div class="word-romaji">pasokon o kaimasu</div>
+        <div class="word-meaning">（我）要買電腦 — パソコン ＝ personal computer 的日式縮寫</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼はパソコンを買います">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>はパソコンを<ruby>買<rt>か</rt></ruby>います</div>
+        <div class="word-romaji">kare wa pasokon o kaimasu</div>
+        <div class="word-meaning">他要買電腦</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="本を買います">
+      <div class="word-content">
+        <div class="word-ja"><ruby>本<rt>ほん</rt></ruby>を<ruby>買<rt>か</rt></ruby>います</div>
+        <div class="word-romaji">hon o kaimasu</div>
+        <div class="word-meaning">買書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、行く ⇒ 行きます</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">行く</span> 是 <strong>か行</strong>：か・<strong>き</strong>・く・け・こ。字尾 <strong>く → き</strong>，變成 <span class="compare">いきます</span>。
+    同一招套到別的く結尾動詞也通：<ruby>書<rt>か</rt></ruby>く → かきます、<ruby>聞<rt>き</rt></ruby>く → ききます。
+  </p>
+
+  <div class="conj-flow">
+    <div class="conj-box">
+      <div class="conj-ja">い<span class="sw">く</span></div>
+      <div class="conj-romaji">i<strong>ku</strong></div>
+      <div class="conj-label">原形</div>
+    </div>
+    <div class="conj-arrow">→</div>
+    <div class="conj-box">
+      <div class="conj-ja">い<span class="sw">き</span></div>
+      <div class="conj-romaji">i<strong>ki</strong></div>
+      <div class="conj-label">く → き</div>
+    </div>
+    <div class="conj-arrow">→</div>
+    <div class="conj-box">
+      <div class="conj-ja">いき<span class="sw">ます</span></div>
+      <div class="conj-romaji">ikimasu</div>
+      <div class="conj-label">マス形</div>
+    </div>
+  </div>
+
+  <table class="dan-table">
+    <tr><th>行</th><th>原形（う段）</th><th>マス形（い段＋ます）</th><th>意思</th></tr>
+    <tr><td>か行</td><td class="ja">い<b>く</b></td><td class="ja">い<b>き</b>ます</td><td>去</td></tr>
+    <tr><td>か行</td><td class="ja">か<b>く</b></td><td class="ja">か<b>き</b>ます</td><td>寫</td></tr>
+    <tr><td>か行</td><td class="ja">き<b>く</b></td><td class="ja">き<b>き</b>ます</td><td>聽・問</td></tr>
+    <tr><td>わ行</td><td class="ja">か<b>う</b></td><td class="ja">か<b>い</b>ます</td><td>買</td></tr>
+    <tr><td>ま行</td><td class="ja">よ<b>む</b></td><td class="ja">よ<b>み</b>ます</td><td>讀</td></tr>
+    <tr><td>ら行</td><td class="ja">つく<b>る</b></td><td class="ja">つく<b>り</b>ます</td><td>做（菜・東西）</td></tr>
+  </table>
+
+  <a href="2026-08-09-godan-doushi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">什麼是五段動詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">為什麼是「換一段」而不是背表格 — 行與段的十字圖在這裡</span>
+  </a>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、学校に行く</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    移動動詞（行く・来る・<ruby>帰<rt>かえ</rt></ruby>る）的<strong>目的地</strong>用 <span class="j-mark">に</span> 標出來，
+    句型固定是 <strong>［地點］<span class="j-mark">に</span> ［移動動詞］</strong>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 に ＋ 行きます</div>
+
+    <div class="word-item" data-text="学校に行く">
+      <div class="word-content">
+        <div class="word-ja"><ruby>学校<rt>がっこう</rt></ruby><span class="j-mark">に</span><ruby>行<rt>い</rt></ruby>く</div>
+        <div class="word-romaji">gakkou ni iku</div>
+        <div class="word-meaning">去學校（原形・對熟人講）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="学校に行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>学校<rt>がっこう</rt></ruby><span class="j-mark">に</span><ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">gakkou ni ikimasu</div>
+        <div class="word-meaning">去學校（マス形・禮貌）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は映画を見ます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます</div>
+        <div class="word-romaji">watashi wa eiga o mimasu</div>
+        <div class="word-meaning">我看電影 — 受詞用 <span class="j-mark">を</span>，跟目的地的 <span class="j-mark">に</span> 不同格</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>に vs を 一句話分</strong><br>
+    <span class="j-mark">に</span>＝<strong>往哪裡</strong>（学校<span class="j-mark">に</span>行きます）｜
+    <span class="j-mark">を</span>＝<strong>對什麼做</strong>（映画<span class="j-mark">を</span>見ます）。<br>
+    ⚠️ 不會說「学校<span class="j-mark">を</span>行きます」，也不會說「映画<span class="j-mark">に</span>見ます」。
+  </div>
+
+  <a href="2026-08-04-mokutekichi-ni.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">目的地助詞「に」 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/4 教過的同一個 に — 這篇補上跟 へ 的差別</span>
+  </a>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、新單字表</div>
+
+  <div class="section">
+    <div class="section-title">📖 今天的五個字</div>
+
+    <div class="word-item" data-text="鳥">
+      <div class="word-content">
+        <div class="word-ja"><ruby>鳥<rt>とり</rt></ruby></div>
+        <div class="word-romaji">tori</div>
+        <div class="word-meaning">鳥 — 也指「雞肉」（<ruby>焼<rt>や</rt></ruby>き<ruby>鳥<rt>とり</rt></ruby>＝烤雞肉串）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="門">
+      <div class="word-content">
+        <div class="word-ja"><ruby>門<rt>もん</rt></ruby></div>
+        <div class="word-romaji">mon</div>
+        <div class="word-meaning">大門、門口 — <ruby>正門<rt>せいもん</rt></ruby>（正門）、<ruby>専門<rt>せんもん</rt></ruby>（專門）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="扉">
+      <div class="word-content">
+        <div class="word-ja"><ruby>扉<rt>とびら</rt></ruby></div>
+        <div class="word-romaji">tobira</div>
+        <div class="word-meaning">門扉、（可開闔的）門板 — <ruby>扉<rt>とびら</rt></ruby>を<ruby>開<rt>あ</rt></ruby>ける＝把門打開</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="名前">
+      <div class="word-content">
+        <div class="word-ja"><ruby>名前<rt>なまえ</rt></ruby></div>
+        <div class="word-romaji">namae</div>
+        <div class="word-meaning">名字 — お<ruby>名前<rt>なまえ</rt></ruby>は？＝請問您叫什麼名字？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="涙">
+      <div class="word-content">
+        <div class="word-ja"><ruby>涙<rt>なみだ</rt></ruby></div>
+        <div class="word-romaji">namida</div>
+        <div class="word-meaning">眼淚 — <ruby>涙<rt>なみだ</rt></ruby>が<ruby>出<rt>で</rt></ruby>る＝流眼淚</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="映画">
+      <div class="word-content">
+        <div class="word-ja"><ruby>映画<rt>えいが</rt></ruby></div>
+        <div class="word-romaji">eiga</div>
+        <div><span class="acc"><span class="acc-k"><span class="ar">→</span>えーが<span class="ar">→</span></span></span><span class="acc-note">平板型 · 唸 えーが</span></div>
+        <div class="word-meaning">電影 — <ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます＝看電影</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>「門」的四個親戚 — もん・とびら・ドア・と</strong><br>
+    中文一個「門」字，日文分成四個詞，差在<strong>指的是哪一部分</strong>：
+    <table class="dan-table" style="margin-top:12px;">
+      <tr><th>詞</th><th>指什麼</th><th>例</th></tr>
+      <tr><td class="ja"><ruby>門<rt>もん</rt></ruby></td><td>建築物／院子的<strong>大門、門口</strong>（整個門的構造，含門柱）</td><td class="ja"><ruby>正門<rt>せいもん</rt></ruby>・<ruby>校門<rt>こうもん</rt></ruby></td></tr>
+      <tr><td class="ja"><ruby>扉<rt>とびら</rt></ruby></td><td>會開闔的<strong>那片門板</strong>本身（也指書的扉頁）</td><td class="ja"><ruby>扉<rt>とびら</rt></ruby>を<ruby>開<rt>あ</rt></ruby>ける</td></tr>
+      <tr><td class="ja">ドア</td><td>西式的<strong>房門</strong>（外來語 door，最日常）</td><td class="ja">ドアを<ruby>閉<rt>し</rt></ruby>める</td></tr>
+      <tr><td class="ja"><ruby>戸<rt>と</rt></ruby></td><td>日式的<strong>拉門、板門</strong></td><td class="ja"><ruby>雨戸<rt>あまど</rt></ruby>・<ruby>引<rt>ひ</rt></ruby>き<ruby>戸<rt>ど</rt></ruby></td></tr>
+    </table>
+    一句話抓：<strong>門＝門口那個「地方」，扉／ドア／戸＝會動的那「一片」</strong>。
+    日常講房間的門就用 <span class="compare">ドア</span>，講學校大門用 <span class="compare">門</span>。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 扉（とびら）怎麼記</strong><br>
+    <span class="compare">と（戸）</span>＋<span class="compare">びら（ひら／平ら）</span> ——
+    <strong>門的那一「片」平板</strong>。同一個 ひら 也在 <ruby>一枚<rt>いちまい</rt></ruby>的「片」、<ruby>開<rt>ひら</rt></ruby>く 裡面，
+    都是「平平一片、攤開」的意象。<br>
+    字形也順：<strong>扉 ＝ 戸（門）＋ 非（左右兩扇像翅膀展開）</strong> —— 兩扇對開的門板。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 涙（なみだ）怎麼記</strong><br>
+    なみだ 拆成 <span class="compare">なみ（波）</span>＋<span class="compare">だ（出だ／垂だ）</span>——
+    <strong>眼淚像一波一波湧出來</strong>。日文語源學上也真的認為 なみだ 跟「なみ（波）」同源，不是硬湊的。<br>
+    字形再補一刀：<strong>涙 ＝ 氵（水）＋ 戻（返回）</strong>，水一再回來 ＝ 眼淚。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 門・名・映 用台語接音讀</strong><br>
+    ・<strong>門</strong> 台語 <span class="compare">bun</span> → <span class="compare">もん</span>（専門 せんもん、正門 せいもん）<br>
+    ・<strong>名</strong> 台語 <span class="compare">bing</span> → <span class="compare">めい</span>（有名 ゆうめい、名刺 めいし）—— 但 <ruby>名前<rt>なまえ</rt></ruby> 的 な 是訓讀，別混<br>
+    ・<strong>映</strong> 台語 <span class="compare">ing</span> → <span class="compare">えい</span>；<strong>画</strong> 台語 <span class="compare">ue</span> → <span class="compare">が</span>。鼻音尾 -ng 對到 えい 這條在日台之間很整齊<br>
+    ・<strong>鳥</strong> 台語 <span class="compare">tsiau</span> → 音讀 <span class="compare">ちょう</span>（白鳥 はくちょう）；但單獨講「鳥」用訓讀 <span class="compare">とり</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、映画 ⇒ えーが</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <strong>えい 實際上唸成長音 えー</strong>，不是清楚地唸出「e-i」兩個音。
+    寫成 <span class="compare">えいが</span>、唸成 <span class="compare">えーが</span>。
+  </p>
+
+  <div class="conj-flow">
+    <div class="conj-box">
+      <div class="conj-ja">えいが</div>
+      <div class="conj-label">寫（假名）</div>
+    </div>
+    <div class="conj-arrow">→</div>
+    <div class="conj-box">
+      <div class="conj-ja">えーが</div>
+      <div class="conj-label">唸（實際發音）</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    而且 <ruby>映画<rt>えいが</rt></ruby> 是 <strong>平板型</strong>——除了第一拍略低，之後<strong>一路平平不掉下來</strong>，
+    不要像中文那樣在某個字上壓重音。
+  </p>
+
+  <p style="margin-bottom:10px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    照老師板書的箭頭標法：<span class="ar-legend"><span class="ar">↗</span> 往上升</span>、
+    <span class="ar-legend"><span class="ar">↘</span> 往下掉</span>、
+    <span class="ar-legend"><span class="ar">→</span> 維持平平的</span>，箭頭標在<strong>它作用的那個音前面</strong>。
+  </p>
+
+  <div style="background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 22px;margin:16px 0;text-align:center;">
+    <span class="acc"><span class="acc-k"><span class="ar">→</span>えーが<span class="ar">→</span></span></span>
+    <div style="font-size:13px;color:var(--ink-mute);margin-top:8px;">
+      平板型 —— 第一拍 え 略低，之後 ーが 一路平平<strong>不下降</strong>，
+      後面接助詞（<ruby>映画<rt>えいが</rt></ruby>が…）也照樣平著接下去。
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>最容易錯的地方</strong><br>
+    不要像中文那樣在「<strong>画</strong>」上壓重音唸成「えいガ↘」。
+    平板型的判準是<strong>整個字唸完都沒有下降點</strong>——這正是你自己抓到的「都是平平的念法」。
+  </div>
+
+  <a href="2026-08-07-kankouchi-he.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">高低アクセント 的箭頭標法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/7 第一次認真標重音那篇 — 山 ↘や↗ま、観光地 ↗かんこう↘ち、温泉 →おんせん→</span>
+  </a>
+
+  <div class="note">
+    📝 <strong>同一條規則的其他字</strong><br>
+    <ruby>先生<rt>せんせい</rt></ruby> → せんせー ｜ <ruby>学生<rt>がくせい</rt></ruby> → がくせー ｜
+    <ruby>時計<rt>とけい</rt></ruby> → とけー ｜ <ruby>英語<rt>えいご</rt></ruby> → えーご<br>
+    同理 <strong>おう／おお 也唸長音 オー</strong>：<ruby>学校<rt>がっこう</rt></ruby> → がっこー。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 試試看</div>
+
+    <p style="color:var(--ink-soft);font-size:15px;line-height:2;margin-bottom:12px;">
+      1. 把「<ruby>行<rt>い</rt></ruby>く」變成マス形。<br>
+      2. 把「<ruby>買<rt>か</rt></ruby>う」變成マス形。<br>
+      3. 用日文寫「我去學校」（禮貌形）。<br>
+      4. 用日文寫「他買電腦」。<br>
+      5. 「<ruby>映画<rt>えいが</rt></ruby>」實際上怎麼唸？為什麼？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <div style="padding:12px 4px;color:var(--ink-soft);font-size:15px;line-height:2;">
+        1. <ruby>行<rt>い</rt></ruby>きます（く → き ＋ ます）<br>
+        2. <ruby>買<rt>か</rt></ruby>います（う → い ＋ ます）<br>
+        3. <ruby>私<rt>わたし</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。（目的地用 <span class="j-mark">に</span>）<br>
+        4. <ruby>彼<rt>かれ</rt></ruby>はパソコンを<ruby>買<rt>か</rt></ruby>います。（受詞用 <span class="j-mark">を</span>）<br>
+        5. 唸成 <strong>えーが</strong>。「えい」在現代日語一律讀成長音 エー，不分成 e＋i 兩拍；而且是平板型，後面平平不下降。
+      </div>
+    </details>
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -8,18 +8,21 @@
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-  // 同一課裡同一個詞出現多次時，timeline 會有重複的 (d, f, w) 三元組，
-  // 這裡依首次出現順序去重，避免時間軸重複顯示同一列。
-  function dedupTimeline(timeline) {
-    const seen = new Set();
-    const out = [];
+  // timeline 一列＝一天。同一天可能有多篇課、每篇又有多個詞（例：08/03 的「日」
+  // 出現在 日本・毎日・今日・一昨日・日本語），全部併成一列，課名與詞各自去重。
+  function groupTimelineByDate(timeline) {
+    const byDate = new Map();
     for (const t of timeline) {
-      const key = t.d + '|' + t.f + '|' + t.w;
-      if (seen.has(key)) continue;
-      seen.add(key);
-      out.push(t);
+      let day = byDate.get(t.d);
+      if (!day) { day = { d: t.d, files: [], words: [] }; byDate.set(t.d, day); }
+      // 同一天有兩篇同名課程（例：兩篇都叫「今日の単語」）時只留第一篇，
+      // 否則列上會出現重複的課名
+      const title = t.t || t.f;
+      if (!day.files.some((x) => x.t === title)) day.files.push({ f: t.f, t: title });
+      if (!day.words.includes(t.w)) day.words.push(t.w);
     }
-    return out;
+    // 新→舊，跟首頁 log 的排序一致
+    return [...byDate.values()].sort((a, b) => (a.d < b.d ? 1 : a.d > b.d ? -1 : 0));
   }
 
   function branchRows(map, kind) {
@@ -57,7 +60,7 @@
     if (e.multi) tags.push('多音字');
     if (!e.multi && Object.keys(e.on).length === 1) tags.push('單一音讀');
 
-    const timeline = dedupTimeline(e.timeline);
+    const timeline = groupTimelineByDate(e.timeline);
 
     detail.innerHTML =
       `<div class="kcard">
@@ -72,10 +75,11 @@
         ${Object.keys(e.kun).length ? `<div class="klbl">— 訓讀 · Kun —</div>${branchRows(e.kun, 'kun')}` : ''}
         ${e.other.length ? `<div class="klbl">— 其他（拆不開的讀法）—</div>
           <div class="kbranch other"><span class="kb-words">${e.other.map(esc).join('・')}</span></div>` : ''}
-        <div class="klbl">— 你遇到它的順序 —</div>
-        <div class="ktimeline">${timeline.map((t) =>
-          `<div class="kev"><span class="kev-d">${esc(t.d.slice(5).replace('-', '/'))}</span>` +
-          `<a href="${esc(t.f)}">${esc(t.t || t.f)}</a> — ${esc(t.w)}</div>`).join('')}</div>
+        <div class="klbl">— 你遇到它的日子（新 → 舊）—</div>
+        <div class="ktimeline">${timeline.map((day) =>
+          `<div class="kev"><span class="kev-d">${esc(day.d.slice(5).replace('-', '/'))}</span>` +
+          day.files.map((f) => `<a href="${esc(f.f)}">${esc(f.t)}</a>`).join('、') +
+          ` — ${day.words.map(esc).join('・')}</div>`).join('')}</div>
         ${taigiCard(ch, e)}
       </div>`;
 

@@ -465,6 +465,9 @@ rt {
 .lesson-link[href^="readings/"]:hover { border-color: var(--reading-accent, var(--accent)); }
 .lesson-link[href^="tadoku/"] { border-left-color: var(--tadoku-accent, var(--accent)); }
 .lesson-link[href^="tadoku/"]:hover { border-color: var(--tadoku-accent, var(--accent)); }
+/* 文法課住在 lessons/ 底下，href 前綴分不出來，改用 .grammar class 手動標 */
+.lesson-link.grammar { border-left-color: var(--grammar-accent, var(--accent)); }
+.lesson-link.grammar:hover { border-color: var(--grammar-accent, var(--accent)); }
 .lesson-meta {
   font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; letter-spacing: .15em;
   color: var(--ink-mute); text-transform: uppercase; margin-bottom: 4px;

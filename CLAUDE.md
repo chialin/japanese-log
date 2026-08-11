@@ -35,7 +35,7 @@ images/tadoku/*.png              ← 多読故事的插圖（いらすとや，�
 「關於我」（`my-name-katakana.html`）**已從導覽列移到頁尾**（`site-footer` 第一個連結）。
 導覽列上寫「多読」不是「練習」，因為這個入口只放自製多読小故事，看圖猜詞單字測驗放進「資源」。
 
-`grammar.html` 是**手寫**的文法索引頁（不是產物），沿用 lessons 棕橘色票，按主題分四區：
+`grammar.html` 是**手寫**的文法索引頁（不是產物），用**青碧／松葉綠**色票（2026-08-11 起，見下方色票表），按主題分四區：
 動詞・活用／助詞／指示詞・代名詞／音的規則。**新增文法課時要手動加一張卡進去**——
 它跟 `index.html` 的 log 是兩份清單，log 照日期、這裡照主題。
 
@@ -117,6 +117,7 @@ grep -o 'data-date="[0-9-]*"' index.html | sed 's/data-date="//;s/"//' | awk 'p!
 > 位置是跟著對應那天的課程手動擺的，重排時不要把它們一起搬走。
 
 `lesson-meta` 結尾的 `· Lesson` / `· Reading` 是純文字標籤，給人讀的；機器靠 `href` 前綴 (`readings/` / `tadoku/` / `lessons/` / `my-name-katakana.html`) 自動換左邊框顏色（CSS attribute selector，見 shared.css 的 `.lesson-link[href^="..."]` 規則）。
+**文法課例外**——它跟一般課程一樣住在 `lessons/`，前綴分不出來，要在 `<a>` 上手動多加一個 `grammar` class（`class="lesson-link grammar"`）左邊框才會變綠。
 
 Calendar 會自動重算——`data-date` 提供即可，新月份不必動 calendar 邏輯（`data-kana` / `data-words` 目前不顯示，照填當紀錄）。
 
@@ -199,6 +200,15 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 | `my-name-katakana.html`（自我介紹） | 海軍藍 | `#f2f6fb` | `#2a5f9e` |
 | `readings/*`（閱讀筆記） | 深紅 / 暗朱 | `#f4ece0` | `#8b3a3a` |
 | `tadoku.html`、`tadoku/*`（自製迷你多読） | 藤色 / 淡紫 | `#f8f6fc` | `#7a68a6` |
+| `grammar.html` ＋ 它收錄的文法課 | 青碧 / 松葉綠 | `#f2f7f0` | `#3f7a52` |
+
+> **文法課用青碧色票**（2026-08-11 起）——`grammar.html` 索引頁，以及它 `<ul>` 裡收錄的每一篇
+> `lessons/*` 文法課，都換成青碧，進頁面一眼就知道「這篇在講規則」。
+> 檔案仍住在 `lessons/`，只有 `:root` 那行不一樣（註解寫「文法課 — 青碧／松葉綠色票」）。
+>
+> **新增文法課時要做兩件事**：① 頁面 `:root` 用青碧那組，不要用棕橘
+> ② `index.html` 的 `<li>` 掛 `class="lesson-link grammar"`（多一個 `grammar`），
+> log 卡片的左邊框才會是綠的。一般課程／單字課／會話練習維持棕橘、不加 class。
 
 #### 漢字注音（Furigana / HTML Ruby）與插圖出處標示
 
@@ -222,6 +232,8 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 --reading-accent: #8b3a3a;  /* readings/* 卡片左邊框 */
 --about-accent:   #2a5f9e;  /* my-name-katakana.html 卡片左邊框 */
 --tadoku-accent:  #7a68a6;  /* tadoku/* 卡片左邊框（shared.css 用 .lesson-link[href^="tadoku/"] 選取） */
+--grammar-accent: #3f7a52;  /* 文法課卡片左邊框；文法課住在 lessons/ 底下，href 前綴分不出來，
+                               改用 .lesson-link.grammar 手動標 */
 ```
 
 #### 類型 → 樣板對照

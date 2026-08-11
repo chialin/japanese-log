@@ -21,8 +21,8 @@ There is no build, lint, or test step. Development workflow:
 ```
 index.html                       ← 首頁：calendar + log（棕色主題）
 shared.css                       ← 全站共用元件樣式（masthead/word-item/play-btn/...）
-resources.html                   ← 資源入口：多読起步清單、看圖猜詞測驗、店員對話帖、練字帖（棕色主題）
-vocab-quiz.html                  ← 看圖猜詞單字測驗（棕色主題，從 resources.html 連過去）
+resources.html                   ← 資源入口：多読起步清單、時間速記表、店員對話帖、練字帖（棕色主題）
+jikan.html                       ← 時間速記表：星期／日期／月份／時刻／期間（棕色主題，從 resources.html 連過去）
 tadoku.html                      ← 多読入口：自製迷你多読小故事清單（藤色主題）
 my-name-katakana.html            ← 「私の名前」自我介紹（藍色主題）
 lessons/YYYY-MM-DD-topic.html    ← 每日課程（棕色主題）
@@ -33,7 +33,7 @@ images/tadoku/*.png              ← 多読故事的插圖（いらすとや，�
 
 全站導覽列固定四個入口（2026-08-09 起）：文法（`grammar.html`）／漢字（`kanji.html`）／資源（`resources.html`）／多読（`tadoku.html`）。
 「關於我」（`my-name-katakana.html`）**已從導覽列移到頁尾**（`site-footer` 第一個連結）。
-導覽列上寫「多読」不是「練習」，因為這個入口只放自製多読小故事，看圖猜詞單字測驗放進「資源」。
+導覽列上寫「多読」不是「練習」，因為這個入口只放自製多読小故事。
 
 `grammar.html` 是**手寫**的文法索引頁（不是產物），用**青碧／松葉綠**色票（2026-08-11 起，見下方色票表），按主題分四區：
 動詞・活用／助詞／指示詞・代名詞／音的規則。**新增文法課時要手動加一張卡進去**——
@@ -222,7 +222,8 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
   熟字訓（20歳＝はたち、一昨日＝おととい）無法拆，維持整組標即可。
 * 多読頁面的 `.credit` 必須標示兩種插圖來源：`插圖來源：<a href="https://www.irasutoya.com/" target="_blank" rel="noopener">いらすとや</a>（かわいいフリー素材集） ｜ AI 生成客製插圖（AI Generated Illustration）`
 
-`tadoku/*` 是自製的迷你多読小故事（例如 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)），不教新單字（`index.html` 對應 `data-words="0"`），色票跟 `tadoku.html` 一樣用藤色，但仍列進 `index.html` 的每日 log／calendar（跟 `readings/*` 一樣是「log 裡混不同色票類型」的做法）。`vocab-quiz.html` 改連在 `resources.html` 底下，用回一般棕橘色票。
+`tadoku/*` 是自製的迷你多読小故事（例如 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)），不教新單字（`index.html` 對應 `data-words="0"`），色票跟 `tadoku.html` 一樣用藤色，但仍列進 `index.html` 的每日 log／calendar（跟 `readings/*` 一樣是「log 裡混不同色票類型」的做法）。`jikan.html`（時間速記表）掛在 `resources.html` 底下，用一般棕橘色票。
+（原本的 `vocab-quiz.html` 看圖猜詞測驗已於 2026-08-11 刪除，要撈舊版看 `git log -- vocab-quiz.html`。）
 
 完整變數請看 [shared.css](shared.css) 用到的這組（每頁都要備齊）：
 `--paper`, `--paper-deep`, `--ink`, `--ink-soft`, `--ink-mute`, `--accent`, `--accent-soft`, `--accent-pale`, `--line`, `--bg-spot-1`, `--bg-spot-2`。

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マス形入門 — 日語動詞的第一個變化</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 說明段落 */
+.teacher{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent-soft);
+  padding:16px 20px;margin:16px 0;font-size:15px;line-height:2;color:var(--ink-soft);}
+.teacher strong{color:var(--ink);}
+
+/* 三類動詞卡 */
+.grp{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent-soft);
+  padding:18px 20px;margin:14px 0;}
+.grp.g1{border-top-color:var(--accent);}
+.grp-no{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.14em;
+  color:var(--ink-mute);text-transform:uppercase;margin-bottom:4px;}
+.grp-name{font-family:'Shippori Mincho',serif;font-size:19px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.grp-rule{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--accent);margin-bottom:10px;}
+
+/* 變化表 */
+.mtable{width:100%;border-collapse:collapse;margin:16px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.mtable th,.mtable td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.mtable th{background:var(--accent-pale);color:var(--ink);font-family:'Shippori Mincho',serif;font-weight:600;}
+.mtable .ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;white-space:nowrap;}
+.mtable .ja b{color:var(--accent);}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">マス形</span>入門</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 11</div>
+  <p class="page-subtitle">日語動詞的第一個變化 — 它是什麼、怎麼變、變出來能做什麼</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="teacher">
+    <strong>マス形（ます形）</strong>是日語動詞的第一個變化，也是往後所有變化的地基。<br>
+    本篇分三部分：<strong>① 它是什麼、② 怎麼變出來、③ 變出來之後能做什麼</strong>。變化規則只有三條。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、マス形是什麼</div>
+
+  <div class="teacher">
+    <strong>日語的動詞有兩套講法。</strong><br>
+    字典裡查到的那個樣子叫<strong>辭書形</strong>（也叫原形、常體），例如 <span class="compare">食べる</span>、<span class="compare">行く</span>。
+    這是對<strong>家人、好朋友、比自己小的人</strong>講話用的。<br>
+    在句尾接上 <span class="compare">ます</span> 之後叫<strong>マス形</strong>（禮貌形），例如
+    <span class="compare">食べます</span>、<span class="compare">行きます</span>。這是對<strong>老師、同事、店員、初次見面的人</strong>講話用的。<br><br>
+    兩者<strong>意思完全一樣</strong>，差別只在說話者與對方的熟識程度。中文沒有這個機制，
+    但在日語裡用錯的代價是聽起來沒禮貌，比文法錯誤更明顯。
+  </div>
+
+  <div class="section">
+    <div class="section-title">🔊 同一句話的兩種講法</div>
+
+    <div class="word-item" data-text="毎日 本を読む">
+      <div class="word-content">
+        <div class="word-ja"><ruby>毎日<rt>まいにち</rt></ruby> <ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>む</div>
+        <div class="word-romaji">mainichi hon o yomu</div>
+        <div class="word-meaning">每天看書（辭書形 — 對朋友、寫日記）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="毎日 本を読みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>毎日<rt>まいにち</rt></ruby> <ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます</div>
+        <div class="word-romaji">mainichi hon o yomimasu</div>
+        <div class="word-meaning">每天看書（マス形 — 對老師、對客人）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>新手先這樣做</strong><br>
+    <strong>開口說話時一律先用マス形。</strong> 對熟人用禮貌形只顯得客氣，不會失禮；
+    對不熟的人用辭書形則會失禮。等能判斷場合氣氛之後，再開始用辭書形也不遲。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、動詞分三類</div>
+
+  <div class="teacher">
+    要變マス形，得先知道<strong>這個動詞是哪一類</strong>。日語動詞只有三類，
+    而且<strong>第三類只有兩個字</strong>，實際需要判斷的只有前兩類。<br>
+    以下採最常見的命名：<strong>Ⅰ類＝五段動詞、Ⅱ類＝一段動詞、Ⅲ類＝不規則動詞</strong>。
+    部分課本寫成「u 動詞／ru 動詞／不規則動詞」，指的是同一套分類。
+  </div>
+
+  <div class="grp g1">
+    <div class="grp-no">Group I</div>
+    <div class="grp-name">Ⅰ類 · 五段動詞（u 動詞）</div>
+    <div class="grp-rule">字尾的「う段」→ 換成同一行的「い段」＋ ます</div>
+    <p style="font-size:14px;line-height:1.9;color:var(--ink-soft);">
+      這一類最多。辭書形的最後一個音是 <strong>う・く・ぐ・す・つ・ぬ・ぶ・む・る</strong>（う段）中的一個，
+      把它往上挪一格變成い段就好。<br>
+      <span class="compare">か<b>う</b> → か<b>い</b>ます</span>（買）｜
+      <span class="compare">い<b>く</b> → い<b>き</b>ます</span>（去）｜
+      <span class="compare">よ<b>む</b> → よ<b>み</b>ます</span>（讀）｜
+      <span class="compare">つく<b>る</b> → つく<b>り</b>ます</span>（做）
+    </p>
+  </div>
+
+  <div class="grp">
+    <div class="grp-no">Group II</div>
+    <div class="grp-name">Ⅱ類 · 一段動詞（ru 動詞）</div>
+    <div class="grp-rule">去掉字尾的「る」＋ ます</div>
+    <p style="font-size:14px;line-height:1.9;color:var(--ink-soft);">
+      這一類<strong>一定以「る」結尾</strong>，而且る前面那個音一定在<strong>い段或え段</strong>。
+      變化最單純，る 拿掉就好。<br>
+      <span class="compare">たべ<b>る</b> → たべます</span>（吃）｜
+      <span class="compare">み<b>る</b> → みます</span>（看）｜
+      <span class="compare">おき<b>る</b> → おきます</span>（起床）｜
+      <span class="compare">ね<b>る</b> → ねます</span>（睡）
+    </p>
+  </div>
+
+  <div class="grp">
+    <div class="grp-no">Group III</div>
+    <div class="grp-name">Ⅲ類 · 不規則動詞</div>
+    <div class="grp-rule">只有兩個，直接背</div>
+    <p style="font-size:14px;line-height:1.9;color:var(--ink-soft);">
+      <span class="compare">する → します</span>（做）｜
+      <span class="compare"><ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>き</rt></ruby>ます</span>（來 — 漢字沒變，<strong>讀音從 く 變成 き</strong>）<br>
+      する 特別重要，因為<strong>大量名詞加上 する 就變成動詞</strong>：
+      <ruby>勉強<rt>べんきょう</rt></ruby>する → 勉強します（唸書）、
+      <ruby>散歩<rt>さんぽ</rt></ruby>する → 散歩します（散步）。
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🔊 三類各聽一句</div>
+
+    <div class="word-item" data-text="コーヒーを買います">
+      <div class="word-content">
+        <div class="word-ja">コーヒーを<ruby>買<rt>か</rt></ruby>います</div>
+        <div class="word-romaji">koohii o kaimasu</div>
+        <div class="word-meaning">買咖啡（Ⅰ類 かう → かいます）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="朝ごはんを食べます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べます</div>
+        <div class="word-romaji">asagohan o tabemasu</div>
+        <div class="word-meaning">吃早餐（Ⅱ類 たべる → たべます）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本語を勉強します">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します</div>
+        <div class="word-romaji">nihongo o benkyou shimasu</div>
+        <div class="word-meaning">學日文（Ⅲ類 する → します）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>陷阱：る 結尾不一定是Ⅱ類</strong><br>
+    <ruby>帰<rt>かえ</rt></ruby>る（回家）、<ruby>入<rt>はい</rt></ruby>る（進入）、
+    <ruby>走<rt>はし</rt></ruby>る（跑）、<ruby>知<rt>し</rt></ruby>る（知道）、<ruby>切<rt>き</rt></ruby>る（切）
+    ——這幾個長得像Ⅱ類，其實是<strong>Ⅰ類</strong>。<br>
+    所以 帰る 是 <span class="compare">かえります</span>（不是「かえます」）、知る 是 <span class="compare">しります</span>。<br>
+    數量不多，<strong>當單字背下來</strong>就好，不用另外找規則。
+  </div>
+
+  <a href="2026-08-09-godan-vs-ichidan.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">五段 vs 一段：那「食べる」呢 <span class="next-arrow">→</span></span>
+    <span class="next-sub">る 結尾兩邊都可能，那篇有三步判斷流程與完整的例外組</span>
+  </a>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、四個最常用的變化</div>
+
+  <div class="teacher">
+    マス形變出來之後，<strong>句尾換掉就能表達肯定、否定、過去</strong>，
+    而且<strong>三類動詞在這一步完全一樣</strong>，不必再分類。
+  </div>
+
+  <table class="mtable">
+    <tr><th>要表達</th><th>句尾</th><th>例（読む）</th><th>中文</th></tr>
+    <tr><td>現在・未來 肯定</td><td class="ja"><b>ます</b></td><td class="ja">よみ<b>ます</b></td><td>（會）讀</td></tr>
+    <tr><td>現在・未來 否定</td><td class="ja"><b>ません</b></td><td class="ja">よみ<b>ません</b></td><td>不讀</td></tr>
+    <tr><td>過去 肯定</td><td class="ja"><b>ました</b></td><td class="ja">よみ<b>ました</b></td><td>讀了</td></tr>
+    <tr><td>過去 否定</td><td class="ja"><b>ませんでした</b></td><td class="ja">よみ<b>ませんでした</b></td><td>沒讀</td></tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>「現在・未來」是同一格，不是漏寫</strong><br>
+    日語<strong>沒有未來式</strong>。<ruby>明日<rt>あした</rt></ruby><ruby>行<rt>い</rt></ruby>きます 是「明天要去」、
+    <ruby>毎日<rt>まいにち</rt></ruby><ruby>行<rt>い</rt></ruby>きます 是「每天都去」——
+    <strong>同一個「行きます」，靠前面的時間詞決定</strong>。
+    實際上只要分「已經發生（ました）」與「還沒發生（ます）」兩邊。
+  </div>
+
+  <div class="section">
+    <div class="section-title">🔊 四個變化各一句</div>
+
+    <div class="word-item" data-text="あした 学校へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>明日<rt>あした</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">ashita gakkou e ikimasu</div>
+        <div class="word-meaning">明天要去學校</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きょうは行きません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>行<rt>い</rt></ruby>きません</div>
+        <div class="word-romaji">kyou wa ikimasen</div>
+        <div class="word-meaning">今天不去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きのう 映画を見ました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました</div>
+        <div class="word-romaji">kinou eiga o mimashita</div>
+        <div class="word-meaning">昨天看了電影</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="何も食べませんでした">
+      <div class="word-content">
+        <div class="word-ja"><ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べませんでした</div>
+        <div class="word-romaji">nani mo tabemasen deshita</div>
+        <div class="word-meaning">什麼都沒吃</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、還有兩個很好用的句尾</div>
+
+  <div class="teacher">
+    以下兩個句尾<strong>不是描述事實，而是與人互動</strong>，日常對話使用頻率很高。
+  </div>
+
+  <div class="section">
+    <div class="section-title">🤝 邀請與提議</div>
+
+    <div class="word-item" data-text="一緒に行きませんか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きません<span class="j-mark">か</span></div>
+        <div class="word-romaji">issho ni ikimasen ka</div>
+        <div class="word-meaning">要不要一起去？ — <strong>ませんか</strong>＝客氣地邀請對方，把決定權留給對方</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一緒に行きましょう">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きましょう</div>
+        <div class="word-romaji">issho ni ikimashou</div>
+        <div class="word-meaning">一起去吧！ — <strong>ましょう</strong>＝已經有共識，招呼大家動起來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>ませんか 跟 ましょう 的順序</strong><br>
+    先用 <strong>ませんか</strong> 問（對方還沒答應），得到「いいですね」之後再用 <strong>ましょう</strong>（一起走吧）。<br>
+    一開口就 ましょう 會有點強勢，像是替對方決定了。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、マス形的隱藏用途</div>
+
+  <div class="teacher">
+    <strong>把「ます」拿掉之後剩下的部分，是一個能接很多東西的零件</strong>，
+    正式名稱是「ます形語幹」或「連用形」。以下四項不必現在全記，先知道它們都從這裡長出來即可。
+  </div>
+
+  <table class="mtable">
+    <tr><th>接什麼</th><th>意思</th><th>例（<ruby>飲<rt>の</rt></ruby>みます → のみ）</th></tr>
+    <tr><td class="ja"><b>たい</b></td><td>想要做～</td><td class="ja">のみ<b>たい</b>です（想喝）</td></tr>
+    <tr><td class="ja"><b>に</b>＋行きます</td><td>去做～</td><td class="ja">のみ<b>に</b>行きます（去喝）</td></tr>
+    <tr><td class="ja"><b>ながら</b></td><td>一邊～一邊～</td><td class="ja">のみ<b>ながら</b><ruby>話<rt>はな</rt></ruby>します（邊喝邊聊）</td></tr>
+    <tr><td class="ja"><b>やすい / にくい</b></td><td>容易／難以～</td><td class="ja">のみ<b>やすい</b>（好入口）</td></tr>
+  </table>
+
+  <div class="teacher">
+    這些全都建立在<strong>能正確變出マス形</strong>之上。
+    換句話說，マス形不只是四個句尾變化，而是<strong>一整套文法的入口</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、三個常見錯誤</div>
+
+  <div class="alert">
+    ⚠️ <strong>① 不要把「ます」直接黏在辭書形後面</strong><br>
+    ❌ <span class="compare">たべるます</span>・<span class="compare">かうます</span>　→
+    ✅ <span class="compare">たべます</span>・<span class="compare">かいます</span><br>
+    <strong>一定要先改字尾，再接 ます。</strong> 這是新手最常見的錯。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② 過去否定不是「ませんかった」</strong><br>
+    ❌ <span class="compare">よみませんかった</span>　→ ✅ <span class="compare">よみませんでした</span><br>
+    否定的 <strong>ません</strong> 後面接 <strong>でした</strong>，兩個字分開記。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>③ 背動詞時，連類別一起背</strong><br>
+    看到新動詞，當下就記「<ruby>飲<rt>の</rt></ruby>む — <strong>Ⅰ類</strong> — 喝」。<br>
+    只背意思的話，每次要用都得重新判斷一次類別，費時且容易出錯。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 三類用「數量」記</strong><br>
+    ・<strong>Ⅲ類只有 2 個</strong>（する・来る）→ 先排除<br>
+    ・<strong>Ⅱ類一定是「る」結尾，而且る前面是い段或え段</strong>（たべ<u>る</u>・み<u>る</u>）→ 再排除<br>
+    ・<strong>剩下的全是Ⅰ類</strong><br>
+    判斷順序是「<strong>Ⅲ → Ⅱ → Ⅰ</strong>」，因為Ⅰ類最多，放最後當「其他」處理最省力。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 變變看</div>
+
+    <p style="color:var(--ink-soft);font-size:15px;line-height:2.2;margin-bottom:12px;">
+      1. <ruby>書<rt>か</rt></ruby>く（寫）→ マス形？<br>
+      2. <ruby>起<rt>お</rt></ruby>きる（起床）→ マス形？<br>
+      3. <ruby>来<rt>く</rt></ruby>る（來）→ マス形？<br>
+      4. <ruby>帰<rt>かえ</rt></ruby>る（回家）→ マス形？（小心）<br>
+      5. 「昨天沒有看電視」用マス形怎麼說？（テレビ・<ruby>見<rt>み</rt></ruby>る）<br>
+      6. 想邀朋友「要不要一起吃飯」，句尾該用 ませんか 還是 ましょう？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <div style="padding:12px 4px;color:var(--ink-soft);font-size:15px;line-height:2.2;">
+        1. <strong>かきます</strong> — Ⅰ類，く → き<br>
+        2. <strong>おきます</strong> — Ⅱ類（る前面是「き」＝い段），去る<br>
+        3. <strong>きます</strong> — Ⅲ類，直接背；注意漢字寫「来ます」但讀 <strong>き</strong>ます<br>
+        4. <strong>かえります</strong> — 陷阱題！帰る 是<strong>Ⅰ類</strong>，る → り。不是「かえます」<br>
+        5. <ruby>昨日<rt>きのう</rt></ruby>テレビを<ruby>見<rt>み</rt></ruby><strong>ませんでした</strong>。（過去否定 ＝ ません ＋ でした）<br>
+        6. <strong>ませんか</strong> —「<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>食<rt>た</rt></ruby>べませんか」。
+        對方還沒答應，用 ませんか 把決定權留給他；答應之後才說「<ruby>食<rt>た</rt></ruby>べましょう」。
+      </div>
+    </details>
+  </div>
+
+  <div class="teacher">
+    第 4 題錯了是常見的——<strong>る 結尾的判斷是入門階段的主要門檻</strong>。<br>
+    接下來兩條線可以並行：<strong>五段與一段的判斷</strong>（第二節的延伸），
+    以及<strong>助詞</strong>（を・に・へ）。動詞會變、名詞接得上，句子才完整。
+  </div>
+
+  <a href="2026-08-09-godan-doushi.html" class="next-link">
+    <span class="next-kicker">— Next —</span>
+    <span class="next-title">什麼是五段動詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">Ⅰ類為什麼叫「五段」— 行與段的十字圖，看懂就不必背變化表</span>
+  </a>
+
+  <a href="2026-08-11-joshi-o.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">助詞「を」的三種用法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">動詞會變了，還要有助詞把名詞接上去，句子才完整</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

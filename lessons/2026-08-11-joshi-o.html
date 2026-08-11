@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>助詞「を」的三種用法 — Lesson</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 行內助詞高亮 */
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 三種用法的編號標頭 */
+.use-head{display:flex;align-items:center;gap:12px;margin:28px 0 12px;}
+.use-num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;}
+.use-title{font-family:'Shippori Mincho',serif;font-size:19px;font-weight:700;color:var(--ink);line-height:1.4;}
+.use-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.1em;color:var(--ink-mute);text-transform:uppercase;}
+
+/* 句型公式 */
+.formula{background:rgba(255,255,255,.6);border:1px solid var(--line);border-left:3px solid var(--accent);
+  padding:14px 18px;margin:12px 0 16px;font-family:'Klee One','Shippori Mincho',serif;font-size:19px;color:var(--ink);}
+.formula .slot{color:var(--ink-mute);font-size:.85em;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--ink);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;white-space:nowrap;}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">助詞<span class="accent">「を」</span>的三種用法</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 11</div>
+  <p class="page-subtitle">受詞、通過的場所、離開的起點 — 一個假名三種角色</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    <span class="j-mark">を</span> <strong>只有一個身分：助詞</strong>，從來不當一般假名用。<br>
+    看到 を 就知道前面那個名詞是被後面的動詞「處理」的對象 —— 差別只在<strong>處理的方式</strong>有三種。<br>
+    唸 <span class="compare">o</span>（跟 お 同音），鍵盤打 <span class="compare">wo</span>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>を 不是「お」的另一種寫法</strong><br>
+    兩個唸法完全一樣，但分工乾淨：<strong>を 專門當助詞</strong>（映画<span class="j-mark">を</span>見ます），
+    <strong>お 才進單字裡</strong>（<ruby>お茶<rt>おちゃ</rt></ruby>・<ruby>男<rt>おとこ</rt></ruby>）。<br>
+    寫單字時不會用到 を，寫助詞時也不會寫成 お —— 跟
+    <a href="2026-05-10-joshi-wa.html" style="color:var(--accent);">は 當助詞唸 wa</a> 是同一種老規矩的另一面。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、直接受詞 — 對什麼做</div>
+
+  <div class="use-head">
+    <span class="use-num">1</span>
+    <div>
+      <div class="use-title">動作的對象</div>
+      <div class="use-en">Direct object</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:4px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    最常見、也是<a href="2026-08-11-masu-kei-tango.html" style="color:var(--accent);">今天造句用的那一種</a>。
+    動詞是<strong>及物的</strong>（有東西可以「被做」），那個東西就掛 <span class="j-mark">を</span>。
+  </p>
+
+  <div class="formula">
+    <span class="slot">［名詞］</span><span class="j-mark">を</span> <span class="slot">［及物動詞］</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="映画を見ます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>映画<rt>えいが</rt></ruby><span class="j-mark">を</span><ruby>見<rt>み</rt></ruby>ます</div>
+        <div class="word-romaji">eiga o mimasu</div>
+        <div class="word-meaning">看電影 — 看的<strong>對象</strong>是電影</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="本を読みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>本<rt>ほん</rt></ruby><span class="j-mark">を</span><ruby>読<rt>よ</rt></ruby>みます</div>
+        <div class="word-romaji">hon o yomimasu</div>
+        <div class="word-meaning">讀書 — 讀的對象是書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="パソコンを買います">
+      <div class="word-content">
+        <div class="word-ja">パソコン<span class="j-mark">を</span><ruby>買<rt>か</rt></ruby>います</div>
+        <div class="word-romaji">pasokon o kaimasu</div>
+        <div class="word-meaning">買電腦 — 買的對象是電腦</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="料理を作ります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>料理<rt>りょうり</rt></ruby><span class="j-mark">を</span><ruby>作<rt>つく</rt></ruby>ります</div>
+        <div class="word-romaji">ryouri o tsukurimasu</div>
+        <div class="word-meaning">做菜 — 做的對象是菜</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、通過的場所 — 從哪裡經過</div>
+
+  <div class="use-head">
+    <span class="use-num">2</span>
+    <div>
+      <div class="use-title">移動的路徑</div>
+      <div class="use-en">Path of motion</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:4px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這裡的 <span class="j-mark">を</span> 標的是<strong>場所</strong>，不是東西 —— 但邏輯一樣：
+    動作「作用在」那個空間上，人穿過它。<strong>最容易漏掉的一條</strong>，因為中文會說「<u>在</u>公園散步」，
+    很容易誤用成 <span class="compare">で</span> 或 <span class="compare">に</span>。
+  </p>
+
+  <div class="formula">
+    <span class="slot">［場所］</span><span class="j-mark">を</span> <span class="slot">［移動動詞］</span>
+    <span style="font-size:.72em;color:var(--ink-mute);">渡る・歩く・散歩する・通る・曲がる …</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🚶 例句</div>
+
+    <div class="word-item" data-text="橋を渡ります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>橋<rt>はし</rt></ruby><span class="j-mark">を</span><ruby>渡<rt>わた</rt></ruby>ります</div>
+        <div class="word-romaji">hashi o watarimasu</div>
+        <div class="word-meaning">過橋 — 橋是<strong>穿過去的東西</strong>，不是終點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="道を歩きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>道<rt>みち</rt></ruby><span class="j-mark">を</span><ruby>歩<rt>ある</rt></ruby>きます</div>
+        <div class="word-romaji">michi o arukimasu</div>
+        <div class="word-meaning">走在路上 — 沿著路移動</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="公園を散歩します">
+      <div class="word-content">
+        <div class="word-ja"><ruby>公園<rt>こうえん</rt></ruby><span class="j-mark">を</span><ruby>散歩<rt>さんぽ</rt></ruby>します</div>
+        <div class="word-romaji">kouen o sanpo shimasu</div>
+        <div class="word-meaning">在公園散步 — 在公園裡面到處走動</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>公園<span class="j-mark">を</span>散歩 vs 公園<span class="j-mark">で</span>遊びます</strong><br>
+    <span class="compare">を</span>＝<strong>在裡面移動、走遍</strong>（散歩・歩く・走る）<br>
+    <span class="compare">で</span>＝<strong>在那裡做某件事</strong>，人待在同一塊地方（遊ぶ・食べる・work）<br>
+    判準：<strong>動作本身有沒有「位移」</strong>。有 → を；沒有 → で。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、離開的起點 — 從哪裡出來</div>
+
+  <div class="use-head">
+    <span class="use-num">3</span>
+    <div>
+      <div class="use-title">脫離的場所</div>
+      <div class="use-en">Point of departure</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:4px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    人原本<strong>在裡面</strong>，動作是「脫離出來」。這個 <span class="j-mark">を</span> 標的是<strong>離開的那個範圍</strong>。
+  </p>
+
+  <div class="formula">
+    <span class="slot">［場所・組織］</span><span class="j-mark">を</span> <span class="slot">［離開動詞］</span>
+    <span style="font-size:.72em;color:var(--ink-mute);">出る・降りる・卒業する …</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🚪 例句</div>
+
+    <div class="word-item" data-text="家を出ます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>家<rt>いえ</rt></ruby><span class="j-mark">を</span><ruby>出<rt>で</rt></ruby>ます</div>
+        <div class="word-romaji">ie o demasu</div>
+        <div class="word-meaning">出門、離開家 — 從家這個範圍裡出來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="電車を降ります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電車<rt>でんしゃ</rt></ruby><span class="j-mark">を</span><ruby>降<rt>お</rt></ruby>ります</div>
+        <div class="word-romaji">densha o orimasu</div>
+        <div class="word-meaning">下電車 — 從車廂裡出來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="大学を卒業します">
+      <div class="word-content">
+        <div class="word-ja"><ruby>大学<rt>だいがく</rt></ruby><span class="j-mark">を</span><ruby>卒業<rt>そつぎょう</rt></ruby>します</div>
+        <div class="word-romaji">daigaku o sotsugyou shimasu</div>
+        <div class="word-meaning">大學畢業 — 「離開」不一定是實體空間，組織也算</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>電車<span class="j-mark">を</span>降ります ⇄ 電車<span class="j-mark">に</span><ruby>乗<rt>の</rt></ruby>ります</strong><br>
+    <strong>下車用 を</strong>（脫離）、<strong>上車用 に</strong>（進入某個點）—— 兩個剛好是一對，一起記最省事。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、三種用法一次看</div>
+
+  <table class="joshi-table">
+    <tr><th>用法</th><th>を 標的是</th><th>例句</th><th>動詞長什麼樣</th></tr>
+    <tr>
+      <td>① 直接受詞</td><td>被處理的<strong>東西</strong></td>
+      <td class="col-ja"><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます</td>
+      <td>及物動詞（見る・読む・買う・作る）</td>
+    </tr>
+    <tr>
+      <td>② 通過場所</td><td>穿過的<strong>路徑</strong></td>
+      <td class="col-ja"><ruby>橋<rt>はし</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>ります</td>
+      <td>有位移的移動動詞（渡る・歩く・散歩する）</td>
+    </tr>
+    <tr>
+      <td>③ 離開起點</td><td>脫離的<strong>範圍</strong></td>
+      <td class="col-ja"><ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ます</td>
+      <td>離開動詞（出る・降りる・卒業する）</td>
+    </tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 一句話串起三種</strong><br>
+    三種其實是同一個意象：<strong>を 標的東西，都被動詞「穿過」了一遍</strong>。<br>
+    ・穿過一個<strong>物</strong> → 動作落在它身上（<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>る）<br>
+    ・穿過一個<strong>空間</strong> → 走過去（<ruby>橋<rt>はし</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>る）<br>
+    ・穿過一道<strong>邊界</strong> → 出來了（<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>る）<br>
+    を 這個字形本身就像一條線<strong>穿過</strong>兩橫，可以拿來當圖像記。
+  </div>
+
+  <div class="note">
+    📝 <strong>跟其他助詞的分界</strong>
+    <table class="joshi-table" style="margin-top:12px;">
+      <tr><th>想表達</th><th>用</th><th>例</th></tr>
+      <tr><td>往哪裡去（終點）</td><td class="col-ja">に／へ</td><td class="col-ja"><ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます</td></tr>
+      <tr><td>從哪裡經過（路徑）</td><td class="col-ja">を</td><td class="col-ja"><ruby>公園<rt>こうえん</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>きます</td></tr>
+      <tr><td>從哪裡離開（起點）</td><td class="col-ja">を</td><td class="col-ja"><ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ます</td></tr>
+      <tr><td>在哪裡做某事（定點）</td><td class="col-ja">で</td><td class="col-ja"><ruby>公園<rt>こうえん</rt></ruby>で<ruby>遊<rt>あそ</rt></ruby>びます</td></tr>
+    </table>
+    一句話抓：<strong>に＝進去某個點，を＝穿過或脫離某個範圍，で＝待在那裡做事。</strong>
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>兩種「不能用 を」的情況</strong><br>
+    ① <strong>自動詞沒有受詞</strong>，改用 <span class="j-mark">が</span>：<ruby>雨<rt>あめ</rt></ruby><span class="j-mark">が</span><ruby>降<rt>ふ</rt></ruby>ります（下雨）<br>
+    ② <strong>「會／懂／喜歡」這類句型</strong>也把 を 換成 <span class="j-mark">が</span>：
+    <ruby>日本語<rt>にほんご</rt></ruby><span class="j-mark">が</span><ruby>分<rt>わ</rt></ruby>かります（懂日文）<br>
+    第 ② 條之後遇到再細講，現在只要知道<strong>「わかります・できます・好きです 前面不是 を」</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 填入 を / に / で</div>
+
+    <p style="color:var(--ink-soft);font-size:15px;line-height:2.2;margin-bottom:12px;">
+      1. <ruby>学校<rt>がっこう</rt></ruby>（　）<ruby>行<rt>い</rt></ruby>きます。<br>
+      2. <ruby>本<rt>ほん</rt></ruby>（　）<ruby>読<rt>よ</rt></ruby>みます。<br>
+      3. <ruby>橋<rt>はし</rt></ruby>（　）<ruby>渡<rt>わた</rt></ruby>ります。<br>
+      4. <ruby>電車<rt>でんしゃ</rt></ruby>（　）<ruby>降<rt>お</rt></ruby>ります。<br>
+      5. <ruby>公園<rt>こうえん</rt></ruby>（　）<ruby>遊<rt>あそ</rt></ruby>びます。<br>
+      6. 「大學畢業」用日文怎麼說？為什麼用 を？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <div style="padding:12px 4px;color:var(--ink-soft);font-size:15px;line-height:2.2;">
+        1. <strong>に</strong>（或 へ）— 目的地、終點<br>
+        2. <strong>を</strong> — ① 直接受詞<br>
+        3. <strong>を</strong> — ② 通過的場所，橋是穿過去的路徑不是終點<br>
+        4. <strong>を</strong> — ③ 離開的起點；上車則是「電車<strong>に</strong><ruby>乗<rt>の</rt></ruby>ります」<br>
+        5. <strong>で</strong> — 遊びます 沒有位移，人待在公園裡做事；若改成「公園<strong>を</strong><ruby>散歩<rt>さんぽ</rt></ruby>します」就要用 を<br>
+        6. <ruby>大学<rt>だいがく</rt></ruby><strong>を</strong><ruby>卒業<rt>そつぎょう</rt></ruby>します。畢業＝<strong>離開</strong>那個組織，屬於第 ③ 種用法。
+      </div>
+    </details>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-11-masu-kei-tango.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">助詞「を」：動作的對象 <span class="next-arrow">→</span></span>
+    <span class="next-sub">本篇的第 ① 種用法就是那堂課四句作文用的 を</span>
+  </a>
+
+  <a href="2026-05-10-joshi-2.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">助詞速記表 <span class="next-arrow">→</span></span>
+    <span class="next-sub">5/10 第一次把 を 記成「受詞」那張表 — 本篇補上另外兩種</span>
+  </a>
+
+  <a href="2026-08-04-mokutekichi-ni.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">目的地 ＋ に <span class="next-arrow">→</span></span>
+    <span class="next-sub">を 最常被錯用成 に 的那一組 — 終點 vs 路徑</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

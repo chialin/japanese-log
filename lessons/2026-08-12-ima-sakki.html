@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今 和 さっき — 時間詞要跟句尾對齊</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;
+  --accent-deep:#28513a;}   /* 深綠 — Index 標題用 */
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;white-space:nowrap;color:var(--ink);}
+.joshi-table .col-ja b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.ng{color:#a33;}
+
+/* 兩邊對齊圖 */
+.match-box{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;
+  border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;
+  padding:18px;margin:16px 0;text-align:center;}
+.match-tok{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);}
+.match-sub{font-size:12.5px;color:var(--ink-mute);margin-top:3px;line-height:1.6;}
+.match-link{font-size:20px;color:var(--accent);}
+.match-box.bad{border-style:dashed;border-color:#c88;}
+.match-box.bad .match-link{color:#a33;}
+@media(max-width:520px){.match-box{grid-template-columns:1fr;}}
+
+/* Index */
+.toc{margin:22px 0 30px;}
+.toc-h{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;margin-bottom:12px;
+  border-bottom:2px solid var(--accent-deep);}
+.toc-h .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;
+  letter-spacing:.26em;color:var(--accent-deep);text-transform:uppercase;}
+.toc-list{list-style:none;margin:0;padding:0;}
+.toc-list a{display:block;text-decoration:none;color:var(--ink);padding:7px 0;
+  font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;letter-spacing:.04em;
+  transition:color .15s,padding-left .15s;}
+.toc-list a:hover{color:var(--accent);padding-left:6px;}
+.toc-n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
+  color:var(--accent);margin-right:9px;vertical-align:super;letter-spacing:.06em;}
+.toc-s{font-family:'Klee One','Shippori Mincho',serif;font-size:12px;
+  color:var(--ink-mute);font-weight:400;margin-left:10px;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">今</span> 和 さっき</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 12</div>
+  <p class="page-subtitle">時間詞要跟句尾對齊 — 為什麼「今、降っていました」怪怪的</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <nav class="toc">
+    <div class="toc-h"><span class="en">Index</span></div>
+    <ul class="toc-list">
+      <li><a href="#taiou"><span class="toc-n">01</span>時間詞和句尾要同一邊<span class="toc-s">今 / さっき</span></a></li>
+      <li><a href="#reigai"><span class="toc-n">02</span>例外：今 也可以是「剛剛」<span class="toc-s">今、来た</span></a></li>
+      <li><a href="#ame"><span class="toc-n">03</span>下雨的四種講法<span class="toc-s">雨</span></a></li>
+      <li><a href="#reibun"><span class="toc-n">04</span>例句<span class="toc-s">五句</span></a></li>
+      <li><a href="#toi"><span class="toc-n">05</span>問句的「？」和「か」<span class="toc-s">〜ました？</span></a></li>
+      <li><a href="#quiz"><span class="toc-n">06</span>課後複習小測驗<span class="toc-s">Self-Quiz</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 句子開頭的時間詞，<strong>要跟句尾的時制站在同一邊</strong>。<br>
+    ② <span class="compare"><ruby>今<rt>いま</rt></ruby>、<ruby>降<rt>ふ</rt></ruby>っていました</span>
+    這種「現在＋過去」的組合，多數情況下不成立。<br>
+    ③ 唯一的例外是<strong>今 當「剛剛」用</strong>：今、<ruby>来<rt>き</rt></ruby>た＝我剛到。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="taiou">一、時間詞和句尾要同一邊</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日文的時制寫在<strong>句尾</strong>，時間點寫在<strong>句子開頭</strong>。
+    這兩個地方講的必須是同一件事，不能一邊說現在、一邊說過去。
+  </p>
+
+  <div class="match-box">
+    <div>
+      <div class="match-tok"><ruby>今<rt>いま</rt></ruby>・<ruby>毎日<rt>まいにち</rt></ruby>・<ruby>明日<rt>あした</rt></ruby></div>
+      <div class="match-sub">非過去的時間詞</div>
+    </div>
+    <div class="match-link">↔</div>
+    <div>
+      <div class="match-tok">〜る／〜ている</div>
+      <div class="match-sub">非過去的句尾</div>
+    </div>
+  </div>
+
+  <div class="match-box">
+    <div>
+      <div class="match-tok">さっき・<ruby>昨日<rt>きのう</rt></ruby>・<ruby>去年<rt>きょねん</rt></ruby></div>
+      <div class="match-sub">過去的時間詞</div>
+    </div>
+    <div class="match-link">↔</div>
+    <div>
+      <div class="match-tok">〜た／〜ていた</div>
+      <div class="match-sub">過去的句尾</div>
+    </div>
+  </div>
+
+  <div class="match-box bad">
+    <div>
+      <div class="match-tok"><ruby>今<rt>いま</rt></ruby></div>
+      <div class="match-sub">現在</div>
+    </div>
+    <div class="match-link">✗</div>
+    <div>
+      <div class="match-tok"><ruby>降<rt>ふ</rt></ruby>っていた</div>
+      <div class="match-sub">過去</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>「<ruby>今<rt>いま</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>っていた？」問不出你想問的事</strong><br>
+    你想問「現在有沒有在下雨」→ 句尾要用非過去：<strong>今、雨は降っている？</strong><br>
+    你想問「剛才有沒有在下」→ 時間詞要換成過去：<strong>さっき、雨は降っていた？</strong><br>
+    <strong>兩邊挑一邊改，不能兩個混著用。</strong>
+  </div>
+
+  <div class="tip">
+    💡 <strong>造句時的自我檢查</strong><br>
+    講完一句話之前，回頭確認一次：<strong>開頭講的時間，跟句尾的時制是不是同一個</strong>。<br>
+    開頭是 今 → 句尾就該是 <span class="compare">ている</span>；
+    開頭是 さっき → 句尾就該是 <span class="compare">ていた</span>。<br>
+    這是最常見的錯誤來源，因為<strong>中文沒有這個限制</strong>——中文說「剛剛在下雨」和
+    「現在在下雨」，動詞「下」都長一樣，時間全靠前面那兩個字，所以很容易忘記日文的句尾也要跟著換。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="reigai">二、例外：今 也可以是「剛剛」</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    有一種情況 <span class="compare">今</span> 配過去是通的——當它的意思是
+    <strong>「就在幾秒鐘前」</strong>的時候。這時候的今相當於中文的「剛剛」。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:190px;">日文</th><th>中文</th><th>為什麼通</th></tr>
+    <tr class="key">
+      <td class="col-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>来<rt>き</rt></ruby><b>た</b></td>
+      <td>我<strong>剛</strong>到</td>
+      <td rowspan="2">「到達」「結束」是<strong>一瞬間完成</strong>的動作，
+        剛剛才發生，所以句尾用過去很自然</td>
+    </tr>
+    <tr>
+      <td class="col-ja">今、<ruby>終<rt>お</rt></ruby>わっ<b>た</b></td>
+      <td><strong>剛剛</strong>結束</td>
+    </tr>
+    <tr>
+      <td class="col-ja ng">今、<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っていた</td>
+      <td class="ng">✗ 怪</td>
+      <td>下雨是<strong>持續一段時間</strong>的狀態，
+        不是一瞬間的動作，套不進「剛剛」</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>想講「到剛才為止都在下」，用「今まで」</strong><br>
+    <span class="compare">今<b>まで</b>雨が降っていた</span>＝到剛才為止都還在下（現在停了）。<br>
+    加上 <span class="j-mark">まで</span> 之後，這個詞組講的是<strong>一段延伸到現在的時間</strong>，
+    不再是「現在這一點」，所以配過去就合理了。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ame">三、下雨的四種講法</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:110px;">意思</th><th style="width:200px;">常體</th><th>禮貌形</th></tr>
+    <tr class="key">
+      <td>現在正在下</td>
+      <td class="col-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>って<b>いる</b></td>
+      <td class="col-ja">今、雨が降って<b>います</b></td>
+    </tr>
+    <tr class="key">
+      <td>現在沒在下</td>
+      <td class="col-ja">今、雨は降って<b>いない</b></td>
+      <td class="col-ja">今、雨は降って<b>いません</b></td>
+    </tr>
+    <tr>
+      <td>剛才在下<br>（現在停了）</td>
+      <td class="col-ja"><b>さっきまで</b>雨が降って<b>いた</b></td>
+      <td class="col-ja">さっきまで雨が降って<b>いました</b></td>
+    </tr>
+    <tr>
+      <td>剛才沒在下</td>
+      <td class="col-ja"><b>さっきは</b>雨が降って<b>いなかった</b></td>
+      <td class="col-ja">さっきは雨が降って<b>いませんでした</b></td>
+    </tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>順便看助詞：肯定用 が，否定用 は</strong><br>
+    上表第一列是 <span class="compare">雨<b>が</b></span>，第二列變成 <span class="compare">雨<b>は</b></span>。
+    否定句把主語提出來當話題再否定它，是日文的習慣，
+    詳見 <a href="2026-08-12-hitei.html" style="color:var(--accent);">否定的說法</a> 第三節。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="reibun">四、例句</div>
+
+  <div class="section">
+    <div class="section-title">📖 今 配非過去</div>
+
+    <div class="word-item" data-text="今、雨が降っている">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っている</div>
+        <div class="word-romaji">ima, ame ga futte iru</div>
+        <div class="word-meaning">現在正在下雨</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今、来た">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>来<rt>き</rt></ruby>た</div>
+        <div class="word-romaji">ima, kita</div>
+        <div class="word-meaning">我剛到 — 這裡的今＝剛剛，所以配過去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今、終わった">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>終<rt>お</rt></ruby>わった</div>
+        <div class="word-romaji">ima, owatta</div>
+        <div class="word-meaning">剛剛結束</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 過去的時間詞配過去</div>
+
+    <div class="word-item" data-text="さっきまで雨が降っていた">
+      <div class="word-content">
+        <div class="word-ja">さっきまで<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っていた</div>
+        <div class="word-romaji">sakki made ame ga futte ita</div>
+        <div class="word-meaning">到剛才為止都還在下雨</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今まで雨が降っていた">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>まで<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っていた</div>
+        <div class="word-romaji">ima made ame ga futte ita</div>
+        <div class="word-meaning">到剛才為止都還在下 — 加了 まで 就能配過去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="toi">五、問句的「？」和「か」</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「降っていました？」這種<strong>句尾直接加問號</strong>的寫法，日本人天天在用，但有場合限制：
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:170px;">寫法</th><th style="width:120px;">場合</th><th>說明</th></tr>
+    <tr class="key">
+      <td class="col-ja"><ruby>降<rt>ふ</rt></ruby>っていました<b>？</b></td>
+      <td>口語・訊息</td>
+      <td>靠<strong>上升語調</strong>表示疑問，聊天、LINE 上很自然</td>
+    </tr>
+    <tr>
+      <td class="col-ja">降っていました<b>か</b>。</td>
+      <td>正式・書面</td>
+      <td>加 <span class="j-mark">か</span> 才是完整的疑問句</td>
+    </tr>
+    <tr>
+      <td class="col-ja">降ってた<b>？</b></td>
+      <td>朋友之間</td>
+      <td>常體 ＋ 省略 い（ていた → てた）</td>
+    </tr>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>常體問句<u>不加</u> か</strong><br>
+    朋友之間問「有在下雨嗎」是 <span class="compare">降ってる？</span>，
+    <strong>不說</strong> <s>降ってるか？</s>——常體加 か 聽起來像在質問或自言自語。<br>
+    <strong>か 是跟禮貌形一組的</strong>：降っていますか。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">課後複習小測驗 · Self-Quiz</div>
+
+  <ol style="color:var(--ink-soft);font-size:14px;line-height:2.2;padding-left:22px;">
+    <li>「<ruby>今<rt>いま</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っていました」哪裡怪？兩種改法各寫一句。</li>
+    <li>為什麼「今、<ruby>来<rt>き</rt></ruby>た」可以，「今、雨が降っていた」卻不行？</li>
+    <li>「到剛才為止都還在下雨」怎麼說？</li>
+    <li>跟朋友問「有在下雨嗎」，下面哪句自然？<br>
+      ａ. <ruby>降<rt>ふ</rt></ruby>ってるか？　ｂ. 降ってる？　ｃ. 降っていますか。</li>
+  </ol>
+
+  <details style="margin-top:14px;background:rgba(255,255,255,.5);border:1px solid var(--line);padding:14px 18px;">
+    <summary style="cursor:pointer;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);">🔍 點擊查看解答</summary>
+    <ol style="color:var(--ink-soft);font-size:14px;line-height:2.1;padding-left:22px;margin-top:12px;">
+      <li>時間詞「今」是現在，句尾「ていました」是過去，<strong>兩邊對不上</strong>。<br>
+        改句尾 → <strong>今、雨が降っています。</strong>（現在正在下）<br>
+        改時間詞 → <strong>さっきまで雨が降っていました。</strong>（剛才還在下）</li>
+      <li>「来る」是<strong>一瞬間完成</strong>的動作，剛完成就可以說「今＝剛剛」；
+        下雨是<strong>持續的狀態</strong>，沒有那個「剛完成的瞬間」，所以套不上。</li>
+      <li><strong>さっきまで<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っていた。</strong>
+        （禮貌形：さっきまで雨が降っていました。）「<ruby>今<rt>いま</rt></ruby>まで〜」也可以。</li>
+      <li><strong>ｂ。</strong>ａ 的常體＋か 聽起來像質問；ｃ 文法正確但對朋友太客氣。</li>
+    </ol>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-12-jisei-shinkoukei.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">過去・現在・現在進行 <span class="next-arrow">→</span></span>
+    <span class="next-sub">句尾那八個形是怎麼來的，這篇是它的底層</span>
+  </a>
+
+  <a href="2026-08-12-hitei.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">否定的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">為什麼是「雨は降っていない」而不是「雨が」</span>
+  </a>
+
+  <a href="2026-08-11-jikan-kotoba.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">時間詞：き系與あ系 <span class="next-arrow">→</span></span>
+    <span class="next-sub">昨日・今日・明日 這組時間詞本身怎麼記</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

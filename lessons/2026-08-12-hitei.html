@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>否定的說法 — ない 怎麼接、怎麼用</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;
+  --accent-deep:#28513a;}   /* 深綠 — Index 標題用 */
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;white-space:nowrap;color:var(--ink);}
+.joshi-table .col-ja b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+
+/* 拆解圖 */
+.split-box{display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:20px 18px 18px;margin:18px 0;text-align:center;}
+.split-tok{font-family:'Klee One','Shippori Mincho',serif;font-size:26px;font-weight:700;line-height:1.5;}
+.split-plus{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;color:var(--ink-mute);padding-top:6px;}
+.split-arrow{font-size:20px;line-height:1.3;}
+.split-label{font-size:13px;line-height:1.8;color:var(--ink-soft);}
+.split-label strong{font-family:'Shippori Mincho',serif;font-size:15px;}
+.split-col.sb-a{color:var(--ink-mute);}
+.split-col.sb-b{color:var(--accent);}
+.split-col.sb-a .split-tok{color:var(--ink);}
+@media(max-width:520px){.split-box{grid-template-columns:1fr;}.split-plus{display:none;}}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;}
+.vs-col li{font-size:14px;color:var(--ink-soft);line-height:2;}
+.vs-col li b{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;color:var(--ink);font-weight:600;}
+@media(max-width:600px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Index */
+.toc{margin:22px 0 30px;}
+.toc-h{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;margin-bottom:12px;
+  border-bottom:2px solid var(--accent-deep);}
+.toc-h .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;
+  letter-spacing:.26em;color:var(--accent-deep);text-transform:uppercase;}
+.toc-list{list-style:none;margin:0;padding:0;}
+.toc-list a{display:block;text-decoration:none;color:var(--ink);padding:7px 0;
+  font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;letter-spacing:.04em;
+  transition:color .15s,padding-left .15s;}
+.toc-list a:hover{color:var(--accent);padding-left:6px;}
+.toc-n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
+  color:var(--accent);margin-right:9px;vertical-align:super;letter-spacing:.06em;}
+.toc-s{font-family:'Klee One','Shippori Mincho',serif;font-size:12px;
+  color:var(--ink-mute);font-weight:400;margin-left:10px;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">否定的<span class="accent">說法</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 12</div>
+  <p class="page-subtitle">ない 怎麼接、進行形怎麼否定，還有為什麼是「雨<b>は</b>降っていない」</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <nav class="toc">
+    <div class="toc-h"><span class="en">Index</span></div>
+    <ul class="toc-list">
+      <li><a href="#nai"><span class="toc-n">01</span>四種詞性怎麼變否定<span class="toc-s">ない / くない / じゃない</span></a></li>
+      <li><a href="#teinai"><span class="toc-n">02</span>進行形的否定 ていない<span class="toc-s">ている → ていない</span></a></li>
+      <li><a href="#wa"><span class="toc-n">03</span>否定句為什麼常用「は」<span class="toc-s">が → は</span></a></li>
+      <li><a href="#mada"><span class="toc-n">04</span>まだ 和 もう<span class="toc-s">還沒 / 已經</span></a></li>
+      <li><a href="#reibun"><span class="toc-n">05</span>例句<span class="toc-s">七句</span></a></li>
+      <li><a href="#teinei"><span class="toc-n">06</span>換成禮貌形的對照表<span class="toc-s">ない ↔ ません</span></a></li>
+      <li><a href="#machigai"><span class="toc-n">07</span>常犯的錯<span class="toc-s">知っていない ✗</span></a></li>
+      <li><a href="#matome"><span class="toc-n">08</span>速記表<span class="toc-s">まとめ</span></a></li>
+      <li><a href="#quiz"><span class="toc-n">09</span>課後複習小測驗<span class="toc-s">Self-Quiz</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="note">
+    📝 <strong>本篇主要用常體（普通形）</strong><br>
+    正文一律用 <span class="compare">ない・ていない</span>；
+    禮貌形的 <span class="compare">ません・ていません</span> 集中放在第六節對照，
+    <strong>兩套分開看，不在同一段裡混著講</strong>。
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 否定的句尾<strong>永遠是「ない」結尾</strong>，四種詞性只差前面接什麼。<br>
+    ② 進行形的否定是 <span class="compare">ていない</span>，中文多半要翻成<strong>「還沒」</strong>而不是「沒在」。<br>
+    ③ 否定句裡的 が 很常換成 <span class="j-mark">は</span>：<span class="compare">雨<b>は</b><ruby>降<rt>ふ</rt></ruby>っていない</span>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="nai">一、四種詞性怎麼變否定</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先看全景：不管哪一種詞，否定形<strong>最後兩個字都是「ない」</strong>，
+    差別只在「ない」前面要放什麼。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:110px;">詞性</th><th style="width:150px;">肯定</th><th style="width:190px;">否定</th><th>怎麼變</th></tr>
+    <tr class="key">
+      <td>動詞</td>
+      <td class="col-ja"><ruby>飲<rt>の</rt></ruby>む</td>
+      <td class="col-ja">飲ま<b>ない</b></td>
+      <td>字尾改成<strong>あ段</strong>再加 ない（む→ま）</td>
+    </tr>
+    <tr>
+      <td>動詞（一段）</td>
+      <td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td>
+      <td class="col-ja">食べ<b>ない</b></td>
+      <td>去掉 る 加 ない</td>
+    </tr>
+    <tr>
+      <td>い形容詞</td>
+      <td class="col-ja"><ruby>寒<rt>さむ</rt></ruby>い</td>
+      <td class="col-ja">寒く<b>ない</b></td>
+      <td>い 改成 <strong>く</strong> 再加 ない</td>
+    </tr>
+    <tr>
+      <td>な形容詞</td>
+      <td class="col-ja"><ruby>元気<rt>げんき</rt></ruby>だ</td>
+      <td class="col-ja">元気じゃ<b>ない</b></td>
+      <td>だ 改成 <strong>じゃ</strong> 再加 ない</td>
+    </tr>
+    <tr>
+      <td>名詞</td>
+      <td class="col-ja"><ruby>学生<rt>がくせい</rt></ruby>だ</td>
+      <td class="col-ja">学生じゃ<b>ない</b></td>
+      <td>跟な形容詞同一套</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>動詞的「あ段 ＋ ない」是五段動詞的規則</strong><br>
+    飲む→飲ま、行く→行か、<ruby>買<rt>か</rt></ruby>う→買わ（<strong>不是 買あ</strong>）。
+    這一步屬於五段動詞的字尾置換，詳細看
+    <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">什麼是五段動詞</a>；
+    一段動詞（食べる・<ruby>見<rt>み</rt></ruby>る）則單純去掉 る。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 「じゃ」是「では」念快的結果</strong><br>
+    正式書寫會看到 <span class="compare">学生<b>では</b>ない</span>，口語把 では 念成
+    <strong>じゃ</strong> → 学生<b>じゃ</b>ない。<br>
+    兩個是同一個東西，<strong>じゃ 只是口語版</strong>，看到 ではない 不用當成新句型。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="teinai">二、進行形的否定 ていない</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「正在～」是 <span class="j-mark">て形 ＋ いる</span>，要否定的話
+    <strong>動的是最後那個 いる</strong>，前面的て形完全不動。
+  </p>
+
+  <div class="split-box">
+    <div class="split-col sb-a">
+      <div class="split-tok"><ruby>降<rt>ふ</rt></ruby>って</div>
+      <div class="split-arrow">↑</div>
+      <div class="split-label"><strong>て形</strong><br>永遠不變</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div class="split-col sb-b">
+      <div class="split-tok">いない</div>
+      <div class="split-arrow">↑</div>
+      <div class="split-label"><strong>否定在這裡</strong><br>いる → いない</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    重點在<strong>中文怎麼翻</strong>。<span class="compare">〜ていない</span> 字面是
+    「沒有進入某個狀態」，實際上絕大多數情況要翻成<strong>「還沒」</strong>：
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>Ⓐ 還沒開始做</h4>
+      <div class="vs-sub">最常見的用法，常配 まだ</div>
+      <ul>
+        <li><b>まだ<ruby>食<rt>た</rt></ruby>べていない</b><br>還沒吃</li>
+        <li><b>まだ<ruby>決<rt>き</rt></ruby>めていない</b><br>還沒決定</li>
+        <li><b>まだ<ruby>来<rt>き</rt></ruby>ていない</b><br>還沒來（人還沒到）</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>Ⓑ 狀態現在不成立</h4>
+      <div class="vs-sub">描述眼前的情況</div>
+      <ul>
+        <li><b><ruby>雨<rt>あめ</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>っていない</b><br>沒在下雨</li>
+        <li><b><ruby>窓<rt>まど</rt></ruby>は<ruby>開<rt>あ</rt></ruby>いていない</b><br>窗戶沒開著</li>
+        <li><b><ruby>誰<rt>だれ</rt></ruby>も<ruby>住<rt>す</rt></ruby>んでいない</b><br>沒有人住</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>「還沒吃」不能說成 食べなかった</strong><br>
+    <span class="compare">食べなかった</span>＝<strong>過去沒吃</strong>（那頓飯已經結束了，我沒吃）<br>
+    <span class="compare">まだ食べていない</span>＝<strong>到現在還沒吃</strong>（等一下可能會吃）<br>
+    中文都說「沒吃」，日文卻是<strong>兩件不同的事</strong>——這是中文母語者最常混的一組。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="wa">三、否定句為什麼常用「は」</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    肯定句講「下雨了」是 <span class="compare"><ruby>雨<rt>あめ</rt></ruby><b>が</b><ruby>降<rt>ふ</rt></ruby>っている</span>，
+    但否定的時候日本人多半會說 <span class="compare">雨<b>は</b>降っていない</span>，
+    <strong>助詞從 が 換成 は</strong>。這不是隨便換的。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:150px;">句子</th><th style="width:110px;">助詞</th><th>語感</th></tr>
+    <tr><td class="col-ja">雨<b>が</b>降っている</td><td>が</td><td>單純報告眼前發生的事：下雨了</td></tr>
+    <tr class="key"><td class="col-ja">雨<b>は</b>降っていない</td><td><strong>は</strong></td><td>把「雨」提出來當話題再否定它：<strong>雨的話，是沒在下的</strong></td></tr>
+    <tr><td class="col-ja">雨<b>が</b>降っていない</td><td>が</td><td>文法沒錯，但語感偏「（我預期會下的）那場雨沒下」</td></tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — は 是「先舉起來，再說它怎樣」</strong><br>
+    <strong>は 的工作是把某個東西提出來當話題</strong>，而否定天生就是在講
+    「這個東西<u>不</u>是這樣」——先把它舉起來再打叉，語感上很順。<br>
+    所以規律是：<strong>否定句 → 想都不用想，先用 は</strong>。<br>
+    順帶一提，這也解釋了為什麼「<ruby>私<rt>わたし</rt></ruby>は<ruby>肉<rt>にく</rt></ruby>を<ruby>食<rt>た</rt></ruby>べない」聽起來自然——
+    先舉出「我」，再說我不吃肉。
+  </div>
+
+  <div class="note">
+    📝 <strong>受詞的 を 在否定句也常換成 は</strong><br>
+    <span class="compare">お<ruby>酒<rt>さけ</rt></ruby><b>を</b>飲む</span>（喝酒）→
+    <span class="compare">お酒<b>は</b>飲まない</span>（酒我不喝）。<br>
+    換成 は 之後多了一層<strong>對比</strong>：酒不喝，但別的（例如茶）可能喝。
+    助詞 は 的完整說明看
+    <a href="2026-05-10-joshi-wa.html" style="color:var(--accent);">助詞入門：は・が・の・を・か</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="mada">四、まだ 和 もう</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這兩個副詞是 ていない 的固定搭檔，<strong>成對記最省力</strong>。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:96px;">副詞</th><th style="width:190px;">配什麼</th><th>意思</th></tr>
+    <tr class="key">
+      <td class="col-ja">まだ</td>
+      <td class="col-ja">〜て<b>いない</b></td>
+      <td><strong>還沒</strong>（等一下會做）</td>
+    </tr>
+    <tr>
+      <td class="col-ja">もう</td>
+      <td class="col-ja">〜<b>た</b></td>
+      <td><strong>已經</strong>做了</td>
+    </tr>
+    <tr>
+      <td class="col-ja">もう</td>
+      <td class="col-ja">〜<b>ない</b></td>
+      <td><strong>不再</strong>（もう飲まない ＝ 我不喝了）</td>
+    </tr>
+  </table>
+
+  <div class="tip">
+    💡 <strong>問句「もう〜た？」的兩種回答</strong><br>
+    問：もう<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べた？（已經吃午餐了嗎）<br>
+    ⭕ 吃了 → <strong>うん、もう食べた。</strong><br>
+    ⭕ 還沒 → <strong>ううん、まだ食べていない。</strong><br>
+    <strong>回答「還沒」時不要用 食べなかった</strong>，那會變成「（昨天那頓）我沒吃」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="reibun">五、例句</div>
+
+  <div class="section">
+    <div class="section-title">📖 進行形的否定</div>
+
+    <div class="word-item" data-text="今、雨は降っていない">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>っていない</div>
+        <div class="word-romaji">ima, ame wa futte inai</div>
+        <div class="word-meaning">現在沒在下雨</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="まだ昼ご飯を食べていない">
+      <div class="word-content">
+        <div class="word-ja">まだ<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べていない</div>
+        <div class="word-romaji">mada hirugohan o tabete inai</div>
+        <div class="word-meaning">午餐還沒吃</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="田中さんはまだ来ていない">
+      <div class="word-content">
+        <div class="word-ja"><ruby>田中<rt>たなか</rt></ruby>さんはまだ<ruby>来<rt>き</rt></ruby>ていない</div>
+        <div class="word-romaji">tanaka-san wa mada kite inai</div>
+        <div class="word-meaning">田中先生還沒來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 一般的否定</div>
+
+    <div class="word-item" data-text="お酒は飲まない">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>酒<rt>さけ</rt></ruby>は<ruby>飲<rt>の</rt></ruby>まない</div>
+        <div class="word-romaji">osake wa nomanai</div>
+        <div class="word-meaning">我不喝酒 — 受詞的 を 換成 は</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今日はあまり寒くない">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>はあまり<ruby>寒<rt>さむ</rt></ruby>くない</div>
+        <div class="word-romaji">kyou wa amari samuku nai</div>
+        <div class="word-meaning">今天不太冷 — い形容詞的否定；あまり ＝ 不太～</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼はもう学生じゃない">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>はもう<ruby>学生<rt>がくせい</rt></ruby>じゃない</div>
+        <div class="word-romaji">kare wa mou gakusei ja nai</div>
+        <div class="word-meaning">他已經不是學生了 — 名詞的否定</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="もう食べた">
+      <div class="word-content">
+        <div class="word-ja">もう<ruby>食<rt>た</rt></ruby>べた</div>
+        <div class="word-romaji">mou tabeta</div>
+        <div class="word-meaning">已經吃了 — 拿來跟「まだ食べていない」成對記</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 学生（がくせい）＝ 台語的 hak-sing</strong><br>
+    「学」台語念 <strong>hak</strong>，入聲 <strong>-k</strong> 到了日文會變成
+    <span class="compare">く</span> → <strong>がく</strong>。<br>
+    同一條線還有：<ruby>薬<rt>やく</rt></ruby>（io̍h／ia̍k）、<ruby>各<rt>かく</rt></ruby>（kok）、
+    <ruby>国<rt>こく</rt></ruby>（kok）——<strong>台語念起來收 -k 的字，日文音讀多半收 く</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="teinei">六、換成禮貌形的對照表</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    上面全部是常體。對老師、店員、不熟的人講話時要換成禮貌形，
+    <strong>換的只有句尾那一塊，前面完全不動</strong>。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:110px;">詞性</th><th style="width:190px;">常體</th><th>禮貌形</th></tr>
+    <tr class="key">
+      <td>動詞</td>
+      <td class="col-ja"><ruby>飲<rt>の</rt></ruby>ま<b>ない</b></td>
+      <td class="col-ja">飲み<b>ません</b></td>
+    </tr>
+    <tr class="key">
+      <td>進行形</td>
+      <td class="col-ja"><ruby>降<rt>ふ</rt></ruby>って<b>いない</b></td>
+      <td class="col-ja">降って<b>いません</b></td>
+    </tr>
+    <tr>
+      <td>い形容詞</td>
+      <td class="col-ja"><ruby>寒<rt>さむ</rt></ruby>く<b>ない</b></td>
+      <td class="col-ja">寒くない<b>です</b></td>
+    </tr>
+    <tr>
+      <td>名詞</td>
+      <td class="col-ja"><ruby>学生<rt>がくせい</rt></ruby>じゃ<b>ない</b></td>
+      <td class="col-ja">学生じゃない<b>です</b></td>
+    </tr>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 同一句話的兩種講法</div>
+
+    <div class="word-item" data-text="今、雨は降っていません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>っていません</div>
+        <div class="word-romaji">ima, ame wa futte imasen</div>
+        <div class="word-meaning">現在沒在下雨（禮貌形 — 只把 いない 換成 いません）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>い形容詞和名詞是「否定形整個不動，後面加 です」</strong><br>
+    寒くない → 寒くない<strong>です</strong>（<s>寒くありません</s> 也對，但比較硬）。<br>
+    <strong>只有動詞是真的換字尾</strong>（ない → ません），其他兩種都是原封不動加 です。
+    禮貌形的完整說明看
+    <a href="2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">マス形入門</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">七、常犯的錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>「不知道」不能用 ていない</strong><br>
+    <s>知っていない</s> ❌　→　<strong><ruby>知<rt>し</rt></ruby>らない</strong> ⭕<br>
+    「知道」是 知っている，但它的否定<strong>不對稱</strong>，直接用 知らない。
+    這組是固定的，直接背起來。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>い形容詞不要接 じゃない</strong><br>
+    <s>寒いじゃない</s> ❌　→　<strong>寒くない</strong> ⭕<br>
+    じゃない 只給<strong>名詞和な形容詞</strong>用。判斷方法：
+    這個字是不是「い」結尾的形容詞，是的話就走 く。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>いい 的否定是 よくない</strong><br>
+    <s>いくない</s> ❌　→　<strong>よくない</strong> ⭕<br>
+    「いい」變化時會先變回它的老形態 <span class="compare">よい</span>，
+    所以否定是 よくない、過去是 よかった。<strong>這個字整組都要特別記。</strong>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">八、速記表</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:100px;">詞性</th><th>肯定</th><th>否定</th><th>過去</th><th>否定的過去</th></tr>
+    <tr class="key">
+      <td>動詞</td>
+      <td class="col-ja"><ruby>飲<rt>の</rt></ruby>む</td>
+      <td class="col-ja">飲ま<b>ない</b></td>
+      <td class="col-ja">飲んだ</td>
+      <td class="col-ja">飲ま<b>なかった</b></td>
+    </tr>
+    <tr class="key">
+      <td>進行形</td>
+      <td class="col-ja"><ruby>降<rt>ふ</rt></ruby>っている</td>
+      <td class="col-ja">降って<b>いない</b></td>
+      <td class="col-ja">降っていた</td>
+      <td class="col-ja">降って<b>いなかった</b></td>
+    </tr>
+    <tr>
+      <td>い形容詞</td>
+      <td class="col-ja"><ruby>寒<rt>さむ</rt></ruby>い</td>
+      <td class="col-ja">寒く<b>ない</b></td>
+      <td class="col-ja">寒かった</td>
+      <td class="col-ja">寒く<b>なかった</b></td>
+    </tr>
+    <tr>
+      <td>名詞・な形容詞</td>
+      <td class="col-ja"><ruby>学生<rt>がくせい</rt></ruby>だ</td>
+      <td class="col-ja">学生じゃ<b>ない</b></td>
+      <td class="col-ja">学生だった</td>
+      <td class="col-ja">学生じゃ<b>なかった</b></td>
+    </tr>
+  </table>
+
+  <div class="tip">
+    💡 <strong>否定的過去全部是「なかった」</strong><br>
+    因為 ない 本身就是い結尾，變過去時走い形容詞那條路：<strong>ない → なかった</strong>。
+    所以第三欄與第四欄的關係，跟 寒い → 寒かった 完全一樣。
+    這部分在 <a href="2026-08-12-ta-kei.html" style="color:var(--accent);">過去式 た形</a> 有完整說明。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">課後複習小測驗 · Self-Quiz</div>
+
+  <ol style="color:var(--ink-soft);font-size:14px;line-height:2.2;padding-left:22px;">
+    <li>「現在沒在下雪」怎麼說？（<ruby>雪<rt>ゆき</rt></ruby>・<ruby>降<rt>ふ</rt></ruby>る，用常體）</li>
+    <li>「還沒吃早餐」和「昨天沒吃早餐」日文差在哪？兩句都寫出來。
+      （<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>）</li>
+    <li>為什麼是「<ruby>雨<rt>あめ</rt></ruby>は降っていない」而不是「雨が降っていない」？</li>
+    <li>下面哪句錯？　ａ. <ruby>元気<rt>げんき</rt></ruby>じゃない　ｂ. <ruby>寒<rt>さむ</rt></ruby>いじゃない　ｃ. <ruby>寒<rt>さむ</rt></ruby>くない</li>
+    <li>「今、雨は降っていない」換成禮貌形怎麼講？</li>
+  </ol>
+
+  <details style="margin-top:14px;background:rgba(255,255,255,.5);border:1px solid var(--line);padding:14px 18px;">
+    <summary style="cursor:pointer;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);">🔍 點擊查看解答</summary>
+    <ol style="color:var(--ink-soft);font-size:14px;line-height:2.1;padding-left:22px;margin-top:12px;">
+      <li><strong><ruby>今<rt>いま</rt></ruby>、<ruby>雪<rt>ゆき</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>っていない。</strong>（否定句用 は）</li>
+      <li>還沒吃 → <strong>まだ<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べていない。</strong>（到現在還沒，等一下可能吃）<br>
+        昨天沒吃 → <strong><ruby>昨日<rt>きのう</rt></ruby>、朝ご飯を食べなかった。</strong>（那頓已經過去了）</li>
+      <li>因為 <strong>は 把「雨」提出來當話題再否定</strong>，否定句用 は 是常態。
+        用 が 文法沒錯，但會變成「（我預期的）那場雨沒下」的語感。</li>
+      <li><strong>ｂ 錯。</strong>寒い 是い形容詞，否定要說 <strong>寒くない</strong>；
+        じゃない 只給名詞和な形容詞。</li>
+      <li><strong>今、雨は降っていません。</strong>只把句尾的 いない 換成 いません，前面不動。</li>
+    </ol>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-12-jisei-shinkoukei.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">過去・現在・現在進行 <span class="next-arrow">→</span></span>
+    <span class="next-sub">否定放回八個形裡看：ている／ていない／ていた／ていなかった</span>
+  </a>
+
+  <a href="2026-08-12-ta-kei.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">過去式 た形 <span class="next-arrow">→</span></span>
+    <span class="next-sub">否定的過去 なかった 從哪來，那篇有完整的た形規則</span>
+  </a>
+
+  <a href="2026-05-10-joshi-wa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">助詞入門：は・が・の・を・か <span class="next-arrow">→</span></span>
+    <span class="next-sub">為什麼否定句愛用 は，回去看 は 的基本工作</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

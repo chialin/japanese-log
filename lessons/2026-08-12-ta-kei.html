@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>過去式 た形 — 日文的過去只有一個記號</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;
+  --accent-deep:#28513a;}   /* 深綠 — Index 標題用 */
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 四格表 */
+.tense-grid{display:grid;grid-template-columns:88px 1fr 1fr;gap:8px;margin:18px 0 22px;}
+.tense-grid > div{padding:12px 14px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;}
+.tense-grid .tg-head{background:var(--accent-pale);font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);font-size:13px;text-align:center;display:flex;align-items:center;justify-content:center;}
+.tense-grid .tg-side{background:var(--accent-pale);font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);font-size:13px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.5;}
+.tg-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:700;color:var(--ink);line-height:1.4;}
+.tg-ja b{color:var(--accent);}
+.tg-rom{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);margin-top:2px;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;white-space:nowrap;color:var(--ink);}
+.joshi-table .col-ja b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+
+/* 拆解圖 */
+.split-box{display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:20px 18px 18px;margin:18px 0;text-align:center;}
+.split-tok{font-family:'Klee One','Shippori Mincho',serif;font-size:28px;font-weight:700;line-height:1.5;}
+.split-plus{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;color:var(--ink-mute);padding-top:6px;}
+.split-arrow{font-size:20px;line-height:1.3;}
+.split-label{font-size:13px;line-height:1.8;color:var(--ink-soft);}
+.split-label strong{font-family:'Shippori Mincho',serif;font-size:15px;}
+.split-col.sb-a{color:var(--ink-mute);}
+.split-col.sb-b{color:var(--accent);}
+.split-col.sb-a .split-tok{color:var(--ink);}
+@media(max-width:520px){.split-box{grid-template-columns:1fr;}.split-plus{display:none;}}
+@media(max-width:600px){.tense-grid{grid-template-columns:72px 1fr;}.tense-grid .tg-head:first-of-type{display:none;}}
+
+/* Index */
+.toc{margin:22px 0 30px;}
+.toc-h{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;margin-bottom:12px;
+  border-bottom:2px solid var(--accent-deep);}
+.toc-h .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;
+  letter-spacing:.26em;color:var(--accent-deep);text-transform:uppercase;}
+.toc-list{list-style:none;margin:0;padding:0;}
+.toc-list a{display:block;text-decoration:none;color:var(--ink);padding:7px 0;
+  font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;letter-spacing:.04em;
+  transition:color .15s,padding-left .15s;}
+.toc-list a:hover{color:var(--accent);padding-left:6px;}
+.toc-n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
+  color:var(--accent);margin-right:9px;vertical-align:super;letter-spacing:.06em;}
+.toc-s{font-family:'Klee One','Shippori Mincho',serif;font-size:12px;
+  color:var(--ink-mute);font-weight:400;margin-left:10px;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">過去式 <span class="accent">た形</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 12</div>
+  <p class="page-subtitle">日文的過去只有一個記號 — 動詞、形容詞、名詞都靠「た」</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <nav class="toc">
+    <div class="toc-h"><span class="en">Index</span></div>
+    <ul class="toc-list">
+      <li><a href="#ta"><span class="toc-n">01</span>過去只有一個記號「た」<span class="toc-s">た</span></a></li>
+      <li><a href="#doushi"><span class="toc-n">02</span>動詞的た形怎麼變<span class="toc-s">て形 → た形</span></a></li>
+      <li><a href="#hitei"><span class="toc-n">03</span>否定的過去 なかった<span class="toc-s">ない → なかった</span></a></li>
+      <li><a href="#keiyoushi"><span class="toc-n">04</span>形容詞和名詞的過去<span class="toc-s">かった / だった</span></a></li>
+      <li><a href="#reibun"><span class="toc-n">05</span>例句<span class="toc-s">六句</span></a></li>
+      <li><a href="#machigai"><span class="toc-n">06</span>常犯的錯<span class="toc-s">高いだった ✗</span></a></li>
+      <li><a href="#matome"><span class="toc-n">07</span>速記表<span class="toc-s">まとめ</span></a></li>
+      <li><a href="#quiz"><span class="toc-n">08</span>課後複習小測驗<span class="toc-s">Self-Quiz</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="note">
+    📝 <strong>本篇一律用常體（普通形）</strong><br>
+    整篇只用 <span class="compare">した・だった・かった</span> 這一套，不混入禮貌形。
+    禮貌形的過去（ました）看
+    <a href="2026-07-22-tabemashita.html" style="color:var(--accent);">7/22 的 食べました</a>。
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 日文的過去<strong>只有一個記號，就是「た」</strong>——動詞、形容詞、名詞全部通用。<br>
+    ② 動詞的た形<strong>不用另外背</strong>：て形的「て」換成「た」就好。<br>
+    ③ 否定的過去也走同一條路：ない → <strong>なかっ</strong> ＋ <strong>た</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ta">一、過去只有一個記號「た」</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日文不管要講哪一種詞的過去，句尾都會出現同一個字：<strong>た</strong>。
+    這點比中文單純——中文的「了」「過」「曾經」用法各不相同，日文就這一個。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:110px;">詞性</th><th style="width:170px;">非過去</th><th style="width:190px;">過去</th><th>意思</th></tr>
+    <tr class="key">
+      <td>動詞</td>
+      <td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td>
+      <td class="col-ja">食べ<b>た</b></td>
+      <td>吃了</td>
+    </tr>
+    <tr>
+      <td>動詞</td>
+      <td class="col-ja"><ruby>行<rt>い</rt></ruby>く</td>
+      <td class="col-ja">行っ<b>た</b></td>
+      <td>去了</td>
+    </tr>
+    <tr>
+      <td>い形容詞</td>
+      <td class="col-ja"><ruby>高<rt>たか</rt></ruby>い</td>
+      <td class="col-ja">高かっ<b>た</b></td>
+      <td>（那時）很貴</td>
+    </tr>
+    <tr>
+      <td>な形容詞</td>
+      <td class="col-ja"><ruby>元気<rt>げんき</rt></ruby>だ</td>
+      <td class="col-ja">元気だっ<b>た</b></td>
+      <td>（那時）很有精神</td>
+    </tr>
+    <tr>
+      <td>名詞</td>
+      <td class="col-ja"><ruby>学生<rt>がくせい</rt></ruby>だ</td>
+      <td class="col-ja">学生だっ<b>た</b></td>
+      <td>（那時）是學生</td>
+    </tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 過去記號只有一個「た」</strong><br>
+    食べ<span class="compare">た</span>、<ruby>行<rt>い</rt></ruby>っ<span class="compare">た</span>、
+    高かっ<span class="compare">た</span>、学生だっ<span class="compare">た</span>。<br>
+    <strong>看到 た 就想到「已經」</strong>——這條線一路通到底，不會再有第二個過去記號。<br>
+    每一格的差別只在<strong>「た」前面要墊什麼</strong>：
+    動詞墊て形、い形容詞墊 かっ、名詞和な形容詞墊 だっ。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="doushi">二、動詞的た形怎麼變</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這一節是最省力的一節：<strong>た形不用另外背</strong>。
+    只要會て形，把最後的 <span class="j-mark">て</span> 換成
+    <span class="j-mark">た</span> 就是た形，前面完全不動。
+  </p>
+
+  <div class="split-box">
+    <div class="split-col sb-a">
+      <div class="split-tok"><ruby>食<rt>た</rt></ruby>べ<u>て</u></div>
+      <div class="split-arrow">→</div>
+      <div class="split-label"><strong>て形</strong><br>你已經會的那個</div>
+    </div>
+    <div class="split-plus">＝</div>
+    <div class="split-col sb-b">
+      <div class="split-tok">食べ<u>た</u></div>
+      <div class="split-arrow">↑</div>
+      <div class="split-label"><strong>た形</strong><br>只換最後一個字</div>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <tr><th>辭書形</th><th>て形</th><th>た形</th><th>意思</th></tr>
+    <tr class="key">
+      <td class="col-ja">する</td><td class="col-ja">し<b>て</b></td><td class="col-ja">し<b>た</b></td><td>做了</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>来<rt>く</rt></ruby>る</td><td class="col-ja"><ruby>来<rt>き</rt></ruby><b>て</b></td>
+      <td class="col-ja"><ruby>来<rt>き</rt></ruby><b>た</b></td><td>來了</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td><td class="col-ja">食べ<b>て</b></td>
+      <td class="col-ja">食べ<b>た</b></td><td>吃了</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>行<rt>い</rt></ruby>く</td><td class="col-ja">行っ<b>て</b></td>
+      <td class="col-ja">行っ<b>た</b></td><td>去了</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>読<rt>よ</rt></ruby>む</td><td class="col-ja">読ん<b>で</b></td>
+      <td class="col-ja">読ん<b>だ</b></td><td>讀了</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>住<rt>す</rt></ruby>む</td><td class="col-ja">住ん<b>で</b></td>
+      <td class="col-ja">住ん<b>だ</b></td><td>住過</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>降<rt>ふ</rt></ruby>る</td><td class="col-ja">降っ<b>て</b></td>
+      <td class="col-ja">降っ<b>た</b></td><td>下（雨）了</td>
+    </tr>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>て形是「で」的，た形就是「だ」</strong><br>
+    <span class="compare">読ん<u>で</u> → 読ん<u>だ</u></span>、
+    <span class="compare">住ん<u>で</u> → 住ん<u>だ</u></span>。<br>
+    濁點<strong>跟著一起搬過去</strong>，不會突然變回清音。
+    記成「<strong>て換た、で換だ</strong>」就好。
+  </div>
+
+  <div class="note">
+    📝 <strong>所以要練的還是て形那一步</strong><br>
+    て形怎麼變是看動詞屬於哪一類，這部分在
+    <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">什麼是五段動詞</a> 和
+    <a href="2026-08-09-godan-vs-ichidan.html" style="color:var(--accent);">五段 vs 一段</a> 兩篇。
+    て形一旦會了，<strong>た形和ている都是順便的</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hitei">三、否定的過去 なかった</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「沒做」不是另外一個新形態，是<strong>把否定形的「ない」改成「なかった」</strong>——
+    最後掛的還是同一個 た。
+  </p>
+
+  <div class="split-box">
+    <div class="split-col sb-a">
+      <div class="split-tok"><ruby>食<rt>た</rt></ruby>べ<u>ない</u></div>
+      <div class="split-arrow">→</div>
+      <div class="split-label"><strong>否定</strong><br>不吃</div>
+    </div>
+    <div class="split-plus">＋た</div>
+    <div class="split-col sb-b">
+      <div class="split-tok">食べ<u>なかった</u></div>
+      <div class="split-arrow">↑</div>
+      <div class="split-label"><strong>否定的過去</strong><br>沒吃</div>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <tr><th>辭書形</th><th>否定</th><th>否定的過去</th><th>意思</th></tr>
+    <tr class="key">
+      <td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td><td class="col-ja">食べ<b>ない</b></td>
+      <td class="col-ja">食べ<b>なかった</b></td><td>沒吃</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>行<rt>い</rt></ruby>く</td><td class="col-ja">行か<b>ない</b></td>
+      <td class="col-ja">行か<b>なかった</b></td><td>沒去</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>飲<rt>の</rt></ruby>む</td><td class="col-ja">飲ま<b>ない</b></td>
+      <td class="col-ja">飲ま<b>なかった</b></td><td>沒喝</td>
+    </tr>
+    <tr>
+      <td class="col-ja">する</td><td class="col-ja">し<b>ない</b></td>
+      <td class="col-ja">し<b>なかった</b></td><td>沒做</td>
+    </tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 「ない」自己是個い形容詞</strong><br>
+    ない 的長相就是い結尾，所以它變過去的方式跟 高い 一模一樣：<br>
+    <span class="compare">高<u>い</u> → 高<u>かった</u></span>　／
+    <span class="compare">な<u>い</u> → な<u>かった</u></span><br>
+    <strong>認出這件事之後就不用另外背了</strong>，兩個是同一條規則。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="keiyoushi">四、形容詞和名詞的過去</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:110px;">詞性</th><th>非過去</th><th>過去</th><th>怎麼變</th></tr>
+    <tr class="key">
+      <td>い形容詞</td>
+      <td class="col-ja"><ruby>高<rt>たか</rt></ruby>い</td>
+      <td class="col-ja">高<b>かった</b></td>
+      <td>去掉 い，加 <strong>かった</strong></td>
+    </tr>
+    <tr>
+      <td>い形容詞<br>（否定的過去）</td>
+      <td class="col-ja">高くない</td>
+      <td class="col-ja">高く<b>なかった</b></td>
+      <td>ない 也是い結尾，一樣走 かった</td>
+    </tr>
+    <tr>
+      <td>な形容詞</td>
+      <td class="col-ja"><ruby>元気<rt>げんき</rt></ruby>だ</td>
+      <td class="col-ja">元気<b>だった</b></td>
+      <td>だ 改成 <strong>だった</strong></td>
+    </tr>
+    <tr>
+      <td>名詞</td>
+      <td class="col-ja"><ruby>学生<rt>がくせい</rt></ruby>だ</td>
+      <td class="col-ja">学生<b>だった</b></td>
+      <td>跟な形容詞同一套</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>分界線在「い形容詞」自己會變，其他靠後面的だ</strong><br>
+    <strong>い形容詞</strong>是自己動：高い → 高かった。<br>
+    <strong>名詞和な形容詞</strong>本身不動，動的是後面那個 だ：学生だ → 学生だった。<br>
+    所以只要先判斷「這個字是不是い結尾的形容詞」，就知道該用哪一套。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="reibun">五、例句</div>
+
+  <div class="section">
+    <div class="section-title">📖 動詞</div>
+
+    <div class="word-item" data-text="昨日、寿司を食べた">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>、<ruby>寿司<rt>すし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べた</div>
+        <div class="word-romaji">kinou, sushi o tabeta</div>
+        <div class="word-meaning">昨天吃了壽司</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昨日、何も食べなかった">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>、<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べなかった</div>
+        <div class="word-romaji">kinou, nani mo tabenakatta</div>
+        <div class="word-meaning">昨天什麼都沒吃</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="先週、京都へ行った">
+      <div class="word-content">
+        <div class="word-ja"><ruby>先週<rt>せんしゅう</rt></ruby>、<ruby>京都<rt>きょうと</rt></ruby>へ<ruby>行<rt>い</rt></ruby>った</div>
+        <div class="word-romaji">senshuu, kyouto e itta</div>
+        <div class="word-meaning">上週去了京都</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今朝、コーヒーを飲まなかった">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今朝<rt>けさ</rt></ruby>、コーヒーを<ruby>飲<rt>の</rt></ruby>まなかった</div>
+        <div class="word-romaji">kesa, koohii o nomanakatta</div>
+        <div class="word-meaning">今天早上沒喝咖啡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 形容詞・名詞</div>
+
+    <div class="word-item" data-text="映画は面白かった">
+      <div class="word-content">
+        <div class="word-ja"><ruby>映画<rt>えいが</rt></ruby>は<ruby>面白<rt>おもしろ</rt></ruby>かった</div>
+        <div class="word-romaji">eiga wa omoshirokatta</div>
+        <div class="word-meaning">電影很好看 — い形容詞的過去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そのラーメンは辛くなかった">
+      <div class="word-content">
+        <div class="word-ja">そのラーメンは<ruby>辛<rt>から</rt></ruby>くなかった</div>
+        <div class="word-romaji">sono raamen wa karaku nakatta</div>
+        <div class="word-meaning">那碗拉麵不會辣 — い形容詞否定的過去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="去年まで学生だった">
+      <div class="word-content">
+        <div class="word-ja"><ruby>去年<rt>きょねん</rt></ruby>まで<ruby>学生<rt>がくせい</rt></ruby>だった</div>
+        <div class="word-romaji">kyonen made gakusei datta</div>
+        <div class="word-meaning">到去年為止都還是學生 — 名詞的過去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">六、常犯的錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>い形容詞不能用 だった</strong><br>
+    <s>高いだった</s> ❌　→　<strong>高かった</strong> ⭕<br>
+    い形容詞自己就會變過去，不需要再借後面的 だ。
+    會寫錯通常是因為套用了名詞那一套（学生だった）。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>否定的過去不是「た形 ＋ ない」</strong><br>
+    <s>食べたない</s> ❌　→　<strong>食べなかった</strong> ⭕<br>
+    順序是<strong>先否定，再變過去</strong>：食べる → 食べない → 食べなかった。
+    <strong>た 永遠在最後面</strong>，不會有東西掛在它後面。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>「た」不是每次都在講過去</strong><br>
+    找東西找到的那一刻會說「あ、<ruby>有<rt>あ</rt></ruby>った！」，這裡講的不是過去，是<strong>發現</strong>。<br>
+    <ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>来<rt>き</rt></ruby>た！＝車來了（就在眼前）也是同一種用法。<br>
+    現階段先照「た＝過去」去用沒問題，遇到這種句子知道它不是在講昨天就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、速記表</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:110px;">詞性</th><th>非過去</th><th>過去</th><th>非過去否定</th><th>過去否定</th></tr>
+    <tr class="key">
+      <td>動詞</td>
+      <td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td>
+      <td class="col-ja">食べ<b>た</b></td>
+      <td class="col-ja">食べない</td>
+      <td class="col-ja">食べ<b>なかった</b></td>
+    </tr>
+    <tr>
+      <td>い形容詞</td>
+      <td class="col-ja"><ruby>高<rt>たか</rt></ruby>い</td>
+      <td class="col-ja">高<b>かった</b></td>
+      <td class="col-ja">高くない</td>
+      <td class="col-ja">高く<b>なかった</b></td>
+    </tr>
+    <tr>
+      <td>な形容詞</td>
+      <td class="col-ja"><ruby>元気<rt>げんき</rt></ruby>だ</td>
+      <td class="col-ja">元気<b>だった</b></td>
+      <td class="col-ja">元気じゃない</td>
+      <td class="col-ja">元気じゃ<b>なかった</b></td>
+    </tr>
+    <tr>
+      <td>名詞</td>
+      <td class="col-ja"><ruby>学生<rt>がくせい</rt></ruby>だ</td>
+      <td class="col-ja">学生<b>だった</b></td>
+      <td class="col-ja">学生じゃない</td>
+      <td class="col-ja">学生じゃ<b>なかった</b></td>
+    </tr>
+  </table>
+
+  <div class="tip">
+    💡 <strong>整張表只有一個字在動</strong><br>
+    四列的過去欄位<strong>全部以「た」結尾</strong>，否定欄位全部以「ない」結尾，
+    否定的過去就是這兩個疊起來變成「<strong>なかった</strong>」。
+    先記住這個規律，個別的形自然就記得住。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">課後複習小測驗 · Self-Quiz</div>
+
+  <ol style="color:var(--ink-soft);font-size:14px;line-height:2.2;padding-left:22px;">
+    <li>「上週讀了那本書」怎麼說？（<ruby>先週<rt>せんしゅう</rt></ruby>・その<ruby>本<rt>ほん</rt></ruby>・<ruby>読<rt>よ</rt></ruby>む）</li>
+    <li>「読む」的た形是 読んた 還是 読んだ？為什麼？</li>
+    <li>「這家店去年很貴」怎麼說？（<ruby>店<rt>みせ</rt></ruby>・<ruby>去年<rt>きょねん</rt></ruby>・<ruby>高<rt>たか</rt></ruby>い）</li>
+    <li>把「<ruby>行<rt>い</rt></ruby>く」的四個形寫出來：非過去、過去、否定、否定的過去。</li>
+    <li>下面哪句錯？　ａ. <ruby>元気<rt>げんき</rt></ruby>だった　ｂ. <ruby>寒<rt>さむ</rt></ruby>いだった　ｃ. <ruby>寒<rt>さむ</rt></ruby>かった</li>
+  </ol>
+
+  <details style="margin-top:14px;background:rgba(255,255,255,.5);border:1px solid var(--line);padding:14px 18px;">
+    <summary style="cursor:pointer;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);">🔍 點擊查看解答</summary>
+    <ol style="color:var(--ink-soft);font-size:14px;line-height:2.1;padding-left:22px;margin-top:12px;">
+      <li><strong><ruby>先週<rt>せんしゅう</rt></ruby>、その<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだ。</strong></li>
+      <li><strong>読んだ。</strong>て形是「読ん<u>で</u>」，帶濁點，所以た形也跟著濁化成「<u>だ</u>」。</li>
+      <li><strong>この<ruby>店<rt>みせ</rt></ruby>は<ruby>去年<rt>きょねん</rt></ruby><ruby>高<rt>たか</rt></ruby>かった。</strong>い形容詞是 い→かった，不是「高いだった」。</li>
+      <li><strong><ruby>行<rt>い</rt></ruby>く・行った・行かない・行かなかった。</strong></li>
+      <li><strong>ｂ 錯。</strong>寒い 是い形容詞，過去要說 <strong>寒かった</strong>；だった 只給名詞和な形容詞用。</li>
+    </ol>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-12-jisei-shinkoukei.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">過去・現在・現在進行 <span class="next-arrow">→</span></span>
+    <span class="next-sub">た形放回整個時制系統裡看：非過去、過去、ている 一共八個形</span>
+  </a>
+
+  <a href="2026-08-09-godan-doushi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">什麼是五段動詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">て形怎麼變要先看動詞分類，這篇是底層</span>
+  </a>
+
+  <a href="2026-07-22-tabemashita.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">口語練習 食べました <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一個過去換成禮貌形「ました」時長什麼樣</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

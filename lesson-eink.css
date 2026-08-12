@@ -1,0 +1,142 @@
+/* lesson-eink.css — 課程頁 → Supernote / 灰階 e-ink PDF 專用樣式
+ * 給 scripts/build-lesson-pdf.mjs 用（WeasyPrint），不影響瀏覽器版。
+ *
+ * 為什麼這樣調：
+ *  - Supernote A5X 螢幕 1404×1872 @226PPI ≈ 157.5×210mm（3:4），用這個尺寸填滿不留黑邊。
+ *  - 灰階螢幕上彩色會變成淺灰看不清 → 直接把頁面的 :root 色票整組換成黑白，
+ *    區塊靠「邊框粗細／虛實」分辨，不靠顏色、不用底色網點。
+ *  - WeasyPrint 不支援 ruby 定位（<rt> 會直接接在漢字後面變成「食たべる」），
+ *    所以把 rt 用括號包起來 → 食（た）べる，紙上讀得懂。
+ *  - 基礎字級 16px（＝ 12pt），是這份 PDF 指定的大小。
+ */
+
+/* ── 頁面 ── */
+@page{
+  size: 157.5mm 210mm;
+  margin: 12mm 10mm 14mm;
+  @bottom-center{
+    content: counter(page);
+    font-family: "Baskerville", serif; font-style: italic;
+    font-size: 10pt; color: #333;
+  }
+}
+
+/* ── 色票整組改成灰階（覆蓋頁面自己的 :root） ── */
+:root{
+  --paper:#fff !important; --paper-deep:#fff !important;
+  --ink:#000 !important; --ink-soft:#111 !important; --ink-mute:#444 !important;
+  --accent:#000 !important; --accent-soft:#8a8a8a !important; --accent-pale:#f2f2f2 !important;
+  --line:#999 !important; --bg-spot-1:#fff !important; --bg-spot-2:#fff !important;
+  --accent-deep:#000 !important;
+}
+
+html, body{
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color:#000 !important;
+  background:#fff !important;
+  font-family:"Hiragino Mincho ProN","Songti TC","Noto Serif TC",serif !important;
+}
+body::before, body::after{ display:none !important; }   /* 背景光暈 */
+
+.wrap{ max-width:none !important; margin:0 !important; padding:0 !important; }
+
+/* ── 螢幕專用的東西一律拿掉 ── */
+site-header, site-footer, .speed-control, .play-btn, .back-link,
+.kanji-badge, .kanji-footer, .tree-hint{ display:none !important; }
+
+/* ── 標題 ── */
+.page-title{ font-size:28px !important; color:#000 !important; margin-bottom:2mm !important; }
+.page-meta{ font-size:12px !important; color:#444 !important; }
+.page-subtitle{ font-size:15px !important; color:#222 !important; }
+.divider{
+  font-size:19px !important; color:#000 !important;
+  border-bottom:1.5px solid #000 !important;
+  margin:9mm 0 4mm !important; break-after:avoid;
+}
+.section-title{ font-size:15px !important; color:#000 !important; border-bottom-color:#999 !important; }
+
+/* ── 目錄 ── */
+.toc-h{ border-bottom:1.5px solid #000 !important; }
+.toc-list a{ font-size:15px !important; color:#000 !important; padding:3px 0 !important; }
+.toc-n, .toc-s{ color:#444 !important; }
+
+/* ── ruby：WeasyPrint 沒有 ruby 定位，改成 漢字（讀音） ── */
+ruby{ margin-inline:0 !important; line-height:1.8 !important; }
+rt{ font-size:12px !important; color:#333 !important; letter-spacing:0 !important; }
+rt::before{ content:"（"; }
+rt::after{ content:"）"; }
+
+/* ── 例句條目 ── */
+.word-item{ padding:2.4mm 0 !important; border-bottom:1px solid #bbb !important; break-inside:avoid; }
+.word-ja{ font-size:19px !important; color:#000 !important; line-height:1.6 !important; }
+.word-romaji{ font-family:"Baskerville",serif !important; font-style:italic;
+  font-size:14px !important; color:#222 !important; }
+.word-meaning{ font-size:14.5px !important; color:#111 !important; }
+.section{ background:none !important; border:1px solid #999 !important;
+  padding:3mm 4mm !important; break-inside:avoid; }
+
+/* ── 提示框：不用底色，靠邊框粗細與虛實分辨 ── */
+.tip, .note, .alert, .warning, .mnemonic{
+  background:#fff !important; color:#000 !important;
+  border:0 !important; border-left:3px solid #555 !important;
+  border-radius:0 !important; box-shadow:none !important;
+  padding:2.5mm 4mm !important; margin:4mm 0 !important;
+  font-size:14.5px !important; line-height:1.8 !important;
+  break-inside:avoid;
+}
+.alert, .warning{ border-left:5px solid #000 !important; }
+.mnemonic{ border:1.5px dashed #000 !important; border-left:1.5px dashed #000 !important; }
+.tip strong, .note strong, .alert strong, .warning strong, .mnemonic strong{ color:#000 !important; }
+.mnemonic *{ color:#000 !important; }
+.compare, .j-mark{ background:#f0f0f0 !important; color:#000 !important; }
+a{ color:#000 !important; text-decoration:none !important; }
+
+/* ── 表格 ── */
+.joshi-table{ font-size:13.5px !important; background:none !important; }
+.joshi-table th{ background:#eee !important; color:#000 !important; }
+.joshi-table th, .joshi-table td{ border:1px solid #888 !important; padding:1.6mm 2mm !important; }
+.joshi-table .col-ja{ font-size:15px !important; color:#000 !important; }
+.joshi-table tr.key td{ background:#f4f4f4 !important; }
+.joshi-table tr{ break-inside:avoid; }
+
+/* ── 四格時制表 / 對照欄 / 拆解圖 ── */
+.tense-grid{ grid-template-columns:28mm 1fr 1fr !important; break-inside:avoid; }
+.tense-grid > div{ background:none !important; border:1px solid #888 !important; padding:2mm 2.5mm !important; }
+.tense-grid .tg-side{ font-size:12px !important; line-height:1.5 !important; }
+.tense-grid .tg-head, .tense-grid .tg-side{ background:#eee !important; color:#000 !important; }
+.tg-ja{ font-size:18px !important; color:#000 !important; }
+.tg-rom{ font-size:12.5px !important; color:#333 !important; }
+.split-box{ background:none !important; border:1px solid #888 !important; break-inside:avoid; }
+.split-tok{ font-size:22px !important; color:#000 !important; }
+.split-label{ font-size:12.5px !important; color:#111 !important; }
+.vs-col{ background:none !important; border:1px solid #888 !important; break-inside:avoid; }
+.vs-col h4{ color:#000 !important; }
+.vs-col li b{ color:#000 !important; }
+
+/* ── 樹狀圖：紙上沒有捲軸，縮小並允許換行 ── */
+.tree{ overflow:visible !important; break-inside:avoid; }
+.tree-inner{ min-width:0 !important; }
+.tree .tn{ white-space:normal !important; font-size:9px !important;
+  padding:1px 2px !important; border-color:#888 !important; background:none !important; }
+.tree .tn-root{ font-size:15px !important; }
+.tree .tn-mid{ font-size:10px !important; background:#f0f0f0 !important; }
+.tree li{ padding-left:2px !important; padding-right:2px !important; }
+.tree .tn-leaf{ font-size:8.5px !important; max-width:15mm; line-height:1.4 !important; }
+.tree .tn-num{ font-size:8px !important; color:#444 !important; }
+.tree .tn-leaf rt{ display:none !important; }
+
+/* ── 測驗解答：紙本直接攤開 ── */
+details{ background:none !important; border:1px solid #888 !important; break-inside:avoid; }
+details > summary{ color:#000 !important; list-style:none; }
+details[open] > summary::marker{ content:""; }
+
+/* ── 跨頁連結卡：紙本上沒有用，但保留當「延伸閱讀」 ── */
+.next-link{ background:none !important; border:1px solid #888 !important;
+  border-left:3px solid #000 !important; padding:2.5mm 4mm !important; break-inside:avoid; }
+.next-arrow{ display:none !important; }
+.next-kicker, .next-sub{ color:#333 !important; }
+.next-title{ color:#000 !important; }
+
+/* ── 每一課從新的一頁開始 ── */
+.pdf-doc + .pdf-doc{ break-before:page; }

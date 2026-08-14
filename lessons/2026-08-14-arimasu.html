@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xがあります — 某個地方有某個東西</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+
+/* 句型拆解圖 */
+.split-box{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:20px 18px 18px;margin:18px 0;text-align:center;}
+.split-tok{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;font-weight:700;line-height:1.5;}
+.split-plus{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink-mute);padding-top:8px;}
+.split-label{font-size:13px;line-height:1.7;color:var(--ink-soft);}
+.split-label strong{font-family:'Shippori Mincho',serif;font-size:14px;color:var(--accent);}
+@media(max-width:560px){.split-box{grid-template-columns:1fr;}.split-plus{display:none;}}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:1.9;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">Xが<span class="accent">あります</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 14</div>
+  <p class="page-subtitle">「某個地方，有某個東西」— 場所<span class="j-mark">に</span> ＋ 東西<span class="j-mark">が</span> ＋ あります</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    一個句型就講完：<b>場所に　物が　あります</b>。兩個助詞的分工要記牢——<span class="j-mark">に</span> 標「在哪裡」，<span class="j-mark">が</span> 標「有什麼」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、句型的骨架</div>
+
+  <div class="split-box">
+    <div>
+      <div class="split-tok"><ruby>部屋<rt>へや</rt></ruby>に</div>
+      <div class="split-label"><strong>場所</strong><br>在哪裡（に）</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div>
+      <div class="split-tok"><ruby>時計<rt>とけい</rt></ruby>が</div>
+      <div class="split-label"><strong>東西</strong><br>有什麼（が）</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div>
+      <div class="split-tok">あります</div>
+      <div class="split-label"><strong>存在</strong><br>「有／在」</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    中文說「房間裡有時鐘」，順序是「地方 → 有 → 東西」；日文把動詞丟到最後，變成「地方 → 東西 → 有」。
+    只要把 <span class="compare">〜に</span> 和 <span class="compare">〜が</span> 各自貼對，剩下的照抄 <span class="compare">あります</span> 就好。
+  </p>
+
+  <div class="note">
+    📝 <strong>あります 是ます形</strong><br>
+    <ruby>辞書形<rt>じしょけい</rt></ruby>是 <span class="compare">ある</span>，禮貌形就是 <span class="compare">あります</span>。
+    ます形的規則見 <a href="2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">8/11 マス形入門</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、課本的六個例句</div>
+
+  <div class="section">
+    <div class="section-title">📖 場所に　物が　あります</div>
+
+    <div class="word-item" data-text="部屋に時計があります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>に<ruby>時計<rt>とけい</rt></ruby>があります。</div>
+        <div class="word-romaji">heya ni tokei ga arimasu</div>
+        <div class="word-meaning">房間裡有時鐘。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="部屋に冷蔵庫があります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>に<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>があります。</div>
+        <div class="word-romaji">heya ni reizouko ga arimasu</div>
+        <div class="word-meaning">房間裡有冰箱。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="学校に食堂があります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>学校<rt>がっこう</rt></ruby>に<ruby>食堂<rt>しょくどう</rt></ruby>があります。</div>
+        <div class="word-romaji">gakkou ni shokudou ga arimasu</div>
+        <div class="word-meaning">學校裡有餐廳（食堂）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="公園にベンチがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>公園<rt>こうえん</rt></ruby>にベンチがあります。</div>
+        <div class="word-romaji">kouen ni benchi ga arimasu</div>
+        <div class="word-meaning">公園裡有長椅。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="家に庭があります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>家<rt>いえ</rt></ruby>に<ruby>庭<rt>にわ</rt></ruby>があります。</div>
+        <div class="word-romaji">ie ni niwa ga arimasu</div>
+        <div class="word-meaning">家裡有院子。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="冷蔵庫に牛乳があります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>に<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>があります。</div>
+        <div class="word-romaji">reizouko ni gyuunyuu ga arimasu</div>
+        <div class="word-meaning">冰箱裡有牛奶。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    注意最後一句：<span class="compare">冷蔵庫</span> 在第二句是「東西」，在第六句變成「場所」。
+    日文不管那個詞本身是不是地點，只看它後面貼哪個助詞——貼 <span class="j-mark">に</span> 就是場所。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、あります 和 います 的分界</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>あります</h4>
+      <div class="vs-sub">不會自己動的東西</div>
+      <ul>
+        <li>時計・冷蔵庫・ベンチ</li>
+        <li>庭・食堂・公園</li>
+        <li>植物（花・木）也算</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>います</h4>
+      <div class="vs-sub">會自己動的（人・動物）</div>
+      <ul>
+        <li><ruby>公園<rt>こうえん</rt></ruby>に<ruby>犬<rt>いぬ</rt></ruby>がいます。</li>
+        <li><ruby>食堂<rt>しょくどう</rt></ruby>に<ruby>先生<rt>せんせい</rt></ruby>がいます。</li>
+        <li>助詞完全一樣，只換動詞</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>車子怎麼辦？</strong><br>
+    車、電車 這種「自己不會動、要人開」的東西用 <span class="compare">あります</span>。
+    判斷標準是「有沒有自己的意志」，不是「會不會移動」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、に 和 で 不要混</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:26%">助詞</th><th>負責什麼</th><th>例</th></tr>
+    <tr class="key"><td><b>に</b></td><td>東西「存在」的位置<br>（配 あります／います）</td><td><ruby>公園<rt>こうえん</rt></ruby><b>に</b>ベンチがあります。<br><span style="color:var(--ink-mute);font-size:13px;">公園有長椅</span></td></tr>
+    <tr><td><b>で</b></td><td>動作「發生」的場所<br>（配一般動詞）</td><td><ruby>公園<rt>こうえん</rt></ruby><b>で</b><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。<br><span style="color:var(--ink-mute);font-size:13px;">在公園看書</span></td></tr>
+  </table>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    一句話分辨：句尾是 <span class="compare">あります／います</span> 就用 <span class="j-mark">に</span>，句尾是在做某件事就用 <span class="j-mark">で</span>。
+    其他助詞的分工見 <a href="2026-05-10-joshi-2.html" style="color:var(--accent);">助詞第二課</a>、<a href="2026-08-11-joshi-o.html" style="color:var(--accent);">助詞 を</a>。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、否定・過去怎麼變</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:24%">形</th><th style="width:30%">說法</th><th>例句</th></tr>
+    <tr class="key"><td>現在・肯定</td><td><b>あります</b></td><td><ruby>庭<rt>にわ</rt></ruby>があります。</td></tr>
+    <tr><td>現在・否定</td><td><b>ありません</b></td><td><ruby>庭<rt>にわ</rt></ruby><b>は</b>ありません。<br><span style="color:var(--ink-mute);font-size:13px;">沒有院子</span></td></tr>
+    <tr><td>過去・肯定</td><td><b>ありました</b></td><td><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>がありました。</td></tr>
+    <tr><td>過去・否定</td><td><b>ありませんでした</b></td><td><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby><b>は</b>ありませんでした。</td></tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>否定句要把 が 換成 は</strong><br>
+    這條規則在 <a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12 否定的說法</a> 講過：否定的重點是「這一項沒有」，
+    用 <span class="j-mark">は</span> 把它拉出來當對比。常體的 <span class="compare">ない</span>（ある 的否定）也是同一套。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>ある 的否定是 ない，不是「あらない」</strong><br>
+    ある 是五段動詞，但否定形不規則——直接變 <span class="compare">ない</span>。
+    禮貌形 <span class="compare">ありません</span> 就正常。五段動詞的規則見 <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9 五段動詞</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 五題</div>
+
+    <p style="font-size:15px;line-height:2;color:var(--ink-soft);">
+      1. 把「公園裡有長椅」寫成日文。<br>
+      2. 把「冰箱裡有牛奶」寫成日文。<br>
+      3. 「学校（　）食堂（　）あります。」括號填哪兩個助詞？<br>
+      4. 「公園裡有狗」要用 あります 還是 います？寫出整句。<br>
+      5. 把「房間裡沒有冰箱」寫成日文（現在・否定）。
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);margin-top:10px;">
+        1. <ruby>公園<rt>こうえん</rt></ruby>にベンチがあります。（kouen ni benchi ga arimasu）<br>
+        2. <ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>に<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>があります。（reizouko ni gyuunyuu ga arimasu）<br>
+        3. <b>に</b> / <b>が</b> —— <ruby>学校<rt>がっこう</rt></ruby>に<ruby>食堂<rt>しょくどう</rt></ruby>があります。<br>
+        4. 狗會自己動，用 <b>います</b>：<ruby>公園<rt>こうえん</rt></ruby>に<ruby>犬<rt>いぬ</rt></ruby>がいます。（kouen ni inu ga imasu）<br>
+        5. <ruby>部屋<rt>へや</rt></ruby>に<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby><b>は</b>ありません。（heya ni reizouko wa arimasen）否定句把 が 換成 は。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-14-basho-mono-tango.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">場所と物の単語 ＋ 雨が降る <span class="next-arrow">→</span></span>
+    <span class="next-sub">部屋・時計・冷蔵庫・食堂・公園・ベンチ・庭・牛乳 八個單字，還有「下雨」的說法</span>
+  </a>
+
+  <a href="2026-08-12-hitei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">否定的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">ありません 為什麼把 が 換成 は，那篇有完整說明</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

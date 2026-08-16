@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xがいます — 會動的東西用 います</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+
+/* 句型拆解圖 */
+.split-box{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:20px 18px 18px;margin:18px 0;text-align:center;}
+.split-tok{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;font-weight:700;line-height:1.5;}
+.split-plus{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink-mute);padding-top:8px;}
+.split-label{font-size:13px;line-height:1.7;color:var(--ink-soft);}
+.split-label strong{font-family:'Shippori Mincho',serif;font-size:14px;color:var(--accent);}
+@media(max-width:560px){.split-box{grid-template-columns:1fr;}.split-plus{display:none;}}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:1.9;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">Xが<span class="accent">います</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 16</div>
+  <p class="page-subtitle">存在句的另一半 — 主語會自己動的時候，句尾換成 <span class="j-mark">います</span></p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    骨架跟 <a href="2026-08-14-arimasu.html" style="color:var(--accent);">Xがあります</a> 一模一樣：<b>場所に ＋ X が ＋ 句尾</b>。
+    唯一要判斷的是 <b>X 會不會自己動</b>——人和動物用 <span class="j-mark">います</span>，其他用 <span class="j-mark">あります</span>。
+    助詞 <span class="j-mark">に</span>、<span class="j-mark">が</span> 完全不變。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、句型的骨架</div>
+
+  <div class="split-box">
+    <div>
+      <div class="split-tok"><ruby>公園<rt>こうえん</rt></ruby>に</div>
+      <div class="split-label"><strong>場所</strong><br>在哪裡（に）</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div>
+      <div class="split-tok"><ruby>子<rt>こ</rt></ruby>どもが</div>
+      <div class="split-label"><strong>人・動物</strong><br>有誰（が）</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div>
+      <div class="split-tok">います</div>
+      <div class="split-label"><strong>存在</strong><br>「有／在」</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 課本的兩個例句</div>
+
+    <div class="word-item" data-text="公園に子どもがいます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>に<ruby>子<rt>こ</rt></ruby>どもがいます。</div>
+        <div class="word-romaji">kouen ni kodomo ga imasu</div>
+        <div class="word-meaning">公園裡有小孩。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="道路に犬がいます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>道<rt>どう</rt>路<rt>ろ</rt></ruby>に<ruby>犬<rt>いぬ</rt></ruby>がいます。</div>
+        <div class="word-romaji">douro ni inu ga imasu</div>
+        <div class="word-meaning">馬路上有狗。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    兩句都是 <span class="compare">〜に〜がいます</span>。<ruby>公園<rt>こうえん</rt></ruby> 在
+    <a href="2026-08-14-basho-mono-tango.html" style="color:var(--accent);">8/14 的場所單字</a> 出現過，
+    句型骨架則來自 <a href="2026-08-14-arimasu.html" style="color:var(--accent);">8/14 的 Xがあります</a>——本篇只是把句尾換掉。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、怎麼判斷用哪一個</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>います</h4>
+      <div class="vs-sub">會自己動的：人、動物</div>
+      <ul>
+        <li><ruby>公園<rt>こうえん</rt></ruby>に<ruby>子<rt>こ</rt></ruby>どもがいます</li>
+        <li><ruby>道路<rt>どうろ</rt></ruby>に<ruby>犬<rt>いぬ</rt></ruby>がいます</li>
+        <li><ruby>入口<rt>いりぐち</rt></ruby>に<ruby>警備員<rt>けいびいん</rt></ruby>がいます</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>あります</h4>
+      <div class="vs-sub">不會自己動的：物、建築、植物</div>
+      <ul>
+        <li><ruby>部屋<rt>へや</rt></ruby>にソファがあります</li>
+        <li><ruby>公園<rt>こうえん</rt></ruby>にベンチがあります</li>
+        <li><ruby>庭<rt>にわ</rt></ruby>に<ruby>木<rt>き</rt></ruby>があります</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    分界不是「活的／死的」，是<b>會不會自己移動</b>。所以樹和花雖然是活的，日文照樣用 <span class="j-mark">あります</span>。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:34%">主語</th><th style="width:22%">用哪個</th><th>為什麼</th></tr>
+    <tr class="key"><td><ruby>子<rt>こ</rt></ruby>ども・<ruby>警備員<rt>けいびいん</rt></ruby>・<ruby>先生<rt>せんせい</rt></ruby></td><td><b>います</b></td><td>人</td></tr>
+    <tr><td><ruby>犬<rt>いぬ</rt></ruby>・<ruby>猫<rt>ねこ</rt></ruby>・<ruby>鳥<rt>とり</rt></ruby></td><td><b>います</b></td><td>動物，會自己跑</td></tr>
+    <tr><td><ruby>木<rt>き</rt></ruby>・<ruby>花<rt>はな</rt></ruby></td><td><b>あります</b></td><td>活的，但不會移動</td></tr>
+    <tr><td>ベンチ・<ruby>時計<rt>とけい</rt></ruby>・<ruby>箱<rt>はこ</rt></ruby></td><td><b>あります</b></td><td>物品</td></tr>
+    <tr><td><ruby>車<rt>くるま</rt></ruby>・バス</td><td><b>あります</b></td><td>會跑，但要有人開；車本身不算生物</td></tr>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>車子是 あります</strong><br>
+    「會動」指的是<b>靠自己的意志動</b>。汽車、電車、腳踏車都用 <span class="compare">あります</span>。
+    只有把裡面的人當主語時才變 います：<ruby>車<rt>くるま</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>人<rt>ひと</rt></ruby>がいます。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、否定就跟著換</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:26%"></th><th style="width:37%">物（不會動）</th><th>人・動物</th></tr>
+    <tr class="key"><td>肯定</td><td>あります</td><td><b>います</b></td></tr>
+    <tr><td>否定</td><td>ありません</td><td><b>いません</b></td></tr>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 一問一答</div>
+
+    <div class="word-item" data-text="部屋に子どもがいますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>に<ruby>子<rt>こ</rt></ruby>どもがいますか。</div>
+        <div class="word-romaji">heya ni kodomo ga imasu ka</div>
+        <div class="word-meaning">房間裡有小孩嗎？ — 第一次提出，用 が</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいえ、子どもはいません。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>子<rt>こ</rt></ruby>どもはいません。</div>
+        <div class="word-romaji">iie, kodomo wa imasen</div>
+        <div class="word-meaning">不，沒有小孩。 — 對方已經提過了，換 は</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    が 換 は 的時機跟 <a href="2026-08-15-x-ga-arimasen.html" style="color:var(--accent);">8/15 的 Xがありません</a> 完全同一條規則：
+    <b>問句用 が，回答的否定用 は</b>。動詞換成 いません，助詞的邏輯不動。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、本課單字</div>
+
+  <div class="section">
+    <div class="section-title">📖 四個詞</div>
+
+    <div class="word-item" data-text="子ども">
+      <div class="word-content">
+        <div class="word-ja"><ruby>子<rt>こ</rt>供<rt>ども</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>こども<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">kodomo</div>
+        <div class="word-meaning">小孩 — 寫成 <span class="compare">子ども</span> 或 <span class="compare">子供</span> 都通行，課本兩種都會看到</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="警備員">
+      <div class="word-content">
+        <div class="word-ja"><ruby>警<rt>けい</rt>備<rt>び</rt>員<rt>いん</rt></ruby></div>
+        <div class="word-romaji">keibiin</div>
+        <div class="word-meaning">警衛、保全人員 — 三個字都是音讀</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="道路">
+      <div class="word-content">
+        <div class="word-ja"><ruby>道<rt>どう</rt>路<rt>ろ</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>ど<span class="ar">↘</span>うろ</span></span>
+          <span class="acc-note">頭高型</span>
+        </div>
+        <div class="word-romaji">douro</div>
+        <div class="word-meaning">馬路、道路 — 指車子走的那種路；「道」單獨唸 <span class="compare">みち</span> 是泛指的路</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="犬">
+      <div class="word-content">
+        <div class="word-ja"><ruby>犬<rt>いぬ</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>い<span class="ar">↗</span>ぬ</span></span>
+          <span class="acc-note">尾高型</span>
+        </div>
+        <div class="word-romaji">inu</div>
+        <div class="word-meaning">狗 — い 低、ぬ 高，助詞接上去就掉回低（<ruby>犬<rt>いぬ</rt></ruby>が↓）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 道路（どうろ）</strong><br>
+    兩個字都跟台語一路對上：道 <span class="compare">tō</span> → <span class="compare">どう</span>、路 <span class="compare">lōo</span> → <span class="compare">ろ</span>。
+    「道」的 どう 還會出現在 <ruby>柔道<rt>じゅうどう</rt></ruby>・<ruby>北海道<rt>ほっかいどう</rt></ruby>，認一次整組通。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 警備員的「員」</strong><br>
+    員 台語 <span class="compare">uân</span> → 日文一律唸 <span class="compare">いん</span>：警備員（けいび<b>いん</b>）、
+    <ruby>店員<rt>てんいん</rt></ruby>、<ruby>会社員<rt>かいしゃいん</rt></ruby>、<ruby>駅員<rt>えきいん</rt></ruby>。
+    「〜員」＝做某種工作的人，看到這個字尾就知道是職業名。<ruby>会社員<rt>かいしゃいん</rt></ruby> 見
+    <a href="2026-07-24-shokugyou-shitsumon.html">7/24 職業的問法</a>。
+  </div>
+
+  <div class="note">
+    📝 <strong>子ども 的用法補充</strong><br>
+    可以指「小孩子」也可以指「我的孩子」：<ruby>子<rt>こ</rt></ruby>どもが<ruby>二人<rt>ふたり</rt></ruby>います＝我有兩個小孩。
+    人的存在用 います，所以「我有小孩」不是 あります。複數要說 <ruby>子<rt>こ</rt></ruby>どもたち。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、換單字練一遍</div>
+
+  <div class="section">
+    <div class="section-title">📖 場所に　人・動物が　います</div>
+
+    <div class="word-item" data-text="道路に犬がいます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>道<rt>どう</rt>路<rt>ろ</rt></ruby>に<ruby>犬<rt>いぬ</rt></ruby>がいます。</div>
+        <div class="word-romaji">douro ni inu ga imasu</div>
+        <div class="word-meaning">馬路上有狗。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="銀行に警備員がいます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>銀<rt>ぎん</rt>行<rt>こう</rt></ruby>に<ruby>警<rt>けい</rt>備<rt>び</rt>員<rt>いん</rt></ruby>がいます。</div>
+        <div class="word-romaji">ginkou ni keibiin ga imasu</div>
+        <div class="word-meaning">銀行裡有警衛。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="部屋に子どもがいません。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>に<ruby>子<rt>こ</rt></ruby>どもがいません。</div>
+        <div class="word-romaji">heya ni kodomo ga imasen</div>
+        <div class="word-meaning">房間裡沒有小孩。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="公園に犬がいますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>に<ruby>犬<rt>いぬ</rt></ruby>がいますか。</div>
+        <div class="word-romaji">kouen ni inu ga imasu ka</div>
+        <div class="word-meaning">公園裡有狗嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="部屋に時計があります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>に<ruby>時<rt>と</rt>計<rt>けい</rt></ruby>があります。</div>
+        <div class="word-romaji">heya ni tokei ga arimasu</div>
+        <div class="word-meaning">房間裡有時鐘。 — 物品，這句要用 あります</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 五題</div>
+
+    <p style="font-size:15px;line-height:2;color:var(--ink-soft);">
+      1. 把「公園裡有小孩」寫成日文。<br>
+      2. 「庭に木が＿＿＿」要填 あります 還是 います？為什麼？<br>
+      3. 把「馬路上有狗」改成否定句。<br>
+      4. 別人問「部屋に子どもがいますか」，你要回答「沒有」，助詞用 が 還是 は？寫出整句。<br>
+      5. 「警備員」怎麼唸？「員」這個字在職業名裡固定唸成什麼？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);margin-top:10px;">
+        1. <ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>に<ruby>子<rt>こ</rt></ruby>どもがいます。（kouen ni kodomo ga imasu）<br>
+        2. 用 <b>あります</b>。樹雖然是活的，但<b>不會自己移動</b>，判斷標準是會不會自己動，不是活不活。<br>
+        3. <ruby>道<rt>どう</rt>路<rt>ろ</rt></ruby>に<ruby>犬<rt>いぬ</rt></ruby>がいません。（douro ni inu ga imasen）只換句尾。<br>
+        4. 用 <b>は</b>：いいえ、<ruby>子<rt>こ</rt></ruby>どもはいません。（iie, kodomo wa imasen）對方已經提過那個詞，換 は 帶對比。<br>
+        5. けいびいん。<b>員 → いん</b>，店員（てんいん）、会社員（かいしゃいん）、駅員（えきいん）都一樣。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-16-fu-tango.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">ふ 開頭的單字 <span class="next-arrow">→</span></span>
+    <span class="next-sub">船・蓋・服 三個詞與三種重音型，以及 ふ 的嘴型</span>
+  </a>
+
+  <a href="2026-08-14-arimasu.html" class="next-link">
+    <span class="next-kicker">— 前情提要 / Prev —</span>
+    <span class="next-title">Xがあります <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一套骨架的物品版：場所に＋物が＋あります，以及 に 與 で 的界線</span>
+  </a>
+
+  <a href="2026-08-15-x-ga-arimasen.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">Xがありません <span class="next-arrow">→</span></span>
+    <span class="next-sub">否定的存在句：が 不是在強調沒有，什麼時候才換成 は</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

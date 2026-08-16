@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>レジ と レンジ — 差一個ン意思全變，外加時々・長い・短い</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:rgba(252,232,216,.45);}
+
+/* 片假名字形對照 */
+.kata-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.kata-box{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:4px;padding:16px 14px;text-align:center;}
+.kata-box .kata-big{font-family:'Shippori Mincho',serif;font-size:56px;line-height:1.1;color:var(--accent);}
+.kata-box .kata-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--ink-mute);margin-top:4px;}
+.kata-box .kata-desc{font-size:13px;line-height:1.7;color:var(--ink-soft);margin-top:8px;text-align:left;}
+@media(max-width:520px){.kata-pair{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">レジ と <span class="accent">レンジ</span></h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 08 / 16</div>
+  <p class="page-subtitle">差一個 ン 意思全變的兩個外來語，外加疊字符號「時々」與單字「長い・短い」</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="compare">レジ</span>（收銀台）和 <span class="compare">レンジ</span>（微波爐）只差一個 <b>ン</b>，
+    在便利商店兩個都會用到，講錯很尷尬。<br>
+    ② <span class="compare">時々</span> 的 <b>々</b> 不是字，是「重複前一個漢字」的符號。<br>
+    ③ <span class="compare">長い</span>／<span class="compare">短い</span> 一組記，形容名詞時中間<b>不加 の</b>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、レジ と レンジ</div>
+
+  <div class="section">
+    <div class="section-title">📖 兩個外來語</div>
+
+    <div class="word-item" data-text="レジ">
+      <div class="word-content">
+        <div class="word-ja">レジ</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>レ<span class="ar">↘</span>ジ</span></span>
+          <span class="acc-note">頭高型</span>
+        </div>
+        <div class="word-romaji">reji</div>
+        <div class="word-meaning">收銀台、收銀機 — 來自英文 <b>register</b>（レジスター 的簡稱）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="レンジ">
+      <div class="word-content">
+        <div class="word-ja">レンジ</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>レ<span class="ar">↘</span>ンジ</span></span>
+          <span class="acc-note">頭高型</span>
+        </div>
+        <div class="word-romaji">renji</div>
+        <div class="word-meaning">微波爐、爐灶 — 來自英文 <b>range</b></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="電子レンジ">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電<rt>でん</rt>子<rt>し</rt></ruby>レンジ</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>でんしれん<span class="ar">↘</span>じ</span></span>
+          <span class="acc-note">整組當一個詞唸</span>
+        </div>
+        <div class="word-romaji">denshi renji</div>
+        <div class="word-meaning">微波爐（正式全名）— 店員問加熱時通常說完整的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="レジ袋">
+      <div class="word-content">
+        <div class="word-ja">レジ<ruby>袋<rt>ぶくろ</rt></ruby></div>
+        <div class="word-romaji">reji-bukuro</div>
+        <div class="word-meaning">購物袋 — 「收銀台的袋子」。<a href="../store-phrasebook.html" style="color:var(--accent);">店員會話帖</a>出現過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <tr><th style="width:22%">詞</th><th style="width:22%">英文來源</th><th>意思</th></tr>
+    <tr class="key"><td>レジ</td><td>register</td><td>收銀台、收銀機（<b>地方</b>／機器）</td></tr>
+    <tr class="key"><td>レンジ</td><td>range</td><td>微波爐、爐（<b>家電</b>）</td></tr>
+    <tr><td>オレンジ</td><td>orange</td><td>橘色、柳橙 — <a href="2026-05-14-katakana-a-row.html" style="color:var(--accent);">5/14 片假名ア行</a>學過，裡面剛好也藏著 レンジ</td></tr>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>只差一個 ン，講錯就是另一件事</strong><br>
+    在便利商店說「<span class="compare">レンジで温めてください</span>」＝請幫我微波；
+    說成「<span class="compare">レジで…</span>」就變成在講收銀台，店員會愣住。<br>
+    記法：<b>有 ン 的比較長，東西比較大</b>——ン＝微波爐（レンジ），沒有 ン 的短短的＝收銀台（レジ）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、ン 和 ソ 長得很像</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    寫 レンジ 的時候最容易寫錯的就是 <b>ン</b>——它跟 <b>ソ</b> 只差在筆畫方向。
+    差別看<b>第二筆從哪裡進去</b>。
+  </p>
+
+  <div class="kata-pair">
+    <div class="kata-box">
+      <div class="kata-big">ン</div>
+      <div class="kata-name">n</div>
+      <div class="kata-desc">第二筆<b>由左下往右上</b>撇。點也偏下方。<br>來源是「ん」。<br>例：レ<b>ン</b>ジ、パ<b>ン</b>、ワイ<b>ン</b></div>
+    </div>
+    <div class="kata-box">
+      <div class="kata-big">ソ</div>
+      <div class="kata-name">so</div>
+      <div class="kata-desc">第二筆<b>由右上往左下</b>撇。點偏上方。<br>來源是「曽」。<br>例：<b>ソ</b>ース、<b>ソ</b>フト、ミ<b>ソ</b></div>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — ン 和 ソ 怎麼分</strong><br>
+    看那一撇的<b>走向</b>：<span class="compare">ン</span> 是「<b>ん</b>」變來的，
+    寫 ん 的時候最後那筆也是<b>往右上勾</b>，方向一致。<br>
+    <span class="compare">ソ</span> 則跟 <span class="compare">シ</span>（shi）同一組，都是<b>由上往下</b>掃。<br>
+    一句話：<b>ン 往上、ソ 往下</b>。
+  </div>
+
+  <div class="note">
+    📝 <strong>另一組也很像：シ（shi）和 ツ（tsu）</strong><br>
+    判準完全一樣——<span class="compare">シ</span> 的點在<b>左側</b>、最後一筆<b>往右上</b>；
+    <span class="compare">ツ</span> 的點在<b>上方</b>、最後一筆<b>往左下</b>。<br>
+    所以四個字其實分成兩隊：<b>ン・シ 往上撇</b>，<b>ソ・ツ 往下撇</b>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、レジ・レンジ 放進句子</div>
+
+  <div class="section">
+    <div class="section-title">📖 便利商店現場</div>
+
+    <div class="word-item" data-text="電子レンジで温めますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電<rt>でん</rt>子<rt>し</rt></ruby>レンジで<ruby>温<rt>あたた</rt></ruby>めますか。</div>
+        <div class="word-romaji">denshi renji de atatamemasu ka</div>
+        <div class="word-meaning">要用微波爐加熱嗎？ — 店員問的那一句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="はい、お願いします。">
+      <div class="word-content">
+        <div class="word-ja">はい、お<ruby>願<rt>ねが</rt></ruby>いします。</div>
+        <div class="word-romaji">hai, onegai shimasu</div>
+        <div class="word-meaning">好，麻煩你。 — 最短的回答</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="レジはあちらです。">
+      <div class="word-content">
+        <div class="word-ja">レジはあちらです。</div>
+        <div class="word-romaji">reji wa achira desu</div>
+        <div class="word-meaning">收銀台在那邊。 — 指方向見 <a href="2026-07-29-kono-sono-ano.html" style="color:var(--accent);">この・その・あの</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="レジに人がいます。">
+      <div class="word-content">
+        <div class="word-ja">レジに<ruby>人<rt>ひと</rt></ruby>がいます。</div>
+        <div class="word-romaji">reji ni hito ga imasu</div>
+        <div class="word-meaning">收銀台有人。 — 用 <a href="2026-08-16-x-ga-imasu.html" style="color:var(--accent);">Xがいます</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="部屋に電子レンジがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>に<ruby>電<rt>でん</rt>子<rt>し</rt></ruby>レンジがあります。</div>
+        <div class="word-romaji">heya ni denshi renji ga arimasu</div>
+        <div class="word-meaning">房間裡有微波爐。 — 微波爐不會自己動，用 <a href="2026-08-14-arimasu.html" style="color:var(--accent);">あります</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>レジ 和 お会計 差在哪</strong><br>
+    <span class="compare">レジ</span>＝收銀台這個<b>地方／機器</b>；
+    <span class="compare">お<ruby>会計<rt>かいけい</rt></ruby></span>＝結帳這件<b>事</b>（帳款、結帳動作）。<br>
+    餐廳舉手叫店員說「お会計お願いします」，不會說「レジお願いします」。
+    <a href="2026-06-29-mos-burger-order.html" style="color:var(--accent);">6/29 摩斯點餐</a>那篇比較過 会計 vs 決済。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 会計（かいけい）</strong><br>
+    這個不是外來語，是漢字詞，台語一路對得上：<br>
+    会 <span class="compare">huē／kài</span> → <span class="compare">かい</span>（同組：<ruby>会話<rt>かいわ</rt></ruby>・<ruby>会社<rt>かいしゃ</rt></ruby>）<br>
+    計 <span class="compare">ke</span> → <span class="compare">けい</span>（同組：<ruby>計画<rt>けいかく</rt></ruby>・<ruby>時計<rt>とけい</rt></ruby>）<br>
+    ⚠️ 別因為都在收銀台用到就以為 会計 和 レジ 有關係——一個是漢字詞、一個是英文外來語，來源完全不同。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、時々 — 々 是什麼</div>
+
+  <div class="section">
+    <div class="section-title">📖 ときどき</div>
+
+    <div class="word-item" data-text="時々">
+      <div class="word-content">
+        <div class="word-ja"><ruby>時々<rt>ときどき</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>ときどき<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">tokidoki</div>
+        <div class="word-meaning">有時候、偶爾 — 頻率副詞，放在動詞前面</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <b>々</b> 不是漢字，是「<ruby>踊<rt>おど</rt></ruby>り<ruby>字<rt>じ</rt></ruby>（odoriji）」＝疊字符號，
+    意思是「<b>重複前面那個漢字</b>」。所以 時々 ＝ 時時，唸 ときどき。
+    寫成全假名 <span class="compare">ときどき</span> 也完全正確，兒童書常這樣寫。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:26%">寫法</th><th style="width:26%">讀音</th><th>常見度</th></tr>
+    <tr class="key"><td><ruby>時々<rt>ときどき</rt></ruby></td><td>ときどき</td><td>最常見，一般文章都這樣寫</td></tr>
+    <tr><td>ときどき</td><td>ときどき</td><td>也很常見，兒童書、輕鬆的文章</td></tr>
+    <tr><td>時時</td><td>ときどき</td><td>幾乎沒人這樣寫</td></tr>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 其他用 々 的詞</div>
+
+    <div class="word-item" data-text="人々">
+      <div class="word-content">
+        <div class="word-ja"><ruby>人々<rt>ひとびと</rt></ruby></div>
+        <div class="word-romaji">hitobito</div>
+        <div class="word-meaning">人們 — ひと＋ひと，第二個變濁音 び</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="色々">
+      <div class="word-content">
+        <div class="word-ja"><ruby>色々<rt>いろいろ</rt></ruby></div>
+        <div class="word-romaji">iroiro</div>
+        <div class="word-meaning">各式各樣 — 這個<b>不變</b>濁音（いろ＋いろ，母音開頭不連濁）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日々">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日々<rt>ひび</rt></ruby></div>
+        <div class="word-romaji">hibi</div>
+        <div class="word-meaning">每天、日復一日 — ひ＋ひ → ひび</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="少々">
+      <div class="word-content">
+        <div class="word-ja"><ruby>少々<rt>しょうしょう</rt></ruby></div>
+        <div class="word-romaji">shoushou</div>
+        <div class="word-meaning">稍微、一下下 — 店員說「少々お待ちください」＝請稍等</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — とき<span class="compare">ど</span>き 為什麼變濁音</strong><br>
+    這叫<b>連濁（れんだく）</b>：兩個詞黏成一個時，後面那個的第一音變濁音。<br>
+    とき＋とき → とき<b>ど</b>き ｜ ひと＋ひと → ひと<b>び</b>と ｜ はな＋ひ → はな<b>び</b>（煙火）<br>
+    在 <a href="2026-08-15-x-ga-arimasen.html" style="color:var(--accent);">8/15 ごみ＋箱→ごみばこ</a> 已經遇過同一條規則，
+    <a href="2026-08-07-kuyakusho-te.html" style="color:var(--accent);">8/7 かみ→がみ</a> 也是。
+  </div>
+
+  <div class="note">
+    📝 <strong>頻率副詞一起收</strong><br>
+    這些都放在動詞前面，說明「多常做」：
+  </div>
+
+  <table class="joshi-table">
+    <tr><th style="width:28%">詞</th><th style="width:26%">羅馬拼音</th><th>頻率</th></tr>
+    <tr><td>いつも</td><td>itsumo</td><td>總是（最高）</td></tr>
+    <tr><td>よく</td><td>yoku</td><td>經常</td></tr>
+    <tr class="key"><td><ruby>時々<rt>ときどき</rt></ruby></td><td>tokidoki</td><td>有時候、偶爾</td></tr>
+    <tr><td>あまり〜ない</td><td>amari 〜 nai</td><td>不太〜（<b>一定接否定</b>）</td></tr>
+    <tr><td>ぜんぜん〜ない</td><td>zenzen 〜 nai</td><td>完全不〜（<b>一定接否定</b>）</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、長い と 短い</div>
+
+  <div class="section">
+    <div class="section-title">📖 ながい</div>
+
+    <div class="word-item" data-text="長い">
+      <div class="word-content">
+        <div class="word-ja"><ruby>長<rt>なが</rt></ruby>い</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>なが<span class="ar">↘</span>い</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">nagai</div>
+        <div class="word-meaning">長的（長度、時間都能用）— 反義詞是 <ruby>短<rt>みじか</rt></ruby>い（mijikai）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="短い">
+      <div class="word-content">
+        <div class="word-ja"><ruby>短<rt>みじか</rt></ruby>い</div>
+        <div class="word-romaji">mijikai</div>
+        <div class="word-meaning">短的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>「長い」直接接名詞就好</strong><br>
+    要形容東西時直接接上去：<ruby>長<rt>なが</rt></ruby>い<ruby>川<rt>かわ</rt></ruby>（長長的河）、
+    <ruby>長<rt>なが</rt></ruby>い<ruby>列<rt>れつ</rt></ruby>（長長的隊伍）。<br>
+    ❌ 長い<b>の</b>川 是錯的，中間不加 の。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、湊起來練一遍</div>
+
+  <div class="section">
+    <div class="section-title">📖 混合練習</div>
+
+    <div class="word-item" data-text="時々レンジで温めます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>時々<rt>ときどき</rt></ruby>レンジで<ruby>温<rt>あたた</rt></ruby>めます。</div>
+        <div class="word-romaji">tokidoki renji de atatamemasu</div>
+        <div class="word-meaning">偶爾會用微波爐加熱。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="レジの列が長いです。">
+      <div class="word-content">
+        <div class="word-ja">レジの<ruby>列<rt>れつ</rt></ruby>が<ruby>長<rt>なが</rt></ruby>いです。</div>
+        <div class="word-romaji">reji no retsu ga nagai desu</div>
+        <div class="word-meaning">收銀台的隊伍很長。 — <ruby>列<rt>れつ</rt></ruby>＝隊伍</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="時々長いです。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>時々<rt>ときどき</rt></ruby><ruby>長<rt>なが</rt></ruby>いです。</div>
+        <div class="word-romaji">tokidoki nagai desu</div>
+        <div class="word-meaning">有時候很長。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="レジに長い列があります。">
+      <div class="word-content">
+        <div class="word-ja">レジに<ruby>長<rt>なが</rt></ruby>い<ruby>列<rt>れつ</rt></ruby>があります。</div>
+        <div class="word-romaji">reji ni nagai retsu ga arimasu</div>
+        <div class="word-meaning">收銀台有長長的隊伍。 — 長い 直接接名詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="この店に電子レンジがありません。">
+      <div class="word-content">
+        <div class="word-ja">この<ruby>店<rt>みせ</rt></ruby>に<ruby>電<rt>でん</rt>子<rt>し</rt></ruby>レンジがありません。</div>
+        <div class="word-romaji">kono mise ni denshi renji ga arimasen</div>
+        <div class="word-meaning">這家店沒有微波爐。 — 見 <a href="2026-08-15-x-ga-arimasen.html" style="color:var(--accent);">Xがありません</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 五題</div>
+
+    <p style="font-size:15px;line-height:2;color:var(--ink-soft);">
+      1. 「請幫我微波」要用 レジ 還是 レンジ？兩個詞的英文來源各是什麼？<br>
+      2. 片假名 ン 和 ソ 怎麼分？各舉一個詞。<br>
+      3. 「々」是什麼？時々 唸什麼？為什麼第二個是 <b>ど</b> 不是 <b>と</b>？<br>
+      4. 把「收銀台有長長的隊伍」寫成日文。<br>
+      5. 在餐廳要結帳，該說 レジ 還是 お会計？為什麼？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);margin-top:10px;">
+        1. 用 <b>レンジ</b>（microwave ← range）。レジ 是收銀台（← register），有 ン 的才是微波爐。<br>
+        2. <b>ン 的第二筆往右上撇</b>（レンジ・パン），<b>ソ 的第二筆往左下撇</b>（ソース・ミソ）。同一條判準也能分 シ／ツ。<br>
+        3. 「々」是<b>疊字符號（踊り字）</b>，代表重複前一個漢字，所以 時々 ＝ 時時，唸 <b>ときどき</b>。第二個變 ど 是<b>連濁</b>——兩個詞黏起來時後面那個的第一音變濁音（ひと＋ひと→ひとびと 也一樣）。<br>
+        4. レジに<ruby>長<rt>なが</rt></ruby>い<ruby>列<rt>れつ</rt></ruby>があります。（reji ni nagai retsu ga arimasu）長い 直接接在名詞前面，中間不加 の。<br>
+        5. 說 <b>お会計（おかいけい）</b>。レジ 是收銀台這個<b>地方</b>，会計 才是結帳這件<b>事</b>。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-16-he-tango.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">へ 開頭的單字 <span class="next-arrow">→</span></span>
+    <span class="next-sub">蛇・部屋・返事，本篇「部屋に電子レンジがあります」用到的 部屋 在那裡</span>
+  </a>
+
+  <a href="../store-phrasebook.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">店員會話帖 <span class="next-arrow">→</span></span>
+    <span class="next-sub">レジ袋・温めますか・お会計 的完整現場對話</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

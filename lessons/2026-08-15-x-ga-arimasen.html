@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xがありません — 沒有的時候，が 和 は 怎麼選</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+
+/* 句型拆解圖 */
+.split-box{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:20px 18px 18px;margin:18px 0;text-align:center;}
+.split-tok{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;font-weight:700;line-height:1.5;}
+.split-plus{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink-mute);padding-top:8px;}
+.split-label{font-size:13px;line-height:1.7;color:var(--ink-soft);}
+.split-label strong{font-family:'Shippori Mincho',serif;font-size:14px;color:var(--accent);}
+@media(max-width:560px){.split-box{grid-template-columns:1fr;}.split-plus{display:none;}}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:1.9;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* 複合詞連濁拆解 */
+.rendaku{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:20px 18px;margin:18px 0;}
+.rd-tok{text-align:center;font-family:'Klee One','Shippori Mincho',serif;}
+.rd-ja{font-size:26px;font-weight:700;line-height:1.4;}
+.rd-ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);}
+.rd-op{font-size:22px;color:var(--ink-mute);}
+.rd-hit{color:var(--accent);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">Xが<span class="accent">ありません</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 15</div>
+  <p class="page-subtitle">「某個地方沒有某個東西」— 為什麼還是 <span class="j-mark">が</span>，什麼時候才換成 <span class="j-mark">は</span></p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    <span class="j-mark">が</span> <b>不是「強調沒有」的助詞</b>——它在肯定句、否定句裡做的是同一件事：標出「存在／不存在的那個東西」。
+    真正跟否定有關的是 <span class="j-mark">は</span>，它多帶一層「對比」的味道。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、句型的骨架：只換句尾</div>
+
+  <div class="split-box">
+    <div>
+      <div class="split-tok"><ruby>部屋<rt>へや</rt></ruby>に</div>
+      <div class="split-label"><strong>場所</strong><br>在哪裡（に）</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div>
+      <div class="split-tok">ソファが</div>
+      <div class="split-label"><strong>東西</strong><br>沒有什麼（が）</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div>
+      <div class="split-tok">ありません</div>
+      <div class="split-label"><strong>不存在</strong><br>「沒有」</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    跟 <a href="2026-08-14-arimasu.html" style="color:var(--accent);">8/14 的 Xがあります</a> 比對一下：
+    <span class="j-mark">に</span> 沒動、<span class="j-mark">が</span> 沒動，動的只有句尾 <span class="compare">あります → ありません</span>。
+    這就是本篇的全部骨架，剩下的都是語感問題。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 肯定 vs 否定</div>
+
+    <div class="word-item" data-text="部屋にソファがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>にソファがあります。</div>
+        <div class="word-romaji">heya ni sofa ga arimasu</div>
+        <div class="word-meaning">房間裡有沙發。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="部屋にソファがありません。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>にソファがありません。</div>
+        <div class="word-romaji">heya ni sofa ga arimasen</div>
+        <div class="word-meaning">房間裡沒有沙發。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>ソファ 是片假名</strong><br>
+    外來語 sofa 寫成 <span class="compare">ソファ</span>，不是 そふぁ。輸入時打 <span class="compare">sofa</span> 再按空白鍵轉片假名。
+    片假名的來歷見 <a href="2026-05-04-kana.html" style="color:var(--accent);">5/4 假名的兩套系統</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、が 到底在做什麼</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    很多人第一次看到 <span class="compare">Xがありません</span> 會以為「が＝強調沒有」。<b>不是。</b>
+    が 的職務是<b>標出主語</b>——在存在句裡就是「存在或不存在的那個東西」。
+    肯定句用它，否定句也用它，跟有沒有無關。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:30%">句子</th><th style="width:22%">が 標的是</th><th>が 有沒有換</th></tr>
+    <tr class="key"><td>ソファ<b>が</b>あります</td><td>存在的東西</td><td>—</td></tr>
+    <tr><td>ソファ<b>が</b>ありません</td><td>不存在的東西</td><td>沒換，一樣是 が</td></tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>が 真正的語感是「新資訊」</strong><br>
+    が 帶出來的通常是<b>對方還不知道的東西</b>，第一次端上桌時用它。
+    這跟 <a href="2026-05-10-joshi-wa.html" style="color:var(--accent);">助詞 は</a> 的「已知話題」剛好是一組對照。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、什麼時候換成 は</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>が ありません</h4>
+      <div class="vs-sub">單純陳述：這裡沒有這個東西</div>
+      <ul>
+        <li>第一次講、沒有前情</li>
+        <li>課本練句型的基本款</li>
+        <li>語氣平，只是報告事實</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>は ありません</h4>
+      <div class="vs-sub">帶對比：「這個是沒有啦……」</div>
+      <ul>
+        <li>對方剛提過那個東西</li>
+        <li>暗示「但別的有」</li>
+        <li>回答問句時最常用</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 一問一答就看得出來</div>
+
+    <div class="word-item" data-text="この ホテルに 駐車場が ありますか。">
+      <div class="word-content">
+        <div class="word-ja">この ホテルに <ruby>駐車場<rt>ちゅうしゃじょう</rt></ruby>が ありますか。</div>
+        <div class="word-romaji">kono hoteru ni chuushajou ga arimasu ka</div>
+        <div class="word-meaning">這間飯店有停車場嗎？ — 第一次提出，用 が</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいえ、駐車場は ありません。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>駐車場<rt>ちゅうしゃじょう</rt></ruby>は ありません。</div>
+        <div class="word-romaji">iie, chuushajou wa arimasen</div>
+        <div class="word-meaning">不，沒有停車場。 — 對方已經提過了，換 は</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    一句話抓重點：<b>問句用 が，回答的否定用 は</b>。
+    <a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12 否定的說法</a> 講的「否定句 が→は」就是這個情境；
+    而課本第 13 頁在練句型骨架，沒有前後文，所以整頁維持 <span class="j-mark">が</span>。兩邊沒有衝突，差別只在有沒有對話脈絡。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、本課單字</div>
+
+  <div class="section">
+    <div class="section-title">📖 三個新詞</div>
+
+    <div class="word-item" data-text="ごみ箱">
+      <div class="word-content">
+        <div class="word-ja">ごみ<ruby>箱<rt>ばこ</rt></ruby></div>
+        <div class="word-romaji">gomibako</div>
+        <div class="word-meaning">垃圾桶 — 寫成 ゴミ箱・ごみ箱 都常見</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="駐車場">
+      <div class="word-content">
+        <div class="word-ja"><ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt>場<rt>じょう</rt></ruby></div>
+        <div class="word-romaji">chuushajou</div>
+        <div class="word-meaning">停車場</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="箱">
+      <div class="word-content">
+        <div class="word-ja"><ruby>箱<rt>はこ</rt></ruby></div>
+        <div class="word-romaji">hako</div>
+        <div class="word-meaning">箱子、盒子 — 單獨用時不濁化</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 駐車場</strong><br>
+    三個字都是音讀，跟台語一路對上：車 tshia → <span class="compare">しゃ</span>、場 tiunn → <span class="compare">じょう</span>、駐 tsu → <span class="compare">ちゅう</span>。
+    同一組的「庫 khoo → こ」也出現在 <a href="2026-08-14-basho-mono-tango.html">冷蔵庫（れいぞうこ）</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、ごみ箱：兩個詞黏起來會變濁音</div>
+
+  <div class="rendaku">
+    <div class="rd-tok"><div class="rd-ja">ごみ</div><div class="rd-ro">gomi · 垃圾</div></div>
+    <div class="rd-op">＋</div>
+    <div class="rd-tok"><div class="rd-ja"><ruby>箱<rt>はこ</rt></ruby></div><div class="rd-ro">hako · 箱子</div></div>
+    <div class="rd-op">→</div>
+    <div class="rd-tok"><div class="rd-ja">ごみ<span class="rd-hit">ば</span>こ</div><div class="rd-ro">gomi<span class="rd-hit">b</span>ako · 垃圾桶</div></div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    兩個詞黏成一個複合詞時，<b>後面那個詞的第一個音常常變成濁音</b>（か→が、さ→ざ、た→だ、は→ば），
+    這叫 <ruby>連濁<rt>れんだく</rt></ruby>。は行的濁音是 <span class="compare">ば</span>，所以 はこ 變 ばこ。
+    濁音符號本身的規則見 <a href="2026-05-09-dakuten-sokuon.html" style="color:var(--accent);">5/9 濁音與促音</a>。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:26%">複合詞</th><th style="width:26%">讀音</th><th>意思</th></tr>
+    <tr class="key"><td>ごみ<b>箱</b></td><td>ごみ<b>ばこ</b> / gomibako</td><td>垃圾桶</td></tr>
+    <tr><td><ruby>本<rt>ほん</rt></ruby><b>箱</b></td><td>ほん<b>ばこ</b> / honbako</td><td>書櫃</td></tr>
+    <tr><td><ruby>筆<rt>ふで</rt></ruby><b>箱</b></td><td>ふで<b>ばこ</b> / fudebako</td><td>鉛筆盒</td></tr>
+    <tr><td><ruby>郵便<rt>ゆうびん</rt></ruby><b>箱</b></td><td>ゆうびん<b>ばこ</b> / yuubinbako</td><td>信箱</td></tr>
+    <tr><td>ごみ<b><ruby>袋<rt>ふくろ</rt></ruby></b></td><td>ごみ<b>ぶくろ</b> / gomibukuro</td><td>垃圾袋（ふ→ぶ，同一條規律）</td></tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 郵便箱</strong><br>
+    前半段跟 <a href="2026-08-05-doko.html">郵便局（ゆうびんきょく）</a> 一模一樣，只是後面換成「箱ばこ」。
+    ゆうびん 這組音認一次，郵便局・郵便箱・郵便番号 整串通。
+  </div>
+
+  <div class="note">
+    📝 <strong>ごみ 的其他搭配</strong><br>
+    ごみを<ruby>捨<rt>す</rt></ruby>てる（gomi o suteru，丟垃圾）、<ruby>燃<rt>も</rt></ruby>えるごみ（moeru gomi，可燃垃圾）、
+    <ruby>生<rt>なま</rt></ruby>ごみ（nama gomi，廚餘）。丟垃圾的 <span class="j-mark">を</span> 見 <a href="2026-08-11-joshi-o.html" style="color:var(--accent);">助詞 を</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、換單字練一遍</div>
+
+  <div class="section">
+    <div class="section-title">📖 場所に　物が　ありません</div>
+
+    <div class="word-item" data-text="ここに ごみ箱が ありません。">
+      <div class="word-content">
+        <div class="word-ja">ここに ごみ<ruby>箱<rt>ばこ</rt></ruby>が ありません。</div>
+        <div class="word-romaji">koko ni gomibako ga arimasen</div>
+        <div class="word-meaning">這裡沒有垃圾桶。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="この ホテルに 駐車場が ありません。">
+      <div class="word-content">
+        <div class="word-ja">この ホテルに <ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt>場<rt>じょう</rt></ruby>が ありません。</div>
+        <div class="word-romaji">kono hoteru ni chuushajou ga arimasen</div>
+        <div class="word-meaning">這間飯店沒有停車場。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="机の上に 箱が ありません。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に <ruby>箱<rt>はこ</rt></ruby>が ありません。</div>
+        <div class="word-romaji">tsukue no ue ni hako ga arimasen</div>
+        <div class="word-meaning">桌上沒有箱子。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ごみ箱は どこですか。">
+      <div class="word-content">
+        <div class="word-ja">ごみ<ruby>箱<rt>ばこ</rt></ruby>は どこですか。</div>
+        <div class="word-romaji">gomibako wa doko desu ka</div>
+        <div class="word-meaning">垃圾桶在哪裡？ — 問地點用 <a href="2026-08-05-doko.html" style="color:var(--accent);">どこ</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 五題</div>
+
+    <p style="font-size:15px;line-height:2;color:var(--ink-soft);">
+      1. 把「房間裡沒有沙發」寫成日文（片假名要寫對）。<br>
+      2. 「が」在 Xがありません 裡的作用是什麼？是不是在強調「沒有」？<br>
+      3. 別人問你「駐車場がありますか」，你要回答「沒有」，該用 が 還是 は？寫出整句。<br>
+      4. ごみ ＋ 箱 為什麼唸 ごみばこ 而不是 ごみはこ？這個現象叫什麼？<br>
+      5. 把「這裡沒有垃圾桶」寫成日文。
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);margin-top:10px;">
+        1. <ruby>部屋<rt>へや</rt></ruby>にソファがありません。（heya ni sofa ga arimasen）<br>
+        2. <b>不是強調。</b>が 標出的是「不存在的那個東西」＝主語，肯定句 あります 也用同一個 が。<br>
+        3. 用 <b>は</b>：いいえ、<ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt>場<rt>じょう</rt></ruby>はありません。（iie, chuushajou wa arimasen）對方已經提過那個詞，換 は 帶對比。<br>
+        4. 複合詞的<ruby>連濁<rt>れんだく</rt></ruby>——後面那個詞的第一個音變濁音，は→ば。本箱（ほんばこ）、筆箱（ふでばこ）同理。<br>
+        5. ここにごみ<ruby>箱<rt>ばこ</rt></ruby>がありません。（koko ni gomibako ga arimasen）
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-14-arimasu.html" class="next-link">
+    <span class="next-kicker">— 前情提要 / Prev —</span>
+    <span class="next-title">Xがあります <span class="next-arrow">→</span></span>
+    <span class="next-sub">肯定版的存在句：場所に＋物が＋あります，還有 あります 與 います 的分界</span>
+  </a>
+
+  <a href="2026-08-12-hitei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">否定的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">四種詞性的否定接法，以及否定句把 が 換成 は 的完整說明</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

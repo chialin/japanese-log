@@ -28,6 +28,8 @@
 
 /* 對照欄 */
 .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-grid.vs-3{grid-template-columns:1fr 1fr 1fr;}
+@media(max-width:720px){.vs-grid.vs-3{grid-template-columns:1fr;}}
 .vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
 .vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
 .vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
@@ -102,7 +104,7 @@
   </div>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider">二、十個位置詞</div>
+  <div class="divider">二、十一個位置詞</div>
 
   <div class="pos-map">
     <div class="pos-cell"></div>
@@ -125,6 +127,7 @@
     <tr><td><b>中</b></td><td>なか</td><td>裡面（<ruby>箱<rt>はこ</rt></ruby>の中）</td></tr>
     <tr><td><b>外</b></td><td>そと</td><td>外面（<ruby>店<rt>みせ</rt></ruby>の外）</td></tr>
     <tr><td><b>右／左</b></td><td>みぎ／ひだり</td><td>右邊／左邊</td></tr>
+    <tr class="key"><td><b>横</b></td><td>よこ</td><td>旁邊、側面——<b>只講在側面</b>，兩邊東西不必同類（体育館は<ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>の横です）</td></tr>
     <tr><td><b>隣</b></td><td>となり</td><td>旁邊——<b>同類的東西並排</b>（家隔壁、隔壁座位）</td></tr>
     <tr><td><b>そば・近く</b></td><td>そば／ちかく</td><td>附近（不必並排，只要距離近）</td></tr>
     <tr><td><b>間</b></td><td>あいだ</td><td>A<span class="j-mark">と</span>B<span class="j-mark">の</span>間＝在 A 和 B 之間</td></tr>
@@ -191,6 +194,15 @@
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
 
+    <div class="word-item" data-text="病院は警察署の横です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>病<rt>びょう</rt>院<rt>いん</rt></ruby>は<ruby>警<rt>けい</rt>察<rt>さつ</rt>署<rt>しょ</rt></ruby>の<ruby>横<rt>よこ</rt></ruby>です。</div>
+        <div class="word-romaji">byouin wa keisatsusho no yoko desu</div>
+        <div class="word-meaning">醫院在警察局旁邊。兩者不同類，所以用 <b>横</b> 而不是 隣。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
     <div class="word-item" data-text="私の家はコンビニの隣です。">
       <div class="word-content">
         <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>はコンビニの<ruby>隣<rt>となり</rt></ruby>です。</div>
@@ -242,9 +254,18 @@
   </div>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider">五、隣・そば・間 不要混</div>
+  <div class="divider">五、横・隣・そば 不要混</div>
 
-  <div class="vs-grid">
+  <div class="vs-grid vs-3">
+    <div class="vs-col">
+      <h4>横（よこ）</h4>
+      <div class="vs-sub">單純的「側面」，不管是不是同類</div>
+      <ul>
+        <li><ruby>体<rt>たい</rt>育<rt>いく</rt>館<rt>かん</rt></ruby>は<ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>の横です</li>
+        <li><ruby>山<rt>やま</rt></ruby>の横＝○（隣 就不太說）</li>
+        <li>強調的是「在左右側」這個方向</li>
+      </ul>
+    </div>
     <div class="vs-col">
       <h4>隣（となり）</h4>
       <div class="vs-sub">同類的東西「並排」的緊鄰</div>
@@ -263,6 +284,14 @@
         <li>問路最常用 <ruby>駅<rt>えき</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くです</li>
       </ul>
     </div>
+  </div>
+
+  <div class="note">
+    <b>横 還是 隣？一句話判斷</b><br>
+    問自己：<u>這兩個東西算不算同一類</u>？<br>
+    同類並排 → <span class="compare">隣</span>（銀行はスーパーの隣です／私の隣の席）<br>
+    不同類、只是在側邊 → <span class="compare">横</span>（病院は警察署の横です／体育館は公園の横です）<br>
+    不確定時用 <span class="compare">横</span> 比較安全，它的限制少；真的只想說「附近」就用 <span class="compare">そば・近く</span>。
   </div>
 
   <div class="alert">

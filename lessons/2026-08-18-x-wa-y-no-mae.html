@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XはYの前です — 位置詞是名詞，靠 の 接起來</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:rgba(255,255,255,.75);}
+
+/* 句型拆解圖 */
+.split-box{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:20px 18px 18px;margin:18px 0;text-align:center;}
+.split-tok{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;font-weight:700;line-height:1.5;}
+.split-plus{font-family:'Klee One','Shippori Mincho',serif;font-size:22px;color:var(--ink-mute);padding-top:8px;}
+.split-label{font-size:13px;line-height:1.7;color:var(--ink-soft);}
+.split-label strong{font-family:'Shippori Mincho',serif;font-size:14px;color:var(--accent);}
+@media(max-width:560px){.split-box{grid-template-columns:1fr;}.split-plus{display:none;}}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:1.9;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* 位置詞方位圖 */
+.pos-map{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:420px;margin:20px auto;}
+.pos-cell{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:6px;padding:12px 6px;text-align:center;}
+.pos-cell.center{background:var(--accent-pale);border-color:var(--accent-soft);}
+.pos-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;font-weight:700;color:var(--ink);line-height:1.4;}
+.pos-cell.center .pos-ja{color:var(--accent);}
+.pos-zh{font-size:12px;color:var(--ink-mute);margin-top:3px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">Xは Yの<span class="accent">前</span>です</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 18 · 課本 p.48</div>
+  <p class="page-subtitle">「X 在 Y 的前面」— 位置詞在日文裡是<strong>名詞</strong>，所以要用 <span class="j-mark">の</span> 接、句尾收 です</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    中文的「在……前面」是介係詞，日文的 <span class="compare">前</span>・<span class="compare">後ろ</span>・<span class="compare">上</span>・<span class="compare">中</span> 通通是<b>名詞</b>。
+    名詞接名詞就用 <span class="j-mark">の</span>——所以整個句子只是最單純的 <b>AはBです</b>，只是 B 換成「Yの前」這種兩個字組成的名詞。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、句型的骨架</div>
+
+  <div class="split-box">
+    <div>
+      <div class="split-tok"><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は</div>
+      <div class="split-label"><strong>X＝主題</strong><br>要說明位置的東西（は）</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div>
+      <div class="split-tok"><ruby>棚<rt>たな</rt></ruby>の<ruby>前<rt>まえ</rt></ruby></div>
+      <div class="split-label"><strong>Yの＋位置詞</strong><br>以什麼為基準（の）</div>
+    </div>
+    <div class="split-plus">＋</div>
+    <div>
+      <div class="split-tok">です</div>
+      <div class="split-label"><strong>斷定</strong><br>「是」</div>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    順序跟中文剛好一樣：<strong>商品 → 棚 → 前</strong>（商品在櫃子前面）。
+    要小心的只有一件事——<b>基準的那個東西（Y）要放在位置詞<u>前面</u>，中間夾 の</b>。
+    寫成 <span class="compare">前の棚</span> 意思就翻過來變成「前面那個櫃子」了。
+  </p>
+
+  <div class="note">
+    📝 <strong>為什麼一定要 の</strong><br>
+    因為 <span class="compare">棚</span> 和 <span class="compare">前</span> 兩個都是名詞，日文的名詞要接名詞只有一條路：中間放 <span class="j-mark">の</span>。
+    這跟 <a href="2026-08-01-no-joshi.html" style="color:var(--accent);">8/1 助詞「の」</a> 那課的
+    <span class="compare">日本の祭り</span> 是同一個 の，沒有新東西要背。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、十個位置詞</div>
+
+  <div class="pos-map">
+    <div class="pos-cell"></div>
+    <div class="pos-cell"><div class="pos-ja">上</div><div class="pos-zh">うえ · 上面</div></div>
+    <div class="pos-cell"></div>
+    <div class="pos-cell"><div class="pos-ja">左</div><div class="pos-zh">ひだり · 左邊</div></div>
+    <div class="pos-cell center"><div class="pos-ja">Y</div><div class="pos-zh">基準</div></div>
+    <div class="pos-cell"><div class="pos-ja">右</div><div class="pos-zh">みぎ · 右邊</div></div>
+    <div class="pos-cell"><div class="pos-ja">前</div><div class="pos-zh">まえ · 前面</div></div>
+    <div class="pos-cell"><div class="pos-ja">下</div><div class="pos-zh">した · 下面</div></div>
+    <div class="pos-cell"><div class="pos-ja">後ろ</div><div class="pos-zh">うしろ · 後面</div></div>
+  </div>
+
+  <table class="joshi-table">
+    <tr><th style="width:20%">位置詞</th><th style="width:20%">讀法</th><th>意思與用法</th></tr>
+    <tr class="key"><td><b>前</b></td><td>まえ</td><td>前面（也可指時間上的「之前」：<ruby>三<rt>さん</rt>時<rt>じ</rt></ruby>の前）</td></tr>
+    <tr class="key"><td><b>後ろ</b></td><td>うしろ</td><td>後面（空間）。時間上的「之後」要用 <span class="compare">後（あと）</span>，不是 うしろ</td></tr>
+    <tr><td><b>上</b></td><td>うえ</td><td>上面、表面（棚の上＝架子上）</td></tr>
+    <tr><td><b>下</b></td><td>した</td><td>下面（<ruby>机<rt>つくえ</rt></ruby>の下）</td></tr>
+    <tr><td><b>中</b></td><td>なか</td><td>裡面（<ruby>箱<rt>はこ</rt></ruby>の中）</td></tr>
+    <tr><td><b>外</b></td><td>そと</td><td>外面（<ruby>店<rt>みせ</rt></ruby>の外）</td></tr>
+    <tr><td><b>右／左</b></td><td>みぎ／ひだり</td><td>右邊／左邊</td></tr>
+    <tr><td><b>隣</b></td><td>となり</td><td>旁邊——<b>同類的東西並排</b>（家隔壁、隔壁座位）</td></tr>
+    <tr><td><b>そば・近く</b></td><td>そば／ちかく</td><td>附近（不必並排，只要距離近）</td></tr>
+    <tr><td><b>間</b></td><td>あいだ</td><td>A<span class="j-mark">と</span>B<span class="j-mark">の</span>間＝在 A 和 B 之間</td></tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 位置詞的音讀都跟台語對得上</strong><br>
+    這些字單獨用是訓讀（まえ・うしろ），但一進到漢語詞就變音讀，而且整齊對台語：<br>
+    <span class="compare">前</span> 台語 tsian → <b>ぜん</b>（<ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>）｜
+    <span class="compare">後</span> 台語 hio → <b>ご</b>（<ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>）｜
+    <span class="compare">中</span> 台語 tiong → <b>ちゅう</b>（<ruby>中<rt>ちゅう</rt>国<rt>ごく</rt></ruby>）｜
+    <span class="compare">間</span> 台語 kan → <b>かん</b>（<ruby>時<rt>じ</rt>間<rt>かん</rt></ruby>）<br>
+    所以「前後中間」四個字的音讀等於直接把台語搬過來，只有訓讀那層要另外記。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、例句</div>
+
+  <div class="section">
+    <div class="section-title">📖 XはYの位置詞です</div>
+
+    <div class="word-item" data-text="商品は棚の前です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>です。</div>
+        <div class="word-romaji">shouhin wa tana no mae desu</div>
+        <div class="word-meaning">商品在架子前面。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="商品はレジの後ろです。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>はレジの<ruby>後<rt>うし</rt></ruby>ろです。</div>
+        <div class="word-romaji">shouhin wa reji no ushiro desu</div>
+        <div class="word-meaning">商品在收銀台後面。（<a href="2026-08-16-reji-renji.html" style="color:var(--accent);">レジ 見 8/16</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="郵便局は銀行の前です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>郵<rt>ゆう</rt>便<rt>びん</rt>局<rt>きょく</rt></ruby>は<ruby>銀<rt>ぎん</rt>行<rt>こう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>です。</div>
+        <div class="word-romaji">yuubinkyoku wa ginkou no mae desu</div>
+        <div class="word-meaning">郵局在銀行前面。（<a href="2026-08-05-doko.html" style="color:var(--accent);">郵便局 見 8/5 どこ</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="猫は棚の上です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>猫<rt>ねこ</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>です。</div>
+        <div class="word-romaji">neko wa tana no ue desu</div>
+        <div class="word-meaning">貓在架子上面。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ごみ箱は机の下です。">
+      <div class="word-content">
+        <div class="word-ja">ごみ<ruby>箱<rt>ばこ</rt></ruby>は<ruby>机<rt>つくえ</rt></ruby>の<ruby>下<rt>した</rt></ruby>です。</div>
+        <div class="word-romaji">gomibako wa tsukue no shita desu</div>
+        <div class="word-meaning">垃圾桶在桌子下面。（ごみ箱的連濁見 <a href="2026-08-15-x-ga-arimasen.html" style="color:var(--accent);">8/15</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私の家はコンビニの隣です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>はコンビニの<ruby>隣<rt>となり</rt></ruby>です。</div>
+        <div class="word-romaji">watashi no ie wa konbini no tonari desu</div>
+        <div class="word-meaning">我家在便利商店隔壁。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="銀行はスーパーと郵便局の間です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>銀<rt>ぎん</rt>行<rt>こう</rt></ruby>はスーパーと<ruby>郵<rt>ゆう</rt>便<rt>びん</rt>局<rt>きょく</rt></ruby>の<ruby>間<rt>あいだ</rt></ruby>です。</div>
+        <div class="word-romaji">ginkou wa suupaa to yuubinkyoku no aida desu</div>
+        <div class="word-meaning">銀行在超市和郵局之間。—— 間 一定是 <b>A と B の間</b> 兩個基準。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="駅は街の中です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>駅<rt>えき</rt></ruby>は<ruby>街<rt>まち</rt></ruby>の<ruby>中<rt>なか</rt></ruby>です。</div>
+        <div class="word-romaji">eki wa machi no naka desu</div>
+        <div class="word-meaning">車站在市區裡面。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、です 版和 あります 版差在哪</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    同一件事有三種說法，差別不在文法對錯，而在<strong>「誰是已知的、誰是新資訊」</strong>。
+    <a href="2026-08-14-arimasu.html" style="color:var(--accent);">8/14 Xがあります</a> 那課學的存在句在這裡剛好可以對照。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:38%">說法</th><th>語感</th></tr>
+    <tr class="key"><td><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>の<ruby>前<rt>まえ</rt></ruby><b>です</b>。</td><td>對方已經在問「商品呢？」——只回答位置。最短、最口語。</td></tr>
+    <tr><td><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>の<ruby>前<rt>まえ</rt></ruby><b>にあります</b>。</td><td>一樣以商品為主題，但把「存在」講出來，比較完整、正式。</td></tr>
+    <tr><td><ruby>棚<rt>たな</rt></ruby>の<ruby>前<rt>まえ</rt></ruby><b>に</b><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby><b>が</b>あります。</td><td>反過來：地點是已知的，<b>商品</b>才是新資訊（用 が 標）。</td></tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>位置詞後面接 に 才能配 あります</strong><br>
+    <span class="compare">棚の前</span> 是個名詞，要當「存在的地方」就得貼 <span class="j-mark">に</span>：
+    <b>棚の前<u>に</u>あります</b>。は 和 が 的分工見 <a href="2026-08-15-x-ga-arimasen.html" style="color:var(--accent);">8/15 Xがありません</a>。<br>
+    人和動物照樣換成 <span class="compare">います</span>：<ruby>猫<rt>ねこ</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>にいます。（<a href="2026-08-16-x-ga-imasu.html" style="color:var(--accent);">8/16 Xがいます</a>）
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、隣・そば・間 不要混</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>隣（となり）</h4>
+      <div class="vs-sub">同類的東西「並排」的緊鄰</div>
+      <ul>
+        <li>家の隣＝隔壁那戶（也是房子）</li>
+        <li>私の隣＝我旁邊的座位（也是人）</li>
+        <li>類別不同就不太說隣（×山の隣）</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>そば・近く（ちかく）</h4>
+      <div class="vs-sub">只講距離近，不管是不是同類</div>
+      <ul>
+        <li><ruby>駅<rt>えき</rt></ruby>のそば＝車站附近</li>
+        <li>そば＝更貼近；近く＝範圍鬆一點</li>
+        <li>問路最常用 <ruby>駅<rt>えき</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くです</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>「後ろ」不能拿來講時間</strong><br>
+    空間的後面＝<span class="compare">後ろ（うしろ）</span>；時間的之後＝<span class="compare">後（あと）</span>，同一個漢字兩個讀法。<br>
+    ○ <ruby>棚<rt>たな</rt></ruby>の<ruby>後<rt>うし</rt></ruby>ろです（在架子後面）／
+    ○ <ruby>三<rt>さん</rt>時<rt>じ</rt></ruby>の<ruby>後<rt>あと</rt></ruby>です（三點之後）／
+    ✗ 三時のうしろ
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、填空練習（課本 p.48）</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    課本這一頁的題型長這樣——空格要填的是<strong>「基準物 ＋ の」</strong>，不是只填基準物。
+    看到 <span class="compare">＿＿＿うしろです</span> 就先問自己：の 有沒有補上？
+  </p>
+
+  <div class="section">
+    <div class="section-title">✏️ しょうひんは ＿＿＿ うしろです。</div>
+
+    <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);">
+      空格填 <b>レジの</b> → <ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>はレジ<b>の</b><ruby>後<rt>うし</rt></ruby>ろです。（商品在收銀台後面）<br>
+      空格填 <b>棚の</b> → <ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は<ruby>棚<rt>たな</rt></ruby><b>の</b><ruby>後<rt>うし</rt></ruby>ろです。（商品在架子後面）<br>
+      空格填 <b>店の</b> → <ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は<ruby>店<rt>みせ</rt></ruby><b>の</b><ruby>後<rt>うし</rt></ruby>ろです。（商品在店的後面）
+    </p>
+
+    <div class="word-item" data-text="商品はレジの後ろです。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>はレジの<ruby>後<rt>うし</rt></ruby>ろです。</div>
+        <div class="word-romaji">shouhin wa reji no ushiro desu</div>
+        <div class="word-meaning">商品在收銀台後面。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>最常掉的分：漏掉 の</strong><br>
+    ✗ 商品は<u>レジ</u>後ろです。　○ 商品は<u>レジの</u>後ろです。<br>
+    名詞和名詞之間沒有 の 就黏不起來，這是這一頁唯一會被扣分的地方。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 五題</div>
+
+    <p style="font-size:15px;line-height:2;color:var(--ink-soft);">
+      1. 把「商品在架子上面」寫成日文（です 版）。<br>
+      2. 「<ruby>猫<rt>ねこ</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>（　）<ruby>下<rt>した</rt></ruby>です。」括號填什麼？<br>
+      3. 把第 1 題改成 あります 版，並說出多了哪個助詞。<br>
+      4. 「銀行在超市和郵局之間」怎麼說？<br>
+      5. 「三點之後」的「後」要唸 うしろ 還是 あと？為什麼？
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);margin-top:10px;">
+        1. <ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>です。（shouhin wa tana no ue desu）<br>
+        2. <b>の</b> —— 名詞接名詞的唯一接法。<br>
+        3. <ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>の<ruby>上<rt>うえ</rt></ruby><b>に</b>あります。多了 <span class="j-mark">に</span>，因為「棚の上」要當存在的場所。<br>
+        4. <ruby>銀<rt>ぎん</rt>行<rt>こう</rt></ruby>はスーパー<b>と</b><ruby>郵<rt>ゆう</rt>便<rt>びん</rt>局<rt>きょく</rt></ruby><b>の</b><ruby>間<rt>あいだ</rt></ruby>です。間 需要兩個基準，用 と 連起來。<br>
+        5. 唸 <b>あと</b>。うしろ 只能講空間（背後），時間的先後用 あと。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-18-machi-tana-shouhin.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">街・棚・商品の単語 <span class="next-arrow">→</span></span>
+    <span class="next-sub">街・道・後ろ・棚 四個訓讀詞，加上商店裡的 商品・値段・売り場・店員</span>
+  </a>
+
+  <a href="2026-08-14-arimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">Xがあります <span class="next-arrow">→</span></span>
+    <span class="next-sub">場所に＋物が＋あります；本篇的「〜の前にあります」就是把位置詞塞進那個場所欄</span>
+  </a>
+
+  <a href="2026-08-01-no-joshi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">助詞「の」 <span class="next-arrow">→</span></span>
+    <span class="next-sub">名詞接名詞的黏著劑，本篇的「棚の前」用的就是它</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

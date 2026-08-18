@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>街・棚・商品の単語 — 位置句要用到的名詞</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:rgba(255,255,255,.75);}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:1.9;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">街・棚・商品の<span class="accent">単語</span></h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 08 / 18</div>
+  <p class="page-subtitle">配合「XはYの<ruby>前<rt>まえ</rt></ruby>です」的名詞 — 四個訓讀詞，加上商店裡的商品相關字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    前半四個是訓讀（<ruby>街<rt>まち</rt></ruby>・<ruby>道<rt>みち</rt></ruby>・<ruby>後<rt>うし</rt></ruby>ろ・<ruby>棚<rt>たな</rt></ruby>），
+    讀音跟漢字音無關，要靠聯想；後半是商店裡的商品用字，全部音讀、台語對得整整齊齊。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、訓讀的四個</div>
+
+  <div class="section">
+    <div class="section-title">📖 街・道・後ろ・棚</div>
+
+    <div class="word-item" data-text="街">
+      <div class="word-content">
+        <div class="word-ja"><ruby>街<rt>まち</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>ま<span class="ar">↗</span>ち</span></span>
+          <span class="acc-note">尾高型</span>
+        </div>
+        <div class="word-romaji">machi</div>
+        <div class="word-meaning">市街、鬧區 — 有店家、有人潮的那種街區</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="道">
+      <div class="word-content">
+        <div class="word-ja"><ruby>道<rt>みち</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>みち<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">michi</div>
+        <div class="word-meaning">路、道路 — <a href="2026-08-11-joshi-o.html" style="color:var(--accent);">8/11 助詞 を</a> 學過「<ruby>道<rt>みち</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>きます」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="後ろ">
+      <div class="word-content">
+        <div class="word-ja"><ruby>後<rt>うし</rt></ruby>ろ</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>うしろ<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">ushiro</div>
+        <div class="word-meaning">後面（空間）— 同一個漢字唸 <span class="compare">あと</span> 時是時間的「之後」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="棚">
+      <div class="word-content">
+        <div class="word-ja"><ruby>棚<rt>たな</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>たな<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">tana</div>
+        <div class="word-meaning">架子、層架 — 超市擺商品的那種貨架也是 <ruby>棚<rt>たな</rt></ruby></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="本棚">
+      <div class="word-content">
+        <div class="word-ja"><ruby>本<rt>ほん</rt></ruby><ruby>棚<rt>だな</rt></ruby></div>
+        <div class="word-romaji">hondana</div>
+        <div class="word-meaning">書架 — 複合詞把 たな 濁化成 <b>だな</b>，跟 ごみ＋箱→ごみ<b>ば</b>こ 同一條規則（<a href="2026-08-15-x-ga-arimasen.html" style="color:var(--accent);">8/15</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — うしろ 和 たな</strong><br>
+    <b>後ろ（うしろ）</b>：拆成「<b>うし</b>（牛）＋ろ」，想成「<u>牛在後面</u>」——牛慢慢走，永遠跟在後面。<br>
+    <b>棚（たな）</b>：聽起來像台語的「<b>攤</b>（tann）」，攤子就是一層一層把東西擺出來給人看，跟貨架同一個畫面。
+    字形也幫得上忙：<span class="compare">棚</span>＝木＋朋，兩塊木板像朋友一樣並排，就是層架。
+  </div>
+
+  <div class="note">
+    📝 <strong>街・町・道 三個容易混</strong><br>
+    <span class="compare">街（まち）</span>和 <span class="compare">町（まち）</span>讀音一模一樣：<b>街</b>偏「熱鬧的商店街區」，
+    <b>町</b>偏「行政區劃、住的城鎮」（<a href="2026-06-24-sunde-imasu.html" style="color:var(--accent);">6/24 住んでいます</a> 用的是 町）。
+    <span class="compare">道（みち）</span>是「路」本身，不是區域——街 是面，道 是線。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、商品相關的字（音讀）</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這幾個都是漢語詞，讀音直接從中古音來，用台語唸一次就記住了。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 店裡會看到的字</div>
+
+    <div class="word-item" data-text="商品">
+      <div class="word-content">
+        <div class="word-ja"><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>しょうひん<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">shouhin</div>
+        <div class="word-meaning">商品 — 店裡賣的每一樣東西；<a href="2026-06-29-mos-burger-order.html" style="color:var(--accent);">摩斯點餐畫面</a>上也是這個字</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="値段">
+      <div class="word-content">
+        <div class="word-ja"><ruby>値<rt>ね</rt>段<rt>だん</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>ねだん<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">nedan</div>
+        <div class="word-meaning">價格 — 訓讀 <b>ね</b>（値＝值）＋音讀 <b>だん</b>（段），半訓半音的混血詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="売り場">
+      <div class="word-content">
+        <div class="word-ja"><ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>うりば<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">uriba</div>
+        <div class="word-meaning">賣場、專櫃 — <ruby>売<rt>う</rt></ruby>る（賣）＋<ruby>場<rt>ば</rt></ruby>（場）；場 單獨唸 ば/じょう，這裡也是連濁</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="店">
+      <div class="word-content">
+        <div class="word-ja"><ruby>店<rt>みせ</rt></ruby></div>
+        <div class="word-romaji">mise</div>
+        <div class="word-meaning">店、店面 — 訓讀；音讀是 <b>てん</b>（<ruby>店<rt>てん</rt>員<rt>いん</rt></ruby>・<ruby>商<rt>しょう</rt>店<rt>てん</rt>街<rt>がい</rt></ruby>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="店員">
+      <div class="word-content">
+        <div class="word-ja"><ruby>店<rt>てん</rt>員<rt>いん</rt></ruby></div>
+        <div class="word-romaji">ten'in</div>
+        <div class="word-meaning">店員 — 講到店員本人時多半加 さん：<a href="2026-06-17-tono.html" style="color:var(--accent);">店員さんとの会話</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="商店街">
+      <div class="word-content">
+        <div class="word-ja"><ruby>商<rt>しょう</rt>店<rt>てん</rt>街<rt>がい</rt></ruby></div>
+        <div class="word-romaji">shoutengai</div>
+        <div class="word-meaning">商店街 — 三個字全是音讀，<b>街</b> 在這裡不唸 まち 而是 <b>がい</b></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 商店街＝台語直接搬過去</strong><br>
+    <ruby>商<rt>しょう</rt>店<rt>てん</rt>街<rt>がい</rt></ruby> 三個字拆開，每個都對得上台語：<br>
+    <span class="compare">商</span> siong → <b>しょう</b>（商品）｜
+    <span class="compare">店</span> tiam → <b>てん</b>（店員）｜
+    <span class="compare">街</span> kai → <b>がい</b>（商店街）<br>
+    所以看到「街」不要反射性唸 まち——<u>單獨出現才唸訓讀 まち，跟別的漢字組成詞就唸 がい</u>。
+    同一條規則：<span class="compare">段</span> tuan → <b>だん</b>（値段・<ruby>階<rt>かい</rt>段<rt>だん</rt></ruby>）、
+    <span class="compare">品</span> phin → <b>ひん</b>（商品・<ruby>品<rt>しな</rt>物<rt>もの</rt></ruby>的 品 則唸訓讀 しな）。
+  </div>
+
+  <table class="joshi-table">
+    <tr><th style="width:22%">漢字</th><th style="width:24%">訓讀（單獨用）</th><th>音讀（組成詞）</th></tr>
+    <tr class="key"><td><b>街</b></td><td>まち — 市街</td><td>がい — <ruby>商<rt>しょう</rt>店<rt>てん</rt>街<rt>がい</rt></ruby></td></tr>
+    <tr><td><b>道</b></td><td>みち — 路</td><td>どう — <ruby>道<rt>どう</rt>路<rt>ろ</rt></ruby>・<ruby>北<rt>ほっ</rt>海<rt>かい</rt>道<rt>どう</rt></ruby></td></tr>
+    <tr><td><b>店</b></td><td>みせ — 店</td><td>てん — <ruby>店<rt>てん</rt>員<rt>いん</rt></ruby>・<ruby>書<rt>しょ</rt>店<rt>てん</rt></ruby></td></tr>
+    <tr><td><b>後</b></td><td>うし（ろ）／あと</td><td>ご — <ruby>午<rt>ご</rt>後<rt>ご</rt></ruby></td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、套進今天的句型</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    今天的文法課是 <a href="2026-08-18-x-wa-y-no-mae.html" style="color:var(--accent);">XはYの前です</a>，
+    把上面的單字直接塞進去就是完整句子。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="商品は棚の上にあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は<ruby>棚<rt>たな</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>にあります。</div>
+        <div class="word-romaji">shouhin wa tana no ue ni arimasu</div>
+        <div class="word-meaning">商品在架子上面。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="売り場はレジの後ろです。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>はレジの<ruby>後<rt>うし</rt></ruby>ろです。</div>
+        <div class="word-romaji">uriba wa reji no ushiro desu</div>
+        <div class="word-meaning">賣場在收銀台後面。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="この商品の値段はいくらですか。">
+      <div class="word-content">
+        <div class="word-ja">この<ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>の<ruby>値<rt>ね</rt>段<rt>だん</rt></ruby>はいくらですか。</div>
+        <div class="word-romaji">kono shouhin no nedan wa ikura desu ka</div>
+        <div class="word-meaning">這個商品的價格是多少？（<a href="2026-07-29-kono-sono-ano.html" style="color:var(--accent);">この 見 7/29</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="店は道の右です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>店<rt>みせ</rt></ruby>は<ruby>道<rt>みち</rt></ruby>の<ruby>右<rt>みぎ</rt></ruby>です。</div>
+        <div class="word-romaji">mise wa michi no migi desu</div>
+        <div class="word-meaning">店在路的右邊。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="街に商店街があります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>街<rt>まち</rt></ruby>に<ruby>商<rt>しょう</rt>店<rt>てん</rt>街<rt>がい</rt></ruby>があります。</div>
+        <div class="word-romaji">machi ni shoutengai ga arimasu</div>
+        <div class="word-meaning">市區裡有商店街。（<a href="2026-08-14-arimasu.html" style="color:var(--accent);">あります 見 8/14</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="店員さんは棚の前にいます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>店<rt>てん</rt>員<rt>いん</rt></ruby>さんは<ruby>棚<rt>たな</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>にいます。</div>
+        <div class="word-romaji">ten'in san wa tana no mae ni imasu</div>
+        <div class="word-meaning">店員在架子前面。人用 <span class="compare">います</span>（<a href="2026-08-16-x-ga-imasu.html" style="color:var(--accent);">8/16</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 五題</div>
+
+    <p style="font-size:15px;line-height:2;color:var(--ink-soft);">
+      1. 「架子」的日文怎麼寫、怎麼唸？「書架」呢？<br>
+      2. <b>商店街</b> 的「街」唸什麼？跟單獨的「街」差在哪？<br>
+      3. 把「商品在收銀台後面」寫成日文。<br>
+      4. 「價格」的日文是哪兩個字組成的？各是訓讀還是音讀？<br>
+      5. 街・町・道 三個詞的差別各用一句話說明。
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);margin-top:10px;">
+        1. <ruby>棚<rt>たな</rt></ruby>（tana）；書架是 <ruby>本<rt>ほん</rt></ruby><ruby>棚<rt>だな</rt></ruby>（hondana），たな 連濁成 だな。<br>
+        2. 唸 <b>がい</b>（音讀）；單獨用時唸訓讀 <b>まち</b>。跟別的漢字組成漢語詞就切換成音讀。<br>
+        3. <ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>はレジの<ruby>後<rt>うし</rt></ruby>ろです。（shouhin wa reji no ushiro desu）別漏掉 <b>の</b>。<br>
+        4. <ruby>値<rt>ね</rt>段<rt>だん</rt></ruby>＝<b>値（ね）訓讀</b> ＋ <b>段（だん）音讀</b>，混血詞。<br>
+        5. 街＝熱鬧的商店區（面）／町＝住的城鎮、行政區（面）／道＝路本身（線）。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-18-x-wa-y-no-mae.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">XはYの前です <span class="next-arrow">→</span></span>
+    <span class="next-sub">位置詞是名詞，要用 の 接起來；十個位置詞與 です／あります 兩種說法的差別</span>
+  </a>
+
+  <a href="2026-08-16-reji-renji.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">レジ と レンジ <span class="next-arrow">→</span></span>
+    <span class="next-sub">收銀台的 レジ 就是今天例句裡那個；順便複習 ン／ソ 的分辨</span>
+  </a>
+
+  <a href="2026-06-27-vocab-shopping.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">購物・網購的單字 <span class="next-arrow">→</span></span>
+    <span class="next-sub">旬・送料 這些看商品頁會遇到的字，跟今天的 商品・値段 是同一組場景</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

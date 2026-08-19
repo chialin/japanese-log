@@ -108,12 +108,16 @@
 
   function renderAnki() {
     const a = $('anki-link');
+    // 按鈕只寫動作不寫檔名（檔名下載時看得到），200px 側欄才塞得下
+    const years = new Set(months.map((mo) => mo.slice(0, 4)));
     if (state.month === 'all') {
       a.href = 'anki/tango-all.apkg';
-      a.textContent = '⬇ 全部 tango-all.apkg';
+      a.textContent = '⬇ 下載完整牌組';
     } else {
+      const [y, mo] = state.month.split('-');
+      const mLabel = years.size > 1 ? `${y}年${parseInt(mo, 10)}月` : `${parseInt(mo, 10)}月`;
       a.href = `anki/tango-${state.month}.apkg`;
-      a.textContent = `⬇ tango-${state.month}.apkg`;
+      a.textContent = `⬇ 下載 ${mLabel}牌組`;
     }
     a.setAttribute('download', '');
     $('anki-meta').textContent = window.VOCAB_META

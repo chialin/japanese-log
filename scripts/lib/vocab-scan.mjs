@@ -46,10 +46,17 @@ export function extractFromHtml(html) {
   };
 
   for (const m of html.matchAll(
-    /<div class="word-item[^"]*"[^>]*data-text="([^"]*)"[^>]*>([\s\S]*?)<button class="play-btn"/g
+    /<div class="word-item[^>]*>([\s\S]*?)<\/button>/g
   )) {
-    const chunk = m[2];
-    push(m[1], field(chunk, 'word-ja'), field(chunk, 'word-romaji'),
+    const chunk = m[1];
+    const fullDiv = m[0].match(/<div[^>]*>/)[0];  // 取開標籤
+    let dtMatch = /data-text="([^"]*)"/.exec(fullDiv);
+    if (!dtMatch) {
+      // fallback 取 button 上的 data-text（舊課程格式）
+      dtMatch = /<button[^>]*data-text="([^"]*)"/.exec(m[0]);
+    }
+    if (!dtMatch) continue;
+    push(dtMatch[1], field(chunk, 'word-ja'), field(chunk, 'word-romaji'),
       field(chunk, 'word-meaning'), 'word', accentOf(chunk));
   }
 

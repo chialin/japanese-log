@@ -36,6 +36,25 @@ test('extractFromHtml：word-item 完整欄位', () => {
   assert.ok(w.accent.includes('acc-note'));
 });
 
+const WORD_ITEM_BUTTON_TEXT = `
+<div class="word-item">
+  <div class="word-content">
+    <div class="word-ja">あお</div>
+    <div class="word-romaji">ao</div>
+    <div class="word-meaning">藍色、青色</div>
+  </div>
+  <button class="play-btn" data-text="あお">▶</button>
+</div>`;
+
+test('extractFromHtml：word-item（data-text 掛在 button 上，舊課程格式）', () => {
+  const [w] = extractFromHtml(WORD_ITEM_BUTTON_TEXT);
+  assert.equal(w.text, 'あお');
+  assert.equal(w.kana, 'あお');
+  assert.equal(w.romaji, 'ao');
+  assert.equal(w.meaning, '藍色、青色');
+  assert.equal(w.kind, 'word');
+});
+
 const PHRASE_OLD = `
 <div class="phrase" data-text="またあした">
   <div class="phrase-content">

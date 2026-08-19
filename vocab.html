@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単語帳 — 學過的單字都在這裡查</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+/* 単語帳 — 小豆／海老茶色票 */
+:root{--paper:#fbf3f1;--paper-deep:#f2e0dc;--ink:#2a1412;--ink-soft:#48231f;--ink-mute:#85524b;--accent:#96504b;--accent-soft:#cfa09b;--accent-pale:#f3ddda;--line:#e9cbc6;--bg-spot-1:#f9ece8;--bg-spot-2:#f1d9d2;}
+.wrap{max-width:1020px}
+.vlayout{display:grid;grid-template-columns:1fr 200px;gap:26px;align-items:start}
+.vpanel{position:sticky;top:16px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px}
+.vpanel h3{font-size:13px;color:var(--ink-mute);margin:0 0 8px;font-weight:600;letter-spacing:.05em}
+.vpanel h3:not(:first-of-type){margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.vpanel summary{list-style:none;cursor:pointer;font-size:14px;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center}
+.vpanel summary::-webkit-details-marker{display:none}
+.vpanel summary .cur{color:var(--accent);font-weight:600}
+.vpanel summary .caret{color:var(--ink-mute);font-size:12px}
+.month-list{list-style:none;margin:0;padding:0;font-size:14px}
+.month-list a{display:flex;justify-content:space-between;color:var(--ink-soft);text-decoration:none;padding:4px 8px;border-radius:8px}
+.month-list a.on{background:var(--accent-pale);color:var(--accent);font-weight:600}
+.month-list .n,.tag-cloud .n{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:12px}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.tag-cloud a{display:inline-flex;align-items:baseline;gap:4px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink-soft);text-decoration:none;font-size:13px}
+.tag-cloud a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.tag-cloud a.on .n{color:#fff;opacity:.8}
+.anki-box{margin-top:16px;padding:10px 12px;border:1px dashed var(--accent-soft);border-radius:10px;background:var(--bg-spot-1);font-size:12px;color:var(--ink-soft)}
+.anki-box .btn{display:block;text-align:center;margin-top:8px;padding:7px 0;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-size:13px}
+.anki-box .sub{margin-top:6px;color:var(--ink-mute);font-size:11px;line-height:1.6}
+.vsearch{width:100%;box-sizing:border-box;font-family:'Noto Serif TC',serif;font-size:16px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none;margin-bottom:8px}
+.result-count{font-size:13px;color:var(--ink-mute);margin:0 0 10px 4px;font-style:italic;font-family:'Cormorant Garamond',serif}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:14px}
+.vcard{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 16px 12px}
+.vcard .vtag{position:absolute;top:12px;right:12px;font-size:11px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--ink-mute);background:var(--paper)}
+.vcard .vja{font-family:'Shippori Mincho',serif;font-size:25px;color:var(--ink)}
+.vcard .vromaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px}
+.vcard .vacc{font-size:13px;margin-top:2px}
+.vcard .vmean{font-size:14px;color:var(--ink-soft);margin-top:6px}
+.vcard .vfoot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px}
+.vcard .vfoot a{color:var(--accent);text-decoration:none}
+.load-more{margin:22px 0 6px;text-align:center}
+.load-more .bar{font-size:12px;color:var(--ink-mute);margin-bottom:8px;font-family:'Cormorant Garamond',serif;font-style:italic}
+.load-more button{font-family:'Noto Serif TC',serif;font-size:14px;color:var(--accent);background:#fff;border:1px solid var(--accent-soft);border-radius:999px;padding:8px 26px;cursor:pointer;display:none}
+@media(max-width:640px){
+  .vlayout{grid-template-columns:1fr}
+  .vpanel{position:static;order:-1;padding:0}
+  .vpanel summary{padding:10px 14px}
+  .vpanel .panel-body{padding:0 16px 14px}
+}
+@media(min-width:641px){.vpanel summary{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<script src="js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">単語<span class="accent">帳</span></h1>
+  <div class="page-meta">檢索 · Vocabulary Index · 自動產生</div>
+  <p class="page-subtitle">學過的單字都在這裡——用日文・假名・romaji・中文都能查</p>
+  <div class="speed-control"><input type="range" min="0.5" max="1.2" step="0.1" value="1" aria-label="發音速度"></div>
+
+  <div class="vlayout">
+    <main>
+      <input class="vsearch" id="q" type="search" placeholder="搜尋：日文・假名・romaji・中文">
+      <div class="result-count" id="count"></div>
+      <div class="card-grid" id="grid"></div>
+      <div class="load-more">
+        <div class="bar" id="shown-bar"></div>
+        <button id="more">載入更多</button>
+        <div id="sentinel"></div>
+      </div>
+    </main>
+    <aside class="vpanel">
+      <details id="filters" open>
+        <summary><span>篩選：<span class="cur" id="cur-label"></span></span><span class="caret">▾</span></summary>
+        <div class="panel-body">
+          <h3>分類 TAG</h3>
+          <div class="tag-cloud" id="tags"></div>
+          <h3>月份</h3>
+          <ul class="month-list" id="months"></ul>
+          <div class="anki-box">
+            <b>Anki 牌組</b>（隨課程更新）
+            <a class="btn" id="anki-link" href="#">⬇ Anki</a>
+            <div class="sub">重複匯入只會加新卡，複習進度保留。卡片帶分類與月份 tag，
+            Anki 內可用 Custom Study 按 tag 練。<span id="anki-meta"></span></div>
+          </div>
+        </div>
+      </details>
+    </aside>
+  </div>
+
+<site-footer></site-footer>
+</div>
+<script src="js/vocab-data.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/vocab-page.js"></script>
+</body>
+</html>

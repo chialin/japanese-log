@@ -9,3 +9,4 @@ anki/venv/
 anki/audio_cache/
 /*.epub
 .cache/
+mockups/

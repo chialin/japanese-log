@@ -23,7 +23,15 @@
   }
 
   function label() {
-    const m = state.month === 'all' ? '全部' : state.month.replace('2026-0', '').replace('2026-', '') + '月';
+    // 資料裡存在多個年份時（跨年後）月份要帶年份消歧，單一年份時只顯示「N月」
+    const years = new Set(months.map((mo) => mo.slice(0, 4)));
+    let m;
+    if (state.month === 'all') {
+      m = '全部';
+    } else {
+      const [y, mo] = state.month.split('-');
+      m = years.size > 1 ? `${y}年${parseInt(mo, 10)}月` : `${parseInt(mo, 10)}月`;
+    }
     return state.tag ? `${m} × ${state.tag}` : m;
   }
 

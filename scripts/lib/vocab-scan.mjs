@@ -15,6 +15,16 @@ export function plainText(html) {
   return stripTags(html.replace(/<rt>[\s\S]*?<\/rt>/g, ''));
 }
 
+// ja 欄位是要直接塞進 vocab.html 卡片顯示的，但課程頁的 word-ja 常帶著課程頁
+// 專屬的裝飾標籤（<span class="j-mark">助詞</span>、<strong>活用語尾</strong>），
+// vocab.html 沒有那些 CSS，顯示會退化成無樣式的 span/strong。
+// 只留 <ruby>/<rt>（含結尾標籤），其他標籤剝掉、文字保留。
+export function sanitizeJa(html) {
+  return html.replace(/<\/?([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>/g, (tag, name) =>
+    /^(ruby|rt)$/i.test(name) ? tag : ''
+  );
+}
+
 // 取 chunk 內第一個 <div class="cls">…</div> 的內文（欄位 div 內不會再有巢狀 div）
 function field(chunk, ...classes) {
   for (const cls of classes) {
@@ -36,7 +46,7 @@ export function extractFromHtml(html) {
     if (!text) return;
     out.push({
       text,
-      ja: jaHtml.trim(),
+      ja: sanitizeJa(jaHtml.trim()),
       kana: kanaOf(jaHtml),
       romaji: plainText(romaji),
       meaning: plainText(meaning),

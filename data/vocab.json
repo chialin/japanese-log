@@ -3761,7 +3761,7 @@
   },
   {
    "text": "音楽を聞いている",
-   "ja": "<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いて<strong>いる</strong>",
+   "ja": "<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いている",
    "kana": "おんがくをきいている",
    "romaji": "ongaku o kiite iru",
    "meaning": "在聽音樂 — 動作進行中",
@@ -3779,7 +3779,7 @@
   },
   {
    "text": "音楽を聞いていた",
-   "ja": "<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いて<strong>いた</strong>",
+   "ja": "<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いていた",
    "kana": "おんがくをきいていた",
    "romaji": "ongaku o kiite ita",
    "meaning": "那時在聽音樂 — 只動最後一個字就變過去",
@@ -4216,7 +4216,7 @@
   },
   {
    "text": "映画を見ます",
-   "ja": "<ruby>映画<rt>えいが</rt></ruby><span class=\"j-mark\">を</span><ruby>見<rt>み</rt></ruby>ます",
+   "ja": "<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます",
    "kana": "えいがをみます",
    "romaji": "eiga o mimasu",
    "meaning": "看電影 — 看的對象是電影",
@@ -4234,7 +4234,7 @@
   },
   {
    "text": "本を読みます",
-   "ja": "<ruby>本<rt>ほん</rt></ruby><span class=\"j-mark\">を</span><ruby>読<rt>よ</rt></ruby>みます",
+   "ja": "<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます",
    "kana": "ほんをよみます",
    "romaji": "hon o yomimasu",
    "meaning": "讀書 — 讀的對象是書",
@@ -4252,7 +4252,7 @@
   },
   {
    "text": "パソコンを買います",
-   "ja": "パソコン<span class=\"j-mark\">を</span><ruby>買<rt>か</rt></ruby>います",
+   "ja": "パソコンを<ruby>買<rt>か</rt></ruby>います",
    "kana": "パソコンをかいます",
    "romaji": "pasokon o kaimasu",
    "meaning": "買電腦 — 買的對象是電腦",
@@ -4276,7 +4276,7 @@
   },
   {
    "text": "料理を作ります",
-   "ja": "<ruby>料理<rt>りょうり</rt></ruby><span class=\"j-mark\">を</span><ruby>作<rt>つく</rt></ruby>ります",
+   "ja": "<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ります",
    "kana": "りょうりをつくります",
    "romaji": "ryouri o tsukurimasu",
    "meaning": "做菜 — 做的對象是菜",
@@ -4294,7 +4294,7 @@
   },
   {
    "text": "橋を渡ります",
-   "ja": "<ruby>橋<rt>はし</rt></ruby><span class=\"j-mark\">を</span><ruby>渡<rt>わた</rt></ruby>ります",
+   "ja": "<ruby>橋<rt>はし</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>ります",
    "kana": "はしをわたります",
    "romaji": "hashi o watarimasu",
    "meaning": "過橋 — 橋是穿過去的東西，不是終點",
@@ -4312,7 +4312,7 @@
   },
   {
    "text": "道を歩きます",
-   "ja": "<ruby>道<rt>みち</rt></ruby><span class=\"j-mark\">を</span><ruby>歩<rt>ある</rt></ruby>きます",
+   "ja": "<ruby>道<rt>みち</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>きます",
    "kana": "みちをあるきます",
    "romaji": "michi o arukimasu",
    "meaning": "走在路上 — 沿著路移動",
@@ -4330,7 +4330,7 @@
   },
   {
    "text": "公園を散歩します",
-   "ja": "<ruby>公園<rt>こうえん</rt></ruby><span class=\"j-mark\">を</span><ruby>散歩<rt>さんぽ</rt></ruby>します",
+   "ja": "<ruby>公園<rt>こうえん</rt></ruby>を<ruby>散歩<rt>さんぽ</rt></ruby>します",
    "kana": "こうえんをさんぽします",
    "romaji": "kouen o sanpo shimasu",
    "meaning": "在公園散步 — 在公園裡面到處走動",
@@ -4348,7 +4348,7 @@
   },
   {
    "text": "家を出ます",
-   "ja": "<ruby>家<rt>いえ</rt></ruby><span class=\"j-mark\">を</span><ruby>出<rt>で</rt></ruby>ます",
+   "ja": "<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ます",
    "kana": "いえをでます",
    "romaji": "ie o demasu",
    "meaning": "出門、離開家 — 從家這個範圍裡出來",
@@ -4366,7 +4366,7 @@
   },
   {
    "text": "電車を降ります",
-   "ja": "<ruby>電車<rt>でんしゃ</rt></ruby><span class=\"j-mark\">を</span><ruby>降<rt>お</rt></ruby>ります",
+   "ja": "<ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります",
    "kana": "でんしゃをおります",
    "romaji": "densha o orimasu",
    "meaning": "下電車 — 從車廂裡出來",
@@ -4384,7 +4384,7 @@
   },
   {
    "text": "大学を卒業します",
-   "ja": "<ruby>大学<rt>だいがく</rt></ruby><span class=\"j-mark\">を</span><ruby>卒業<rt>そつぎょう</rt></ruby>します",
+   "ja": "<ruby>大学<rt>だいがく</rt></ruby>を<ruby>卒業<rt>そつぎょう</rt></ruby>します",
    "kana": "だいがくをそつぎょうします",
    "romaji": "daigaku o sotsugyou shimasu",
    "meaning": "大學畢業 — 「離開」不一定是實體空間，組織也算",
@@ -4568,7 +4568,7 @@
   },
   {
    "text": "一緒に行きませんか",
-   "ja": "<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きません<span class=\"j-mark\">か</span>",
+   "ja": "<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きませんか",
    "kana": "いっしょにいきませんか",
    "romaji": "issho ni ikimasen ka",
    "meaning": "要不要一起去？ — ませんか＝客氣地邀請對方，把決定權留給對方",
@@ -4643,7 +4643,7 @@
   },
   {
    "text": "私は映画を見ます",
-   "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>映画<rt>えいが</rt></ruby><span class=\"j-mark\">を</span><ruby>見<rt>み</rt></ruby>ます",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます",
    "kana": "わたしはえいがをみます",
    "romaji": "watashi wa eiga o mimasu",
    "meaning": "我看電影 — 看的對象是電影",
@@ -4661,7 +4661,7 @@
   },
   {
    "text": "彼女は料理を作ります",
-   "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby><span class=\"j-mark\">を</span><ruby>作<rt>つく</rt></ruby>ります",
+   "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ります",
    "kana": "かのじょはりょうりをつくります",
    "romaji": "kanojo wa ryouri o tsukurimasu",
    "meaning": "她做菜 — 做的對象是菜",
@@ -4788,7 +4788,7 @@
   },
   {
    "text": "山へ行きます",
-   "ja": "<ruby>山<rt>やま</rt></ruby><span class=\"j-mark\">へ</span> <ruby>行<rt>い</rt></ruby>きます。",
+   "ja": "<ruby>山<rt>やま</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。",
    "kana": "やまへ いきます。",
    "romaji": "yama e ikimasu.",
    "meaning": "去山上。 — 換成「山に行きます」也完全正確",
@@ -4806,7 +4806,7 @@
   },
   {
    "text": "温泉へ行きます",
-   "ja": "<ruby>温泉<rt>おんせん</rt></ruby><span class=\"j-mark\">へ</span> <ruby>行<rt>い</rt></ruby>きます。",
+   "ja": "<ruby>温泉<rt>おんせん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。",
    "kana": "おんせんへ いきます。",
    "romaji": "onsen e ikimasu.",
    "meaning": "去泡溫泉。",
@@ -4824,7 +4824,7 @@
   },
   {
    "text": "観光地へ行きます",
-   "ja": "<ruby>観光地<rt>かんこうち</rt></ruby><span class=\"j-mark\">へ</span> <ruby>行<rt>い</rt></ruby>きます。",
+   "ja": "<ruby>観光地<rt>かんこうち</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。",
    "kana": "かんこうちへ いきます。",
    "romaji": "kankouchi e ikimasu.",
    "meaning": "去觀光景點。",
@@ -4899,7 +4899,7 @@
   },
   {
    "text": "旦那と一緒に温泉へ行きます",
-   "ja": "<ruby>旦那<rt>だんな</rt></ruby><span class=\"j-mark\">と</span> <ruby>一緒<rt>いっしょ</rt></ruby>に <ruby>温泉<rt>おんせん</rt></ruby><span class=\"j-mark\">へ</span> <ruby>行<rt>い</rt></ruby>きます。",
+   "ja": "<ruby>旦那<rt>だんな</rt></ruby>と <ruby>一緒<rt>いっしょ</rt></ruby>に <ruby>温泉<rt>おんせん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。",
    "kana": "だんなと いっしょに おんせんへ いきます。",
    "romaji": "danna to issho ni onsen e ikimasu.",
    "meaning": "和先生一起去泡溫泉。 — 〜と一緒に＝跟〜一起，8/4 出現過",
@@ -4918,7 +4918,7 @@
   },
   {
    "text": "私と同じです",
-   "ja": "<ruby>私<rt>わたし</rt></ruby><span class=\"j-mark\">と</span> <ruby>同<rt>おな</rt></ruby>じです。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>と <ruby>同<rt>おな</rt></ruby>じです。",
    "kana": "わたしと おなじです。",
    "romaji": "watashi to onaji desu.",
    "meaning": "跟我一樣。 — 比較「相同」用 同じ",
@@ -4936,7 +4936,7 @@
   },
   {
    "text": "同じ観光地へ行きました",
-   "ja": "<ruby>同<rt>おな</rt></ruby>じ <ruby>観光地<rt>かんこうち</rt></ruby><span class=\"j-mark\">へ</span> <ruby>行<rt>い</rt></ruby>きました。",
+   "ja": "<ruby>同<rt>おな</rt></ruby>じ <ruby>観光地<rt>かんこうち</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きました。",
    "kana": "おなじ かんこうちへ いきました。",
    "romaji": "onaji kankouchi e ikimashita.",
    "meaning": "去了同一個觀光景點。 — 同じ 直接接名詞，中間不加 な、也不加 の",
@@ -5067,7 +5067,7 @@
   },
   {
    "text": "へんな音が聞こえます",
-   "ja": "へんな<ruby>音<rt>おと</rt></ruby><span class=\"j-mark\">が</span> <ruby>聞<rt>き</rt></ruby>こえます。",
+   "ja": "へんな<ruby>音<rt>おと</rt></ruby>が <ruby>聞<rt>き</rt></ruby>こえます。",
    "kana": "へんなおとが きこえます。",
    "romaji": "hen na oto ga kikoemasu.",
    "meaning": "聽到奇怪的聲音。 — 不是你去聽，是它自己傳來的",
@@ -5085,7 +5085,7 @@
   },
   {
    "text": "音楽を聞きます",
-   "ja": "<ruby>音楽<rt>おんがく</rt></ruby><span class=\"j-mark\">を</span> <ruby>聞<rt>き</rt></ruby>きます。",
+   "ja": "<ruby>音楽<rt>おんがく</rt></ruby>を <ruby>聞<rt>き</rt></ruby>きます。",
    "kana": "おんがくを ききます。",
    "romaji": "ongaku o kikimasu.",
    "meaning": "我聽音樂。 — 我打開來聽的，有意志。7/27 學過",
@@ -5103,7 +5103,7 @@
   },
   {
    "text": "先生に聞きます",
-   "ja": "<ruby>先生<rt>せんせい</rt></ruby><span class=\"j-mark\">に</span> <ruby>聞<rt>き</rt></ruby>きます。",
+   "ja": "<ruby>先生<rt>せんせい</rt></ruby>に <ruby>聞<rt>き</rt></ruby>きます。",
    "kana": "せんせいに ききます。",
    "romaji": "sensei ni kikimasu.",
    "meaning": "我問老師。 — 同一個字也是「問」，對象用 に",
@@ -5140,7 +5140,7 @@
   },
   {
    "text": "富士山が見えます",
-   "ja": "<ruby>富士山<rt>ふじさん</rt></ruby><span class=\"j-mark\">が</span> <ruby>見<rt>み</rt></ruby>えます。",
+   "ja": "<ruby>富士山<rt>ふじさん</rt></ruby>が <ruby>見<rt>み</rt></ruby>えます。",
    "kana": "ふじさんが みえます。",
    "romaji": "fujisan ga miemasu.",
    "meaning": "看得到富士山。 — 不是你努力去看，是它就在那裡",
@@ -5158,7 +5158,7 @@
   },
   {
    "text": "ここから海が見えます",
-   "ja": "ここから<ruby>海<rt>うみ</rt></ruby><span class=\"j-mark\">が</span> <ruby>見<rt>み</rt></ruby>えます。",
+   "ja": "ここから<ruby>海<rt>うみ</rt></ruby>が <ruby>見<rt>み</rt></ruby>えます。",
    "kana": "ここからうみが みえます。",
    "romaji": "koko kara umi ga miemasu.",
    "meaning": "從這裡看得到海。 — から＝從哪裡",
@@ -5657,7 +5657,7 @@
   },
   {
    "text": "ゆうびんきょくは どこですか",
-   "ja": "<ruby>郵便局<rt>ゆうびんきょく</rt></ruby><span class=\"j-mark\">は</span> どこですか",
+   "ja": "<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>は どこですか",
    "kana": "ゆうびんきょくは どこですか",
    "romaji": "yūbinkyoku wa doko desu ka",
    "meaning": "郵局在哪裡？",
@@ -5676,7 +5676,7 @@
   },
   {
    "text": "えきは どこですか",
-   "ja": "<ruby>駅<rt>えき</rt></ruby><span class=\"j-mark\">は</span> どこですか",
+   "ja": "<ruby>駅<rt>えき</rt></ruby>は どこですか",
    "kana": "えきは どこですか",
    "romaji": "eki wa doko desu ka",
    "meaning": "車站在哪裡？",
@@ -5695,7 +5695,7 @@
   },
   {
    "text": "トイレは どこですか",
-   "ja": "トイレ<span class=\"j-mark\">は</span> どこですか",
+   "ja": "トイレは どこですか",
    "kana": "トイレは どこですか",
    "romaji": "toire wa doko desu ka",
    "meaning": "廁所在哪裡？ — 使用頻率最高的一句，先背這句",
@@ -5714,7 +5714,7 @@
   },
   {
    "text": "バスていは どこですか",
-   "ja": "バス<ruby>停<rt>てい</rt></ruby><span class=\"j-mark\">は</span> どこですか",
+   "ja": "バス<ruby>停<rt>てい</rt></ruby>は どこですか",
    "kana": "バスていは どこですか",
    "romaji": "basutei wa doko desu ka",
    "meaning": "公車站在哪裡？ — 7/29 學過「バス停はここです」，正好是這句的答句",
@@ -5733,7 +5733,7 @@
   },
   {
    "text": "ここは どこですか",
-   "ja": "ここ<span class=\"j-mark\">は</span> どこですか",
+   "ja": "ここは どこですか",
    "kana": "ここは どこですか",
    "romaji": "koko wa doko desu ka",
    "meaning": "這裡是哪裡？ — 迷路時用",
@@ -5806,7 +5806,7 @@
   },
   {
    "text": "バスに のりますか",
-   "ja": "バス<span class=\"j-mark\">に</span> <ruby>乗<rt>の</rt></ruby>りますか",
+   "ja": "バスに <ruby>乗<rt>の</rt></ruby>りますか",
    "kana": "バスに のりますか",
    "romaji": "basu ni norimasu ka",
    "meaning": "你搭公車嗎？ — 句尾 か＝疑問",
@@ -5825,7 +5825,7 @@
   },
   {
    "text": "でんしゃに のります",
-   "ja": "<ruby>電車<rt>でんしゃ</rt></ruby><span class=\"j-mark\">に</span> <ruby>乗<rt>の</rt></ruby>ります",
+   "ja": "<ruby>電車<rt>でんしゃ</rt></ruby>に <ruby>乗<rt>の</rt></ruby>ります",
    "kana": "でんしゃに のります",
    "romaji": "densha ni norimasu",
    "meaning": "搭電車 — 7/11 電車廣播課學過這個詞",
@@ -5843,7 +5843,7 @@
   },
   {
    "text": "えきで でんしゃを おります",
-   "ja": "<ruby>駅<rt>えき</rt></ruby><span class=\"j-mark\">で</span> <ruby>電車<rt>でんしゃ</rt></ruby><span class=\"j-mark\">を</span> <ruby>降<rt>お</rt></ruby>ります",
+   "ja": "<ruby>駅<rt>えき</rt></ruby>で <ruby>電車<rt>でんしゃ</rt></ruby>を <ruby>降<rt>お</rt></ruby>ります",
    "kana": "えきで でんしゃを おります",
    "romaji": "eki de densha o orimasu",
    "meaning": "在車站下電車 — 上車用 に，下車用 を",
@@ -5879,7 +5879,7 @@
   },
   {
    "text": "でんしゃを よく つかいます",
-   "ja": "<ruby>電車<rt>でんしゃ</rt></ruby><span class=\"j-mark\">を</span> よく <ruby>使<rt>つか</rt></ruby>います",
+   "ja": "<ruby>電車<rt>でんしゃ</rt></ruby>を よく <ruby>使<rt>つか</rt></ruby>います",
    "kana": "でんしゃを よく つかいます",
    "romaji": "densha o yoku tsukaimasu",
    "meaning": "我常搭電車 —「使う」是及物動詞，所以這裡用 を",
@@ -5897,7 +5897,7 @@
   },
   {
    "text": "ときどき バスに のります",
-   "ja": "<ruby>時々<rt>ときどき</rt></ruby> バス<span class=\"j-mark\">に</span> <ruby>乗<rt>の</rt></ruby>ります",
+   "ja": "<ruby>時々<rt>ときどき</rt></ruby> バスに <ruby>乗<rt>の</rt></ruby>ります",
    "kana": "ときどき バスに のります",
    "romaji": "tokidoki basu ni norimasu",
    "meaning": "我有時候搭公車",
@@ -5934,7 +5934,7 @@
   },
   {
    "text": "すみません、ゆうびんきょくは どこですか",
-   "ja": "すみません、<ruby>郵便局<rt>ゆうびんきょく</rt></ruby><span class=\"j-mark\">は</span> どこですか。",
+   "ja": "すみません、<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>は どこですか。",
    "kana": "すみません、ゆうびんきょくは どこですか。",
    "romaji": "sumimasen, yūbinkyoku wa doko desu ka",
    "meaning": "不好意思，請問郵局在哪裡？",
@@ -5953,7 +5953,7 @@
   },
   {
    "text": "えきの ちかくです",
-   "ja": "<ruby>駅<rt>えき</rt></ruby><span class=\"j-mark\">の</span> <ruby>近<rt>ちか</rt></ruby>くです。",
+   "ja": "<ruby>駅<rt>えき</rt></ruby>の <ruby>近<rt>ちか</rt></ruby>くです。",
    "kana": "えきの ちかくです。",
    "romaji": "eki no chikaku desu",
    "meaning": "在車站附近。",
@@ -5971,7 +5971,7 @@
   },
   {
    "text": "バスに のりますか",
-   "ja": "バス<span class=\"j-mark\">に</span> <ruby>乗<rt>の</rt></ruby>りますか。",
+   "ja": "バスに <ruby>乗<rt>の</rt></ruby>りますか。",
    "kana": "バスに のりますか。",
    "romaji": "basu ni norimasu ka",
    "meaning": "要搭公車嗎？",
@@ -6120,7 +6120,7 @@
   },
   {
    "text": "かいわの れんしゅうを します",
-   "ja": "<ruby>会話<rt>かいわ</rt></ruby><span class=\"j-mark\">の</span> <ruby>練習<rt>れんしゅう</rt></ruby><span class=\"j-mark\">を</span> します",
+   "ja": "<ruby>会話<rt>かいわ</rt></ruby>の <ruby>練習<rt>れんしゅう</rt></ruby>を します",
    "kana": "かいわの れんしゅうを します",
    "romaji": "kaiwa no renshū o shimasu",
    "meaning": "做會話練習 — 名詞＋を＋します",
@@ -6138,7 +6138,7 @@
   },
   {
    "text": "れんしゅうの あとで、かいわします",
-   "ja": "<ruby>練習<rt>れんしゅう</rt></ruby><span class=\"j-mark\">の</span> <ruby>後<rt>あと</rt></ruby>で、<ruby>会話<rt>かいわ</rt></ruby>します",
+   "ja": "<ruby>練習<rt>れんしゅう</rt></ruby>の <ruby>後<rt>あと</rt></ruby>で、<ruby>会話<rt>かいわ</rt></ruby>します",
    "kana": "れんしゅうの あとで、かいわします",
    "romaji": "renshū no ato de, kaiwa shimasu",
    "meaning": "練習之後，來對話 —「名詞 ＋ の ＋ あとで」＝做完某事之後",
@@ -6157,7 +6157,7 @@
   },
   {
    "text": "いっしゅうかんに に、さんかい れんしゅうします",
-   "ja": "<ruby>一週間<rt>いっしゅうかん</rt></ruby><span class=\"j-mark\">に</span> 2、3<ruby>回<rt>かい</rt></ruby> <ruby>練習<rt>れんしゅう</rt></ruby>します",
+   "ja": "<ruby>一週間<rt>いっしゅうかん</rt></ruby>に 2、3<ruby>回<rt>かい</rt></ruby> <ruby>練習<rt>れんしゅう</rt></ruby>します",
    "kana": "いっしゅうかんに 2、3かい れんしゅうします",
    "romaji": "isshūkan ni ni-san-kai renshū shimasu",
    "meaning": "一週練習兩三次 — 口語也常省成「週に2、3回」",
@@ -6176,7 +6176,7 @@
   },
   {
    "text": "しゅうに に、さんかい かいわの れんしゅうを します",
-   "ja": "<ruby>週<rt>しゅう</rt></ruby><span class=\"j-mark\">に</span> 2、3<ruby>回<rt>かい</rt></ruby> <ruby>会話<rt>かいわ</rt></ruby>の<ruby>練習<rt>れんしゅう</rt></ruby>をします",
+   "ja": "<ruby>週<rt>しゅう</rt></ruby>に 2、3<ruby>回<rt>かい</rt></ruby> <ruby>会話<rt>かいわ</rt></ruby>の<ruby>練習<rt>れんしゅう</rt></ruby>をします",
    "kana": "しゅうに 2、3かい かいわのれんしゅうをします",
    "romaji": "shū ni ni-san-kai kaiwa no renshū o shimasu",
    "meaning": "一週做兩三次會話練習",
@@ -6196,7 +6196,7 @@
   },
   {
    "text": "いちにちに いっかい",
-   "ja": "<ruby>一日<rt>いちにち</rt></ruby><span class=\"j-mark\">に</span> <ruby>一回<rt>いっかい</rt></ruby>",
+   "ja": "<ruby>一日<rt>いちにち</rt></ruby>に <ruby>一回<rt>いっかい</rt></ruby>",
    "kana": "いちにちに いっかい",
    "romaji": "ichinichi ni ikkai",
    "meaning": "一天一次 — 注意促音：いちかい ✗ → いっかい ○",
@@ -6215,7 +6215,7 @@
   },
   {
    "text": "いっかげつに さんかい",
-   "ja": "<ruby>一<rt>いっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby><span class=\"j-mark\">に</span> 3<ruby>回<rt>かい</rt></ruby>",
+   "ja": "<ruby>一<rt>いっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby>に 3<ruby>回<rt>かい</rt></ruby>",
    "kana": "いっかげつに 3かい",
    "romaji": "ikkagetsu ni san-kai",
    "meaning": "一個月三次",
@@ -6234,7 +6234,7 @@
   },
   {
    "text": "ペンで かきます",
-   "ja": "ペン<span class=\"j-mark\">で</span> <ruby>書<rt>か</rt></ruby>きます",
+   "ja": "ペンで <ruby>書<rt>か</rt></ruby>きます",
    "kana": "ペンで かきます",
    "romaji": "pen de kakimasu",
    "meaning": "用筆寫 — で＝用什麼工具（跟 に 不同）",
@@ -6270,7 +6270,7 @@
   },
   {
    "text": "きょうかいに いきます",
-   "ja": "<ruby>教会<rt>きょうかい</rt></ruby><span class=\"j-mark\">に</span> <ruby>行<rt>い</rt></ruby>きます",
+   "ja": "<ruby>教会<rt>きょうかい</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます",
    "kana": "きょうかいに いきます",
    "romaji": "kyōkai ni ikimasu",
    "meaning": "去教堂 — 目的地＋に（昨天學的）",
@@ -6288,7 +6288,7 @@
   },
   {
    "text": "しゅうに いっかい きょうかいに いきます",
-   "ja": "<ruby>週<rt>しゅう</rt></ruby><span class=\"j-mark\">に</span> 1<ruby>回<rt>かい</rt></ruby> <ruby>教会<rt>きょうかい</rt></ruby><span class=\"j-mark\">に</span> <ruby>行<rt>い</rt></ruby>きます",
+   "ja": "<ruby>週<rt>しゅう</rt></ruby>に 1<ruby>回<rt>かい</rt></ruby> <ruby>教会<rt>きょうかい</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます",
    "kana": "しゅうに 1かい きょうかいに いきます",
    "romaji": "shū ni ikkai kyōkai ni ikimasu",
    "meaning": "一週去一次教堂 — 一句裡兩個 に：頻率 ＋ 目的地",
@@ -6897,7 +6897,7 @@
   },
   {
    "text": "学校に 行きます",
-   "ja": "<ruby>学校<rt>がっこう</rt></ruby><span class=\"j-mark\">に</span> <ruby>行<rt>い</rt></ruby>きます",
+   "ja": "<ruby>学校<rt>がっこう</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます",
    "kana": "がっこうに いきます",
    "romaji": "gakkō ni ikimasu",
    "meaning": "去學校",
@@ -6915,7 +6915,7 @@
   },
   {
    "text": "台湾に 帰ります",
-   "ja": "<ruby>台湾<rt>たいわん</rt></ruby><span class=\"j-mark\">に</span> <ruby>帰<rt>かえ</rt></ruby>ります",
+   "ja": "<ruby>台湾<rt>たいわん</rt></ruby>に <ruby>帰<rt>かえ</rt></ruby>ります",
    "kana": "たいわんに かえります",
    "romaji": "Taiwan ni kaerimasu",
    "meaning": "回台灣",
@@ -6933,7 +6933,7 @@
   },
   {
    "text": "東京へ 行きます",
-   "ja": "<ruby>東京<rt>とうきょう</rt></ruby><span class=\"j-mark\">へ</span> <ruby>行<rt>い</rt></ruby>きます",
+   "ja": "<ruby>東京<rt>とうきょう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます",
    "kana": "とうきょうへ いきます",
    "romaji": "Tōkyō e ikimasu",
    "meaning": "往東京去（へ 唸 e，強調方向）",
@@ -6951,7 +6951,7 @@
   },
   {
    "text": "主人について 台湾に 帰ります",
-   "ja": "<ruby>主人<rt>しゅじん</rt></ruby>について <ruby>台湾<rt>たいわん</rt></ruby><span class=\"j-mark\">に</span> <ruby>帰<rt>かえ</rt></ruby>ります",
+   "ja": "<ruby>主人<rt>しゅじん</rt></ruby>について <ruby>台湾<rt>たいわん</rt></ruby>に <ruby>帰<rt>かえ</rt></ruby>ります",
    "kana": "しゅじんについて たいわんに かえります",
    "romaji": "shujin ni tsuite Taiwan ni kaerimasu",
    "meaning": "跟著先生回台灣（一句裡兩個 に，功能不同）",
@@ -7100,7 +7100,7 @@
   },
   {
    "text": "のどが かわいた",
-   "ja": "のど<span class=\"j-mark\">が</span> <ruby>渇<rt>かわ</rt></ruby>いた ／ <ruby>渇<rt>かわ</rt></ruby>きました",
+   "ja": "のどが <ruby>渇<rt>かわ</rt></ruby>いた ／ <ruby>渇<rt>かわ</rt></ruby>きました",
    "kana": "のどが かわいた ／ かわきました",
    "romaji": "nodo ga kawaita / kawakimashita",
    "meaning": "口渴了 — 跟肚子餓是一組的，主詞用「のど（喉嚨）」不是お腹",
@@ -7136,7 +7136,7 @@
   },
   {
    "text": "おなかが ぺこぺこです",
-   "ja": "お<ruby>腹<rt>なか</rt></ruby><span class=\"j-mark\">が</span> ぺこぺこです",
+   "ja": "お<ruby>腹<rt>なか</rt></ruby>が ぺこぺこです",
    "kana": "おなかが ぺこぺこです",
    "romaji": "onaka ga pekopeko desu",
    "meaning": "餓扁了 — 擬態語，很生活的說法",
@@ -7154,7 +7154,7 @@
   },
   {
    "text": "おなかが いっぱいです",
-   "ja": "お<ruby>腹<rt>なか</rt></ruby><span class=\"j-mark\">が</span> いっぱいです",
+   "ja": "お<ruby>腹<rt>なか</rt></ruby>が いっぱいです",
    "kana": "おなかが いっぱいです",
    "romaji": "onaka ga ippai desu",
    "meaning": "吃飽了 — 跟「空いた」正好相反。被問「もう一杯どうですか？」時用得到",
@@ -7190,7 +7190,7 @@
   },
   {
    "text": "おなかが すいた",
-   "ja": "お<ruby>腹<rt>なか</rt></ruby><span class=\"j-mark\">が</span> <ruby>空<rt>す</rt></ruby>いた",
+   "ja": "お<ruby>腹<rt>なか</rt></ruby>が <ruby>空<rt>す</rt></ruby>いた",
    "kana": "おなかが すいた",
    "romaji": "onaka ga suita",
    "meaning": "肚子餓了（常體）／丁寧體＝お腹が空きました",
@@ -7208,7 +7208,7 @@
   },
   {
    "text": "お腹が痛い",
-   "ja": "お<ruby>腹<rt>なか</rt></ruby><span class=\"j-mark\">が</span> <ruby>痛<rt>いた</rt></ruby>い",
+   "ja": "お<ruby>腹<rt>なか</rt></ruby>が <ruby>痛<rt>いた</rt></ruby>い",
    "kana": "おなかが いたい",
    "romaji": "onaka ga itai",
    "meaning": "肚子痛。丁寧體＝お腹が痛いです",
@@ -7299,7 +7299,7 @@
   },
   {
    "text": "みどり",
-   "ja": "<span class=\"color-dot\" style=\"background:#27ae60\"></span><ruby>緑<rt>みどり</rt></ruby>",
+   "ja": "<ruby>緑<rt>みどり</rt></ruby>",
    "kana": "みどり",
    "romaji": "midori",
    "meaning": "綠色（名詞）— 修飾名詞時用「緑の〜」或「緑色の〜」",
@@ -7335,7 +7335,7 @@
   },
   {
    "text": "あおしんごう",
-   "ja": "<span class=\"color-dot\" style=\"background:#00a884\"></span><ruby>青信号<rt>あおしんごう</rt></ruby>",
+   "ja": "<ruby>青信号<rt>あおしんごう</rt></ruby>",
    "kana": "あおしんごう",
    "romaji": "ao shingou",
    "meaning": "綠燈（傳統日文用「青」來代表綠燈）",
@@ -7354,7 +7354,7 @@
   },
   {
    "text": "なにいろが すきですか",
-   "ja": "<ruby>何色<rt>なにいろ</rt></ruby><span class=\"j-mark\">が</span> <ruby>好<rt>す</rt></ruby>きですか？",
+   "ja": "<ruby>何色<rt>なにいろ</rt></ruby>が <ruby>好<rt>す</rt></ruby>きですか？",
    "kana": "なにいろが すきですか？",
    "romaji": "naniiro ga suki desu ka",
    "meaning": "你喜歡什麼顏色？",
@@ -7373,7 +7373,7 @@
   },
   {
    "text": "あおが すきです",
-   "ja": "<ruby>青<rt>あお</rt></ruby><span class=\"j-mark\">が</span> <ruby>好<rt>す</rt></ruby>きです。",
+   "ja": "<ruby>青<rt>あお</rt></ruby>が <ruby>好<rt>す</rt></ruby>きです。",
    "kana": "あおが すきです。",
    "romaji": "ao ga suki desu",
    "meaning": "我喜歡藍色。",
@@ -7912,7 +7912,7 @@
   },
   {
    "text": "おっとと イベントに いきました",
-   "ja": "夫<span class=\"j-mark\">と</span> イベント<span class=\"j-mark\">に</span> 行きました。",
+   "ja": "夫と イベントに 行きました。",
    "kana": "夫と イベントに 行きました。",
    "romaji": "otto to ibento ni ikimashita.",
    "meaning": "和丈夫去了活動現場。",
@@ -8369,7 +8369,7 @@
   },
   {
    "text": "ですから家で昼ごはんを作りました",
-   "ja": "<span class=\"j-mark\">ですから</span>、<ruby>家<rt>うち</rt></ruby>で <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>作<rt>つく</rt></ruby>りました。",
+   "ja": "ですから、<ruby>家<rt>うち</rt></ruby>で <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>作<rt>つく</rt></ruby>りました。",
    "kana": "ですから、うちで ひるごはんを つくりました。",
    "romaji": "desukara, ie de hirugohan o tsukurimashita.",
    "meaning": "所以，在家裡做了午餐。",
@@ -8388,7 +8388,7 @@
   },
   {
    "text": "今日はとても暑いですから家で昼ごはんを作りました",
-   "ja": "<ruby>今日<rt>きょう</rt></ruby>は とても <ruby>暑<rt>あつ</rt></ruby>いです<span class=\"j-mark\">から</span>、<ruby>家<rt>うち</rt></ruby>で <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>作<rt>つく</rt></ruby>りました。",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は とても <ruby>暑<rt>あつ</rt></ruby>いですから、<ruby>家<rt>うち</rt></ruby>で <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>作<rt>つく</rt></ruby>りました。",
    "kana": "きょうは とても あついですから、うちで ひるごはんを つくりました。",
    "romaji": "kyou wa totemo atsui desu kara, ie de hirugohan o tsukurimashita.",
    "meaning": "因為今天非常熱，所以在家裡做了午餐。（完整原因連貫句）",
@@ -8408,7 +8408,7 @@
   },
   {
    "text": "昼ごはんを家で食べました",
-   "ja": "<ruby>昼<rt>ひる</rt></ruby>ごはんを <span class=\"j-mark\"><ruby>家<rt>うち</rt></ruby>で</span> <ruby>食<rt>た</rt></ruby>べました。",
+   "ja": "<ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>家<rt>うち</rt></ruby>で <ruby>食<rt>た</rt></ruby>べました。",
    "kana": "ひるごはんを うちで たべました。",
    "romaji": "hirugohan o ie de tabemashita.",
    "meaning": "在家裡吃了午餐。",
@@ -8426,7 +8426,7 @@
   },
   {
    "text": "二人でいっしょに作りました",
-   "ja": "<span class=\"j-mark\"><ruby>二人<rt>ふたり</rt></ruby>で</span> いっしょに <ruby>作<rt>つく</rt></ruby>りました。",
+   "ja": "<ruby>二人<rt>ふたり</rt></ruby>で いっしょに <ruby>作<rt>つく</rt></ruby>りました。",
    "kana": "ふたりで いっしょに つくりました。",
    "romaji": "futari de issho ni tsukurimashita.",
    "meaning": "兩個人一起做了（午餐）。",
@@ -8444,7 +8444,7 @@
   },
   {
    "text": "野菜と魚とごはんを食べました",
-   "ja": "<ruby>野菜<rt>やさい</rt></ruby><span class=\"j-mark\">と</span> <ruby>魚<rt>さかな</rt></ruby><span class=\"j-mark\">と</span> ごはんを 食べました。",
+   "ja": "<ruby>野菜<rt>やさい</rt></ruby>と <ruby>魚<rt>さかな</rt></ruby>と ごはんを 食べました。",
    "kana": "やさいと さかなと ごはんを 食べました。",
    "romaji": "yasai to sakana to gohan o tabemashita.",
    "meaning": "吃了蔬菜、魚和白飯。",
@@ -8462,7 +8462,7 @@
   },
   {
    "text": "お茶漬けが好きです",
-   "ja": "お<ruby>茶漬<rt>ちゃづ</rt></ruby>け<span class=\"j-mark\">が</span> <ruby>好<rt>す</rt></ruby>きです。",
+   "ja": "お<ruby>茶漬<rt>ちゃづ</rt></ruby>けが <ruby>好<rt>す</rt></ruby>きです。",
    "kana": "おちゃづけが すきです。",
    "romaji": "ochazuke ga suki desu.",
    "meaning": "我喜歡茶泡飯。",
@@ -8745,7 +8745,7 @@
   },
   {
    "text": "バス停はここです",
-   "ja": "バス<ruby>停<rt>てい</rt></ruby>は <span class=\"j-mark\">ここ</span>です。",
+   "ja": "バス<ruby>停<rt>てい</rt></ruby>は ここです。",
    "kana": "バスていは ここです。",
    "romaji": "basutei wa koko desu.",
    "meaning": "公車站是在這裡（我身邊）。",
@@ -8764,7 +8764,7 @@
   },
   {
    "text": "学校はそこです",
-   "ja": "<ruby>学校<rt>がっこう</rt></ruby>は <span class=\"j-mark\">そこ</span>です。",
+   "ja": "<ruby>学校<rt>がっこう</rt></ruby>は そこです。",
    "kana": "がっこうは そこです。",
    "romaji": "gakkou wa soko desu.",
    "meaning": "學校是在那裡（你那邊）。",
@@ -8783,7 +8783,7 @@
   },
   {
    "text": "図書館はあそこです",
-   "ja": "<ruby>図書館<rt>としょかん</rt></ruby>は <span class=\"j-mark\">あそこ</span>です。",
+   "ja": "<ruby>図書館<rt>としょかん</rt></ruby>は あそこです。",
    "kana": "としょかんは あそこです。",
    "romaji": "toshokan wa asoko desu.",
    "meaning": "圖書館是在那裡（雙方遠處）。",
@@ -8802,7 +8802,7 @@
   },
   {
    "text": "病院はあそこです",
-   "ja": "<ruby>病院<rt>びょういん</rt></ruby>は <span class=\"j-mark\">あそこ</span>です。",
+   "ja": "<ruby>病院<rt>びょういん</rt></ruby>は あそこです。",
    "kana": "びょういんは あそこです。",
    "romaji": "byouin wa asoko desu.",
    "meaning": "醫院是在那裡（雙方遠處）。",
@@ -9064,7 +9064,7 @@
   },
   {
    "text": "最近仕事をやめました",
-   "ja": "最近、仕事<span class=\"j-mark\">を</span>やめました",
+   "ja": "最近、仕事をやめました",
    "kana": "最近、仕事をやめました",
    "romaji": "saikin, shigoto o yamemashita",
    "meaning": "最近把工作辭掉了。 — さいきん しごとを やめました",
@@ -9083,7 +9083,7 @@
   },
   {
    "text": "日本に引っ越ししました",
-   "ja": "日本<span class=\"j-mark\">に</span>引っ越ししました",
+   "ja": "日本に引っ越ししました",
    "kana": "日本に引っ越ししました",
    "romaji": "nihon ni hikkoshi shimashita",
    "meaning": "搬到日本來了。 — にほんに ひっこし しました",
@@ -9101,7 +9101,7 @@
   },
   {
    "text": "夫の仕事です",
-   "ja": "夫<span class=\"j-mark\">の</span>仕事です",
+   "ja": "夫の仕事です",
    "kana": "夫の仕事です",
    "romaji": "otto no shigoto desu",
    "meaning": "是因為我先生的工作。 — おっとの しごと です",
@@ -9158,7 +9158,7 @@
   },
   {
    "text": "一年か二年",
-   "ja": "１年<span class=\"j-mark\">か</span>２年",
+   "ja": "１年か２年",
    "kana": "１年か２年",
    "romaji": "ichinen ka ninen",
    "meaning": "一年或兩年 — A か B ＝ A 或 B（不確定的兩選一）",
@@ -9195,7 +9195,7 @@
   },
   {
    "text": "ご主人",
-   "ja": "<span class=\"j-mark\">ご</span>主人",
+   "ja": "ご主人",
    "kana": "ご主人",
    "romaji": "goshujin",
    "meaning": "（您的）先生 — ごしゅじん",
@@ -9213,7 +9213,7 @@
   },
   {
    "text": "日本語を勉強しています",
-   "ja": "日本語<span class=\"j-mark\">を</span>勉強しています",
+   "ja": "日本語を勉強しています",
    "kana": "日本語を勉強しています",
    "romaji": "nihongo o benkyou shite imasu",
    "meaning": "我正在學日文。 — 〜ています＝持續在做（不是只有今天）",
@@ -9323,7 +9323,7 @@
   },
   {
    "text": "なにいろが すきですか",
-   "ja": "何色<span class=\"j-mark\">が</span>好きです<span class=\"j-mark\">か</span>",
+   "ja": "何色が好きですか",
    "kana": "何色が好きですか",
    "romaji": "naniiro ga suki desu ka",
    "meaning": "你喜歡什麼顏色？ — なにいろ が すき ですか",
@@ -9342,7 +9342,7 @@
   },
   {
    "text": "青が好きです",
-   "ja": "青<span class=\"j-mark\">が</span>好きです",
+   "ja": "青が好きです",
    "kana": "青が好きです",
    "romaji": "ao ga suki desu",
    "meaning": "我喜歡藍色。 — 「喜歡的對象」用 が 不是 を",
@@ -9399,7 +9399,7 @@
   },
   {
    "text": "何回もあります",
-   "ja": "何回<span class=\"j-mark\">も</span>あります",
+   "ja": "何回もあります",
    "kana": "何回もあります",
    "romaji": "nankai mo arimasu",
    "meaning": "去過好幾次 — なんかい も あります（何回＝幾次，加 も 變「好幾次」）",
@@ -9436,7 +9436,7 @@
   },
   {
    "text": "九州に行ったことがあります",
-   "ja": "九州<span class=\"j-mark\">に</span>行った<span class=\"j-mark\">ことがあります</span>",
+   "ja": "九州に行ったことがあります",
    "kana": "九州に行ったことがあります",
    "romaji": "kyuushuu ni itta koto ga arimasu",
    "meaning": "我去過九州。 — 行きます 的た形是 行った（促音）",
@@ -9454,7 +9454,7 @@
   },
   {
    "text": "これは車です",
-   "ja": "これ<span class=\"j-mark\">は</span>車です",
+   "ja": "これは車です",
    "kana": "これは車です",
    "romaji": "kore wa kuruma desu",
    "meaning": "這是車子。 — これは くるま です",
@@ -9472,7 +9472,7 @@
   },
   {
    "text": "これはスマホです",
-   "ja": "これ<span class=\"j-mark\">は</span>スマホです",
+   "ja": "これはスマホです",
    "kana": "これはスマホです",
    "romaji": "kore wa sumaho desu",
    "meaning": "這是智慧型手機。 — これは すまほ です",
@@ -9490,7 +9490,7 @@
   },
   {
    "text": "それは何ですか",
-   "ja": "それ<span class=\"j-mark\">は</span>何です<span class=\"j-mark\">か</span>",
+   "ja": "それは何ですか",
    "kana": "それは何ですか",
    "romaji": "sore wa nan desu ka",
    "meaning": "你那個是什麼？ — 何ですか 唸 なんですか，不是 なにですか",
@@ -9508,7 +9508,7 @@
   },
   {
    "text": "あれは荻窪駅です",
-   "ja": "あれ<span class=\"j-mark\">は</span>荻窪駅です",
+   "ja": "あれは荻窪駅です",
    "kana": "あれは荻窪駅です",
    "romaji": "are wa ogikubo eki desu",
    "meaning": "那（遠處的）是荻窪車站。 — 遠遠指著才用 あれ",
@@ -9527,7 +9527,7 @@
   },
   {
    "text": "これは私の靴です",
-   "ja": "これ<span class=\"j-mark\">は</span>私<span class=\"j-mark\">の</span>靴です",
+   "ja": "これは私の靴です",
    "kana": "これは私の靴です",
    "romaji": "kore wa watashi no kutsu desu",
    "meaning": "這是我的鞋子。 — 私の＝我的",
@@ -9546,7 +9546,7 @@
   },
   {
    "text": "これは私のスマホです",
-   "ja": "これ<span class=\"j-mark\">は</span>私<span class=\"j-mark\">の</span>スマホです",
+   "ja": "これは私のスマホです",
    "kana": "これは私のスマホです",
    "romaji": "kore wa watashi no sumaho desu",
    "meaning": "這是我的手機。",
@@ -9564,7 +9564,7 @@
   },
   {
    "text": "それは携帯ですか",
-   "ja": "それ<span class=\"j-mark\">は</span>携帯です<span class=\"j-mark\">か</span>",
+   "ja": "それは携帯ですか",
    "kana": "それは携帯ですか",
    "romaji": "sore wa keitai desu ka",
    "meaning": "你那個是手機嗎？",
@@ -9582,7 +9582,7 @@
   },
   {
    "text": "あれは車です",
-   "ja": "あれ<span class=\"j-mark\">は</span>車です",
+   "ja": "あれは車です",
    "kana": "あれは車です",
    "romaji": "are wa kuruma desu",
    "meaning": "那（遠處的）是車子。",
@@ -9600,7 +9600,7 @@
   },
   {
    "text": "これは黒い靴です",
-   "ja": "これ<span class=\"j-mark\">は</span>黒い靴です",
+   "ja": "これは黒い靴です",
    "kana": "これは黒い靴です",
    "romaji": "kore wa kuroi kutsu desu",
    "meaning": "這是黑色的鞋子。 — 把今天學的顏色接上去",
@@ -9750,7 +9750,7 @@
   },
   {
    "text": "あなたは学生ですか",
-   "ja": "あなた<span class=\"j-mark\">は</span>学生です<span class=\"j-mark\">か</span>",
+   "ja": "あなたは学生ですか",
    "kana": "あなたは学生ですか",
    "romaji": "anata wa gakusei desu ka",
    "meaning": "你是學生嗎？ — あなたは がくせい ですか",
@@ -9768,7 +9768,7 @@
   },
   {
    "text": "彼は美容師ですか",
-   "ja": "彼<span class=\"j-mark\">は</span>美容師です<span class=\"j-mark\">か</span>",
+   "ja": "彼は美容師ですか",
    "kana": "彼は美容師ですか",
    "romaji": "kare wa biyoushi desu ka",
    "meaning": "他是美容師嗎？ — かれは びようし ですか",
@@ -9786,7 +9786,7 @@
   },
   {
    "text": "彼女は歌手ですか",
-   "ja": "彼女<span class=\"j-mark\">は</span>歌手です<span class=\"j-mark\">か</span>",
+   "ja": "彼女は歌手ですか",
    "kana": "彼女は歌手ですか",
    "romaji": "kanojo wa kashu desu ka",
    "meaning": "她是歌手嗎？ — かのじょは かしゅ ですか",
@@ -9804,7 +9804,7 @@
   },
   {
    "text": "彼女はバリスタですか",
-   "ja": "彼女<span class=\"j-mark\">は</span>バリスタです<span class=\"j-mark\">か</span>",
+   "ja": "彼女はバリスタですか",
    "kana": "彼女はバリスタですか",
    "romaji": "kanojo wa barisuta desu ka",
    "meaning": "她是咖啡師嗎？ — かのじょは ばりすた ですか",
@@ -9822,7 +9822,7 @@
   },
   {
    "text": "彼はプログラマーですか",
-   "ja": "彼<span class=\"j-mark\">は</span>プログラマーです<span class=\"j-mark\">か</span>",
+   "ja": "彼はプログラマーですか",
    "kana": "彼はプログラマーですか",
    "romaji": "kare wa puroguramaa desu ka",
    "meaning": "他是程式設計師嗎？ — かれは ぷろぐらまー ですか",
@@ -9840,7 +9840,7 @@
   },
   {
    "text": "彼女は看護師ですか",
-   "ja": "彼女<span class=\"j-mark\">は</span>看護師です<span class=\"j-mark\">か</span>",
+   "ja": "彼女は看護師ですか",
    "kana": "彼女は看護師ですか",
    "romaji": "kanojo wa kangoshi desu ka",
    "meaning": "她是護理師嗎？ — かのじょは かんごし ですか",
@@ -9859,7 +9859,7 @@
   },
   {
    "text": "彼女は看護師です",
-   "ja": "彼女<span class=\"j-mark\">は</span>看護師です",
+   "ja": "彼女は看護師です",
    "kana": "彼女は看護師です",
    "romaji": "kanojo wa kangoshi desu",
    "meaning": "她是護理師。 — 去掉 か 就變回肯定句",
@@ -9896,7 +9896,7 @@
   },
   {
    "text": "お菓子",
-   "ja": "<span class=\"j-mark\">お</span>菓子",
+   "ja": "お菓子",
    "kana": "お菓子",
    "romaji": "okashi",
    "meaning": "點心／零食／糖果餅乾 — お＋菓子",
@@ -9914,7 +9914,7 @@
   },
   {
    "text": "お金",
-   "ja": "<span class=\"j-mark\">お</span>金",
+   "ja": "お金",
    "kana": "お金",
    "romaji": "okane",
    "meaning": "錢 — お＋金（かね）",
@@ -9932,7 +9932,7 @@
   },
   {
    "text": "スカーレットさん",
-   "ja": "スカーレット<span class=\"j-mark\">さん</span>",
+   "ja": "スカーレットさん",
    "kana": "スカーレットさん",
    "romaji": "sukaaretto-san",
    "meaning": "Scarlett 小姐 — 別人這樣叫你",
@@ -9950,7 +9950,7 @@
   },
   {
    "text": "田中さん",
-   "ja": "田中<span class=\"j-mark\">さん</span>",
+   "ja": "田中さん",
    "kana": "田中さん",
    "romaji": "tanaka-san",
    "meaning": "田中先生／小姐 — 日本人的姓也一樣加さん",
@@ -10044,7 +10044,7 @@
   },
   {
    "text": "彼は消防士です",
-   "ja": "彼<span class=\"j-mark\">は</span>消防士です",
+   "ja": "彼は消防士です",
    "kana": "彼は消防士です",
    "romaji": "kare wa shouboushi desu",
    "meaning": "他是消防員 — かれは しょうぼうし です",
@@ -10062,7 +10062,7 @@
   },
   {
    "text": "彼女は先生です",
-   "ja": "彼女<span class=\"j-mark\">は</span>先生です",
+   "ja": "彼女は先生です",
    "kana": "彼女は先生です",
    "romaji": "kanojo wa sensei desu",
    "meaning": "她是老師 — かのじょは せんせい です",
@@ -10080,7 +10080,7 @@
   },
   {
    "text": "彼女は保育士です",
-   "ja": "彼女<span class=\"j-mark\">は</span>保育士です",
+   "ja": "彼女は保育士です",
    "kana": "彼女は保育士です",
    "romaji": "kanojo wa hoikushi desu",
    "meaning": "她是保育員 — かのじょは ほいくし です",
@@ -10098,7 +10098,7 @@
   },
   {
    "text": "彼は警察官です",
-   "ja": "彼<span class=\"j-mark\">は</span>警察官です",
+   "ja": "彼は警察官です",
    "kana": "彼は警察官です",
    "romaji": "kare wa keisatsukan desu",
    "meaning": "他是警察 — かれは けいさつかん です",
@@ -10134,7 +10134,7 @@
   },
   {
    "text": "私は台湾人です",
-   "ja": "私<span class=\"j-mark\">は</span>台湾人です",
+   "ja": "私は台湾人です",
    "kana": "私は台湾人です",
    "romaji": "watashi wa taiwanjin desu",
    "meaning": "我是台灣人 — わたしは たいわんじん です",
@@ -10631,7 +10631,7 @@
   },
   {
    "text": "久しい",
-   "ja": "久しい（<span class=\"j-mark\">ひさ</span>しい）",
+   "ja": "久しい（ひさしい）",
    "kana": "久しい（ひさしい）",
    "romaji": "hisashii",
    "meaning": "（時間）很久的、久違的 — 形容詞",
@@ -11110,7 +11110,7 @@
   },
   {
    "text": "赤",
-   "ja": "<span class=\"color-dot\" style=\"background:#c0392b\"></span>赤（あか）",
+   "ja": "赤（あか）",
    "kana": "赤（あか）",
    "romaji": "aka",
    "meaning": "紅色（名詞）— 形容詞形是「赤い（あかい）」",
@@ -11128,7 +11128,7 @@
   },
   {
    "text": "白",
-   "ja": "<span class=\"color-dot\" style=\"background:#fdfdfd\"></span>白（しろ）",
+   "ja": "白（しろ）",
    "kana": "白（しろ）",
    "romaji": "shiro",
    "meaning": "白色（名詞）— 形容詞形是「白い（しろい）」",
@@ -11146,7 +11146,7 @@
   },
   {
    "text": "青",
-   "ja": "<span class=\"color-dot\" style=\"background:#2a5f9e\"></span>青（あお）",
+   "ja": "青（あお）",
    "kana": "青（あお）",
    "romaji": "ao",
    "meaning": "藍色（名詞）— 形容詞形是「青い（あおい）」",
@@ -11164,7 +11164,7 @@
   },
   {
    "text": "黒",
-   "ja": "<span class=\"color-dot\" style=\"background:#222\"></span>黒（くろ）",
+   "ja": "黒（くろ）",
    "kana": "黒（くろ）",
    "romaji": "kuro",
    "meaning": "黑色（名詞）— 形容詞形是「黒い（くろい）」",
@@ -13191,7 +13191,7 @@
   },
   {
    "text": "ウェブをご利用の方はこちら",
-   "ja": "ウェブ<span class=\"j-mark\">をご利用の方は</span>こちら",
+   "ja": "ウェブをご利用の方はこちら",
    "kana": "ウェブをご利用の方はこちら",
    "romaji": "webu o goriyō no kata wa kochira",
    "meaning": "使用網頁的人請看這邊 ← 原文這句",
@@ -13210,7 +13210,7 @@
   },
   {
    "text": "アプリをご利用の方はこちら",
-   "ja": "アプリ<span class=\"j-mark\">をご利用の方は</span>こちら",
+   "ja": "アプリをご利用の方はこちら",
    "kana": "アプリをご利用の方はこちら",
    "romaji": "apuri o goriyō no kata wa kochira",
    "meaning": "使用 App 的人請看這邊",
@@ -13229,7 +13229,7 @@
   },
   {
    "text": "スマホをご利用の方はこちら",
-   "ja": "スマホ<span class=\"j-mark\">をご利用の方は</span>こちら",
+   "ja": "スマホをご利用の方はこちら",
    "kana": "スマホをご利用の方はこちら",
    "romaji": "sumaho o goriyō no kata wa kochira",
    "meaning": "使用智慧型手機的人請看這邊",
@@ -13248,7 +13248,7 @@
   },
   {
    "text": "カードをご利用の方はこちら",
-   "ja": "カード<span class=\"j-mark\">をご利用の方は</span>こちら",
+   "ja": "カードをご利用の方はこちら",
    "kana": "カードをご利用の方はこちら",
    "romaji": "kādo o goriyō no kata wa kochira",
    "meaning": "使用信用卡的人請看這邊",
@@ -13267,7 +13267,7 @@
   },
   {
    "text": "はじめての方はこちら",
-   "ja": "はじめて<span class=\"j-mark\">の方は</span>こちら",
+   "ja": "はじめての方はこちら",
    "kana": "はじめての方はこちら",
    "romaji": "hajimete no kata wa kochira",
    "meaning": "第一次使用的人請看這邊 — 沒有「を利用」，直接「の方は」也很常見",
@@ -13451,7 +13451,7 @@
   },
   {
    "text": "店員さんとの会話",
-   "ja": "店員さん<span class=\"j-mark\">との</span>会話",
+   "ja": "店員さんとの会話",
    "kana": "店員さんとの会話",
    "romaji": "ten'in-san to no kaiwa",
    "meaning": "和店員的對話 ← 今天的書名就是這個",
@@ -13471,7 +13471,7 @@
   },
   {
    "text": "友達との約束",
-   "ja": "友達<span class=\"j-mark\">との</span>約束",
+   "ja": "友達との約束",
    "kana": "友達との約束",
    "romaji": "tomodachi to no yakusoku",
    "meaning": "和朋友的約定",
@@ -13490,7 +13490,7 @@
   },
   {
    "text": "家族との時間",
-   "ja": "家族<span class=\"j-mark\">との</span>時間",
+   "ja": "家族との時間",
    "kana": "家族との時間",
    "romaji": "kazoku to no jikan",
    "meaning": "和家人的時間",
@@ -13509,7 +13509,7 @@
   },
   {
    "text": "先生との面談",
-   "ja": "先生<span class=\"j-mark\">との</span>面談",
+   "ja": "先生との面談",
    "kana": "先生との面談",
    "romaji": "sensei to no mendan",
    "meaning": "和老師的面談",
@@ -13528,7 +13528,7 @@
   },
   {
    "text": "母との電話",
-   "ja": "母<span class=\"j-mark\">との</span>電話",
+   "ja": "母との電話",
    "kana": "母との電話",
    "romaji": "haha to no denwa",
    "meaning": "和媽媽的通話",
@@ -13814,7 +13814,7 @@
   },
   {
    "text": "コーヒー",
-   "ja": "コーヒー <span class=\"kata-badge\">片假名</span>",
+   "ja": "コーヒー 片假名",
    "kana": "コーヒー 片假名",
    "romaji": "kō · hī",
    "meaning": "咖啡 — 外來語，來自荷蘭語 koffie；注意兩個長音符號「ー」",
@@ -13832,7 +13832,7 @@
   },
   {
    "text": "オーツラテ",
-   "ja": "オーツラテ <span class=\"kata-badge\">片假名</span>",
+   "ja": "オーツラテ 片假名",
    "kana": "オーツラテ 片假名",
    "romaji": "ō · tsu · ra · te",
    "meaning": "燕麥拿鐵 — オーツ（oats）+ ラテ（latte）；咖啡廳點單用語",
@@ -15270,7 +15270,7 @@
   },
   {
    "text": "わたしも います",
-   "ja": "わたし<span class=\"j-mark\">も</span> います",
+   "ja": "わたしも います",
    "kana": "わたしも います",
    "romaji": "watashi mo imasu",
    "meaning": "我也在 — わたし＋も，當「也」",
@@ -15288,7 +15288,7 @@
   },
   {
    "text": "せんせい",
-   "ja": "先生（せん<span class=\"j-mark\">せい</span>）",
+   "ja": "先生（せんせい）",
    "kana": "先生（せんせい）",
    "romaji": "sensei",
    "meaning": "老師",
@@ -15306,7 +15306,7 @@
   },
   {
    "text": "がくせい",
-   "ja": "学生（がく<span class=\"j-mark\">せい</span>）",
+   "ja": "学生（がくせい）",
    "kana": "学生（がくせい）",
    "romaji": "gakusei",
    "meaning": "學生",
@@ -15324,7 +15324,7 @@
   },
   {
    "text": "りゅうがくせい",
-   "ja": "留学生（りゅうがく<span class=\"j-mark\">せい</span>）",
+   "ja": "留学生（りゅうがくせい）",
    "kana": "留学生（りゅうがくせい）",
    "romaji": "ryūgakusei",
    "meaning": "留學生",
@@ -15342,7 +15342,7 @@
   },
   {
    "text": "がっこうに いく",
-   "ja": "がっこう<span class=\"j-mark\">に</span> いく",
+   "ja": "がっこうに いく",
    "kana": "がっこうに いく",
    "romaji": "gakkō ni iku",
    "meaning": "去學校（到達點 → に）",
@@ -15360,7 +15360,7 @@
   },
   {
    "text": "しちじに おきる",
-   "ja": "しちじ<span class=\"j-mark\">に</span> おきる",
+   "ja": "しちじに おきる",
    "kana": "しちじに おきる",
    "romaji": "shichi-ji ni okiru",
    "meaning": "七點起床（時間點 → に）",
@@ -15378,7 +15378,7 @@
   },
   {
    "text": "うちで ほんを よむ",
-   "ja": "うち<span class=\"j-mark\">で</span> ほん<span class=\"j-mark\">を</span> よむ",
+   "ja": "うちで ほんを よむ",
    "kana": "うちで ほんを よむ",
    "romaji": "uchi de hon o yomu",
    "meaning": "在家讀書（動作場所 → で）",
@@ -15396,7 +15396,7 @@
   },
   {
    "text": "がっこうで たべる",
-   "ja": "がっこう<span class=\"j-mark\">で</span> たべる",
+   "ja": "がっこうで たべる",
    "kana": "がっこうで たべる",
    "romaji": "gakkō de taberu",
    "meaning": "在學校吃（動作場所 → で）",
@@ -15415,7 +15415,7 @@
   },
   {
    "text": "でんしゃで いく",
-   "ja": "でんしゃ<span class=\"j-mark\">で</span> いく",
+   "ja": "でんしゃで いく",
    "kana": "でんしゃで いく",
    "romaji": "densha de iku",
    "meaning": "坐電車去（手段 → で）",
@@ -15433,7 +15433,7 @@
   },
   {
    "text": "とうきょうへ いく",
-   "ja": "とうきょう<span class=\"j-mark\">へ</span> いく",
+   "ja": "とうきょうへ いく",
    "kana": "とうきょうへ いく",
    "romaji": "tōkyō e iku",
    "meaning": "去東京（往東京方向）",
@@ -15452,7 +15452,7 @@
   },
   {
    "text": "うちへ かえる",
-   "ja": "うち<span class=\"j-mark\">へ</span> かえる",
+   "ja": "うちへ かえる",
    "kana": "うちへ かえる",
    "romaji": "uchi e kaeru",
    "meaning": "回家（朝著家的方向回去）",
@@ -15470,7 +15470,7 @@
   },
   {
    "text": "いぬと ねこ",
-   "ja": "いぬ<span class=\"j-mark\">と</span> ねこ",
+   "ja": "いぬと ねこ",
    "kana": "いぬと ねこ",
    "romaji": "inu to neko",
    "meaning": "狗跟貓（並列）",
@@ -15488,7 +15488,7 @@
   },
   {
    "text": "ともだちと いく",
-   "ja": "ともだち<span class=\"j-mark\">と</span> いく",
+   "ja": "ともだちと いく",
    "kana": "ともだちと いく",
    "romaji": "tomodachi to iku",
    "meaning": "跟朋友一起去（共同）",
@@ -15506,7 +15506,7 @@
   },
   {
    "text": "あにと あね",
-   "ja": "あに<span class=\"j-mark\">と</span> あね",
+   "ja": "あにと あね",
    "kana": "あにと あね",
    "romaji": "ani to ane",
    "meaning": "哥哥跟姊姊（並列）",
@@ -15524,7 +15524,7 @@
   },
   {
    "text": "わたしも がくせいです",
-   "ja": "わたし<span class=\"j-mark\">も</span> がくせいです",
+   "ja": "わたしも がくせいです",
    "kana": "わたしも がくせいです",
    "romaji": "watashi mo gakusei desu",
    "meaning": "我也是學生（取代了 は）",
@@ -15542,7 +15542,7 @@
   },
   {
    "text": "あにも います",
-   "ja": "あに<span class=\"j-mark\">も</span> います",
+   "ja": "あにも います",
    "kana": "あにも います",
    "romaji": "ani mo imasu",
    "meaning": "也有哥哥（取代了 が）",
@@ -15560,7 +15560,7 @@
   },
   {
    "text": "はなは きれいです",
-   "ja": "はな<span class=\"j-mark\">は</span> きれいです",
+   "ja": "はなは きれいです",
    "kana": "はなは きれいです",
    "romaji": "hana wa kirei desu",
    "meaning": "花很漂亮 —— 第一個 は 是「はな」的 ha，第二個 は 是助詞念 wa",
@@ -15579,7 +15579,7 @@
   },
   {
    "text": "わたしが カリンです",
-   "ja": "わたし<span class=\"j-mark\">が</span> カリンです",
+   "ja": "わたしが カリンです",
    "kana": "わたしが カリンです",
    "romaji": "watashi ga Karin desu",
    "meaning": "（被問「誰是 Karin？」時）我才是 Karin！",
@@ -15597,7 +15597,7 @@
   },
   {
    "text": "ねこが かわいい",
-   "ja": "ねこ<span class=\"j-mark\">が</span> かわいい",
+   "ja": "ねこが かわいい",
    "kana": "ねこが かわいい",
    "romaji": "neko ga kawaii",
    "meaning": "（看到貓）貓貓好可愛！—— 描述眼前看到的，用 が",
@@ -15616,7 +15616,7 @@
   },
   {
    "text": "ねこは かわいい",
-   "ja": "ねこ<span class=\"j-mark\">は</span> かわいい",
+   "ja": "ねこは かわいい",
    "kana": "ねこは かわいい",
    "romaji": "neko wa kawaii",
    "meaning": "貓嘛（一般來說）很可愛 —— 講普遍特性，用 は",
@@ -15635,7 +15635,7 @@
   },
   {
    "text": "わたしの ほん",
-   "ja": "わたし<span class=\"j-mark\">の</span> ほん",
+   "ja": "わたしの ほん",
    "kana": "わたしの ほん",
    "romaji": "watashi no hon",
    "meaning": "我的書",
@@ -15659,7 +15659,7 @@
   },
   {
    "text": "はるの はな",
-   "ja": "はる<span class=\"j-mark\">の</span> はな",
+   "ja": "はるの はな",
    "kana": "はるの はな",
    "romaji": "haru no hana",
    "meaning": "春天的花",
@@ -15678,7 +15678,7 @@
   },
   {
    "text": "にほんごの ほん",
-   "ja": "にほんご<span class=\"j-mark\">の</span> ほん",
+   "ja": "にほんごの ほん",
    "kana": "にほんごの ほん",
    "romaji": "nihongo no hon",
    "meaning": "日文（的）書",
@@ -15696,7 +15696,7 @@
   },
   {
    "text": "ほんを よむ",
-   "ja": "ほん<span class=\"j-mark\">を</span> よむ",
+   "ja": "ほんを よむ",
    "kana": "ほんを よむ",
    "romaji": "hon o yomu",
    "meaning": "讀書（書是「被讀」的對象）",
@@ -15714,7 +15714,7 @@
   },
   {
    "text": "みずを のむ",
-   "ja": "みず<span class=\"j-mark\">を</span> のむ",
+   "ja": "みずを のむ",
    "kana": "みずを のむ",
    "romaji": "mizu o nomu",
    "meaning": "喝水",
@@ -15732,7 +15732,7 @@
   },
   {
    "text": "てがみを かく",
-   "ja": "てがみ<span class=\"j-mark\">を</span> かく",
+   "ja": "てがみを かく",
    "kana": "てがみを かく",
    "romaji": "tegami o kaku",
    "meaning": "寫信",
@@ -15750,7 +15750,7 @@
   },
   {
    "text": "がくせいです",
-   "ja": "がくせいです<span style=\"opacity:.4;\">。</span>",
+   "ja": "がくせいです。",
    "kana": "がくせいです。",
    "romaji": "gakusei desu.",
    "meaning": "是學生。（陳述）",
@@ -15768,7 +15768,7 @@
   },
   {
    "text": "がくせいですか",
-   "ja": "がくせいです<span class=\"j-mark\">か</span>",
+   "ja": "がくせいですか",
    "kana": "がくせいですか",
    "romaji": "gakusei desu ka?",
    "meaning": "是學生嗎？（疑問）",
@@ -15786,7 +15786,7 @@
   },
   {
    "text": "あしたは ひまですか",
-   "ja": "あした<span class=\"j-mark\">は</span> ひまです<span class=\"j-mark\">か</span>",
+   "ja": "あしたは ひまですか",
    "kana": "あしたは ひまですか",
    "romaji": "ashita wa hima desu ka?",
    "meaning": "明天有空嗎？",

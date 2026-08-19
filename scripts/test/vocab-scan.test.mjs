@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { kanaOf, plainText, extractFromHtml } from '../lib/vocab-scan.mjs';
+import { kanaOf, plainText, extractFromHtml, sanitizeJa } from '../lib/vocab-scan.mjs';
 
 test('kanaOf：ruby 換成 rt、保留非 ruby 文字', () => {
   assert.equal(kanaOf('<ruby>本<rt>ほん</rt>棚<rt>だな</rt></ruby>'), 'ほんだな');
@@ -10,6 +10,18 @@ test('kanaOf：ruby 換成 rt、保留非 ruby 文字', () => {
 test('plainText：丟 rt、去標籤', () => {
   assert.equal(plainText('反義是 <ruby>偽<rt>にせ</rt>物<rt>もの</rt></ruby>（假貨）'), '反義是 偽物（假貨）');
   assert.equal(plainText('書架。<a href="#">8/18 學過</a>'), '書架。8/18 學過');
+});
+
+test('sanitizeJa：剝掉裝飾標籤（j-mark span、strong），保留 ruby/rt 與文字', () => {
+  assert.equal(
+    sanitizeJa('わたし<span class="j-mark">は</span> がくせいです'),
+    'わたしは がくせいです'
+  );
+  assert.equal(
+    sanitizeJa('<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いて<strong>いる</strong>'),
+    '<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いている'
+  );
+  assert.equal(sanitizeJa('あお'), 'あお');
 });
 
 const WORD_ITEM = `
@@ -25,6 +37,24 @@ const WORD_ITEM = `
   </div>
   <button class="play-btn" aria-label="播放">▶</button>
 </div>`;
+
+const WORD_ITEM_J_MARK = `
+<div class="word-item" data-text="わたしはがくせいです">
+  <div class="word-content">
+    <div class="word-ja">わたし<span class="j-mark">は</span> <ruby>学生<rt>がくせい</rt></ruby>です</div>
+    <div class="word-romaji">watashi wa gakusei desu</div>
+    <div class="word-meaning">我是學生</div>
+  </div>
+  <button class="play-btn">▶</button>
+</div>`;
+
+test('extractFromHtml：word-ja 含 j-mark span → ja 輸出無 span、文字保留、ruby 保留', () => {
+  const [w] = extractFromHtml(WORD_ITEM_J_MARK);
+  assert.equal(w.ja, 'わたしは <ruby>学生<rt>がくせい</rt></ruby>です');
+  assert.ok(!w.ja.includes('j-mark'));
+  assert.ok(!w.ja.includes('<span'));
+  assert.ok(w.ja.includes('<ruby>'));
+});
 
 test('extractFromHtml：word-item 完整欄位', () => {
   const [w] = extractFromHtml(WORD_ITEM);

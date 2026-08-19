@@ -118,9 +118,10 @@ scripts/build-anki-vocab.py  ← data/vocab.json → anki/*.apkg（月份檔 com
 
 ### 導覽列（全站調整）
 
-導覽列維持四個入口，但成員換血：**文法／漢字／単語／資源**。
+導覽列維持四個入口，但成員換血：**文法／漢字／検索／資源**。
 
-- `js/site-chrome.js` 的 `<site-header>`：「多読」移除，改放「単語」（vocab.html），位置緊鄰「漢字」
+- `js/site-chrome.js` 的 `<site-header>`：「多読」移除，改放「**検索**」（vocab.html，
+  取「查詢」之意；頁面標題本身仍是「単語帳」），位置緊鄰「漢字」
 - 「多読」入口改成 `resources.html` 裡的一張入口卡（連到 tadoku.html，其餘不動；
   tadoku.html 與 tadoku/* 頁面本身不改）
 - CLAUDE.md 的導覽列說明同步更新

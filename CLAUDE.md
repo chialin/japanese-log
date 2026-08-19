@@ -21,6 +21,7 @@ There is no build, lint, or test step. Development workflow:
 ```
 index.html                       ← 首頁：calendar + log（棕色主題）
 shared.css                       ← 全站共用元件樣式（masthead/word-item/play-btn/...）
+vocab.html                       ← 単語帳：全站單字索引（檢索），小豆色票，自動產生資料靠 build-vocab
 resources.html                   ← 資源入口：多読起步清單、時間速記表、店員對話帖、練字帖（棕色主題）
 jikan.html                       ← 時間速記表：星期／日期／月份／時刻／期間（棕色主題，從 resources.html 連過去）
 tadoku.html                      ← 多読入口：自製迷你多読小故事清單（藤色主題）
@@ -29,11 +30,13 @@ lessons/YYYY-MM-DD-topic.html    ← 每日課程（棕色主題）
 readings/YYYY-MM-DD-topic.html   ← 閱讀筆記（深紅主題，真實日文短文素材；目前目錄為空）
 tadoku/YYYY-MM-DD-topic.html     ← 自製迷你多読小故事（藤色主題，跟 tadoku.html 同一套；同時仍列進 index.html 的 log/calendar）
 images/tadoku/*.png              ← 多読故事的插圖（いらすとや，自存不直連）
+data/vocab*.json                 ← 単語帳資料（vocab.json／vocab-tags.json／vocab-extra.json），build-vocab.mjs 產出＋登記
+anki/tango-*.apkg                ← 単語帳 Anki 牌組（各月＋all），build-anki-vocab.py 產出
 ```
 
-全站導覽列固定四個入口（2026-08-09 起）：文法（`grammar.html`）／漢字（`kanji.html`）／資源（`resources.html`）／多読（`tadoku.html`）。
+全站導覽列固定四個入口（2026-08-19 起）：文法（`grammar.html`）／漢字（`kanji.html`）／檢索（`vocab.html`）／資源（`resources.html`）。
+「多読」入口已移到 `resources.html` 底下的卡片（`tadoku.html` 本身與 `tadoku/*` 頁面結構不變）。
 「關於我」（`my-name-katakana.html`）**已從導覽列移到頁尾**（`site-footer` 第一個連結）。
-導覽列上寫「多読」不是「練習」，因為這個入口只放自製多読小故事。
 
 `grammar.html` 是**手寫**的文法索引頁（不是產物），用**青碧／松葉綠**色票（2026-08-11 起，見下方色票表），按主題分四區：
 動詞・活用／助詞／指示詞・代名詞／音的規則。**新增文法課時要手動加一張卡進去**——
@@ -123,9 +126,15 @@ Calendar 會自動重算——`data-date` 提供即可，新月份不必動 cale
 
 **Step 5 — 確保 favicon link 存在**（特別是非複製 `lessons/_skeleton.html` 的手寫頁、或新類型的產生器頁）：最簡單做法是執行 `node scripts/add-favicon.mjs`（冪等，已有 `rel="icon"` 的頁會自動跳過；root 頁注入 `favicon.svg`、`lessons/`／`readings/`／`tadoku/` 注入 `../favicon.svg`）。favicon 功能已於 2026-05-17 完成（見 [docs/superpowers/specs/2026-05-17-favicon-design.md](docs/superpowers/specs/2026-05-17-favicon-design.md)），`_skeleton.html` 已內含該 link，但手寫新頁或新產生器樣板不會自動帶上。
 
-**Step 6 — 跑 `node scripts/build-kanji.mjs`**：重新產生 `kanji.html`、`js/kanji-data.js`、
-`js/kanji-index.js`（掃全站 `<ruby>` 標音），產物**跟著這次的課程一起 commit**。
-跟 `generate-audio.mjs` 同性質——內容改了就要重跑。
+**Step 6 — 跑 `scripts/build-all.sh`**：一次跑完 `build-kanji.mjs`（重新產生 `kanji.html`、
+`js/kanji-data.js`、`js/kanji-index.js`，掃全站 `<ruby>` 標音）＋ `build-vocab.mjs`（重新產生
+`js/vocab-data.js`、`data/vocab.json`，掃全站單字卡）＋ `build-anki-vocab.py`（重新產生
+`anki/tango-*.apkg`），任一步失敗就中止。跟 `generate-audio.mjs` 同性質——內容改了就要重跑，
+產物 kanji／vocab／apkg **一起跟這次的課程 commit**。
+
+> 新單字沒登記 tag 時，`build-vocab.mjs` 會列警告（沒 tag 的字仍會產出，只是 vocab.html
+> 篩選不到）。照警告把該字補進 `data/vocab-tags.json` 再重跑一次——tag 集合見該檔既有 15 類，
+> 挑最貼近的分類即可，別憑空造新類。
 
 > 只有在出現**全新的漢字**時才需要另外跑一次 `node scripts/fetch-kanjidic.mjs`
 > 更新 `data/kanji-readings.json`（會連網下載 KANJIDIC2）。腳本會列出查無讀音的字。
@@ -201,6 +210,7 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 | `readings/*`（閱讀筆記） | 深紅 / 暗朱 | `#f4ece0` | `#8b3a3a` |
 | `tadoku.html`、`tadoku/*`（自製迷你多読） | 藤色 / 淡紫 | `#f8f6fc` | `#7a68a6` |
 | `grammar.html` ＋ 它收錄的文法課 | 青碧 / 松葉綠 | `#f2f7f0` | `#3f7a52` |
+| `vocab.html`（単語帳） | 小豆／海老茶 | `#fbf3f1` | `#96504b` |
 
 > **文法課用青碧色票**（2026-08-11 起）——`grammar.html` 索引頁，以及它 `<ul>` 裡收錄的每一篇
 > `lessons/*` 文法課，都換成青碧，進頁面一眼就知道「這篇在講規則」。

@@ -46,8 +46,8 @@ class SiteHeader extends HTMLElement {
             ${homeNav}
             ${navItem('grammar.html', '文法')}
             ${navItem('kanji.html', '漢字')}
+            ${navItem('vocab.html', '檢索')}
             ${navItem('resources.html', '資源')}
-            ${navItem('tadoku.html', '多読')}
           </nav>
           ${control}
         </div>

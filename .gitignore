@@ -7,6 +7,6 @@ node_modules/
 .superpowers/
 anki/venv/
 anki/audio_cache/
+anki/__pycache__/
 /*.epub
 .cache/
-mockups/

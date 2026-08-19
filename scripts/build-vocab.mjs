@@ -16,7 +16,17 @@ export function mergeWords(records) {
     map.get(key).lessons.push(lesson);
   }
   const words = [...map.values()];
-  for (const w of words) w.lessons.sort((a, b) => a.date.localeCompare(b.date));
+  for (const w of words) {
+    // 去重：對每個 word 的 lessons 以 date+'|'+href 去重
+    const seen = new Set();
+    w.lessons = w.lessons.filter(lesson => {
+      const dedup = lesson.date + '|' + lesson.href;
+      if (seen.has(dedup)) return false;
+      seen.add(dedup);
+      return true;
+    });
+    w.lessons.sort((a, b) => a.date.localeCompare(b.date));
+  }
   words.sort((a, b) => b.lessons[0].date.localeCompare(a.lessons[0].date));
   return words;
 }

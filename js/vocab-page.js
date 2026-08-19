@@ -70,6 +70,12 @@
     renderAnki();
   }
 
+  // 點分類/月份＝切換瀏覽入口，順手清掉搜尋詞（反向「先選分類再搜尋」則保留 AND）
+  function setFilter(patch) {
+    $('q').value = '';
+    setState({ ...patch, q: '' });
+  }
+
   function renderSidebar() {
     const tags = $('tags');
     tags.textContent = '';
@@ -81,17 +87,17 @@
       a.addEventListener('click', (e) => { e.preventDefault(); fn(); });
       return a;
     };
-    tags.appendChild(mk('全部', D.length, !state.tag, () => setState({ tag: null })));
+    tags.appendChild(mk('全部', D.length, !state.tag, () => setFilter({ tag: null })));
     Object.keys(tagCount).sort((a, b) => tagCount[b] - tagCount[a]).forEach((t) => {
       tags.appendChild(mk(t, tagCount[t], state.tag === t,
-        () => setState({ tag: state.tag === t ? null : t })));
+        () => setFilter({ tag: state.tag === t ? null : t })));
     });
 
     const ml = $('months');
     ml.textContent = '';
     const li = (labelTxt, n, key) => {
       const el = document.createElement('li');
-      const a = mk(labelTxt, n, state.month === key, () => setState({ month: key }));
+      const a = mk(labelTxt, n, state.month === key, () => setFilter({ month: key }));
       el.appendChild(a);
       ml.appendChild(el);
     };

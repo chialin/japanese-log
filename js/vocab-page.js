@@ -27,7 +27,7 @@
     const years = new Set(months.map((mo) => mo.slice(0, 4)));
     let m;
     if (state.month === 'all') {
-      m = '全部';
+      m = '全部月份';
     } else {
       const [y, mo] = state.month.split('-');
       m = years.size > 1 ? `${y}年${parseInt(mo, 10)}月` : `${parseInt(mo, 10)}月`;

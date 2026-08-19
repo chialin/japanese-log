@@ -75,7 +75,18 @@ scripts/build-anki-vocab.py  ← data/vocab.json → anki/*.apkg（月份檔 com
 
 ## ② 頁面 — `vocab.html`
 
-棕橘色票（同 index/lessons），標題「単語帳」。版面：
+標題「単語帳」。**專屬色票：小豆／海老茶**（2026-08-19 定案，CLAUDE.md 色票表同步加一列）：
+
+```css
+:root{--paper:#fbf3f1;--paper-deep:#f2e0dc;--ink:#2a1412;--ink-soft:#48231f;
+--ink-mute:#85524b;--accent:#96504b;--accent-soft:#cfa09b;--accent-pale:#f3ddda;
+--line:#e9cbc6;--bg-spot-1:#f9ece8;--bg-spot-2:#f1d9d2;}
+```
+
+（與 readings/* 深紅 #8b3a3a 同屬紅系——readings 目前無現存頁面，若日後恢復再調整區隔。）
+`index.html` 若要給 vocab 相關卡片加左邊框對照色，用 `--accent:#96504b`。
+
+版面：
 
 - **寬版**：頁內覆寫 `.wrap{max-width:1020px}`（全站其他頁不動）
 - **桌機**：左邊卡片牆（`auto-fill minmax(225px,1fr)`）＋右側 200px sticky 側欄
@@ -105,10 +116,14 @@ scripts/build-anki-vocab.py  ← data/vocab.json → anki/*.apkg（月份檔 com
 - **批次渲染**：任何過濾結果先渲染 60 張，底部哨兵元素進入視口（IntersectionObserver）
   自動補 60，並顯示「已顯示 x / y」；另留一顆「載入更多」按鈕當後備
 
-### 導覽列
+### 導覽列（全站調整）
 
-`js/site-chrome.js` 的 `<site-header>` 加第五個入口「単語」（vocab.html）。
-CLAUDE.md 同步把「固定四個入口」改成五個。
+導覽列維持四個入口，但成員換血：**文法／漢字／単語／資源**。
+
+- `js/site-chrome.js` 的 `<site-header>`：「多読」移除，改放「単語」（vocab.html），位置緊鄰「漢字」
+- 「多読」入口改成 `resources.html` 裡的一張入口卡（連到 tadoku.html，其餘不動；
+  tadoku.html 與 tadoku/* 頁面本身不改）
+- CLAUDE.md 的導覽列說明同步更新
 
 ## ③ Anki — `scripts/build-anki-vocab.py`
 

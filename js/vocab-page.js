@@ -107,7 +107,7 @@
       a.textContent = '⬇ 全部 tango-all.apkg';
     } else {
       a.href = `anki/tango-${state.month}.apkg`;
-      a.textContent = `⬇ 単語帳 ${state.month}.apkg`;
+      a.textContent = `⬇ tango-${state.month}.apkg`;
     }
     a.setAttribute('download', '');
     $('anki-meta').textContent = window.VOCAB_META

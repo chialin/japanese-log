@@ -60,6 +60,8 @@ def main():
 
     model = build_model()
     custom = args.tag or args.date_from or args.date_to
+    if args.out and not custom:
+        sys.exit("--out 只搭配 --tag/--from/--to 自訂範圍使用；預設模式輸出固定為 anki/tango-*.apkg")
     if custom:
         if not args.out:
             sys.exit("自訂範圍請搭配 --out 輸出路徑")

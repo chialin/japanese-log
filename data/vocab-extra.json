@@ -1,0 +1,535 @@
+[
+  {
+    "text": "いち",
+    "ja": "<ruby>一<rt>いち</rt></ruby>",
+    "kana": "いち",
+    "romaji": "ichi",
+    "meaning": "1",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "に",
+    "ja": "<ruby>二<rt>に</rt></ruby>",
+    "kana": "に",
+    "romaji": "ni",
+    "meaning": "2",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "さん",
+    "ja": "<ruby>三<rt>さん</rt></ruby>",
+    "kana": "さん",
+    "romaji": "san",
+    "meaning": "3",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "し",
+    "ja": "<ruby>四<rt>し</rt></ruby>",
+    "kana": "し",
+    "romaji": "shi",
+    "meaning": "4（數序唸法，單獨講用 よん）",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "ご",
+    "ja": "<ruby>五<rt>ご</rt></ruby>",
+    "kana": "ご",
+    "romaji": "go",
+    "meaning": "5",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "ろく",
+    "ja": "<ruby>六<rt>ろく</rt></ruby>",
+    "kana": "ろく",
+    "romaji": "roku",
+    "meaning": "6",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "しち",
+    "ja": "<ruby>七<rt>しち</rt></ruby>",
+    "kana": "しち",
+    "romaji": "shichi",
+    "meaning": "7（數序唸法，單獨講用 なな）",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "はち",
+    "ja": "<ruby>八<rt>はち</rt></ruby>",
+    "kana": "はち",
+    "romaji": "hachi",
+    "meaning": "8",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "きゅう",
+    "ja": "<ruby>九<rt>きゅう</rt></ruby>",
+    "kana": "きゅう",
+    "romaji": "kyuu",
+    "meaning": "9（數序唸法，單獨講用 く）",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "じゅう",
+    "ja": "<ruby>十<rt>じゅう</rt></ruby>",
+    "kana": "じゅう",
+    "romaji": "juu",
+    "meaning": "10",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-05-03",
+      "href": "lessons/2026-05-03-numbers.html",
+      "title": "數字 1〜10"
+    }
+  },
+  {
+    "text": "ついたち",
+    "ja": "ついたち",
+    "kana": "ついたち",
+    "romaji": "tsuitachi",
+    "meaning": "1日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "ふつか",
+    "ja": "ふつか",
+    "kana": "ふつか",
+    "romaji": "futsuka",
+    "meaning": "2日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "みっか",
+    "ja": "みっか",
+    "kana": "みっか",
+    "romaji": "mikka",
+    "meaning": "3日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "よっか",
+    "ja": "よっか",
+    "kana": "よっか",
+    "romaji": "yokka",
+    "meaning": "4日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "いつか",
+    "ja": "いつか",
+    "kana": "いつか",
+    "romaji": "itsuka",
+    "meaning": "5日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "むいか",
+    "ja": "むいか",
+    "kana": "むいか",
+    "romaji": "muika",
+    "meaning": "6日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "なのか",
+    "ja": "なのか",
+    "kana": "なのか",
+    "romaji": "nanoka",
+    "meaning": "7日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "ようか",
+    "ja": "ようか",
+    "kana": "ようか",
+    "romaji": "yōka",
+    "meaning": "8日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "ここのか",
+    "ja": "ここのか",
+    "kana": "ここのか",
+    "romaji": "kokonoka",
+    "meaning": "9日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "とおか",
+    "ja": "とおか",
+    "kana": "とおか",
+    "romaji": "tōka",
+    "meaning": "10日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅういちにち",
+    "ja": "じゅういちにち",
+    "kana": "じゅういちにち",
+    "romaji": "jūichi-nichi",
+    "meaning": "11日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅうににち",
+    "ja": "じゅうににち",
+    "kana": "じゅうににち",
+    "romaji": "jūni-nichi",
+    "meaning": "12日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅうさんにち",
+    "ja": "じゅうさんにち",
+    "kana": "じゅうさんにち",
+    "romaji": "jūsan-nichi",
+    "meaning": "13日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅうよっか",
+    "ja": "じゅうよっか",
+    "kana": "じゅうよっか",
+    "romaji": "jūyokka",
+    "meaning": "14日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅうごにち",
+    "ja": "じゅうごにち",
+    "kana": "じゅうごにち",
+    "romaji": "jūgo-nichi",
+    "meaning": "15日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅうろくにち",
+    "ja": "じゅうろくにち",
+    "kana": "じゅうろくにち",
+    "romaji": "jūroku-nichi",
+    "meaning": "16日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅうしちにち",
+    "ja": "じゅうしちにち",
+    "kana": "じゅうしちにち",
+    "romaji": "jūshichi-nichi",
+    "meaning": "17日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅうはちにち",
+    "ja": "じゅうはちにち",
+    "kana": "じゅうはちにち",
+    "romaji": "jūhachi-nichi",
+    "meaning": "18日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "じゅうくにち",
+    "ja": "じゅうくにち",
+    "kana": "じゅうくにち",
+    "romaji": "jūku-nichi",
+    "meaning": "19日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "はつか",
+    "ja": "はつか",
+    "kana": "はつか",
+    "romaji": "hatsuka",
+    "meaning": "20日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅういちにち",
+    "ja": "にじゅういちにち",
+    "kana": "にじゅういちにち",
+    "romaji": "nijūichi-nichi",
+    "meaning": "21日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅうににち",
+    "ja": "にじゅうににち",
+    "kana": "にじゅうににち",
+    "romaji": "nijūni-nichi",
+    "meaning": "22日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅうさんにち",
+    "ja": "にじゅうさんにち",
+    "kana": "にじゅうさんにち",
+    "romaji": "nijūsan-nichi",
+    "meaning": "23日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅうよっか",
+    "ja": "にじゅうよっか",
+    "kana": "にじゅうよっか",
+    "romaji": "nijūyokka",
+    "meaning": "24日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅうごにち",
+    "ja": "にじゅうごにち",
+    "kana": "にじゅうごにち",
+    "romaji": "nijūgo-nichi",
+    "meaning": "25日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅうろくにち",
+    "ja": "にじゅうろくにち",
+    "kana": "にじゅうろくにち",
+    "romaji": "nijūroku-nichi",
+    "meaning": "26日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅうしちにち",
+    "ja": "にじゅうしちにち",
+    "kana": "にじゅうしちにち",
+    "romaji": "nijūshichi-nichi",
+    "meaning": "27日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅうはちにち",
+    "ja": "にじゅうはちにち",
+    "kana": "にじゅうはちにち",
+    "romaji": "nijūhachi-nichi",
+    "meaning": "28日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "にじゅうくにち",
+    "ja": "にじゅうくにち",
+    "kana": "にじゅうくにち",
+    "romaji": "nijūku-nichi",
+    "meaning": "29日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "さんじゅうにち",
+    "ja": "さんじゅうにち",
+    "kana": "さんじゅうにち",
+    "romaji": "sanjū-nichi",
+    "meaning": "30日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  },
+  {
+    "text": "さんじゅういちにち",
+    "ja": "さんじゅういちにち",
+    "kana": "さんじゅういちにち",
+    "romaji": "sanjūichi-nichi",
+    "meaning": "31日",
+    "kind": "word",
+    "lesson": {
+      "date": "2026-08-05",
+      "href": "lessons/2026-08-05-hinichi.html",
+      "title": "日にち"
+    }
+  }
+]

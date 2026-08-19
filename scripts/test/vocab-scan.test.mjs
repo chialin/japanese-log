@@ -98,3 +98,30 @@ test('extractFromHtml：season-card 與 extra-item', () => {
   assert.deepEqual([s[0].text, s[0].meaning], ['はる', '春天']);
   assert.deepEqual([s[1].text, s[1].romaji], ['はるが すき', 'haru ga suki']);
 });
+
+const WORD_ITEM_NO_BUTTON_THEN_VALID = `
+<div class="word-item">
+  <div class="word-content">
+    <div class="word-ja">海</div>
+    <div class="word-romaji">umi</div>
+    <div class="word-meaning">海</div>
+  </div>
+</div>
+
+<div class="word-item" data-text="お元気ですか">
+  <div class="word-content">
+    <div class="word-ja">お元気ですか？</div>
+    <div class="word-romaji">o-genki desu ka</div>
+    <div class="word-meaning">你好嗎？</div>
+  </div>
+  <button class="play-btn">▶</button>
+</div>`;
+
+test('extractFromHtml：無 button 的參照卡不該吞掉下一張合法卡（regression for 2026-07-21-kaiwa-aisatsu）', () => {
+  const result = extractFromHtml(WORD_ITEM_NO_BUTTON_THEN_VALID);
+  // 應該抽到 1 筆（合法卡「お元気ですか」）、參照卡（無 data-text）被跳過
+  assert.equal(result.length, 1);
+  assert.equal(result[0].text, 'お元気ですか');
+  assert.equal(result[0].meaning, '你好嗎？');
+  assert.equal(result[0].kind, 'word');
+});

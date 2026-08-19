@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>樣式 5 — 月份時間軸</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<link rel="stylesheet" href="_mock.css" />
+<style>
+.vsearch{width:100%;box-sizing:border-box;font-family:'Noto Serif TC',serif;font-size:16px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none;margin-bottom:12px}
+.month-head{position:sticky;top:0;z-index:2;display:flex;align-items:baseline;gap:12px;background:var(--paper);padding:14px 4px 8px;border-bottom:2px solid var(--accent);margin-top:26px}
+.month-head:first-of-type{margin-top:10px}
+.month-head .m{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:600}
+.month-head .n{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px}
+.month-head .anki{margin-left:auto;font-size:12px;color:var(--accent);text-decoration:none;border:1px solid var(--accent-soft);border-radius:999px;padding:3px 12px;background:#fff}
+.day-group{margin:14px 0 4px;font-size:13px;color:var(--ink-mute)}
+.day-group a{color:var(--accent);text-decoration:none}
+.wline{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.wchip{display:inline-flex;align-items:baseline;gap:6px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:5px 10px;font-size:14px}
+.wchip .ja{font-family:'Shippori Mincho',serif;font-size:17px}
+.wchip .yomi{color:var(--accent);font-size:12px}
+.wchip .mean{color:var(--ink-mute);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mock-switch"><span class="lbl">樣式切換：</span><a href="style1.html">1 辭典式</a><a href="style2.html">2 側欄篩選</a><a href="style3.html">3 表格速查</a><a href="style4.html">4 卡片牆</a><a class="on" href="style5.html">5 月份時間軸</a></div>
+
+  <h1 class="page-title">単語の<span class="accent">歩み</span></h1>
+  <div class="page-meta">單字索引 · Vocabulary Timeline · 自動產生</div>
+
+  <input class="vsearch" type="search" placeholder="搜尋：日文・假名・romaji・中文">
+  <div class="kanji-filters">
+    <button class="kanji-filter on">全部 <span class="kf-n">1102</span></button>
+    <button class="kanji-filter">生活單字 <span class="kf-n">981</span></button>
+    <button class="kanji-filter">數字・日期・季節 <span class="kf-n">121</span></button>
+  </div>
+
+  <div class="month-head"><span class="m">2026年8月</span><span class="n">214 words · 18 lessons</span><a class="anki" href="#">⬇ 這個月做成 Anki</a></div>
+
+  <div class="day-group">8/19 · <a href="#">本のことば</a></div>
+  <div class="wline">
+    <span class="wchip"><span class="ja">本棚</span><span class="yomi">ほんだな</span><span class="mean">書架</span></span>
+    <span class="wchip"><span class="ja">本屋</span><span class="yomi">ほんや</span><span class="mean">書店</span></span>
+    <span class="wchip"><span class="ja">本物</span><span class="yomi">ほんもの</span><span class="mean">真貨</span></span>
+    <span class="wchip"><span class="ja">本当</span><span class="yomi">ほんとう</span><span class="mean">真的</span></span>
+  </div>
+
+  <div class="day-group">8/18 · <a href="#">パン屋のことば</a></div>
+  <div class="wline">
+    <span class="wchip"><span class="ja">パン屋</span><span class="yomi">パンや</span><span class="mean">麵包店</span></span>
+    <span class="wchip"><span class="ja">食パン</span><span class="yomi">しょくパン</span><span class="mean">吐司</span></span>
+    <span class="wchip"><span class="ja">棚</span><span class="yomi">たな</span><span class="mean">架子</span></span>
+    <span class="wchip"><span class="ja">商品</span><span class="yomi">しょうひん</span><span class="mean">商品</span></span>
+  </div>
+
+  <div class="month-head"><span class="m">2026年7月</span><span class="n">308 words · 24 lessons</span><a class="anki" href="#">⬇ 這個月做成 Anki</a></div>
+
+  <div class="day-group">7/29 · <a href="#">練習と会話</a></div>
+  <div class="wline">
+    <span class="wchip"><span class="ja">練習</span><span class="yomi">れんしゅう</span><span class="mean">練習</span></span>
+    <span class="wchip"><span class="ja">会話</span><span class="yomi">かいわ</span><span class="mean">會話</span></span>
+    <span class="wchip"><span class="ja">週</span><span class="yomi">しゅう</span><span class="mean">週</span></span>
+  </div>
+</div>
+</body>
+</html>

@@ -45,17 +45,21 @@ export function extractFromHtml(html) {
     });
   };
 
-  for (const m of html.matchAll(
-    /<div class="word-item[^>]*>([\s\S]*?)<\/button>/g
-  )) {
-    const chunk = m[1];
-    const fullDiv = m[0].match(/<div[^>]*>/)[0];  // 取開標籤
-    let dtMatch = /data-text="([^"]*)"/.exec(fullDiv);
+  // word-item：改用開標籤位置切段，終點為下一個開標籤或檔案結尾
+  // 這樣無 button 的參照卡不會誤吃下一張合法卡
+  const wordItemMatches = Array.from(html.matchAll(/<div class="word-item[^>]*>/g));
+  for (let i = 0; i < wordItemMatches.length; i++) {
+    const start = wordItemMatches[i].index + wordItemMatches[i][0].length;
+    const end = i + 1 < wordItemMatches.length ? wordItemMatches[i + 1].index : html.length;
+    const chunk = html.slice(start, end);
+
+    // data-text 優先取 div 開標籤上，無則 fallback 到 button 上
+    const openTag = wordItemMatches[i][0];
+    let dtMatch = /data-text="([^"]*)"/.exec(openTag);
     if (!dtMatch) {
-      // fallback 取 button 上的 data-text（舊課程格式）
-      dtMatch = /<button[^>]*data-text="([^"]*)"/.exec(m[0]);
+      dtMatch = /<button[^>]*data-text="([^"]*)"/.exec(chunk);
     }
-    if (!dtMatch) continue;
+    if (!dtMatch) continue;  // 無 data-text 則跳過（如參照卡）
     push(dtMatch[1], field(chunk, 'word-ja'), field(chunk, 'word-romaji'),
       field(chunk, 'word-meaning'), 'word', accentOf(chunk));
   }

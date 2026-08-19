@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>樣式 3 — 表格速查</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<link rel="stylesheet" href="_mock.css" />
+<style>
+.vsearch{width:100%;box-sizing:border-box;font-family:'Noto Serif TC',serif;font-size:16px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none;margin-bottom:12px}
+.vtable{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px}
+.vtable th{text-align:left;font-size:12px;color:var(--ink-mute);font-weight:600;padding:8px 12px;background:var(--paper-deep);letter-spacing:.05em}
+.vtable td{padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+.vtable .ja{font-family:'Shippori Mincho',serif;font-size:18px;white-space:nowrap}
+.vtable .yomi{color:var(--accent);font-size:13px;white-space:nowrap}
+.vtable .romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);white-space:nowrap}
+.vtable .src a{color:var(--accent);text-decoration:none;font-size:13px;white-space:nowrap}
+.vtable tr:hover td{background:var(--bg-spot-1)}
+.table-scroll{overflow-x:auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mock-switch"><span class="lbl">樣式切換：</span><a href="style1.html">1 辭典式</a><a href="style2.html">2 側欄篩選</a><a class="on" href="style3.html">3 表格速查</a><a href="style4.html">4 卡片牆</a><a href="style5.html">5 月份時間軸</a></div>
+
+  <h1 class="page-title">単語<span class="accent">速査</span>表</h1>
+  <div class="page-meta">單字索引 · Vocabulary Table · 自動產生</div>
+
+  <input class="vsearch" type="search" placeholder="搜尋：日文・假名・romaji・中文">
+  <div class="kanji-filters">
+    <button class="kanji-filter on">全部 <span class="kf-n">1102</span></button>
+    <button class="kanji-filter">生活單字 <span class="kf-n">981</span></button>
+    <button class="kanji-filter">數字・日期・季節 <span class="kf-n">121</span></button>
+  </div>
+  <div class="kanji-filters">
+    <button class="kanji-filter on">全部月份</button>
+    <button class="kanji-filter">8月 <span class="kf-n">214</span></button>
+    <button class="kanji-filter">7月 <span class="kf-n">308</span></button>
+    <button class="kanji-filter">6月 <span class="kf-n">187</span></button>
+    <button class="kanji-filter">5月 <span class="kf-n">296</span></button>
+    <button class="kanji-filter">4月 <span class="kf-n">97</span></button>
+  </div>
+
+  <div class="table-scroll">
+  <table class="vtable">
+    <thead><tr><th>単語</th><th>読み</th><th>Romaji</th><th>意思</th><th>出處</th></tr></thead>
+    <tbody>
+      <tr><td class="ja">本棚</td><td class="yomi">ほんだな</td><td class="romaji">hondana</td><td>書架</td><td class="src"><a href="#">8/19 本のことば</a></td></tr>
+      <tr><td class="ja">パン屋</td><td class="yomi">パンや</td><td class="romaji">pan'ya</td><td>麵包店</td><td class="src"><a href="#">8/18 パン屋のことば</a></td></tr>
+      <tr><td class="ja">商品</td><td class="yomi">しょうひん</td><td class="romaji">shouhin</td><td>商品</td><td class="src"><a href="#">8/18 街・棚・商品</a></td></tr>
+      <tr><td class="ja">映画</td><td class="yomi">えいが</td><td class="romaji">eiga</td><td>電影</td><td class="src"><a href="#">8/11 マス形単語</a></td></tr>
+      <tr><td class="ja">練習</td><td class="yomi">れんしゅう</td><td class="romaji">renshuu</td><td>練習</td><td class="src"><a href="#">8/09 練習と会話</a></td></tr>
+      <tr><td class="ja">山</td><td class="yomi">やま</td><td class="romaji">yama</td><td>山</td><td class="src"><a href="#">8/07 観光地へ</a></td></tr>
+      <tr><td class="ja">郵便局</td><td class="yomi">ゆうびんきょく</td><td class="romaji">yuubinkyoku</td><td>郵局</td><td class="src"><a href="#">8/05 どこですか</a></td></tr>
+      <tr><td class="ja">水曜日</td><td class="yomi">すいようび</td><td class="romaji">suiyoubi</td><td>星期三</td><td class="src"><a href="#">5/02 星期</a></td></tr>
+      <tr><td class="ja">春</td><td class="yomi">はる</td><td class="romaji">haru</td><td>春天</td><td class="src"><a href="#">5/04 季節</a></td></tr>
+      <tr><td class="ja">20歳</td><td class="yomi">はたち</td><td class="romaji">hatachi</td><td>二十歲</td><td class="src"><a href="#">5/03 數字</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</body>
+</html>

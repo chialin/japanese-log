@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>樣式 2 — 側欄篩選</title>
+<style>
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<link rel="stylesheet" href="_mock.css" />
+<style>
+.layout{display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:start}
+@media(max-width:640px){.layout{grid-template-columns:1fr}}
+.panel{position:sticky;top:16px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px}
+.panel h3{font-size:13px;color:var(--ink-mute);margin:0 0 8px;font-weight:600;letter-spacing:.05em}
+.panel h3:not(:first-child){margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.panel ul{list-style:none;margin:0;padding:0;font-size:14px}
+.panel li{margin:2px 0}
+.panel a{display:flex;justify-content:space-between;color:var(--ink-soft);text-decoration:none;padding:4px 8px;border-radius:8px}
+.panel a.on{background:var(--accent-pale);color:var(--accent);font-weight:600}
+.panel .n{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:13px}
+.vsearch{width:100%;box-sizing:border-box;font-family:'Noto Serif TC',serif;font-size:16px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none;margin-bottom:14px}
+.vrow{display:flex;align-items:baseline;gap:14px;padding:10px 4px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.vrow:last-child{border-bottom:none}
+.vrow .ja{font-family:'Shippori Mincho',serif;font-size:21px;min-width:110px}
+.vrow .romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;min-width:90px}
+.vrow .mean{flex:1;font-size:14px;color:var(--ink-soft);min-width:140px}
+.vrow .src{font-size:12px}
+.vrow .src a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mock-switch"><span class="lbl">樣式切換：</span><a href="style1.html">1 辭典式</a><a class="on" href="style2.html">2 側欄篩選</a><a href="style3.html">3 表格速查</a><a href="style4.html">4 卡片牆</a><a href="style5.html">5 月份時間軸</a></div>
+
+  <h1 class="page-title">単語<span class="accent">帳</span></h1>
+  <div class="page-meta">單字索引 · Vocabulary Index · 自動產生</div>
+
+  <div class="layout">
+    <aside class="panel">
+      <h3>分類</h3>
+      <ul>
+        <li><a class="on" href="#">全部 <span class="n">1102</span></a></li>
+        <li><a href="#">生活單字 <span class="n">981</span></a></li>
+        <li><a href="#">數字・日期・季節 <span class="n">121</span></a></li>
+      </ul>
+      <h3>月份</h3>
+      <ul>
+        <li><a href="#">2026 · 8月 <span class="n">214</span></a></li>
+        <li><a href="#">2026 · 7月 <span class="n">308</span></a></li>
+        <li><a href="#">2026 · 6月 <span class="n">187</span></a></li>
+        <li><a href="#">2026 · 5月 <span class="n">296</span></a></li>
+        <li><a href="#">2026 · 4月 <span class="n">97</span></a></li>
+      </ul>
+    </aside>
+    <main>
+      <input class="vsearch" type="search" placeholder="搜尋：日文・假名・romaji・中文">
+      <div class="vrow"><span class="ja"><ruby>本<rt>ほん</rt>棚<rt>だな</rt></ruby></span><span class="romaji">hondana</span><span class="mean">書架</span><span class="src"><a href="#">8/19</a></span></div>
+      <div class="vrow"><span class="ja">パン<ruby>屋<rt>や</rt></ruby></span><span class="romaji">pan'ya</span><span class="mean">麵包店</span><span class="src"><a href="#">8/18</a></span></div>
+      <div class="vrow"><span class="ja"><ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby></span><span class="romaji">shouhin</span><span class="mean">商品</span><span class="src"><a href="#">8/18</a></span></div>
+      <div class="vrow"><span class="ja"><ruby>映<rt>えい</rt>画<rt>が</rt></ruby></span><span class="romaji">eiga</span><span class="mean">電影</span><span class="src"><a href="#">8/11</a></span></div>
+      <div class="vrow"><span class="ja"><ruby>練<rt>れん</rt>習<rt>しゅう</rt></ruby></span><span class="romaji">renshuu</span><span class="mean">練習</span><span class="src"><a href="#">8/09</a></span></div>
+      <div class="vrow"><span class="ja"><ruby>山<rt>やま</rt></ruby></span><span class="romaji">yama</span><span class="mean">山</span><span class="src"><a href="#">8/07</a></span></div>
+      <div class="vrow"><span class="ja"><ruby>郵<rt>ゆう</rt>便<rt>びん</rt>局<rt>きょく</rt></ruby></span><span class="romaji">yuubinkyoku</span><span class="mean">郵局</span><span class="src"><a href="#">8/05</a></span></div>
+      <div class="vrow"><span class="ja"><ruby>水<rt>すい</rt>曜<rt>よう</rt>日<rt>び</rt></ruby></span><span class="romaji">suiyoubi</span><span class="mean">星期三</span><span class="src"><a href="#">5/02</a></span></div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

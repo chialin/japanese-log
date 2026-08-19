@@ -1,9 +1,0 @@
-/* mockup 共用：五個樣式頁共用的切換列與示意資料樣式 */
-.mock-switch{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:10px 12px;border:1px dashed var(--accent-soft);border-radius:10px;background:#fff;font-size:13px;align-items:center}
-.mock-switch .lbl{color:var(--ink-mute);font-size:12px;margin-right:2px}
-.mock-switch a{color:var(--accent);text-decoration:none;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
-.mock-switch a.on{background:var(--accent);border-color:var(--accent);color:#fff}
-.src-line{font-size:12px;color:var(--ink-mute);margin-top:3px}
-.src-line a{color:var(--accent);text-decoration:none}
-.cat-badge{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--ink-mute);background:var(--paper);vertical-align:2px}
-.cat-badge.num{border-color:#a9762a;color:#a9762a;background:#fdf8ec}

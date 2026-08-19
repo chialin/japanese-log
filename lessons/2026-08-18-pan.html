@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パン屋のことば — 麵包單字與它的身世</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 本頁專用：語源對照表 / 年表 */
+.gen-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;}
+.gen-table th{text-align:left;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line);}
+.gen-table td{padding:9px 10px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top;line-height:1.7;}
+.gen-table td:first-child{font-family:'Klee One','Shippori Mincho',serif;color:var(--ink);white-space:nowrap;}
+.gen-table tr:last-child td{border-bottom:none;}
+
+.timeline{list-style:none;padding:0;margin:16px 0;}
+.timeline li{position:relative;padding:0 0 18px 26px;border-left:1px solid var(--line);}
+.timeline li:last-child{padding-bottom:0;border-left-color:transparent;}
+.timeline li::before{content:'';position:absolute;left:-4px;top:6px;width:7px;height:7px;border-radius:50%;background:var(--accent-soft);}
+.timeline .yr{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.08em;color:var(--accent);margin-bottom:3px;}
+.timeline .tl-body{font-size:14px;line-height:1.85;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">パン屋の <span class="accent">ことば</span></h1>
+<div class="page-meta">單字・歷史 · Bread &amp; Its Story · 2026 / 08 / 18</div>
+  <p class="page-subtitle">麵包店會看到的字，以及 パン 這個字怎麼從葡萄牙漂到日本</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    <span class="compare">パン</span> 這個字在 <a href="2026-05-28-katakana-wa-row.html" style="color:var(--accent);">5/28 片假名 ワ行</a> 那課學過（當時是拿來練字尾的 ン），
+    本篇把它展開成一整組麵包店用語，再交代它的來歷——它<b>不是從英文來的</b>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、パン屋 會看到的字</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日本的麵包店把商品分成兩大類：<span class="compare">菓子パン</span>（甜的）和 <span class="compare">惣菜パン</span>（鹹的、有配料的）。
+    先記這兩個分類名，架上的牌子就看得懂一半了。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🍞 基本</div>
+
+    <div class="word-item" data-text="パン">
+      <div class="word-content">
+        <div class="word-ja">パン</div>
+        <div class="word-romaji">pan</div>
+        <div class="word-meaning">麵包 — 來自葡萄牙語 pão，不是英文 bread（下一節說明）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="パン屋">
+      <div class="word-content">
+        <div class="word-ja">パン<ruby>屋<rt>や</rt></ruby></div>
+        <div class="word-romaji">pan-ya</div>
+        <div class="word-meaning">麵包店 — <b>～屋（や）</b>＝賣某樣東西的店，可以無限延伸：<ruby>花<rt>はな</rt></ruby>屋（花店）、<ruby>本<rt>ほん</rt></ruby>屋（書店）、<ruby>肉<rt>にく</rt></ruby>屋（肉舖）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="食パン">
+      <div class="word-content">
+        <div class="word-ja"><ruby>食<rt>しょく</rt></ruby>パン</div>
+        <div class="word-romaji">shokupan</div>
+        <div class="word-meaning">吐司、方形白麵包 — 漢字「食」＋片假名「パン」的混血詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="菓子パン">
+      <div class="word-content">
+        <div class="word-ja"><ruby>菓<rt>か</rt>子<rt>し</rt></ruby>パン</div>
+        <div class="word-romaji">kashi-pan</div>
+        <div class="word-meaning">甜麵包（點心類）— 紅豆、奶油、菠蘿都算這一類</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="惣菜パン">
+      <div class="word-content">
+        <div class="word-ja"><ruby>惣<rt>そう</rt>菜<rt>ざい</rt></ruby>パン</div>
+        <div class="word-romaji">souzai-pan</div>
+        <div class="word-meaning">鹹麵包（配菜類）— 咖哩、熱狗、火腿蛋這一類</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="焼きたて">
+      <div class="word-content">
+        <div class="word-ja"><ruby>焼<rt>や</rt></ruby>きたて</div>
+        <div class="word-romaji">yakitate</div>
+        <div class="word-meaning">剛出爐 — 店門口最常見的招牌字，看到就是現烤的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🥐 架上的品項</div>
+
+    <div class="word-item" data-text="あんパン">
+      <div class="word-content">
+        <div class="word-ja">あんパン</div>
+        <div class="word-romaji">anpan</div>
+        <div class="word-meaning">紅豆麵包 — <b>あん（餡）</b>＝紅豆餡。日本自己發明的第一款麵包</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="メロンパン">
+      <div class="word-content">
+        <div class="word-ja">メロンパン</div>
+        <div class="word-romaji">meronpan</div>
+        <div class="word-meaning">菠蘿麵包 — 表面有格紋的餅皮。⚠️ <b>裡面沒有哈密瓜</b>，名字只是形容外型</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="クリームパン">
+      <div class="word-content">
+        <div class="word-ja">クリームパン</div>
+        <div class="word-romaji">kuriimupan</div>
+        <div class="word-meaning">奶油麵包（卡士達內餡）— cream ＋ pan，英文與葡萄牙文各出一半</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カレーパン">
+      <div class="word-content">
+        <div class="word-ja">カレーパン</div>
+        <div class="word-romaji">kareepan</div>
+        <div class="word-meaning">咖哩麵包 — 裹麵包粉油炸的那種，惣菜パン 的代表</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ウインナーパン">
+      <div class="word-content">
+        <div class="word-ja">ウインナーパン</div>
+        <div class="word-romaji">uinnaa-pan</div>
+        <div class="word-meaning">熱狗麵包 — <b>ウインナー</b>＝維也納香腸，來自德文 Wiener（維也納的）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="サンドイッチ">
+      <div class="word-content">
+        <div class="word-ja">サンドイッチ</div>
+        <div class="word-romaji">sandoicchi</div>
+        <div class="word-meaning">三明治 — 這個才是英文來的（sandwich），注意促音 <span class="compare">ッ</span></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="パン粉">
+      <div class="word-content">
+        <div class="word-ja">パン<ruby>粉<rt>こ</rt></ruby></div>
+        <div class="word-romaji">panko</div>
+        <div class="word-meaning">麵包粉 — 這個字反向輸出回英文了，英文食譜直接寫 <i>panko</i></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>ウインナー 裡的 ン 和 ー 別看錯</strong><br>
+    <span class="compare">ン</span>（n）第二筆<b>往右上挑</b>，<span class="compare">ソ</span>（so）第二筆<b>由上往下掃</b>——
+    這條判準在 <a href="2026-08-16-reji-renji.html" style="color:var(--accent);">8/16「レジ と レンジ」</a> 練過。<br>
+    後面的 <span class="compare">ー</span> 是<b>長音符</b>（ちょうおんぷ），不是假名、沒有自己的讀音，功能是把前一個音拉長一拍：
+    ナ（na, 1拍）→ ナー（naa, 2拍）。只有片假名用它，平假名要拉長是重複母音（おかあさん）。
+  </div>
+
+  <div class="section">
+    <div class="section-title">💬 店裡用得到的句子</div>
+
+    <div class="word-item" data-text="食パンを 一斤 ください">
+      <div class="word-content">
+        <div class="word-ja"><ruby>食<rt>しょく</rt></ruby>パンを <ruby>一<rt>いっ</rt>斤<rt>きん</rt></ruby> ください</div>
+        <div class="word-romaji">shokupan o ikkin kudasai</div>
+        <div class="word-meaning">請給我一條吐司 — <b>斤（きん）</b>是吐司專用的量詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="焼きたてのパンは おいしいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>焼<rt>や</rt></ruby>きたてのパンは おいしいです</div>
+        <div class="word-romaji">yakitate no pan wa oishii desu</div>
+        <div class="word-meaning">剛出爐的麵包很好吃 — 用 <span class="compare">の</span> 把「焼きたて」接到「パン」上</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="パン屋は 駅の 前です">
+      <div class="word-content">
+        <div class="word-ja">パン<ruby>屋<rt>や</rt></ruby>は <ruby>駅<rt>えき</rt></ruby>の <ruby>前<rt>まえ</rt></ruby>です</div>
+        <div class="word-romaji">pan-ya wa eki no mae desu</div>
+        <div class="word-meaning">麵包店在車站前面 — 用的就是同一天學的位置句型</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、パン 是哪一國的字</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    答案是 <b>葡萄牙語 pão</b>。再往上追是拉丁文 <i>panis</i>，所以整個羅曼語族講的都是同一個字：
+  </p>
+
+  <table class="gen-table">
+    <tr><th>語言</th><th>麵包</th></tr>
+    <tr><td>拉丁文</td><td>panis</td></tr>
+    <tr><td>葡萄牙文</td><td>pão</td></tr>
+    <tr><td>西班牙文</td><td>pan</td></tr>
+    <tr><td>法文</td><td>pain</td></tr>
+    <tr><td>義大利文</td><td>pane</td></tr>
+    <tr><td><b>日文</b></td><td><b>パン</b></td></tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — パン 對到的是歐陸不是英美</strong><br>
+    看到 <span class="compare">パン</span> 別想 bread，想 <b>pan / pain / pane</b>——這幾個歐洲語言的字自己就長得像片假名的讀音。<br>
+    學過任何一個歐洲語言（或看過菜單上的 <i>pain de campagne</i>）都直接通，反而<b>用英文去猜會猜錯</b>。
+  </div>
+
+  <div class="note">
+    📝 <strong>パン 是「南蛮渡来語」，不是日語最早的外來語</strong><br>
+    日語更早就有大量從中文借來的<b>漢語詞</b>，時間早了將近一千年。<br>
+    正確的說法是：パン 是最早一批的<b>西洋</b>外來語，屬於 16 世紀葡萄牙人帶進來的那一層，叫
+    <span class="compare">南蛮渡来語（なんばんとらいご）</span>。英文借詞要到明治維新（19 世紀）才大量湧入，晚了三百年。
+  </div>
+
+  <div class="section">
+    <div class="section-title">🚢 同一批進來的字</div>
+
+    <table class="gen-table">
+      <tr><th>日文</th><th>羅馬拼音</th><th>葡萄牙文</th><th>意思</th></tr>
+      <tr><td>パン</td><td>pan</td><td>pão</td><td>麵包</td></tr>
+      <tr><td>タバコ</td><td>tabako</td><td>tabaco</td><td>菸</td></tr>
+      <tr><td>テンプラ</td><td>tenpura</td><td>tempero / têmporas</td><td>天婦羅</td></tr>
+      <tr><td>カステラ</td><td>kasutera</td><td>(pão de) Castela</td><td>長崎蛋糕</td></tr>
+      <tr><td>ボタン</td><td>botan</td><td>botão</td><td>鈕扣</td></tr>
+      <tr><td>カッパ</td><td>kappa</td><td>capa</td><td>雨衣</td></tr>
+      <tr><td>コンペイトウ</td><td>konpeitou</td><td>confeito</td><td>金平糖</td></tr>
+    </table>
+  </div>
+
+  <div class="tip">
+    💡 <strong>天婦羅（てんぷら）也是這批的</strong><br>
+    語源有三說，主流兩說都指向葡萄牙語：<b>têmporas</b>（四季齋日——天主教徒齋日不吃肉，改吃裹麵衣炸的魚和蔬菜，
+    日本人把「齋日」誤當成菜名）或 <b>tempero</b>（調味、烹調）。<br>
+    <b>技法來自葡萄牙，成品是日本的</b>——葡萄牙原型麵衣厚，日本人改用冷水＋低筋麵粉、不攪出筋，才有現在的酥脆。<br>
+    漢字「<ruby>天麩羅<rt>てんぷら</rt></ruby>」是<b>当て字（あてじ）</b>，只借讀音、字義無關，跟 <ruby>珈琲<rt>コーヒー</rt></ruby> 同一個原理。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、菜單上的「南蛮」不一定是葡萄牙</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <span class="compare">南蛮（なんばん）</span>本來指<b>經南方航線來的葡萄牙人與西班牙人</b>（對照詞是指荷蘭、英國人的
+    <ruby>紅毛<rt>こうもう</rt></ruby>）。但這個字在菜名裡已經漂走了，看到它<b>先看是哪道菜</b>：
+  </p>
+
+  <table class="gen-table">
+    <tr><th>菜名</th><th>羅馬拼音</th><th>這裡的「南蛮」是什麼</th></tr>
+    <tr><td><ruby>南蛮<rt>なんばん</rt>漬<rt>づ</rt></ruby>け</td><td>nanban-zuke</td><td>✅ 真的來自葡萄牙 — 炸過再泡糖醋汁，源自 <i>escabeche</i></td></tr>
+    <tr><td><ruby>鴨<rt>かも</rt>南蛮<rt>なんばん</rt></ruby></td><td>kamo-nanban</td><td>❌ 指<b>蔥（ネギ）</b> — 因為南蛮人愛吃蔥，就拿來當蔥的代稱</td></tr>
+    <tr><td>チキン<ruby>南蛮<rt>なんばん</rt></ruby></td><td>chikin-nanban</td><td>❌ 1960 年代<b>宮崎縣</b>發明的現代料理，離葡萄牙人四百年</td></tr>
+    <tr><td><ruby>南蛮<rt>なんばん</rt></ruby>（＝<ruby>唐辛子<rt>とうがらし</rt></ruby>）</td><td>nanban</td><td>❌ 指<b>辣椒</b> — 也是南蛮船帶來的，某些地方菜名裡是「辣」的意思</td></tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 南蛮 ≒ 中文的「番」「胡」</strong><br>
+    南蛮不是產地標示，是「<b>外面來的、跟平常不一樣的</b>」這個泛稱標籤。<br>
+    就像中文的 <b>番</b>茄、<b>番</b>薯、<b>胡</b>椒、<b>胡</b>瓜——「番」「胡」只說明「這是外來的」，沒指定哪一國。完全同一個邏輯。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、日本自己發明的麵包</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    麵包傳進來三百年後，日本人開始<b>自己造麵包</b>。上面架上那幾款，多半是日本原創、外國沒有的：
+  </p>
+
+  <ol class="timeline">
+    <li>
+      <span class="yr">1543 — 天文 12 年</span>
+      <span class="tl-body">葡萄牙人漂到<ruby>種子島<rt>たねがしま</rt></ruby>（就是傳入火繩槍那次），麵包與 <b>パン</b> 這個字一起進來。</span>
+    </li>
+    <li>
+      <span class="yr">1874 — 明治 7 年</span>
+      <span class="tl-body"><b>あんパン</b> 誕生。銀座<ruby>木村屋<rt>きむらや</rt></ruby>的木村安兵衛父子，因為當時日本買不到西式酵母，
+      改用<b>酒種</b>（做酒的麴）發酵，再包進日本人熟悉的紅豆餡——<b>西洋的殼、和菓子的芯</b>，這是第一款日本原創麵包。</span>
+    </li>
+    <li>
+      <span class="yr">1910 — 明治 43 年</span>
+      <span class="tl-body"><b>メロンパン</b> 的起源（諸説あり）。一說是帝國飯店的亞美尼亞籍麵包師，
+      拿法式烤點心 galette 改造出來的。名字裡的「メロン」<b>指的是外型的格紋，不是原料</b>。</span>
+    </li>
+    <li>
+      <span class="yr">1927 — 昭和 2 年</span>
+      <span class="tl-body"><b>カレーパン</b>。東京江東區「名花堂」（現・カトレア）第二代中田豊治登記的「洋食パン」被視為元祖——
+      把當時流行的西式咖哩包進麵包再油炸。</span>
+    </li>
+  </ol>
+
+  <div class="note">
+    📝 <strong>一句話串起來</strong><br>
+    <b>パン</b> 是葡萄牙人帶來的殼，<b>あん・カレー・メロン</b> 是日本人塞進去的芯。<br>
+    這個「借外面的形式、換自己的內容」的模式，跟天婦羅（借油炸技法、改成日式麵衣）是同一套。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、速記表</div>
+
+  <table class="gen-table">
+    <tr><th>日文</th><th>羅馬拼音</th><th>意思</th></tr>
+    <tr><td>パン</td><td>pan</td><td>麵包</td></tr>
+    <tr><td>パン<ruby>屋<rt>や</rt></ruby></td><td>pan-ya</td><td>麵包店</td></tr>
+    <tr><td><ruby>食<rt>しょく</rt></ruby>パン</td><td>shokupan</td><td>吐司</td></tr>
+    <tr><td><ruby>菓<rt>か</rt>子<rt>し</rt></ruby>パン</td><td>kashi-pan</td><td>甜麵包（點心類）</td></tr>
+    <tr><td><ruby>惣<rt>そう</rt>菜<rt>ざい</rt></ruby>パン</td><td>souzai-pan</td><td>鹹麵包（配菜類）</td></tr>
+    <tr><td><ruby>焼<rt>や</rt></ruby>きたて</td><td>yakitate</td><td>剛出爐</td></tr>
+    <tr><td>あんパン</td><td>anpan</td><td>紅豆麵包</td></tr>
+    <tr><td>メロンパン</td><td>meronpan</td><td>菠蘿麵包</td></tr>
+    <tr><td>クリームパン</td><td>kuriimupan</td><td>奶油麵包</td></tr>
+    <tr><td>カレーパン</td><td>kareepan</td><td>咖哩麵包</td></tr>
+    <tr><td>ウインナーパン</td><td>uinnaa-pan</td><td>熱狗麵包</td></tr>
+    <tr><td>サンドイッチ</td><td>sandoicchi</td><td>三明治</td></tr>
+    <tr><td>パン<ruby>粉<rt>こ</rt></ruby></td><td>panko</td><td>麵包粉</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 五題</div>
+
+    <p style="font-size:15px;line-height:2;color:var(--ink-soft);">
+      1. <b>パン</b> 是從哪一國的語言來的？跟英文 bread 有沒有關係？<br>
+      2. 「麵包店」怎麼說？用同樣的規則造出「花店」和「書店」。<br>
+      3. <b>菓子パン</b> 和 <b>惣菜パン</b> 差在哪？各舉一個例子。<br>
+      4. <b>鴨南蛮</b> 裡的「南蛮」是什麼意思？跟葡萄牙有關嗎？<br>
+      5. 把「麵包店在車站前面」寫成日文。
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);margin-top:10px;">
+        1. <b>葡萄牙語 pão</b>（再往上是拉丁文 panis）。跟英文 bread <b>完全沒關係</b>，
+        它是 16 世紀的南蛮渡来語，比英文借詞早了三百年。<br>
+        2. パン<ruby>屋<rt>や</rt></ruby>（pan-ya）。同理：<ruby>花<rt>はな</rt></ruby>屋（hana-ya 花店）、<ruby>本<rt>ほん</rt></ruby>屋（hon-ya 書店）。<b>～屋</b>＝賣那樣東西的店。<br>
+        3. <b>菓子パン</b>＝甜的點心類（例：あんパン、メロンパン）；<b>惣菜パン</b>＝鹹的配料類（例：カレーパン、ウインナーパン）。<br>
+        4. 指<b>蔥（ネギ）</b>，跟葡萄牙<b>無關</b>。因為當年南蛮人愛吃蔥，日本人就把蔥叫成南蛮，所以鴨南蛮＝鴨肉＋蔥的蕎麥麵。<br>
+        5. パン<ruby>屋<rt>や</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>です。（pan-ya wa eki no mae desu）別漏掉 <b>の</b>。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-18-x-wa-y-no-mae.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">XはYの前です <span class="next-arrow">→</span></span>
+    <span class="next-sub">位置詞是名詞，要用 の 接起來——上面「パン屋は駅の前です」用的就是這個句型</span>
+  </a>
+
+  <a href="2026-05-28-katakana-wa-row.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">片假名 ワ行・ン <span class="next-arrow">→</span></span>
+    <span class="next-sub">パン 第一次出現的地方，當時是拿來練字尾的 ン（同組還有 ペン・ラーメン）</span>
+  </a>
+
+  <a href="2026-07-08-lunch-menu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">午餐菜單讀解 <span class="next-arrow">→</span></span>
+    <span class="next-sub">真實菜單上的「自家製酵母パンのおかわりは1つまで無料」——パン 在野外的樣子</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

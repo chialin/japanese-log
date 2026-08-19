@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XはYの中です — 家裡的東西放在哪</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:rgba(255,255,255,.75);}
+
+/* 發音變化：寫法 → 唸法 */
+.say-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:14px 16px;margin:12px 0;}
+.say-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:700;line-height:1.5;text-align:center;}
+.say-ja small{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;font-weight:400;color:var(--ink-mute);margin-top:2px;}
+.say-arrow{font-size:19px;color:var(--accent);}
+.say-row .said{color:var(--accent);}
+@media(max-width:560px){.say-row{grid-template-columns:1fr;}.say-arrow{transform:rotate(90deg);}}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:1.9;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">Xは Yの<span class="accent">中</span>です</h1>
+  <div class="page-meta">單字・句型 · Vocabulary &amp; Pattern · 2026 / 08 / 19</div>
+  <p class="page-subtitle">把 <a href="2026-08-18-x-wa-y-no-mae.html" style="color:var(--accent);">8/18 的位置句</a>換成「〜の<ruby>中<rt>なか</rt></ruby>」— 五個句子、八個生活名詞，外加兩個唸出來跟寫的不一樣的字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    句型完全沒有新東西——還是 <b>Xは Yの＋位置詞 です</b>，只是位置詞固定用 <span class="compare">中（なか）</span>。
+    真正要花力氣的是兩件事：① 八個家裡的名詞，② <ruby>洗<rt>せん</rt>濯<rt>たく</rt>機<rt>き</rt></ruby> 和
+    <ruby>冷<rt>れい</rt>蔵<rt>ぞう</rt>庫<rt>こ</rt></ruby> <b>唸出來跟寫的不一樣</b>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、五個句子</div>
+
+  <div class="section">
+    <div class="section-title">📖 XはYの中です</div>
+
+    <div class="word-item" data-text="パジャマは洗濯機の中です。">
+      <div class="word-content">
+        <div class="word-ja">パジャマは<ruby>洗<rt>せん</rt>濯<rt>たく</rt>機<rt>き</rt></ruby>の<ruby>中<rt>なか</rt></ruby>です。</div>
+        <div class="word-romaji">pajama wa sentakuki no naka desu</div>
+        <div class="word-meaning">睡衣在洗衣機裡。（實際唸 <b>せんた<span style="color:var(--accent);">っ</span>き</b>，見第三節）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="教科書はかばんの中です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>教<rt>きょう</rt>科<rt>か</rt>書<rt>しょ</rt></ruby>はかばんの<ruby>中<rt>なか</rt></ruby>です。</div>
+        <div class="word-romaji">kyoukasho wa kaban no naka desu</div>
+        <div class="word-meaning">教科書在包包裡。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="靴は下駄箱の中です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>靴<rt>くつ</rt></ruby>は<ruby>下<rt>げ</rt>駄<rt>た</rt>箱<rt>ばこ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>です。</div>
+        <div class="word-romaji">kutsu wa getabako no naka desu</div>
+        <div class="word-meaning">鞋子在鞋櫃裡。（下駄箱＝玄關那個放鞋的櫃子）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="新聞はポストの中です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>しん</rt>聞<rt>ぶん</rt></ruby>はポストの<ruby>中<rt>なか</rt></ruby>です。</div>
+        <div class="word-romaji">shinbun wa posuto no naka desu</div>
+        <div class="word-meaning">報紙在信箱裡。（ポスト 同時指信箱和郵筒）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="上着は車の中です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>上<rt>うわ</rt>着<rt>ぎ</rt></ruby>は<ruby>車<rt>くるま</rt></ruby>の<ruby>中<rt>なか</rt></ruby>です。</div>
+        <div class="word-romaji">uwagi wa kuruma no naka desu</div>
+        <div class="word-meaning">外套在車裡。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ビールは冷蔵庫の中です。">
+      <div class="word-content">
+        <div class="word-ja">ビールは<ruby>冷<rt>れい</rt>蔵<rt>ぞう</rt>庫<rt>こ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>です。</div>
+        <div class="word-romaji">biiru wa reizouko no naka desu</div>
+        <div class="word-meaning">啤酒在冰箱裡。（實際唸 <b>れーぞーこ</b>，見第三節）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>骨架跟 8/18 一模一樣</strong><br>
+    <b>X は</b>（要說明位置的東西）＋ <b>Y の</b>（基準）＋ <b>中</b> ＋ <b>です</b>。
+    名詞和名詞之間的 <span class="j-mark">の</span> 一樣不能漏：✗ かばん中です／○ かばん<b>の</b>中です。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、八個生活名詞</div>
+
+  <div class="section">
+    <div class="section-title">📖 家裡會用到的字</div>
+
+    <div class="word-item" data-text="パジャマ">
+      <div class="word-content">
+        <div class="word-ja">パジャマ</div>
+        <div class="word-romaji">pajama</div>
+        <div class="word-meaning">睡衣（外來語，來自英文 pajamas）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="洗濯機">
+      <div class="word-content">
+        <div class="word-ja"><ruby>洗<rt>せん</rt>濯<rt>たく</rt>機<rt>き</rt></ruby></div>
+        <div class="word-romaji">sentakuki（口語 sentakki）</div>
+        <div class="word-meaning">洗衣機。<ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>＝洗衣服（する動詞）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="冷蔵庫">
+      <div class="word-content">
+        <div class="word-ja"><ruby>冷<rt>れい</rt>蔵<rt>ぞう</rt>庫<rt>こ</rt></ruby></div>
+        <div class="word-romaji">reizouko（唸成 reezooko）</div>
+        <div class="word-meaning">冰箱。冷凍庫（れいとうこ）＝冷凍庫</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="教科書">
+      <div class="word-content">
+        <div class="word-ja"><ruby>教<rt>きょう</rt>科<rt>か</rt>書<rt>しょ</rt></ruby></div>
+        <div class="word-romaji">kyoukasho</div>
+        <div class="word-meaning">教科書、課本</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="下駄箱">
+      <div class="word-content">
+        <div class="word-ja"><ruby>下<rt>げ</rt>駄<rt>た</rt>箱<rt>ばこ</rt></ruby></div>
+        <div class="word-romaji">getabako</div>
+        <div class="word-meaning">鞋櫃。<ruby>下<rt>げ</rt>駄<rt>た</rt></ruby>＝木屐，現在放的是球鞋但名字沒改；箱（はこ）連濁成 <b>ばこ</b></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="新聞">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>しん</rt>聞<rt>ぶん</rt></ruby></div>
+        <div class="word-romaji">shinbun</div>
+        <div class="word-meaning">報紙——<b>不是</b>中文的「新聞」。電視新聞是 <span class="compare">ニュース</span></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="上着">
+      <div class="word-content">
+        <div class="word-ja"><ruby>上<rt>うわ</rt>着<rt>ぎ</rt></ruby></div>
+        <div class="word-romaji">uwagi</div>
+        <div class="word-meaning">外套、上衣（穿在外層的那件）。訓讀，上唸 うわ 不是 うえ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ポスト">
+      <div class="word-content">
+        <div class="word-ja">ポスト</div>
+        <div class="word-romaji">posuto</div>
+        <div class="word-meaning">信箱／郵筒（外來語 post）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 下駄箱（げたばこ）拆成四層</strong><br>
+    ① <b>諧音</b>：げたばこ ≈ 中文「<b>給他箱</b>」——鞋子脫下來給它一個箱子。<br>
+    ② <b>ばこ 不用記</b>：<ruby>箱<rt>はこ</rt></ruby> 接在別的字後面一律連濁成 <b>ばこ</b>（ごみ<ruby>箱<rt>ばこ</rt></ruby>・<ruby>筆<rt>ふで</rt>箱<rt>ばこ</rt></ruby>・<ruby>本<rt>ほん</rt>箱<rt>ばこ</rt></ruby>），所以真正要背的只有 <b>げた</b> 兩個音。<br>
+    ③ <b>「駄」這個字已經認得</b>：就是 <ruby>駄<rt>だ</rt>目<rt>め</rt></ruby>（不行）、<ruby>無<rt>む</rt>駄<rt>だ</rt></ruby>（白費）的那個駄，看到它就唸 だ／た。<ruby>下<rt>げ</rt>駄<rt>た</rt></ruby>＝木屐，字面就是「木屐的箱子」。<br>
+    ④ <b>忘了的備案</b>：<ruby>靴<rt>くつ</rt>箱<rt>ばこ</rt></ruby>（kutsubako）是同義詞，現代日常一樣通用，而且 <ruby>靴<rt>くつ</rt></ruby> 本篇剛學過。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>新聞 ≠ 新聞</strong><br>
+    日文的 <ruby>新<rt>しん</rt>聞<rt>ぶん</rt></ruby> 是<b>報紙</b>這個實體。
+    要講「今天的新聞」得說 <span class="compare">ニュース</span>；<ruby>新<rt>しん</rt>聞<rt>ぶん</rt>社<rt>しゃ</rt></ruby>＝報社。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 上着（うわぎ）＝ 上 ＋ 着，而且要跟下着成對記</strong><br>
+    <b>着（き）</b> 來自動詞 <ruby>着<rt>き</rt></ruby>る（穿），接在後面連濁成 <b>ぎ</b>——跟 <ruby>箱<rt>はこ</rt></ruby>→ばこ 同一條規則。<br>
+    <b>「上」在這裡唸 うわ 不是 うえ</b>：單獨用或接 の 才是 うえ（<ruby>棚<rt>たな</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>），
+    <u>黏在名詞前面當接頭語就變 うわ</u>（<ruby>上<rt>うわ</rt>着<rt>ぎ</rt></ruby>・<ruby>上<rt>うわ</rt></ruby><ruby>履<rt>ば</rt></ruby>き・<ruby>上<rt>うわ</rt>書<rt>が</rt></ruby>き＝覆蓋存檔）。<br>
+    成對記最省力：<ruby>上<rt>うわ</rt>着<rt>ぎ</rt></ruby>（外套，穿外層）↔ <ruby>下<rt>した</rt>着<rt>ぎ</rt></ruby>（<b>內衣</b>，穿裡層）｜
+    <ruby>上<rt>うわ</rt></ruby><ruby>履<rt>ば</rt></ruby>き（室內鞋）↔ <ruby>下<rt>した</rt></ruby><ruby>履<rt>ば</rt></ruby>き（室外鞋）。<br>
+    而且後面兩個剛好跟 <ruby>下<rt>げ</rt>駄<rt>た</rt>箱<rt>ばこ</rt></ruby> 是同一個場景：進學校玄關脫下 下履き 放進下駄箱，換上 上履き 進教室。<br>
+    ⚠️ 不對稱的地方：上着 的上唸 <b>うわ</b>，但下着 的下唸 <b>した</b>（不是しも），照常規唸就好。
+  </div>
+
+  <div class="note">
+    📝 <strong>下着 的「した」跟「机の下」的「した」是同一個嗎？</strong><br>
+    <b>讀音同一個，結構不同。</b><br>
+    ・<ruby>机<rt>つくえ</rt></ruby>の<ruby>下<rt>した</rt></ruby>（tsukue no shita）＝ 下 是<b>獨立名詞</b>，要用 <span class="j-mark">の</span> 接。<br>
+    ・<ruby>下<rt>した</rt>着<rt>ぎ</rt></ruby>（shitagi）＝ 下 是<b>接頭語</b>，直接黏上去，<b>沒有 の</b>。<br>
+    ✗ <span class="compare">下の着</span>／✗ <span class="compare">机下</span> 都不成立。<br>
+    真正要記的只有「上」那邊會換音：獨立 → <b>うえ</b>（棚の上）、黏成複合詞 → <b>うわ</b>（上着）；
+    「下」兩種情況都唸 <b>した</b>，不用換。（音讀層次的 <ruby>地<rt>ち</rt>下<rt>か</rt></ruby>・<ruby>下<rt>げ</rt>駄<rt>た</rt></ruby> 是另一回事）
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 台語直接唸出來就是日文</strong><br>
+    <span class="compare">新聞</span> 台語 <b>sin-bun</b> → <b>しんぶん</b>（幾乎一模一樣，只差聲調）<br>
+    <span class="compare">教科書</span> 台語 <b>kau-kho-su</b> → <b>きょうかしょ</b>（三個音節一對一對上）<br>
+    <span class="compare">洗濯機</span> 的 <b>機</b> 台語 ki → <b>き</b>（飛行機・機会 都是這個 き）<br>
+    <span class="compare">冷蔵庫</span> 的 <b>冷</b> 台語 ling → <b>れい</b>、<b>庫</b> 台語 kho → <b>こ</b><br>
+    對不上的只有訓讀那兩個：<ruby>上<rt>うわ</rt>着<rt>ぎ</rt></ruby>（穿在「上」面的那件）、<ruby>下<rt>げ</rt>駄<rt>た</rt>箱<rt>ばこ</rt></ruby>（記法見上面那張貼紙）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、寫的跟唸的不一樣</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這兩個字照假名一個一個唸會很奇怪，日本人實際上都不是那樣發音。
+    <b>寫還是照原本寫</b>，只有嘴巴要改。
+  </p>
+
+  <div class="say-row">
+    <div class="say-ja"><ruby>冷<rt>れい</rt>蔵<rt>ぞう</rt>庫<rt>こ</rt></ruby><small>written: れいぞうこ</small></div>
+    <div class="say-arrow">→</div>
+    <div class="say-ja said">れーぞーこ<small>said: reezooko</small></div>
+  </div>
+
+  <div class="say-row">
+    <div class="say-ja"><ruby>洗<rt>せん</rt>濯<rt>たく</rt>機<rt>き</rt></ruby><small>written: せんたくき</small></div>
+    <div class="say-arrow">→</div>
+    <div class="say-ja said">せんた<b>っ</b>き<small>said: sentakki</small></div>
+  </div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>① 長音（ちょうおん）</h4>
+      <div class="vs-sub">えい → えー、おう → おー</div>
+      <ul>
+        <li><b>れ<u>い</u></b> 不唸 re-i，而是把 れ 拉長 → <b>れー</b></li>
+        <li><b>ぞ<u>う</u></b> 不唸 zo-u，而是把 ぞ 拉長 → <b>ぞー</b></li>
+        <li>同一條規則：<ruby>映<rt>えい</rt>画<rt>が</rt></ruby>＝え<b>ー</b>が、<ruby>先<rt>せん</rt>生<rt>せい</rt></ruby>＝せんせ<b>ー</b>、<ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby>＝と<b>ー</b>きょ<b>ー</b></li>
+        <li>拍數不變：れいぞうこ 是 5 拍，れーぞーこ 也是 5 拍，只是後面那拍變成「拉長前一個音」</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>② 促音化（そくおんか）</h4>
+      <div class="vs-sub">く・つ 遇到後面的 k/t/s 音會縮成 っ</div>
+      <ul>
+        <li>せんた<b>く</b>＋<b>き</b> → く 被後面的 き 吃掉，變成停半拍的 <b>っ</b></li>
+        <li>這是<b>口語習慣</b>，不是正式規則：字典寫 せんたくき，念 せんたっき 也完全正常</li>
+        <li>同型：<ruby>洗<rt>せん</rt>濯<rt>たく</rt>物<rt>もの</rt></ruby> 沒有這個現象（後面是 も，不是 k 行）</li>
+        <li>っ 的發音方式見 <a href="2026-05-09-dakuten-sokuon.html" style="color:var(--accent);">5/9 濁音・促音</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <tr><th style="width:32%">寫法</th><th style="width:30%">唸法</th><th>規則</th></tr>
+    <tr class="key"><td>れいぞうこ（冷蔵庫）</td><td><b>れーぞーこ</b></td><td>えい→えー、おう→おー（長音）</td></tr>
+    <tr class="key"><td>せんたくき（洗濯機）</td><td><b>せんたっき</b></td><td>く 在 き 前面縮成促音（口語）</td></tr>
+    <tr><td>えいが（映画）</td><td>えーが</td><td>長音</td></tr>
+    <tr><td>とうきょう（東京）</td><td>とーきょー</td><td>長音（兩個都是）</td></tr>
+    <tr><td>きょうかしょ（教科書）</td><td>きょーかしょ</td><td>長音——<b>本篇的字也中招</b></td></tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>為什麼寫成 う 卻唸成 ー</strong><br>
+    因為假名寫法保留的是<b>古代的讀音</b>，發音後來合併了、拼字沒跟著改。
+    片假名乾脆直接寫成長音符號（ビ<b>ー</b>ル・ポ<b>ー</b>ル），平假名則維持 う／い 的老寫法。
+    所以看到漢語詞裡的 <span class="compare">〜おう</span>／<span class="compare">〜えい</span>，一律先當成長音唸。
+    可以對照 <a href="2026-08-11-masu-kei-tango.html" style="color:var(--accent);">8/11 ます形單字</a> 裡的 映画＝えーが。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">課後複習小測驗 · Self-Quiz</div>
+
+  <div class="section">
+    <div class="section-title">✏️ 五題</div>
+
+    <p style="font-size:15px;line-height:2;color:var(--ink-soft);">
+      1. 把「報紙在信箱裡」寫成日文。<br>
+      2. 「<ruby>靴<rt>くつ</rt></ruby>は<ruby>下<rt>げ</rt>駄<rt>た</rt>箱<rt>ばこ</rt></ruby>（　）<ruby>中<rt>なか</rt></ruby>です。」括號填什麼？<br>
+      3. <ruby>冷<rt>れい</rt>蔵<rt>ぞう</rt>庫<rt>こ</rt></ruby> 實際上怎麼唸？用了什麼規則？<br>
+      4. 日文的 <ruby>新<rt>しん</rt>聞<rt>ぶん</rt></ruby> 是什麼意思？「電視新聞」要說什麼？<br>
+      5. 把第 1 題改成 あります 版。
+    </p>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p style="font-size:15px;line-height:2.1;color:var(--ink-soft);margin-top:10px;">
+        1. <ruby>新<rt>しん</rt>聞<rt>ぶん</rt></ruby>はポストの<ruby>中<rt>なか</rt></ruby>です。（shinbun wa posuto no naka desu）<br>
+        2. <b>の</b> —— 名詞接名詞只有這條路。<br>
+        3. 唸 <b>れーぞーこ</b>。えい→えー、おう→おー 的<b>長音</b>規則；拍數還是 5 拍。<br>
+        4. <b>報紙</b>。電視新聞是 <span class="compare">ニュース</span>。<br>
+        5. <ruby>新<rt>しん</rt>聞<rt>ぶん</rt></ruby>はポストの<ruby>中<rt>なか</rt></ruby><b>に</b>あります。位置詞要當場所就得貼 <span class="j-mark">に</span>。
+      </p>
+    </details>
+  </div>
+
+  <a href="2026-08-19-hon.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">「本」到底是什麼意思 <span class="next-arrow">→</span></span>
+    <span class="next-sub">本棚的本是書、本まぐろ的本卻是「正宗」——一個字四種用法，連濁 はこ→ばこ 也是同一條規則</span>
+  </a>
+
+  <a href="2026-08-18-x-wa-y-no-mae.html" class="next-link">
+    <span class="next-kicker">— 前情提要 —</span>
+    <span class="next-title">XはYの前です <span class="next-arrow">→</span></span>
+    <span class="next-sub">位置詞是名詞、要用 の 接；本篇只是把位置詞換成「中」</span>
+  </a>
+
+  <a href="2026-08-18-machi-tana-shouhin.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">街・棚・商品の単語 <span class="next-arrow">→</span></span>
+    <span class="next-sub">位置句要用到的另一批名詞，訓讀四個字加商店用語</span>
+  </a>
+
+  <a href="2026-05-09-dakuten-sokuon.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">濁音・促音 <span class="next-arrow">→</span></span>
+    <span class="next-sub">小さい「っ」怎麼發音；洗濯機唸成 せんたっき 就是它</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

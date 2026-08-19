@@ -13,6 +13,7 @@
 .vpanel{position:sticky;top:16px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px}
 .vpanel h3{font-size:13px;color:var(--ink-mute);margin:0 0 8px;font-weight:600;letter-spacing:.05em}
 .vpanel h3:not(:first-of-type){margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.vpanel h3 #tag-clear{float:right;font-weight:400;color:var(--accent);text-decoration:none;font-size:12px;letter-spacing:0}
 .vpanel summary{list-style:none;cursor:pointer;font-size:14px;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center}
 .vpanel summary::-webkit-details-marker{display:none}
 .vpanel summary .cur{color:var(--accent);font-weight:600}
@@ -80,7 +81,7 @@
       <details id="filters" open>
         <summary><span>篩選：<span class="cur" id="cur-label"></span></span><span class="caret">▾</span></summary>
         <div class="panel-body">
-          <h3>分類 TAG</h3>
+          <h3>分類 TAG<a href="#" id="tag-clear" hidden>× 清除</a></h3>
           <div class="tag-cloud" id="tags"></div>
           <h3>月份</h3>
           <ul class="month-list" id="months"></ul>

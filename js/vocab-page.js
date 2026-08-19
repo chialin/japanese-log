@@ -87,11 +87,13 @@
       a.addEventListener('click', (e) => { e.preventDefault(); fn(); });
       return a;
     };
-    tags.appendChild(mk('全部', D.length, !state.tag, () => setFilter({ tag: null })));
+    // 不預選分類：沒有高亮＝沒套分類。選了才在標題旁出現「清除」
     Object.keys(tagCount).sort((a, b) => tagCount[b] - tagCount[a]).forEach((t) => {
       tags.appendChild(mk(t, tagCount[t], state.tag === t,
         () => setFilter({ tag: state.tag === t ? null : t })));
     });
+    const clear = $('tag-clear');
+    clear.hidden = !state.tag;
 
     const ml = $('months');
     ml.textContent = '';
@@ -130,6 +132,10 @@
   }
 
   $('q').addEventListener('input', function () { setState({ q: this.value.trim() }); });
+  $('tag-clear').addEventListener('click', (e) => {
+    e.preventDefault();
+    setFilter({ tag: null });
+  });
   $('more').addEventListener('click', () => { state.shown += BATCH; render(); });
   new IntersectionObserver((es) => {
     if (es.some((e) => e.isIntersecting) &&

@@ -1,6 +1,381 @@
 {
- "generated": "2026-08-19",
+ "generated": "2026-08-20",
  "words": [
+  {
+   "text": "いつも コーヒーを 飲みます",
+   "ja": "いつも コーヒーを <ruby>飲<rt>の</rt></ruby>みます",
+   "kana": "いつも コーヒーを のみます",
+   "romaji": "itsumo koohii o nomimasu",
+   "meaning": "總是喝咖啡 — 100%，每次都這樣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "よく コーヒーを 飲みます",
+   "ja": "よく コーヒーを <ruby>飲<rt>の</rt></ruby>みます",
+   "kana": "よく コーヒーを のみます",
+   "romaji": "yoku koohii o nomimasu",
+   "meaning": "常喝咖啡 — 頻率高、是習慣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "時々 コーヒーを 飲みます",
+   "ja": "<ruby>時々<rt>ときどき</rt></ruby> コーヒーを <ruby>飲<rt>の</rt></ruby>みます",
+   "kana": "ときどき コーヒーを のみます",
+   "romaji": "tokidoki koohii o nomimasu",
+   "meaning": "有時候喝 — 時不時，有一定規律",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "たまに コーヒーを 飲みます",
+   "ja": "たまに コーヒーを <ruby>飲<rt>の</rt></ruby>みます",
+   "kana": "たまに コーヒーを のみます",
+   "romaji": "tama ni koohii o nomimasu",
+   "meaning": "偶爾喝 — 比 時々 更少，難得才一次",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "あまり コーヒーを 飲みません",
+   "ja": "あまり コーヒーを <ruby>飲<rt>の</rt></ruby>みません",
+   "kana": "あまり コーヒーを のみません",
+   "romaji": "amari koohii o nomimasen",
+   "meaning": "不太喝咖啡 — 還是會喝，只是不多。口語常說成 あんまり",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "ほとんど コーヒーを 飲みません",
+   "ja": "ほとんど コーヒーを <ruby>飲<rt>の</rt></ruby>みません",
+   "kana": "ほとんど コーヒーを のみません",
+   "romaji": "hotondo koohii o nomimasen",
+   "meaning": "幾乎不喝咖啡 — 剩一點點例外，一年可能喝個一兩次",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "全く コーヒーを 飲みません",
+   "ja": "<ruby>全<rt>まった</rt></ruby>く コーヒーを <ruby>飲<rt>の</rt></ruby>みません",
+   "kana": "まったく コーヒーを のみません",
+   "romaji": "mattaku koohii o nomimasen",
+   "meaning": "完全不喝咖啡 — 一滴都不碰，語氣最強",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "全然 コーヒーを 飲みません",
+   "ja": "<ruby>全然<rt>ぜんぜん</rt></ruby> コーヒーを <ruby>飲<rt>の</rt></ruby>みません",
+   "kana": "ぜんぜん コーヒーを のみません",
+   "romaji": "zenzen koohii o nomimasen",
+   "meaning": "完全不喝咖啡 — 意思跟 全く 幾乎一樣，日常會話用這個更多",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "たまに",
+   "ja": "",
+   "kana": "",
+   "romaji": "ta-ma-ni",
+   "meaning": "三拍一樣長。た 不送氣，接近台語的「焦（ta）」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "あまり",
+   "ja": "",
+   "kana": "",
+   "romaji": "a-ma-ri",
+   "meaning": "り 的 r 是舌尖輕彈上顎，不是英文捲舌。別唸成 a-maa-ri 把中間拉長",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "ほとんど",
+   "ja": "",
+   "kana": "",
+   "romaji": "ho-to-n-do",
+   "meaning": "⚠️ ん 自己佔一拍。錯誤唸法 ho-ton-do（3 拍）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "全く",
+   "ja": "",
+   "kana": "",
+   "romaji": "ma-t-ta-ku",
+   "meaning": "⚠️ っ 是「停一拍」，不發聲但要停滿。先擺好 た 的嘴型憋住一拍，再放出來",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "全然",
+   "ja": "",
+   "kana": "",
+   "romaji": "ze-n-ze-n",
+   "meaning": "⚠️ 兩個 ん 都要唸滿。ぜ 是有聲的 ze，不是 se。錯誤唸法 zen-zen（2 拍）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "私は いつも 本を 読みます",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は いつも <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます",
+   "kana": "わたしは いつも ほんを よみます",
+   "romaji": "watashi wa itsumo hon o yomimasu",
+   "meaning": "我總是看書",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私は よく 本を 読みます",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は よく <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます",
+   "kana": "わたしは よく ほんを よみます",
+   "romaji": "watashi wa yoku hon o yomimasu",
+   "meaning": "我常看書",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私は 時々 本を 読みます",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は <ruby>時々<rt>ときどき</rt></ruby> <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます",
+   "kana": "わたしは ときどき ほんを よみます",
+   "romaji": "watashi wa tokidoki hon o yomimasu",
+   "meaning": "我有時候看書",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私は たまに 本を 読みます",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は たまに <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます",
+   "kana": "わたしは たまに ほんを よみます",
+   "romaji": "watashi wa tama ni hon o yomimasu",
+   "meaning": "我偶爾看書",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私は あまり 本を 読みません",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は あまり <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みません",
+   "kana": "わたしは あまり ほんを よみません",
+   "romaji": "watashi wa amari hon o yomimasen",
+   "meaning": "我不太看書",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私は ほとんど 本を 読みません",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は ほとんど <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みません",
+   "kana": "わたしは ほとんど ほんを よみません",
+   "romaji": "watashi wa hotondo hon o yomimasen",
+   "meaning": "我幾乎不看書",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私は 全く 本を 読みません",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は <ruby>全<rt>まった</rt></ruby>く <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みません",
+   "kana": "わたしは まったく ほんを よみません",
+   "romaji": "watashi wa mattaku hon o yomimasen",
+   "meaning": "我完全不看書",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-20",
+     "href": "lessons/2026-08-20-hindo.html",
+     "title": "頻率副詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
   {
    "text": "本屋",
    "ja": "<ruby>本<rt>ほん</rt>屋<rt>や</rt></ruby>",

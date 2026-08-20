@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>頻率副詞 — いつも から 全く まで</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;
+  --accent-deep:#28513a;}   /* 深綠 — Index 標題用 */
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;white-space:nowrap;color:var(--ink);}
+.joshi-table .col-ja b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.joshi-table td.pos{color:var(--accent);font-weight:600;white-space:nowrap;}
+.joshi-table td.neg{color:#a34a2e;font-weight:600;white-space:nowrap;}
+
+/* 頻率階梯 */
+.ladder{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:8px 0;margin:18px 0;}
+.rung{display:grid;grid-template-columns:62px 1fr 96px;align-items:center;gap:12px;padding:9px 18px;}
+.rung + .rung{border-top:1px solid var(--line);}
+.rung.split{border-top:2px solid var(--accent);}
+.rung-pct{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-mute);text-align:right;}
+.rung-bar{position:relative;height:26px;background:var(--paper-deep);border-radius:3px;overflow:hidden;}
+.rung-fill{position:absolute;inset:0 auto 0 0;background:var(--accent-soft);}
+.rung.is-neg .rung-fill{background:#e3b3a2;}
+.rung-word{position:relative;z-index:1;display:flex;align-items:center;height:100%;padding-left:9px;
+  font-family:'Klee One','Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink);}
+.rung-cn{font-size:13px;color:var(--ink-soft);}
+.ladder-note{font-size:12.5px;color:var(--ink-mute);padding:4px 18px 8px;line-height:1.7;}
+@media(max-width:520px){.rung{grid-template-columns:46px 1fr;}.rung-cn{grid-column:2;padding-left:9px;}}
+
+/* 拍子格 */
+.mora{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0 2px;}
+.mora span{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;
+  border:1px solid var(--accent-soft);background:rgba(255,255,255,.7);border-radius:4px;
+  font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);}
+.mora span.beat{border-style:dashed;color:var(--ink-mute);background:var(--paper-deep);}
+.mora em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);margin-left:6px;}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;}
+.vs-col li{font-size:14px;color:var(--ink-soft);line-height:2;}
+.vs-col li b{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;color:var(--ink);font-weight:600;}
+@media(max-width:600px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Index */
+.toc{margin:22px 0 30px;}
+.toc-h{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;margin-bottom:12px;
+  border-bottom:2px solid var(--accent-deep);}
+.toc-h .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;
+  letter-spacing:.26em;color:var(--accent-deep);text-transform:uppercase;}
+.toc-list{list-style:none;margin:0;padding:0;}
+.toc-list a{display:block;text-decoration:none;color:var(--ink);padding:7px 0;
+  font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;letter-spacing:.04em;
+  transition:color .15s,padding-left .15s;}
+.toc-list a:hover{color:var(--accent);padding-left:6px;}
+.toc-n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
+  color:var(--accent);margin-right:9px;vertical-align:super;letter-spacing:.06em;}
+.toc-s{font-family:'Klee One','Shippori Mincho',serif;font-size:12px;
+  color:var(--ink-mute);font-weight:400;margin-left:10px;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">頻率<span class="accent">副詞</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 20</div>
+  <p class="page-subtitle">いつも から 全く まで — 七格頻率、哪些一定要接否定，還有 ほとんど・まったく 的拍子怎麼數</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <nav class="toc">
+    <div class="toc-h"><span class="en">Index</span></div>
+    <ul class="toc-list">
+      <li><a href="#ladder"><span class="toc-n">01</span>七格頻率階梯<span class="toc-s">いつも → 全く</span></a></li>
+      <li><a href="#rule"><span class="toc-n">02</span>最重要的一條規則<span class="toc-s">後面一定要有 ない</span></a></li>
+      <li><a href="#kotoba"><span class="toc-n">03</span>七個詞逐字看<span class="toc-s">意思與語感差異</span></a></li>
+      <li><a href="#hatsuon"><span class="toc-n">04</span>發音：拍子怎麼數<span class="toc-s">ん・っ 各佔一拍</span></a></li>
+      <li><a href="#reibun"><span class="toc-n">05</span>同一句話換七種<span class="toc-s">本を読みます</span></a></li>
+      <li><a href="#machigai"><span class="toc-n">06</span>常犯的錯<span class="toc-s">あまり読みます ✗</span></a></li>
+      <li><a href="#matome"><span class="toc-n">07</span>速記表<span class="toc-s">まとめ</span></a></li>
+      <li><a href="#quiz"><span class="toc-n">08</span>課後複習小測驗<span class="toc-s">Self-Quiz</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 頻率副詞排成一條線，共<strong>七格</strong>，從 いつも（總是）到 <ruby>全<rt>まった</rt></ruby>く（完全不）。<br>
+    ② 這條線<strong>中間有一道分界</strong>：上面四個配肯定，下面三個<strong>句尾一定要是否定</strong>。<br>
+    ③ ほとんど・まったく・ぜんぜん 唸不好，原因都一樣 —— <span class="compare">ん</span> 和 <span class="compare">っ</span> 各佔一整拍。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ladder">一、七格頻率階梯</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先看全景。綠色＝<strong>配肯定</strong>，紅色＝<strong>句尾一定要否定</strong>，
+    那條粗線就是分界。
+  </p>
+
+  <div class="ladder">
+    <div class="rung">
+      <div class="rung-pct">100%</div>
+      <div class="rung-bar"><div class="rung-fill" style="width:100%"></div><div class="rung-word">いつも</div></div>
+      <div class="rung-cn">總是</div>
+    </div>
+    <div class="rung">
+      <div class="rung-pct">80%</div>
+      <div class="rung-bar"><div class="rung-fill" style="width:80%"></div><div class="rung-word">よく</div></div>
+      <div class="rung-cn">常常</div>
+    </div>
+    <div class="rung">
+      <div class="rung-pct">50%</div>
+      <div class="rung-bar"><div class="rung-fill" style="width:50%"></div><div class="rung-word"><ruby>時々<rt>ときどき</rt></ruby></div></div>
+      <div class="rung-cn">有時候</div>
+    </div>
+    <div class="rung">
+      <div class="rung-pct">30%</div>
+      <div class="rung-bar"><div class="rung-fill" style="width:30%"></div><div class="rung-word">たまに</div></div>
+      <div class="rung-cn">偶爾</div>
+    </div>
+    <div class="ladder-note">　　　　　↑ 以上四個接<strong>肯定</strong>　／　↓ 以下三個句尾<strong>一定要 ない・ません</strong></div>
+    <div class="rung split is-neg">
+      <div class="rung-pct">20%</div>
+      <div class="rung-bar"><div class="rung-fill" style="width:20%"></div><div class="rung-word">あまり 〜ない</div></div>
+      <div class="rung-cn">不太～</div>
+    </div>
+    <div class="rung is-neg">
+      <div class="rung-pct">5%</div>
+      <div class="rung-bar"><div class="rung-fill" style="width:5%"></div><div class="rung-word">ほとんど 〜ない</div></div>
+      <div class="rung-cn">幾乎不～</div>
+    </div>
+    <div class="rung is-neg">
+      <div class="rung-pct">0%</div>
+      <div class="rung-bar"><div class="rung-word"><ruby>全<rt>まった</rt></ruby>く／<ruby>全然<rt>ぜんぜん</rt></ruby> 〜ない</div></div>
+      <div class="rung-cn">完全不～</div>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 杯子裡還剩多少水</strong><br>
+    否定那三格想成同一個杯子：<span class="compare">あまり</span>＝剩一半、
+    <span class="compare">ほとんど</span>＝剩一滴、<span class="compare">全く</span>＝空杯。<br>
+    用同一個動詞連唸三次就黏住了：<br>
+    「あまり<ruby>飲<rt>の</rt></ruby>まない → ほとんど飲まない → 全く飲まない」
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="rule">二、最重要的一條規則</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    程度差異記錯只是語感不精準，<strong>但這條規則錯了就是文法錯誤</strong>——
+    比背程度順序更重要。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>配肯定</h4>
+      <div class="vs-sub">句尾用 ます／る，正常說</div>
+      <ul>
+        <li><b>いつも</b> itsumo</li>
+        <li><b>よく</b> yoku</li>
+        <li><b><ruby>時々<rt>ときどき</rt></ruby></b> tokidoki</li>
+        <li><b>たまに</b> tama ni</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>一定配否定</h4>
+      <div class="vs-sub">句尾<strong>必須</strong>是 ない／ません</div>
+      <ul>
+        <li><b>あまり</b> amari</li>
+        <li><b>ほとんど</b> hotondo</li>
+        <li><b><ruby>全<rt>まった</rt></ruby>く</b> mattaku</li>
+        <li><b><ruby>全然<rt>ぜんぜん</rt></ruby></b> zenzen</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>右邊那四個是「成對出現」的</strong><br>
+    講出 <span class="compare">あまり</span> 的瞬間，句尾就已經決定是否定了。
+    只說「あまり<ruby>読<rt>よ</rt></ruby>みます」是<strong>沒講完的句子</strong>，日本人會等你把 ません 講出來。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kotoba">三、七個詞逐字看</div>
+
+  <div class="section">
+    <div class="section-title">📖 配肯定的四個</div>
+
+    <div class="word-item" data-text="いつも コーヒーを 飲みます">
+      <div class="word-content">
+        <div class="word-ja">いつも コーヒーを <ruby>飲<rt>の</rt></ruby>みます</div>
+        <div class="word-romaji">itsumo koohii o nomimasu</div>
+        <div class="word-meaning">總是喝咖啡 — 100%，每次都這樣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="よく コーヒーを 飲みます">
+      <div class="word-content">
+        <div class="word-ja">よく コーヒーを <ruby>飲<rt>の</rt></ruby>みます</div>
+        <div class="word-romaji">yoku koohii o nomimasu</div>
+        <div class="word-meaning">常喝咖啡 — 頻率高、是習慣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="時々 コーヒーを 飲みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>時々<rt>ときどき</rt></ruby> コーヒーを <ruby>飲<rt>の</rt></ruby>みます</div>
+        <div class="word-romaji">tokidoki koohii o nomimasu</div>
+        <div class="word-meaning">有時候喝 — 時不時，有一定規律</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="たまに コーヒーを 飲みます">
+      <div class="word-content">
+        <div class="word-ja">たまに コーヒーを <ruby>飲<rt>の</rt></ruby>みます</div>
+        <div class="word-romaji">tama ni koohii o nomimasu</div>
+        <div class="word-meaning">偶爾喝 — 比 時々 更少，難得才一次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong><ruby>時々<rt>ときどき</rt></ruby> 和 たまに 差在哪</strong><br>
+    <ruby>時々<rt>ときどき</rt></ruby>＝<strong>時不時，有一定節奏</strong>（一週一兩次的感覺）；
+    たまに＝<strong>難得才一次</strong>（一兩個月一次）。たまに 更低。<br>
+    兩個都<strong>接肯定</strong>，別跟下面那組搞混。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 配否定的三個</div>
+
+    <div class="word-item" data-text="あまり コーヒーを 飲みません">
+      <div class="word-content">
+        <div class="word-ja">あまり コーヒーを <ruby>飲<rt>の</rt></ruby>みません</div>
+        <div class="word-romaji">amari koohii o nomimasen</div>
+        <div class="word-meaning">不太喝咖啡 — <strong>還是會喝，只是不多</strong>。口語常說成 あんまり</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ほとんど コーヒーを 飲みません">
+      <div class="word-content">
+        <div class="word-ja">ほとんど コーヒーを <ruby>飲<rt>の</rt></ruby>みません</div>
+        <div class="word-romaji">hotondo koohii o nomimasen</div>
+        <div class="word-meaning">幾乎不喝咖啡 — <strong>剩一點點例外</strong>，一年可能喝個一兩次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="全く コーヒーを 飲みません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>全<rt>まった</rt></ruby>く コーヒーを <ruby>飲<rt>の</rt></ruby>みません</div>
+        <div class="word-romaji">mattaku koohii o nomimasen</div>
+        <div class="word-meaning">完全不喝咖啡 — <strong>一滴都不碰</strong>，語氣最強</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="全然 コーヒーを 飲みません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>全然<rt>ぜんぜん</rt></ruby> コーヒーを <ruby>飲<rt>の</rt></ruby>みません</div>
+        <div class="word-romaji">zenzen koohii o nomimasen</div>
+        <div class="word-meaning">完全不喝咖啡 — 意思跟 全く 幾乎一樣，<strong>日常會話用這個更多</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>ほとんど 單獨用是肯定的</strong><br>
+    ほとんど 本身的意思是<strong>「大部分、幾乎」</strong>，不是「很少」。
+    <span class="compare">ほとんどの<ruby>人<rt>ひと</rt></ruby></span>（hotondo no hito）＝大部分的人。<br>
+    要湊成 <strong>ほとんど 〜ない</strong> 才等於「幾乎不」——「大部分都沒有」。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 「全」的兩張臉</strong><br>
+    <span class="compare"><ruby>全<rt>まった</rt></ruby>く</span> 和 <span class="compare"><ruby>全然<rt>ぜんぜん</rt></ruby></span>
+    漢字一樣，讀音卻差很多，因為一個訓讀一個音讀：<br>
+    ・<strong>音讀 ぜん</strong>：台語「全」讀 <strong>tsuân</strong>，鼻音尾 -n → 日文 <strong>ん</strong>。
+    全然・<ruby>全部<rt>ぜんぶ</rt></ruby>・<ruby>安全<rt>あんぜん</rt></ruby> 都是 ぜん。<br>
+    ・<strong>訓讀 まった</strong>：日本固有詞，跟中文無關，只能單背。<br>
+    分辨法：<strong>漢字後面有平假名尾巴（全<b>く</b>・全<b>て</b>）就是訓讀</strong>，純漢字複合詞就是音讀。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hatsuon">四、發音：拍子怎麼數</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這幾個詞唸不順，九成的原因是同一件事：<strong><span class="compare">ん</span> 和
+    <span class="compare">っ</span> 各自佔一整拍</strong>，不是黏在前一個字上的裝飾。
+    下面每個詞一格一拍，<strong>邊敲桌子邊唸</strong>，敲幾下就唸幾拍。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🥁 一格＝一拍</div>
+
+    <div class="word-item" data-text="たまに">
+      <div class="word-content">
+        <div class="mora"><span>た</span><span>ま</span><span>に</span><em>3 拍</em></div>
+        <div class="word-romaji">ta-ma-ni</div>
+        <div class="word-meaning">三拍一樣長。た 不送氣，接近台語的「焦（ta）」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あまり">
+      <div class="word-content">
+        <div class="mora"><span>あ</span><span>ま</span><span>り</span><em>3 拍</em></div>
+        <div class="word-romaji">a-ma-ri</div>
+        <div class="word-meaning">り 的 r 是<strong>舌尖輕彈上顎</strong>，不是英文捲舌。別唸成 a-<b>maa</b>-ri 把中間拉長</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ほとんど">
+      <div class="word-content">
+        <div class="mora"><span>ほ</span><span>と</span><span class="beat">ん</span><span>ど</span><em>4 拍</em></div>
+        <div class="word-romaji">ho-to-n-do</div>
+        <div class="word-meaning">⚠️ <strong>ん 自己佔一拍</strong>。錯誤唸法 ho-ton-do（3 拍）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="全く">
+      <div class="word-content">
+        <div class="mora"><span>ま</span><span class="beat">っ</span><span>た</span><span>く</span><em>4 拍</em></div>
+        <div class="word-romaji">ma-t-ta-ku</div>
+        <div class="word-meaning">⚠️ <strong>っ 是「停一拍」</strong>，不發聲但要停滿。先擺好 た 的嘴型憋住一拍，再放出來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="全然">
+      <div class="word-content">
+        <div class="mora"><span>ぜ</span><span class="beat">ん</span><span>ぜ</span><span class="beat">ん</span><em>4 拍</em></div>
+        <div class="word-romaji">ze-n-ze-n</div>
+        <div class="word-meaning">⚠️ <strong>兩個 ん 都要唸滿</strong>。ぜ 是有聲的 ze，不是 se。錯誤唸法 zen-zen（2 拍）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>順帶把句尾也唸對</strong><br>
+    <span class="compare">ません</span>＝ma-se-n，<strong>ん 後面沒有母音</strong>，
+    嘴巴閉起來收在鼻音就停，不要唸成 masen<b>u</b>。<br>
+    規則只有一條：<ruby>飲<rt>の</rt></ruby>み<strong>ます</strong> → 飲み<strong>ません</strong>，
+    只有最後一個音在動，前面完全不變。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="reibun">五、同一句話換七種</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    用同一個動作跑完整條階梯，差異最有感。注意<strong>後三句的句尾自動變成
+    <ruby>読<rt>よ</rt></ruby>みません</strong>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 <ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>む（看書）</div>
+
+    <div class="word-item" data-text="私は いつも 本を 読みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は いつも <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます</div>
+        <div class="word-romaji">watashi wa itsumo hon o yomimasu</div>
+        <div class="word-meaning">我總是看書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は よく 本を 読みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は よく <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます</div>
+        <div class="word-romaji">watashi wa yoku hon o yomimasu</div>
+        <div class="word-meaning">我常看書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は 時々 本を 読みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は <ruby>時々<rt>ときどき</rt></ruby> <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます</div>
+        <div class="word-romaji">watashi wa tokidoki hon o yomimasu</div>
+        <div class="word-meaning">我有時候看書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は たまに 本を 読みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は たまに <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます</div>
+        <div class="word-romaji">watashi wa tama ni hon o yomimasu</div>
+        <div class="word-meaning">我偶爾看書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は あまり 本を 読みません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は あまり <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みません</div>
+        <div class="word-romaji">watashi wa amari hon o yomimasen</div>
+        <div class="word-meaning">我不太看書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は ほとんど 本を 読みません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は ほとんど <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みません</div>
+        <div class="word-romaji">watashi wa hotondo hon o yomimasen</div>
+        <div class="word-meaning">我幾乎不看書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は 全く 本を 読みません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は <ruby>全<rt>まった</rt></ruby>く <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みません</div>
+        <div class="word-romaji">watashi wa mattaku hon o yomimasen</div>
+        <div class="word-meaning">我完全不看書</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>位置放哪</strong><br>
+    頻率副詞通常擺在<strong>主題（〜は）後面、受詞前面</strong>：
+    <ruby>私<rt>わたし</rt></ruby>は <span class="j-mark">たまに</span> <ruby>本<rt>ほん</rt></ruby>を読みます。<br>
+    放在句子最前面（<span class="compare">たまに私は本を読みます</span>）文法也通，
+    語感上是特別強調頻率。<strong>但不能放到動詞後面。</strong>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">六、常犯的錯</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:44%">✗ 錯的說法</th><th style="width:44%">✓ 正確</th><th>問題</th></tr>
+    <tr>
+      <td class="col-ja">あまり <ruby>読<rt>よ</rt></ruby>み<b>ます</b></td>
+      <td class="col-ja">あまり <ruby>読<rt>よ</rt></ruby>み<b>ません</b></td>
+      <td>あまり 一定接否定</td>
+    </tr>
+    <tr>
+      <td class="col-ja">ほとんど <ruby>飲<rt>の</rt></ruby>み<b>ます</b></td>
+      <td class="col-ja">ほとんど <ruby>飲<rt>の</rt></ruby>み<b>ません</b></td>
+      <td>同上，ほとんど 也是</td>
+    </tr>
+    <tr>
+      <td class="col-ja">たまに <ruby>見<rt>み</rt></ruby><b>ません</b></td>
+      <td class="col-ja">たまに <ruby>見<rt>み</rt></ruby><b>ます</b></td>
+      <td>たまに 是<strong>肯定</strong>那組，別被「偶爾」的中文帶歪</td>
+    </tr>
+    <tr>
+      <td class="col-ja">ぜんぜん <ruby>好<rt>す</rt></ruby>き<b>です</b></td>
+      <td class="col-ja">ぜんぜん <ruby>好<rt>す</rt></ruby>き<b>じゃない</b></td>
+      <td>ぜんぜん 也要否定（口語有「ぜんぜん大丈夫」的用法，但那是例外，初學先別用）</td>
+    </tr>
+    <tr>
+      <td class="col-ja">ho-ton-do（3 拍）</td>
+      <td class="col-ja">ho-to-<b>n</b>-do（4 拍）</td>
+      <td>ん 被吃掉了</td>
+    </tr>
+    <tr>
+      <td class="col-ja">ma-ta-ku（3 拍）</td>
+      <td class="col-ja">ma-<b>t</b>-ta-ku（4 拍）</td>
+      <td>っ 沒停滿</td>
+    </tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、速記表</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:23%">詞</th><th style="width:20%">羅馬拼音</th><th style="width:9%">拍</th><th style="width:22%">意思</th><th>句尾</th></tr>
+    <tr><td class="col-ja">いつも</td><td>itsumo</td><td>3</td><td>總是（100%）</td><td class="pos">肯定</td></tr>
+    <tr><td class="col-ja">よく</td><td>yoku</td><td>2</td><td>常常</td><td class="pos">肯定</td></tr>
+    <tr><td class="col-ja"><ruby>時々<rt>ときどき</rt></ruby></td><td>tokidoki</td><td>4</td><td>有時候</td><td class="pos">肯定</td></tr>
+    <tr class="key"><td class="col-ja">たまに</td><td>tama ni</td><td>3</td><td>偶爾、難得</td><td class="pos">肯定</td></tr>
+    <tr><td class="col-ja">あまり</td><td>amari</td><td>3</td><td>不太～</td><td class="neg">否定</td></tr>
+    <tr class="key"><td class="col-ja">ほとんど</td><td>hotondo</td><td><b>4</b></td><td>幾乎不～</td><td class="neg">否定</td></tr>
+    <tr class="key"><td class="col-ja"><ruby>全<rt>まった</rt></ruby>く</td><td>mattaku</td><td><b>4</b></td><td>完全不～（正式）</td><td class="neg">否定</td></tr>
+    <tr><td class="col-ja"><ruby>全然<rt>ぜんぜん</rt></ruby></td><td>zenzen</td><td><b>4</b></td><td>完全不～（口語）</td><td class="neg">否定</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">課後複習小測驗 · Self-Quiz</div>
+
+  <ol style="color:var(--ink-soft);font-size:14px;line-height:2.2;padding-left:22px;">
+    <li>「我偶爾看書」怎麼說？（<ruby>本<rt>ほん</rt></ruby>・<ruby>読<rt>よ</rt></ruby>む，用禮貌形）</li>
+    <li>下面哪句錯？　ａ. あまり<ruby>飲<rt>の</rt></ruby>みません　ｂ. たまに飲みません　ｃ. よく飲みます</li>
+    <li>ほとんど 和 <ruby>全<rt>まった</rt></ruby>く 差在哪？用「還剩多少」解釋。</li>
+    <li>ほとんど 和 まったく 各是幾拍？拍子卡在哪個字？</li>
+    <li><ruby>全<rt>まった</rt></ruby>く 和 <ruby>全然<rt>ぜんぜん</rt></ruby> 漢字都有「全」，為什麼讀音差這麼多？</li>
+  </ol>
+
+  <details style="margin-top:14px;background:rgba(255,255,255,.5);border:1px solid var(--line);padding:14px 18px;">
+    <summary style="cursor:pointer;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);">🔍 點擊查看解答</summary>
+    <ol style="color:var(--ink-soft);font-size:14px;line-height:2.1;padding-left:22px;margin-top:12px;">
+      <li><strong><ruby>私<rt>わたし</rt></ruby>は たまに <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます。</strong>
+        （watashi wa tama ni hon o yomimasu）たまに 配肯定，所以句尾是 <strong>読みます</strong>。</li>
+      <li><strong>ｂ 錯。</strong>たまに 是「偶爾（有做）」，屬於肯定那組，
+        要說 <strong>たまに飲みます</strong>。要講「不太喝」得換成 あまり飲みません。</li>
+      <li>ほとんど＝<strong>杯子剩一滴</strong>，還留一點例外（一年喝個一兩次）；
+        全く＝<strong>空杯</strong>，一滴都不碰，語氣最強。</li>
+      <li>兩個都是 <strong>4 拍</strong>。ほとんど 卡在 <strong>ん</strong>（ho-to-<b>n</b>-do），
+        まったく 卡在 <strong>っ</strong>（ma-<b>t</b>-ta-ku）——ん 要唸滿、っ 要停滿。</li>
+      <li>因為<strong>一個訓讀、一個音讀</strong>。全く 的「全」是訓讀 <strong>まった</strong>（日本固有詞）；
+        全然 的「全」是音讀 <strong>ぜん</strong>（從中文借來，對應台語 tsuân 的鼻音尾）。<br>
+        判斷法：<strong>漢字後面有平假名尾巴就是訓讀</strong>，純漢字複合詞是音讀。</li>
+    </ol>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-16-reji-renji.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">レジ と レンジ：時々・長い・短い <span class="next-arrow">→</span></span>
+    <span class="next-sub">頻率副詞第一次出現的地方，那篇有 いつも／よく／時々 的初版表</span>
+  </a>
+
+  <a href="2026-08-12-hitei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">否定的說法：ない 怎麼接 <span class="next-arrow">→</span></span>
+    <span class="next-sub">あまり／ほとんど／全く 後面那個「ない・ません」怎麼變，回去看規則</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

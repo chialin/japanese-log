@@ -17,7 +17,14 @@ function linkLine(indent, prefix) {
 }
 
 async function htmlFilesIn(dir) {
-  const entries = await readdir(dir);
+  let entries;
+  try {
+    entries = await readdir(dir);
+  } catch (err) {
+    // readings/ 目前是空的（唯一一篇已於 2026-07-28 刪除），資料夾可能整個不存在
+    if (err.code === 'ENOENT') { console.log(`- ${dir}/ 不存在，跳過`); return []; }
+    throw err;
+  }
   return entries
     .filter(n => n.endsWith('.html'))
     .map(n => (dir === '.' ? n : `${dir}/${n}`));

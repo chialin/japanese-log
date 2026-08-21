@@ -283,8 +283,10 @@ rt {
 .kanji-chip {
   display: inline-block; background: rgba(255,255,255,.85); border: 1px solid var(--accent-soft);
   border-radius: 3px; color: var(--accent); font-size: 12px; padding: 1px 7px;
-  text-decoration: none; margin-left: 6px; white-space: nowrap;
+  text-decoration: none; white-space: nowrap;
 }
+/* 徽章列：整排收在文字欄底下自成一列，不跟日文句子搶寬度 */
+.kanji-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .kanji-chip:hover { background: var(--accent-pale); }
 .kanji-footer {
   background: rgba(255,255,255,.5); border-left: 3px solid var(--accent-soft);

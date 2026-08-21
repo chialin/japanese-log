@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜月（がつ）與〜か月（かげつ） — Months vs. Duration</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table td:first-child,.joshi-table th:first-child{white-space:nowrap;}
+.joshi-table td:nth-child(2){min-width:100px;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+/* 數字卡格（月份／か月共用） */
+.numgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0;}
+.nc{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:6px;padding:11px 12px;position:relative;}
+.nc .nc-n{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink-mute);line-height:1;}
+.nc .nc-k{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;color:var(--ink);margin-top:5px;line-height:1.4;}
+.nc .nc-r{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);margin-top:2px;}
+.nc .nc-t{font-size:12px;color:var(--ink-soft);margin-top:5px;line-height:1.5;}
+.nc b{color:var(--accent);}
+/* 促音卡＝實心邊框＋淡綠底；例外讀音卡＝虛線邊框 */
+.nc.sokuon{border-color:var(--accent);border-width:2px;background:var(--accent-pale);}
+.nc.odd{border-style:dashed;border-color:var(--accent-soft);}
+.nc-tag{position:absolute;top:-9px;right:8px;font-size:10.5px;letter-spacing:.06em;padding:1px 6px;border-radius:9px;
+  background:var(--accent);color:#fff;font-family:'Shippori Mincho',serif;}
+.nc.odd .nc-tag{background:#a9762a;}
+/* 卡片右下角的小播放鍵（只有它綁 click，避免選字複製時誤觸發音） */
+.nc{padding-bottom:34px;}
+.nc .play-btn{position:absolute;right:8px;bottom:7px;width:26px;height:26px;font-size:10px;flex-shrink:0;}
+.nc .nc-t{padding-right:30px;}
+@media(max-width:760px){.numgrid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:520px){.numgrid{grid-template-columns:repeat(2,1fr);}}
+
+/* 拆字圖 */
+.split{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:center;
+  border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px;margin:18px 0;}
+.split .pc{text-align:center;padding:8px 14px;border:1px solid var(--accent-soft);border-radius:6px;background:#fff;}
+.split .pc-t{font-family:'Klee One','Shippori Mincho',serif;font-size:24px;color:var(--ink);}
+.split .pc-s{font-size:12px;color:var(--ink-mute);margin-top:3px;}
+.split .plus{font-size:20px;color:var(--ink-mute);}
+
+/* 對照欄 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;}
+.vs-col li{font-size:14px;color:var(--ink-soft);line-height:2;}
+.vs-col li b{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;color:var(--ink);font-weight:600;}
+@media(max-width:600px){.vs-grid{grid-template-columns:1fr;}}
+
+details{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:6px;padding:12px 16px;margin:10px 0;}
+details summary{cursor:pointer;font-family:'Shippori Mincho',serif;color:var(--accent);font-size:14px;}
+details p{font-size:14px;color:var(--ink-soft);line-height:1.9;margin:8px 0 0;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜月（がつ）與〜<span class="accent">か月</span>（かげつ）</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 21</div>
+  <p class="page-subtitle">「幾月」跟「幾個月」是兩套讀法 — 12 個月份、12 個期間全部列出來，標出哪四個會變促音</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① 月份＝〜<span class="j-mark">月（がつ）</span>，期間＝〜<span class="j-mark">か月（かげつ）</span>，是兩個不同的字組合。<br>
+    ② 月份的例外是 <b>4・7・9</b>（し・しち・く）；期間的例外是 <b>1・6・8・10</b>（會變促音っ）。兩組<strong>剛好不重疊</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、「かげつ」不是「がつ」變來的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先解決最容易誤會的地方：<span class="compare">かげつ</span> 不是 <span class="compare">がつ</span> 被前面的「か」拉成濁音。
+    它是<strong>兩個漢字疊起來</strong>——か 其實是漢字 <strong>「箇」</strong>（＝個），常寫成 <strong>ヶ月</strong>（那個小ヶ是「箇」的簡寫，不是片假名カ）、
+    也寫成 <strong>か月</strong>／<strong>カ月</strong>。
+  </p>
+
+  <div class="split">
+    <div class="pc"><div class="pc-t">三</div><div class="pc-s">さん · 數字</div></div>
+    <span class="plus">＋</span>
+    <div class="pc"><div class="pc-t">箇（か）</div><div class="pc-s">＝「個」</div></div>
+    <span class="plus">＋</span>
+    <div class="pc"><div class="pc-t">月（げつ）</div><div class="pc-s">月的一般音讀</div></div>
+    <span class="plus">＝</span>
+    <div class="pc" style="border-color:var(--accent);border-width:2px;"><div class="pc-t">さんかげつ</div><div class="pc-s">三個月</div></div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「月」本來就有兩個音讀，<strong>げつ 才是常態</strong>，がつ 只留給月份名稱：
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:88px;">讀音</th><th>用在哪</th><th>例</th></tr>
+    <tr>
+      <td class="col-ja"><b>がつ</b></td>
+      <td>只有「幾月」這一種用法</td>
+      <td class="col-ja"><ruby>一月<rt>いちがつ</rt></ruby>・<ruby>九月<rt>くがつ</rt></ruby>・<ruby>何月<rt>なんがつ</rt></ruby></td>
+    </tr>
+    <tr>
+      <td class="col-ja"><b>げつ</b></td>
+      <td>其他幾乎全部</td>
+      <td class="col-ja"><ruby>月曜日<rt>げつようび</rt></ruby>・<ruby>今月<rt>こんげつ</rt></ruby>・<ruby>先月<rt>せんげつ</rt></ruby>・<ruby>三<rt>さん</rt></ruby>か<ruby>月<rt>げつ</rt></ruby></td>
+    </tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>がつ 是「呉音」，げつ 才是「漢音」——不是反過來</strong><br>
+    日語的漢字音是分兩批進來的：<strong>呉音</strong>（5〜6 世紀，從中國南朝經朝鮮半島傳入，最早）、
+    <strong>漢音</strong>（7〜9 世紀，遣唐使從長安帶回來的，比較新）。<br>
+    「月」的呉音是 <span class="compare">ガチ／ガツ</span>，漢音是 <span class="compare">ゲツ</span>。
+    月份名稱是很古老的日常詞，所以留住了<strong>更舊的那層（呉音 がつ）</strong>；
+    後來造的漢語詞（月曜日・今月・満月）走的是漢音 げつ。<br>
+    4・7・9 三個要分開看：<br>
+    ・<strong>9</strong> ＝ 月份 <span class="compare">く</span>（呉音）／期間 <span class="compare">きゅう</span>（漢音），兩層對得最整齊<br>
+    ・<strong>7</strong> ＝ 月份 <span class="compare">しち</span>（呉音；它的漢音是幾乎不用的 シツ）／期間 <span class="compare">なな</span> 是<strong>訓読み</strong><br>
+    ・<strong>4</strong> ＝ <span class="compare">し</span> 的呉音跟漢音<strong>都是シ</strong>，不分層；期間的 <span class="compare">よん</span> 同樣是訓読み<br>
+    所以真正的通則是：<strong>月份保留古老的音讀，期間改用聽起來不會搞混的日常說法</strong>（多半是訓読み）——
+    因為 し 跟 しち 講快了很像，く 又跟「苦」同音，數數量時容易誤會。<br>
+    <span style="font-size:12.5px;color:var(--ink-mute);">音層分類查自日本語版 Wiktionary 各字條目：<a href="https://ja.wiktionary.org/wiki/月" target="_blank" rel="noopener" style="color:var(--accent);">月</a>・<a href="https://ja.wiktionary.org/wiki/九" target="_blank" rel="noopener" style="color:var(--accent);">九</a>・<a href="https://ja.wiktionary.org/wiki/七" target="_blank" rel="noopener" style="color:var(--accent);">七</a>・<a href="https://ja.wiktionary.org/wiki/四" target="_blank" rel="noopener" style="color:var(--accent);">四</a>。</span>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 台語的「月」對到 げつ</strong><br>
+    台語「月」文讀 <span class="compare">goat</span>、白話讀 <span class="compare">goeh</span>，都是入聲收尾 → 日語音讀 <span class="compare">げつ</span>（-t 對 -つ）。
+    月曜日（げつようび）、今月（こんげつ）、三か月（さんかげつ）都對得上。<br>
+    反過來說，<span class="compare">がつ</span> 是特別留給月份名稱的舊音，看到 がつ 就是在講「幾月」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、月份 12 個 — 〜月（がつ）</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    數字照唸 ＋ がつ。只有 <strong>4・7・9</strong> 三個不照平常的 よん・なな・きゅう 唸，虛線框的就是要小心的。
+  </p>
+
+  <div class="numgrid">
+    <div data-text="いちがつ" class="nc"><div class="nc-n">1月</div><div class="nc-k">いちがつ</div><div class="nc-r">ichigatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="にがつ" class="nc"><div class="nc-n">2月</div><div class="nc-k">にがつ</div><div class="nc-r">nigatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="さんがつ" class="nc"><div class="nc-n">3月</div><div class="nc-k">さんがつ</div><div class="nc-r">sangatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="しがつ" class="nc odd"><span class="nc-tag">例外</span><div class="nc-n">4月</div><div class="nc-k"><b>し</b>がつ</div><div class="nc-r">shigatsu</div><div class="nc-t">不是 よんがつ</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="ごがつ" class="nc"><div class="nc-n">5月</div><div class="nc-k">ごがつ</div><div class="nc-r">gogatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="ろくがつ" class="nc"><div class="nc-n">6月</div><div class="nc-k">ろくがつ</div><div class="nc-r">rokugatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="しちがつ" class="nc odd"><span class="nc-tag">例外</span><div class="nc-n">7月</div><div class="nc-k"><b>しち</b>がつ</div><div class="nc-r">shichigatsu</div><div class="nc-t">不是 なながつ</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="はちがつ" class="nc"><div class="nc-n">8月</div><div class="nc-k">はちがつ</div><div class="nc-r">hachigatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="くがつ" class="nc odd"><span class="nc-tag">例外</span><div class="nc-n">9月</div><div class="nc-k"><b>く</b>がつ</div><div class="nc-r">kugatsu</div><div class="nc-t">不是 きゅうがつ</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="じゅうがつ" class="nc"><div class="nc-n">10月</div><div class="nc-k">じゅうがつ</div><div class="nc-r">juugatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="じゅういちがつ" class="nc"><div class="nc-n">11月</div><div class="nc-k">じゅういちがつ</div><div class="nc-r">juuichigatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="じゅうにがつ" class="nc"><div class="nc-n">12月</div><div class="nc-k">じゅうにがつ</div><div class="nc-r">juunigatsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+  </div>
+
+  <div class="note">
+    📝 月份<strong>完全不會出現促音</strong>。1月 是 いちがつ、6月 是 ろくがつ、10月 是 じゅうがつ——
+    因為 <span class="compare">が</span> 是濁音，不會引發促音便（下一節說明）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、期間 12 個 — 〜か月（かげつ）</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    綠色實心框＝<strong>促音（っ）</strong>，虛線框＝<strong>換讀法</strong>。剛好把 12 個切成三群：促音四個、換讀法三個、其餘照唸。
+  </p>
+
+  <div class="numgrid">
+    <div data-text="いっかげつ" class="nc sokuon"><span class="nc-tag">促音</span><div class="nc-n">1か月</div><div class="nc-k">い<b>っ</b>かげつ</div><div class="nc-r">ikkagetsu</div><div class="nc-t">いち → いっ</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="にかげつ" class="nc"><div class="nc-n">2か月</div><div class="nc-k">にかげつ</div><div class="nc-r">nikagetsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="さんかげつ" class="nc"><div class="nc-n">3か月</div><div class="nc-k">さんかげつ</div><div class="nc-r">sankagetsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="よんかげつ" class="nc odd"><span class="nc-tag">換讀法</span><div class="nc-n">4か月</div><div class="nc-k"><b>よん</b>かげつ</div><div class="nc-r">yonkagetsu</div><div class="nc-t">不是 しかげつ</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="ごかげつ" class="nc"><div class="nc-n">5か月</div><div class="nc-k">ごかげつ</div><div class="nc-r">gokagetsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="ろっかげつ" class="nc sokuon"><span class="nc-tag">促音</span><div class="nc-n">6か月</div><div class="nc-k">ろ<b>っ</b>かげつ</div><div class="nc-r">rokkagetsu</div><div class="nc-t">ろく → ろっ</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="ななかげつ" class="nc odd"><span class="nc-tag">換讀法</span><div class="nc-n">7か月</div><div class="nc-k"><b>なな</b>かげつ</div><div class="nc-r">nanakagetsu</div><div class="nc-t">不是 しちかげつ</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="はっかげつ" class="nc sokuon"><span class="nc-tag">促音</span><div class="nc-n">8か月</div><div class="nc-k">は<b>っ</b>かげつ</div><div class="nc-r">hakkagetsu</div><div class="nc-t">はちかげつ 也通</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="きゅうかげつ" class="nc odd"><span class="nc-tag">換讀法</span><div class="nc-n">9か月</div><div class="nc-k"><b>きゅう</b>かげつ</div><div class="nc-r">kyuukagetsu</div><div class="nc-t">不是 くかげつ</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="じゅっかげつ" class="nc sokuon"><span class="nc-tag">促音</span><div class="nc-n">10か月</div><div class="nc-k">じゅ<b>っ</b>かげつ</div><div class="nc-r">jukkagetsu</div><div class="nc-t">じっかげつ 也通</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="じゅういっかげつ" class="nc sokuon"><span class="nc-tag">促音</span><div class="nc-n">11か月</div><div class="nc-k">じゅうい<b>っ</b>かげつ</div><div class="nc-r">juuikkagetsu</div><div class="nc-t">尾巴是 1，跟著促音</div><button class="play-btn" aria-label="播放">▶</button></div>
+    <div data-text="じゅうにかげつ" class="nc"><div class="nc-n">12か月</div><div class="nc-k">じゅうにかげつ</div><div class="nc-r">juunikagetsu</div><button class="play-btn" aria-label="播放">▶</button></div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>4・7・9 兩邊剛好相反</strong><br>
+    月份用舊讀 <span class="compare">し・しち・く</span>，期間用日常讀法 <span class="compare">よん・なな・きゅう</span>。<br>
+    <ruby>九月<rt>くがつ</rt></ruby>（九月）／<ruby>九<rt>きゅう</rt></ruby>か<ruby>月<rt>げつ</rt></ruby>（九個月）——同一個「九」，兩種唸法。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、促音是怎麼來的 — 一條通用規則</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    促音不是「か月」專屬的，是<strong>整個日語量詞系統的通則</strong>：
+  </p>
+
+  <div class="tip">
+    💡 <strong>規則：以 ち／く 結尾的數字，後面接 か・さ・た・は行 的量詞，就縮成小っ</strong><br>
+    因為 ち・く 是清音收尾，撞上後面同樣是清音的 k／s／t／h，中間那個母音被擠掉，只剩一個停頓。
+  </div>
+
+  <table class="joshi-table">
+    <tr><th style="width:120px;">數字</th><th style="width:110px;">原本</th><th>接量詞後</th></tr>
+    <tr><td>1</td><td class="col-ja">いち</td><td class="col-ja"><b>いっ</b>かげつ・<b>いっ</b>かい（一回）・<b>いっ</b>ぷん（一分）・<b>いっ</b>ぽん（一本）</td></tr>
+    <tr><td>6</td><td class="col-ja">ろく</td><td class="col-ja"><b>ろっ</b>かげつ・<b>ろっ</b>かい・<b>ろっ</b>ぷん・<b>ろっ</b>ぽん</td></tr>
+    <tr><td>8</td><td class="col-ja">はち</td><td class="col-ja"><b>はっ</b>かげつ・<b>はっ</b>かい・<b>はっ</b>ぷん・<b>はっ</b>ぽん</td></tr>
+    <tr><td>10</td><td class="col-ja">じゅう</td><td class="col-ja"><b>じゅっ</b>かげつ・<b>じゅっ</b>かい・<b>じゅっ</b>ぷん・<b>じゅっ</b>ぽん</td></tr>
+  </table>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <strong>10 為什麼也算？</strong>「十」的古音是 <span class="compare">じふ</span>（收 -p），現在寫成 じゅう，
+    但接量詞時那個舊的 -p 又跑出來，變成促音。台語「十」＝ <span class="compare">tsap</span>，也是 -p 收尾，正好是同一個來源。
+  </p>
+
+  <div class="note">
+    📝 <strong>反過來，接濁音／鼻音就不會促音。</strong><br>
+    一月（いち<b>が</b>つ）✅ 不促音 — が 是濁音<br>
+    一枚（いち<b>ま</b>い）✅ 不促音 — ま 是鼻音<br>
+    一か月（いっ<b>か</b>げつ）⚠️ 促音 — か 是清音<br>
+    這就是為什麼「1月」跟「1か月」差這麼多。
+  </div>
+
+  <a href="2026-08-19-hon.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">量詞〜本 的 ほん／ぼん／ぽん <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一條促音規則的另一半：接續時量詞自己也會變半濁音</span>
+  </a>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、放進句子裡</div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>〜月（がつ）＝ 時間點</h4>
+      <div class="vs-sub">問「いつ？」什麼時候</div>
+      <ul>
+        <li><b>九月に</b> 行きます</li>
+        <li><b>何月</b>ですか</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>〜か月＝ 時間長度</h4>
+      <div class="vs-sub">問「どのくらい？」多久</div>
+      <ul>
+        <li><b>九か月</b> 勉強しました</li>
+        <li><b>何か月</b>ですか</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="九月に日本へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>九月<rt>くがつ</rt></ruby>に<ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">kugatsu ni nihon e ikimasu</div>
+        <div class="word-meaning">九月要去日本 — 時間點加 に</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="九か月日本語を勉強しました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>九<rt>きゅう</rt></ruby>か<ruby>月<rt>げつ</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しました</div>
+        <div class="word-romaji">kyuukagetsu nihongo o benkyou shimashita</div>
+        <div class="word-meaning">學了九個月日文 — 長度不加助詞，直接放</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一か月に一回病院へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby>に<ruby>一回<rt>いっかい</rt></ruby><ruby>病院<rt>びょういん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">ikkagetsu ni ikkai byouin e ikimasu</div>
+        <div class="word-meaning">一個月去一次醫院 — 一句話裡兩個促音</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="六か月前に引っ越しました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>六<rt>ろっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby><ruby>前<rt>まえ</rt></ruby>に<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しました</div>
+        <div class="word-romaji">rokkagetsu mae ni hikkoshimashita</div>
+        <div class="word-meaning">六個月前搬家了 — 〜か月前＝多久以前</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="何か月かかりますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>何<rt>なん</rt></ruby>か<ruby>月<rt>げつ</rt></ruby>かかりますか</div>
+        <div class="word-romaji">nankagetsu kakarimasu ka</div>
+        <div class="word-meaning">要花幾個月？ — 問長度用 何か月</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、課後複習小測驗</div>
+
+  <details>
+    <summary>🔍 Q1「四月」和「四個月」各怎麼唸？</summary>
+    <p>四月＝<strong>しがつ</strong>（shigatsu）／四か月＝<strong>よんかげつ</strong>（yonkagetsu）。月份用舊讀 し，期間用 よん，剛好相反。</p>
+  </details>
+
+  <details>
+    <summary>🔍 Q2 為什麼「1月」不促音，「1か月」卻要？</summary>
+    <p>促音只在「清音撞清音」時發生。1月的 <strong>が</strong> 是濁音，いち 不變；1か月的 <strong>か</strong> 是清音，いち → <strong>いっ</strong>，變成 いっかげつ。</p>
+  </details>
+
+  <details>
+    <summary>🔍 Q3 把這句唸出來：10か月 かかりました。</summary>
+    <p><strong>じゅっかげつ かかりました</strong>（jukkagetsu kakarimashita）＝ 花了十個月。じっかげつ 也是正確讀法。</p>
+  </details>
+
+  <details>
+    <summary>🔍 Q4「我三月開始學，學了六個月」怎麼說？</summary>
+    <p><ruby>三月<rt>さんがつ</rt></ruby>から<ruby>六<rt>ろっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>しました。<br>
+    sangatsu kara rokkagetsu benkyou shimashita. — 前面 さんがつ 不促音，後面 ろっかげつ 促音。</p>
+  </details>
+
+  <details>
+    <summary>🔍 Q5「か月」的「か」是哪個漢字？為什麼跟「月」的讀音無關？</summary>
+    <p>是<strong>「箇」</strong>（＝個），常寫成 ヶ月／か月／カ月。所以結構是「數字＋箇＋月」，月在這裡讀它的一般音讀 <strong>げつ</strong>，不是被 か 影響才變的。</p>
+  </details>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .nc[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

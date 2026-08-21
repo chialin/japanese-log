@@ -1,6 +1,101 @@
 {
- "generated": "2026-08-20",
+ "generated": "2026-08-21",
  "words": [
+  {
+   "text": "九月に日本へ行きます",
+   "ja": "<ruby>九月<rt>くがつ</rt></ruby>に<ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "くがつににほんへいきます",
+   "romaji": "kugatsu ni nihon e ikimasu",
+   "meaning": "九月要去日本 — 時間點加 に",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-kagetsu.html",
+     "title": "〜月（がつ）與〜か月（かげつ）"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "交通"
+   ]
+  },
+  {
+   "text": "九か月日本語を勉強しました",
+   "ja": "<ruby>九<rt>きゅう</rt></ruby>か<ruby>月<rt>げつ</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しました",
+   "kana": "きゅうかげつにほんごをべんきょうしました",
+   "romaji": "kyuukagetsu nihongo o benkyou shimashita",
+   "meaning": "學了九個月日文 — 長度不加助詞，直接放",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-kagetsu.html",
+     "title": "〜月（がつ）與〜か月（かげつ）"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "一か月に一回病院へ行きます",
+   "ja": "<ruby>一<rt>いっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby>に<ruby>一回<rt>いっかい</rt></ruby><ruby>病院<rt>びょういん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "いっかげつにいっかいびょういんへいきます",
+   "romaji": "ikkagetsu ni ikkai byouin e ikimasu",
+   "meaning": "一個月去一次醫院 — 一句話裡兩個促音",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-kagetsu.html",
+     "title": "〜月（がつ）與〜か月（かげつ）"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "六か月前に引っ越しました",
+   "ja": "<ruby>六<rt>ろっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby><ruby>前<rt>まえ</rt></ruby>に<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しました",
+   "kana": "ろっかげつまえにひっこしました",
+   "romaji": "rokkagetsu mae ni hikkoshimashita",
+   "meaning": "六個月前搬家了 — 〜か月前＝多久以前",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-kagetsu.html",
+     "title": "〜月（がつ）與〜か月（かげつ）"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "場所"
+   ]
+  },
+  {
+   "text": "何か月かかりますか",
+   "ja": "<ruby>何<rt>なん</rt></ruby>か<ruby>月<rt>げつ</rt></ruby>かかりますか",
+   "kana": "なんかげつかかりますか",
+   "romaji": "nankagetsu kakarimasu ka",
+   "meaning": "要花幾個月？ — 問長度用 何か月",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-kagetsu.html",
+     "title": "〜月（がつ）與〜か月（かげつ）"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
   {
    "text": "いつも コーヒーを 飲みます",
    "ja": "いつも コーヒーを <ruby>飲<rt>の</rt></ruby>みます",

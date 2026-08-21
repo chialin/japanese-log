@@ -30,11 +30,22 @@
       a.dataset.kanji = ch;
       a.href = link(ch);
       a.textContent = `${ch} ×${idx[ch]} →`;
-      const btn = card.querySelector('.play-btn');
-      // btn 不一定是 card 的直接子節點（例如 .scene 的 .play-btn 包在 .scene-body 裡），
-      // insertBefore 只認直接子節點，所以插入點要用 btn 實際的 parentNode。
-      const target = btn ? btn.parentNode : card;
-      target.insertBefore(a, btn || null);
+      // 徽章統一收在卡片最後的 .kanji-chips 一整列裡 —— 徽章一多就不會把
+      // 日文句子擠成一字一行（卡片是 flex 時靠 flex-basis:100% 自成一列）。
+      // 放進卡片的文字欄（block），不要當 flex 卡片的直接子節點 ——
+      // 直接掛在 .word-item / .turn 這種 flex row 上會跟日文句子搶寬度。
+      // 注意：querySelector 用逗號列多個 selector 時是照「文件順序」挑，不是照列的順序，
+      // 所以這裡一個一個試，確保先拿到最內層的文字欄（.scene-text 而不是 flex 的 .scene-body）。
+      const BODY = ['.word-content', '.turn-body', '.scene-text', '.scene-body'];
+      let body = card;
+      for (const sel of BODY) { const el = card.querySelector(sel); if (el) { body = el; break; } }
+      let box = body.querySelector(':scope > .kanji-chips');
+      if (!box) {
+        box = document.createElement('div');
+        box.className = 'kanji-chips';
+        body.appendChild(box);
+      }
+      box.appendChild(a);
     }
   });
 

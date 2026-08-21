@@ -2,6 +2,432 @@
  "generated": "2026-08-21",
  "words": [
   {
+   "text": "私は 一週間に 二回 ボルダリングに 行きます。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は <ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に <ruby>二<rt>に</rt>回<rt>かい</rt></ruby> ボルダリングに <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "わたしは いっしゅうかんに にかい ボルダリングに いきます。",
+   "romaji": "watashi wa isshūkan ni nikai borudaringu ni ikimasu",
+   "meaning": "我一週去抱石兩次。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "多い時は 一週間に 二、三回 登ります。",
+   "ja": "<ruby>多<rt>おお</rt></ruby>い<ruby>時<rt>とき</rt></ruby>は <ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に <ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby> <ruby>登<rt>のぼ</rt></ruby>ります。",
+   "kana": "おおいときは いっしゅうかんに に、さんかい のぼります。",
+   "romaji": "ōi toki wa isshūkan ni ni-sankai noborimasu",
+   "meaning": "多的時候一週爬兩三次。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "一回は 友達に 会って、一緒に 登ります。",
+   "ja": "<ruby>一<rt>いっ</rt>回<rt>かい</rt></ruby>は <ruby>友達<rt>ともだち</rt></ruby>に <ruby>会<rt>あ</rt></ruby>って、<ruby>一緒<rt>いっしょ</rt></ruby>に <ruby>登<rt>のぼ</rt></ruby>ります。",
+   "kana": "いっかいは ともだちに あって、いっしょに のぼります。",
+   "romaji": "ikkai wa tomodachi ni atte, issho ni noborimasu",
+   "meaning": "其中一次會跟朋友碰面，一起爬。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "東京には いろいろな ボルダリングジムが あります。",
+   "ja": "<ruby>東京<rt>とうきょう</rt></ruby>には <ruby>色々<rt>いろいろ</rt></ruby>な ボルダリングジムが あります。",
+   "kana": "とうきょうには いろいろな ボルダリングジムが あります。",
+   "romaji": "Tōkyō ni wa iroiro na borudaringu jimu ga arimasu",
+   "meaning": "東京有各式各樣的抱石館。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "簡単な 壁も ありますし、難しい 壁も あります。",
+   "ja": "<ruby>簡単<rt>かんたん</rt></ruby>な <ruby>壁<rt>かべ</rt></ruby>も ありますし、<ruby>難<rt>むずか</rt></ruby>しい <ruby>壁<rt>かべ</rt></ruby>も あります。",
+   "kana": "かんたんな かべも ありますし、むずかしい かべも あります。",
+   "romaji": "kantan na kabe mo arimasu shi, muzukashii kabe mo arimasu",
+   "meaning": "有簡單的牆，也有很難的牆。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "登った あとは とても 疲れます。",
+   "ja": "<ruby>登<rt>のぼ</rt></ruby>った あとは とても <ruby>疲<rt>つか</rt></ruby>れます。",
+   "kana": "のぼった あとは とても つかれます。",
+   "romaji": "nobotta ato wa totemo tsukaremasu",
+   "meaning": "爬完之後非常累。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "ジムの会費は 一ヶ月に 一回 支払います。",
+   "ja": "ジムの<ruby>会費<rt>かいひ</rt></ruby>は <ruby>一<rt>いっ</rt>ヶ月<rt>かげつ</rt></ruby>に <ruby>一<rt>いっ</rt>回<rt>かい</rt></ruby> <ruby>支払<rt>しはら</rt></ruby>います。",
+   "kana": "ジムのかいひは いっかげつに いっかい しはらいます。",
+   "romaji": "jimu no kaihi wa ikkagetsu ni ikkai shiharaimasu",
+   "meaning": "健身房的會費一個月付一次。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "購物"
+   ]
+  },
+  {
+   "text": "ボルダリング",
+   "ja": "ボルダリング",
+   "kana": "ボルダリング",
+   "romaji": "borudaringu",
+   "meaning": "抱石（外來語，來自英文 bouldering）— 不綁繩子、矮牆配軟墊的那種",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "ボルダリングジム",
+   "ja": "ボルダリングジム",
+   "kana": "ボルダリングジム",
+   "romaji": "borudaringu jimu",
+   "meaning": "抱石館（bouldering gym）— 日本人口語也常直接說 ジム",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "場所",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "クライミング",
+   "ja": "クライミング",
+   "kana": "クライミング",
+   "romaji": "kuraimingu",
+   "meaning": "攀岩（總稱，含繩子的路線攀登）— 講自己在館內玩的那種要用 ボルダリング 才精確",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "壁",
+   "ja": "<ruby>壁<rt>かべ</rt></ruby>",
+   "kana": "かべ",
+   "romaji": "kabe",
+   "meaning": "牆壁；抱石館裡就是指「岩牆」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "場所"
+   ]
+  },
+  {
+   "text": "場所",
+   "ja": "<ruby>場所<rt>ばしょ</rt></ruby>",
+   "kana": "ばしょ",
+   "romaji": "basho",
+   "meaning": "地點、場地（具體的地方）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "種類",
+   "ja": "<ruby>種類<rt>しゅるい</rt></ruby>",
+   "kana": "しゅるい",
+   "romaji": "shurui",
+   "meaning": "種類（名詞本身）— 「各種各樣」要說 いろいろな種類",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "友達",
+   "ja": "<ruby>友達<rt>ともだち</rt></ruby>",
+   "kana": "ともだち",
+   "romaji": "tomodachi",
+   "meaning": "朋友",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "色々な",
+   "ja": "<ruby>色々<rt>いろいろ</rt></ruby>な",
+   "kana": "いろいろな",
+   "romaji": "iroiro na",
+   "meaning": "各式各樣的（な形容詞，接名詞要加 な）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "簡単な",
+   "ja": "<ruby>簡単<rt>かんたん</rt></ruby>な",
+   "kana": "かんたんな",
+   "romaji": "kantan na",
+   "meaning": "簡單的（な形容詞）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "難しい",
+   "ja": "<ruby>難<rt>むずか</rt></ruby>しい",
+   "kana": "むずかしい",
+   "romaji": "muzukashii",
+   "meaning": "困難的（い形容詞，直接接名詞不加 な）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "一緒に",
+   "ja": "<ruby>一緒<rt>いっしょ</rt></ruby>に",
+   "kana": "いっしょに",
+   "romaji": "issho ni",
+   "meaning": "一起",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "登ります",
+   "ja": "<ruby>登<rt>のぼ</rt></ruby>ります",
+   "kana": "のぼります",
+   "romaji": "noborimasu",
+   "meaning": "爬、攀登（辭書形 登る）— 爬山、爬牆都用它",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "会います",
+   "ja": "<ruby>会<rt>あ</rt></ruby>います",
+   "kana": "あいます",
+   "romaji": "aimasu",
+   "meaning": "見面（辭書形 会う）— 助詞用 に，不是 を",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "払います",
+   "ja": "<ruby>払<rt>はら</rt></ruby>います",
+   "kana": "はらいます",
+   "romaji": "haraimasu",
+   "meaning": "付（錢）（辭書形 払う）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "購物"
+   ]
+  },
+  {
+   "text": "支払います",
+   "ja": "<ruby>支払<rt>しはら</rt></ruby>います",
+   "kana": "しはらいます",
+   "romaji": "shiharaimasu",
+   "meaning": "支付（比 払います 正式，帳單・費用・訂閱用它）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "購物"
+   ]
+  },
+  {
+   "text": "疲れます",
+   "ja": "<ruby>疲<rt>つか</rt></ruby>れます",
+   "kana": "つかれます",
+   "romaji": "tsukaremasu",
+   "meaning": "累（辭書形 疲れる）— 實際講話多用過去式 疲れました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-bouldering-kaiwa.html",
+     "title": "ボルダリングの話"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "身體・健康"
+   ]
+  },
+  {
    "text": "九月に日本へ行きます",
    "ja": "<ruby>九月<rt>くがつ</rt></ruby>に<ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます",
    "kana": "くがつににほんへいきます",
@@ -94,6 +520,119 @@
    "tags": [
     "時間・日期",
     "問候・句型"
+   ]
+  },
+  {
+   "text": "一日に三回",
+   "ja": "<ruby>一日<rt>いちにち</rt></ruby>に<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby>",
+   "kana": "いちにちにさんかい",
+   "romaji": "ichinichi ni sankai",
+   "meaning": "一天三次",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-ni-kai.html",
+     "title": "〜に〜回：一週間に二回"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "數字"
+   ]
+  },
+  {
+   "text": "一週間に二回",
+   "ja": "<ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に<ruby>二<rt>に</rt>回<rt>かい</rt></ruby>",
+   "kana": "いっしゅうかんににかい",
+   "romaji": "isshūkan ni nikai",
+   "meaning": "一週兩次",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-ni-kai.html",
+     "title": "〜に〜回：一週間に二回"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "數字"
+   ]
+  },
+  {
+   "text": "一ヶ月に一回",
+   "ja": "<ruby>一<rt>いっ</rt>ヶ月<rt>かげつ</rt></ruby>に<ruby>一<rt>いっ</rt>回<rt>かい</rt></ruby>",
+   "kana": "いっかげつにいっかい",
+   "romaji": "ikkagetsu ni ikkai",
+   "meaning": "一個月一次 — 兩邊都促音，最容易講成「いちかげつ に いちかい」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-ni-kai.html",
+     "title": "〜に〜回：一週間に二回"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "數字"
+   ]
+  },
+  {
+   "text": "一年に四回",
+   "ja": "<ruby>一年<rt>いちねん</rt></ruby>に<ruby>四<rt>よん</rt>回<rt>かい</rt></ruby>",
+   "kana": "いちねんによんかい",
+   "romaji": "ichinen ni yonkai",
+   "meaning": "一年四次",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-ni-kai.html",
+     "title": "〜に〜回：一週間に二回"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "數字"
+   ]
+  },
+  {
+   "text": "一週間に二、三回",
+   "ja": "<ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に<ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby>",
+   "kana": "いっしゅうかんにに、さんかい",
+   "romaji": "isshūkan ni ni-sankai",
+   "meaning": "一週兩三次 — 只有最後一個數字帶量詞，不是「二回三回」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-ni-kai.html",
+     "title": "〜に〜回：一週間に二回"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "數字"
+   ]
+  },
+  {
+   "text": "三、四回",
+   "ja": "<ruby>三<rt>さん</rt></ruby>、<ruby>四<rt>よん</rt>回<rt>かい</rt></ruby>",
+   "kana": "さん、よんかい",
+   "romaji": "san-yonkai",
+   "meaning": "三四次",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-21",
+     "href": "lessons/2026-08-21-ni-kai.html",
+     "title": "〜に〜回：一週間に二回"
+    }
+   ],
+   "tags": [
+    "數字"
    ]
   },
   {

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜に〜回：一週間に二回 — Frequency per Period</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（跟一般 lessons 的棕橘分開，不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 表格 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table td:first-child,.joshi-table th:first-child{white-space:nowrap;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+/* 句型骨架 */
+.frame{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;justify-content:center;
+  border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:20px 18px;margin:18px 0;}
+.frame .sl{text-align:center;padding:10px 16px;border:1px solid var(--accent-soft);border-radius:6px;background:#fff;min-width:96px;}
+.frame .sl.fix{background:var(--accent-pale);border-color:var(--accent);}
+.frame .sl-t{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);}
+.frame .sl.fix .sl-t{color:var(--accent);font-weight:600;}
+.frame .sl-s{font-size:12px;color:var(--ink-mute);margin-top:4px;}
+.frame .plus{display:flex;align-items:center;font-size:18px;color:var(--ink-mute);}
+
+/* 數字卡格（回的讀法） */
+.numgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0;}
+.nc{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:6px;padding:11px 12px 34px;position:relative;}
+.nc .nc-n{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink-mute);line-height:1;}
+.nc .nc-k{font-family:'Klee One','Shippori Mincho',serif;font-size:18px;color:var(--ink);margin-top:5px;line-height:1.4;}
+.nc .nc-r{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);margin-top:2px;}
+.nc b{color:var(--accent);}
+.nc.sokuon{border-color:var(--accent);border-width:2px;background:var(--accent-pale);}
+.nc-tag{position:absolute;top:-9px;right:8px;font-size:10.5px;letter-spacing:.06em;padding:1px 6px;border-radius:9px;
+  background:var(--accent);color:#fff;font-family:'Shippori Mincho',serif;}
+.nc .play-btn{position:absolute;right:8px;bottom:7px;width:26px;height:26px;font-size:10px;flex-shrink:0;}
+@media(max-width:760px){.numgrid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:520px){.numgrid{grid-template-columns:repeat(2,1fr);}}
+
+
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜に〜<span class="accent">回</span>：一週間に二回</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 21</div>
+  <p class="page-subtitle">「多久做幾次」的固定講法 — 順便用室內抱石把這個句型講完：一週兩次、兩三次、一次多少錢</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>本篇要記的事</strong><br>
+    ① <span class="j-mark">〔期間〕に〔數字〕回</span> 這個骨架，「に」＝「每」<br>
+    ② 回 的讀法在 <strong>1・6・8・10</strong> 會變促音（いっかい・ろっかい・はっかい・じゅっかい）<br>
+    ③ 「兩三次」＝<strong>二、三回</strong>，不確定的數字直接兩個並排講
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kata">一、句型骨架</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    要講「多久做幾次」，日文的順序是<strong>先講期間、再講次數、最後動詞</strong>。
+    中間那個 <span class="j-mark">に</span> 不是方向也不是地點，它在這裡的意思是<strong>「每」</strong>。
+  </p>
+
+  <div class="frame">
+    <div class="sl"><div class="sl-t">一週間</div><div class="sl-s">期間</div></div>
+    <div class="plus">＋</div>
+    <div class="sl fix"><div class="sl-t">に</div><div class="sl-s">＝每</div></div>
+    <div class="plus">＋</div>
+    <div class="sl"><div class="sl-t">二回</div><div class="sl-s">次數</div></div>
+    <div class="plus">＋</div>
+    <div class="sl"><div class="sl-t">行きます</div><div class="sl-s">動詞</div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 四個期間換過去</div>
+
+    <div class="word-item" data-text="一日に三回">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一日<rt>いちにち</rt></ruby>に<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></div>
+        <div class="word-romaji">ichinichi ni sankai</div>
+        <div class="word-meaning">一天三次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一週間に二回">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に<ruby>二<rt>に</rt>回<rt>かい</rt></ruby></div>
+        <div class="word-romaji">isshūkan ni nikai</div>
+        <div class="word-meaning">一週兩次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一ヶ月に一回">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いっ</rt>ヶ月<rt>かげつ</rt></ruby>に<ruby>一<rt>いっ</rt>回<rt>かい</rt></ruby></div>
+        <div class="word-romaji">ikkagetsu ni ikkai</div>
+        <div class="word-meaning">一個月一次 — 兩邊都促音，最容易講成「いちかげつ に いちかい」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一年に四回">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一年<rt>いちねん</rt></ruby>に<ruby>四<rt>よん</rt>回<rt>かい</rt></ruby></div>
+        <div class="word-romaji">ichinen ni yonkai</div>
+        <div class="word-meaning">一年四次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>不要在期間後面加 は</strong><br>
+    ✗ <span class="compare">一週間<b>は</b> 二回 行きます</span>　
+    ✓ <ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby><span class="j-mark">に</span> <ruby>二<rt>に</rt>回<rt>かい</rt></ruby> <ruby>行<rt>い</rt></ruby>きます<br>
+    這個 に 是句型的一部分，不能省略也不能換掉。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kai">二、「回」的讀法</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    跟 <ruby>一<rt>いっ</rt>ヶ月<rt>かげつ</rt></ruby> 完全同一套規則：
+    <strong>1・6・8・10 後面接 か 行會變促音</strong>。深綠框的四格就是要特別記的。
+  </p>
+
+  <div class="numgrid">
+    <div class="nc sokuon" data-text="一回"><span class="nc-tag">促音</span>
+      <div class="nc-n">1</div><div class="nc-k"><b>いっ</b>かい</div><div class="nc-r">ikkai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc" data-text="二回">
+      <div class="nc-n">2</div><div class="nc-k">にかい</div><div class="nc-r">nikai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc" data-text="三回">
+      <div class="nc-n">3</div><div class="nc-k">さんかい</div><div class="nc-r">sankai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc" data-text="四回">
+      <div class="nc-n">4</div><div class="nc-k">よんかい</div><div class="nc-r">yonkai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc" data-text="五回">
+      <div class="nc-n">5</div><div class="nc-k">ごかい</div><div class="nc-r">gokai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc sokuon" data-text="六回"><span class="nc-tag">促音</span>
+      <div class="nc-n">6</div><div class="nc-k"><b>ろっ</b>かい</div><div class="nc-r">rokkai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc" data-text="七回">
+      <div class="nc-n">7</div><div class="nc-k">ななかい</div><div class="nc-r">nanakai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc sokuon" data-text="八回"><span class="nc-tag">促音</span>
+      <div class="nc-n">8</div><div class="nc-k"><b>はっ</b>かい</div><div class="nc-r">hakkai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc" data-text="九回">
+      <div class="nc-n">9</div><div class="nc-k">きゅうかい</div><div class="nc-r">kyūkai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+    <div class="nc sokuon" data-text="十回"><span class="nc-tag">促音</span>
+      <div class="nc-n">10</div><div class="nc-k"><b>じゅっ</b>かい</div><div class="nc-r">jukkai</div>
+      <button class="play-btn" aria-label="播放">▶</button></div>
+  </div>
+
+  <div class="note">
+    📝 <strong>「何回」＝幾次</strong><br>
+    問人家頻率就用 <ruby>何<rt>なん</rt>回<rt>かい</rt></ruby>（nankai）：<br>
+    <ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に <ruby>何<rt>なん</rt>回<rt>かい</rt></ruby> <ruby>行<rt>い</rt></ruby>きますか。（isshūkan ni nankai ikimasu ka）一週去幾次？
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 回・会 同音，都是 かい</strong><br>
+    <ruby>回<rt>かい</rt></ruby>（次數）跟 <ruby>会<rt>かい</rt></ruby>（見面・会話・会社）音讀完全一樣，
+    對應台語的 <span class="compare">hoe</span>。<strong>認得一個就通兩個</strong>——
+    這篇剛好兩個字都出現：<ruby>二<rt>に</rt>回<rt>かい</rt></ruby> 去爬，其中一次 <ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="aimai">三、「兩三次」這種不確定的數字</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    講不出精確次數的時候，日文<strong>直接把兩個數字並排</strong>，中間用頓號，最後才接量詞。
+    中文說「兩三次」，日文就是 <span class="j-mark">二、三回</span>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 並排數字</div>
+
+    <div class="word-item" data-text="一週間に二、三回">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に<ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></div>
+        <div class="word-romaji">isshūkan ni ni-sankai</div>
+        <div class="word-meaning">一週兩三次 — 只有最後一個數字帶量詞，不是「二回三回」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="三、四回">
+      <div class="word-content">
+        <div class="word-ja"><ruby>三<rt>さん</rt></ruby>、<ruby>四<rt>よん</rt>回<rt>かい</rt></ruby></div>
+        <div class="word-romaji">san-yonkai</div>
+        <div class="word-meaning">三四次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">四、常犯的錯</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:38%">✗ 錯的說法</th><th style="width:38%">✓ 正確</th><th>問題</th></tr>
+    <tr>
+      <td class="col-ja"><ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby><b>は</b> <ruby>二<rt>に</rt>回<rt>かい</rt></ruby></td>
+      <td class="col-ja"><ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby><b>に</b> <ruby>二<rt>に</rt>回<rt>かい</rt></ruby></td>
+      <td>這個 に 是句型的一部分，不能換成 は 也不能省略</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><b>いちかげつ</b>に <b>いちかい</b></td>
+      <td class="col-ja"><b>いっ</b>かげつに <b>いっ</b>かい</td>
+      <td>1 接 か 行一律促音，兩個都要變</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>二<rt>に</rt>回<rt>かい</rt></ruby><ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></td>
+      <td class="col-ja"><ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></td>
+      <td>「兩三次」只有最後一個數字帶量詞</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>六<rt>ろく</rt>回<rt>かい</rt></ruby>・<ruby>八<rt>はち</rt>回<rt>かい</rt></ruby></td>
+      <td class="col-ja"><ruby>六<rt>ろっ</rt>回<rt>かい</rt></ruby>・<ruby>八<rt>はっ</rt>回<rt>かい</rt></ruby></td>
+      <td>6・8・10 跟 1 一樣要促音化</td>
+    </tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">五、速記表</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:34%">說法</th><th style="width:30%">羅馬拼音</th><th>意思</th></tr>
+    <tr><td class="col-ja"><ruby>一日<rt>いちにち</rt></ruby>に<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></td><td>ichinichi ni sankai</td><td>一天三次</td></tr>
+    <tr><td class="col-ja"><ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に<ruby>二<rt>に</rt>回<rt>かい</rt></ruby></td><td>isshūkan ni nikai</td><td>一週兩次</td></tr>
+    <tr><td class="col-ja"><ruby>一<rt>いっ</rt>ヶ月<rt>かげつ</rt></ruby>に<ruby>一<rt>いっ</rt>回<rt>かい</rt></ruby></td><td>ikkagetsu ni ikkai</td><td>一個月一次（兩邊都促音）</td></tr>
+    <tr><td class="col-ja"><ruby>一年<rt>いちねん</rt></ruby>に<ruby>四<rt>よん</rt>回<rt>かい</rt></ruby></td><td>ichinen ni yonkai</td><td>一年四次</td></tr>
+    <tr><td class="col-ja"><ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></td><td>ni-sankai</td><td>兩三次</td></tr>
+    <tr><td class="col-ja"><ruby>何<rt>なん</rt>回<rt>かい</rt></ruby></td><td>nankai</td><td>幾次（問句）</td></tr>
+    <tr><td class="col-ja"><ruby>一<rt>いっ</rt>回<rt>かい</rt></ruby>・<ruby>六<rt>ろっ</rt>回<rt>かい</rt></ruby>・<ruby>八<rt>はっ</rt>回<rt>かい</rt></ruby>・<ruby>十<rt>じゅっ</rt>回<rt>かい</rt></ruby></td><td>ikkai / rokkai / hakkai / jukkai</td><td>四個促音，要特別記</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">課後複習小測驗 · Self-Quiz</div>
+
+  <ol style="color:var(--ink-soft);font-size:14px;line-height:2.2;padding-left:22px;">
+    <li>「我一個月去一次抱石館」怎麼說？（注意兩個促音）</li>
+    <li>「一週兩三次」的日文怎麼寫？為什麼不是「二回三回」？</li>
+    <li>要問對方「一週去幾次？」，這句怎麼講？</li>
+    <li>唸唸看：6 回、8 回、10 回。這三個跟 2 回、5 回 差在哪？</li>
+    <li>下面哪句錯？　ａ. <ruby>一年<rt>いちねん</rt></ruby>に<ruby>四<rt>よん</rt>回<rt>かい</rt></ruby>　ｂ. <ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>は<ruby>二<rt>に</rt>回<rt>かい</rt></ruby>　ｃ. <ruby>一日<rt>いちにち</rt></ruby>に<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></li>
+  </ol>
+
+  <details style="margin-top:14px;background:rgba(255,255,255,.5);border:1px solid var(--line);padding:14px 18px;">
+    <summary style="cursor:pointer;font-family:'Shippori Mincho',serif;font-weight:600;color:var(--accent);">🔍 點擊查看解答</summary>
+    <ol style="color:var(--ink-soft);font-size:14px;line-height:2.1;padding-left:22px;margin-top:12px;">
+      <li><strong><ruby>一<rt>いっ</rt>ヶ月<rt>かげつ</rt></ruby>に <ruby>一<rt>いっ</rt>回<rt>かい</rt></ruby> ボルダリングジムに <ruby>行<rt>い</rt></ruby>きます。</strong>
+        （ikkagetsu ni ikkai borudaringu jimu ni ikimasu）<br>
+        「一」接 か 行兩次都促音：<strong>いっ</strong>かげつ・<strong>いっ</strong>かい。</li>
+      <li><strong><ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に <ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></strong>（isshūkan ni ni-sankai）。
+        量詞<strong>只掛在最後一個數字上</strong>，前面的數字裸著寫，用頓號連起來。</li>
+      <li><strong><ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に <ruby>何<rt>なん</rt>回<rt>かい</rt></ruby> <ruby>行<rt>い</rt></ruby>きますか。</strong>
+        （isshūkan ni nankai ikimasu ka）疑問詞 <ruby>何<rt>なん</rt>回<rt>かい</rt></ruby> 直接放在原本擺次數的位置。</li>
+      <li><strong>ろっかい・はっかい・じゅっかい</strong>——這三個<strong>促音化</strong>了（加上 1 的 いっかい 共四個）。
+        2 回（にかい）、5 回（ごかい）沒有變化，照原本的數字讀法直接接。</li>
+      <li><strong>ｂ 錯。</strong>期間後面要用 <strong>に</strong>：<ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby><strong>に</strong><ruby>二<rt>に</rt>回<rt>かい</rt></ruby>。
+        這個 に 是句型的一部分，換成 は 就不成立。</li>
+    </ol>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-21-bouldering-kaiwa.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">ボルダリングの話 <span class="next-arrow">→</span></span>
+    <span class="next-sub">這個句型實際講出口的樣子：室內抱石的 19 個生字與七個句子</span>
+  </a>
+
+  <a href="2026-08-21-kagetsu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜月（がつ）與〜か月（かげつ） <span class="next-arrow">→</span></span>
+    <span class="next-sub">一ヶ月 的促音規則從哪來，12 個月份與 12 個期間全部列出</span>
+  </a>
+
+  <a href="2026-08-20-hindo.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">頻率副詞：いつも から 全く まで <span class="next-arrow">→</span></span>
+    <span class="next-sub">〜に〜回 給的是精確次數，頻率副詞給的是模糊程度，兩套可以合起來用</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text], .nc[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

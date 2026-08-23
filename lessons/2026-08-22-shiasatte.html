@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>從大前天到大後天 — 以今天為中心的日子怎麼說</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;
+  --gold:#a9762a;}
+
+/* 日子時間軸 */
+.axis7{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:18px 0 6px;}
+.ax{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--line);
+  padding:14px 4px;text-align:center;}
+.ax.past{border-top-color:var(--accent);background:var(--accent-pale);}
+.ax.fut{border-top-color:var(--gold);background:rgba(169,118,42,.08);}
+.ax.today{border-top-color:var(--ink);background:rgba(255,255,255,.9);}
+.ax.edge{border-style:dashed;border-top-style:solid;}
+.ax-kana{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;font-weight:600;color:var(--ink);line-height:1.4;}
+.ax-kanji{font-family:'Shippori Mincho',serif;font-size:12px;color:var(--ink-mute);margin-top:4px;}
+.ax-cn{font-size:12px;color:var(--ink-soft);margin-top:6px;}
+.ax-d{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:var(--ink-mute);margin-top:4px;letter-spacing:.06em;}
+.axis-note{display:flex;justify-content:space-between;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:12px;letter-spacing:.12em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:18px;}
+@media(max-width:720px){.axis7{grid-template-columns:repeat(2,1fr);}.axis-note{display:none;}}
+
+/* 對稱拆解 */
+.mirror{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.mir{border:1px solid var(--line);background:rgba(255,255,255,.6);padding:16px 18px;}
+.mir.past{border-left:3px solid var(--accent);}
+.mir.fut{border-left:3px solid var(--gold);}
+.mir-h{font-family:'Klee One','Shippori Mincho',serif;font-size:21px;font-weight:600;margin-bottom:2px;}
+.mir.past .mir-h{color:var(--accent);}
+.mir.fut .mir-h{color:var(--gold);}
+.mir-sub{font-size:13px;color:var(--ink-mute);margin-bottom:12px;line-height:1.6;}
+.mir-eq{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.mir-eq b{color:var(--accent);}
+.mir.fut .mir-eq b{color:var(--gold);}
+@media(max-width:560px){.mirror{grid-template-columns:1fr;}}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--ink);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;white-space:nowrap;}
+.joshi-table td:first-child{white-space:nowrap;width:1%;}
+
+/* 拍子格 */
+.mora{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 2px;}
+.mora span{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;
+  border:1px solid var(--accent-soft);background:rgba(255,255,255,.7);border-radius:4px;
+  font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);}
+.mora span.beat{border-style:dashed;color:var(--ink-mute);background:var(--paper-deep);}
+.mora em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);margin-left:6px;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* Index */
+.toc{margin:22px 0 30px;}
+.toc-h{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;margin-bottom:12px;border-bottom:2px solid var(--accent);}
+.toc-h .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;letter-spacing:.26em;color:var(--accent);text-transform:uppercase;}
+.toc-list{list-style:none;margin:0;padding:0;}
+.toc-list a{display:block;text-decoration:none;color:var(--ink);padding:7px 0;
+  font-family:'Shippori Mincho',serif;font-size:18px;font-weight:600;letter-spacing:.04em;transition:color .15s,padding-left .15s;}
+.toc-list a:hover{color:var(--accent);padding-left:6px;}
+.toc-n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--accent);margin-right:9px;vertical-align:super;}
+.toc-s{font-family:'Klee One','Shippori Mincho',serif;font-size:12px;color:var(--ink-mute);font-weight:400;margin-left:10px;}
+.divider[id]{scroll-margin-top:24px;}
+
+details{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:12px 16px;margin-top:10px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:14px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">從<span class="accent">大前天</span>到<span class="accent">大後天</span></h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 08 / 22</div>
+  <p class="page-subtitle">以「今天」為中心，前後各三天的日文說法</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    講日常生活的事情，時間幾乎都是以「今天」為基準往前往後算的。
+    這篇要把從<strong>大前天</strong>一路到<strong>大後天</strong>的日文說法補齊，
+    順便解決三個實際會卡住的地方：兩頭那兩個長長的字要怎麼記、
+    <span class="compare">あさって</span> 的停頓為什麼不能省，
+    以及這些字後面到底要不要加助詞。
+  </div>
+
+  <nav class="toc">
+    <div class="toc-h"><span class="en">Index</span></div>
+    <ul class="toc-list">
+      <li><a href="#narabe"><span class="toc-n">01</span>以今天為主軸，列出前後幾天的說法<span class="toc-s">以今天為中心的一條線</span></a></li>
+      <li><a href="#kumitate"><span class="toc-n">02</span>前綴是有規則的<span class="toc-s">さき＋おととい／し＋あさって</span></a></li>
+      <li><a href="#kanji"><span class="toc-n">03</span>漢字的唸法是整組配上去的<span class="toc-s">一昨昨日・明々後日</span></a></li>
+      <li><a href="#hatsuon"><span class="toc-n">04</span>發音的長短，是一拍一拍算的<span class="toc-s">きょう 很短、あさって 要停</span></a></li>
+      <li><a href="#reibun"><span class="toc-n">05</span>放進句子裡是這樣用的<span class="toc-s">旅行から帰ります</span></a></li>
+      <li><a href="#chuui"><span class="toc-n">06</span>有兩個地方容易講錯<span class="toc-s">助詞に與地區差異</span></a></li>
+      <li><a href="#matome"><span class="toc-n">07</span>整理成一張表<span class="toc-s">まとめ</span></a></li>
+      <li><a href="#quiz"><span class="toc-n">08</span>換你自己做做看<span class="toc-s">Self-Quiz</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="narabe">一、以今天為主軸，列出前後幾天的說法</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    中間那幾天在
+    <a href="2026-08-11-jikan-kotoba.html" style="color:var(--accent);">〈時間詞：き系與あ系〉</a>
+    已經排過了——昨天、今天開頭都是 <span class="compare">き</span>，明天、後天開頭都是 <span class="compare">あ</span>。
+    這篇要做的，是在那條線的左右兩端各補上一天，讓整條線完整。
+    棕色是已經過去的日子，金色是還沒到的，中間白色那格就是今天。
+  </p>
+
+  <div class="axis7">
+    <div class="ax past edge">
+      <div class="ax-kana">さき<br>おととい</div>
+      <div class="ax-kanji">一昨昨日</div>
+      <div class="ax-cn">大前天</div>
+      <div class="ax-d">三天前</div>
+    </div>
+    <div class="ax past">
+      <div class="ax-kana">おととい</div>
+      <div class="ax-kanji">一昨日</div>
+      <div class="ax-cn">前天</div>
+      <div class="ax-d">兩天前</div>
+    </div>
+    <div class="ax past">
+      <div class="ax-kana">きのう</div>
+      <div class="ax-kanji">昨日</div>
+      <div class="ax-cn">昨天</div>
+      <div class="ax-d">前一天</div>
+    </div>
+    <div class="ax today">
+      <div class="ax-kana">きょう</div>
+      <div class="ax-kanji">今日</div>
+      <div class="ax-cn">今天</div>
+      <div class="ax-d">基準</div>
+    </div>
+    <div class="ax fut">
+      <div class="ax-kana">あした</div>
+      <div class="ax-kanji">明日</div>
+      <div class="ax-cn">明天</div>
+      <div class="ax-d">隔天</div>
+    </div>
+    <div class="ax fut">
+      <div class="ax-kana">あさって</div>
+      <div class="ax-kanji">明後日</div>
+      <div class="ax-cn">後天</div>
+      <div class="ax-d">兩天後</div>
+    </div>
+    <div class="ax fut edge">
+      <div class="ax-kana">し<br>あさって</div>
+      <div class="ax-kanji">明々後日</div>
+      <div class="ax-cn">大後天</div>
+      <div class="ax-d">三天後</div>
+    </div>
+  </div>
+  <div class="axis-note"><span>← 過去 / Past</span><span>未來 / Future →</span></div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先照著順序聽一遍，把整條線的聲音記在耳朵裡，再回頭看下一段的拆解會更有感覺。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🔊 照順序聽一遍</div>
+
+    <div class="word-item" data-text="さきおととい">
+      <div class="word-content">
+        <div class="word-ja">さきおととい（<ruby>一昨昨日<rt>さきおととい</rt></ruby>）</div>
+        <div class="word-romaji">sakiototoi</div>
+        <div class="word-meaning">大前天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おととい">
+      <div class="word-content">
+        <div class="word-ja">おととい（<ruby>一昨日<rt>おととい</rt></ruby>）</div>
+        <div class="word-romaji">ototoi</div>
+        <div class="word-meaning">前天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きのう">
+      <div class="word-content">
+        <div class="word-ja">きのう（<ruby>昨日<rt>きのう</rt></ruby>）</div>
+        <div class="word-romaji">kinou</div>
+        <div class="word-meaning">昨天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きょう">
+      <div class="word-content">
+        <div class="word-ja">きょう（<ruby>今日<rt>きょう</rt></ruby>）</div>
+        <div class="word-romaji">kyou</div>
+        <div class="word-meaning">今天，整條線的基準點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あした">
+      <div class="word-content">
+        <div class="word-ja">あした（<ruby>明日<rt>あした</rt></ruby>）</div>
+        <div class="word-romaji">ashita</div>
+        <div class="word-meaning">明天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あさって">
+      <div class="word-content">
+        <div class="word-ja">あさって（<ruby>明後日<rt>あさって</rt></ruby>）</div>
+        <div class="word-romaji">asatte</div>
+        <div class="word-meaning">後天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しあさって">
+      <div class="word-content">
+        <div class="word-ja">しあさって（<ruby>明々後日<rt>しあさって</rt></ruby>）</div>
+        <div class="word-romaji">shiasatte</div>
+        <div class="word-meaning">大後天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kumitate">二、前綴是有規則的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    さきおととい 跟 しあさって 第一眼看起來很長，很容易讓人覺得又要背新的字。
+    但其實它們都是<strong>已經會的字前面再加一個字</strong>而已，
+    真正要記的只有加上去的那個部分。
+  </p>
+
+  <div class="mirror">
+    <div class="mir past">
+      <div class="mir-h">さき＋おととい</div>
+      <div class="mir-sub">往過去再退一天</div>
+      <div class="mir-eq">
+        <b>さき</b>（<ruby>先<rt>さき</rt></ruby>，比現在更早）<br>
+        ＋ おととい（前天）<br>
+        ＝ <b>さきおととい</b>（大前天）
+      </div>
+    </div>
+    <div class="mir fut">
+      <div class="mir-h">し＋あさって</div>
+      <div class="mir-sub">往未來再進一天</div>
+      <div class="mir-eq">
+        <b>し</b>（固定的前綴，表示再往後一天）<br>
+        ＋ あさって（後天）<br>
+        ＝ <b>しあさって</b>（大後天）
+      </div>
+      <div style="font-size:12.5px;color:var(--ink-mute);margin-top:10px;line-height:1.7;">
+        這個 し 的來源說法不一，有一說是從「<ruby>再<rt>さい</rt></ruby>」變過來的。
+        當成固定的前綴記就好。
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>さき 這個字之前見過</strong><br>
+    <a href="2026-08-12-ima-sakki.html" style="color:var(--accent);">〈今・さっき〉</a>裡的
+    <ruby>先<rt>さっ</rt></ruby>き（剛才）用的就是同一個<strong>先</strong>，
+    都是在講「比現在更早」。さきおととい 只是把這個「更早」再往前多推了一天。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 中文剛好也是加字</strong><br>
+    中文說「前天 → <span class="compare">大</span>前天」「後天 → <span class="compare">大</span>後天」，
+    也是在原本的詞前面加一個字，日文的做法一模一樣，只是加的字不同。<br>
+    記成「往前加 <strong>さき</strong>、往後加 <strong>し</strong>」就夠用了。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kanji">三、漢字的唸法是整組配上去的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這些字寫成漢字的時候，都屬於<strong>熟字訓</strong>——
+    讀音是配給整組漢字的，不是一個字對一個音。
+    所以 <ruby>今日<rt>きょう</rt></ruby> 並不是「今＝きょ、日＝う」，而是整組唸 きょう。
+    自己標假名的時候記得整組標，硬拆開反而會記錯。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th>中文</th><th>漢字</th><th>讀法</th><th>怎麼理解</th></tr>
+    <tr><td><strong>大前天</strong></td><td class="col-ja">一昨昨日</td><td class="col-ja">さきおととい</td><td>「昨」寫兩次，表示又往回退了一天</td></tr>
+    <tr><td><strong>前天</strong></td><td class="col-ja">一昨日</td><td class="col-ja">おととい</td><td>昨日再往前一天，中文的前天</td></tr>
+    <tr><td><strong>昨天</strong></td><td class="col-ja">昨日</td><td class="col-ja">きのう</td><td>最單純的一組</td></tr>
+    <tr><td><strong>今天</strong></td><td class="col-ja">今日</td><td class="col-ja">きょう</td><td>正式場合會唸成 <ruby>本日<rt>ほんじつ</rt></ruby></td></tr>
+    <tr><td><strong>明天</strong></td><td class="col-ja">明日</td><td class="col-ja">あした</td><td>同一組漢字也可以唸 <ruby>明日<rt>あす</rt></ruby>，語氣稍微正式</td></tr>
+    <tr><td><strong>後天</strong></td><td class="col-ja">明後日</td><td class="col-ja">あさって</td><td>明日再往後一天</td></tr>
+    <tr><td><strong>大後天</strong></td><td class="col-ja">明々後日</td><td class="col-ja">しあさって</td><td>々是重複符號，等於再寫一次「明」</td></tr>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 昨・今・明 的音讀跟台語對得上</strong><br>
+    這三個漢字在比較正式的說法裡會露出音讀，而音讀跟台語是同一個源頭：<br>
+    <strong>昨</strong>　台語 tsok（-k 收尾）→ <ruby>昨日<rt>さくじつ</rt></ruby>，入聲 -k 變成 <span class="compare">く</span><br>
+    <strong>今</strong>　台語 kim（鼻音收尾）→ <ruby>今週<rt>こんしゅう</rt></ruby>，-m／-n 尾變成 <span class="compare">ん</span><br>
+    <strong>明</strong>　台語 bing（-ng 收尾）→ <ruby>明後日<rt>みょうごにち</rt></ruby>，-ng 尾變成<span class="compare">長音</span><br>
+    所以在新聞或公文上看到「昨日（さくじつ）」「本日（ほんじつ）」不用緊張，
+    那只是同一個漢字換成音讀在唸而已。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hatsuon">四、發音的長短，是一拍一拍算的</div>
+
+  <p style="margin-bottom:10px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這組字最容易唸錯的有兩個：<strong>きょう</strong> 比想像中短，<strong>あさって</strong> 比想像中長。
+    原因都在小字上——小小的 <span class="compare">ょ</span> 跟前面的字合成一拍，
+    小小的 <span class="compare">っ</span> 卻自己佔掉一整拍。
+    下面把每個字的拍子畫出來，跟著格子唸就不會走鐘。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🥁 一格一拍，跟著唸</div>
+
+    <div style="padding:0 4px 10px;">
+      <div class="mora"><span>きょ</span><span>う</span><em>きょう — 兩拍，不是三拍</em></div>
+      <div class="mora"><span>き</span><span>の</span><span>う</span><em>きのう — 三拍</em></div>
+      <div class="mora"><span>あ</span><span>し</span><span>た</span><em>あした — 三拍</em></div>
+      <div class="mora"><span>お</span><span>と</span><span>と</span><span>い</span><em>おととい — 四拍</em></div>
+      <div class="mora"><span>あ</span><span>さ</span><span class="beat">っ</span><span>て</span><em>あさって — 四拍，っ 停一拍</em></div>
+      <div class="mora"><span>し</span><span>あ</span><span>さ</span><span class="beat">っ</span><span>て</span><em>しあさって — 五拍</em></div>
+      <div class="mora"><span>さ</span><span>き</span><span>お</span><span>と</span><span>と</span><span>い</span><em>さきおととい — 六拍</em></div>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>あさって 的停頓不能省</strong><br>
+    唸成「あさて」只有三拍，日本人會聽不出來是哪個字。
+    訣竅是嘴巴在 <strong>さ</strong> 之後<strong>閉起來停一下</strong>，再把 <strong>て</strong> 送出去，
+    節奏像中文的「啊撒 —（停）— 貼」。しあさって 也一樣，只是前面多了一個 し。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="reibun">五、放進句子裡是這樣用的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這些字在句子裡的位置很固定：<strong>放在句首</strong>，後面接一個逗號（不加也可以），
+    再接後面要講的事。真正要留意的是動詞——
+    已經過去的日子配 <a href="2026-08-12-ta-kei.html" style="color:var(--accent);">ました</a>，
+    還沒到的日子配 ます。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="しあさって、旅行から帰ります">
+      <div class="word-content">
+        <div class="word-ja">しあさって、<ruby>旅行<rt>りょこう</rt></ruby>から<ruby>帰<rt>かえ</rt></ruby>ります</div>
+        <div class="word-romaji">shiasatte, ryokou kara kaerimasu</div>
+        <div class="word-meaning">大後天要從旅行回來。<span class="j-mark">から</span>在這裡是起點，「從〜」的意思</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="さきおととい、映画を見ました">
+      <div class="word-content">
+        <div class="word-ja">さきおととい、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました</div>
+        <div class="word-romaji">sakiototoi, eiga o mimashita</div>
+        <div class="word-meaning">大前天看了電影。已經發生的事，動詞用 ました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おととい、友達に会いました">
+      <div class="word-content">
+        <div class="word-ja">おととい、<ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いました</div>
+        <div class="word-romaji">ototoi, tomodachi ni aimashita</div>
+        <div class="word-meaning">前天跟朋友見了面。「跟某人見面」的對象用 <span class="j-mark">に</span></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昨日は何をしましたか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>何<rt>なに</rt></ruby>をしましたか</div>
+        <div class="word-romaji">kinou wa nani o shimashita ka</div>
+        <div class="word-meaning">昨天做了什麼？想拿昨天跟別天對比時，可以加 <span class="j-mark">は</span></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今日は仕事が休みです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>が<ruby>休<rt>やす</rt></ruby>みです</div>
+        <div class="word-romaji">kyou wa shigoto ga yasumi desu</div>
+        <div class="word-meaning">今天工作休假</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="明日、病院へ行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>明日<rt>あした</rt></ruby>、<ruby>病院<rt>びょういん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">ashita, byouin e ikimasu</div>
+        <div class="word-meaning">明天要去醫院。<span class="j-mark">へ</span>表示方向，這裡唸 e 不是 he</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="あさっては雨です">
+      <div class="word-content">
+        <div class="word-ja">あさっては<ruby>雨<rt>あめ</rt></ruby>です</div>
+        <div class="word-romaji">asatte wa ame desu</div>
+        <div class="word-meaning">後天會下雨</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="しあさってまた会いましょう">
+      <div class="word-content">
+        <div class="word-ja">しあさってまた<ruby>会<rt>あ</rt></ruby>いましょう</div>
+        <div class="word-romaji">shiasatte mata aimashou</div>
+        <div class="word-meaning">大後天再見面吧。ましょう 是邀約，「一起〜吧」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="chuui">六、有兩個地方容易講錯</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    單字本身不難，難的是實際講出口的時候。
+    下面這兩件事一個是文法上的，一個是溝通上的，都值得先知道。
+  </p>
+
+  <div class="alert">
+    ⚠️ <strong>後面不要加 に</strong><br>
+    中文會說「在明天」，但日文這幾個字後面<strong>不加</strong> <span class="j-mark">に</span>。<br>
+    ○ <ruby>明日<rt>あした</rt></ruby><ruby>帰<rt>かえ</rt></ruby>ります　　✗ <ruby>明日<rt>あした</rt></ruby>に帰ります<br>
+    分界很清楚：像 きのう・きょう・あした 這種<strong>要靠今天才算得出來</strong>的說法不加 に；
+    像 <ruby>3<rt>さん</rt>時<rt>じ</rt></ruby>、<ruby>月曜日<rt>げつようび</rt></ruby>、
+    <ruby>8<rt>はち</rt>月<rt>がつ</rt></ruby> 這種<strong>本身就固定</strong>的時間才要加 に。
+  </div>
+
+  <div class="warning">
+    🗾 <strong>しあさって 各地說法不一樣</strong><br>
+    東京一帶的順序是 あさって → <strong>しあさって</strong> → やのあさって。
+    但關西與部分地區把大後天說成 <strong>ごあさって</strong>，
+    也有地方把 やのあさって 當成大後天在用。<br>
+    也就是說，講到第三天以後，對方腦中算的日子有可能跟你不一樣。
+    真的要約時間的話，直接講日期最保險：
+    「<ruby>8<rt>はち</rt>月<rt>がつ</rt></ruby><ruby>25<rt>にじゅうご</rt>日<rt>にち</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります」。
+    往回算的那一邊沒有這個問題，さきおととい 各地都一樣。
+  </div>
+
+  <div class="note">
+    📝 <strong>「回來」還有一個更自然的講法</strong><br>
+    要表達「回到我們現在所在的這一邊」時，日本人常說
+    <ruby>帰<rt>かえ</rt></ruby>って<ruby>来<rt>き</rt></ruby>ます：<br>
+    しあさって、<ruby>旅行<rt>りょこう</rt></ruby>から<ruby>帰<rt>かえ</rt></ruby>って<ruby>来<rt>き</rt></ruby>ます。<br>
+    只說 <ruby>帰<rt>かえ</rt></ruby>ります 完全沒問題，帰って来ます 只是多了一層「往這邊來」的方向感。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>距離今天</th><th>假名</th><th>羅馬拼音</th><th>拍子</th><th>中文</th></tr>
+    <tr><td>三天前</td><td class="col-ja">さきおととい</td><td>sakiototoi</td><td>六拍</td><td>大前天</td></tr>
+    <tr><td>兩天前</td><td class="col-ja">おととい</td><td>ototoi</td><td>四拍</td><td>前天</td></tr>
+    <tr><td>前一天</td><td class="col-ja">きのう</td><td>kinou</td><td>三拍</td><td>昨天</td></tr>
+    <tr><td><strong>基準</strong></td><td class="col-ja"><strong>きょう</strong></td><td><strong>kyou</strong></td><td><strong>兩拍</strong></td><td><strong>今天</strong></td></tr>
+    <tr><td>隔天</td><td class="col-ja">あした</td><td>ashita</td><td>三拍</td><td>明天</td></tr>
+    <tr><td>兩天後</td><td class="col-ja">あさって</td><td>asatte</td><td>四拍</td><td>後天</td></tr>
+    <tr><td>三天後</td><td class="col-ja">しあさって</td><td>shiasatte</td><td>五拍</td><td>大後天</td></tr>
+  </table>
+
+  <div class="tip">
+    💡 <strong>忘記的時候這樣救</strong><br>
+    先把中間那段熟的唸出來（<a href="2026-08-11-jikan-kotoba.html" style="color:var(--accent);">き系接到あ系</a>），
+    再往兩頭各加一個字：往前加 <strong>さき</strong>、往後加 <strong>し</strong>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
+
+  <p style="margin-bottom:10px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先自己想過，再打開解答對答案。
+  </p>
+
+  <details>
+    <summary>🔍 第一題：「大後天，我要從旅行回來。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      しあさって、<ruby>旅行<rt>りょこう</rt></ruby>から<ruby>帰<rt>かえ</rt></ruby>ります。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">shiasatte, ryokou kara kaerimasu.<br>
+      想帶出「回到這邊」的語感，也可以說：しあさって、旅行から帰って来ます。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：「大前天我看了電影。」動詞要用 ます還是 ました？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      さきおととい、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">sakiototoi, eiga o mimashita.<br>
+      大前天已經過去了，所以用<strong>ました</strong>；見ます 講的是還沒發生的事。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：「明日に病院へ行きます。」這句錯在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      多了一個 <span class="j-mark">に</span>。正確說法是
+      <ruby>明日<rt>あした</rt></ruby>、<ruby>病院<rt>びょういん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">きのう・きょう・あした 這類要靠今天推算的說法後面不加 に，
+      月曜日、3時 這種固定的時間才加。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：あさって 要唸幾拍？唸成「あさて」為什麼不行？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <strong>四拍</strong>：あ・さ・っ・て。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">小小的 っ 佔一整拍，少了那一拍聽起來就是別的字，對方會聽不懂。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：從大前天到大後天，照順序唸一次。</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      さきおととい → おととい → きのう → きょう → あした → あさって → しあさって<br>
+      <span style="color:var(--ink-mute);font-size:13px;">sakiototoi → ototoi → kinou → kyou → ashita → asatte → shiasatte</span>
+    </p>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-11-jikan-kotoba.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">時間詞：き系與あ系 <span class="next-arrow">→</span></span>
+    <span class="next-sub">中間那幾天的來由 — 昨日今日開頭都是 き、明日後天都是 あ</span>
+  </a>
+
+  <a href="../jikan.html" class="next-link">
+    <span class="next-kicker">— Reference —</span>
+    <span class="next-title">時間速記表 <span class="next-arrow">→</span></span>
+    <span class="next-sub">星期、日期、月份、時刻、期間，要查的時候翻這頁</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

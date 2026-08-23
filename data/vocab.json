@@ -1,6 +1,284 @@
 {
- "generated": "2026-08-21",
+ "generated": "2026-08-23",
  "words": [
+  {
+   "text": "さきおととい",
+   "ja": "さきおととい（<ruby>一昨昨日<rt>さきおととい</rt></ruby>）",
+   "kana": "さきおととい（さきおととい）",
+   "romaji": "sakiototoi",
+   "meaning": "大前天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "おととい",
+   "ja": "おととい（<ruby>一昨日<rt>おととい</rt></ruby>）",
+   "kana": "おととい（おととい）",
+   "romaji": "ototoi",
+   "meaning": "前天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "きのう",
+   "ja": "きのう（<ruby>昨日<rt>きのう</rt></ruby>）",
+   "kana": "きのう（きのう）",
+   "romaji": "kinou",
+   "meaning": "昨天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "きょう",
+   "ja": "きょう（<ruby>今日<rt>きょう</rt></ruby>）",
+   "kana": "きょう（きょう）",
+   "romaji": "kyou",
+   "meaning": "今天，整條線的基準點",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "あした",
+   "ja": "あした（<ruby>明日<rt>あした</rt></ruby>）",
+   "kana": "あした（あした）",
+   "romaji": "ashita",
+   "meaning": "明天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "あさって",
+   "ja": "あさって（<ruby>明後日<rt>あさって</rt></ruby>）",
+   "kana": "あさって（あさって）",
+   "romaji": "asatte",
+   "meaning": "後天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "しあさって",
+   "ja": "しあさって（<ruby>明々後日<rt>しあさって</rt></ruby>）",
+   "kana": "しあさって（しあさって）",
+   "romaji": "shiasatte",
+   "meaning": "大後天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "しあさって、旅行から帰ります",
+   "ja": "しあさって、<ruby>旅行<rt>りょこう</rt></ruby>から<ruby>帰<rt>かえ</rt></ruby>ります",
+   "kana": "しあさって、りょこうからかえります",
+   "romaji": "shiasatte, ryokou kara kaerimasu",
+   "meaning": "大後天要從旅行回來。から在這裡是起點，「從〜」的意思",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "さきおととい、映画を見ました",
+   "ja": "さきおととい、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました",
+   "kana": "さきおととい、えいがをみました",
+   "romaji": "sakiototoi, eiga o mimashita",
+   "meaning": "大前天看了電影。已經發生的事，動詞用 ました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "おととい、友達に会いました",
+   "ja": "おととい、<ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いました",
+   "kana": "おととい、ともだちにあいました",
+   "romaji": "ototoi, tomodachi ni aimashita",
+   "meaning": "前天跟朋友見了面。「跟某人見面」的對象用 に",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "昨日は何をしましたか",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>何<rt>なに</rt></ruby>をしましたか",
+   "kana": "きのうはなにをしましたか",
+   "romaji": "kinou wa nani o shimashita ka",
+   "meaning": "昨天做了什麼？想拿昨天跟別天對比時，可以加 は",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "今日は仕事が休みです",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>が<ruby>休<rt>やす</rt></ruby>みです",
+   "kana": "きょうはしごとがやすみです",
+   "romaji": "kyou wa shigoto ga yasumi desu",
+   "meaning": "今天工作休假",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "明日、病院へ行きます",
+   "ja": "<ruby>明日<rt>あした</rt></ruby>、<ruby>病院<rt>びょういん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "あした、びょういんへいきます",
+   "romaji": "ashita, byouin e ikimasu",
+   "meaning": "明天要去醫院。へ表示方向，這裡唸 e 不是 he",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "あさっては雨です",
+   "ja": "あさっては<ruby>雨<rt>あめ</rt></ruby>です",
+   "kana": "あさってはあめです",
+   "romaji": "asatte wa ame desu",
+   "meaning": "後天會下雨",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "しあさってまた会いましょう",
+   "ja": "しあさってまた<ruby>会<rt>あ</rt></ruby>いましょう",
+   "kana": "しあさってまたあいましょう",
+   "romaji": "shiasatte mata aimashou",
+   "meaning": "大後天再見面吧。ましょう 是邀約，「一起〜吧」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-22",
+     "href": "lessons/2026-08-22-shiasatte.html",
+     "title": "從大前天到大後天"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
   {
    "text": "私は 一週間に 二回 ボルダリングに 行きます。",
    "ja": "<ruby>私<rt>わたし</rt></ruby>は <ruby>一<rt>いっ</rt>週間<rt>しゅうかん</rt></ruby>に <ruby>二<rt>に</rt>回<rt>かい</rt></ruby> ボルダリングに <ruby>行<rt>い</rt></ruby>きます。",
@@ -828,7 +1106,7 @@
    "ja": "",
    "kana": "",
    "romaji": "ho-to-n-do",
-   "meaning": "⚠️ ん 自己佔一拍。錯誤唸法 ho-ton-do（3 拍）",
+   "meaning": "⚠️ ん 自己佔一拍。錯誤唸法 ho-ton-do（三拍）",
    "kind": "word",
    "lessons": [
     {
@@ -864,7 +1142,7 @@
    "ja": "",
    "kana": "",
    "romaji": "ze-n-ze-n",
-   "meaning": "⚠️ 兩個 ん 都要唸滿。ぜ 是有聲的 ze，不是 se。錯誤唸法 zen-zen（2 拍）",
+   "meaning": "⚠️ 兩個 ん 都要唸滿。ぜ 是有聲的 ze，不是 se。錯誤唸法 zen-zen（兩拍）",
    "kind": "word",
    "lessons": [
     {

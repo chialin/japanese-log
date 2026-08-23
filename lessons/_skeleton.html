@@ -8,6 +8,15 @@
     3. 不需要的 <section> 區塊整段刪掉
     4. 在 index.html 的 <ul id="lesson-list"> 開頭插入新 <li>
     5. 跑 `node scripts/generate-audio.mjs` 生 TTS 音檔（預設 = 波音リツ, id=9）
+    6. 寫完重新校稿一次再交出去
+
+  中文寫法（一律遵守）：
+    · 用台灣中文的文章語氣寫，是一篇教學文章，不是速查表或投影片大綱
+    · 標題用一般中文口語說明事情的方式寫（「一、二、三」編號可以留著）
+      ○「一、以今天為主軸，列出前後幾天的說法」「二、前綴是有規則的」
+      ✗「一、七格時間軸」「四、發音：拍子怎麼數」
+    · 開頭第一塊先講清楚「這篇要學的是什麼」，後面再一段一段展開
+    · 內文提到數量用中文（三拍、四個），數字留給真正的數據（時刻、百分比、日期）
 
   色票：lessons/* 一律棕橘（已寫死於下方 :root，不要動）
   路徑：本檔放在 lessons/ 下，所有相對路徑（../shared.css、../js/tts.js
@@ -52,11 +61,13 @@
 <site-header></site-header>
 
   
-  <!-- TODO: 大標題（中文 / 假名皆可），span.accent 是要染上強調色的字 -->
+  <!-- TODO: 大標題 —— 直接講這篇的主題，不要用編號或數量（中文 / 假名皆可），
+       span.accent 是要染上強調色的字 -->
   <h1 class="page-title">本課標題 <span class="accent">重點字</span></h1>
 <!-- TODO: 類別 + 日期，格式「類別 · Category · 2026/05/13」 -->
 <div class="page-meta">類別 · Category · 2026 / 05 / 13</div>
-  <p class="page-subtitle">一句話副標 — 說明本課要做什麼</p>
+  <!-- TODO: 副標一句話，說明這篇在講什麼 -->
+  <p class="page-subtitle">一句話副標 — 說明本篇在講什麼</p>
 
   <div class="speed-control">
     <label for="rate">速度</label>
@@ -64,18 +75,23 @@
     <span class="speed-value" id="rateValue">1.0x</span>
   </div>
 
-  <!-- TODO: 開頭可選的 callout：tip（💡）/ note（📝）/ alert（⚠️）/ warning -->
+  <!-- TODO: 開頭這塊「這篇要學的是什麼」建議保留，先講主題再展開；
+       其餘可選的 callout：note（📝）/ alert（⚠️）/ warning（🗾）/ mnemonic（🧠） -->
   <div class="tip">
-    💡 <strong>本篇要記的事</strong><br>
-    一句話交代學完這篇能學到什麼。
+    💡 <strong>這篇要學的是什麼</strong><br>
+    先講讀者為什麼會需要這個（什麼情境會用到），
+    再說這篇要處理哪幾件事。用完整的句子寫，不要條列 ①②③。
   </div>
 
   <!-- ─────────────────────────────────────── -->
-  <!-- TODO: 重複以下 section，每個小節一塊 -->
-  <div class="divider">一、小節標題</div>
+  <!-- TODO: 重複以下 section，每個小節一塊。
+       divider 用口語把那一段在做什麼講出來
+       （例：「一、以今天為主軸，列出前後幾天的說法」「二、前綴是有規則的」） -->
+  <div class="divider">一、這一段要說的是什麼</div>
 
   <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
-    小節說明文字。需要強調的詞用 <span class="compare">これ</span>，需要對照的用 <strong>粗體</strong>。
+    小節開頭先用一兩句話鋪陳，再帶出重點，讀起來才像文章。
+    需要強調的詞用 <span class="compare">これ</span>，需要對照的用 <strong>粗體</strong>。
   </p>
 
   <div class="section">

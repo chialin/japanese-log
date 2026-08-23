@@ -362,6 +362,39 @@ curl -s "https://www.irasutoya.com/feeds/posts/default?q=<關鍵字URL編碼>&al
 
 ## Content Guidelines
 
+### 中文的寫法（所有頁面一律遵守）
+
+頁面的中文要讀起來像**一篇為她寫的教學文章**，用**台灣中文**的寫法與語氣：
+
+- **小節標題用一般中文口語說明事情的方式寫**——寫成**完整的句子**，像在跟人講話一樣，
+  把那一段的結論講出來。「一、二、三」的編號留著，重點是編號後面那句話。
+  ✗ 名詞式標題（「一、七格時間軸」「四、發音：拍子怎麼數」「七、速記表」）看不出那段在說什麼，
+  也不要拿數量當主題（「七格」「五個詞」）。
+
+  照段落位置挑句型，這幾組是定案的寫法（見下方兩篇範例）：
+
+  | 段落的角色 | 句型 | 實例 |
+  |------|------|------|
+  | 開場，先把全部攤開 | 以〇〇為主軸，列出／把…排出來 | 一、以今天為主軸，列出前後幾天的說法<br>一、以頻率高低為主軸，把這組詞排出來 |
+  | 講某件事的性質、規律 | 〇〇是…的 | 二、前綴是有規則的<br>三、漢字的唸法是整組配上去的<br>三、每個詞的語感是這樣分的 |
+  | 解釋原因 | 〇〇是因為… | 四、唸不順是因為拍子少算了 |
+  | 講怎麼用 | …是這樣用的 | 五、放進句子裡是這樣用的 |
+  | 要讀者自己比較 | …，差別在哪裡 | 五、同一句話換個副詞，差別在哪裡 |
+  | 提醒陷阱 | 有〇個地方容易講錯／有幾種說法特別容易寫錯 | 六、有兩個地方容易講錯 |
+  | 收尾 | 整理成一張表 | 七、整理成一張表 |
+
+  | 收尾的小測驗 | 換你自己做做看 · Self-Quiz | 八、換你自己做做看 · Self-Quiz |
+
+  小測驗那段的內容規格（3～5 題 ＋ `<details>` 解答）不變，只是標題也照口語的寫法。
+- **開頭第一塊先講主題**：用 `.tip` 寫「這篇要學的是什麼」——先講什麼情境會用到，再說這篇要處理哪幾件事，
+  用完整句子，不要 ①②③ 條列。後面才一段一段展開。
+- **每個小節開頭先鋪陳一兩句再帶出重點**，不要一進去就丟表格。
+- **內文提到數量用中文**（三拍、四個、兩天前），阿拉伯數字留給真正的數據（時刻、百分比、日期、年份）。
+- **寫完要重新校稿一次**再交出去（讀一遍全文抓語意錯誤、不像中文的句子、全形符號不一致）。
+
+範例見 [從大前天到大後天](lessons/2026-08-22-shiasatte.html) 與 [頻率副詞](lessons/2026-08-20-hindo.html)。
+
+
 - **Language**: Lesson content is in Traditional Chinese (繁體中文) with Japanese text. UI labels mix Chinese, Japanese, and English naturally.
 - **Hiragana and katakana** are both allowed in lesson content. Hiragana rows build vocabulary from already-learned kana; katakana row lessons instead pair each kana with its hiragana counterpart and use a few common 外來語 (loanwords, not restricted to learned rows).
 - 五十音行（行）課程每頁恰好 5 個 kana：附羅馬拼音、發音重點、單字、用已學 kana 拼出來的簡單句子。

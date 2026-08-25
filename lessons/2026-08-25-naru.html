@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜くなる／〜になる — 形容詞怎麼講「變成」</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">形容詞加上 <span class="accent">なる</span>，就是在講變化</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 25</div>
+  <p class="page-subtitle">強い → 強くなる、綺麗な → 綺麗になる — 一個 く、一個 に，差別只在形容詞是哪一種</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    要說「天氣變冷了」「日文變好了」「這條路變漂亮了」，講的都不是現在的狀態，而是<strong>從某個狀態轉到另一個狀態</strong>。
+    日文處理這件事只用一個動詞 <ruby>成<rt>な</rt></ruby>る，麻煩的是它前面那個形容詞要先改樣子，
+    而且い形容詞跟な形容詞改的方式不一樣。本篇先把兩種變法各自講清楚，
+    再看名詞怎麼接，最後帶一個講原因的接續詞 なぜなら，讓句子可以自己接下去解釋為什麼。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以「變化」為主軸，把兩種形容詞排出來</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先看兩個句子的差別。<ruby>強<rt>つよ</rt></ruby>いです 是在講「現在很強」，
+    <ruby>強<rt>つよ</rt></ruby>くなります 是在講「本來沒那麼強，後來變強了」。
+    多出來的那個 なる 就是整句話的重點——它把靜態的描述變成一段過程。
+    而 なる 前面要放什麼形狀，完全由形容詞的種類決定。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>い形容詞 → く</h4>
+      <div class="vs-sub">字典形結尾是 い 的那一類</div>
+      <ul>
+        <li><ruby>強<rt>つよ</rt></ruby>い → 強<b>く</b>なる</li>
+        <li><ruby>弱<rt>よわ</rt></ruby>い → 弱<b>く</b>なる</li>
+        <li><ruby>赤<rt>あか</rt></ruby>い → 赤<b>く</b>なる</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>な形容詞 → に</h4>
+      <div class="vs-sub">要接名詞時中間得放一個 な 的那一類</div>
+      <ul>
+        <li><ruby>綺麗<rt>きれい</rt></ruby>な → 綺麗<b>に</b>なる</li>
+        <li><ruby>無駄<rt>むだ</rt></ruby>な → 無駄<b>に</b>なる</li>
+        <li><ruby>親切<rt>しんせつ</rt></ruby>な → 親切<b>に</b>なる</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、い形容詞是把最後那個 い 換成 く</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    い形容詞的變法只有一步：<strong>把字尾的 い 拿掉，換成 く</strong>，後面直接接 なります。
+    注意拿掉的只有最後那一個假名，前面的部分一個字都不動。
+  </p>
+
+  <div class="formula">
+    <h4>い形容詞 ＋ なる</h4>
+    <div class="fx">
+      <ruby>強<rt>つよ</rt></ruby><s>い</s><span class="arw">→</span><ruby>強<rt>つよ</rt></ruby><b>く</b>なります<br>
+      <ruby>弱<rt>よわ</rt></ruby><s>い</s><span class="arw">→</span><ruby>弱<rt>よわ</rt></ruby><b>く</b>なります<br>
+      <ruby>赤<rt>あか</rt></ruby><s>い</s><span class="arw">→</span><ruby>赤<rt>あか</rt></ruby><b>く</b>なります
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="風が強くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>風<rt>かぜ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>くなりました</div>
+        <div class="word-romaji">kaze ga tsuyoku narimashita</div>
+        <div class="word-meaning">風變大了。已經變了，所以用 <b>なりました</b>；還沒變的用 なります</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="葉が赤くなります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>葉<rt>は</rt></ruby>が<ruby>赤<rt>あか</rt></ruby>くなります</div>
+        <div class="word-romaji">ha ga akaku narimasu</div>
+        <div class="word-meaning">葉子會變紅。講的是接下來會發生的變化</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="雨が弱くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>雨<rt>あめ</rt></ruby>が<ruby>弱<rt>よわ</rt></ruby>くなりました</div>
+        <div class="word-romaji">ame ga yowaku narimashita</div>
+        <div class="word-meaning">雨變小了。<ruby>雨<rt>あめ</rt></ruby> 在 <a href="2026-08-14-basho-mono-tango.html" style="color:var(--accent);">8/14 的單字課</a>出現過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>いい 是唯一要另外記的那個</strong><br>
+    <ruby>良<rt>い</rt></ruby>い（好）不能照規則變成「いくなる」，要先換回它的老形狀 よい，
+    再變成 <strong>よくなります</strong>。<br>
+    <span style="color:var(--ink-mute);">例：<ruby>天気<rt>てんき</rt></ruby>がよくなりました（天氣變好了）。
+    這個字所有的變化都走 よ 開頭，之後遇到別的形式也一樣。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、な形容詞是把 な 拿掉，改放 に</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    な形容詞的字典形寫出來時後面常帶一個 な（<ruby>綺麗<rt>きれい</rt></ruby>な<ruby>花<rt>はな</rt></ruby>）。
+    要接 なる 的時候，把那個 な 拿掉，改放 <span class="j-mark">に</span>，其餘照舊。
+    位置跟い形容詞的 く 完全一樣，只是換了一個假名。
+  </p>
+
+  <div class="formula">
+    <h4>な形容詞 ＋ なる</h4>
+    <div class="fx">
+      <ruby>綺麗<rt>きれい</rt></ruby><s>な</s><span class="arw">→</span><ruby>綺麗<rt>きれい</rt></ruby><b>に</b>なります<br>
+      <ruby>無駄<rt>むだ</rt></ruby><s>な</s><span class="arw">→</span><ruby>無駄<rt>むだ</rt></ruby><b>に</b>なります<br>
+      <ruby>親切<rt>しんせつ</rt></ruby><s>な</s><span class="arw">→</span><ruby>親切<rt>しんせつ</rt></ruby><b>に</b>なります
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="部屋が綺麗になりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>が<ruby>綺麗<rt>きれい</rt></ruby>になりました</div>
+        <div class="word-romaji">heya ga kirei ni narimashita</div>
+        <div class="word-meaning">房間變乾淨了。綺麗 同時有「漂亮」跟「乾淨」兩個意思</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼は親切になりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>は<ruby>親切<rt>しんせつ</rt></ruby>になりました</div>
+        <div class="word-romaji">kare wa shinsetsu ni narimashita</div>
+        <div class="word-meaning">他變得親切了。<ruby>彼<rt>かれ</rt></ruby>＝他，見 <a href="2026-08-16-dansei-josei.html" style="color:var(--accent);">8/16 男性・女性</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="切符が無駄になりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>切符<rt>きっぷ</rt></ruby>が<ruby>無駄<rt>むだ</rt></ruby>になりました</div>
+        <div class="word-romaji">kippu ga muda ni narimashita</div>
+        <div class="word-meaning">票白買了（變成沒用的東西）。無駄 是「白費、沒有用」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 親切的音讀跟台語對得上</strong><br>
+    <strong>親</strong>　台語 tshin（鼻音 -n 收尾）→ <ruby>親<rt>しん</rt></ruby>，-n 尾變成 <span class="compare">ん</span><br>
+    <strong>切</strong>　台語 tshiat（入聲 -t 收尾）→ <ruby>切<rt>せつ</rt></ruby>，-t 尾變成 <span class="compare">つ</span><br>
+    合起來就是 <strong>しんせつ</strong>。同一個「切」在 <ruby>大切<rt>たいせつ</rt></ruby>（重要）裡唸法一模一樣，
+    看到 -t 收尾的台語字，日文音讀多半以 つ／ち 結束。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、名詞也是接 に，跟な形容詞同一條路</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「變成大人」「變成醫生」這種後面接的是名詞，用法跟な形容詞一樣，直接
+    <strong>名詞 ＋ に ＋ なります</strong>。所以真正要分辨的只有一件事：<u>它是不是い形容詞</u>。
+    不是的話一律用 に。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="来年、大学生になります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>来年<rt>らいねん</rt></ruby>、<ruby>大学生<rt>だいがくせい</rt></ruby>になります</div>
+        <div class="word-romaji">rainen, daigakusei ni narimasu</div>
+        <div class="word-meaning">明年要成為大學生</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="もう三時になりました">
+      <div class="word-content">
+        <div class="word-ja">もう<ruby>三時<rt>さんじ</rt></ruby>になりました</div>
+        <div class="word-romaji">mou sanji ni narimashita</div>
+        <div class="word-meaning">已經三點了。時刻也用 なる，字面是「時間變成三點」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、なぜなら 是用來補說原因的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    講完一件事之後想接著解釋為什麼，就用 <ruby>何故<rt>なぜ</rt></ruby>なら。
+    它不是夾在句子中間的助詞，而是<strong>放在下一句的開頭</strong>，
+    等於中文的「這是因為……」。習慣上句尾會用 <strong>〜からです</strong> 收尾，前後呼應。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="今日は早く帰ります。なぜなら、明日試験があるからです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>ります。なぜなら、<ruby>明日<rt>あした</rt></ruby><ruby>試験<rt>しけん</rt></ruby>があるからです</div>
+        <div class="word-romaji">kyou wa hayaku kaerimasu. nazenara, ashita shiken ga aru kara desu</div>
+        <div class="word-meaning">今天要早點回家，因為明天有考試。<ruby>試験<rt>しけん</rt></ruby>があります 的說法見 <a href="2026-08-14-arimasu.html" style="color:var(--accent);">8/14 〜があります</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本語が上手になりました。なぜなら、毎日練習したからです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>になりました。なぜなら、<ruby>毎日<rt>まいにち</rt></ruby><ruby>練習<rt>れんしゅう</rt></ruby>したからです</div>
+        <div class="word-romaji">nihongo ga jouzu ni narimashita. nazenara, mainichi renshuu shita kara desu</div>
+        <div class="word-meaning">日文變好了，因為每天都在練習。<ruby>上手<rt>じょうず</rt></ruby> 是な形容詞，所以接 に</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>なぜなら 偏書面，講話時有更輕的說法</strong><br>
+    寫文章、做報告用 なぜなら 很自然；平常聊天多半直接用 <strong>〜からです</strong> 或
+    句首的 <strong>だって</strong> 就好。<br>
+    <span style="color:var(--ink-mute);">日本語が上手になりました。<ruby>毎日<rt>まいにち</rt></ruby>練習しましたから。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>第一個：綺麗 結尾是 い，卻是な形容詞</strong><br>
+    <ruby>綺麗<rt>きれい</rt></ruby> 的 い 是漢字「麗」自己的讀音，不是形容詞的字尾，
+    所以<strong>不能</strong>說「きれくなる」，只能說 <strong>きれいになる</strong>。<br>
+    同一類的陷阱字還有 <ruby>有名<rt>ゆうめい</rt></ruby>（有名）、<ruby>嫌<rt>きら</rt></ruby>い（討厭）、
+    <ruby>元気<rt>げんき</rt></ruby>（有精神）——看到假名結尾是 い 別急著當成い形容詞，
+    先想它接名詞的時候要不要加 な。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>第二個：形容詞後面不要留 です</strong><br>
+    ✗ <ruby>強<rt>つよ</rt></ruby>いですなります　✗ <ruby>綺麗<rt>きれい</rt></ruby>ですになります<br>
+    ○ <ruby>強<rt>つよ</rt></ruby>くなります　○ <ruby>綺麗<rt>きれい</rt></ruby>になります<br>
+    <span style="color:var(--ink-mute);">禮貌的語氣由句尾的 なります 負責，前面的形容詞只要變形就好，不必再客氣一次。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>種類</th><th>怎麼變</th><th>例</th><th>意思</th></tr>
+    <tr><td><strong>い形容詞</strong></td><td>去 <b>い</b> ＋ <b>く</b></td><td class="col-ja">強い → 強くなります</td><td>變強</td></tr>
+    <tr><td><strong>い形容詞</strong></td><td>去 <b>い</b> ＋ <b>く</b></td><td class="col-ja">弱い → 弱くなります</td><td>變弱</td></tr>
+    <tr><td><strong>い形容詞</strong></td><td>去 <b>い</b> ＋ <b>く</b></td><td class="col-ja">赤い → 赤くなります</td><td>變紅</td></tr>
+    <tr><td><strong>い形容詞（例外）</strong></td><td>換成 <b>よ</b> 開頭</td><td class="col-ja">いい → よくなります</td><td>變好</td></tr>
+    <tr><td><strong>な形容詞</strong></td><td>去 <b>な</b> ＋ <b>に</b></td><td class="col-ja">綺麗な → 綺麗になります</td><td>變漂亮／變乾淨</td></tr>
+    <tr><td><strong>な形容詞</strong></td><td>去 <b>な</b> ＋ <b>に</b></td><td class="col-ja">無駄な → 無駄になります</td><td>變成白費</td></tr>
+    <tr><td><strong>な形容詞</strong></td><td>去 <b>な</b> ＋ <b>に</b></td><td class="col-ja">親切な → 親切になります</td><td>變親切</td></tr>
+    <tr><td><strong>名詞</strong></td><td>直接 ＋ <b>に</b></td><td class="col-ja">大学生 → 大学生になります</td><td>變成大學生</td></tr>
+    <tr class="key"><td><strong>なぜなら</strong></td><td>放句首，句尾配 からです</td><td class="col-ja">なぜなら、〜からです</td><td>這是因為〜</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「天氣變冷了。」（<ruby>寒<rt>さむ</rt></ruby>い）日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>寒<rt>さむ</rt></ruby>くなりました。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">samuku narimashita.<br>
+      寒い 是い形容詞，去 い 加 く。要講整句可以說：<ruby>天気<rt>てんき</rt></ruby>が寒くなりました。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：「きれくなりました」錯在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      綺麗 是<strong>な形容詞</strong>，要說 <ruby>綺麗<rt>きれい</rt></ruby>になりました。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">結尾的 い 是漢字「麗」的讀音，不是形容詞字尾，不能拿掉。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：「他變親切了。」用哪一個假名接 なる？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      用 <span class="j-mark">に</span>：<ruby>彼<rt>かれ</rt></ruby>は<ruby>親切<rt>しんせつ</rt></ruby>になりました。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kare wa shinsetsu ni narimashita.</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：用 なぜなら 造一句，說明自己為什麼日文變好了。</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>になりました。なぜなら、<ruby>毎日<rt>まいにち</rt></ruby><ruby>練習<rt>れんしゅう</rt></ruby>したからです。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">nihongo ga jouzu ni narimashita. nazenara, mainichi renshuu shita kara desu.<br>
+      なぜなら 放在後面那句的開頭，句尾用 からです 收。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：「いい」變成「變好了」要怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <strong>よくなりました</strong>。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">いい 的變化一律走老形狀 よい，所以是 よく，不是「いく」。</span>
+    </p>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-25-washoku-tango.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">和食・洋食・予定・たくさん <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一天的四個生字，正好可以拿來造 なる 的句子</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

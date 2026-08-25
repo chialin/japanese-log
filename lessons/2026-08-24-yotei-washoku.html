@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>明日、予定がありますか — 約吃飯的一段對話</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:rgba(255,255,255,.75);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 對話行 */
+.talk{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:6px 18px 10px;margin:16px 0;}
+.talk .word-item{border-bottom:1px dashed var(--line);}
+.talk .word-item:last-child{border-bottom:none;}
+.who{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12.5px;letter-spacing:.1em;color:var(--ink-mute);border:1px solid var(--line);border-radius:20px;padding:1px 9px;margin-bottom:5px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">明日、予定がありますか</span></h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 08 / 24</div>
+  <p class="page-subtitle">約人吃飯就從這句開始 — 問完行程，接著要決定的是和食還是洋食</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    想約人吃飯，第一步是問對方那天有沒有空。日本人不太直接問「你有空嗎」，
+    而是問「<ruby>予定<rt>よてい</rt></ruby>がありますか」——有沒有已經排好的事。
+    問完之後接著要決定吃什麼，這時候會用到日本人分餐點的方式：
+    <ruby>和食<rt>わしょく</rt></ruby>還是<ruby>洋食<rt>ようしょく</rt></ruby>。
+    本篇先把整段對話走一遍，再回頭一個一個解釋裡面的生字。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、整段對話從這一句開始</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先看完整的一小段。四句話就把「約時間、決定吃什麼」講完了，
+    每一句都可以直接照著用，只要把日子和食物換成自己的。
+  </p>
+
+  <div class="talk">
+    <div class="word-item" data-text="明日、予定がありますか">
+      <div class="word-content">
+        <span class="who">A</span>
+        <div class="word-ja"><ruby>明日<rt>あした</rt></ruby>、<ruby>予定<rt>よてい</rt></ruby>がありますか</div>
+        <div class="word-romaji">ashita, yotei ga arimasu ka</div>
+        <div class="word-meaning">明天有安排嗎？句型見 <a href="2026-08-14-arimasu.html" style="color:var(--accent);">8/14 〜があります</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいえ、明日は予定がありません">
+      <div class="word-content">
+        <span class="who">B</span>
+        <div class="word-ja">いいえ、<ruby>明日<rt>あした</rt></ruby>は<ruby>予定<rt>よてい</rt></ruby>がありません</div>
+        <div class="word-romaji">iie, ashita wa yotei ga arimasen</div>
+        <div class="word-meaning">沒有，明天沒有安排。否定的說法見 <a href="2026-08-15-x-ga-arimasen.html" style="color:var(--accent);">8/15 〜がありません</a>；這裡的 <span class="j-mark">は</span> 是在把明天單獨拿出來講</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="じゃあ、一緒にご飯を食べませんか">
+      <div class="word-content">
+        <span class="who">A</span>
+        <div class="word-ja">じゃあ、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>ご飯<rt>ごはん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べませんか</div>
+        <div class="word-romaji">jaa, issho ni gohan o tabemasen ka</div>
+        <div class="word-meaning">那要不要一起吃個飯？邀約用否定的 <strong>〜ませんか</strong>，語氣比較客氣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいですね。和食と洋食、どちらがいいですか">
+      <div class="word-content">
+        <span class="who">B</span>
+        <div class="word-ja">いいですね。<ruby>和食<rt>わしょく</rt></ruby>と<ruby>洋食<rt>ようしょく</rt></ruby>、どちらがいいですか</div>
+        <div class="word-romaji">ii desu ne. washoku to youshoku, dochira ga ii desu ka</div>
+        <div class="word-meaning">好啊。日式跟西式，你想吃哪一種？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="和食が食べたいです。昨日、洋食をたくさん食べましたから">
+      <div class="word-content">
+        <span class="who">A</span>
+        <div class="word-ja"><ruby>和食<rt>わしょく</rt></ruby>が<ruby>食<rt>た</rt></ruby>べたいです。<ruby>昨日<rt>きのう</rt></ruby>、<ruby>洋食<rt>ようしょく</rt></ruby>をたくさん<ruby>食<rt>た</rt></ruby>べましたから</div>
+        <div class="word-romaji">washoku ga tabetai desu. kinou, youshoku o takusan tabemashita kara</div>
+        <div class="word-meaning">想吃日式的，因為昨天吃了很多西式的。句尾的 <strong>から</strong> 是在補說原因</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>問行程有兩種問法，語氣不一樣</strong><br>
+    <ruby>予定<rt>よてい</rt></ruby>がありますか＝「有沒有安排」，最中性、對誰都能用。<br>
+    <ruby>暇<rt>ひま</rt></ruby>ですか＝「你有空嗎」，很直接，對長輩或不熟的人講會有點失禮。<br>
+    <span style="color:var(--ink-mute);">不確定的時候一律用 予定 這個問法就對了。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、對話裡的生字是這樣用的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    上面那段話裡有四個新字。<ruby>予定<rt>よてい</rt></ruby>講的是行程，
+    たくさん講的是份量，<ruby>和食<rt>わしょく</rt></ruby>與<ruby>洋食<rt>ようしょく</rt></ruby>
+    則是日本人分餐點的兩大類。下面一個一個看。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 単語</div>
+
+    <div class="word-item" data-text="予定">
+      <div class="word-content">
+        <div class="word-ja"><ruby>予定<rt>よてい</rt></ruby></div>
+        <div class="word-romaji">yotei</div>
+        <div class="word-meaning">預定、安排、行程。「予」是事先、「定」是定下來，合起來就是<strong>事先定好的安排</strong></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="たくさん">
+      <div class="word-content">
+        <div class="word-ja">たくさん（<ruby>沢山<rt>たくさん</rt></ruby>）</div>
+        <div class="word-romaji">takusan</div>
+        <div class="word-meaning">很多。一般寫平假名，漢字寫法比較少見</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="和食">
+      <div class="word-content">
+        <div class="word-ja"><ruby>和食<rt>わしょく</rt></ruby></div>
+        <div class="word-romaji">washoku</div>
+        <div class="word-meaning">日式料理。和＝日本的，同一個字也在 <ruby>和室<rt>わしつ</rt></ruby>（榻榻米房間）、<ruby>和服<rt>わふく</rt></ruby> 裡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="洋食">
+      <div class="word-content">
+        <div class="word-ja"><ruby>洋食<rt>ようしょく</rt></ruby></div>
+        <div class="word-romaji">youshoku</div>
+        <div class="word-meaning">日式西餐。洋＝西洋的，咖哩飯、蛋包飯這一類</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>たくさん 要接名詞的時候得加 の</strong><br>
+    ○ たくさん<ruby>食<rt>た</rt></ruby>べます（動詞前面直接放）<br>
+    ○ たくさん<span class="j-mark">の</span><ruby>人<rt>ひと</rt></ruby>（很多人）<br>
+    ✗ たくさん人　<span style="color:var(--ink-mute);">— 名詞前面少了 の 會怪怪的。</span><br>
+    另外，たくさん 講的是<strong>份量</strong>，跟講頻率的
+    <a href="2026-08-20-hindo.html" style="color:var(--accent);">よく・いつも</a> 不一樣：
+    たくさん食べます 是一次吃很多，よく食べます 是常常吃。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 換個說法再練一次</div>
+
+    <div class="word-item" data-text="今日は予定がありません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>予定<rt>よてい</rt></ruby>がありません</div>
+        <div class="word-romaji">kyou wa yotei ga arimasen</div>
+        <div class="word-meaning">今天沒有安排</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="週末は予定がたくさんあります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>週末<rt>しゅうまつ</rt></ruby>は<ruby>予定<rt>よてい</rt></ruby>がたくさんあります</div>
+        <div class="word-romaji">shuumatsu wa yotei ga takusan arimasu</div>
+        <div class="word-meaning">週末的行程滿檔</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="和食をたくさん食べました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>和食<rt>わしょく</rt></ruby>をたくさん<ruby>食<rt>た</rt></ruby>べました</div>
+        <div class="word-romaji">washoku o takusan tabemashita</div>
+        <div class="word-meaning">吃了很多日式料理</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、和食與洋食的分界是這樣切的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日本人在講餐點的時候，第一刀不是切成中式西式，而是切成
+    <strong><ruby>和<rt>わ</rt></ruby>（日本的）</strong>跟<strong><ruby>洋<rt>よう</rt></ruby>（西洋的）</strong>。
+    看到「和」這個字就知道在講日本自己的東西，這個用法到處都是。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>和食（わしょく）</h4>
+      <div class="vs-sub">日本自己的傳統飲食</div>
+      <ul>
+        <li>白飯、味噌湯、烤魚</li>
+        <li><ruby>寿司<rt>すし</rt></ruby>、<ruby>天<rt>てん</rt></ruby>ぷら、<ruby>刺身<rt>さしみ</rt></ruby></li>
+        <li>2013 年被列進聯合國無形文化遺產</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>洋食（ようしょく）</h4>
+      <div class="vs-sub">從西方傳進來、再改成日本口味的</div>
+      <ul>
+        <li>カレーライス、オムライス</li>
+        <li>ハンバーグ、コロッケ</li>
+        <li>店的招牌常寫成「洋食屋」</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>洋食不等於西餐</strong><br>
+    真正的法式義式料理日本人叫 <ruby>西洋料理<rt>せいようりょうり</rt></ruby>；
+    <strong>洋食</strong>專指明治時代以後被日本人改造成配白飯吃的那一套——
+    咖哩飯、蛋包飯、可樂餅都是在日本長出來的樣子。
+    <a href="2026-08-18-pan.html" style="color:var(--accent);">8/18 的〈パン〉</a>裡提到的カレーパン，
+    元祖店家登記的名字就叫「洋食パン」，講的是同一個脈絡。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 洋食兩個字的音讀都能用台語推</strong><br>
+    <strong>洋</strong>　台語 iong（-ng 收尾）→ <ruby>洋<rt>よう</rt></ruby>，鼻音尾變成<span class="compare">長音</span><br>
+    <strong>食</strong>　台語 sit（入聲收尾）→ <ruby>食<rt>しょく</rt></ruby>，入聲尾變成 <span class="compare">く</span><br>
+    同一個「食」在 <ruby>食堂<rt>しょくどう</rt></ruby>、<ruby>食事<rt>しょくじ</rt></ruby> 唸法完全一樣，記一次整組通。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 予定的「定」是鼻音尾</strong><br>
+    <strong>予</strong>　台語 ú → <ruby>予<rt>よ</rt></ruby>，同一個字在 <ruby>予約<rt>よやく</rt></ruby>（預約）也唸 よ<br>
+    <strong>定</strong>　台語 ting（-ng 收尾）→ <ruby>定<rt>てい</rt></ruby>，鼻音尾變成長音<br>
+    中文的「預定」跟日文的<ruby>予定<rt>よてい</rt></ruby>意思幾乎一樣，這個字只要記讀音就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>日文</th><th>讀法</th><th>意思</th><th>怎麼用</th></tr>
+    <tr><td class="col-ja">予定</td><td class="col-ja">よてい</td><td>安排、行程</td><td>予定があります／ありません</td></tr>
+    <tr><td class="col-ja">たくさん</td><td class="col-ja">たくさん</td><td>很多</td><td>動詞前直接放；接名詞要加 の</td></tr>
+    <tr><td class="col-ja">和食</td><td class="col-ja">わしょく</td><td>日式料理</td><td>和＝日本的；和室・和服同一個字</td></tr>
+    <tr class="key"><td class="col-ja">洋食</td><td class="col-ja">ようしょく</td><td>日式西餐</td><td>咖哩飯、蛋包飯這一類，不是正統西餐</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「明天有安排嗎？」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>明日<rt>あした</rt></ruby>、<ruby>予定<rt>よてい</rt></ruby>がありますか。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">ashita, yotei ga arimasu ka.</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：要回答「明天沒有安排」該怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      いいえ、<ruby>明日<rt>あした</rt></ruby>は<ruby>予定<rt>よてい</rt></ruby>がありません。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">iie, ashita wa yotei ga arimasen. 把明天單獨拿出來講，所以用 は。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：咖哩飯屬於和食還是洋食？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <strong>洋食</strong>（ようしょく）。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">從外面傳進來、被改成配白飯吃的那一套都算洋食；壽司、天婦羅、烤魚才是和食。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：「たくさん人が来ました」錯在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      たくさん 後面接名詞要加 <span class="j-mark">の</span>：たくさん<b>の</b><ruby>人<rt>ひと</rt></ruby>が<ruby>来<rt>き</rt></ruby>ました。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">接動詞時才可以直接放：たくさん食べました。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：「吃了很多日式料理。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>和食<rt>わしょく</rt></ruby>をたくさん<ruby>食<rt>た</rt></ruby>べました。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">washoku o takusan tabemashita.</span>
+    </p>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-25-washoku-tango.html" class="next-link">
+    <span class="next-kicker">— Next —</span>
+    <span class="next-title">完璧・恥ずかしい・難しい・冷たい <span class="next-arrow">→</span></span>
+    <span class="next-sub">隔天的七個生字 — 講感受的四個形容詞，加上上課會直接聽到的 ルート・休憩・続き</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

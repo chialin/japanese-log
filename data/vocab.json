@@ -1,6 +1,618 @@
 {
- "generated": "2026-08-23",
+ "generated": "2026-08-25",
  "words": [
+  {
+   "text": "彼女は写真を撮りません",
+   "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>りません",
+   "kana": "かのじょはしゃしんをとりません",
+   "romaji": "kanojo wa shashin o torimasen",
+   "meaning": "她不拍照。照片是動作直接作用的東西，所以用 を",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼女は親に会いません",
+   "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>親<rt>おや</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いません",
+   "kana": "かのじょはおやにあいません",
+   "romaji": "kanojo wa oya ni aimasen",
+   "meaning": "她不跟父母見面。見面的對象是人，朝著對方去，所以用 に",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "昨日の続きをします",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>続<rt>つづ</rt></ruby>きをします",
+   "kana": "きのうのつづきをします",
+   "romaji": "kinou no tsuzuki o shimasu",
+   "meaning": "接著昨天的進度做",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "続きは明日にしましょう",
+   "ja": "<ruby>続<rt>つづ</rt></ruby>きは<ruby>明日<rt>あした</rt></ruby>にしましょう",
+   "kana": "つづきはあしたにしましょう",
+   "romaji": "tsuzuki wa ashita ni shimashou",
+   "meaning": "後續明天再說吧",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "ちょっと休憩しましょう",
+   "ja": "ちょっと<ruby>休憩<rt>きゅうけい</rt></ruby>しましょう",
+   "kana": "ちょっときゅうけいしましょう",
+   "romaji": "chotto kyuukei shimashou",
+   "meaning": "我們稍微休息一下吧。同樣是老師會直接說的一句",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "冷たい",
+   "ja": "<ruby>冷<rt>つめ</rt></ruby>たい",
+   "kana": "つめたい",
+   "romaji": "tsumetai",
+   "meaning": "冰的、涼的。摸到、喝到才知道的冰，也能形容人的態度冷淡",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "温かい",
+   "ja": "<ruby>温<rt>あたた</rt></ruby>かい",
+   "kana": "あたたかい",
+   "romaji": "atatakai",
+   "meaning": "溫熱的。冷たい 的相反，講食物、飲料、水溫這種摸得到的溫度",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "ぬるい",
+   "ja": "ぬるい（<ruby>温<rt>ぬる</rt></ruby>い）",
+   "kana": "ぬるい（ぬるい）",
+   "romaji": "nurui",
+   "meaning": "微溫的、不夠熱。同一個漢字換個讀音，語氣偏負面——該熱的東西涼掉了",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "恥ずかしい",
+   "ja": "<ruby>恥<rt>は</rt></ruby>ずかしい",
+   "kana": "はずかしい",
+   "romaji": "hazukashii",
+   "meaning": "害羞、不好意思、丟臉。講的是自己的感受",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "完璧",
+   "ja": "<ruby>完璧<rt>かんぺき</rt></ruby>",
+   "kana": "かんぺき",
+   "romaji": "kanpeki",
+   "meaning": "完美、無可挑剔。な形容詞，所以接 なる 時用 に：完璧になります",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "休憩",
+   "ja": "<ruby>休憩<rt>きゅうけい</rt></ruby>",
+   "kana": "きゅうけい",
+   "romaji": "kyuukei",
+   "meaning": "休息（一段時間）。休憩します＝來休息一下",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "ルート",
+   "ja": "ルート",
+   "kana": "ルート",
+   "romaji": "ruuto ← route",
+   "meaning": "路線、路徑。抱石的一條路線也叫ルート，見 8/21 ボルダリングの話",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
+    }
+   ],
+   "tags": [
+    "交通"
+   ]
+  },
+  {
+   "text": "風が強くなりました",
+   "ja": "<ruby>風<rt>かぜ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>くなりました",
+   "kana": "かぜがつよくなりました",
+   "romaji": "kaze ga tsuyoku narimashita",
+   "meaning": "風變大了。已經變了，所以用 なりました；還沒變的用 なります",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "葉が赤くなります",
+   "ja": "<ruby>葉<rt>は</rt></ruby>が<ruby>赤<rt>あか</rt></ruby>くなります",
+   "kana": "はがあかくなります",
+   "romaji": "ha ga akaku narimasu",
+   "meaning": "葉子會變紅。講的是接下來會發生的變化",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "自然"
+   ]
+  },
+  {
+   "text": "雨が弱くなりました",
+   "ja": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>弱<rt>よわ</rt></ruby>くなりました",
+   "kana": "あめがよわくなりました",
+   "romaji": "ame ga yowaku narimashita",
+   "meaning": "雨變小了。雨 在 8/14 的單字課出現過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "部屋が綺麗になりました",
+   "ja": "<ruby>部屋<rt>へや</rt></ruby>が<ruby>綺麗<rt>きれい</rt></ruby>になりました",
+   "kana": "へやがきれいになりました",
+   "romaji": "heya ga kirei ni narimashita",
+   "meaning": "房間變乾淨了。綺麗 同時有「漂亮」跟「乾淨」兩個意思",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "彼は親切になりました",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>親切<rt>しんせつ</rt></ruby>になりました",
+   "kana": "かれはしんせつになりました",
+   "romaji": "kare wa shinsetsu ni narimashita",
+   "meaning": "他變得親切了。彼＝他，見 8/16 男性・女性",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "切符が無駄になりました",
+   "ja": "<ruby>切符<rt>きっぷ</rt></ruby>が<ruby>無駄<rt>むだ</rt></ruby>になりました",
+   "kana": "きっぷがむだになりました",
+   "romaji": "kippu ga muda ni narimashita",
+   "meaning": "票白買了（變成沒用的東西）。無駄 是「白費、沒有用」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "来年、大学生になります",
+   "ja": "<ruby>来年<rt>らいねん</rt></ruby>、<ruby>大学生<rt>だいがくせい</rt></ruby>になります",
+   "kana": "らいねん、だいがくせいになります",
+   "romaji": "rainen, daigakusei ni narimasu",
+   "meaning": "明年要成為大學生",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "もう三時になりました",
+   "ja": "もう<ruby>三時<rt>さんじ</rt></ruby>になりました",
+   "kana": "もうさんじになりました",
+   "romaji": "mou sanji ni narimashita",
+   "meaning": "已經三點了。時刻也用 なる，字面是「時間變成三點」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "今日は早く帰ります。なぜなら、明日試験があるからです",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>ります。なぜなら、<ruby>明日<rt>あした</rt></ruby><ruby>試験<rt>しけん</rt></ruby>があるからです",
+   "kana": "きょうははやくかえります。なぜなら、あしたしけんがあるからです",
+   "romaji": "kyou wa hayaku kaerimasu. nazenara, ashita shiken ga aru kara desu",
+   "meaning": "今天要早點回家，因為明天有考試。試験があります 的說法見 8/14 〜があります",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "日本語が上手になりました。なぜなら、毎日練習したからです",
+   "ja": "<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>になりました。なぜなら、<ruby>毎日<rt>まいにち</rt></ruby><ruby>練習<rt>れんしゅう</rt></ruby>したからです",
+   "kana": "にほんごがじょうずになりました。なぜなら、まいにちれんしゅうしたからです",
+   "romaji": "nihongo ga jouzu ni narimashita. nazenara, mainichi renshuu shita kara desu",
+   "meaning": "日文變好了，因為每天都在練習。上手 是な形容詞，所以接 に",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-naru.html",
+     "title": "〜くなる／〜になる"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "明日、予定がありますか",
+   "ja": "<ruby>明日<rt>あした</rt></ruby>、<ruby>予定<rt>よてい</rt></ruby>がありますか",
+   "kana": "あした、よていがありますか",
+   "romaji": "ashita, yotei ga arimasu ka",
+   "meaning": "明天有安排嗎？句型見 8/14 〜があります",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "いいえ、明日は予定がありません",
+   "ja": "いいえ、<ruby>明日<rt>あした</rt></ruby>は<ruby>予定<rt>よてい</rt></ruby>がありません",
+   "kana": "いいえ、あしたはよていがありません",
+   "romaji": "iie, ashita wa yotei ga arimasen",
+   "meaning": "沒有，明天沒有安排。否定的說法見 8/15 〜がありません；這裡的 は 是在把明天單獨拿出來講",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "じゃあ、一緒にご飯を食べませんか",
+   "ja": "じゃあ、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>ご飯<rt>ごはん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べませんか",
+   "kana": "じゃあ、いっしょにごはんをたべませんか",
+   "romaji": "jaa, issho ni gohan o tabemasen ka",
+   "meaning": "那要不要一起吃個飯？邀約用否定的 〜ませんか，語氣比較客氣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "いいですね。和食と洋食、どちらがいいですか",
+   "ja": "いいですね。<ruby>和食<rt>わしょく</rt></ruby>と<ruby>洋食<rt>ようしょく</rt></ruby>、どちらがいいですか",
+   "kana": "いいですね。わしょくとようしょく、どちらがいいですか",
+   "romaji": "ii desu ne. washoku to youshoku, dochira ga ii desu ka",
+   "meaning": "好啊。日式跟西式，你想吃哪一種？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "和食が食べたいです。昨日、洋食をたくさん食べましたから",
+   "ja": "<ruby>和食<rt>わしょく</rt></ruby>が<ruby>食<rt>た</rt></ruby>べたいです。<ruby>昨日<rt>きのう</rt></ruby>、<ruby>洋食<rt>ようしょく</rt></ruby>をたくさん<ruby>食<rt>た</rt></ruby>べましたから",
+   "kana": "わしょくがたべたいです。きのう、ようしょくをたくさんたべましたから",
+   "romaji": "washoku ga tabetai desu. kinou, youshoku o takusan tabemashita kara",
+   "meaning": "想吃日式的，因為昨天吃了很多西式的。句尾的 から 是在補說原因",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "予定",
+   "ja": "<ruby>予定<rt>よてい</rt></ruby>",
+   "kana": "よてい",
+   "romaji": "yotei",
+   "meaning": "預定、安排、行程。「予」是事先、「定」是定下來，合起來就是事先定好的安排",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "たくさん",
+   "ja": "たくさん（<ruby>沢山<rt>たくさん</rt></ruby>）",
+   "kana": "たくさん（たくさん）",
+   "romaji": "takusan",
+   "meaning": "很多。一般寫平假名，漢字寫法比較少見",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "和食",
+   "ja": "<ruby>和食<rt>わしょく</rt></ruby>",
+   "kana": "わしょく",
+   "romaji": "washoku",
+   "meaning": "日式料理。和＝日本的，同一個字也在 和室（榻榻米房間）、和服 裡",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "洋食",
+   "ja": "<ruby>洋食<rt>ようしょく</rt></ruby>",
+   "kana": "ようしょく",
+   "romaji": "youshoku",
+   "meaning": "日式西餐。洋＝西洋的，咖哩飯、蛋包飯這一類",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "今日は予定がありません",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>予定<rt>よてい</rt></ruby>がありません",
+   "kana": "きょうはよていがありません",
+   "romaji": "kyou wa yotei ga arimasen",
+   "meaning": "今天沒有安排",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "週末は予定がたくさんあります",
+   "ja": "<ruby>週末<rt>しゅうまつ</rt></ruby>は<ruby>予定<rt>よてい</rt></ruby>がたくさんあります",
+   "kana": "しゅうまつはよていがたくさんあります",
+   "romaji": "shuumatsu wa yotei ga takusan arimasu",
+   "meaning": "週末的行程滿檔",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "和食をたくさん食べました",
+   "ja": "<ruby>和食<rt>わしょく</rt></ruby>をたくさん<ruby>食<rt>た</rt></ruby>べました",
+   "kana": "わしょくをたくさんたべました",
+   "romaji": "washoku o takusan tabemashita",
+   "meaning": "吃了很多日式料理",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-24",
+     "href": "lessons/2026-08-24-yotei-washoku.html",
+     "title": "明日、予定がありますか"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
   {
    "text": "さきおととい",
    "ja": "さきおととい（<ruby>一昨昨日<rt>さきおととい</rt></ruby>）",
@@ -588,6 +1200,11 @@
      "date": "2026-08-21",
      "href": "lessons/2026-08-21-bouldering-kaiwa.html",
      "title": "ボルダリングの話"
+    },
+    {
+     "date": "2026-08-25",
+     "href": "lessons/2026-08-25-masen-tango.html",
+     "title": "彼女は写真を撮りません"
     }
    ],
    "tags": [

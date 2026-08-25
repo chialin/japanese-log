@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ません — 兩個新的例句與生字</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:rgba(255,255,255,.75);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">ません</span>の文と単語</h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 08 / 25</div>
+  <p class="page-subtitle">兩個新的 ません 例句，一個用 を、一個用 に — 加上老師開場那句「昨日の続きをします」與剩下的生字</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    ません 的句型在 <a href="2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">8/11 マス形入門</a>已經學過，本篇補兩個新的例句進去，
+    而且這兩句剛好可以用來對照助詞：<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>ります 用
+    <span class="j-mark">を</span>，<ruby>親<rt>おや</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います 用
+    <span class="j-mark">に</span>，差別在動作是落在東西上，還是朝向某個人。
+    接著解釋老師開場最常說的那句「<ruby>昨日<rt>きのう</rt></ruby>の<ruby>続<rt>つづ</rt></ruby>きをします」，
+    最後把剩下的生字收成一組。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、兩個新的 ません 例句，助詞卻不一樣</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這兩句的骨架一模一樣：<strong>誰は ○○＋助詞 動詞ません</strong>，
+    講的都是「（習慣上）不做這件事」。真正的差別在中間那個助詞，
+    而助詞是跟著動詞走的，不是跟著意思猜的。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="彼女は写真を撮りません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>写真<rt>しゃしん</rt></ruby><span class="j-mark">を</span><ruby>撮<rt>と</rt></ruby>りません</div>
+        <div class="word-romaji">kanojo wa shashin o torimasen</div>
+        <div class="word-meaning">她不拍照。照片是動作直接作用的東西，所以用 <span class="j-mark">を</span></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女は親に会いません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>親<rt>おや</rt></ruby><span class="j-mark">に</span><ruby>会<rt>あ</rt></ruby>いません</div>
+        <div class="word-romaji">kanojo wa oya ni aimasen</div>
+        <div class="word-meaning">她不跟父母見面。見面的對象是人，朝著對方去，所以用 <span class="j-mark">に</span></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>を — 動作落在東西上</h4>
+      <div class="vs-sub">拍、吃、看、買這一類</div>
+      <ul>
+        <li><ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>ります</li>
+        <li><ruby>ご飯<rt>ごはん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます</li>
+        <li><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>に — 動作朝向某個人</h4>
+      <div class="vs-sub">見面、打電話、問人這一類</div>
+      <ul>
+        <li><ruby>親<rt>おや</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います</li>
+        <li><ruby>友達<rt>ともだち</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>します</li>
+        <li><ruby>先生<rt>せんせい</rt></ruby>に<ruby>聞<rt>き</rt></ruby>きます</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>会います 的對象只能用 に，不能用 を</strong><br>
+    ✗ <ruby>親<rt>おや</rt></ruby>を<ruby>会<rt>あ</rt></ruby>います　○ <ruby>親<rt>おや</rt></ruby><span class="j-mark">に</span><ruby>会<rt>あ</rt></ruby>います<br>
+    <span style="color:var(--ink-mute);">中文說「見父母」很像是把父母當成受詞，但日文把見面看成「往對方那裡去」，
+    所以走 に 這條路。助詞的分工見
+    <a href="2026-08-11-joshi-o.html" style="color:var(--accent);">8/11 助詞を</a> 與
+    <a href="2026-08-04-mokutekichi-ni.html" style="color:var(--accent);">8/4 目的地に</a>。</span>
+  </div>
+
+  <div class="note">
+    📝 <strong>拍照的「撮」跟拿東西的「取」讀音一樣</strong><br>
+    兩個都唸 とります，但字不同：拍照一定寫 <strong>撮ります</strong>，
+    拿、取則寫 <ruby>取<rt>と</rt></ruby>ります。
+    打字時要看清楚選字，讀音幫不了忙。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、「昨日の続きをします」是這個意思</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這句是老師上課開場最常說的一句，意思是<strong>接著昨天的進度繼續做</strong>。
+    句子可以拆成三塊來看，拆開之後就不必整句死背。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 一句話拆成三塊</div>
+
+    <div class="word-item" data-text="昨日の続きをします">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>の<ruby>続<rt>つづ</rt></ruby>きをします</div>
+        <div class="word-romaji">kinou no tsuzuki o shimasu</div>
+        <div class="word-meaning">接著昨天的進度做</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <tr><th>拆開</th><th>讀法</th><th>在句子裡做什麼</th></tr>
+    <tr><td class="col-ja">昨日の</td><td class="col-ja">きのうの</td><td><span class="j-mark">の</span> 把後面的「續」綁在昨天身上——昨天的那一段</td></tr>
+    <tr><td class="col-ja">続き</td><td class="col-ja">つづき</td><td>接下來的部分。從動詞 <ruby>続<rt>つづ</rt></ruby>く（繼續）變成的名詞</td></tr>
+    <tr class="key"><td class="col-ja">をします</td><td class="col-ja">をします</td><td>把它當成一件事來做，<span class="j-mark">を</span> 標的就是要做的那件事</td></tr>
+  </table>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <ruby>続<rt>つづ</rt></ruby>き 這個字在生活裡到處都是——漫畫或影集的「續集」、
+    「<ruby>続<rt>つづ</rt></ruby>きは<ruby>明日<rt>あした</rt></ruby>」（後續明天再說），
+    講的都是同一件事：<strong>還沒完、接下來的那一段</strong>。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 換個說法再練一次</div>
+
+    <div class="word-item" data-text="続きは明日にしましょう">
+      <div class="word-content">
+        <div class="word-ja"><ruby>続<rt>つづ</rt></ruby>きは<ruby>明日<rt>あした</rt></ruby>にしましょう</div>
+        <div class="word-romaji">tsuzuki wa ashita ni shimashou</div>
+        <div class="word-meaning">後續明天再說吧</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ちょっと休憩しましょう">
+      <div class="word-content">
+        <div class="word-ja">ちょっと<ruby>休憩<rt>きゅうけい</rt></ruby>しましょう</div>
+        <div class="word-romaji">chotto kyuukei shimashou</div>
+        <div class="word-meaning">我們稍微休息一下吧。同樣是老師會直接說的一句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 休憩的「休」跟台語一樣收 -u</strong><br>
+    <strong>休</strong>　台語 hiu → <ruby>休<rt>きゅう</rt></ruby>，同一個字也在
+    <ruby>休日<rt>きゅうじつ</rt></ruby>（假日）、<ruby>連休<rt>れんきゅう</rt></ruby>（連假）裡<br>
+    <strong>憩</strong>　台語 khe → <ruby>憩<rt>けい</rt></ruby><br>
+    看到「休」開頭的漢字詞，讀音幾乎都是 きゅう。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、剩下的生字收成一組</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這幾個字彼此沒有關係，但有兩組值得擺在一起看：
+    <ruby>冷<rt>つめ</rt></ruby>たい 跟它相對的「溫的」是一整組；
+    <ruby>恥<rt>は</rt></ruby>ずかしい 跟 <ruby>難<rt>むずか</rt></ruby>しい 長得很像，一起記才不會唸混。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 冷たい 與相對的「溫的」</div>
+
+    <div class="word-item" data-text="冷たい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>冷<rt>つめ</rt></ruby>たい</div>
+        <div class="word-romaji">tsumetai</div>
+        <div class="word-meaning">冰的、涼的。摸到、喝到才知道的冰，也能形容人的態度冷淡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="温かい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>温<rt>あたた</rt></ruby>かい</div>
+        <div class="word-romaji">atatakai</div>
+        <div class="word-meaning">溫熱的。<strong>冷たい 的相反</strong>，講食物、飲料、水溫這種摸得到的溫度</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ぬるい">
+      <div class="word-content">
+        <div class="word-ja">ぬるい（<ruby>温<rt>ぬる</rt></ruby>い）</div>
+        <div class="word-romaji">nurui</div>
+        <div class="word-meaning">微溫的、不夠熱。同一個漢字換個讀音，語氣偏負面——該熱的東西涼掉了</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>溫度的形容詞分成兩套：摸得到的 vs 整個環境的</strong><br>
+    摸得到的（飲料、食物、水）→ <ruby>冷<rt>つめ</rt></ruby>たい ／ <ruby>温<rt>あたた</rt></ruby>かい<br>
+    整個人待在裡面的（天氣、房間）→ <ruby>寒<rt>さむ</rt></ruby>い ／ <ruby>暖<rt>あたた</rt></ruby>かい<br>
+    <span style="color:var(--ink-mute);">✗ 今日は冷たいです　○ <ruby>今日<rt>きょう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>いです<br>
+    あたたかい 兩邊都有，只是漢字不同：食物用「温」、天氣用「暖」，讀音一樣。</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 恥ずかしい 與 難しい — 長得很像的一組</div>
+
+    <div class="word-item" data-text="恥ずかしい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>恥<rt>は</rt></ruby>ずかしい</div>
+        <div class="word-romaji">hazukashii</div>
+        <div class="word-meaning">害羞、不好意思、丟臉。講的是自己的感受</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="難しい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>難<rt>むずか</rt></ruby>しい</div>
+        <div class="word-romaji">muzukashii</div>
+        <div class="word-meaning">困難。反義是 <ruby>易<rt>やさ</rt></ruby>しい（簡單）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>這兩個字只差在開頭</strong><br>
+    <b>は</b>ずかしい ／ <b>むず</b>かしい — 後面的「かしい」完全一樣，
+    所以聽的時候要抓<strong>第一拍</strong>：は 開頭是害羞，む 開頭是困難。<br>
+    <span style="color:var(--ink-mute);">兩個都是い形容詞，接
+    <a href="2026-08-25-naru.html" style="color:var(--accent);">なる</a> 時去 い 加 く：
+    恥ずかしくなりました／難しくなりました。</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 其他三個</div>
+
+    <div class="word-item" data-text="完璧">
+      <div class="word-content">
+        <div class="word-ja"><ruby>完璧<rt>かんぺき</rt></ruby></div>
+        <div class="word-romaji">kanpeki</div>
+        <div class="word-meaning">完美、無可挑剔。<strong>な形容詞</strong>，所以接 なる 時用 に：完璧になります</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="休憩">
+      <div class="word-content">
+        <div class="word-ja"><ruby>休憩<rt>きゅうけい</rt></ruby></div>
+        <div class="word-romaji">kyuukei</div>
+        <div class="word-meaning">休息（一段時間）。休憩します＝來休息一下</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ルート">
+      <div class="word-content">
+        <div class="word-ja">ルート</div>
+        <div class="word-romaji">ruuto ← route</div>
+        <div class="word-meaning">路線、路徑。抱石的一條路線也叫ルート，見 <a href="2026-08-21-bouldering-kaiwa.html" style="color:var(--accent);">8/21 ボルダリングの話</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 完璧的兩個音都能用台語推</strong><br>
+    <strong>完</strong>　台語 uan（-n 收尾）→ <ruby>完<rt>かん</rt></ruby>，鼻音尾變成 <span class="compare">ん</span><br>
+    <strong>璧</strong>　台語 phik（入聲 -k 收尾）→ <ruby>璧<rt>へき</rt></ruby>，入聲尾變成 <span class="compare">き</span>，
+    前面接 ん 之後變成半濁音 <span class="compare">ぺ</span>（かん＋へき → かん<strong>ぺ</strong>き）<br>
+    「完璧」在中文也是同一個詞（完璧歸趙），意思一模一樣，只要記讀音就好。
+  </div>
+
+  <div class="note">
+    📝 <strong>ルート 的長音不能省</strong><br>
+    英文 route 只有一個音節，日文卻要拉成<strong>三拍</strong>：ル・ー・ト。
+    另外還有一個很像的 <strong>ルーツ</strong>（roots，根源），差在最後一個假名。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>日文</th><th>讀法</th><th>意思</th><th>怎麼用</th></tr>
+    <tr><td class="col-ja">撮ります</td><td class="col-ja">とります</td><td>拍（照）</td><td>写真<b>を</b>撮ります／撮りません</td></tr>
+    <tr><td class="col-ja">会います</td><td class="col-ja">あいます</td><td>見面</td><td>親<b>に</b>会います — 對象一律用 に</td></tr>
+    <tr><td class="col-ja">続き</td><td class="col-ja">つづき</td><td>接下來的部分</td><td>昨日の続きをします</td></tr>
+    <tr><td class="col-ja">冷たい</td><td class="col-ja">つめたい</td><td>冰的、涼的</td><td>摸得到的冰；天氣的冷用 寒い</td></tr>
+    <tr><td class="col-ja">温かい</td><td class="col-ja">あたたかい</td><td>溫熱的</td><td>冷たい 的相反；天氣的暖寫「暖かい」</td></tr>
+    <tr><td class="col-ja">ぬるい</td><td class="col-ja">ぬるい</td><td>微溫、不夠熱</td><td>該熱的東西涼掉了，語氣偏負面</td></tr>
+    <tr><td class="col-ja">恥ずかしい</td><td class="col-ja">はずかしい</td><td>害羞、丟臉</td><td>い形容詞，第一拍是 は</td></tr>
+    <tr><td class="col-ja">難しい</td><td class="col-ja">むずかしい</td><td>困難</td><td>い形容詞，第一拍是 む</td></tr>
+    <tr><td class="col-ja">完璧</td><td class="col-ja">かんぺき</td><td>完美</td><td>な形容詞：完璧な／完璧になる</td></tr>
+    <tr><td class="col-ja">休憩</td><td class="col-ja">きゅうけい</td><td>休息</td><td>休憩します／休憩しましょう</td></tr>
+    <tr class="key"><td class="col-ja">ルート</td><td class="col-ja">ルート</td><td>路線</td><td>外來語 route，三拍，別跟ルーツ搞混</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「她不拍照。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>りません。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kanojo wa shashin o torimasen. 照片是動作作用的東西，用 を。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：「親を会いません」錯在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      助詞錯了，要用 <span class="j-mark">に</span>：<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>親<rt>おや</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いません。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">会います 的對象一律用 に，友達に会います 也一樣。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：老師說「<ruby>昨日<rt>きのう</rt></ruby>の<ruby>続<rt>つづ</rt></ruby>きをします」是什麼意思？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      接著昨天的進度繼續做。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">昨日の（昨天的）＋ 続き（後續那一段）＋ をします（把它拿來做）。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：「今天很冷」可以說「今日は冷たいです」嗎？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      不行，要說 <ruby>今日<rt>きょう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>いです。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">冷たい 是摸得到的冰（冷たい水），相反是 温かい；天氣的冷熱用 寒い／暖かい。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：はずかしい 跟 むずかしい 差在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      只差開頭：<b>は</b>ずかしい＝害羞、<b>むず</b>かしい＝困難，後面的「かしい」一樣。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">兩個都是い形容詞，接 なる 時說 恥ずかしくなりました／難しくなりました。</span>
+    </p>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-25-naru.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">形容詞加上 なる，就是在講變化 <span class="next-arrow">→</span></span>
+    <span class="next-sub">〜くなる／〜になる 兩種變法，外加講原因的 なぜなら</span>
+  </a>
+
+  <a href="2026-08-24-yotei-washoku.html" class="next-link">
+    <span class="next-kicker">— Prev —</span>
+    <span class="next-title">明日、予定がありますか <span class="next-arrow">→</span></span>
+    <span class="next-sub">前一天的單字 — 約吃飯的一段對話，予定・たくさん・和食・洋食</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

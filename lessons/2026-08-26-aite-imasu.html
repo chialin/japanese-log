@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>空いていますか — 問人有沒有空，句尾要不要加 です</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:rgba(255,255,255,.75);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 對話行 */
+.talk{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:6px 18px 10px;margin:16px 0;}
+.talk .word-item{border-bottom:1px dashed var(--line);}
+.talk .word-item:last-child{border-bottom:none;}
+.who{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12.5px;letter-spacing:.1em;color:var(--ink-mute);border:1px solid var(--line);border-radius:20px;padding:1px 9px;margin-bottom:5px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* 句尾拆解圖 */
+.split{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.4;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:16px 0;}
+.split .tail{color:var(--accent);font-weight:600;border-bottom:2px solid var(--accent-soft);}
+.split .cmt{font-family:'Noto Serif TC',serif;font-size:13px;color:var(--ink-mute);margin-left:10px;}
+
+/* 高低アクセント（.acc / .acc-k / .ar / .acc-note）在 shared.css */
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">空いていますか</span> — 問人有沒有空</h1>
+  <div class="page-meta">課程 · Lesson · 2026 / 08 / 26</div>
+  <p class="page-subtitle">同樣是問句，句尾有的加 です、有的不能加 — 差別在最後那個詞是什麼詞性</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    想約人見面，開口前通常會先問對方那段時間在做什麼、有沒有空。
+    這種場合會連著問三句：平日要上班嗎、上午空著嗎、下午忙不忙。
+    三句話長得很像，句尾卻不一樣——一句用 <span class="j-mark">です</span>、
+    一句用 <span class="j-mark">います</span>、一句又回到 です。
+    本篇先把這三句拆開看，再說清楚 <ruby>空<rt>あ</rt></ruby>いています 到底是什麼意思，
+    以及句尾什麼時候該加 です、什麼時候加了就錯。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以一段約時間的對話為主軸，把這三句排出來</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先整段唸一次。三個問句照時間順序走：先確認平日的狀況，再往下切成上午和下午。
+    這一組問完，對方的一天大概就清楚了。
+  </p>
+
+  <div class="talk">
+    <div class="word-item" data-text="平日は仕事ですか">
+      <div class="word-content">
+        <span class="who">A</span>
+        <div class="word-ja"><ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>ですか</div>
+        <div class="word-romaji">heijitsu wa shigoto desu ka</div>
+        <div class="word-meaning">平日要上班嗎？ — 句尾是名詞 <ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>，所以配 です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="午前は空いていますか">
+      <div class="word-content">
+        <span class="who">A</span>
+        <div class="word-ja"><ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いていますか</div>
+        <div class="word-romaji">gozen wa aite imasu ka</div>
+        <div class="word-meaning">上午有空嗎？ — 句尾是動詞的 ています，本身已經有禮貌，不加 です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="午後は忙しいですか">
+      <div class="word-content">
+        <span class="who">A</span>
+        <div class="word-ja"><ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しいですか</div>
+        <div class="word-romaji">gogo wa isogashii desu ka</div>
+        <div class="word-meaning">下午忙嗎？ — 句尾是い形容詞 <ruby>忙<rt>いそが</rt></ruby>しい，配 です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    三句的開頭都是<strong>時間 ＋ <span class="j-mark">は</span></strong>。
+    這個 は 是把那段時間單獨挑出來當話題，等於中文的「平日的話⋯⋯」「上午呢？」。
+    助詞 は 的作用見 <a href="2026-05-10-joshi-wa.html" style="color:var(--accent);">助詞は那一篇</a>。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、句尾要不要加 です，看的是最後那個詞的詞性</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    です 和 ます 是同一件事的兩種樣子——都是「講話有禮貌」的記號，
+    這件事在 <a href="2026-07-22-teinei.html" style="color:var(--accent);">丁寧不是叮嚀</a> 講過。
+    既然是同一個記號，一個句子只需要一個，不會兩個疊在一起。
+    所以真正要判斷的只有一件事：<strong>句尾那個詞自己有沒有辦法變禮貌</strong>。
+    動詞可以（變成 ます），名詞和形容詞不行，就得借 です 來收尾。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th style="width:22%;">句尾的詞性</th><th style="width:14%;">要不要 です</th><th>例句</th></tr>
+    <tr class="key"><td>名詞</td><td><b>要</b></td><td class="col-ja"><ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby><b>です</b>か<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">heijitsu wa shigoto desu ka</span></td></tr>
+    <tr class="key"><td>い形容詞</td><td><b>要</b>（です 不變化）</td><td class="col-ja"><ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しい<b>です</b>か<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">gogo wa isogashii desu ka</span></td></tr>
+    <tr class="key"><td>な形容詞</td><td><b>要</b></td><td class="col-ja"><ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>暇<rt>ひま</rt></ruby><b>です</b>か<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">gozen wa hima desu ka</span></td></tr>
+    <tr class="key"><td>動詞（ます／ています）</td><td><b>不要</b></td><td class="col-ja"><ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いてい<b>ます</b>か<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">gozen wa aite imasu ka</span></td></tr>
+  </table>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    把三句的句尾切下來並排，這條規則就很清楚了：
+  </p>
+
+  <div class="split">
+    <ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>　<span class="tail">ですか</span><span class="cmt">名詞借 です 收尾</span><br>
+    <ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いてい<span class="tail">ますか</span><span class="cmt">動詞自己變 ます</span><br>
+    <ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しい　<span class="tail">ですか</span><span class="cmt">い形容詞借 です 收尾</span>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>最容易犯的錯：在動詞後面又加一次 です</strong><br>
+    <span style="font-family:'Klee One','Shippori Mincho',serif;">✗ <ruby>空<rt>あ</rt></ruby>いていますですか</span> ／
+    <span style="font-family:'Klee One','Shippori Mincho',serif;">✓ <ruby>空<rt>あ</rt></ruby>いていますか</span><br>
+    ます 已經是禮貌形了，再掛一個 です 等於同一句話講了兩次「我很客氣」。
+    い形容詞則相反，<span style="font-family:'Klee One','Shippori Mincho',serif;">忙しいか</span> 直接接 か 會變成很粗的常體問法，
+    禮貌的講法一定要補上 です。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、空いています 講的是「空著的狀態」</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這個字的原形是 <ruby>空<rt>あ</rt></ruby>く（aku），意思是「空出來、變空」——它描述的是一瞬間的變化。
+    但問人有沒有空的時候，我們關心的不是「什麼時候空出來的」，而是「現在是不是空著」。
+    要把一個動作講成「做完之後那個狀態還留著」，日文的做法就是
+    <strong>て形 ＋ います</strong>，這一套在
+    <a href="2026-06-24-sunde-imasu.html" style="color:var(--accent);">〜にすんでいます</a> 已經用過一次了。
+  </p>
+
+  <div class="split">
+    <ruby>空<rt>あ</rt></ruby>く<span class="cmt">原形 · 空出來</span><br>
+    → <ruby>空<rt>あ</rt></ruby>いて<span class="cmt">て形</span><br>
+    → <ruby>空<rt>あ</rt></ruby>いて<span class="tail">います</span><span class="cmt">空著的狀態一直持續到現在</span>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    ています 有兩種讀法，判斷的關鍵是那個動詞本身在講「持續的動作」還是「一瞬間的變化」。
+    兩種意思的完整說明見 <a href="2026-08-12-jisei-shinkoukei.html" style="color:var(--accent);">過去・現在・現在進行</a>。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>① 動作正在進行</h4>
+      <div class="vs-sub">動詞本身是持續一段時間的動作</div>
+      <ul>
+        <li><ruby>食<rt>た</rt></ruby>べています ＝ 正在吃</li>
+        <li><ruby>待<rt>ま</rt></ruby>っています ＝ 正在等</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>② 變化之後的狀態還在</h4>
+      <div class="vs-sub">動詞本身是一瞬間就結束的變化</div>
+      <ul>
+        <li><ruby>空<rt>あ</rt></ruby>いています ＝ 空著</li>
+        <li><ruby>住<rt>す</rt></ruby>んでいます ＝ 住在（某地）</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <ruby>空<rt>あ</rt></ruby>く 屬於第二種。所以
+    「<ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いていますか」問的是
+    「上午那格時間現在是空著的嗎」，講白了就是<strong>你有空嗎</strong>。
+    同一個講法換個主語就是別的意思，但邏輯一樣：
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 空いています 的其他用法</div>
+
+    <div class="word-item" data-text="席が空いています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>席<rt>せき</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いています</div>
+        <div class="word-romaji">seki ga aite imasu</div>
+        <div class="word-meaning">有空位 — 位子空出來了，而且現在還空著</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="手が空いています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>手<rt>て</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いています</div>
+        <div class="word-romaji">te ga aite imasu</div>
+        <div class="word-meaning">手邊有空 — 中文的「我手上沒事」，日文說的是「手空著」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいえ、空いていません">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>空<rt>あ</rt></ruby>いていません</div>
+        <div class="word-romaji">iie, aite imasen</div>
+        <div class="word-meaning">不，沒有空 — 否定就是把 います 換成 いません，接法見 <a href="2026-08-12-hitei.html" style="color:var(--accent);">否定的說法</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 空 的兩個身分</strong><br>
+    <span class="compare">空</span> 當動詞唸 <strong>あく</strong>（訓讀，跟漢字音無關），
+    但它的音讀是 <strong>くう</strong>，就藏在已經認得的<ruby>空<rt>くう</rt>港<rt>こう</rt></ruby>（機場）裡。
+    記成「空著（あく）＝ 空港（くうこう）那個空」，一個字的兩種唸法一起帶走。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、平日・午前・午後 是一組成套的時間詞</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這三句裡的時間詞都是漢語詞，讀音全部走音讀，對台語的人來說反而好記。
+    它們也都可以直接放句首當話題，後面接 は 就好，不用加助詞 に。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 本篇的時間詞與生字</div>
+
+    <div class="word-item" data-text="平日">
+      <div class="word-content">
+        <div class="word-ja"><ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby></div>
+        <div class="word-romaji">heijitsu</div>
+        <div><span class="acc"><span class="acc-k"><span class="ar">→</span>へーじつ<span class="ar">→</span></span></span><span class="acc-note">平板型 · 唸 へーじつ</span></div>
+        <div class="word-meaning">平日、非假日 — 相對的是<ruby>休<rt>きゅう</rt>日<rt>じつ</rt></ruby>（kyuujitsu，假日）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="午前">
+      <div class="word-content">
+        <div class="word-ja"><ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby></div>
+        <div class="word-romaji">gozen</div>
+        <div><span class="acc"><span class="acc-k">ご<span class="ar">↘</span>ぜん</span></span><span class="acc-note">頭高型</span></div>
+        <div class="word-meaning">上午 — 正午之「前」；接時刻的用法見 <a href="../jikan.html" style="color:var(--accent);">時間速記表</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="午後">
+      <div class="word-content">
+        <div class="word-ja"><ruby>午<rt>ご</rt>後<rt>ご</rt></ruby></div>
+        <div class="word-romaji">gogo</div>
+        <div><span class="acc"><span class="acc-k">ご<span class="ar">↘</span>ご</span></span><span class="acc-note">頭高型</span></div>
+        <div class="word-meaning">下午 — 正午之「後」；<ruby>午<rt>ご</rt>後<rt>ご</rt></ruby><ruby>3<rt>さん</rt>時<rt>じ</rt></ruby>＝下午三點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="仕事">
+      <div class="word-content">
+        <div class="word-ja"><ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby></div>
+        <div class="word-romaji">shigoto</div>
+        <div><span class="acc"><span class="acc-k"><span class="ar">→</span>しごと<span class="ar">→</span></span></span><span class="acc-note">平板型</span></div>
+        <div class="word-meaning">工作 — 是名詞，所以後面配 です；「去工作」要說 <ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>をします</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="忙しい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>忙<rt>いそが</rt></ruby>しい</div>
+        <div class="word-romaji">isogashii</div>
+        <div><span class="acc"><span class="acc-k"><span class="ar">↗</span>いそがし<span class="ar">↘</span>い</span></span><span class="acc-note">中高型</span></div>
+        <div class="word-meaning">忙的 — い形容詞，要講「變忙了」就用 <ruby>忙<rt>いそが</rt></ruby>しくなります，見 <a href="2026-08-25-naru.html" style="color:var(--accent);">〜くなる／〜になる</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="暇">
+      <div class="word-content">
+        <div class="word-ja"><ruby>暇<rt>ひま</rt></ruby></div>
+        <div class="word-romaji">hima</div>
+        <div class="word-meaning">有空、閒 — な形容詞，正好是 <ruby>忙<rt>いそが</rt></ruby>しい 的反義；<ruby>暇<rt>ひま</rt></ruby>ですか 也可以拿來問人有沒有空，但語氣比 <ruby>空<rt>あ</rt></ruby>いていますか 直接</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、日 這個字有兩個音讀，看詞在講什麼就知道唸哪個</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>唸 じつ，可是<ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby>唸 にち——
+    同一個「日」為什麼會有兩個音？因為這兩個音是不同時代從中國傳進日本的：
+    にち 是比較早的<strong>呉音</strong>，じつ 是後來的<strong>漢音</strong>
+    （<a href="https://ja.wiktionary.org/wiki/%E6%97%A5" target="_blank" rel="noopener" style="color:var(--accent);">ja.wiktionary 日</a>）。
+    與其一個一個死背，不如記它們各自出現在什麼詞裡——分工其實很整齊。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>じつ（漢音）</h4>
+      <div class="vs-sub">用在講「哪一種日子」的詞</div>
+      <ul>
+        <li><ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby> heijitsu — 非假日</li>
+        <li><ruby>休<rt>きゅう</rt>日<rt>じつ</rt></ruby> kyuujitsu — 假日</li>
+        <li><ruby>本<rt>ほん</rt>日<rt>じつ</rt></ruby> honjitsu — 本日</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>にち（呉音）</h4>
+      <div class="vs-sub">用在數日子、排日子的詞</div>
+      <ul>
+        <li><ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> mainichi — 每天</li>
+        <li><ruby>日<rt>にち</rt>曜<rt>よう</rt>日<rt>び</rt></ruby> nichiyoubi — 星期日</li>
+        <li><ruby>何<rt>なん</rt>日<rt>にち</rt></ruby> nannichi — 幾號、幾天</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    左邊三個是同一組，<strong>一次背三個比分開背省力</strong>；
+    右邊那組本來就常用，早就在唸了。剩下的訓讀 ひ／か（<ruby>日<rt>ひ</rt></ruby>、
+    <ruby>三<rt>みっ</rt>日<rt>か</rt></ruby>）走的是另一條路，跟音讀無關。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 兩組各唸一次聽差別</div>
+
+    <div class="word-item" data-text="休日">
+      <div class="word-content">
+        <div class="word-ja"><ruby>休<rt>きゅう</rt>日<rt>じつ</rt></ruby></div>
+        <div class="word-romaji">kyuujitsu</div>
+        <div class="word-meaning">假日 — 跟<ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>剛好成對</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="本日">
+      <div class="word-content">
+        <div class="word-ja"><ruby>本<rt>ほん</rt>日<rt>じつ</rt></ruby></div>
+        <div class="word-romaji">honjitsu</div>
+        <div class="word-meaning">本日 — 比<ruby>今日<rt>きょう</rt></ruby>（熟字訓）正式，店家公告與廣播常用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="毎日">
+      <div class="word-content">
+        <div class="word-ja"><ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby></div>
+        <div class="word-romaji">mainichi</div>
+        <div class="word-meaning">每天 — 這邊的日就回到 にち</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、放進一段完整的對話裡是這樣用的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    問句學會之後，回答其實就是把問句的 か 拿掉。
+    下面這段把三句串起來，加上答話，就是一次完整的約時間。
+  </p>
+
+  <div class="talk">
+    <div class="word-item" data-text="平日は仕事ですか">
+      <div class="word-content">
+        <span class="who">A</span>
+        <div class="word-ja"><ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>ですか</div>
+        <div class="word-romaji">heijitsu wa shigoto desu ka</div>
+        <div class="word-meaning">平日要上班嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="はい、平日は仕事です">
+      <div class="word-content">
+        <span class="who">B</span>
+        <div class="word-ja">はい、<ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>です</div>
+        <div class="word-romaji">hai, heijitsu wa shigoto desu</div>
+        <div class="word-meaning">是的，平日要上班。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="午前は空いていますか">
+      <div class="word-content">
+        <span class="who">A</span>
+        <div class="word-ja"><ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いていますか</div>
+        <div class="word-romaji">gozen wa aite imasu ka</div>
+        <div class="word-meaning">上午有空嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="いいえ、午前は忙しいです">
+      <div class="word-content">
+        <span class="who">B</span>
+        <div class="word-ja">いいえ、<ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しいです</div>
+        <div class="word-romaji">iie, gozen wa isogashii desu</div>
+        <div class="word-meaning">不，上午很忙。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="午後は空いています">
+      <div class="word-content">
+        <span class="who">B</span>
+        <div class="word-ja"><ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いています</div>
+        <div class="word-romaji">gogo wa aite imasu</div>
+        <div class="word-meaning">下午有空。 — 兩句都用 は，是因為在拿上午和下午互相對照</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>接下來可以怎麼接</strong><br>
+    對方說有空之後，下一句通常就是邀約。問「要不要一起⋯⋯」的
+    <span style="font-family:'Klee One','Shippori Mincho',serif;">〜ませんか</span>
+    與問行程的 <ruby>予<rt>よ</rt>定<rt>てい</rt></ruby>がありますか 在
+    <a href="2026-08-24-yotei-washoku.html" style="color:var(--accent);">明日、予定がありますか</a> 那一篇。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th style="width:30%;">要講的事</th><th>日文</th></tr>
+    <tr class="key"><td>平日要上班嗎</td><td class="col-ja"><ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>ですか<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">heijitsu wa shigoto desu ka</span></td></tr>
+    <tr class="key"><td>上午有空嗎</td><td class="col-ja"><ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いていますか<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">gozen wa aite imasu ka</span></td></tr>
+    <tr class="key"><td>下午忙嗎</td><td class="col-ja"><ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しいですか<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">gogo wa isogashii desu ka</span></td></tr>
+    <tr class="key"><td>有空（肯定）</td><td class="col-ja"><ruby>空<rt>あ</rt></ruby>いています<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">aite imasu</span></td></tr>
+    <tr class="key"><td>沒空（否定）</td><td class="col-ja"><ruby>空<rt>あ</rt></ruby>いていません<br><span style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--ink-mute);">aite imasen</span></td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「上午有空嗎？」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いていますか。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">gozen wa aite imasu ka.</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：「午後は忙しいますか」錯在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>忙<rt>いそが</rt></ruby>しい 是<strong>い形容詞</strong>，不是動詞，不能接 ます，要用
+      <ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しい<b>です</b>か。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">ます 只掛在動詞上；名詞與形容詞一律借 です 收尾。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：「空いていますですか」為什麼不行？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      ます 本身就是禮貌形，後面不能再加 です，正確是
+      <ruby>空<rt>あ</rt></ruby>いていますか。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">一個句子只需要一個禮貌記號。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：空いています 是「正在空」還是「空著」？為什麼？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      是<strong>空著</strong>。<ruby>空<rt>あ</rt></ruby>く 講的是一瞬間的變化，
+      て形＋います 就變成「變化完成之後那個狀態還留著」。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">跟 <ruby>住<rt>す</rt></ruby>んでいます 同一類；<ruby>食<rt>た</rt></ruby>べています 才是動作進行中。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：要回答「不，下午沒有空。」該怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      いいえ、<ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いていません。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">iie, gogo wa aite imasen. 把下午單獨拿出來對照，所以用 は。</span>
+    </p>
+  </details>
+
+  <a href="2026-06-24-sunde-imasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜に すんでいます <span class="next-arrow">→</span></span>
+    <span class="next-sub">同樣是て形＋います 的狀態用法，那一篇講的是「住在哪裡」</span>
+  </a>
+
+  <a href="2026-07-22-teinei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">丁寧 不是叮嚀 <span class="next-arrow">→</span></span>
+    <span class="next-sub">です 與 ます 為什麼是同一個禮貌記號，不能疊在一起用</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

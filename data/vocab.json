@@ -1,6 +1,343 @@
 {
- "generated": "2026-08-25",
+ "generated": "2026-08-26",
  "words": [
+  {
+   "text": "平日は仕事ですか",
+   "ja": "<ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>ですか",
+   "kana": "へいじつはしごとですか",
+   "romaji": "heijitsu wa shigoto desu ka",
+   "meaning": "平日要上班嗎？ — 句尾是名詞 仕事，所以配 です",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "午前は空いていますか",
+   "ja": "<ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いていますか",
+   "kana": "ごぜんはあいていますか",
+   "romaji": "gozen wa aite imasu ka",
+   "meaning": "上午有空嗎？ — 句尾是動詞的 ています，本身已經有禮貌，不加 です",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "午後は忙しいですか",
+   "ja": "<ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しいですか",
+   "kana": "ごごはいそがしいですか",
+   "romaji": "gogo wa isogashii desu ka",
+   "meaning": "下午忙嗎？ — 句尾是い形容詞 忙しい，配 です",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "席が空いています",
+   "ja": "<ruby>席<rt>せき</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いています",
+   "kana": "せきがあいています",
+   "romaji": "seki ga aite imasu",
+   "meaning": "有空位 — 位子空出來了，而且現在還空著",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "手が空いています",
+   "ja": "<ruby>手<rt>て</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いています",
+   "kana": "てがあいています",
+   "romaji": "te ga aite imasu",
+   "meaning": "手邊有空 — 中文的「我手上沒事」，日文說的是「手空著」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "いいえ、空いていません",
+   "ja": "いいえ、<ruby>空<rt>あ</rt></ruby>いていません",
+   "kana": "いいえ、あいていません",
+   "romaji": "iie, aite imasen",
+   "meaning": "不，沒有空 — 否定就是把 います 換成 いません，接法見 否定的說法",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "平日",
+   "ja": "<ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>",
+   "kana": "へいじつ",
+   "romaji": "heijitsu",
+   "meaning": "平日、非假日 — 相對的是休日（kyuujitsu，假日）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>へーじつ<span class=\"ar\">→</span></span></span><span class=\"acc-note\">平板型 · 唸 へーじつ</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "午前",
+   "ja": "<ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>",
+   "kana": "ごぜん",
+   "romaji": "gozen",
+   "meaning": "上午 — 正午之「前」；接時刻的用法見 時間速記表",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">ご<span class=\"ar\">↘</span>ぜん</span></span><span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "午後",
+   "ja": "<ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>",
+   "kana": "ごご",
+   "romaji": "gogo",
+   "meaning": "下午 — 正午之「後」；午後3時＝下午三點",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">ご<span class=\"ar\">↘</span>ご</span></span><span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "仕事",
+   "ja": "<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>",
+   "kana": "しごと",
+   "romaji": "shigoto",
+   "meaning": "工作 — 是名詞，所以後面配 です；「去工作」要說 仕事をします",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>しごと<span class=\"ar\">→</span></span></span><span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "忙しい",
+   "ja": "<ruby>忙<rt>いそが</rt></ruby>しい",
+   "kana": "いそがしい",
+   "romaji": "isogashii",
+   "meaning": "忙的 — い形容詞，要講「變忙了」就用 忙しくなります，見 〜くなる／〜になる",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>いそがし<span class=\"ar\">↘</span>い</span></span><span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "暇",
+   "ja": "<ruby>暇<rt>ひま</rt></ruby>",
+   "kana": "ひま",
+   "romaji": "hima",
+   "meaning": "有空、閒 — な形容詞，正好是 忙しい 的反義；暇ですか 也可以拿來問人有沒有空，但語氣比 空いていますか 直接",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "休日",
+   "ja": "<ruby>休<rt>きゅう</rt>日<rt>じつ</rt></ruby>",
+   "kana": "きゅうじつ",
+   "romaji": "kyuujitsu",
+   "meaning": "假日 — 跟平日剛好成對",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "本日",
+   "ja": "<ruby>本<rt>ほん</rt>日<rt>じつ</rt></ruby>",
+   "kana": "ほんじつ",
+   "romaji": "honjitsu",
+   "meaning": "本日 — 比今日（熟字訓）正式，店家公告與廣播常用",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "毎日",
+   "ja": "<ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby>",
+   "kana": "まいにち",
+   "romaji": "mainichi",
+   "meaning": "每天 — 這邊的日就回到 にち",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "はい、平日は仕事です",
+   "ja": "はい、<ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>です",
+   "kana": "はい、へいじつはしごとです",
+   "romaji": "hai, heijitsu wa shigoto desu",
+   "meaning": "是的，平日要上班。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "いいえ、午前は忙しいです",
+   "ja": "いいえ、<ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しいです",
+   "kana": "いいえ、ごぜんはいそがしいです",
+   "romaji": "iie, gozen wa isogashii desu",
+   "meaning": "不，上午很忙。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "午後は空いています",
+   "ja": "<ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いています",
+   "kana": "ごごはあいています",
+   "romaji": "gogo wa aite imasu",
+   "meaning": "下午有空。 — 兩句都用 は，是因為在拿上午和下午互相對照",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-26",
+     "href": "lessons/2026-08-26-aite-imasu.html",
+     "title": "空いていますか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
   {
    "text": "彼女は写真を撮りません",
    "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>りません",
@@ -12,7 +349,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -30,7 +367,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -48,7 +385,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -66,7 +403,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -84,7 +421,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -102,7 +439,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -120,7 +457,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -138,7 +475,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -156,7 +493,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -174,7 +511,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -192,7 +529,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -210,7 +547,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [
@@ -1204,7 +1541,7 @@
     {
      "date": "2026-08-25",
      "href": "lessons/2026-08-25-masen-tango.html",
-     "title": "彼女は写真を撮りません"
+     "title": "ません"
     }
    ],
    "tags": [

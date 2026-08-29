@@ -1,6 +1,282 @@
 {
- "generated": "2026-08-28",
+ "generated": "2026-08-29",
  "words": [
+  {
+   "text": "彼は眼鏡を買いました",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>眼鏡<rt>めがね</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました",
+   "kana": "かれはめがねをかいました",
+   "romaji": "kare wa megane o kaimashita",
+   "meaning": "他買了眼鏡 — 買到的東西是眼鏡，眼鏡後面接 を",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-megane-o-kaimashita.html",
+     "title": "ました"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私はお風呂を洗いました",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>はお<ruby>風呂<rt>ふろ</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>いました",
+   "kana": "わたしはおふろをあらいました",
+   "romaji": "watashi wa ofuro o araimashita",
+   "meaning": "我洗了浴缸／浴室 — 被洗的是浴缸，浴缸後面接 を",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-megane-o-kaimashita.html",
+     "title": "ました"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "眼鏡",
+   "ja": "<ruby>眼鏡<rt>めがね</rt></ruby>",
+   "kana": "めがね",
+   "romaji": "megane",
+   "meaning": "眼鏡 — 兩個漢字配三個假名，是拆不開的熟字訓；日常也常直接寫成片假名 メガネ",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">め<span class=\"ar\">↘</span>がね</span></span><span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-megane-o-kaimashita.html",
+     "title": "ました"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "お風呂",
+   "ja": "お<ruby>風呂<rt>ふろ</rt></ruby>",
+   "kana": "おふろ",
+   "romaji": "ofuro",
+   "meaning": "浴缸、洗澡（這件事）— 指的是泡澡的那個缸與整個洗澡的場所，不是淋浴（シャワー）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">おふ<span class=\"ar\">↘</span>ろ</span></span><span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-megane-o-kaimashita.html",
+     "title": "ました"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "買いました",
+   "ja": "<ruby>買<rt>か</rt></ruby>いました",
+   "kana": "かいました",
+   "romaji": "kaimashita",
+   "meaning": "買了 — 字典形 買う；相反的「賣」是 売る，兩個字合起來就是 売買",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">かいま<span class=\"ar\">↘</span>した</span></span><span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-megane-o-kaimashita.html",
+     "title": "ました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "洗いました",
+   "ja": "<ruby>洗<rt>あら</rt></ruby>いました",
+   "kana": "あらいました",
+   "romaji": "araimashita",
+   "meaning": "洗了 — 用水沖洗；洗衣服是 洗濯します，洗頭洗澡另有說法，這個字專指用水搓洗東西",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">あらいま<span class=\"ar\">↘</span>した</span></span><span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-megane-o-kaimashita.html",
+     "title": "ました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "座敷",
+   "ja": "<ruby>座敷<rt>ざしき</rt></ruby>",
+   "kana": "ざしき",
+   "romaji": "zashiki",
+   "meaning": "和式座位 — 鋪榻榻米的房間，脫鞋上去、坐在地上吃飯；居酒屋跟日式餐廳最常見的那種包廂式座位",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "座椅子",
+   "ja": "<ruby>座椅子<rt>ざいす</rt></ruby>",
+   "kana": "ざいす",
+   "romaji": "zaisu",
+   "meaning": "和式靠背椅 — 只有椅背沒有椅腳，直接放在榻榻米上，讓坐在地上的人有得靠；座敷裡放的就是它",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "椅子席",
+   "ja": "<ruby>椅子<rt>いす</rt></ruby><ruby>席<rt>せき</rt></ruby>",
+   "kana": "いすせき",
+   "romaji": "isu seki",
+   "meaning": "椅子座位 — 就是一般的桌椅；這個詞幾乎都是拿來跟座敷對比才會說出口",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "カウンター席",
+   "ja": "カウンター<ruby>席<rt>せき</rt></ruby>",
+   "kana": "カウンターせき",
+   "romaji": "kauntaa seki",
+   "meaning": "吧台座位 — 面對廚房那一排長桌；壽司店、拉麵店一個人來的時候坐這裡，英文 counter 的外來語",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>カウンター<span class=\"ar\">→</span></span></span><span class=\"acc-note\">カウンター 本身是平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "座席",
+   "ja": "<ruby>座席<rt>ざせき</rt></ruby>",
+   "kana": "ざせき",
+   "romaji": "zaseki",
+   "meaning": "座位（劃位的那種）— 電車、飛機、劇場、電影院裡有編號的位子；餐廳講位子比較少用這個詞",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "席",
+   "ja": "<ruby>席<rt>せき</rt></ruby>",
+   "kana": "せき",
+   "romaji": "seki",
+   "meaning": "座位 — 泛指一個可以坐的位子，是上面所有詞共同的尾巴",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">せ<span class=\"ar\">↘</span>き</span></span><span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "座敷は空いていますか",
+   "ja": "<ruby>座敷<rt>ざしき</rt></ruby>は<ruby>空<rt>あ</rt></ruby>いていますか",
+   "kana": "ざしきはあいていますか",
+   "romaji": "zashiki wa aite imasu ka",
+   "meaning": "和式座位還空著嗎 — 「空いています」的用法見 8/26 那篇",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "カウンター席をお願いします",
+   "ja": "カウンター<ruby>席<rt>せき</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします",
+   "kana": "カウンターせきをおねがいします",
+   "romaji": "kauntaa seki o onegai shimasu",
+   "meaning": "麻煩給我吧台的位子 — 想要什麼就把它放在 を 前面，後面接 お願いします",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "椅子席と座敷、どちらがいいですか",
+   "ja": "<ruby>椅子<rt>いす</rt></ruby><ruby>席<rt>せき</rt></ruby>と<ruby>座敷<rt>ざしき</rt></ruby>、どちらがいいですか",
+   "kana": "いすせきとざしき、どちらがいいですか",
+   "romaji": "isu seki to zashiki, dochira ga ii desu ka",
+   "meaning": "椅子座位跟和式座位，哪一種好呢 — 店員問這句的時候，回答其中一個詞加 でお願いします 就可以",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-seki.html",
+     "title": "席"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
   {
    "text": "私は歯を磨きます",
    "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>きます",

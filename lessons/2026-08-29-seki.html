@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>席 — 店裡的五種座位</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 構詞圖 */
+.frame{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:18px 0;}
+.frame-slot{flex:1 1 120px;border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:6px;padding:12px 14px;text-align:center;}
+.frame-slot .slot-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.1em;color:var(--ink-mute);margin-bottom:6px;}
+.frame-slot .slot-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);}
+.frame-slot.mark{flex:0 0 auto;background:var(--accent-pale);border-color:var(--accent-soft);}
+.frame-slot.mark .slot-ja{color:var(--accent);font-weight:600;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">席</span> — 店裡的五種座位</h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 08 / 29</div>
+  <p class="page-subtitle">座椅子・座席・座敷・椅子席・カウンター席 — 被問「要坐哪一種」時聽得懂的五個詞</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    在日本進餐廳，店員第一句常常不是問人數，而是問要坐哪一種位子 ——
+    是坐在榻榻米上的<ruby>座敷<rt>ざしき</rt></ruby>，還是一般的<ruby>椅子席<rt>いすせき</rt></ruby>，
+    或是一個人吃飯很方便的カウンター<ruby>席<rt>せき</rt></ruby>。
+    本篇把這五個詞排在一起看，順著弄清楚 <span class="compare">席</span> 這個字怎麼跟前面的詞黏成一組，
+    以及 <ruby>座席<rt>ざせき</rt></ruby> 跟 <ruby>席<rt>せき</rt></ruby> 的場合差在哪裡。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以坐的方式為主軸，把五個詞排出來</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    五個詞可以照「坐的時候屁股在哪裡」分成兩堆：
+    <strong>坐在地上</strong>的是 <ruby>座敷<rt>ざしき</rt></ruby> 跟 <ruby>座椅子<rt>ざいす</rt></ruby>，
+    <strong>坐在椅子上</strong>的是 <ruby>椅子席<rt>いすせき</rt></ruby> 跟 カウンター<ruby>席<rt>せき</rt></ruby>，
+    而 <ruby>座席<rt>ざせき</rt></ruby> 是最中性的那個 —— 泛指被劃出來的一個座位。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 坐在地上的那一組</div>
+
+    <div class="word-item" data-text="座敷">
+      <div class="word-content">
+        <div class="word-ja"><ruby>座敷<rt>ざしき</rt></ruby></div>
+        <div class="word-romaji">zashiki</div>
+        <div class="word-meaning">和式座位 — 鋪榻榻米的房間，脫鞋上去、坐在地上吃飯；居酒屋跟日式餐廳最常見的那種包廂式座位</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="座椅子">
+      <div class="word-content">
+        <div class="word-ja"><ruby>座椅子<rt>ざいす</rt></ruby></div>
+        <div class="word-romaji">zaisu</div>
+        <div class="word-meaning">和式靠背椅 — 只有椅背沒有椅腳，直接放在榻榻米上，讓坐在地上的人有得靠；<ruby>座敷<rt>ざしき</rt></ruby>裡放的就是它</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 坐在椅子上的那一組</div>
+
+    <div class="word-item" data-text="椅子席">
+      <div class="word-content">
+        <div class="word-ja"><ruby>椅子<rt>いす</rt></ruby><ruby>席<rt>せき</rt></ruby></div>
+        <div class="word-romaji">isu seki</div>
+        <div class="word-meaning">椅子座位 — 就是一般的桌椅；這個詞幾乎都是拿來跟<ruby>座敷<rt>ざしき</rt></ruby>對比才會說出口</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カウンター席">
+      <div class="word-content">
+        <div class="word-ja">カウンター<ruby>席<rt>せき</rt></ruby></div>
+        <div><span class="acc"><span class="acc-k"><span class="ar">→</span>カウンター<span class="ar">→</span></span></span><span class="acc-note">カウンター 本身是平板型</span></div>
+        <div class="word-romaji">kauntaa seki</div>
+        <div class="word-meaning">吧台座位 — 面對廚房那一排長桌；壽司店、拉麵店一個人來的時候坐這裡，英文 counter 的外來語</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="座席">
+      <div class="word-content">
+        <div class="word-ja"><ruby>座席<rt>ざせき</rt></ruby></div>
+        <div class="word-romaji">zaseki</div>
+        <div class="word-meaning">座位（劃位的那種）— 電車、飛機、劇場、電影院裡有編號的位子；餐廳講位子比較少用這個詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、席 是黏在後面的，不會自己單獨用</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這幾個詞的構造很單純：<strong>什麼樣的位子</strong> ＋ <span class="j-mark">席</span>。
+    前面那一格換成不同的東西，就長出一個新的座位種類，這種組法在店裡到處看得到。
+  </p>
+
+  <div class="frame">
+    <div class="frame-slot"><div class="slot-label">What kind</div><div class="slot-ja">椅子 / カウンター / 喫煙</div></div>
+    <div class="frame-slot mark"><div class="slot-label">Seat</div><div class="slot-ja">席</div></div>
+  </div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    同一個模子印出來的還有 <ruby>喫煙<rt>きつえん</rt></ruby><ruby>席<rt>せき</rt></ruby>（吸菸區）、
+    <ruby>禁煙<rt>きんえん</rt></ruby><ruby>席<rt>せき</rt></ruby>（禁菸區）、
+    <ruby>窓際<rt>まどぎわ</rt></ruby><ruby>席<rt>せき</rt></ruby>（靠窗的位子）、
+    <ruby>指定<rt>してい</rt></ruby><ruby>席<rt>せき</rt></ruby>（對號座）、
+    <ruby>自由<rt>じゆう</rt></ruby><ruby>席<rt>せき</rt></ruby>（自由座）。
+    <ruby>席<rt>せき</rt></ruby> 自己也可以單獨當一個名詞用（「<ruby>席<rt>せき</rt></ruby>はありますか」還有位子嗎），
+    但講種類的時候一定黏在後面。
+  </p>
+
+  <div class="word-item" data-text="席">
+    <div class="word-content">
+      <div class="word-ja"><ruby>席<rt>せき</rt></ruby></div>
+      <div><span class="acc"><span class="acc-k">せ<span class="ar">↘</span>き</span></span><span class="acc-note">頭高型</span></div>
+      <div class="word-romaji">seki</div>
+      <div class="word-meaning">座位 — 泛指一個可以坐的位子，是上面所有詞共同的尾巴</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 席 跟台語整串對得上</strong><br>
+    <span class="compare">席</span> 的音讀 <b>せき</b>，跟台語的「席 sik」唸起來就是同一串：
+    開頭的 s 一樣，台語收尾的 -k 到日語就變成多出來的一拍 <b>き</b>。<br>
+    <span class="compare">椅子</span> 的 <b>い</b> 也一樣 —— 台語的「椅 i」就是它，
+    <ruby>椅子<rt>いす</rt></ruby> 前面那個音直接對過去。
+  </div>
+
+  <div class="note">
+    📝 <strong>椅子 這個字之前出現過</strong><br>
+    <ruby>椅子<rt>いす</rt></ruby> 在 <a href="2026-07-14-classroom-vocab.html" style="color:var(--accent);">7/14 教室裡的話</a>
+    當生活單字學過一次，本篇是把它接上 <span class="j-mark">席</span> 變成座位的種類。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、座席 跟 席 的場合是分開的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    兩個詞中文都翻成「座位」，日文用的場合卻不太一樣。簡單記：
+    <strong>有編號、要劃位的用 <ruby>座席<rt>ざせき</rt></ruby></strong>，
+    <strong>店裡隨口問有沒有位子用 <ruby>席<rt>せき</rt></ruby></strong>。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th>詞</th><th>用在哪裡</th><th>典型的句子</th></tr>
+    <tr>
+      <td class="col-ja"><ruby>座席<rt>ざせき</rt></ruby> zaseki</td>
+      <td>電車、飛機、劇場、電影院 — 被劃出來、常常有號碼的位子</td>
+      <td class="col-ja"><ruby>座席<rt>ざせき</rt></ruby><ruby>番号<rt>ばんごう</rt></ruby>（座位號碼）</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>席<rt>せき</rt></ruby> seki</td>
+      <td>餐廳、咖啡店 — 泛指一個空著可以坐的位子</td>
+      <td class="col-ja"><ruby>席<rt>せき</rt></ruby>はありますか（還有位子嗎）</td>
+    </tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、放進句子裡是這樣用的</div>
+
+  <div class="section">
+    <div class="section-title">🗣 在店裡會用到的三句</div>
+
+    <div class="word-item" data-text="座敷は空いていますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>座敷<rt>ざしき</rt></ruby><span class="j-mark">は</span><ruby>空<rt>あ</rt></ruby>いていますか</div>
+        <div class="word-romaji">zashiki wa aite imasu ka</div>
+        <div class="word-meaning">和式座位還空著嗎 — 「空いています」的用法見 <a href="2026-08-26-aite-imasu.html" style="color:var(--accent);">8/26 那篇</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カウンター席をお願いします">
+      <div class="word-content">
+        <div class="word-ja">カウンター<ruby>席<rt>せき</rt></ruby><span class="j-mark">を</span>お<ruby>願<rt>ねが</rt></ruby>いします</div>
+        <div class="word-romaji">kauntaa seki o onegai shimasu</div>
+        <div class="word-meaning">麻煩給我吧台的位子 — 想要什麼就把它放在 を 前面，後面接 お願いします</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="椅子席と座敷、どちらがいいですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>椅子<rt>いす</rt></ruby><ruby>席<rt>せき</rt></ruby>と<ruby>座敷<rt>ざしき</rt></ruby>、どちらがいいですか</div>
+        <div class="word-romaji">isu seki to zashiki, dochira ga ii desu ka</div>
+        <div class="word-meaning">椅子座位跟和式座位，哪一種好呢 — 店員問這句的時候，回答其中一個詞加 でお願いします 就可以</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、有兩個地方容易講錯</div>
+
+  <div class="warning">
+    ⚠️ <strong>座椅子 不是「座位的椅子」</strong><br>
+    <ruby>座椅子<rt>ざいす</rt></ruby> 指的是那個<strong>沒有腳的傢俱本身</strong>，不是一種座位類型，
+    所以店員不會問「<ruby>座椅子<rt>ざいす</rt></ruby>にしますか」。
+    要講座位種類，說的是 <ruby>座敷<rt>ざしき</rt></ruby>。
+  </div>
+
+  <div class="note">
+    📝 <strong>カウンター 是戰後從英語借進來的</strong><br>
+    來源是英語的 <b>counter</b>（櫃台、長檯），屬於戰後那一批英語外來語。
+    落差在<strong>範圍縮小又固定下來</strong>：英語的 counter 泛指任何檯面，
+    日文的 カウンター 在餐飲場合幾乎專指<strong>面對廚房那一排可以坐人的長桌</strong>，
+    所以才會有 カウンター<ruby>席<rt>せき</rt></ruby> 這個說法；
+    英語反而不會用 counter 單獨指這種座位。<br>
+    另外日文的 カウンター 也用在運動的「反擊」（カウンターアタック）跟機械的計數器上，
+    是同一個英文字借進來之後分岔出的幾個意思。
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>カウンター 的長音不要漏掉</strong><br>
+    是 <span class="compare">カウンター</span>（ka-u-n-ta-a，五拍），最後那一拍的長音 <b>ー</b> 一定要拉滿，
+    唸成「カウンタ」四拍會很像沒講完。同樣道理的還有 <ruby>喫煙<rt>きつえん</rt></ruby>、
+    <ruby>禁煙<rt>きんえん</rt></ruby> 中間的促音與撥音，都各佔一拍。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>日文</th><th>羅馬拼音</th><th>坐在哪</th><th>意思</th></tr>
+    <tr><td class="col-ja"><ruby>座敷<rt>ざしき</rt></ruby></td><td>zashiki</td><td>地上（榻榻米）</td><td>和式座位、包廂</td></tr>
+    <tr><td class="col-ja"><ruby>座椅子<rt>ざいす</rt></ruby></td><td>zaisu</td><td>地上（榻榻米）</td><td>沒有腳的和式靠背椅</td></tr>
+    <tr><td class="col-ja"><ruby>椅子<rt>いす</rt></ruby><ruby>席<rt>せき</rt></ruby></td><td>isu seki</td><td>椅子</td><td>一般桌椅的位子</td></tr>
+    <tr><td class="col-ja">カウンター<ruby>席<rt>せき</rt></ruby></td><td>kauntaa seki</td><td>椅子</td><td>吧台的位子</td></tr>
+    <tr><td class="col-ja"><ruby>座席<rt>ざせき</rt></ruby></td><td>zaseki</td><td>不限</td><td>劃出來的座位（車、飛機、劇場）</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：在拉麵店想坐吧台，怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      カウンター<ruby>席<rt>せき</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kauntaa seki o onegai shimasu.</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：「要脫鞋、坐在榻榻米上」的那種座位叫什麼？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>座敷<rt>ざしき</rt></ruby>（zashiki）。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">放在裡面給人靠的那張沒有腳的椅子則是 座椅子（zaisu）。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：新幹線票上的「座位號碼」是哪個詞？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>座席<rt>ざせき</rt></ruby><ruby>番号<rt>ばんごう</rt></ruby>。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">有編號、要劃位的用 座席；店裡問有沒有空位用 席。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：「禁菸的位子」照這篇的組法要怎麼拼出來？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>禁煙<rt>きんえん</rt></ruby><ruby>席<rt>せき</rt></ruby>（kin'en seki）。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">什麼樣的位子 ＋ 席，同一個模子還能造出 窓際席、指定席、自由席。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：カウンター 有幾拍？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      五拍：カ・ウ・ン・タ・ー。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">撥音 ン 跟長音 ー 各自算一拍，漏掉就聽起來像沒講完。</span>
+    </p>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-29-megane-o-kaimashita.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">ました — 把做完的事說出來 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一天的另一篇 — 把「誰は何を動詞ます」換成過去式</span>
+  </a>
+
+  <a href="2026-08-26-aite-imasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">午前は空いていますか <span class="next-arrow">→</span></span>
+    <span class="next-sub">問位子空不空、時間有沒有空，用的是同一個「空いています」</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

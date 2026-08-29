@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ました — 把做完的事說出來</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句子骨架圖 */
+.frame{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:18px 0;}
+.frame-slot{flex:1 1 120px;border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:6px;padding:12px 14px;text-align:center;}
+.frame-slot .slot-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.1em;color:var(--ink-mute);margin-bottom:6px;}
+.frame-slot .slot-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);}
+.frame-slot.mark{flex:0 0 auto;background:var(--accent-pale);border-color:var(--accent-soft);}
+.frame-slot.mark .slot-ja{color:var(--accent);font-weight:600;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">ました</span> — 把做完的事說出來</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 29</div>
+  <p class="page-subtitle">彼は眼鏡を買いました／私はお風呂を洗いました — 同一個骨架換成過去式</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    要講「我剛剛做了什麼」「他昨天買了什麼」的時候，句子的骨架跟
+    <a href="2026-08-28-ha-o-migakimasu.html" style="color:var(--accent);">8/28 那篇</a>一模一樣，
+    只有句尾從 <span class="compare">ます</span> 換成 <span class="compare">ました</span>。
+    本篇的兩個句子「<ruby>彼<rt>かれ</rt></ruby>は<ruby>眼鏡<rt>めがね</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました」
+    「<ruby>私<rt>わたし</rt></ruby>はお<ruby>風呂<rt>ふろ</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>いました」
+    剛好都是語尾 <b>う</b> 的動詞，順著這兩句可以把「う → い」這條變法一次認清楚，
+    後面再看四個新單字，以及 <span class="compare">お風呂</span> 前面那個お是怎麼回事。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、把兩句話並排，只有句尾不一樣</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先看骨架：<strong>誰</strong> ＋ <span class="j-mark">は</span> ＋ <strong>什麼東西</strong> ＋
+    <span class="j-mark">を</span> ＋ <strong>動詞ました</strong>。
+    跟前一堂課唯一的差別在最後一格 —— <span class="compare">ます</span> 是現在或平常會做的事，
+    <span class="compare">ました</span> 是已經做完的事。前面的 は 跟 を 完全不動。
+  </p>
+
+  <div class="frame">
+    <div class="frame-slot"><div class="slot-label">Who</div><div class="slot-ja">彼 / 私</div></div>
+    <div class="frame-slot mark"><div class="slot-label">Topic</div><div class="slot-ja">は</div></div>
+    <div class="frame-slot"><div class="slot-label">What</div><div class="slot-ja">眼鏡 / お風呂</div></div>
+    <div class="frame-slot mark"><div class="slot-label">Object</div><div class="slot-ja">を</div></div>
+    <div class="frame-slot"><div class="slot-label">Verb (past)</div><div class="slot-ja">買いました / 洗いました</div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🗣 兩個句子</div>
+
+    <div class="word-item" data-text="彼は眼鏡を買いました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby><span class="j-mark">は</span><ruby>眼鏡<rt>めがね</rt></ruby><span class="j-mark">を</span><ruby>買<rt>か</rt></ruby>いました</div>
+        <div class="word-romaji">kare wa megane o kaimashita</div>
+        <div class="word-meaning">他買了眼鏡 — 買到的東西是眼鏡，眼鏡後面接 を</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私はお風呂を洗いました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby><span class="j-mark">は</span>お<ruby>風呂<rt>ふろ</rt></ruby><span class="j-mark">を</span><ruby>洗<rt>あら</rt></ruby>いました</div>
+        <div class="word-romaji">watashi wa ofuro o araimashita</div>
+        <div class="word-meaning">我洗了浴缸／浴室 — 被洗的是浴缸，浴缸後面接 を</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>ました 之前出現過</strong><br>
+    「<ruby>食<rt>た</rt></ruby>べました」那一篇
+    （<a href="2026-07-22-tabemashita.html" style="color:var(--accent);">7/22 ました的說法</a>）
+    已經把「ます → ました」介紹過一次，本篇是把它套回誰做什麼的骨架裡再練一遍。
+    更隨意的說法（普通形的た形）收在 <a href="2026-08-12-ta-kei.html" style="color:var(--accent);">8/12 た形</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、語尾是 う 的動詞，變法是有規則的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這兩個動詞的字典形是 <span class="compare">買う</span> 跟 <span class="compare">洗う</span>，
+    都是 <a href="2026-08-09-godan-vs-ichidan.html" style="color:var(--accent);">五段動詞</a>。
+    規則跟前一堂課同一條：<strong>把語尾改成同一行的い段</strong>，再接 ます／ました。
+    う 在あ行，あ行的い段是 <b>い</b>，所以 買う → 買います → 買いました。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th>辭書形</th><th>語尾怎麼變</th><th>ます形（現在）</th><th>ました形（過去）</th></tr>
+    <tr>
+      <td class="col-ja"><ruby>買<rt>か</rt></ruby>う kau</td>
+      <td><b>う → い</b></td>
+      <td class="col-ja"><ruby>買<rt>か</rt></ruby>います kaimasu</td>
+      <td class="col-ja"><ruby>買<rt>か</rt></ruby>いました kaimashita</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>洗<rt>あら</rt></ruby>う arau</td>
+      <td><b>う → い</b></td>
+      <td class="col-ja"><ruby>洗<rt>あら</rt></ruby>います araimasu</td>
+      <td class="col-ja"><ruby>洗<rt>あら</rt></ruby>いました araimashita</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>磨<rt>みが</rt></ruby>く migaku</td>
+      <td><b>く → き</b></td>
+      <td class="col-ja"><ruby>磨<rt>みが</rt></ruby>きます</td>
+      <td class="col-ja"><ruby>磨<rt>みが</rt></ruby>きました</td>
+    </tr>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>う 的い段是 い，不是 う 本身</strong><br>
+    容易寫成「買うます」或「洗うました」。這一行的順序是
+    <span class="compare">わ・い・う・え・お</span>，動詞語尾的 う 要往前退一格變成 <b>い</b>，
+    所以是 <ruby>買<rt>か</rt></ruby>いました、<ruby>洗<rt>あら</rt></ruby>いました。
+    同一類的還有 <ruby>会<rt>あ</rt></ruby>う → <ruby>会<rt>あ</rt></ruby>いました、
+    <ruby>使<rt>つか</rt></ruby>う → <ruby>使<rt>つか</rt></ruby>いました、
+    <ruby>歌<rt>うた</rt></ruby>う → <ruby>歌<rt>うた</rt></ruby>いました。
+  </div>
+
+  <div class="note">
+    📝 <strong>ました 的重音，跟 ます 一樣降在 ま 後面</strong><br>
+    かいま<span style="color:var(--accent);">↘</span>した、あらいま<span style="color:var(--accent);">↘</span>した —
+    ま 是最高的那一拍，接下來的 した 掉下去。ます形的入門看
+    <a href="2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">8/11 マス形入門</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、把這幾個新單字認清楚</div>
+
+  <div class="section">
+    <div class="section-title">📖 名詞</div>
+
+    <div class="word-item" data-text="眼鏡">
+      <div class="word-content">
+        <div class="word-ja"><ruby>眼鏡<rt>めがね</rt></ruby></div>
+        <div><span class="acc"><span class="acc-k">め<span class="ar">↘</span>がね</span></span><span class="acc-note">頭高型</span></div>
+        <div class="word-romaji">megane</div>
+        <div class="word-meaning">眼鏡 — 兩個漢字配三個假名，是拆不開的熟字訓；日常也常直接寫成片假名 メガネ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お風呂">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>風呂<rt>ふろ</rt></ruby></div>
+        <div><span class="acc"><span class="acc-k">おふ<span class="ar">↘</span>ろ</span></span><span class="acc-note">中高型</span></div>
+        <div class="word-romaji">ofuro</div>
+        <div class="word-meaning">浴缸、洗澡（這件事）— 指的是泡澡的那個缸與整個洗澡的場所，不是淋浴（シャワー）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    💡 <strong>風呂 前面那個「お」拿掉會怪怪的</strong><br>
+    <span class="compare">お</span> 是美化語，掛在名詞前面讓話聽起來柔和一點。
+    有些詞加不加都可以（<ruby>茶<rt>ちゃ</rt></ruby>／お<ruby>茶<rt>ちゃ</rt></ruby>），
+    但 <span class="compare">風呂</span> 在日常對話裡幾乎<strong>一定帶著お</strong>：
+    お<ruby>風呂<rt>ふろ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ります（泡澡）、お<ruby>風呂<rt>ふろ</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>います（洗浴缸）。
+    只講「ふろ」不算錯，但聽起來很生硬，記的時候直接連お一起背最省事。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 眼 的音讀就是台語的「眼」</strong><br>
+    <span class="compare">眼</span> 的音讀是 <b>がん</b>，跟台語的「眼 gán」整串唸起來就是同一個音，
+    <ruby>眼科<rt>がんか</rt></ruby>（眼科）一唸就對得上。<br>
+    不過 <span class="compare">眼鏡</span> 唸 <b>めがね</b> 是特例 —— 這是整組配上去的熟字訓，
+    跟漢字音沒有關係，只能整個詞記起來。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 動詞</div>
+
+    <div class="word-item" data-text="買いました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>買<rt>か</rt></ruby>いました</div>
+        <div><span class="acc"><span class="acc-k">かいま<span class="ar">↘</span>した</span></span><span class="acc-note">中高型</span></div>
+        <div class="word-romaji">kaimashita</div>
+        <div class="word-meaning">買了 — 字典形 <ruby>買<rt>か</rt></ruby>う；相反的「賣」是 <ruby>売<rt>う</rt></ruby>る，兩個字合起來就是 <ruby>売買<rt>ばいばい</rt></ruby></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="洗いました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>洗<rt>あら</rt></ruby>いました</div>
+        <div><span class="acc"><span class="acc-k">あらいま<span class="ar">↘</span>した</span></span><span class="acc-note">中高型</span></div>
+        <div class="word-romaji">araimashita</div>
+        <div class="word-meaning">洗了 — 用水沖洗；洗衣服是 <ruby>洗濯<rt>せんたく</rt></ruby>します，洗頭洗澡另有說法，這個字專指用水搓洗東西</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、有兩個地方容易講錯</div>
+
+  <div class="warning">
+    ⚠️ <strong>洗います 跟 磨きます 的分工不一樣</strong><br>
+    <span class="compare"><ruby>洗<rt>あら</rt></ruby>います</span> 是用水沖洗（洗浴缸、洗手、洗菜），
+    <span class="compare">磨きます</span> 是磨到發亮（刷牙、擦鞋）。
+    洗澡本身不說「体を洗います」以外的怪組合，講「我去洗澡」直接用
+    お<ruby>風呂<rt>ふろ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ります。
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>ました 是丁寧形的過去，不要跟た形混在一起</strong><br>
+    對外人、對長輩講剛剛做完的事用 <span class="compare">買いました</span>；
+    跟朋友隨口講才會說 <span class="compare">買った</span>。
+    兩者意思一樣，差在禮貌程度，不能在同一句裡混用。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>誰</th><th>什麼東西</th><th>動詞</th><th>整句</th></tr>
+    <tr>
+      <td class="col-ja"><ruby>彼<rt>かれ</rt></ruby> kare</td>
+      <td class="col-ja"><ruby>眼鏡<rt>めがね</rt></ruby> megane</td>
+      <td class="col-ja"><ruby>買<rt>か</rt></ruby>いました</td>
+      <td class="col-ja">彼は眼鏡を買いました<br><span style="font-size:12px;color:var(--ink-mute);">他買了眼鏡</span></td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>私<rt>わたし</rt></ruby> watashi</td>
+      <td class="col-ja">お<ruby>風呂<rt>ふろ</rt></ruby> ofuro</td>
+      <td class="col-ja"><ruby>洗<rt>あら</rt></ruby>いました</td>
+      <td class="col-ja">私はお風呂を洗いました<br><span style="font-size:12px;color:var(--ink-mute);">我洗了浴缸</span></td>
+    </tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「私はお風呂を洗いました」的羅馬拼音怎麼寫？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      watashi <b>wa</b> ofuro <b>o</b> araimashita。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">は當助詞唸 wa，を永遠唸 o。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：「彼は眼鏡を買うました」錯在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      語尾的 う 要先變成い段：<ruby>買<rt>か</rt></ruby><b>い</b>ました。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">辭書形不能直接黏 ました，一定要先變形。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：「我買眼鏡（還沒買，是平常的事）」要怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>私<rt>わたし</rt></ruby>は<ruby>眼鏡<rt>めがね</rt></ruby>を<ruby>買<rt>か</rt></ruby>います。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">watashi wa megane o kaimasu. 只要把 ました 換回 ます。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：「他沒有買眼鏡。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>彼<rt>かれ</rt></ruby>は<ruby>眼鏡<rt>めがね</rt></ruby>を<ruby>買<rt>か</rt></ruby>いませんでした。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">過去的否定是 ませんでした，不是「買いましたない」。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：這兩句的重音，最高的那一拍在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      都在 <b>ま</b>：かいま↘した／あらいま↘した。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">跟 ます形同一條規則，遇到新動詞可以直接套。</span>
+    </p>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-29-seki.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">席 — 店裡的五種座位 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一天的另一篇 — 座敷・椅子席・カウンター席 怎麼分</span>
+  </a>
+
+  <a href="2026-08-28-ha-o-migakimasu.html" class="next-link">
+    <span class="next-kicker">— Prev —</span>
+    <span class="next-title">歯を磨きます — 誰做什麼的三個句子 <span class="next-arrow">→</span></span>
+    <span class="next-sub">前一堂課 — 同一個骨架的現在式版本，以及三種 ます形變法</span>
+  </a>
+
+  <a href="2026-07-22-tabemashita.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">口語練習 食べました <span class="next-arrow">→</span></span>
+    <span class="next-sub">ます → ました 這條變化最早出現的地方</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

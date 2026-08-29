@@ -26,9 +26,6 @@
 .tag-cloud a{display:inline-flex;align-items:baseline;gap:4px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink-soft);text-decoration:none;font-size:13px}
 .tag-cloud a.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .tag-cloud a.on .n{color:#fff;opacity:.8}
-.anki-box{margin-top:16px;padding:10px 12px;border:1px dashed var(--accent-soft);border-radius:10px;background:var(--bg-spot-1);font-size:12px;color:var(--ink-soft)}
-.anki-box .btn{display:block;text-align:center;margin-top:8px;padding:7px 0;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-size:13px}
-.anki-box .sub{margin-top:6px;color:var(--ink-mute);font-size:11px;line-height:1.6}
 .vsearch{width:100%;box-sizing:border-box;font-family:'Noto Serif TC',serif;font-size:16px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none;margin-bottom:8px}
 .result-count{font-size:13px;color:var(--ink-mute);margin:0 0 10px 4px;font-style:italic;font-family:'Cormorant Garamond',serif}
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:14px}
@@ -85,12 +82,6 @@
           <div class="tag-cloud" id="tags"></div>
           <h3>月份</h3>
           <ul class="month-list" id="months"></ul>
-          <div class="anki-box">
-            <b>Anki 牌組</b>（隨課程更新）
-            <a class="btn" id="anki-link" href="#">⬇ Anki</a>
-            <div class="sub">重複匯入只會加新卡，複習進度保留。卡片帶分類與月份 tag，
-            Anki 內可用 Custom Study 按 tag 練。<span id="anki-meta"></span></div>
-          </div>
         </div>
       </details>
     </aside>

@@ -31,7 +31,8 @@ readings/YYYY-MM-DD-topic.html   ← 閱讀筆記（深紅主題，真實日文�
 tadoku/YYYY-MM-DD-topic.html     ← 自製迷你多読小故事（藤色主題，跟 tadoku.html 同一套；同時仍列進 index.html 的 log/calendar）
 images/tadoku/*.png              ← 多読故事的插圖（いらすとや，自存不直連）
 data/vocab*.json                 ← 単語帳資料（vocab.json／vocab-tags.json／vocab-extra.json），build-vocab.mjs 產出＋登記
-anki/tango-*.apkg                ← 単語帳 Anki 牌組（各月＋all），build-anki-vocab.py 產出
+anki/tango-*.apkg                ← 単語帳 Anki 牌組（各月＋all），build-anki-vocab.py 產出；
+                                   **本地檔案，不進版控也不部署**（見 .gitignore）
 ```
 
 全站導覽列固定四個入口（2026-08-19 起）：文法（`grammar.html`）／漢字（`kanji.html`）／檢索（`vocab.html`）／資源（`resources.html`）。
@@ -130,7 +131,9 @@ Calendar 會自動重算——`data-date` 提供即可，新月份不必動 cale
 `js/kanji-data.js`、`js/kanji-index.js`，掃全站 `<ruby>` 標音）＋ `build-vocab.mjs`（重新產生
 `js/vocab-data.js`、`data/vocab.json`，掃全站單字卡）＋ `build-anki-vocab.py`（重新產生
 `anki/tango-*.apkg`），任一步失敗就中止。跟 `generate-audio.mjs` 同性質——內容改了就要重跑，
-產物 kanji／vocab／apkg **一起跟這次的課程 commit**。
+產物 kanji／vocab **一起跟這次的課程 commit**；**apkg 不要 commit**——
+牌組留在本地自己產生、自己匯入 Anki（含音檔時 tango-all 超過 30 MB，
+既撐大 repo 也過不了 Cloudflare Pages 單檔 25 MiB 的上限）。
 
 > 新單字沒登記 tag 時，`build-vocab.mjs` 會列警告（沒 tag 的字仍會產出，只是 vocab.html
 > 篩選不到）。照警告把該字補進 `data/vocab-tags.json` 再重跑一次——tag 集合見該檔既有 15 類，

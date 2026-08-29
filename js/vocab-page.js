@@ -67,7 +67,6 @@
       ? `已顯示 ${shown} / ${hits.length}` : `已顯示 ${shown} / ${hits.length}`;
     $('more').style.display = hits.length > shown ? 'inline-block' : 'none';
     renderSidebar();
-    renderAnki();
   }
 
   // 點分類/月份＝切換瀏覽入口，順手清掉搜尋詞（反向「先選分類再搜尋」則保留 AND）
@@ -106,28 +105,6 @@
     li('全部月份', D.length, 'all');
     months.forEach((m) => li(m.replace('-', ' · ').replace(' · 0', ' · ') + '月',
       D.filter((w) => monthOf(w) === m).length, m));
-  }
-
-  function renderAnki() {
-    const a = $('anki-link');
-    // 按鈕只寫動作不寫檔名（檔名下載時看得到），200px 側欄才塞得下
-    const years = new Set(months.map((mo) => mo.slice(0, 4)));
-    if (state.month === 'all') {
-      // 完整牌組 32 MB，超過 Cloudflare Pages 單檔 25 MiB 上限（見 .assetsignore），
-      // 沒有隨站部署，改直接連 GitHub repo 的原始檔。
-      a.href = 'https://github.com/chialin/japanese-log/raw/main/anki/tango-all.apkg';
-      a.textContent = '⬇ 下載完整牌組';
-    } else {
-      const [y, mo] = state.month.split('-');
-      const mLabel = years.size > 1 ? `${y}年${parseInt(mo, 10)}月` : `${parseInt(mo, 10)}月`;
-      a.href = `anki/tango-${state.month}.apkg`;
-      a.textContent = `⬇ 下載 ${mLabel}牌組`;
-    }
-    // 跨網域的 download 屬性無效，連 GitHub 時就不加
-    if (state.month === 'all') a.removeAttribute('download');
-    else a.setAttribute('download', '');
-    $('anki-meta').textContent = window.VOCAB_META
-      ? `最後更新 ${window.VOCAB_META.generated}` : '';
   }
 
   function setState(patch) {

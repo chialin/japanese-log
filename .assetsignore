@@ -1,4 +1,0 @@
-# Cloudflare Pages 單檔上限 25 MiB —— 這個合併牌組（32 MB）超標，
-# 不上傳到 Pages。它沒有被任何頁面連結，需要時從 GitHub repo 的
-# anki/ 直接取；各月份的 tango-2026-MM.apkg 都在 25 MiB 以下，照常部署。
-anki/tango-all.apkg

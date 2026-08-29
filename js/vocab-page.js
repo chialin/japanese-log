@@ -113,7 +113,9 @@
     // 按鈕只寫動作不寫檔名（檔名下載時看得到），200px 側欄才塞得下
     const years = new Set(months.map((mo) => mo.slice(0, 4)));
     if (state.month === 'all') {
-      a.href = 'anki/tango-all.apkg';
+      // 完整牌組 32 MB，超過 Cloudflare Pages 單檔 25 MiB 上限（見 .assetsignore），
+      // 沒有隨站部署，改直接連 GitHub repo 的原始檔。
+      a.href = 'https://github.com/chialin/japanese-log/raw/main/anki/tango-all.apkg';
       a.textContent = '⬇ 下載完整牌組';
     } else {
       const [y, mo] = state.month.split('-');
@@ -121,7 +123,9 @@
       a.href = `anki/tango-${state.month}.apkg`;
       a.textContent = `⬇ 下載 ${mLabel}牌組`;
     }
-    a.setAttribute('download', '');
+    // 跨網域的 download 屬性無效，連 GitHub 時就不加
+    if (state.month === 'all') a.removeAttribute('download');
+    else a.setAttribute('download', '');
     $('anki-meta').textContent = window.VOCAB_META
       ? `最後更新 ${window.VOCAB_META.generated}` : '';
   }

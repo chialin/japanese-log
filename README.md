@@ -1,6 +1,8 @@
 # 日本語 学習日誌
 
-我的日文學習紀錄。
+我的日文學習紀錄 → <https://nihongo.chialin.me>
+
+純靜態站，push 到 `main` 後由 Cloudflare Pages 自動部署（無 build 步驟，output 目錄就是 repo 根目錄）。
 
 
 

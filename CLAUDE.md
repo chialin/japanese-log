@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A pure static-HTML Japanese learning log. No build system, no package manager, no dependencies — every file opens directly in a browser. Deployed via GitHub Pages from the `main` branch root.
+A pure static-HTML Japanese learning log. No build system, no package manager, no dependencies — every file opens directly in a browser. Deployed via Cloudflare Pages（Git 整合，直接連 GitHub repo；無 build 指令，output 目錄＝根目錄）到 https://nihongo.chialin.me。
 
 The learner (Scarlett) is studying from zero. She finished the hiragana 五十音 and (from 2026-05-14) started katakana, so both kana are now in scope for lesson content. Each lesson page teaches either a 五十音 row (5 kana + vocabulary) or a thematic topic (numbers, seasons, phrases).
 
@@ -12,7 +12,7 @@ The learner (Scarlett) is studying from zero. She finished the hiragana 五十�
 
 There is no build, lint, or test step. Development workflow:
 - Open HTML files directly in a browser to preview
-- `git add . && git commit -m "..." && git push` — GitHub Pages auto-deploys in ~1–2 minutes
+- `git add . && git commit -m "..." && git push` — Cloudflare Pages auto-deploys in ~1 分鐘
 
 ## Architecture
 
@@ -176,7 +176,7 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 
 **產物要進版控**：輸出固定放 `epub/`（預設路徑，資料夾不存在會自動建），
 並且**跟著 commit** —— `index.html` 的 Log 最上面有一列 `.dl-link` 下載卡直接連過去
-（`href="epub/xxx.epub" download`），GitHub Pages 直接當靜態檔案送出，不需要另開頁面。
+（`href="epub/xxx.epub" download`），Cloudflare Pages 直接當靜態檔案送出，不需要另開頁面。
 `.gitignore` 只擋根目錄誤產出的 `/*.epub`。
 新增別天的電子書時，記得同步加一張 `.dl-link`（它不是 `.lesson-link`，日曆與清單邏輯會略過）。
 

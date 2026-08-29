@@ -1,6 +1,176 @@
 {
- "generated": "2026-08-26",
+ "generated": "2026-08-28",
  "words": [
+  {
+   "text": "私は歯を磨きます",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>きます",
+   "kana": "わたしははをみがきます",
+   "romaji": "watashi wa ha o migakimasu",
+   "meaning": "我刷牙 — 動作落在「牙齒」上，所以牙齒後面接 を",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼は車を運転します",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>車<rt>くるま</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>します",
+   "kana": "かれはくるまをうんてんします",
+   "romaji": "kare wa kuruma o unten shimasu",
+   "meaning": "他開車 — 被開的是車，車後面接 を",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "歯",
+   "ja": "<ruby>歯<rt>は</rt></ruby>",
+   "kana": "は",
+   "romaji": "ha",
+   "meaning": "牙齒 — 一個音就是一個字；牙醫是歯医者（haisha），牙刷是歯ブラシ（haburashi）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">は<span class=\"ar\">↘</span></span></span><span class=\"acc-note\">頭高型 · 後面接助詞就掉下去</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "料理",
+   "ja": "<ruby>料理<rt>りょうり</rt></ruby>",
+   "kana": "りょうり",
+   "romaji": "ryouri",
+   "meaning": "菜餚、做菜 — 日本料理、和食那篇提過的分類也常配這個詞用",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">りょ<span class=\"ar\">↘</span>うり</span></span><span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "磨きます",
+   "ja": "<ruby>磨<rt>みが</rt></ruby>きます",
+   "kana": "みがきます",
+   "romaji": "migakimasu",
+   "meaning": "刷、擦亮 — 刷牙、擦鞋、把鍋子刷亮都用它，核心的意思是「磨到發亮」",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">みがきま<span class=\"ar\">↘</span>す</span></span><span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "運転します",
+   "ja": "<ruby>運転<rt>うんてん</rt></ruby>します",
+   "kana": "うんてんします",
+   "romaji": "unten shimasu",
+   "meaning": "駕駛 — 開車、開電車都算；運転手就是司機",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">うんてんしま<span class=\"ar\">↘</span>す</span></span><span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "交通"
+   ]
+  },
+  {
+   "text": "作ります",
+   "ja": "<ruby>作<rt>つく</rt></ruby>ります",
+   "kana": "つくります",
+   "romaji": "tsukurimasu",
+   "meaning": "做、製作 — 做菜、做東西都用它，做出一個原本不存在的成品",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">つくりま<span class=\"ar\">↘</span>す</span></span><span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "彼",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>",
+   "kana": "かれ",
+   "romaji": "kare",
+   "meaning": "他 — 也可以指男朋友，看場合；人稱代名詞整理在 5/13 人稱",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">か<span class=\"ar\">↘</span>れ</span></span><span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "彼女",
+   "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>",
+   "kana": "かのじょ",
+   "romaji": "kanojo",
+   "meaning": "她 — 同樣也可以指女朋友，聽的人靠上下文分辨",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">か<span class=\"ar\">↘</span>のじょ</span></span><span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
   {
    "text": "平日は仕事ですか",
    "ja": "<ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は<ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>ですか",
@@ -6912,6 +7082,11 @@
      "date": "2026-08-11",
      "href": "lessons/2026-08-11-masu-kei-tango.html",
      "title": "助詞「を」：動作的對象"
+    },
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
     }
    ],
    "tags": [
@@ -11163,6 +11338,11 @@
      "date": "2026-07-29",
      "href": "lessons/2026-07-29-kono-sono-ano.html",
      "title": "この・その・あの"
+    },
+    {
+     "date": "2026-08-28",
+     "href": "lessons/2026-08-28-ha-o-migakimasu.html",
+     "title": "歯を磨きます"
     }
    ],
    "tags": [

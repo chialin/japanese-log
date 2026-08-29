@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>歯を磨きます — 誰做什麼的三個句子</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句子骨架圖 */
+.frame{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:18px 0;}
+.frame-slot{flex:1 1 120px;border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:6px;padding:12px 14px;text-align:center;}
+.frame-slot .slot-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:.1em;color:var(--ink-mute);margin-bottom:6px;}
+.frame-slot .slot-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);}
+.frame-slot.mark{flex:0 0 auto;background:var(--accent-pale);border-color:var(--accent-soft);}
+.frame-slot.mark .slot-ja{color:var(--accent);font-weight:600;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">歯を磨きます</span> — 誰做什麼的三個句子</h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 08 / 28</div>
+  <p class="page-subtitle">私は歯を磨きます／彼は車を運転します／彼女は料理を作ります — 同一個骨架換三組人與動作</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    講自己一天做了哪些事、或是描述別人在做什麼，用的都是同一個骨架：
+    先說誰，再說動作作用在什麼東西上，最後放動詞。本篇的三個句子
+    「<ruby>私<rt>わたし</rt></ruby>は<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>きます」
+    「<ruby>彼<rt>かれ</rt></ruby>は<ruby>車<rt>くるま</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>します」
+    「<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ります」
+    長得一模一樣，只是換了人跟動作。順著這三句，會把三個新動詞怎麼變成 ます形一起看過一遍，
+    最後整理幾個特別容易唸錯、寫錯的地方。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、三個句子的骨架是一樣的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先不要急著記單字，把三句話並排看，會發現它們是同一個模子印出來的：
+    <strong>誰</strong> ＋ <span class="j-mark">は</span> ＋ <strong>什麼東西</strong> ＋ <span class="j-mark">を</span> ＋ <strong>動詞ます</strong>。
+    <span class="j-mark">は</span> 指出這句話在講誰，<span class="j-mark">を</span> 指出動作落在哪個東西上面。
+  </p>
+
+  <div class="frame">
+    <div class="frame-slot"><div class="slot-label">Who</div><div class="slot-ja">私 / 彼 / 彼女</div></div>
+    <div class="frame-slot mark"><div class="slot-label">Topic</div><div class="slot-ja">は</div></div>
+    <div class="frame-slot"><div class="slot-label">What</div><div class="slot-ja">歯 / 車 / 料理</div></div>
+    <div class="frame-slot mark"><div class="slot-label">Object</div><div class="slot-ja">を</div></div>
+    <div class="frame-slot"><div class="slot-label">Verb</div><div class="slot-ja">磨きます / 運転します / 作ります</div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🗣 三個句子</div>
+
+    <div class="word-item" data-text="私は歯を磨きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby><span class="j-mark">は</span><ruby>歯<rt>は</rt></ruby><span class="j-mark">を</span><ruby>磨<rt>みが</rt></ruby>きます</div>
+        <div class="word-romaji">watashi wa ha o migakimasu</div>
+        <div class="word-meaning">我刷牙 — 動作落在「牙齒」上，所以牙齒後面接 を</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼は車を運転します">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby><span class="j-mark">は</span><ruby>車<rt>くるま</rt></ruby><span class="j-mark">を</span><ruby>運転<rt>うんてん</rt></ruby>します</div>
+        <div class="word-romaji">kare wa kuruma o unten shimasu</div>
+        <div class="word-meaning">他開車 — 被開的是車，車後面接 を</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女は料理を作ります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼女<rt>かのじょ</rt></ruby><span class="j-mark">は</span><ruby>料理<rt>りょうり</rt></ruby><span class="j-mark">を</span><ruby>作<rt>つく</rt></ruby>ります</div>
+        <div class="word-romaji">kanojo wa ryouri o tsukurimasu</div>
+        <div class="word-meaning">她做菜 — 做出來的東西是料理，料理後面接 を</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>を 的這個用法之前整理過</strong><br>
+    <span class="j-mark">を</span> 除了標動作作用的東西，還可以標「穿過去的路」跟「離開的起點」，
+    三種用法都收在 <a href="2026-08-11-joshi-o.html" style="color:var(--accent);">8/11 助詞 を</a> 那一篇。
+    本篇的三句都是最基本的第一種。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、辭書形變成 ます形是有規則的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這三個動詞的字典形分別是 <span class="compare">磨く</span>、<span class="compare">運転する</span>、<span class="compare">作る</span>，
+    剛好把 <a href="2026-08-09-godan-vs-ichidan.html" style="color:var(--accent);">8/9 五段與一段</a>
+    講過的兩類、加上不規則的 する 各碰到一次。變法是把語尾那個音改成 <strong>い段</strong>，再接 ます。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th>辭書形</th><th>語尾怎麼變</th><th>ます形</th><th>類型</th></tr>
+    <tr>
+      <td class="col-ja"><ruby>磨<rt>みが</rt></ruby>く migaku</td>
+      <td><b>く → き</b></td>
+      <td class="col-ja"><ruby>磨<rt>みが</rt></ruby>きます migakimasu</td>
+      <td>五段動詞</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>作<rt>つく</rt></ruby>る tsukuru</td>
+      <td><b>る → り</b></td>
+      <td class="col-ja"><ruby>作<rt>つく</rt></ruby>ります tsukurimasu</td>
+      <td>五段動詞</td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>運転<rt>うんてん</rt></ruby>する unten suru</td>
+      <td><b>する → します</b></td>
+      <td class="col-ja"><ruby>運転<rt>うんてん</rt></ruby>します unten shimasu</td>
+      <td>不規則（漢語＋する）</td>
+    </tr>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong>運転 是名詞，它自己不是動詞</strong><br>
+    「運転」單獨是一個名詞（駕駛這件事），要當動作用一定得配上 する，
+    所以是 <span class="compare">運転します</span>，不會有「運転きます」這種東西。
+    同一組的還有 <ruby>勉強<rt>べんきょう</rt></ruby>します、<ruby>散歩<rt>さんぽ</rt></ruby>します、
+    <ruby>掃除<rt>そうじ</rt></ruby>します — 都是漢語詞後面掛 する。
+  </div>
+
+  <div class="tip">
+    💡 <strong>怎麼知道要說 します，還是說 磨きます・作ります</strong><br>
+    看的是<strong>這個詞本身是不是動詞</strong>，一查字典就分得出來：<br>
+    <span class="compare">磨く</span>、<span class="compare">作る</span> 本來就是動詞，字典裡就是這個樣子，
+    語尾一定是 <b>う段</b>（く・る・む・ぶ…），要用就把語尾改成い段再接 ます，
+    <strong>不可以再加 する</strong>（沒有「磨くします」）。<br>
+    <span class="compare">運転</span> 只是一個名詞，字典裡標的是「名詞」，語尾不是う段，
+    它自己沒辦法當動作用，<strong>一定要借 する</strong> 才變成動詞。<br>
+    一個好認的線索：<strong>兩個漢字組成、唸音讀的詞</strong>（運転・勉強・掃除・散歩・練習・電話），
+    幾乎都是這一類，配 します。反過來，<strong>漢字只有一個、後面拖著平假名</strong>的
+    （磨<b>く</b>・作<b>る</b>・飲<b>む</b>・買<b>う</b>），那個平假名就是它的語尾，自己變就好。
+  </div>
+
+  <div class="note">
+    📝 <strong>ます形的重音，一律降在 ま 後面</strong><br>
+    みがきま<span style="color:var(--accent);">↘</span>す、つくりま<span style="color:var(--accent);">↘</span>す、
+    うんてんしま<span style="color:var(--accent);">↘</span>す — ま 唸最高，接著 す 掉下來。
+    這條規則對幾乎所有 ます形都成立，記一次可以用一輩子。
+    ます形的入門看 <a href="2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">8/11 マス形入門</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、把這幾個新單字認清楚</div>
+
+  <div class="section">
+    <div class="section-title">📖 名詞</div>
+
+    <div class="word-item" data-text="歯">
+      <div class="word-content">
+        <div class="word-ja"><ruby>歯<rt>は</rt></ruby></div>
+        <div><span class="acc"><span class="acc-k">は<span class="ar">↘</span></span></span><span class="acc-note">頭高型 · 後面接助詞就掉下去</span></div>
+        <div class="word-romaji">ha</div>
+        <div class="word-meaning">牙齒 — 一個音就是一個字；牙醫是<ruby>歯<rt>は</rt></ruby><ruby>医者<rt>いしゃ</rt></ruby>（haisha），牙刷是<ruby>歯<rt>は</rt></ruby>ブラシ（haburashi）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="車">
+      <div class="word-content">
+        <div class="word-ja"><ruby>車<rt>くるま</rt></ruby></div>
+        <div><span class="acc"><span class="acc-k"><span class="ar">→</span>くるま<span class="ar">→</span></span></span><span class="acc-note">平板型</span></div>
+        <div class="word-romaji">kuruma</div>
+        <div class="word-meaning">車子 — 這是訓讀；音讀是 しゃ，出現在<ruby>自転車<rt>じてんしゃ</rt></ruby>（腳踏車）、<ruby>電車<rt>でんしゃ</rt></ruby>（電車）裡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="料理">
+      <div class="word-content">
+        <div class="word-ja"><ruby>料理<rt>りょうり</rt></ruby></div>
+        <div><span class="acc"><span class="acc-k">りょ<span class="ar">↘</span>うり</span></span><span class="acc-note">頭高型</span></div>
+        <div class="word-romaji">ryouri</div>
+        <div class="word-meaning">菜餚、做菜 — <ruby>日本<rt>にほん</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>、<ruby>和食<rt>わしょく</rt></ruby>那篇提過的分類也常配這個詞用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 車跟料理用台語直接對過去</strong><br>
+    <span class="compare">車</span> 的音讀 <b>しゃ</b>，跟台語的「車 chhia」整串唸起來就是同一個音，
+    <ruby>自転車<rt>じてんしゃ</rt></ruby>、<ruby>電車<rt>でんしゃ</rt></ruby> 尾巴都是它。<br>
+    <span class="compare">料理</span> <b>りょうり</b> 對台語的「料理 liau-li」也是整串對得上，
+    連兩個音節的順序都一樣，這個詞幾乎不用背。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 動詞與人稱</div>
+
+    <div class="word-item" data-text="磨きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>磨<rt>みが</rt></ruby>きます</div>
+        <div><span class="acc"><span class="acc-k">みがきま<span class="ar">↘</span>す</span></span><span class="acc-note">中高型</span></div>
+        <div class="word-romaji">migakimasu</div>
+        <div class="word-meaning">刷、擦亮 — 刷牙、擦鞋、把鍋子刷亮都用它，核心的意思是「磨到發亮」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="運転します">
+      <div class="word-content">
+        <div class="word-ja"><ruby>運転<rt>うんてん</rt></ruby>します</div>
+        <div><span class="acc"><span class="acc-k">うんてんしま<span class="ar">↘</span>す</span></span><span class="acc-note">中高型</span></div>
+        <div class="word-romaji">unten shimasu</div>
+        <div class="word-meaning">駕駛 — 開車、開電車都算；<ruby>運転手<rt>うんてんしゅ</rt></ruby>就是司機</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="作ります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>作<rt>つく</rt></ruby>ります</div>
+        <div><span class="acc"><span class="acc-k">つくりま<span class="ar">↘</span>す</span></span><span class="acc-note">中高型</span></div>
+        <div class="word-romaji">tsukurimasu</div>
+        <div class="word-meaning">做、製作 — 做菜、做東西都用它，做出一個原本不存在的成品</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby></div>
+        <div><span class="acc"><span class="acc-k">か<span class="ar">↘</span>れ</span></span><span class="acc-note">頭高型</span></div>
+        <div class="word-romaji">kare</div>
+        <div class="word-meaning">他 — 也可以指男朋友，看場合；人稱代名詞整理在 <a href="2026-05-13-jinshou.html" style="color:var(--accent);">5/13 人稱</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼女<rt>かのじょ</rt></ruby></div>
+        <div><span class="acc"><span class="acc-k">か<span class="ar">↘</span>のじょ</span></span><span class="acc-note">頭高型</span></div>
+        <div class="word-romaji">kanojo</div>
+        <div class="word-meaning">她 — 同樣也可以指女朋友，聽的人靠上下文分辨</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、有兩個地方容易講錯</div>
+
+  <div class="warning">
+    ⚠️ <strong>歯 跟助詞 は 寫起來一樣，唸法卻不同</strong><br>
+    「<ruby>私<rt>わたし</rt></ruby>は<ruby>歯<rt>は</rt></ruby>を…」這句裡出現兩個「は」：
+    前面那個是助詞，唸 <span class="compare">wa</span>；後面那個是牙齒，唸 <span class="compare">ha</span>。
+    寫成羅馬字是 watashi <b>wa</b> <b>ha</b> o — 助詞唸 wa 的規則見
+    <a href="2026-05-10-joshi-wa.html" style="color:var(--accent);">5/10 助詞 は</a>。
+  </div>
+
+  <div class="warning">
+    ⚠️ <strong>を 只唸 o，不要唸成 wo</strong><br>
+    <span class="compare">を</span> 這個假名雖然排在 wa 行，現代日語裡發音就是 <b>o</b>，跟 <span class="compare">お</span> 完全一樣，
+    只是專門拿來當助詞用。打字時要打 <code>wo</code> 才出得來，但唸出來永遠是 o。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>誰</th><th>什麼東西</th><th>動詞</th><th>整句</th></tr>
+    <tr>
+      <td class="col-ja"><ruby>私<rt>わたし</rt></ruby> watashi</td>
+      <td class="col-ja"><ruby>歯<rt>は</rt></ruby> ha</td>
+      <td class="col-ja"><ruby>磨<rt>みが</rt></ruby>きます</td>
+      <td class="col-ja">私は歯を磨きます<br><span style="font-size:12px;color:var(--ink-mute);">我刷牙</span></td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>彼<rt>かれ</rt></ruby> kare</td>
+      <td class="col-ja"><ruby>車<rt>くるま</rt></ruby> kuruma</td>
+      <td class="col-ja"><ruby>運転<rt>うんてん</rt></ruby>します</td>
+      <td class="col-ja">彼は車を運転します<br><span style="font-size:12px;color:var(--ink-mute);">他開車</span></td>
+    </tr>
+    <tr>
+      <td class="col-ja"><ruby>彼女<rt>かのじょ</rt></ruby> kanojo</td>
+      <td class="col-ja"><ruby>料理<rt>りょうり</rt></ruby> ryouri</td>
+      <td class="col-ja"><ruby>作<rt>つく</rt></ruby>ります</td>
+      <td class="col-ja">彼女は料理を作ります<br><span style="font-size:12px;color:var(--ink-mute);">她做菜</span></td>
+    </tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「私は歯を磨きます」的羅馬拼音怎麼寫？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      watashi <b>wa</b> <b>ha</b> o migakimasu。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">第一個は是助詞唸 wa，第二個は是牙齒唸 ha，を唸 o。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：「彼は車を運転きます」錯在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      運転 是名詞，要配 する 才變成動作：<ruby>彼<rt>かれ</rt></ruby>は<ruby>車<rt>くるま</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>し<b>ます</b>。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">く→き 的變法只適用於語尾是 く 的動詞，例如 磨く→磨きます。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：「她不做菜。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>りません。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kanojo wa ryouri o tsukurimasen. ます 換成 ません 就是否定。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：作る 的 ます形是 作ります，那 磨く 為什麼不是「磨るます」？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      規則是把<strong>語尾那個音改成同一行的い段</strong>，不是換成 り。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">く在か行，い段是き→磨きます；る在ら行，い段才是り→作ります。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：這三句的重音，最高的那一拍都在哪裡？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      都在 <b>ま</b>，下一拍的 す 掉下來：みがきま↘す／うんてんしま↘す／つくりま↘す。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">ます形幾乎都照這條走，遇到新動詞可以直接套。</span>
+    </p>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-11-joshi-o.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">助詞 を 的三種用法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">動作作用的東西之外，を 還能標穿過去的路與離開的起點</span>
+  </a>
+
+  <a href="2026-08-26-aite-imasu.html" class="next-link">
+    <span class="next-kicker">— Prev —</span>
+    <span class="next-title">午前は空いていますか <span class="next-arrow">→</span></span>
+    <span class="next-sub">前一堂課 — 問人有沒有空，順便釐清句尾要不要加 です</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

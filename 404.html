@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — ページが見つかりません</title>
+<!-- 這頁可能從任何深度的網址被叫出來（Cloudflare Pages 找不到檔案時保留原路徑），
+     所以所有資源與連結一律用絕對路徑，不要改成相對路徑。 -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<style>
+/* root 頁 棕橘色票（跟 lessons/* 同一套） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.nf{text-align:center;padding:40px 0 10px;}
+.nf-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:88px;line-height:1;
+  color:var(--accent-soft);letter-spacing:.06em;}
+.nf-ja{font-family:'Shippori Mincho',serif;font-size:28px;font-weight:700;color:var(--ink);
+  margin-top:14px;letter-spacing:.04em;}
+.nf-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;
+  color:var(--ink-mute);margin-top:8px;letter-spacing:.04em;}
+.nf-zh{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--ink-soft);margin-top:12px;}
+
+/* 迷路了也順便學一個詞 */
+.nf-word{max-width:420px;margin:30px auto 0;padding:16px 18px;background:rgba(255,255,255,.6);
+  border:1px solid var(--line);border-left:3px solid var(--accent);text-align:left;}
+.nf-word .w-ja{font-family:'Shippori Mincho',serif;font-size:20px;color:var(--ink);}
+.nf-word .w-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;
+  color:var(--ink-mute);margin-top:4px;}
+.nf-word .w-meaning{font-family:'Noto Serif TC',serif;font-size:14px;color:var(--ink-soft);margin-top:8px;line-height:1.8;}
+
+.nf-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:34px 0 10px;}
+.nf-links a{font-family:'Noto Serif TC',serif;font-size:14px;text-decoration:none;color:var(--accent);
+  border:1px solid var(--accent-soft);border-radius:999px;padding:8px 18px;transition:background .15s,color .15s;}
+.nf-links a:hover{background:var(--accent);color:#fff;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/shared.css" />
+<script src="/js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <div class="nf">
+    <div class="nf-num">404</div>
+    <div class="nf-ja">ページが <ruby>見<rt>み</rt></ruby>つかりません</div>
+    <div class="nf-romaji">pēji ga mitsukarimasen</div>
+    <div class="nf-zh">找不到這一頁——網址可能打錯了，或這頁已經搬走。</div>
+
+    <div class="nf-word">
+      <div class="w-ja"><ruby>見<rt>み</rt></ruby>つかります</div>
+      <div class="w-romaji">mitsukarimasu</div>
+      <div class="w-meaning">「被找到」。是自己發生的變化，所以用 <b>見つかります</b>；
+      「（我）去找」則是 <b>探します</b>（sagashimasu）。這裡否定成
+      <b>見つかりません</b>，就是「找不到」。</div>
+    </div>
+
+    <div class="nf-links">
+      <a href="/index.html">回學習日誌</a>
+      <a href="/vocab.html">単語帳</a>
+      <a href="/grammar.html">文法</a>
+      <a href="/resources.html">資源</a>
+    </div>
+  </div>
+
+<site-footer></site-footer>
+</div>
+</body>
+</html>

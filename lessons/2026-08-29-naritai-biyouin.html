@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>髪が長くなりました — なる・する・〜たい 在美容院怎麼用</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* 對話 */
+.dialog{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:8px;padding:6px 18px 14px;margin:18px 0;}
+.dl-row{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.dl-row:last-child{border-bottom:none;}
+.dl-who{flex:0 0 62px;font-size:12px;color:var(--ink-mute);font-family:'Cormorant Garamond',serif;letter-spacing:.08em;padding-top:4px;}
+.dl-body{flex:1;}
+.dl-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.1;color:var(--ink);}
+.dl-ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);}
+.dl-cn{font-size:13.5px;color:var(--ink-soft);margin-top:2px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">髪が長くなりました — <span class="accent">なる</span>、<span class="accent">する</span>、還有想變成什麼的 <span class="accent">たい</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 29</div>
+  <p class="page-subtitle">同一個「短」，自己變長叫 なる、請人剪短叫 する；再加上「像她那樣的」のような 與「我想當〜」になりたいです</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    走進美容院坐下來，第一句話多半是「我頭髮變長了」，接著設計師會問「要剪短嗎」，
+    然後你拿出照片說「想要像她那樣的髮型」。這三句話剛好用到三組不同的說法——
+    自己發生的變化用 <strong>なる</strong>，人動手去改變它用 <strong>する</strong>，
+    拿別人當範本比一比用 <strong>〜のような</strong>。
+    本篇把這三組排在一起看，順便把「我想成為〜」的 <strong>〜になりたいです</strong> 講清楚，
+    最後補上店員回話固定會說的 <ruby>畏<rt>かしこ</rt></ruby>まりました 與期待某件事的 <ruby>楽<rt>たの</rt></ruby>しみです。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以美容院為場景，先把整段對話走一遍</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先不解釋文法，把這段對話從頭到尾唸過一次。等一下每個句型都會回到這裡來對照，
+    先有畫面再看規則會好記很多。
+  </p>
+
+  <div class="dialog">
+    <div class="dl-row">
+      <div class="dl-who">客 · Guest</div>
+      <div class="dl-body">
+        <div class="dl-ja"><ruby>髪<rt>かみ</rt></ruby>が<ruby>長<rt>なが</rt></ruby>くなりました。</div>
+        <div class="dl-ro">kami ga nagaku narimashita.</div>
+        <div class="dl-cn">頭髮變長了。</div>
+      </div>
+    </div>
+    <div class="dl-row">
+      <div class="dl-who">店員 · Staff</div>
+      <div class="dl-body">
+        <div class="dl-ja"><ruby>短<rt>みじか</rt></ruby>くしますか？</div>
+        <div class="dl-ro">mijikaku shimasu ka?</div>
+        <div class="dl-cn">要剪短嗎？（字面：要把它弄短嗎）</div>
+      </div>
+    </div>
+    <div class="dl-row">
+      <div class="dl-who">客 · Guest</div>
+      <div class="dl-body">
+        <div class="dl-ja"><ruby>彼女<rt>かのじょ</rt></ruby>のような<ruby>髪型<rt>かみがた</rt></ruby>になりたいです。</div>
+        <div class="dl-ro">kanojo no you na kamigata ni naritai desu.</div>
+        <div class="dl-cn">我想要變成像她那樣的髮型。</div>
+      </div>
+    </div>
+    <div class="dl-row">
+      <div class="dl-who">店員 · Staff</div>
+      <div class="dl-body">
+        <div class="dl-ja"><ruby>畏<rt>かしこ</rt></ruby>まりました。</div>
+        <div class="dl-ro">kashikomarimashita.</div>
+        <div class="dl-cn">好的、明白了。（店家對客人的說法）</div>
+      </div>
+    </div>
+    <div class="dl-row">
+      <div class="dl-who">客 · Guest</div>
+      <div class="dl-body">
+        <div class="dl-ja"><ruby>楽<rt>たの</rt></ruby>しみです。</div>
+        <div class="dl-ro">tanoshimi desu.</div>
+        <div class="dl-cn">好期待。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、なりました 前面的形容詞是要先變形的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <ruby>成<rt>な</rt></ruby>る 講的是「從一個狀態轉到另一個狀態」，這在
+    <a href="2026-08-25-naru.html" style="color:var(--accent);">8/25 的〜くなる／〜になる</a>已經整理過，
+    這裡拿本篇的四個形容詞再走一次。い形容詞把最後那個 <strong>い</strong> 換成 <strong>く</strong>，
+    後面才接 なります。
+  </p>
+
+  <div class="formula">
+    <h4>い形容詞 → 去 い ＋ く ＋ なります</h4>
+    <div class="fx">
+      <ruby>長<rt>なが</rt></ruby><s>い</s><span class="arw">→</span><ruby>長<rt>なが</rt></ruby><b>く</b>なりました<br>
+      <ruby>安<rt>やす</rt></ruby><s>い</s><span class="arw">→</span><ruby>安<rt>やす</rt></ruby><b>く</b>なりました<br>
+      <ruby>高<rt>たか</rt></ruby><s>い</s><span class="arw">→</span><ruby>高<rt>たか</rt></ruby><b>く</b>なりました<br>
+      <ruby>短<rt>みじか</rt></ruby><s>い</s><span class="arw">→</span><ruby>短<rt>みじか</rt></ruby><b>く</b>なりました
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="髪が長くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>髪<rt>かみ</rt></ruby>が<ruby>長<rt>なが</rt></ruby>くなりました</div>
+        <div class="word-romaji">kami ga nagaku narimashita</div>
+        <div class="word-meaning">頭髮變長了。<ruby>長<rt>なが</rt></ruby>い／<ruby>短<rt>みじか</rt></ruby>い 這組見 <a href="2026-08-16-reji-renji.html" style="color:var(--accent);">8/16 的單字課</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="安くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>安<rt>やす</rt></ruby>くなりました</div>
+        <div class="word-romaji">yasuku narimashita</div>
+        <div class="word-meaning">變便宜了。看到店裡標「值下げ」時心裡想的就是這句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="高くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>高<rt>たか</rt></ruby>くなりました</div>
+        <div class="word-romaji">takaku narimashita</div>
+        <div class="word-meaning">變貴了／變高了。<ruby>高<rt>たか</rt></ruby>い 同時管價錢與高度，看情境判斷</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>不是い形容詞的，一律走 に 這條路</strong><br>
+    な形容詞去掉 な、名詞則直接加，兩邊都接 <span class="j-mark">に</span>：
+    <ruby>綺麗<rt>きれい</rt></ruby>になりました（變漂亮了）、<ruby>髪型<rt>かみがた</rt></ruby>になりました（變成某個髮型）。
+    所以真正要判斷的只有一件事：<u>它是不是い形容詞</u>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、なる 與 する 的差別是「誰讓它變的」</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    形容詞變形的部分兩邊完全一樣，都是 <strong>長く</strong>、<strong>短く</strong>，
+    差別只在後面掛的是哪個動詞。頭髮自己長長，沒有人動它，用 <strong>なる</strong>；
+    設計師拿剪刀把它弄短，是有人出手，用 <strong>する</strong>。
+    中文都翻成「變」，日文卻分得很清楚。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>〜く なる</h4>
+      <div class="vs-sub">自己變成那樣，沒有人出手</div>
+      <ul>
+        <li><ruby>髪<rt>かみ</rt></ruby>が<ruby>長<rt>なが</rt></ruby>く<b>なりました</b><br><span style="color:var(--ink-mute);font-size:12.5px;">頭髮變長了</span></li>
+        <li><ruby>安<rt>やす</rt></ruby>く<b>なりました</b><br><span style="color:var(--ink-mute);font-size:12.5px;">（東西）變便宜了</span></li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>〜く する</h4>
+      <div class="vs-sub">有人刻意把它弄成那樣</div>
+      <ul>
+        <li><ruby>髪<rt>かみ</rt></ruby>を<ruby>短<rt>みじか</rt></ruby>く<b>します</b><br><span style="color:var(--ink-mute);font-size:12.5px;">把頭髮剪短</span></li>
+        <li><ruby>安<rt>やす</rt></ruby>く<b>します</b><br><span style="color:var(--ink-mute);font-size:12.5px;">（店家）算你便宜一點</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="短くしますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>短<rt>みじか</rt></ruby>くしますか</div>
+        <div class="word-romaji">mijikaku shimasu ka</div>
+        <div class="word-meaning">要剪短嗎？設計師問這句時，主詞（頭髮）雙方都清楚，所以整個省掉</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="はい、短くしてください">
+      <div class="word-content">
+        <div class="word-ja">はい、<ruby>短<rt>みじか</rt></ruby>くしてください</div>
+        <div class="word-romaji">hai, mijikaku shite kudasai</div>
+        <div class="word-meaning">好，請幫我剪短。要拜託對方動手就把 します 換成 してください</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="部屋を綺麗にします">
+      <div class="word-content">
+        <div class="word-ja"><ruby>部屋<rt>へや</rt></ruby>を<ruby>綺麗<rt>きれい</rt></ruby>にします</div>
+        <div class="word-romaji">heya o kirei ni shimasu</div>
+        <div class="word-meaning">把房間整理乾淨。な形容詞配 する 一樣走 に，跟配 なる 時同一個規則</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>助詞會跟著換</strong><br>
+    なる 前面的東西是自己在變，用 <span class="j-mark">が</span>：<ruby>髪<rt>かみ</rt></ruby><b>が</b>長くなりました。<br>
+    する 前面的東西是被處理的對象，用 <span class="j-mark">を</span>：<ruby>髪<rt>かみ</rt></ruby><b>を</b>短くします。<br>
+    <span style="color:var(--ink-mute);">記法是「有人動手就有受詞，有受詞就用 を」。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、〜のような 是拿別人來當範本</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    手機拿出照片說「我要這種的」，日文的說法是 <strong>名詞 ＋ のような ＋ 名詞</strong>，
+    等於中文的「像〜那樣的〜」。要注意的是 <ruby>様<rt>よう</rt></ruby> 本身是個な形容詞，
+    所以後面接名詞時尾巴是 <strong>な</strong>；如果後面接的是動詞或形容詞，尾巴要改成
+    <strong>に</strong>（<ruby>彼女<rt>かのじょ</rt></ruby>のように<ruby>歌<rt>うた</rt></ruby>います＝像她那樣唱歌）。
+  </p>
+
+  <div class="formula">
+    <h4>のような ／ のように 怎麼選</h4>
+    <div class="fx">
+      <ruby>彼女<rt>かのじょ</rt></ruby>のよう<b>な</b> ＋ <ruby>髪型<rt>かみがた</rt></ruby><span class="arw">←</span>後面是名詞<br>
+      <ruby>彼女<rt>かのじょ</rt></ruby>のよう<b>に</b> ＋ <ruby>歌<rt>うた</rt></ruby>います<span class="arw">←</span>後面是動詞
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="彼女のような髪型になりたいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼女<rt>かのじょ</rt></ruby>のような<ruby>髪型<rt>かみがた</rt></ruby>になりたいです</div>
+        <div class="word-romaji">kanojo no you na kamigata ni naritai desu</div>
+        <div class="word-meaning">想要像她那樣的髮型。<ruby>彼女<rt>かのじょ</rt></ruby> 是「她」也可以是「女朋友」，見 <a href="2026-08-16-dansei-josei.html" style="color:var(--accent);">8/16 男性・女性</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="先生のような人になりたいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>先生<rt>せんせい</rt></ruby>のような<ruby>人<rt>ひと</rt></ruby>になりたいです</div>
+        <div class="word-romaji">sensei no you na hito ni naritai desu</div>
+        <div class="word-meaning">想成為像老師那樣的人</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>髪型 的 かた 為什麼變成 がた</strong><br>
+    <ruby>髪<rt>かみ</rt></ruby>（頭髮）＋ <ruby>型<rt>かた</rt></ruby>（型），兩個詞黏成一個詞時後面那個字頭濁化，
+    唸成 <strong>かみがた</strong>。這就是<a href="2026-08-16-reji-renji.html" style="color:var(--accent);">前面幾課提過</a>的<strong>連濁</strong>，
+    跟 ごみ＋<ruby>箱<rt>はこ</rt></ruby>→ごみ<strong>ば</strong>こ 是同一回事。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、想成為什麼，是在 なります 上面再加 たい</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    講願望的 <strong>〜たい</strong> 在 <a href="2026-08-24-yotei-washoku.html" style="color:var(--accent);">8/24 的和食那篇</a>出現過：
+    把動詞的 ます 拿掉、換成 たい。套在 なります 上面就是 <strong>なりたい</strong>，
+    前面的名詞照樣配 <span class="j-mark">に</span>，整句是 <strong>名詞 ＋ に ＋ なりたいです</strong>。
+  </p>
+
+  <div class="formula">
+    <h4>なります → なりたいです</h4>
+    <div class="fx">
+      なり<s>ます</s><span class="arw">→</span>なり<b>たい</b>です<br>
+      <ruby>先生<rt>せんせい</rt></ruby><b>に</b>なりたいです<span class="arw">·</span><ruby>歌手<rt>かしゅ</rt></ruby><b>に</b>なりたいです
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="先生になりたいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>先生<rt>せんせい</rt></ruby>になりたいです</div>
+        <div class="word-romaji">sensei ni naritai desu</div>
+        <div class="word-meaning">我想當老師。<ruby>先生<rt>せんせい</rt></ruby> 的音讀拆解見 <a href="2026-05-13-onyomi-sensei.html" style="color:var(--accent);">5/13 那篇</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="歌手になりたいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>歌手<rt>かしゅ</rt></ruby>になりたいです</div>
+        <div class="word-romaji">kashu ni naritai desu</div>
+        <div class="word-meaning">我想當歌手。<ruby>歌手<rt>かしゅ</rt></ruby> 在 <a href="2026-07-24-shokugyou-shitsumon.html" style="color:var(--accent);">7/24 的職業問句</a>裡出現過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>たい 只能講自己，而且變成了い形容詞</strong><br>
+    ① なりたい 講的是<strong>說話者自己</strong>的願望。要說別人想當什麼，日文會改成
+    <ruby>彼<rt>かれ</rt></ruby>は<ruby>歌手<rt>かしゅ</rt></ruby>になりたが<strong>っています</strong>。<br>
+    ② なりたい 尾巴是 い，整個當成<strong>い形容詞</strong>用，所以否定是
+    <strong>なりたくないです</strong>，不是「なりたいじゃない」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、店員的「好的」跟你的「好的」不一樣</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <ruby>畏<rt>かしこ</rt></ruby>まりました 是店家、櫃檯、服務生接到客人要求時說的話，
+    語感比 わかりました 更低姿態，屬於謙讓語。<strong>這句是聽的，不是說的</strong>——
+    身為客人不會對店員說 かしこまりました，聽到它就知道對方接下了你的要求。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="かしこまりました。少々お待ちください">
+      <div class="word-content">
+        <div class="word-ja"><ruby>畏<rt>かしこ</rt></ruby>まりました。<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください</div>
+        <div class="word-romaji">kashikomarimashita. shoushou omachi kudasai</div>
+        <div class="word-meaning">好的，請稍等。這兩句幾乎是綁在一起出現的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <tr><th>說法</th><th>誰說</th><th>語氣</th></tr>
+    <tr><td class="col-ja">かしこまりました</td><td>店員對客人</td><td>最客氣，接下對方的要求</td></tr>
+    <tr><td class="col-ja">承知しました</td><td>對上司、客戶</td><td>商務場合，書信也常用</td></tr>
+    <tr><td class="col-ja">わかりました</td><td>對一般人</td><td>禮貌但平等，同事之間</td></tr>
+    <tr><td class="col-ja">了解です</td><td>對熟人、同輩</td><td>輕鬆，對上位者不適合</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、楽しい 是現在開心，楽しみ 是還沒發生就先開心</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這兩個字長得很像，方向卻是相反的。<ruby>楽<rt>たの</rt></ruby>しい 是形容詞，說的是
+    <strong>正在經歷或已經經歷過</strong>的事很開心；<ruby>楽<rt>たの</rt></ruby>しみ 是名詞，
+    說的是<strong>還沒發生</strong>的事讓人期待。剪頭髮剪到一半說「楽しみです」，
+    意思是期待等一下完成的樣子。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>楽しい</h4>
+      <div class="vs-sub">い形容詞 · 現在或過去</div>
+      <ul>
+        <li><ruby>今日<rt>きょう</rt></ruby>は<ruby>楽<rt>たの</rt></ruby>しいです<br><span style="color:var(--ink-mute);font-size:12.5px;">今天很開心</span></li>
+        <li><ruby>楽<rt>たの</rt></ruby>しかったです<br><span style="color:var(--ink-mute);font-size:12.5px;">（剛才）很開心</span></li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>楽しみ</h4>
+      <div class="vs-sub">名詞 · 對未來的期待</div>
+      <ul>
+        <li><ruby>楽<rt>たの</rt></ruby>しみです<br><span style="color:var(--ink-mute);font-size:12.5px;">好期待</span></li>
+        <li><ruby>明日<rt>あした</rt></ruby>が<ruby>楽<rt>たの</rt></ruby>しみです<br><span style="color:var(--ink-mute);font-size:12.5px;">好期待明天</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="新しい髪型が楽しみです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>あたら</rt></ruby>しい<ruby>髪型<rt>かみがた</rt></ruby>が<ruby>楽<rt>たの</rt></ruby>しみです</div>
+        <div class="word-romaji">atarashii kamigata ga tanoshimi desu</div>
+        <div class="word-meaning">好期待新髮型。期待的對象用 <span class="j-mark">が</span> 標出來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>句型</th><th>用在什麼時候</th><th>例</th></tr>
+    <tr><td><b>〜くなります</b></td><td>い形容詞，自己發生的變化，前面配 が</td><td class="col-ja">髪が長くなりました</td></tr>
+    <tr><td><b>〜になります</b></td><td>な形容詞與名詞，自己發生的變化</td><td class="col-ja">綺麗になりました</td></tr>
+    <tr><td><b>〜くします</b></td><td>い形容詞，有人動手去改，前面配 を</td><td class="col-ja">髪を短くします</td></tr>
+    <tr><td><b>〜にします</b></td><td>な形容詞與名詞，有人動手去改</td><td class="col-ja">部屋を綺麗にします</td></tr>
+    <tr><td><b>〜のような ＋名詞</b></td><td>拿別人當範本，後面接名詞</td><td class="col-ja">彼女のような髪型</td></tr>
+    <tr><td><b>〜のように ＋動詞</b></td><td>同上，但後面接的是動詞或形容詞</td><td class="col-ja">彼女のように歌います</td></tr>
+    <tr><td><b>〜になりたいです</b></td><td>說自己想成為什麼，名詞配 に</td><td class="col-ja">歌手になりたいです</td></tr>
+    <tr><td><b>かしこまりました</b></td><td>店員接下客人要求時說的</td><td class="col-ja">かしこまりました</td></tr>
+    <tr><td><b>楽しみです</b></td><td>對還沒發生的事表示期待</td><td class="col-ja">新しい髪型が楽しみです</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">九、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「頭髮變長了」與「把頭髮剪短」，助詞各要用哪一個？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>髪<rt>かみ</rt></ruby><span class="j-mark">が</span><ruby>長<rt>なが</rt></ruby>くなりました。／
+      <ruby>髪<rt>かみ</rt></ruby><span class="j-mark">を</span><ruby>短<rt>みじか</rt></ruby>くします。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kami ga nagaku narimashita. / kami o mijikaku shimasu.<br>
+      なる 是自己變，用 が；する 是有人動手，頭髮成了受詞，用 を。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：「我想當歌手。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>歌手<rt>かしゅ</rt></ruby>になりたいです。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kashu ni naritai desu.<br>
+      名詞後面配 に，なります 的 ます 換成 たい。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：「彼女のよう□髪型」與「彼女のよう□歌います」，兩個空格各填什麼？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      前者填 <span class="j-mark">な</span>，後者填 <span class="j-mark">に</span>。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">よう 是な形容詞，接名詞用 な、接動詞用 に。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：客人可以對店員說「かしこまりました」嗎？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      不行。這是<strong>店家對客人</strong>的謙讓說法，客人要回應只要說
+      <ruby>分<rt>わ</rt></ruby>かりました 或 はい、お<ruby>願<rt>ねが</rt></ruby>いします 就好。
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：剪髮前想說「好期待成品」，該用 楽しい 還是 楽しみ？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      用 <ruby>楽<rt>たの</rt></ruby>しみです。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">事情還沒發生，講的是期待，所以是名詞的 楽しみ；楽しい 是正在開心或已經開心過了。</span>
+    </p>
+  </details>
+
+  <!-- ─────────────────────────────────────── -->
+  <a href="2026-08-25-naru.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">形容詞加上 なる，就是在講變化 <span class="next-arrow">→</span></span>
+    <span class="next-sub">い形容詞去 い 加 く、な形容詞與名詞加 に 的完整整理，以及例外的 いい→よくなる</span>
+  </a>
+
+  <a href="2026-08-29-seki.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">席 — 店裡的五種座位 <span class="next-arrow">→</span></span>
+    <span class="next-sub">座椅子・座席・座敷・椅子席・カウンター席，順著看 席 怎麼黏在別的詞後面</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

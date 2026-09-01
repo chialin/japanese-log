@@ -1,6 +1,222 @@
 {
- "generated": "2026-08-29",
+ "generated": "2026-09-01",
  "words": [
+  {
+   "text": "時々 お寿司を 食べます",
+   "ja": "<ruby>時々<rt>ときどき</rt></ruby>　お<ruby>寿司<rt>すし</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べます",
+   "kana": "ときどき おすしを たべます",
+   "romaji": "tokidoki osushi o tabemasu",
+   "meaning": "我有時候會吃壽司 — 句尾是動詞，禮貌形用 ます；頻率副詞 時々 放在句子最前面",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "このカレーは辛かったです",
+   "ja": "このカレーは<ruby>辛<rt>から</rt></ruby>かったです",
+   "kana": "このカレーはからかったです",
+   "romaji": "kono karee wa karakatta desu",
+   "meaning": "這個咖哩（剛才吃的）很辣 — 句尾是い形容詞的過去，辛い → 辛かった，です 不動",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "カレーは 好きです",
+   "ja": "カレーは　<ruby>好<rt>す</rt></ruby>きです",
+   "kana": "カレーは すきです",
+   "romaji": "karee wa suki desu",
+   "meaning": "我喜歡咖哩 — 句尾是な形容詞，現在式就是原形加 です",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "昨日のカレーは辛かったです",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>のカレーは<ruby>辛<rt>から</rt></ruby>かったです",
+   "kana": "きのうのカレーはからかったです",
+   "romaji": "kinou no karee wa karakatta desu",
+   "meaning": "昨天的咖哩很辣 — 有時間詞的時候更看得出來為什麼要用過去",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "子供の時、カレーは好きではありませんでした",
+   "ja": "<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、カレーは<ruby>好<rt>す</rt></ruby>きではありませんでした",
+   "kana": "こどものとき、カレーはすきではありませんでした",
+   "romaji": "kodomo no toki, karee wa suki dewa arimasen deshita",
+   "meaning": "小時候我不喜歡咖哩 — な形容詞的過去否定，口語裡常說成 好きじゃなかったです",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "このカレーは辛くなかったです",
+   "ja": "このカレーは<ruby>辛<rt>から</rt></ruby>くなかったです",
+   "kana": "このカレーはからくなかったです",
+   "romaji": "kono karee wa karaku nakatta desu",
+   "meaning": "這個咖哩不辣 — い形容詞的過去否定：辛い → 辛くない → 辛くなかった",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "甘口",
+   "ja": "<ruby>甘口<rt>あまくち</rt></ruby>",
+   "kana": "あまくち",
+   "romaji": "amakuchi",
+   "meaning": "不辣、偏甜的口味 — 小朋友吃的咖哩幾乎都是這一級",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "中辛",
+   "ja": "<ruby>中辛<rt>ちゅうから</rt></ruby>",
+   "kana": "ちゅうから",
+   "romaji": "chuukara",
+   "meaning": "中辣 — 日本超市裡賣最好的一級，不確定要買哪種就選這個",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "辛口",
+   "ja": "<ruby>辛口<rt>からくち</rt></ruby>",
+   "kana": "からくち",
+   "romaji": "karakuchi",
+   "meaning": "重辣 — 也用在酒上，這時候指的是不甜的辛口日本酒",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "私達",
+   "ja": "<ruby>私達<rt>わたしたち</rt></ruby>",
+   "kana": "わたしたち",
+   "romaji": "watashitachi",
+   "meaning": "我們 — 達 接在指人的詞後面表示複數，也說 子供たち、友達",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "税金",
+   "ja": "<ruby>税金<rt>ぜいきん</rt></ruby>",
+   "kana": "ぜいきん",
+   "romaji": "zeikin",
+   "meaning": "稅金 — 跟中文完全同一個詞，只是唸法不同",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "税理士",
+   "ja": "<ruby>税理士<rt>ぜいりし</rt></ruby>",
+   "kana": "ぜいりし",
+   "romaji": "zeirishi",
+   "meaning": "稅務士（會計師事務所裡專門處理報稅的國家資格） — 台灣的對應職稱是記帳士／會計師",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
   {
    "text": "彼は眼鏡を買いました",
    "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>眼鏡<rt>めがね</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました",
@@ -5028,6 +5244,11 @@
      "date": "2026-08-16",
      "href": "lessons/2026-08-16-reji-renji.html",
      "title": "レジ と レンジ"
+    },
+    {
+     "date": "2026-08-31",
+     "href": "lessons/2026-08-31-karakatta-desu.html",
+     "title": "辛かったです"
     }
    ],
    "tags": [

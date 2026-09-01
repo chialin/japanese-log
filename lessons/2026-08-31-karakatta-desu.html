@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>辛かったです — 形容詞的過去式</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">吃完之後才說得出口的 <span class="accent">辛かったです</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 08 / 31</div>
+  <p class="page-subtitle">形容詞要講過去，動的不是句尾的 です，而是形容詞自己</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    吃完一頓飯之後想講感想，講的都是已經過去的事——「剛剛那盤咖哩很辣」不能說成現在式的
+    <ruby>辛<rt>から</rt></ruby>いです。日文要把形容詞改成過去的樣子，而且
+    <strong>い形容詞跟な形容詞改的地方完全不一樣</strong>：一個是形容詞自己變成 かった，另一個是把句尾的 です 換成 でした。
+    這篇先用一句 <ruby>辛<rt>から</rt></ruby>かったです 把規則講清楚，順著看三個最容易講錯的地方，
+    再把辣度的三個等級 <ruby>甘口<rt>あまくち</rt></ruby>・<ruby>中辛<rt>ちゅうから</rt></ruby>・<ruby>辛口<rt>からくち</rt></ruby>
+    與課堂上另外冒出來的幾個生字收成一組。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以一頓咖哩為主軸，把這三句排出來</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    課堂上的三句話其實是同一個場景的前後：先講平常的習慣，再講剛剛吃的那一盤，最後講自己的喜好。
+    三句的句尾長得都不一樣，而差別全部來自<strong>句子最後那個詞是什麼詞性</strong>——動詞、い形容詞，還是な形容詞。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 課堂上的三句</div>
+
+    <div class="word-item" data-text="時々 お寿司を 食べます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>時々<rt>ときどき</rt></ruby>　お<ruby>寿司<rt>すし</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べます</div>
+        <div class="word-romaji">tokidoki osushi o tabemasu</div>
+        <div class="word-meaning">我有時候會吃壽司 — 句尾是<strong>動詞</strong>，禮貌形用 ます；頻率副詞 時々 放在句子最前面</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="このカレーは辛かったです">
+      <div class="word-content">
+        <div class="word-ja">このカレーは<ruby>辛<rt>から</rt></ruby>かったです</div>
+        <div class="word-romaji">kono karee wa karakatta desu</div>
+        <div class="word-meaning">這個咖哩（剛才吃的）很辣 — 句尾是<strong>い形容詞</strong>的過去，辛い → 辛かった，です 不動</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カレーは 好きです">
+      <div class="word-content">
+        <div class="word-ja">カレーは　<ruby>好<rt>す</rt></ruby>きです</div>
+        <div class="word-romaji">karee wa suki desu</div>
+        <div class="word-meaning">我喜歡咖哩 — 句尾是<strong>な形容詞</strong>，現在式就是原形加 です</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>お<ruby>寿司<rt>すし</rt></ruby> 前面那個 お</strong><br>
+    跟 お<ruby>風呂<rt>ふろ</rt></ruby>、お<ruby>茶<rt>ちゃ</rt></ruby> 一樣，是講到日常飲食時習慣掛上去的美化語，
+    不加也通、加了聽起來比較柔和。<a href="2026-08-29-megane-o-kaimashita.html" style="color:var(--accent);">8/29 那堂課</a>談 お風呂 時看過同一個 お。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、い形容詞的過去是把 い 換成 かった</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    い形容詞在日文裡的地位跟動詞很接近——它自己就能變時態，不需要別人幫忙。
+    做法是把字尾的 <span class="compare">い</span> 拿掉，換成 <span class="compare">かった</span>，
+    要講得有禮貌就在後面補一個 です。<strong>です 本身完全不變</strong>，這是這條規則最違反直覺的地方。
+  </p>
+
+  <div class="formula">
+    <h4>い形容詞 · 過去</h4>
+    <div class="fx">
+      <ruby>辛<rt>から</rt></ruby><s>い</s><span class="arw">→</span><ruby>辛<rt>から</rt></ruby><b>かった</b><span class="arw">→</span><ruby>辛<rt>から</rt></ruby><b>かったです</b><br>
+      <ruby>美味<rt>おい</rt></ruby>し<s>い</s><span class="arw">→</span><ruby>美味<rt>おい</rt></ruby>し<b>かったです</b><br>
+      <ruby>高<rt>たか</rt></ruby><s>い</s><span class="arw">→</span><ruby>高<rt>たか</rt></ruby><b>かったです</b><br>
+      い<s>い</s><span class="arw">→</span><b>よかったです</b>（例外，過去要從 よい 變）
+    </div>
+  </div>
+
+  <div class="word-item" data-text="昨日のカレーは辛かったです">
+    <div class="word-content">
+      <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>のカレーは<ruby>辛<rt>から</rt></ruby>かったです</div>
+      <div class="word-romaji">kinou no karee wa karakatta desu</div>
+      <div class="word-meaning">昨天的咖哩很辣 — 有時間詞的時候更看得出來為什麼要用過去</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>不能說 <span style="text-decoration:line-through;">辛いでした</span></strong><br>
+    中文的「很辣」加上「了」就成了過去，所以很容易想把工作交給句尾的 です／でした 去做。
+    但い形容詞不把時態外包，<strong>該變的是形容詞，です 只負責禮貌</strong>。
+    同理也沒有 <span style="text-decoration:line-through;">辛かったでした</span> 這種說法——過去只講一次就夠了。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、な形容詞跟名詞則是換句尾的 でした</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <ruby>好<rt>す</rt></ruby>き 是な形容詞，它自己不會變時態，時態這件事整個交給後面的 です。
+    所以過去就是把 です 換成 <span class="compare">でした</span>，形容詞本身一個字都不動。
+    名詞走的也是同一條路，這點跟
+    <a href="2026-08-25-naru.html" style="color:var(--accent);">8/25 講 なる</a> 時「な形容詞與名詞同一國」的分法一致。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>い形容詞：自己變</h4>
+      <div class="vs-sub">い → かった，です 不動</div>
+      <ul>
+        <li>辛いです → 辛<b>かった</b>です</li>
+        <li>忙しいです → 忙し<b>かった</b>です</li>
+        <li>否定：辛<b>くなかった</b>です</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>な形容詞・名詞：です 變</h4>
+      <div class="vs-sub">形容詞不動，です → でした</div>
+      <ul>
+        <li>好きです → 好き<b>でした</b></li>
+        <li>綺麗です → 綺麗<b>でした</b></li>
+        <li>否定：好き<b>ではありませんでした</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 兩種過去各一句</div>
+
+    <div class="word-item" data-text="子供の時、カレーは好きではありませんでした">
+      <div class="word-content">
+        <div class="word-ja"><ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、カレーは<ruby>好<rt>す</rt></ruby>きではありませんでした</div>
+        <div class="word-romaji">kodomo no toki, karee wa suki dewa arimasen deshita</div>
+        <div class="word-meaning">小時候我不喜歡咖哩 — な形容詞的過去否定，口語裡常說成 好きじゃなかったです</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="このカレーは辛くなかったです">
+      <div class="word-content">
+        <div class="word-ja">このカレーは<ruby>辛<rt>から</rt></ruby>くなかったです</div>
+        <div class="word-romaji">kono karee wa karaku nakatta desu</div>
+        <div class="word-meaning">這個咖哩不辣 — い形容詞的過去否定：辛い → 辛くない → 辛くなかった</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>跟普通形對照著看</strong><br>
+    <a href="2026-08-12-ta-kei.html" style="color:var(--accent);">8/12 的た形</a>與
+    <a href="2026-08-12-jisei-shinkoukei.html" style="color:var(--accent);">時制那篇</a>講的是不加 です 的普通形（辛かった、好きだった）。
+    本篇的 〜かったです／〜でした 是同一件事套上禮貌的外殼，規則沒有變過，只是後面多掛了一個 です。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、辣度是分成三級寫在包裝上的</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    在日本買咖哩塊、點咖哩飯，包裝或菜單上一定看得到這三個詞。
+    <ruby>口<rt>くち</rt></ruby> 在這裡不是嘴巴，而是「口味」，
+    前面加上甘、中、辛就成了一組刻度。要注意<strong>三個詞的讀音不是照同一個模式來的</strong>：
+    甘口與辛口的 口 唸 くち，中辛卻是把 辛 唸成 から 放在後面。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 咖哩的三個辣度</div>
+
+    <div class="word-item" data-text="甘口">
+      <div class="word-content">
+        <div class="word-ja"><ruby>甘口<rt>あまくち</rt></ruby></div>
+        <div class="word-romaji">amakuchi</div>
+        <div class="word-meaning">不辣、偏甜的口味 — 小朋友吃的咖哩幾乎都是這一級</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="中辛">
+      <div class="word-content">
+        <div class="word-ja"><ruby>中辛<rt>ちゅうから</rt></ruby></div>
+        <div class="word-romaji">chuukara</div>
+        <div class="word-meaning">中辣 — 日本超市裡賣最好的一級，不確定要買哪種就選這個</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="辛口">
+      <div class="word-content">
+        <div class="word-ja"><ruby>辛口<rt>からくち</rt></ruby></div>
+        <div class="word-romaji">karakuchi</div>
+        <div class="word-meaning">重辣 — 也用在酒上，這時候指的是不甜的辛口日本酒</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>カレー 是從英文借來的</strong><br>
+    カレー ← 英語 <em>curry</em>（英語自己則借自南印度坦米爾語的 kaṟi）。
+    這個字在日文裡的語感比英文窄很多——說 カレー，指的通常就是日式咖哩飯那一味，
+    印度式的要另外說 インドカレー。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、剩下的生字收成一組</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    課堂上另外冒出來的幾個字沒有連在同一個句型上，但都值得先記起來：一個是「我們」的講法，
+    兩個是報稅季節會用到的詞。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 単語</div>
+
+    <div class="word-item" data-text="時々">
+      <div class="word-content">
+        <div class="word-ja"><ruby>時々<rt>ときどき</rt></ruby></div>
+        <div class="word-romaji">tokidoki</div>
+        <div class="word-meaning">有時候 — 頻率大約在「常常」與「偶爾」之間；「々」是重複前一個漢字的符號，等於 時時</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私達">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私達<rt>わたしたち</rt></ruby></div>
+        <div class="word-romaji">watashitachi</div>
+        <div class="word-meaning">我們 — <ruby>達<rt>たち</rt></ruby> 接在指人的詞後面表示複數，也說 <ruby>子供<rt>こども</rt></ruby>たち、<ruby>友達<rt>ともだち</rt></ruby></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="税金">
+      <div class="word-content">
+        <div class="word-ja"><ruby>税金<rt>ぜいきん</rt></ruby></div>
+        <div class="word-romaji">zeikin</div>
+        <div class="word-meaning">稅金 — 跟中文完全同一個詞，只是唸法不同</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="税理士">
+      <div class="word-content">
+        <div class="word-ja"><ruby>税理士<rt>ぜいりし</rt></ruby></div>
+        <div class="word-romaji">zeirishi</div>
+        <div class="word-meaning">稅務士（會計師事務所裡專門處理報稅的國家資格） — 台灣的對應職稱是記帳士／會計師</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 税理士拆成三個字各記各的</strong><br>
+    <span class="compare">金 kim → きん</span>、<span class="compare">理 li → り</span>、<span class="compare">士 su → し</span>，
+    這三個字的日文音讀跟台語唸起來都很接近，把它們當成同一組認得就好：
+    税金＝ぜい＋<b>きん</b>、税理士＝ぜい＋<b>り</b>＋<b>し</b>。
+    只有 税（ぜい）本身跟台語對不太上，那個字單獨背。
+    另外 理 唸 り 是整組通用的：<ruby>料理<rt>りょうり</rt></ruby>、<ruby>無理<rt>むり</rt></ruby>、<ruby>理由<rt>りゆう</rt></ruby> 都是同一個 り。
+  </div>
+
+  <div class="note">
+    📝 <strong>時々 之前排過一次刻度</strong><br>
+    <a href="2026-08-20-hindo.html" style="color:var(--accent);">8/20 的頻度副詞</a>把 いつも → よく → 時々 → たまに → あまり → 全然
+    照頻率高低排成一列，忘記 時々 大概多常的時候回去看那張表最快。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>詞性</th><th>現在（禮貌）</th><th>過去（禮貌）</th><th>過去否定（禮貌）</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>い形容詞</strong><br><span style="font-size:13px;color:var(--ink-mute);">辛い</span></td>
+        <td class="col-ja">辛い<b>です</b></td>
+        <td class="col-ja">辛<b>かったです</b></td>
+        <td class="col-ja">辛<b>くなかったです</b></td>
+      </tr>
+      <tr>
+        <td><strong>な形容詞</strong><br><span style="font-size:13px;color:var(--ink-mute);">好き</span></td>
+        <td class="col-ja">好き<b>です</b></td>
+        <td class="col-ja">好き<b>でした</b></td>
+        <td class="col-ja">好き<b>ではありませんでした</b></td>
+      </tr>
+      <tr>
+        <td><strong>名詞</strong><br><span style="font-size:13px;color:var(--ink-mute);">学生</span></td>
+        <td class="col-ja">学生<b>です</b></td>
+        <td class="col-ja">学生<b>でした</b></td>
+        <td class="col-ja">学生<b>ではありませんでした</b></td>
+      </tr>
+      <tr>
+        <td><strong>例外</strong><br><span style="font-size:13px;color:var(--ink-mute);">いい</span></td>
+        <td class="col-ja">いい<b>です</b></td>
+        <td class="col-ja"><b>よかったです</b></td>
+        <td class="col-ja"><b>よくなかったです</b></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「昨天的咖哩很辣。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>昨日<rt>きのう</rt></ruby>のカレーは<ruby>辛<rt>から</rt></ruby>かったです。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kinou no karee wa karakatta desu.<br>
+      辛い 去 い 加 かった，です 保持原樣。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：把「好きです」改成過去式。</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>好<rt>す</rt></ruby>きでした。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">suki deshita.<br>
+      好き 是な形容詞，自己不變，換的是句尾的 です → でした。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：下面這句錯在哪裡？「このカレーは辛いでした。」</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      要改成 このカレーは<ruby>辛<rt>から</rt></ruby>かったです。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kono karee wa karakatta desu.<br>
+      辛い 是い形容詞，過去要它自己變成 辛かった；でした 只給な形容詞跟名詞用。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：「我有時候會吃壽司。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>時々<rt>ときどき</rt></ruby>お<ruby>寿司<rt>すし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">tokidoki osushi o tabemasu.<br>
+      頻率副詞放句首，吃的東西用 を 標示。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：「這個咖哩不辣。」（過去）日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      このカレーは<ruby>辛<rt>から</rt></ruby>くなかったです。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kono karee wa karaku nakatta desu.<br>
+      先變否定 辛くない，再把 ない 當成一個い形容詞變過去 → なかった。</span>
+    </p>
+  </details>
+
+  <a href="2026-08-25-naru.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">形容詞加上 なる，就是在講變化 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同樣分い形容詞與な形容詞兩條路：一個去 い 加 く，一個加 に</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

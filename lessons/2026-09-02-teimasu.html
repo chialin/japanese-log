@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜ています — 正在做的事要這樣說</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">〜ています</span> — 正在做的事要這樣說</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 09 / 02</div>
+  <p class="page-subtitle">六句家裡正在發生的事，順著回答一個問題：彼は漫画を読んでいます 為什麼不能只說 読む</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    描述眼前正在發生的事——照片裡的人在做什麼、家人現在在忙什麼、電話裡對方問你在幹嘛——
+    日文一律用 <strong>〜ています</strong>，而不是動詞的原形。
+    本篇先把六個生活場景的句子排出來，接著拆開 ています 的組成（前半是<strong>て形</strong>），
+    然後正面回答一個很容易卡住的問題：<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます
+    為什麼不能寫成 <ruby>読<rt>よ</rt></ruby>む。最後補上否定、過去，跟口語會把音吃掉的講法。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以「家裡此刻的六個畫面」為主軸，把句子排出來</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    先看句子本身。六句的骨架完全一樣：<strong>誰は ○○を 動詞ています</strong>，
+    講的都是<strong>說話的這一刻正在進行</strong>的動作。
+    先把耳朵養熟，規則放到下一段再拆。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 六個正在進行的畫面</div>
+
+    <div class="word-item" data-text="私は朝ご飯を作っています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby><span class="j-mark">を</span><ruby>作<rt>つく</rt></ruby>っています</div>
+        <div class="word-romaji">watashi wa asagohan o tsukutte imasu</div>
+        <div class="word-meaning">我正在做早餐。<ruby>作<rt>つく</rt></ruby>る → <ruby>作<rt>つく</rt></ruby>って ＋ います</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私はおにぎりを食べています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>はおにぎり<span class="j-mark">を</span><ruby>食<rt>た</rt></ruby>べています</div>
+        <div class="word-romaji">watashi wa onigiri o tabete imasu</div>
+        <div class="word-meaning">我正在吃飯糰。<ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べて ＋ います</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼は財布を探しています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>は<ruby>財布<rt>さいふ</rt></ruby><span class="j-mark">を</span><ruby>探<rt>さが</rt></ruby>しています</div>
+        <div class="word-romaji">kare wa saifu o sagashite imasu</div>
+        <div class="word-meaning">他正在找錢包。<ruby>探<rt>さが</rt></ruby>す → <ruby>探<rt>さが</rt></ruby>して ＋ います</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼は漫画を読んでいます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby><span class="j-mark">を</span><ruby>読<rt>よ</rt></ruby>んでいます</div>
+        <div class="word-romaji">kare wa manga o yonde imasu</div>
+        <div class="word-meaning">他正在看漫畫。<ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby>んで ＋ います（本篇第三段專門講這一句）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女はユーチューブを見ています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼女<rt>かのじょ</rt></ruby>はユーチューブ<span class="j-mark">を</span><ruby>見<rt>み</rt></ruby>ています</div>
+        <div class="word-romaji">kanojo wa yuuchuubu o mite imasu</div>
+        <div class="word-meaning">她正在看 YouTube。<ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby>て ＋ います</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼女はお風呂を掃除しています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼女<rt>かのじょ</rt></ruby>はお<ruby>風呂<rt>ふろ</rt></ruby><span class="j-mark">を</span><ruby>掃除<rt>そうじ</rt></ruby>しています</div>
+        <div class="word-romaji">kanojo wa ofuro o souji shite imasu</div>
+        <div class="word-meaning">她正在打掃浴室。<ruby>掃除<rt>そうじ</rt></ruby>する → <ruby>掃除<rt>そうじ</rt></ruby>して ＋ います</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>お風呂 前面那個 お 跟 洗います 這個動詞，之前的課已經講過</strong><br>
+    お風呂 的 お 是美化語，這個詞習慣上一律帶著它；
+    「洗澡的浴缸自己刷洗」在
+    <a href="2026-08-29-megane-o-kaimashita.html" style="color:var(--accent);">8/29 ました</a>
+    那篇是 <ruby>風呂<rt>ふろ</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>いました。
+    本篇的 <ruby>掃除<rt>そうじ</rt></ruby>します 範圍更大，指整間浴室的打掃。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、ています 的前半是て形，て形照語尾變</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    <strong>ています ＝ て形 ＋ います</strong>。後半的 います 永遠不變，
+    會變的只有前半。而て形怎麼變，看的是動詞屬於哪一類，五段動詞再看它的<strong>語尾那個音</strong>。
+    這條規則跟
+    <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9 五段動詞</a>
+    那篇是同一套判斷法，先確定類別再套公式。
+  </p>
+
+  <div class="formula">
+    <h4>Ⅰ類（五段動詞）— 語尾決定變成 って／んで／いて／して</h4>
+    <div class="fx">
+      う・つ・る　<span class="arw">→</span>　<b>って</b>　　<ruby>買<rt>か</rt></ruby>う <span class="arw">→</span> <ruby>買<rt>か</rt></ruby>って　／　<ruby>作<rt>つく</rt></ruby>る <span class="arw">→</span> <ruby>作<rt>つく</rt></ruby>って<br>
+      む・ぶ・ぬ　<span class="arw">→</span>　<b>んで</b>　　<ruby>読<rt>よ</rt></ruby>む <span class="arw">→</span> <ruby>読<rt>よ</rt></ruby>んで　／　<ruby>飲<rt>の</rt></ruby>む <span class="arw">→</span> <ruby>飲<rt>の</rt></ruby>んで<br>
+      く　　　　　<span class="arw">→</span>　<b>いて</b>　　<ruby>書<rt>か</rt></ruby>く <span class="arw">→</span> <ruby>書<rt>か</rt></ruby>いて<br>
+      ぐ　　　　　<span class="arw">→</span>　<b>いで</b>　　<ruby>泳<rt>およ</rt></ruby>ぐ <span class="arw">→</span> <ruby>泳<rt>およ</rt></ruby>いで<br>
+      す　　　　　<span class="arw">→</span>　<b>して</b>　　<ruby>探<rt>さが</rt></ruby>す <span class="arw">→</span> <ruby>探<rt>さが</rt></ruby>して
+    </div>
+  </div>
+
+  <div class="formula">
+    <h4>Ⅱ類（一段動詞）— 去掉 る 直接加 て</h4>
+    <div class="fx">
+      <ruby>食<rt>た</rt></ruby>べ<s>る</s> <span class="arw">→</span> <ruby>食<rt>た</rt></ruby>べ<b>て</b>　／　<ruby>見<rt>み</rt></ruby><s>る</s> <span class="arw">→</span> <ruby>見<rt>み</rt></ruby><b>て</b>　／　<ruby>起<rt>お</rt></ruby>き<s>る</s> <span class="arw">→</span> <ruby>起<rt>お</rt></ruby>き<b>て</b>
+    </div>
+  </div>
+
+  <div class="formula">
+    <h4>Ⅲ類（不規則）— 只有兩個，背起來就結束了</h4>
+    <div class="fx">
+      する <span class="arw">→</span> <b>して</b>　（<ruby>掃除<rt>そうじ</rt></ruby>する <span class="arw">→</span> <ruby>掃除<rt>そうじ</rt></ruby>して）<br>
+      <ruby>来<rt>く</rt></ruby>る <span class="arw">→</span> <b><ruby>来<rt>き</rt></ruby>て</b>　（漢字不變，讀音從 く 變成 き）
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong><ruby>行<rt>い</rt></ruby>く 是唯一要另外記的例外</strong><br>
+    它的語尾是 く，照公式應該變成 ✗ <ruby>行<rt>い</rt></ruby>いて，但實際上是
+    ○ <ruby>行<rt>い</rt></ruby><strong>って</strong>。整個五段動詞裡只有這一個字破例。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、「彼は漫画を読む」不能用，原因有兩層</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這是本篇最重要的一段。中文說「他看漫畫」跟「他正在看漫畫」，動詞長得一模一樣，
+    差別靠「正在」兩個字補；日文沒有這種補丁，<strong>動詞自己要換形狀</strong>。
+    而 <ruby>読<rt>よ</rt></ruby>む 之所以不能直接放進這句，問題其實有兩層，
+    一層是禮貌度，一層是時間。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>第一層：読む 是常體，不能配丁寧體的句子</h4>
+      <div class="vs-sub">読む 是字典上查得到的原形（辭書形），語氣等於中文的「他看漫畫」講給朋友聽</div>
+      <ul>
+        <li>常體：<ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>む</li>
+        <li>丁寧：<ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます</li>
+        <li>上課練習的句子一律是丁寧體，所以句尾至少要到 <b>読みます</b> 這一步</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>第二層：就算改成 読みます，講的也不是此刻</h4>
+      <div class="vs-sub">ます 形涵蓋的是習慣與未來，不是眼前這一秒</div>
+      <ul>
+        <li><ruby>読<rt>よ</rt></ruby>みます＝他（平常）看漫畫／等一下要看</li>
+        <li><ruby>読<rt>よ</rt></ruby>んでいます＝他<strong>現在正在</strong>看</li>
+        <li>描述照片、描述眼前的人，一定走 <b>ています</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 同一個動詞，三種形狀擺在一起聽</div>
+
+    <div class="word-item" data-text="彼は漫画を読みます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます</div>
+        <div class="word-romaji">kare wa manga o yomimasu</div>
+        <div class="word-meaning">他（平常都）看漫畫／他等一下要看漫畫 — 習慣或未來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼は漫画を読んでいます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます</div>
+        <div class="word-romaji">kare wa manga o yonde imasu</div>
+        <div class="word-meaning">他正在看漫畫 — 說話的這一刻，書就攤在他手上</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="彼は漫画を読みました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みました</div>
+        <div class="word-romaji">kare wa manga o yomimashita</div>
+        <div class="word-meaning">他看了漫畫 — 已經看完，做法見 <a href="2026-08-29-megane-o-kaimashita.html" style="color:var(--accent);">8/29 ました</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>那辭書形 読む 什麼時候才會用到</strong><br>
+    辭書形不是沒用，只是它很少單獨當句尾。它真正的工作是<strong>接在別的東西前面</strong>：
+    <ruby>読<rt>よ</rt></ruby>む<ruby>時<rt>とき</rt></ruby>（看的時候）、<ruby>読<rt>よ</rt></ruby>むために（為了看）、
+    <ruby>読<rt>よ</rt></ruby>むことができます（會看／可以看）。
+    <a href="2026-07-10-jikoshoukai.html" style="color:var(--accent);">7/10 自我介紹</a>裡的
+    <ruby>住<rt>す</rt></ruby>むために<ruby>勉強<rt>べんきょう</rt></ruby>しています 就是這個用法。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、ています 其實有三種意思，看動詞是哪一種就知道</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    上面六句都是「正在進行」，但 ています 不只這一種意思。
+    差別不在句型，而在<strong>動詞本身是持續一段時間的動作，還是一瞬間就結束的變化</strong>。
+    一瞬間就結束的動詞配上 ています，講的會是<strong>那個動作留下來的狀態</strong>。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th>意思</th><th>什麼樣的動詞</th><th>例句</th></tr>
+    <tr>
+      <td><b>正在進行</b></td>
+      <td>做起來要花一段時間的動作</td>
+      <td class="col-ja"><ruby>読<rt>よ</rt></ruby>んでいます／<ruby>作<rt>つく</rt></ruby>っています／<ruby>掃除<rt>そうじ</rt></ruby>しています</td>
+    </tr>
+    <tr>
+      <td><b>狀態殘留</b></td>
+      <td>一瞬間就完成的變化</td>
+      <td class="col-ja"><ruby>結婚<rt>けっこん</rt></ruby>しています（已婚）／<ruby>空<rt>す</rt></ruby>いています（空著）／<ruby>知<rt>し</rt></ruby>っています（知道）</td>
+    </tr>
+    <tr>
+      <td><b>長期的習慣</b></td>
+      <td>反覆做、做了很久的事</td>
+      <td class="col-ja"><ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しています／<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます</td>
+    </tr>
+  </table>
+
+  <div class="alert">
+    ⚠️ <strong><ruby>結婚<rt>けっこん</rt></ruby>しています 不是「正在結婚」</strong><br>
+    結婚這個動作一秒就完成，所以 ています 抓到的是完成之後的狀態，也就是「已婚」。
+    同一個道理，<ruby>空<rt>す</rt></ruby>いています 是「空著」不是「正在空」——
+    這在 <a href="2026-08-26-aite-imasu.html" style="color:var(--accent);">8/26 空いていますか</a>
+    與 <a href="2026-06-24-sunde-imasu.html" style="color:var(--accent);">6/24 住んでいます</a> 都走過一次。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、否定跟過去只要動後面那半</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    這是 ています 最好記的地方：<strong>て形完全不動</strong>，
+    要否定、要過去，都只換後面的 います。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th>形</th><th>句尾</th><th>例</th><th>意思</th></tr>
+    <tr><td>現在肯定</td><td><b>ています</b></td><td class="col-ja"><ruby>読<rt>よ</rt></ruby>んでいます</td><td>正在看</td></tr>
+    <tr><td>現在否定</td><td><b>ていません</b></td><td class="col-ja"><ruby>読<rt>よ</rt></ruby>んでいません</td><td>沒有在看</td></tr>
+    <tr><td>過去肯定</td><td><b>ていました</b></td><td class="col-ja"><ruby>読<rt>よ</rt></ruby>んでいました</td><td>（那時候）正在看</td></tr>
+    <tr><td>過去否定</td><td><b>ていませんでした</b></td><td class="col-ja"><ruby>読<rt>よ</rt></ruby>んでいませんでした</td><td>（那時候）沒有在看</td></tr>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 換句尾練一次</div>
+
+    <div class="word-item" data-text="彼はまだ財布を探しています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かれ</rt></ruby>はまだ<ruby>財布<rt>さいふ</rt></ruby>を<ruby>探<rt>さが</rt></ruby>しています</div>
+        <div class="word-romaji">kare wa mada saifu o sagashite imasu</div>
+        <div class="word-meaning">他還在找錢包。まだ＝還（動作持續中）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私はまだ朝ご飯を食べていません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>はまだ<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べていません</div>
+        <div class="word-romaji">watashi wa mada asagohan o tabete imasen</div>
+        <div class="word-meaning">我還沒吃早餐。中文的「還沒」在日文是 まだ ＋ ていません，不是 ません</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>「還沒吃」要用 ていません，不能用 ません</strong><br>
+    ✗ まだ<ruby>食<rt>た</rt></ruby>べません＝（我）不打算吃、不吃<br>
+    ○ まだ<ruby>食<rt>た</rt></ruby>べていません＝還沒吃（但等一下會吃）<br>
+    <span style="color:var(--ink-mute);">ません 否定的是意願或習慣，ていません 否定的是「到目前為止還沒發生」。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、講快的時候，中間那個い會被吃掉</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    日常對話裡幾乎聽不到完整的「ています」，
+    大家會把中間的 <strong>い</strong> 省略掉，變成 <strong>てます</strong>。
+    這不是錯，是口語的常態；但寫下來、正式場合、考試作答，還是寫完整的形。
+  </p>
+
+  <table class="joshi-table">
+    <tr><th>完整形（寫）</th><th>口語（聽）</th></tr>
+    <tr><td class="col-ja"><ruby>読<rt>よ</rt></ruby>んでいます</td><td class="col-ja"><ruby>読<rt>よ</rt></ruby>んでます</td></tr>
+    <tr><td class="col-ja"><ruby>見<rt>み</rt></ruby>ています</td><td class="col-ja"><ruby>見<rt>み</rt></ruby>てます</td></tr>
+    <tr><td class="col-ja"><ruby>知<rt>し</rt></ruby>っています</td><td class="col-ja"><ruby>知<rt>し</rt></ruby>ってます</td></tr>
+  </table>
+
+  <div class="note">
+    📝 <strong>這個省略在 7/23 的會話課出現過</strong><br>
+    <a href="2026-07-23-kaiwa.html" style="color:var(--accent);">7/23 会話</a>
+    那篇的「<ruby>知<rt>し</rt></ruby>ってます」就是同一回事，
+    當時是單獨記一個詞，現在可以把它看成整條規則的一個例子。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>動詞（辭書形）</th><th>類別</th><th>て形</th><th>ています</th><th>意思</th></tr>
+    <tr><td class="col-ja"><ruby>作<rt>つく</rt></ruby>る</td><td>Ⅰ・る</td><td class="col-ja"><ruby>作<rt>つく</rt></ruby>って</td><td class="col-ja"><ruby>作<rt>つく</rt></ruby>っています</td><td>正在做</td></tr>
+    <tr><td class="col-ja"><ruby>読<rt>よ</rt></ruby>む</td><td>Ⅰ・む</td><td class="col-ja"><ruby>読<rt>よ</rt></ruby>んで</td><td class="col-ja"><ruby>読<rt>よ</rt></ruby>んでいます</td><td>正在看（書）</td></tr>
+    <tr><td class="col-ja"><ruby>探<rt>さが</rt></ruby>す</td><td>Ⅰ・す</td><td class="col-ja"><ruby>探<rt>さが</rt></ruby>して</td><td class="col-ja"><ruby>探<rt>さが</rt></ruby>しています</td><td>正在找</td></tr>
+    <tr><td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td><td>Ⅱ</td><td class="col-ja"><ruby>食<rt>た</rt></ruby>べて</td><td class="col-ja"><ruby>食<rt>た</rt></ruby>べています</td><td>正在吃</td></tr>
+    <tr><td class="col-ja"><ruby>見<rt>み</rt></ruby>る</td><td>Ⅱ</td><td class="col-ja"><ruby>見<rt>み</rt></ruby>て</td><td class="col-ja"><ruby>見<rt>み</rt></ruby>ています</td><td>正在看</td></tr>
+    <tr><td class="col-ja"><ruby>掃除<rt>そうじ</rt></ruby>する</td><td>Ⅲ</td><td class="col-ja"><ruby>掃除<rt>そうじ</rt></ruby>して</td><td class="col-ja"><ruby>掃除<rt>そうじ</rt></ruby>しています</td><td>正在打掃</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「我正在做早餐。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>私<rt>わたし</rt></ruby>は<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>っています。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">watashi wa asagohan o tsukutte imasu.<br>
+      作る 的語尾是 る，屬於 って 那一組。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：把 <ruby>泳<rt>およ</rt></ruby>ぐ 跟 <ruby>書<rt>か</rt></ruby>く 各自改成 ています。</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>泳<rt>およ</rt></ruby>いでいます／<ruby>書<rt>か</rt></ruby>いています。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">oyoide imasu ／ kaite imasu.<br>
+      ぐ 變 いで（帶濁音），く 變 いて（不帶）。差一個點而已，唸出來要分清楚。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：下面這句錯在哪裡？「<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>今<rt>いま</rt></ruby>ユーチューブを<ruby>見<rt>み</rt></ruby>ます。」</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      要改成 <ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>今<rt>いま</rt></ruby>ユーチューブを<ruby>見<rt>み</rt></ruby>ています。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kanojo wa ima yuuchuubu o mite imasu.<br>
+      句子裡有 今，講的就是此刻正在進行，見ます 表達的是習慣或等一下要做。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：「我還沒吃飯糰。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>私<rt>わたし</rt></ruby>はまだおにぎりを<ruby>食<rt>た</rt></ruby>べていません。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">watashi wa mada onigiri o tabete imasen.<br>
+      「還沒」是 まだ ＋ ていません；寫成 食べません 會變成「我不吃」。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：<ruby>結婚<rt>けっこん</rt></ruby>しています 是什麼意思？為什麼不是「正在結婚」？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      意思是「已婚」。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kekkon shite imasu.<br>
+      結婚是一瞬間完成的動作，這種動詞配上 ています，抓到的是完成後留下來的狀態。</span>
+    </p>
+  </details>
+
+  <a href="2026-09-02-taiwan-ni-kaerimasu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title"><ruby>台湾<rt>たいわん</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります — 回台灣要見的人與要帶的伴手禮 <span class="next-arrow">→</span></span>
+    <span class="next-sub">兄弟・姉妹・姉 的分法，明太子與鮭這兩個食物詞，以及「親と一緒に」跟「親に会います」差在哪裡</span>
+  </a>
+
+  <a href="2026-08-12-jisei-shinkoukei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">過去・現在・現在進行 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一套 ている 放進整組時制裡看（全篇常體），本篇是它的丁寧體實作版</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

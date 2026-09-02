@@ -1,6 +1,492 @@
 {
- "generated": "2026-09-01",
+ "generated": "2026-09-02",
  "words": [
+  {
+   "text": "来月台湾に帰ります",
+   "ja": "<ruby>来月<rt>らいげつ</rt></ruby><ruby>台湾<rt>たいわん</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります",
+   "kana": "らいげつたいわんにかえります",
+   "romaji": "raigetsu taiwan ni kaerimasu",
+   "meaning": "下個月要回台灣。目的地用 に，用法同 8/4 目的地に",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "親に会います",
+   "ja": "<ruby>親<rt>おや</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います",
+   "kana": "おやにあいます",
+   "romaji": "oya ni aimasu",
+   "meaning": "要跟父母見面。見面的對象一律用 に",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私は九州で明太子を買いました",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>九州<rt>きゅうしゅう</rt></ruby>で<ruby>明太子<rt>めんたいこ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました",
+   "kana": "わたしはきゅうしゅうでめんたいこをかいました",
+   "romaji": "watashi wa kyuushuu de mentaiko o kaimashita",
+   "meaning": "我在九州買了明太子。動作發生的地點用 で，買了＝ました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "兄弟",
+   "ja": "<ruby>兄弟<rt>きょうだい</rt></ruby>",
+   "kana": "きょうだい",
+   "romaji": "kyoudai",
+   "meaning": "兄弟姊妹（總稱）。字面是兄＋弟，但實際上不分性別，問人有沒有手足就用這個詞",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "姉妹",
+   "ja": "<ruby>姉妹<rt>しまい</rt></ruby>",
+   "kana": "しまい",
+   "romaji": "shimai",
+   "meaning": "姊妹。要特別強調全部都是女生時才用，一般聊天講 兄弟 就夠了",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "姉",
+   "ja": "<ruby>姉<rt>あね</rt></ruby>",
+   "kana": "あね",
+   "romaji": "ane",
+   "meaning": "（我的）姊姊。只用來對外講自己的姊姊；當面叫她的時候反而是 お姉ちゃん",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "兄弟が二人います",
+   "ja": "<ruby>兄弟<rt>きょうだい</rt></ruby>が<ruby>二人<rt>ふたり</rt></ruby>います",
+   "kana": "きょうだいがふたりいます",
+   "romaji": "kyoudai ga futari imasu",
+   "meaning": "我有兩個兄弟姊妹。人的存在用 います，見 8/16 Xがいます",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "親と一緒に台湾に帰ります",
+   "ja": "<ruby>親<rt>おや</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>台湾<rt>たいわん</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります",
+   "kana": "おやといっしょにたいわんにかえります",
+   "romaji": "oya to issho ni taiwan ni kaerimasu",
+   "meaning": "我要和父母一起回台灣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "台湾で親に会います",
+   "ja": "<ruby>台湾<rt>たいわん</rt></ruby>で<ruby>親<rt>おや</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います",
+   "kana": "たいわんでおやにあいます",
+   "romaji": "taiwan de oya ni aimasu",
+   "meaning": "我要在台灣跟父母見面。地點 で、對象 に，兩個助詞各司其職",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "明太子",
+   "ja": "<ruby>明太子<rt>めんたいこ</rt></ruby>",
+   "kana": "めんたいこ",
+   "romaji": "mentaiko",
+   "meaning": "辣味醃鱈魚卵。福岡的代表名產，常溫保存有限，帶回台灣要注意",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "鮭",
+   "ja": "<ruby>鮭<rt>しゃけ</rt></ruby>",
+   "kana": "しゃけ",
+   "romaji": "shake",
+   "meaning": "鮭魚。訓讀本來是 さけ，口語常說成 しゃけ，兩個都通",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "鮭のおにぎりを食べています",
+   "ja": "<ruby>鮭<rt>しゃけ</rt></ruby>のおにぎりを<ruby>食<rt>た</rt></ruby>べています",
+   "kana": "しゃけのおにぎりをたべています",
+   "romaji": "shake no onigiri o tabete imasu",
+   "meaning": "我正在吃鮭魚飯糰。〜の〜 的接法見 8/1 助詞の",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "財布",
+   "ja": "<ruby>財布<rt>さいふ</rt></ruby>",
+   "kana": "さいふ",
+   "romaji": "saifu",
+   "meaning": "錢包。財 跟 布 都是音讀，字面就是「裝錢的布袋」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "漫画",
+   "ja": "<ruby>漫画<rt>まんが</rt></ruby>",
+   "kana": "まんが",
+   "romaji": "manga",
+   "meaning": "漫畫。這個詞後來反過來被英文借走，變成 manga 專指日本漫畫",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "ユーチューブ",
+   "ja": "ユーチューブ",
+   "kana": "ユーチューブ",
+   "romaji": "yuuchuubu",
+   "meaning": "YouTube ← 英語 YouTube。日文寫成片假名時要拉兩個長音（ユー・チュー），少拉一個就唸不對",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "掃除",
+   "ja": "<ruby>掃除<rt>そうじ</rt></ruby>",
+   "kana": "そうじ",
+   "romaji": "souji",
+   "meaning": "打掃。加 します 變動詞：掃除します＝做打掃",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "九州",
+   "ja": "<ruby>九州<rt>きゅうしゅう</rt></ruby>",
+   "kana": "きゅうしゅう",
+   "romaji": "kyuushuu",
+   "meaning": "九州。日本西南邊的大島，福岡・熊本・鹿兒島都在這裡",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-taiwan-ni-kaerimasu.html",
+     "title": "台湾に帰ります"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "私は朝ご飯を作っています",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>っています",
+   "kana": "わたしはあさごはんをつくっています",
+   "romaji": "watashi wa asagohan o tsukutte imasu",
+   "meaning": "我正在做早餐。作る → 作って ＋ います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私はおにぎりを食べています",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>はおにぎりを<ruby>食<rt>た</rt></ruby>べています",
+   "kana": "わたしはおにぎりをたべています",
+   "romaji": "watashi wa onigiri o tabete imasu",
+   "meaning": "我正在吃飯糰。食べる → 食べて ＋ います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼は財布を探しています",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>財布<rt>さいふ</rt></ruby>を<ruby>探<rt>さが</rt></ruby>しています",
+   "kana": "かれはさいふをさがしています",
+   "romaji": "kare wa saifu o sagashite imasu",
+   "meaning": "他正在找錢包。探す → 探して ＋ います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼は漫画を読んでいます",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます",
+   "kana": "かれはまんがをよんでいます",
+   "romaji": "kare wa manga o yonde imasu",
+   "meaning": "他正在看漫畫。読む → 読んで ＋ います（本篇第三段專門講這一句）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼女はユーチューブを見ています",
+   "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>はユーチューブを<ruby>見<rt>み</rt></ruby>ています",
+   "kana": "かのじょはユーチューブをみています",
+   "romaji": "kanojo wa yuuchuubu o mite imasu",
+   "meaning": "她正在看 YouTube。見る → 見て ＋ います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼女はお風呂を掃除しています",
+   "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>はお<ruby>風呂<rt>ふろ</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>しています",
+   "kana": "かのじょはおふろをそうじしています",
+   "romaji": "kanojo wa ofuro o souji shite imasu",
+   "meaning": "她正在打掃浴室。掃除する → 掃除して ＋ います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼は漫画を読みます",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます",
+   "kana": "かれはまんがをよみます",
+   "romaji": "kare wa manga o yomimasu",
+   "meaning": "他（平常都）看漫畫／他等一下要看漫畫 — 習慣或未來",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼は漫画を読みました",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>漫画<rt>まんが</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みました",
+   "kana": "かれはまんがをよみました",
+   "romaji": "kare wa manga o yomimashita",
+   "meaning": "他看了漫畫 — 已經看完，做法見 8/29 ました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "彼はまだ財布を探しています",
+   "ja": "<ruby>彼<rt>かれ</rt></ruby>はまだ<ruby>財布<rt>さいふ</rt></ruby>を<ruby>探<rt>さが</rt></ruby>しています",
+   "kana": "かれはまださいふをさがしています",
+   "romaji": "kare wa mada saifu o sagashite imasu",
+   "meaning": "他還在找錢包。まだ＝還（動作持續中）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "私はまだ朝ご飯を食べていません",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>はまだ<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べていません",
+   "kana": "わたしはまだあさごはんをたべていません",
+   "romaji": "watashi wa mada asagohan o tabete imasen",
+   "meaning": "我還沒吃早餐。中文的「還沒」在日文是 まだ ＋ ていません，不是 ません",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-02",
+     "href": "lessons/2026-09-02-teimasu.html",
+     "title": "〜ています"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
   {
    "text": "時々 お寿司を 食べます",
    "ja": "<ruby>時々<rt>ときどき</rt></ruby>　お<ruby>寿司<rt>すし</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べます",

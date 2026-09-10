@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>い形容詞 ＋ 名詞 — 修飾名詞與「薄い」「厚い」</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">い形容詞 ＋ 名詞 — 修飾名詞與 <span class="accent">「薄い」「厚い」</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 09 / 09</div>
+  <p class="page-subtitle">い形容詞原形可以直接放在名詞前面，以及「厚い」與「熱い」的平調差別</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    描述物品的特徵時，我們會把形容詞放在名詞前面——「薄的筆記本」、「厚的書」。
+    日文的<strong>い形容詞</strong>（如 <ruby>薄<rt>うす</rt></ruby>い、<ruby>厚<rt>あつ</rt></ruby>い）字尾的「い」本來就是連體形，
+    <strong>可以直接放在名詞前面修飾，不需要加助詞 の 或 な</strong>。
+    本篇以課堂上的 <ruby>薄<rt>うす</rt></ruby>いノートがあります 與 <ruby>厚<rt>あつ</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>があります 為主軸，
+    並拆解「<ruby>厚<rt>あつ</rt></ruby>い」（平調 / 0型）與「<ruby>熱<rt>あつ</rt></ruby>い・<ruby>暑<rt>あつ</rt></ruby>い」（起伏調 / 2型）的發音聲調細節。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、い形容詞可以直接修飾名詞（原形 ＋ 名詞）</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    い形容詞最便利的地方就是不需要做任何變形，原形直接放在名詞前面就能扮演修飾語的角色。
+    結合之前學過的 <span class="compare">〜があります</span> 句型，就能輕鬆說出「有某種特徵的東西」。
+  </p>
+
+  <div class="formula">
+    <h4>い形容詞修飾名詞基本結構</h4>
+    <div class="fx">
+      <b>い形容詞（原形）</b> ＋ <b>名詞</b> ＋ <span class="j-mark">が</span> ＋ あります<br>
+      <ruby>薄<rt>うす</rt></ruby>い ＋ ノート ＋ が ＋ あります <span class="arw">→</span> <b><ruby>薄<rt>うす</rt></ruby>いノートがあります</b><br>
+      <ruby>厚<rt>あつ</rt></ruby>い ＋ <ruby>本<rt>ほん</rt></ruby> ＋ が ＋ あります <span class="arw">→</span> <b><ruby>厚<rt>あつ</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>があります</b>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 課堂例句</div>
+
+    <div class="word-item" data-text="薄いノートがあります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>薄<rt>うす</rt></ruby>いノートが　あります</div>
+        <div class="word-romaji">usui nooto ga arimasu</div>
+        <div class="word-meaning">有一本薄的筆記本 — <ruby>薄<rt>うす</rt></ruby>い（薄的）直接修飾外來語名詞 ノート (notebook)</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="厚い本があります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>厚<rt>あつ</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>が　あります</div>
+        <div class="word-romaji">atsui hon ga arimasu</div>
+        <div class="word-meaning">有一本厚的書 — <ruby>厚<rt>あつ</rt></ruby>い（厚的）直接修飾名詞 <ruby>本<rt>ほん</rt></ruby></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="新しいノートがあります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>あたら</rt></ruby>しいノートが　あります</div>
+        <div class="word-romaji">atarashii nooto ga arimasu</div>
+        <div class="word-meaning">有一本新的筆記本 — <ruby>新<rt>あたら</rt></ruby>しい（新的）修飾 ノート</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="大きい本があります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>大<rt>おお</rt></ruby>きい<ruby>本<rt>ほん</rt></ruby>が　あります</div>
+        <div class="word-romaji">ookii hon ga arimasu</div>
+        <div class="word-meaning">有一本很大的書 — <ruby>大<rt>おお</rt></ruby>きい（大的）修飾 <ruby>本<rt>ほん</rt></ruby></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>常見誤區：不要加 の 或 な</strong><br>
+    中文常說「薄<strong>的</strong>筆記本」，很容易讓人想補上助詞 の，講成 <span style="text-decoration:line-through;">薄いのノート</span>。
+    但是 <strong>の 用於名詞修飾名詞</strong>（例：日本の本），而 <strong>い形容詞自帶修飾功能</strong>，直接接名詞即可！
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、「厚い」與「熱い・暑い」：發音與聲調（アクセント）</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    課堂上特別提到的細節：「厚い」跟「熱い／暑い」在假名拼音上一模一樣都是 <span class="compare">あツイ</span>，
+    但漢字寫成「厚い」時，發音是<strong>平調（平板型 / 0型）</strong>。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4><ruby>厚<rt>あつ</rt></ruby>い（厚） — 平板型（0型 / 平調）</h4>
+      <div class="vs-sub">形容書籍、紙張、板材等的厚度</div>
+      <ul>
+        <li><strong>聲調走向：</strong>あ（低） → つ（高） → い（高）</li>
+        <li>聲音升上去之後保持高位，順著平順接後面的名詞與句尾。</li>
+        <li>例：<ruby>厚<rt>あつ</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>が あります（あ-つ-い-ほ-ん 音階平穩保持在頂部）</li>
+      </ul>
+    </div>
+
+    <div class="vs-col">
+      <h4><ruby>熱<rt>あつ</rt></ruby>い／<ruby>暑<rt>あつ</rt></ruby>い — 頭高/中高型（2型）</h4>
+      <div class="vs-sub">形容溫度高（飲料熱、天氣熱）</div>
+      <ul>
+        <li><strong>聲調走向：</strong>あ（低） → つ（高） ↘ い（低）</li>
+        <li>在「つ」的後面有聲調下降核（Accent Kernel），音高會掉下來。</li>
+        <li>例：<ruby>熱<rt>あつ</rt></ruby>いお<ruby>茶<rt>ちゃ</rt></ruby>（「つ」最高，接著降調）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>聽力與口語小撇步</strong><br>
+    聽日文母語者說 <ruby>厚<rt>あつ</rt></ruby>い本 時，因為是平調，聲音聽起來平穩連貫；
+    若是 <ruby>熱<rt>あつ</rt></ruby>いお茶，音調重音會在「つ」達到最高點隨後下降。
+    雖然平時從上下文（談論書籍還是茶飲）絕不會搞混，但留意平調的發音習慣能讓口語聽起來更道地！
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、反義對照與常用い形容詞速記表</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    課堂上的「薄い（うすい）」與「厚い（あつい）」是一對典型的相反詞。
+    把常見的實用形容詞兩兩對照整理起來，修飾名詞時會更有概念：
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr>
+        <th>形容詞</th>
+        <th>讀音</th>
+        <th>意思</th>
+        <th>修飾名詞例句</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><b><ruby>薄<rt>うす</rt></ruby>い</b></td>
+        <td>うすい</td>
+        <td>薄的</td>
+        <td class="col-ja"><ruby>薄<rt>うす</rt></ruby>いノート（薄筆記本）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b><ruby>厚<rt>あつ</rt></ruby>い</b></td>
+        <td>あつい</td>
+        <td>厚的（0型平調）</td>
+        <td class="col-ja"><ruby>厚<rt>あつ</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>（厚的書）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b><ruby>重<rt>おも</rt></ruby>い</b></td>
+        <td>おもい</td>
+        <td>重的</td>
+        <td class="col-ja"><ruby>重<rt>おも</rt></ruby>い<ruby>鞄<rt>かばん</rt></ruby>（重的包包）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b><ruby>輕<rt>かる</rt></ruby>い</b></td>
+        <td>かるい</td>
+        <td>輕的</td>
+        <td class="col-ja"><ruby>輕<rt>かる</rt></ruby>いノート（輕的筆記本）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b><ruby>大<rt>おお</rt></ruby>きい</b></td>
+        <td>おおきい</td>
+        <td>大的</td>
+        <td class="col-ja"><ruby>大<rt>おお</rt></ruby>きい<ruby>箱<rt>はこ</rt></ruby>（大箱子）</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b><ruby>小<rt>ちい</rt></ruby>さい</b></td>
+        <td>ちいさい</td>
+        <td>小的</td>
+        <td class="col-ja"><ruby>小<rt>ちい</rt></ruby>さい<ruby>辞書<rt>じしょ</rt></ruby>（小字典）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 延伸練習例句</div>
+
+    <div class="word-item" data-text="机の上に重い本があります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>重<rt>おも</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>が　あります</div>
+        <div class="word-romaji">tsukue no ue ni omoi hon ga arimasu</div>
+        <div class="word-meaning">桌上有重的書 — 位置詞 机の上 ＋ に 標示地點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="鞄の中に軽いノートがあります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>鞄<rt>かばん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>輕<rt>かる</rt></ruby>いノートが　あります</div>
+        <div class="word-romaji">kaban no naka ni karui nooto ga arimasu</div>
+        <div class="word-meaning">包包裡有輕的筆記本 — 結合位置詞 鞄の中 與 軽いノート</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>漢字注意：薄い vs 浅い</strong><br>
+    形容紙張、筆記本、衣物「薄」要用 <ruby>薄<rt>うす</rt></ruby>い；
+    若是形容水深「淺」、經驗「淺」，則是用 <ruby>浅<rt>あさ</rt></ruby>い。
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

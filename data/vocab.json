@@ -1,6 +1,122 @@
 {
- "generated": "2026-09-02",
+ "generated": "2026-09-09",
  "words": [
+  {
+   "text": "薄いノートがあります",
+   "ja": "<ruby>薄<rt>うす</rt></ruby>いノートが　あります",
+   "kana": "うすいノートが あります",
+   "romaji": "usui nooto ga arimasu",
+   "meaning": "有一本薄的筆記本 — 薄い（薄的）直接修飾外來語名詞 ノート (notebook)",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-09",
+     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
+     "title": "い形容詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "厚い本があります",
+   "ja": "<ruby>厚<rt>あつ</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>が　あります",
+   "kana": "あついほんが あります",
+   "romaji": "atsui hon ga arimasu",
+   "meaning": "有一本厚的書 — 厚い（厚的）直接修飾名詞 本",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-09",
+     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
+     "title": "い形容詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "新しいノートがあります",
+   "ja": "<ruby>新<rt>あたら</rt></ruby>しいノートが　あります",
+   "kana": "あたらしいノートが あります",
+   "romaji": "atarashii nooto ga arimasu",
+   "meaning": "有一本新的筆記本 — 新しい（新的）修飾 ノート",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-09",
+     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
+     "title": "い形容詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "大きい本があります",
+   "ja": "<ruby>大<rt>おお</rt></ruby>きい<ruby>本<rt>ほん</rt></ruby>が　あります",
+   "kana": "おおきいほんが あります",
+   "romaji": "ookii hon ga arimasu",
+   "meaning": "有一本很大的書 — 大きい（大的）修飾 本",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-09",
+     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
+     "title": "い形容詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "机の上に重い本があります",
+   "ja": "<ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>重<rt>おも</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>が　あります",
+   "kana": "つくえのうえにおもいほんが あります",
+   "romaji": "tsukue no ue ni omoi hon ga arimasu",
+   "meaning": "桌上有重的書 — 位置詞 机の上 ＋ に 標示地點",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-09",
+     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
+     "title": "い形容詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "生活雜貨",
+    "場所"
+   ]
+  },
+  {
+   "text": "鞄の中に軽いノートがあります",
+   "ja": "<ruby>鞄<rt>かばん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>輕<rt>かる</rt></ruby>いノートが　あります",
+   "kana": "かばんのなかにかるいノートが あります",
+   "romaji": "kaban no naka ni karui nooto ga arimasu",
+   "meaning": "包包裡有輕的筆記本 — 結合位置詞 鞄の中 與 軽いノート",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-09",
+     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
+     "title": "い形容詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "生活雜貨",
+    "場所"
+   ]
+  },
   {
    "text": "来月台湾に帰ります",
    "ja": "<ruby>来月<rt>らいげつ</rt></ruby><ruby>台湾<rt>たいわん</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります",

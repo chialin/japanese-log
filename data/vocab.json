@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09",
+ "generated": "2026-09-12",
  "words": [
   {
    "text": "薄いノートがあります",
@@ -75,6 +75,44 @@
    "tags": [
     "形容詞・副詞",
     "生活雜貨"
+   ]
+  },
+  {
+   "text": "大きな犬がいます",
+   "ja": "<ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby>が　います",
+   "kana": "おおきないぬが います",
+   "romaji": "ookina inu ga imasu",
+   "meaning": "有隻大大的狗狗 — 大きな＋名詞 犬；動物用語 います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-09",
+     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
+     "title": "い形容詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "動物"
+   ]
+  },
+  {
+   "text": "小さな猫がいます",
+   "ja": "<ruby>小<rt>ちい</rt></ruby>さな<ruby>猫<rt>ねこ</rt></ruby>が　います",
+   "kana": "ちいさなねこが います",
+   "romaji": "chiisana neko ga imasu",
+   "meaning": "有隻小小的貓咪 — 小さな＋名詞 猫；動物用語 います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-09",
+     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
+     "title": "い形容詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "動物"
    ]
   },
   {

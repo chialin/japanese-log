@@ -2,6 +2,82 @@
  "generated": "2026-09-12",
  "words": [
   {
+   "text": "大きな犬がいます",
+   "ja": "<ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby>が　います",
+   "kana": "おおきないぬが います",
+   "romaji": "ookina inu ga imasu",
+   "meaning": "有隻大大的狗狗 — 大きな＋名詞 犬；動物（有生命）用 います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-12",
+     "href": "lessons/2026-09-12-na-keiyoushi-meishi.html",
+     "title": "な形容詞・連體詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "動物"
+   ]
+  },
+  {
+   "text": "小さな猫がいます",
+   "ja": "<ruby>小<rt>ちい</rt></ruby>さな<ruby>猫<rt>ねこ</rt></ruby>が　います",
+   "kana": "ちいさなねこが います",
+   "romaji": "chiisana neko ga imasu",
+   "meaning": "有隻小小的貓咪 — 小さな＋名詞 猫；動物用 います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-12",
+     "href": "lessons/2026-09-12-na-keiyoushi-meishi.html",
+     "title": "な形容詞・連體詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "動物"
+   ]
+  },
+  {
+   "text": "静かな部屋があります",
+   "ja": "<ruby>静<rt>しず</rt></ruby>かな<ruby>部屋<rt>へや</rt></ruby>が　あります",
+   "kana": "しずかなへやが あります",
+   "romaji": "shizuka na heya ga arimasu",
+   "meaning": "有一間安靜的房間 — な形容詞 静か ＋ な ＋ 名詞 部屋",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-12",
+     "href": "lessons/2026-09-12-na-keiyoushi-meishi.html",
+     "title": "な形容詞・連體詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "親切な先生がいます",
+   "ja": "<ruby>親切<rt>しんせつ</rt></ruby>な<ruby>先生<rt>せんせい</rt></ruby>が　います",
+   "kana": "しんせつなせんせいが います",
+   "romaji": "shinsetsu na sensei ga imasu",
+   "meaning": "有一位親切的老師 — な形容詞 親切 ＋ な ＋ 人名/稱呼 先生",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-12",
+     "href": "lessons/2026-09-12-na-keiyoushi-meishi.html",
+     "title": "な形容詞・連體詞 ＋ 名詞"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "人物・職業"
+   ]
+  },
+  {
    "text": "薄いノートがあります",
    "ja": "<ruby>薄<rt>うす</rt></ruby>いノートが　あります",
    "kana": "うすいノートが あります",
@@ -78,47 +154,9 @@
    ]
   },
   {
-   "text": "大きな犬がいます",
-   "ja": "<ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby>が　います",
-   "kana": "おおきないぬが います",
-   "romaji": "ookina inu ga imasu",
-   "meaning": "有隻大大的狗狗 — 大きな＋名詞 犬；動物用語 います",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-09-09",
-     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
-     "title": "い形容詞 ＋ 名詞"
-    }
-   ],
-   "tags": [
-    "形容詞・副詞",
-    "動物"
-   ]
-  },
-  {
-   "text": "小さな猫がいます",
-   "ja": "<ruby>小<rt>ちい</rt></ruby>さな<ruby>猫<rt>ねこ</rt></ruby>が　います",
-   "kana": "ちいさなねこが います",
-   "romaji": "chiisana neko ga imasu",
-   "meaning": "有隻小小的貓咪 — 小さな＋名詞 猫；動物用語 います",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-09-09",
-     "href": "lessons/2026-09-09-i-keiyoushi-meishi.html",
-     "title": "い形容詞 ＋ 名詞"
-    }
-   ],
-   "tags": [
-    "形容詞・副詞",
-    "動物"
-   ]
-  },
-  {
    "text": "机の上に重い本があります",
-   "ja": "<ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>重<rt>おも</rt></ruby>い<ruby>本<rt>ほん</rt></ruby>が　あります",
-   "kana": "つくえのうえにおもいほんが あります",
+   "ja": "<ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>重<rt>おも</rt></ruby>い<ruby>本\n              <rt>ほん</rt>\n            </ruby>が　あります",
+   "kana": "つくえのうえにおもいほん が あります",
    "romaji": "tsukue no ue ni omoi hon ga arimasu",
    "meaning": "桌上有重的書 — 位置詞 机の上 ＋ に 標示地點",
    "kind": "word",

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>な形容詞・連體詞 ＋ 名詞 — 「大きな犬」與「小さな猫」</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* 跨頁 next-link 卡片 */
+.next-link{display:block;background:rgba(255,255,255,.55);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 22px;text-decoration:none;color:inherit;margin-top:24px;transition:border-color .15s,background .15s,transform .15s;}
+.next-link:hover{border-color:var(--accent);background:rgba(255,255,255,.8);transform:translateX(4px);}
+.next-kicker{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:6px;}
+.next-title{display:flex;align-items:center;font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.next-arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.next-link:hover .next-arrow{color:var(--accent);transform:translateX(4px);}
+.next-sub{display:block;font-size:14px;color:var(--ink-soft);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">な形容詞・連體詞 ＋ 名詞 — <span class="accent">「大きな犬」與「小さな猫」</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 09 / 12</div>
+  <p class="page-subtitle">修飾名詞時要補上「な」的形容詞與連體詞，以及與 い形容詞 的核心差異</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    上一堂課學了「い形容詞」原形直接修飾名詞（如 薄いノート、厚い本），這篇來看另一大類：在修飾名詞時<strong>後面必須補上「な」</strong>的形容詞與連體詞。
+    本篇以「大大的狗狗」（<ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby>）與「小小的貓咪」（<ruby>小<rt>ちい</rt></ruby>さな<ruby>猫<rt>ねこ</rt></ruby>）為核心範例，
+    拆解修飾名詞時帶有 な 的文法結構，並釐清「連體詞只能放在名詞前面、不能置於句尾作謂語」的語法限制。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、修飾名詞時加上「な」的基本結構</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    與原形自帶修飾力的「い形容詞」不同，這一類詞在連結名詞時必須靠 <span class="compare">な</span> 作為橋樑。
+    搭配 <span class="compare">〜があります／います</span> 句型，就能生動地描述帶著某種特質的人事物或動物。
+  </p>
+
+  <div class="formula">
+    <h4>帶有 な 的名詞修飾結構</h4>
+    <div class="fx">
+      <b>修飾詞</b> ＋ <span class="j-mark">な</span> ＋ <b>名詞</b> ＋ が ＋ います／あります<br>
+      <ruby>大<rt>おお</rt></ruby>き<b>な</b> ＋ <ruby>犬<rt>いぬ</rt></ruby> ＋ が ＋ います <span class="arw">→</span> <b><ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby>がいます</b><br>
+      <ruby>小<rt>ちい</rt></ruby>さ<b>な</b> ＋ <ruby>猫<rt>ねこ</rt></ruby> ＋ が ＋ います <span class="arw">→</span> <b><ruby>小<rt>ちい</rt></ruby>さな<ruby>猫<rt>ねこ</rt></ruby>がいます</b>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 核心例句</div>
+
+    <div class="word-item" data-text="大きな犬がいます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby>が　います</div>
+        <div class="word-romaji">ookina inu ga imasu</div>
+        <div class="word-meaning">有隻大大的狗狗 — <ruby>大<rt>おお</rt></ruby>きな＋名詞 <ruby>犬<rt>いぬ</rt></ruby>；動物（有生命）用 います</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="小さな猫がいます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>小<rt>ちい</rt></ruby>さな<ruby>猫<rt>ねこ</rt></ruby>が　います</div>
+        <div class="word-romaji">chiisana neko ga imasu</div>
+        <div class="word-meaning">有隻小小的貓咪 — <ruby>小<rt>ちい</rt></ruby>さな＋名詞 <ruby>猫<rt>ねこ</rt></ruby>；動物用 います</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="静かな部屋があります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>静<rt>しず</rt></ruby>かな<ruby>部屋<rt>へや</rt></ruby>が　あります</div>
+        <div class="word-romaji">shizuka na heya ga arimasu</div>
+        <div class="word-meaning">有一間安靜的房間 — な形容詞 <ruby>静<rt>しず</rt></ruby>か ＋ な ＋ 名詞 <ruby>部屋<rt>へや</rt></ruby></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="親切な先生がいます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>親切<rt>しんせつ</rt></ruby>な<ruby>先生<rt>せんせい</rt></ruby>が　います</div>
+        <div class="word-romaji">shinsetsu na sensei ga imasu</div>
+        <div class="word-meaning">有一位親切的老師 — な形容詞 <ruby>親切<rt>しんせつ</rt></ruby> ＋ な ＋ 人名/稱呼 <ruby>先生<rt>せんせい</rt></ruby></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、連體詞（大きな / 小さな）與 い形容詞（大きい / 小さい）的差別</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    「大」與「小」本來屬於い形容詞（<span class="compare">大きい</span> / <span class="compare">小さい</span>）。
+    但日文中有一組特別的單字——<span class="compare">大きな</span> 與 <span class="compare">小さな</span>，它們在文法上被歸類為<strong>連體詞</strong>。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>連體詞：<ruby>大<rt>おお</rt></ruby>きな／<ruby>小<rt>ちい</rt></ruby>さな</h4>
+      <div class="vs-sub">專門放在名詞前面的修飾詞</div>
+      <ul>
+        <li><strong>位置限制：</strong>只能放在名詞前面（例：<ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby> ⭕️）</li>
+        <li><strong>語意氛圍：</strong>比起純客觀尺寸，更帶有故事感、童話感或親切的畫面感。</li>
+        <li><strong>句尾限制：</strong>❌ 絕對不能放在句尾作謂語（不能說 <span style="text-decoration:line-through;">犬は大きなです</span>）。</li>
+      </ul>
+    </div>
+
+    <div class="vs-col">
+      <h4>い形容詞：<ruby>大<rt>おお</rt></ruby>きい／<ruby>小<rt>ちい</rt></ruby>さい</h4>
+      <div class="vs-sub">標準的い形容詞</div>
+      <ul>
+        <li><strong>修飾名詞：</strong>原形直接接名詞（例：<ruby>大<rt>おお</rt></ruby>きい<ruby>犬<rt>いぬ</rt></ruby> ⭕️）</li>
+        <li><strong>語意氛圍：</strong>表達客觀的物理尺寸大小。</li>
+        <li><strong>句尾表現：</strong>⭕️ 放在句尾作謂語（例：この<ruby>犬<rt>いぬ</rt></ruby>は<ruby>大<rt>おお</rt></ruby>きいです ⭕️）。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>絕不能放在句尾的「連體詞」</strong><br>
+    連體詞顧名思義就是「只能連在體言（名詞）前面」的詞。
+    要講「這隻狗很大」時，只能說 <ruby>大<rt>おお</rt></ruby>きいです；絕對不能講成 <span style="text-decoration:line-through;">大きなです</span>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、日文四種詞性修飾名詞速記對照表</div>
+
+  <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;">
+    把日文四種主要詞性在「修飾名詞（名詞前）」與「放在句尾」時的表現整理成表格，一眼就能看出差別：
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr>
+        <th>詞性分類</th>
+        <th>代表單字</th>
+        <th>修飾名詞時（名詞前）</th>
+        <th>放在句尾時（句尾）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>い形容詞</b></td>
+        <td class="col-ja">薄い・大きい</td>
+        <td class="col-ja"><b>原形直接接</b>：<ruby>薄<rt>うす</rt></ruby>いノート</td>
+        <td class="col-ja"><b>原形 ＋ です</b>：このノートは<ruby>薄<rt>うす</rt></ruby>いです</td>
+      </tr>
+      <tr>
+        <td><b>な形容詞</b></td>
+        <td class="col-ja">静か・有名</td>
+        <td class="col-ja"><b>補上 な</b>：<ruby>静<rt>しず</rt></ruby>か<b>な</b><ruby>部屋<rt>へや</rt></ruby></td>
+        <td class="col-ja"><b>拿掉 な ＋ です</b>：この<ruby>部屋<rt>へや</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かです</td>
+      </tr>
+      <tr>
+        <td><b>名詞</b></td>
+        <td class="col-ja">日本・先生</td>
+        <td class="col-ja"><b>補上 の</b>：日本<b>の</b><ruby>本<rt>ほん</rt></ruby></td>
+        <td class="col-ja"><b>名詞 ＋ です</b>：這是日本<b>の</b>です</td>
+      </tr>
+      <tr>
+        <td><b>連體詞 (特例)</b></td>
+        <td class="col-ja">大きな・小さな</td>
+        <td class="col-ja"><b>只存在於名詞前</b>：<ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby></td>
+        <td class="col-ja"><span style="color:#c93030;font-weight:bold;">❌ 絕對不能放句尾</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 返回上一篇：上一堂課跳轉卡片 -->
+  <a href="2026-09-09-i-keiyoushi-meishi.html" class="next-link">
+    <span class="next-kicker">— 2026-09-09 · 上一堂課 —</span>
+    <span class="next-title">い形容詞 ＋ 名詞 — 修飾名詞與「薄い」「厚い」 <span class="next-arrow">→</span></span>
+    <span class="next-sub">い形容詞原形直接接名詞，以及「厚い」（0型平調）與「熱い」的發音聲調細節</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -1,6 +1,194 @@
 {
- "generated": "2026-09-12",
+ "generated": "2026-09-23",
  "words": [
+  {
+   "text": "昨日、高校の時の友達と話しました。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>高校<rt>こうこう</rt></ruby>の<ruby>時<rt>とき</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>と　<ruby>話<rt>はな</rt></ruby>しました。",
+   "kana": "きのう、こうこうのときのともだちと はなしました。",
+   "romaji": "kinou, koukou no toki no tomodachi to hanashimashita",
+   "meaning": "昨天和高中時候的朋友聊天了。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "昨日、会社の元同僚と久しぶりに会いました。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>元<rt>もと</rt></ruby><ruby>同僚<rt>どうりょう</rt></ruby>と　<ruby>久<rt>ひさ</rt></ruby>しぶりに<ruby>会<rt>あ</rt></ruby>いました。",
+   "kana": "きのう、かいしゃのもとどうりょうと ひさしぶりにあいました。",
+   "romaji": "kinou, kaisha no moto douryou to hisashiburi ni aimashita",
+   "meaning": "昨天和公司的前同事久違地見面了。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "高校の時の友達と久しぶりに会いました。",
+   "ja": "<ruby>高校<rt>こうこう</rt></ruby>の<ruby>時<rt>とき</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>と　<ruby>久<rt>ひさ</rt></ruby>しぶりに<ruby>会<rt>あ</rt></ruby>いました。",
+   "kana": "こうこうのときのともだちと ひさしぶりにあいました。",
+   "romaji": "koukou no toki no tomodachi to hisashiburi ni aimashita",
+   "meaning": "和高中時候的朋友久違地見面了。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "会社の元同僚と楽しく話しました。",
+   "ja": "<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>元<rt>もと</rt></ruby><ruby>同僚<rt>どうりょう</rt></ruby>と　<ruby>楽<rt>たの</rt></ruby>しく<ruby>話<rt>はな</rt></ruby>しました。",
+   "kana": "かいしゃのもとどうりょうと たのしくはなしました。",
+   "romaji": "kaisha no moto douryou to tanoshiku hanashimashita",
+   "meaning": "和公司的前同事愉快地聊天了。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "高校の時の友達",
+   "ja": "<ruby>高校<rt>こうこう</rt></ruby>の<ruby>時<rt>とき</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>",
+   "kana": "こうこうのときのともだち",
+   "romaji": "koukou no toki no tomodachi",
+   "meaning": "高中時候的朋友 — 名詞＋の時＋の＋名詞",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "元同僚",
+   "ja": "<ruby>元<rt>もと</rt></ruby><ruby>同僚<rt>どうりょう</rt></ruby>",
+   "kana": "もとどうりょう",
+   "romaji": "moto douryou",
+   "meaning": "前同事 — 元（もと）接頭詞，表示「前……／過去的……」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "同僚",
+   "ja": "<ruby>同僚<rt>どうりょう</rt></ruby>",
+   "kana": "どうりょう",
+   "romaji": "douryou",
+   "meaning": "同事",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "話しました",
+   "ja": "<ruby>話<rt>はな</rt></ruby>しました",
+   "kana": "はなしました",
+   "romaji": "hanashimashita",
+   "meaning": "說話了、聊天了 — 動詞 話す（はなす）的過去敬體",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "久しぶりに",
+   "ja": "<ruby>久<rt>ひさ</rt></ruby>しぶりに",
+   "kana": "ひさしぶりに",
+   "romaji": "hisashiburi ni",
+   "meaning": "久違地、好久沒…… — 副詞修飾後方動詞",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "会いました",
+   "ja": "<ruby>会<rt>あ</rt></ruby>いました",
+   "kana": "あいました",
+   "romaji": "aimashita",
+   "meaning": "見面了 — 動詞 会う（あう）的過去敬體；見面的對象搭配 に 或 と",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
   {
    "text": "大きな犬がいます",
    "ja": "<ruby>大<rt>おお</rt></ruby>きな<ruby>犬<rt>いぬ</rt></ruby>が　います",
@@ -12461,6 +12649,11 @@
      "date": "2026-07-29",
      "href": "lessons/2026-07-29-koko-soko-asoko.html",
      "title": "ここ・そこ・あそこ"
+    },
+    {
+     "date": "2026-09-23",
+     "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
+     "title": "友達と元同僚の話"
     }
    ],
    "tags": [

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重さ・距離はどのくらいですか — 為什麼有的要加「さ」</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <style>
+    /* 文法課 — 青碧／松葉綠色票 */
+    :root {
+      --paper: #f2f7f0;
+      --paper-deep: #e2ecdf;
+      --ink: #16261c;
+      --ink-soft: #33513e;
+      --ink-mute: #6a8a76;
+      --accent: #3f7a52;
+      --accent-soft: #a8cbb4;
+      --accent-pale: #e0efe4;
+      --line: #cfe1d4;
+      --bg-spot-1: #eaf4e8;
+      --bg-spot-2: #d8ecdc;
+    }
+
+    .j-mark {
+      display: inline-block;
+      background: var(--accent-pale);
+      color: var(--accent);
+      font-weight: 600;
+      padding: 0 4px;
+      border-radius: 2px;
+      font-family: 'Klee One', 'Shippori Mincho', serif;
+    }
+
+    .lead {
+      margin-bottom: 14px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* 速記表 */
+    .joshi-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      background: rgba(255, 255, 255, .5);
+      font-size: 14px;
+    }
+
+    .joshi-table th,
+    .joshi-table td {
+      border: 1px solid var(--line);
+      padding: 9px 11px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .joshi-table th {
+      background: var(--accent-pale);
+      color: var(--accent);
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 600;
+    }
+
+    .joshi-table td b {
+      color: var(--accent);
+    }
+
+    .col-ja {
+      font-family: 'Klee One', 'Shippori Mincho', serif;
+      font-size: 15px;
+    }
+
+    /* 變形公式 */
+    .formula {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .6);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 16px 0;
+    }
+
+    .formula h4 {
+      margin: 0 0 10px;
+      font-family: 'Shippori Mincho', serif;
+      font-size: 16px;
+      color: var(--accent);
+    }
+
+    .fx {
+      font-family: 'Klee One', 'Shippori Mincho', serif;
+      font-size: 17px;
+      line-height: 2.2;
+      color: var(--ink);
+    }
+
+    .fx s {
+      color: var(--ink-mute);
+      text-decoration-thickness: 2px;
+    }
+
+    .fx b {
+      color: var(--accent);
+    }
+
+    .fx .arw {
+      color: var(--ink-mute);
+      margin: 0 8px;
+    }
+
+    /* 兩欄對照 */
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .vs-col {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .55);
+      padding: 16px 18px;
+      border-radius: 8px;
+    }
+
+    .vs-col h4 {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 15px;
+      color: var(--accent);
+      margin: 0 0 4px;
+    }
+
+    .vs-col .vs-sub {
+      font-size: 13px;
+      color: var(--ink-mute);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .vs-col ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 14px;
+      line-height: 2;
+      color: var(--ink-soft);
+    }
+
+    @media(max-width:560px) {
+      .vs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../shared.css" />
+  <script src="../js/site-chrome.js" defer></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <site-header></site-header>
+
+    <h1 class="page-title"><ruby>重<rt>おも</rt></ruby>さ・<ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>は <span class="accent">どのくらいですか</span></h1>
+    <div class="page-meta">文法 · Grammar · 2026 / 10 / 04</div>
+    <p class="page-subtitle">問「多重」「多遠」的句型，以及為什麼 重さ 要加 さ、距離 卻不用</p>
+
+    <div class="speed-control">
+      <label for="rate">速度</label>
+      <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+      <span class="speed-value" id="rateValue">1.0x</span>
+    </div>
+
+    <div class="tip">
+      💡 <strong>這篇要學的是什麼</strong><br>
+      寄包裹要報重量、問路想知道有多遠，這時候就會用到「〇〇はどのくらいですか」這個問句。
+      本篇以 <ruby>重<rt>おも</rt></ruby>さはどのくらいですか（有多重？）和 <ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>はどのくらいですか（有多遠？）兩句為主軸，
+      先把句型的骨架講清楚，再回答一個很自然的疑問：為什麼「重さ」後面多了一個 さ，「距離」卻什麼都不用加？
+      答案只有一句話——<strong>は 前面要放名詞，重い 是形容詞，所以要先用 さ 把它變成名詞；距離 本來就是名詞，直接放就好</strong>。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">一、以兩個問句為主軸，把「多重」「多遠」的問法排出來</div>
+
+    <p class="lead">
+      這兩句的結構一模一樣，只差在 は 前面放的是什麼。先聽一次、跟著唸，再往下看差別在哪裡。
+    </p>
+
+    <div class="section">
+      <div class="section-title">📖 課堂例句</div>
+
+      <div class="word-item" data-text="重さはどのくらいですか">
+        <div class="word-content">
+          <div class="word-ja"><ruby>重<rt>おも</rt></ruby>さは　どのくらいですか</div>
+          <div>
+            <span class="acc"><span class="acc-k">お<span class="ar">↗</span>もさ<span class="ar">→</span>は</span></span>
+            <span class="acc-note">平板型：おもさは＝低高高高</span>
+          </div>
+          <div class="word-romaji">omosa wa dono kurai desu ka</div>
+          <div class="word-meaning">重量大概是多少？（有多重？）— 重い（重的）去掉 い、加上 さ，變成名詞「重量」</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="距離はどのくらいですか">
+        <div class="word-content">
+          <div class="word-ja"><ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>は　どのくらいですか</div>
+          <div>
+            <span class="acc"><span class="acc-k"><span class="ar">↗</span>きょ<span class="ar">↘</span>り</span></span>
+            <span class="acc-note">距離・頭高型</span>
+          </div>
+          <div class="word-romaji">kyori wa dono kurai desu ka</div>
+          <div class="word-meaning">距離大概是多少？（有多遠？）— 距離 本身就是名詞，直接放在 は 前面</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="mnemonic">
+      🧠 <strong>我的記憶小撇步 — 離＝り</strong><br>
+      「離」的台語唸 <span class="compare">lî</span>，日文音讀就是 <span class="compare">り</span>，整個音對得上。
+      所以 <ruby>距<rt>きょ</rt>離<rt>り</rt></ruby> 的後半直接用台語記；前半的 きょ 跟台語不像，就當作一組「きょり」整個背下來。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">二、どのくらい 前面接的一定是名詞</div>
+
+    <p class="lead">
+      「〇〇は〜ですか」這個骨架之前已經用過很多次了，は 前面放的是「主題」，而主題一定是名詞。
+      どのくらい 意思是「大概多少、到什麼程度」，<a href="2026-08-21-kagetsu.html" style="color:var(--accent);">8/21 的課</a>用它問過「多久」，
+      這次換成問重量和距離，骨架完全不變。
+    </p>
+
+    <div class="formula">
+      <h4>問程度的句型</h4>
+      <div class="fx">
+        <b>名詞</b> ＋ <span class="j-mark">は</span> ＋ どのくらいですか<br>
+        <ruby>重<rt>おも</rt></ruby>さ ＋ は ＋ どのくらいですか <span class="arw">→</span> <b>有多重？</b><br>
+        <ruby>距<rt>きょ</rt>離<rt>り</rt></ruby> ＋ は ＋ どのくらいですか <span class="arw">→</span> <b>有多遠？</b>
+      </div>
+    </div>
+
+    <p class="lead">
+      想說清楚是「什麼東西」的重量、「哪裡到哪裡」的距離，就在前面用 の 接上去。
+    </p>
+
+    <div class="section">
+      <div class="section-title">📖 加上說明的例句</div>
+
+      <div class="word-item" data-text="このかばんの重さはどのくらいですか">
+        <div class="word-content">
+          <div class="word-ja">このかばんの<ruby>重<rt>おも</rt></ruby>さは　どのくらいですか</div>
+          <div class="word-romaji">kono kaban no omosa wa dono kurai desu ka</div>
+          <div class="word-meaning">這個包包有多重？— かばんの重さ＝包包的重量（名詞 の 名詞）</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="駅までの距離はどのくらいですか">
+        <div class="word-content">
+          <div class="word-ja"><ruby>駅<rt>えき</rt></ruby>までの<ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>は　どのくらいですか</div>
+          <div class="word-romaji">eki made no kyori wa dono kurai desu ka</div>
+          <div class="word-meaning">到車站的距離有多遠？— 駅までの距離＝到車站為止的距離</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="五キロです">
+        <div class="word-content">
+          <div class="word-ja"><ruby>五<rt>ご</rt></ruby>キロです</div>
+          <div class="word-romaji">go kiro desu</div>
+          <div class="word-meaning">五公斤／五公里 — 回答時直接講數字＋單位＋です</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="note">
+      📝 <strong>どのくらい 和 どれくらい 都可以</strong><br>
+      口語裡也很常聽到 <span class="compare">どれくらい</span>（dore kurai），意思一樣，兩個都可以用。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">三、重さ 要加 さ 是因為 重い 是形容詞</div>
+
+    <p class="lead">
+      中文的「重」可以當形容詞（很重），也可以當名詞（重量），字不用變。日文沒有這麼方便：
+      <ruby>重<rt>おも</rt></ruby>い 是 い形容詞，意思是「重的」，它描述東西的樣子，
+      <strong>沒辦法直接當主題放在 は 前面</strong>。要談「重量」這個量，就得先把它換成名詞，而換的方法就是 さ。
+    </p>
+
+    <div class="vs-grid">
+      <div class="vs-col">
+        <h4><ruby>重<rt>おも</rt></ruby>い → <ruby>重<rt>おも</rt></ruby>さ</h4>
+        <div class="vs-sub">原本是形容詞，要先變成名詞</div>
+        <ul>
+          <li>重い＝重的（形容東西）</li>
+          <li>重さ＝重量（可以拿來問、拿來量）</li>
+          <li>✗ <s>重いはどのくらいですか</s></li>
+          <li>○ 重さはどのくらいですか</li>
+        </ul>
+      </div>
+      <div class="vs-col">
+        <h4><ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>（不用變）</h4>
+        <div class="vs-sub">漢字詞，本來就是名詞</div>
+        <ul>
+          <li>距離＝距離（中文意思一樣）</li>
+          <li>已經是名詞，直接放在 は 前面</li>
+          <li>✗ <s>距離さはどのくらいですか</s></li>
+          <li>○ 距離はどのくらいですか</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="lead">
+      所以判斷要不要加 さ，只要問自己一句：<strong>這個字是形容詞還是名詞？</strong>
+      字尾是 い 的形容詞（重い、高い、長い）要加；像 距離、時間、値段 這種本來就是名詞的，不用加。
+      在 <a href="2026-09-09-i-keiyoushi-meishi.html" style="color:var(--accent);">9/9 的課</a>裡，重い 是放在名詞前面修飾（重い本）；
+      這次則是把 重い 本身變成名詞，兩種用法要分清楚。
+    </p>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">四、去掉 い 換成 さ 是有規則的</div>
+
+    <p class="lead">
+      變法只有一步：把 い形容詞最後的 い 拿掉，接上 さ。學會這一步，一整組「多高、多長、多大」都能問了。
+    </p>
+
+    <div class="formula">
+      <h4>い形容詞 → 名詞</h4>
+      <div class="fx">
+        <ruby>重<rt>おも</rt></ruby><s>い</s> ＋ <b>さ</b> <span class="arw">→</span> <b><ruby>重<rt>おも</rt></ruby>さ</b>（重量）<br>
+        <ruby>高<rt>たか</rt></ruby><s>い</s> ＋ <b>さ</b> <span class="arw">→</span> <b><ruby>高<rt>たか</rt></ruby>さ</b>（高度）<br>
+        <ruby>長<rt>なが</rt></ruby><s>い</s> ＋ <b>さ</b> <span class="arw">→</span> <b><ruby>長<rt>なが</rt></ruby>さ</b>（長度）<br>
+        <ruby>大<rt>おお</rt></ruby>き<s>い</s> ＋ <b>さ</b> <span class="arw">→</span> <b><ruby>大<rt>おお</rt></ruby>きさ</b>（大小）<br>
+        <ruby>厚<rt>あつ</rt></ruby><s>い</s> ＋ <b>さ</b> <span class="arw">→</span> <b><ruby>厚<rt>あつ</rt></ruby>さ</b>（厚度）
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">📖 換成別的量</div>
+
+      <div class="word-item" data-text="この山の高さはどのくらいですか">
+        <div class="word-content">
+          <div class="word-ja">この<ruby>山<rt>やま</rt></ruby>の<ruby>高<rt>たか</rt></ruby>さは　どのくらいですか</div>
+          <div class="word-romaji">kono yama no takasa wa dono kurai desu ka</div>
+          <div class="word-meaning">這座山有多高？— 高い → 高さ</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="この川の長さはどのくらいですか">
+        <div class="word-content">
+          <div class="word-ja">この<ruby>川<rt>かわ</rt></ruby>の<ruby>長<rt>なが</rt></ruby>さは　どのくらいですか</div>
+          <div class="word-romaji">kono kawa no nagasa wa dono kurai desu ka</div>
+          <div class="word-meaning">這條河有多長？— 長い → 長さ</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="部屋の広さはどのくらいですか">
+        <div class="word-content">
+          <div class="word-ja"><ruby>部<rt>へ</rt>屋<rt>や</rt></ruby>の<ruby>広<rt>ひろ</rt></ruby>さは　どのくらいですか</div>
+          <div class="word-romaji">heya no hirosa wa dono kurai desu ka</div>
+          <div class="word-meaning">房間有多大（多寬敞）？— 広い → 広さ</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="note">
+      📝 <strong>な形容詞也可以加 さ</strong><br>
+      <a href="2026-09-12-na-keiyoushi-meishi.html" style="color:var(--accent);">9/12 的課</a>學過的 な形容詞，同樣可以接 さ 變名詞，
+      例如 <ruby>静<rt>しず</rt></ruby>か → <ruby>静<rt>しず</rt></ruby>かさ（安靜的程度）、<ruby>便<rt>べん</rt>利<rt>り</rt></ruby> → <ruby>便<rt>べん</rt>利<rt>り</rt></ruby>さ（方便的程度）。
+      不過問「多少」時最常用的還是 い形容詞這一組。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">五、有三個地方容易講錯</div>
+
+    <p class="lead">
+      規則本身很簡單，真正容易出錯的是「該用哪一個字」。下面三點是最常踩到的。
+    </p>
+
+    <div class="alert">
+      ⚠️ <strong>① 問的時候一律用「大的那一端」</strong><br>
+      就算那個包包看起來很輕，問的時候還是說 <span class="compare">重さ</span>，不說 <s>軽さ</s>；
+      問長度用 <span class="compare">長さ</span> 不用 <s>短さ</s>，問高度用 <span class="compare">高さ</span> 不用 <s>低さ</s>。
+      這跟中文一樣——我們問「多重、多長、多高」，不會問「多輕、多短、多矮」。
+    </div>
+
+    <div class="alert">
+      ⚠️ <strong>② キロ 可能是公斤，也可能是公里</strong><br>
+      <span class="compare">キロ</span>（kiro）是外來語，來自<strong>法語 kilo</strong>，原本只是「千」的字首，
+      日文把 キログラム（公斤）和 キロメートル（公里）都縮成 キロ。所以「五キロです」是五公斤還是五公里，要看前面問的是 重さ 還是 距離。
+      同一組的 <span class="compare">グラム</span>（法語 gramme，公克）、<span class="compare">メートル</span>（法語 mètre，公尺）也都是法語來的——
+      注意 メートル 的唸法是照法文的 mètre，不是英文的 meter。
+    </div>
+
+    <div class="alert">
+      ⚠️ <strong>③ 問人的身高、體重有專用的詞</strong><br>
+      問山、問包包用 高さ／重さ；但問「人」的身高、體重，日文習慣用漢字詞
+      <span class="compare"><ruby>身<rt>しん</rt>長<rt>ちょう</rt></ruby></span>（shinchou，身高）和
+      <span class="compare"><ruby>体<rt>たい</rt>重<rt>じゅう</rt></ruby></span>（taijuu，體重）。這兩個本來就是名詞，所以一樣不用加 さ。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">六、整理成一張表</div>
+
+    <table class="joshi-table">
+      <thead>
+        <tr>
+          <th>想問的</th>
+          <th>名詞</th>
+          <th>讀音</th>
+          <th>從哪裡來</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>多重</td>
+          <td class="col-ja"><b><ruby>重<rt>おも</rt></ruby>さ</b></td>
+          <td>omosa</td>
+          <td>重い → い換さ</td>
+        </tr>
+        <tr>
+          <td>多高</td>
+          <td class="col-ja"><b><ruby>高<rt>たか</rt></ruby>さ</b></td>
+          <td>takasa</td>
+          <td>高い → い換さ</td>
+        </tr>
+        <tr>
+          <td>多長</td>
+          <td class="col-ja"><b><ruby>長<rt>なが</rt></ruby>さ</b></td>
+          <td>nagasa</td>
+          <td>長い → い換さ</td>
+        </tr>
+        <tr>
+          <td>多大</td>
+          <td class="col-ja"><b><ruby>大<rt>おお</rt></ruby>きさ</b></td>
+          <td>ookisa</td>
+          <td>大きい → い換さ</td>
+        </tr>
+        <tr>
+          <td>多寬敞</td>
+          <td class="col-ja"><b><ruby>広<rt>ひろ</rt></ruby>さ</b></td>
+          <td>hirosa</td>
+          <td>広い → い換さ</td>
+        </tr>
+        <tr>
+          <td>多遠</td>
+          <td class="col-ja"><b><ruby>距<rt>きょ</rt>離<rt>り</rt></ruby></b></td>
+          <td>kyori</td>
+          <td>本來就是名詞，不加</td>
+        </tr>
+        <tr>
+          <td>多久</td>
+          <td class="col-ja"><b><ruby>時<rt>じ</rt>間<rt>かん</rt></ruby></b></td>
+          <td>jikan</td>
+          <td>本來就是名詞，不加</td>
+        </tr>
+        <tr>
+          <td>多少錢</td>
+          <td class="col-ja"><b><ruby>値<rt>ね</rt>段<rt>だん</rt></ruby></b></td>
+          <td>nedan</td>
+          <td>本來就是名詞，不加</td>
+        </tr>
+        <tr>
+          <td>身高／體重</td>
+          <td class="col-ja"><b><ruby>身<rt>しん</rt>長<rt>ちょう</rt></ruby>／<ruby>体<rt>たい</rt>重<rt>じゅう</rt></ruby></b></td>
+          <td>shinchou／taijuu</td>
+          <td>本來就是名詞，不加</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">七、換你自己做做看 · Self-Quiz</div>
+
+    <div class="note">
+      ✍️ <strong>試著用日文說說看</strong><br>
+      1. 把 <ruby>長<rt>なが</rt></ruby>い 變成名詞「長度」。<br>
+      2. 這座山有多高？<br>
+      3. 從家裡到車站的距離有多遠？（家＝いえ、〜から〜まで）<br>
+      4. 為什麼 <ruby>時<rt>じ</rt>間<rt>かん</rt></ruby>はどのくらいですか 的 時間 後面不用加 さ？<br>
+      5. 「このかばんの軽さはどのくらいですか」哪裡怪怪的？
+    </div>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. <ruby>長<rt>なが</rt></ruby>さ（nagasa）— 去掉 い、加上 さ。</p>
+      <p>2. この<ruby>山<rt>やま</rt></ruby>の<ruby>高<rt>たか</rt></ruby>さは どのくらいですか。（kono yama no takasa wa dono kurai desu ka）</p>
+      <p>3. <ruby>家<rt>いえ</rt></ruby>から<ruby>駅<rt>えき</rt></ruby>までの<ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>は どのくらいですか。（ie kara eki made no kyori wa dono kurai desu ka）</p>
+      <p>4. 因為 時間 本來就是名詞，可以直接放在 は 前面；只有 い形容詞 才需要用 さ 變成名詞。</p>
+      <p>5. 問重量一律用「大的那一端」，要說 このかばんの<ruby>重<rt>おも</rt></ruby>さは どのくらいですか（kono kaban no omosa wa dono kurai desu ka）。</p>
+    </details>
+
+    <a href="2026-09-09-i-keiyoushi-meishi.html" class="next-link">
+      <span class="next-kicker">— Related —</span>
+      <span class="next-title">い形容詞 ＋ 名詞 <span class="next-arrow">→</span></span>
+      <span class="next-sub">重い本・厚い本：い形容詞直接放在名詞前面修飾，跟這篇的「變成名詞」對照著看</span>
+    </a>
+
+    <a href="2026-08-21-kagetsu.html" class="next-link">
+      <span class="next-kicker">— Related —</span>
+      <span class="next-title">〜か月 <span class="next-arrow">→</span></span>
+      <span class="next-sub">第一次用 どのくらい 問「多久」的那一課</span>
+    </a>
+
+    <site-footer></site-footer>
+  </div>
+
+  <script src="../js/tts.js"></script>
+  <script>
+    const rateSlider = document.getElementById('rate');
+    const rateValue = document.getElementById('rateValue');
+    rateSlider.addEventListener('input', () => {
+      rateValue.textContent = rateSlider.value + 'x';
+    });
+
+    function speak(text, button) {
+      return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+    }
+
+    document.querySelectorAll('.word-item[data-text]').forEach(item => {
+      const button = item.querySelector('.play-btn');
+      const text = item.dataset.text;
+      const handler = (e) => { e.stopPropagation(); speak(text, button); };
+      button.addEventListener('click', handler);
+    });
+  </script>
+</body>
+
+</html>

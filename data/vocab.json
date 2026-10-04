@@ -1,6 +1,159 @@
 {
- "generated": "2026-09-23",
+ "generated": "2026-10-04",
  "words": [
+  {
+   "text": "重さはどのくらいですか",
+   "ja": "<ruby>重<rt>おも</rt></ruby>さは　どのくらいですか",
+   "kana": "おもさは どのくらいですか",
+   "romaji": "omosa wa dono kurai desu ka",
+   "meaning": "重量大概是多少？（有多重？）— 重い（重的）去掉 い、加上 さ，變成名詞「重量」",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">お<span class=\"ar\">↗</span>もさ<span class=\"ar\">→</span>は</span></span>\n            <span class=\"acc-note\">平板型：おもさは＝低高高高</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-04",
+     "href": "lessons/2026-10-04-omosa-kyori.html",
+     "title": "重さ・距離はどのくらいですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "距離はどのくらいですか",
+   "ja": "<ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>は　どのくらいですか",
+   "kana": "きょりは どのくらいですか",
+   "romaji": "kyori wa dono kurai desu ka",
+   "meaning": "距離大概是多少？（有多遠？）— 距離 本身就是名詞，直接放在 は 前面",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>きょ<span class=\"ar\">↘</span>り</span></span>\n            <span class=\"acc-note\">距離・頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-04",
+     "href": "lessons/2026-10-04-omosa-kyori.html",
+     "title": "重さ・距離はどのくらいですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "このかばんの重さはどのくらいですか",
+   "ja": "このかばんの<ruby>重<rt>おも</rt></ruby>さは　どのくらいですか",
+   "kana": "このかばんのおもさは どのくらいですか",
+   "romaji": "kono kaban no omosa wa dono kurai desu ka",
+   "meaning": "這個包包有多重？— かばんの重さ＝包包的重量（名詞 の 名詞）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-04",
+     "href": "lessons/2026-10-04-omosa-kyori.html",
+     "title": "重さ・距離はどのくらいですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "駅までの距離はどのくらいですか",
+   "ja": "<ruby>駅<rt>えき</rt></ruby>までの<ruby>距<rt>きょ</rt>離<rt>り</rt></ruby>は　どのくらいですか",
+   "kana": "えきまでのきょりは どのくらいですか",
+   "romaji": "eki made no kyori wa dono kurai desu ka",
+   "meaning": "到車站的距離有多遠？— 駅までの距離＝到車站為止的距離",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-04",
+     "href": "lessons/2026-10-04-omosa-kyori.html",
+     "title": "重さ・距離はどのくらいですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "五キロです",
+   "ja": "<ruby>五<rt>ご</rt></ruby>キロです",
+   "kana": "ごキロです",
+   "romaji": "go kiro desu",
+   "meaning": "五公斤／五公里 — 回答時直接講數字＋單位＋です",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-04",
+     "href": "lessons/2026-10-04-omosa-kyori.html",
+     "title": "重さ・距離はどのくらいですか"
+    }
+   ],
+   "tags": [
+    "數字"
+   ]
+  },
+  {
+   "text": "この山の高さはどのくらいですか",
+   "ja": "この<ruby>山<rt>やま</rt></ruby>の<ruby>高<rt>たか</rt></ruby>さは　どのくらいですか",
+   "kana": "このやまのたかさは どのくらいですか",
+   "romaji": "kono yama no takasa wa dono kurai desu ka",
+   "meaning": "這座山有多高？— 高い → 高さ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-04",
+     "href": "lessons/2026-10-04-omosa-kyori.html",
+     "title": "重さ・距離はどのくらいですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "自然"
+   ]
+  },
+  {
+   "text": "この川の長さはどのくらいですか",
+   "ja": "この<ruby>川<rt>かわ</rt></ruby>の<ruby>長<rt>なが</rt></ruby>さは　どのくらいですか",
+   "kana": "このかわのながさは どのくらいですか",
+   "romaji": "kono kawa no nagasa wa dono kurai desu ka",
+   "meaning": "這條河有多長？— 長い → 長さ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-04",
+     "href": "lessons/2026-10-04-omosa-kyori.html",
+     "title": "重さ・距離はどのくらいですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "自然"
+   ]
+  },
+  {
+   "text": "部屋の広さはどのくらいですか",
+   "ja": "<ruby>部<rt>へ</rt>屋<rt>や</rt></ruby>の<ruby>広<rt>ひろ</rt></ruby>さは　どのくらいですか",
+   "kana": "へやのひろさは どのくらいですか",
+   "romaji": "heya no hirosa wa dono kurai desu ka",
+   "meaning": "房間有多大（多寬敞）？— 広い → 広さ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-04",
+     "href": "lessons/2026-10-04-omosa-kyori.html",
+     "title": "重さ・距離はどのくらいですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
   {
    "text": "昨日、高校の時の友達と話しました。",
    "ja": "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>高校<rt>こうこう</rt></ruby>の<ruby>時<rt>とき</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>と　<ruby>話<rt>はな</rt></ruby>しました。",
@@ -363,7 +516,7 @@
   },
   {
    "text": "鞄の中に軽いノートがあります",
-   "ja": "<ruby>鞄<rt>かばん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>輕<rt>かる</rt></ruby>いノートが　あります",
+   "ja": "<ruby>鞄<rt>かばん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>軽<rt>かる</rt></ruby>いノートが　あります",
    "kana": "かばんのなかにかるいノートが あります",
    "romaji": "kaban no naka ni karui nooto ga arimasu",
    "meaning": "包包裡有輕的筆記本 — 結合位置詞 鞄の中 與 軽いノート",

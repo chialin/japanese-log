@@ -115,6 +115,195 @@
    ]
   },
   {
+   "text": "わたしは日本語を話すことができます",
+   "ja": "わたしは　<ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>すことが　できます",
+   "kana": "わたしは にほんごを はなすことが できます",
+   "romaji": "watashi wa nihongo o hanasu koto ga dekimasu",
+   "meaning": "我會說日文",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "わたしはギターを弾くことができます",
+   "ja": "わたしは　ギターを　<ruby>弾<rt>ひ</rt></ruby>くことが　できます",
+   "kana": "わたしは ギターを ひくことが できます",
+   "romaji": "watashi wa gitaa o hiku koto ga dekimasu",
+   "meaning": "我會彈吉他 — 弾きます → 原形 弾く，結構跟上一句完全一樣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "漢字を書くことができます",
+   "ja": "<ruby>漢<rt>かん</rt>字<rt>じ</rt></ruby>を　<ruby>書<rt>か</rt></ruby>くことが　できます",
+   "kana": "かんじを かくことが できます",
+   "romaji": "kanji o kaku koto ga dekimasu",
+   "meaning": "我會寫漢字 — 書きます → 書く",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "學校・工作",
+    "動詞"
+   ]
+  },
+  {
+   "text": "泳ぐことができます",
+   "ja": "<ruby>泳<rt>およ</rt></ruby>ぐことが　できます",
+   "kana": "およぐことが できます",
+   "romaji": "oyogu koto ga dekimasu",
+   "meaning": "我會游泳 — 泳ぎます → 泳ぐ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "納豆を食べることができます",
+   "ja": "<ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べることが　できます",
+   "kana": "なっとうを たべることが できます",
+   "romaji": "nattou o taberu koto ga dekimasu",
+   "meaning": "我敢吃納豆 — 一段動詞：食べます → 食べる",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "ここで写真を撮ることができます",
+   "ja": "ここで　<ruby>写<rt>しゃ</rt>真<rt>しん</rt></ruby>を　<ruby>撮<rt>と</rt></ruby>ることが　できます",
+   "kana": "ここで しゃしんを とることが できます",
+   "romaji": "koko de shashin o toru koto ga dekimasu",
+   "meaning": "這裡可以拍照 — 講規定允許，不是講能力",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "カードで払うことができますか",
+   "ja": "カードで　<ruby>払<rt>はら</rt></ruby>うことが　できますか",
+   "kana": "カードで はらうことが できますか",
+   "romaji": "kaado de harau koto ga dekimasu ka",
+   "meaning": "可以刷卡付款嗎？ — カード 來自英語 card，日文多半指信用卡或各種卡片",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "日本語を話すことができません",
+   "ja": "<ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>すことが　できません",
+   "kana": "にほんごを はなすことが できません",
+   "romaji": "nihongo o hanasu koto ga dekimasen",
+   "meaning": "不會說日文 — 否定：できません",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "子供の時、泳ぐことができました",
+   "ja": "<ruby>子<rt>こ</rt>供<rt>ども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>泳<rt>およ</rt></ruby>ぐことが　できました",
+   "kana": "こどものとき、およぐことが できました",
+   "romaji": "kodomo no toki, oyogu koto ga dekimashita",
+   "meaning": "小時候會游泳 — 過去：できました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "動詞"
+   ]
+  },
+  {
+   "text": "昨日は寝ることができませんでした",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は　<ruby>寝<rt>ね</rt></ruby>ることが　できませんでした",
+   "kana": "きのうは ねることが できませんでした",
+   "romaji": "kinou wa neru koto ga dekimasen deshita",
+   "meaning": "昨天睡不著 — 過去否定：できませんでした",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-koto-ga-dekimasu.html",
+     "title": "〜ことができます"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "動詞"
+   ]
+  },
+  {
    "text": "何にしますか",
    "ja": "<ruby>何<rt>なに</rt></ruby>に　しますか",
    "kana": "なにに しますか",
@@ -123,8 +312,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-ni-shimasu.html",
      "title": "〜にします"
     }
    ],
@@ -142,8 +331,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-ni-shimasu.html",
      "title": "〜にします"
     }
    ],
@@ -161,8 +350,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-ni-shimasu.html",
      "title": "〜にします"
     }
    ],
@@ -180,8 +369,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-ni-shimasu.html",
      "title": "〜にします"
     }
    ],
@@ -199,8 +388,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-ni-shimasu.html",
      "title": "〜にします"
     }
    ],
@@ -218,8 +407,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-ni-shimasu.html",
      "title": "〜にします"
     }
    ],
@@ -237,8 +426,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-ni-shimasu.html",
      "title": "〜にします"
     }
    ],
@@ -256,8 +445,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-ni-shimasu.html",
      "title": "〜にします"
     }
    ],
@@ -275,13 +464,13 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-no-hou-ga.html",
      "title": "〜の方が"
     },
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -299,13 +488,13 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-no-hou-ga.html",
      "title": "〜の方が"
     },
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -323,8 +512,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-no-hou-ga.html",
      "title": "〜の方が"
     }
    ],
@@ -342,8 +531,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-no-hou-ga.html",
      "title": "〜の方が"
     }
    ],
@@ -361,8 +550,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-no-hou-ga.html",
      "title": "〜の方が"
     }
    ],
@@ -380,8 +569,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-no-hou-ga.html",
      "title": "〜の方が"
     }
    ],
@@ -399,8 +588,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-no-hou-ga.html",
      "title": "〜の方が"
     }
    ],
@@ -418,8 +607,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -437,8 +626,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -456,8 +645,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -475,8 +664,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -494,8 +683,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -513,8 +702,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -532,8 +721,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -551,8 +740,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -570,8 +759,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -589,8 +778,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -608,8 +797,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -627,8 +816,8 @@
    "kind": "word",
    "lessons": [
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],
@@ -15646,8 +15835,8 @@
      "title": "日本に引っ越ししました"
     },
     {
-     "date": "2026-10-06",
-     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "date": "2026-10-05",
+     "href": "lessons/2026-10-05-tsugi-wa-ichikara.html",
      "title": "次は1辛にします"
     }
    ],

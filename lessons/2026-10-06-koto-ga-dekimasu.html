@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜ことができます — 「會做、可以做」的說法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><ruby>話<rt>はな</rt></ruby>す<span class="accent">ことができます</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 06</div>
+  <p class="page-subtitle">動詞原形 ＋ ことができます，說自己「會做」或「可以做」某件事</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    想說「我會說日文」「這裡可以拍照」，中文用「會」「可以」放在動詞前面就好，日文則是把動詞放進 〜ことができます 這個句型裡。
+    這篇用 10/6 課堂上的 わたしはにほんごをはなすことができます（我會說日文）當例子，把它一段一段拆開，
+    看動詞為什麼要用原形、こと 在做什麼、句子裡為什麼同時有 を 和 が。
+    後面再整理否定和過去的說法，以及它跟同一天學到的 <ruby>話<rt>はな</rt></ruby>せます 有什麼不同。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以課堂例句為主軸，把句子一段一段拆開</div>
+
+  <p class="lead">
+    課堂上有兩句，先聽一次完整的句子，再用第一句看它是由哪幾塊組成的。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 課堂例句</div>
+
+    <div class="word-item" data-text="わたしは日本語を話すことができます">
+      <div class="word-content">
+        <div class="word-ja">わたしは　<ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>すことが　できます</div>
+        <div class="word-romaji">watashi wa nihongo o hanasu koto ga dekimasu</div>
+        <div class="word-meaning">我會說日文</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="わたしはギターを弾くことができます">
+      <div class="word-content">
+        <div class="word-ja">わたしは　ギターを　<ruby>弾<rt>ひ</rt></ruby>くことが　できます</div>
+        <div class="word-romaji">watashi wa gitaa o hiku koto ga dekimasu</div>
+        <div class="word-meaning">我會彈吉他 — 弾きます → 原形 弾く，結構跟上一句完全一樣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>ギター 和 弾く</strong><br>
+    <span class="compare">ギター</span>（gitaa）是外來語，直接借自英語 guitar，英語的這個字再往前是從西班牙語 guitarra 來的。
+    日文把 -tar 拉成長音 ター，所以寫成 ギター。<br>
+    <span class="compare"><ruby>弾<rt>ひ</rt></ruby>く</span>（hiku）是「彈奏」，用在用手指彈的樂器，像 ギター、ピアノ（piano，鋼琴）都用 弾く：ピアノを弾く。
+    吹的樂器（笛子、小號）不用 弾く，要用 <ruby>吹<rt>ふ</rt></ruby>く（fuku）。
+    弾く 是五段動詞，ます形是 弾きます。另外，<ruby>引<rt>ひ</rt></ruby>く（拉）也唸 ひく，聽起來一樣，寫的時候要看意思選字。
+  </div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>這一塊</th><th>讀音</th><th>意思</th><th>在句子裡的角色</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><b>わたし</b>は</td><td>watashi wa</td><td>我</td><td>主題：在講「我」的事</td></tr>
+      <tr><td class="col-ja"><b><ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby></b>を</td><td>nihongo o</td><td>日文</td><td>話す 的對象，所以用 を</td></tr>
+      <tr><td class="col-ja"><b><ruby>話<rt>はな</rt></ruby>す</b></td><td>hanasu</td><td>說</td><td>動詞的原形（不是 話します）</td></tr>
+      <tr><td class="col-ja"><b>こと</b></td><td>koto</td><td>這件事</td><td>把「說日文」包成一個名詞</td></tr>
+      <tr><td class="col-ja"><b>が</b></td><td>ga</td><td>—</td><td>標出「能做到的是什麼」</td></tr>
+      <tr><td class="col-ja"><b>できます</b></td><td>dekimasu</td><td>能、會、可以</td><td>できる 的ます形，整句的主要動詞</td></tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    把這幾塊合起來，直譯就是「我，說日文這件事，做得到」。
+    第二句只是把 日本語を話す 換成 ギターを弾く（彈吉他），其餘的部分都不用動。
+    中文只要在動詞前面加一個「會」，日文則要先把「說日文」變成一件事（こと），再說這件事 できます。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、こと 前面的動詞要用原形</div>
+
+  <p class="lead">
+    こと 是名詞，名詞前面要接動詞的時候，動詞用原形（字典上查得到的那個形，也叫辭書形）。
+    所以要把 話します 的 ます 拿掉，換回原形 話す 再接 こと。
+  </p>
+
+  <div class="formula">
+    <h4>〜ことができます 的骨架</h4>
+    <div class="fx">
+      動詞原形 ＋ <b>こと</b> ＋ <span class="j-mark">が</span> ＋ できます<br>
+      <ruby>話<rt>はな</rt></ruby><s>します</s> <span class="arw">→</span> <ruby>話<rt>はな</rt></ruby><b>す</b> ＋ ことができます
+    </div>
+  </div>
+
+  <p class="lead">
+    ます形換回原形的方法，跟 <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9 五段動詞</a>那篇講的一樣：
+    五段動詞把 い段 換回 う段（話し → 話す、書き → 書く），一段動詞去掉 ます 加 る（食べ → 食べる）。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 換成別的動詞</div>
+
+    <div class="word-item" data-text="漢字を書くことができます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>漢<rt>かん</rt>字<rt>じ</rt></ruby>を　<ruby>書<rt>か</rt></ruby>くことが　できます</div>
+        <div class="word-romaji">kanji o kaku koto ga dekimasu</div>
+        <div class="word-meaning">我會寫漢字 — 書きます → 書く</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="泳ぐことができます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>泳<rt>およ</rt></ruby>ぐことが　できます</div>
+        <div class="word-romaji">oyogu koto ga dekimasu</div>
+        <div class="word-meaning">我會游泳 — 泳ぎます → 泳ぐ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="納豆を食べることができます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べることが　できます</div>
+        <div class="word-romaji">nattou o taberu koto ga dekimasu</div>
+        <div class="word-meaning">我敢吃納豆 — 一段動詞：食べます → 食べる</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、こと 是把一個動作變成名詞的</div>
+
+  <p class="lead">
+    できます 前面要放的是名詞，像 <ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>ができます（會日文）就是直接放名詞。
+    但「說日文」是一個動作，不是名詞，所以要用 こと 把它包起來，變成「說日文這件事」，才能放進同一個位置。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>名詞 ＋ ができます</h4>
+      <div class="vs-sub">前面本來就是名詞</div>
+      <ul>
+        <li><ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>ができます</li>
+        <li>nihongo ga dekimasu</li>
+        <li>會日文</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>動詞 ＋ こと ＋ ができます</h4>
+      <div class="vs-sub">動作要先用 こと 變成名詞</div>
+      <ul>
+        <li><ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すことができます</li>
+        <li>nihongo o hanasu koto ga dekimasu</li>
+        <li>會說日文</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    這個 こと 之前就出現過。<a href="2026-07-28-kita-koto-ga-arimasu.html" style="color:var(--accent);">7/28 的課</a>學的
+    日本に来たことがあります（曾經來過日本）也是同樣的結構：動詞 ＋ こと 變成「這件事」，後面再接 があります。
+    兩個句型差在 こと 前面的動詞形和後面接的動詞。
+  </p>
+
+  <div class="formula">
+    <h4>兩個用 こと 的句型</h4>
+    <div class="fx">
+      動詞<b>原形</b> ＋ こと ＋ が ＋ <b>できます</b> <span class="arw">→</span> 會做、可以做<br>
+      動詞<b>た形</b> ＋ こと ＋ が ＋ <b>あります</b> <span class="arw">→</span> 曾經做過
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>名詞＋できます 的另一種：する 動詞</strong><br>
+    像 <ruby>返<rt>へん</rt>品<rt>ぴん</rt></ruby>する（退貨）這種「名詞＋する」的動詞，可以直接把 する 換成 できる：
+    <a href="2026-08-16-he-tango.html" style="color:var(--accent);">8/16 的課</a>學過的 返品できますか（可以退貨嗎？）就是這樣來的。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、一句話裡的 を 和 が 各管各的</div>
+
+  <p class="lead">
+    這句同時有 を 和 が，看起來有點亂，其實它們管的是不同的動詞。
+    を 屬於 話す（說什麼？說日文），が 屬於 できます（能做到什麼？說日文這件事）。
+  </p>
+
+  <div class="formula">
+    <h4>兩個助詞各自的範圍</h4>
+    <div class="fx">
+      〔 <ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby><span class="j-mark">を</span> <ruby>話<rt>はな</rt></ruby>す 〕こと <span class="arw">→</span> を 管的是 話す<br>
+      〔 日本語を話すこと 〕<span class="j-mark">が</span> できます <span class="arw">→</span> が 管的是 できます
+    </div>
+  </div>
+
+  <p class="lead">
+    できます 前面固定用 が。<a href="2026-08-11-joshi-o.html" style="color:var(--accent);">8/11 助詞「を」那篇</a>提過
+    「わかります・できます・好きです 前面不是 を」，這裡就是一個例子，所以不能說 <s>話すことをできます</s>。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、できます 可以是「會」，也可以是「可以」</div>
+
+  <p class="lead">
+    中文會依情況用「會」或「可以」，日文都用 できます。講自己的能力時是「會」，講規定或環境允不允許時是「可以」。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 「可以」的例子</div>
+
+    <div class="word-item" data-text="ここで写真を撮ることができます">
+      <div class="word-content">
+        <div class="word-ja">ここで　<ruby>写<rt>しゃ</rt>真<rt>しん</rt></ruby>を　<ruby>撮<rt>と</rt></ruby>ることが　できます</div>
+        <div class="word-romaji">koko de shashin o toru koto ga dekimasu</div>
+        <div class="word-meaning">這裡可以拍照 — 講規定允許，不是講能力</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カードで払うことができますか">
+      <div class="word-content">
+        <div class="word-ja">カードで　<ruby>払<rt>はら</rt></ruby>うことが　できますか</div>
+        <div class="word-romaji">kaado de harau koto ga dekimasu ka</div>
+        <div class="word-meaning">可以刷卡付款嗎？ — カード 來自英語 card，日文多半指信用卡或各種卡片</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、否定和過去都只動 できます</div>
+
+  <p class="lead">
+    要說「不會」或「以前會」，前面的 話すこと 完全不動，只改最後的 できます。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 四種變化</div>
+
+    <div class="word-item" data-text="日本語を話すことができません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>すことが　できません</div>
+        <div class="word-romaji">nihongo o hanasu koto ga dekimasen</div>
+        <div class="word-meaning">不會說日文 — 否定：できません</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="子供の時、泳ぐことができました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>子<rt>こ</rt>供<rt>ども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>泳<rt>およ</rt></ruby>ぐことが　できました</div>
+        <div class="word-romaji">kodomo no toki, oyogu koto ga dekimashita</div>
+        <div class="word-meaning">小時候會游泳 — 過去：できました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昨日は寝ることができませんでした">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は　<ruby>寝<rt>ね</rt></ruby>ることが　できませんでした</div>
+        <div class="word-romaji">kinou wa neru koto ga dekimasen deshita</div>
+        <div class="word-meaning">昨天睡不著 — 過去否定：できませんでした</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、話すことができます 和 話せます，差別在哪裡</div>
+
+  <p class="lead">
+    同一天的 <a href="2026-10-06-doushite-ndesu.html" style="color:var(--accent);">〈どうして〜んですか〉</a> 裡出現了
+    日本語が話せます（會說日文），話せます 是 話す 的可能形。它跟本篇的 話すことができます 意思一樣，
+    差在長短和語氣：ことができます 比較長、比較正式，寫文章或很有禮貌時用；話せます 比較短，日常對話更常聽到。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4><ruby>話<rt>はな</rt></ruby>すことができます</h4>
+      <div class="vs-sub">動詞原形＋ことができます</div>
+      <ul>
+        <li>日本語<b>を</b>話すことができます</li>
+        <li>比較正式、偏書面</li>
+        <li>任何動詞都只要接原形，不用另外記變化</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4><ruby>話<rt>はな</rt></ruby>せます</h4>
+      <div class="vs-sub">可能形</div>
+      <ul>
+        <li>日本語<b>が</b>話せます</li>
+        <li>比較短、口語常用</li>
+        <li>每一類動詞的可能形變法不同，之後再學</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    注意兩句的助詞不一樣：ことができます 裡的 日本語 屬於 話す，所以用 を；
+    可能形 話せます 前面通常用 が。剛開始學的時候，ことができます 比較好用，因為動詞只要用原形就好。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、有三個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① こと 前面不能放 ます形</strong><br>
+    <s>話しますことができます</s> 是錯的。こと 前面一定用原形：<b>話す</b>ことができます。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② できます 前面用 が，不用 を</strong><br>
+    <s>話すことをできます</s> 是錯的。日本語<b>を</b> 是給 話す 的，こと 後面接 できます 要用 <b>が</b>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>③ 不要把可能形和 ことができます 疊在一起</strong><br>
+    <s>話せることができます</s> 等於說了兩次「會」。選一個就好：話すことができます，或 話せます。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">九、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>會、可以</td><td class="col-ja">原形 ＋ こと<b>が</b>できます</td><td class="col-ja">日本語を話すことができます</td></tr>
+      <tr><td>不會、不可以</td><td class="col-ja">原形 ＋ ことが<b>できません</b></td><td class="col-ja">日本語を話すことができません</td></tr>
+      <tr><td>以前會</td><td class="col-ja">原形 ＋ ことが<b>できました</b></td><td class="col-ja">泳ぐことができました</td></tr>
+      <tr><td>以前不會、沒辦法</td><td class="col-ja">原形 ＋ ことが<b>できませんでした</b></td><td class="col-ja">寝ることができませんでした</td></tr>
+      <tr><td>前面是名詞</td><td class="col-ja">名詞 ＋ <b>が</b>できます</td><td class="col-ja">日本語ができます</td></tr>
+      <tr><td>名詞＋する 的動詞</td><td class="col-ja">名詞 ＋ <b>できます</b></td><td class="col-ja">返品できますか</td></tr>
+      <tr><td>口語的說法</td><td class="col-ja">可能形</td><td class="col-ja">日本語が話せます</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">十、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看</strong><br>
+    1. 我會寫平假名。（ひらがな、書く）<br>
+    2. 這裡可以吃東西嗎？（ここで、食べる）<br>
+    3. 我不會說英文。（英語＝えいご）<br>
+    4. 「読みますことができます」哪裡錯了？<br>
+    5. 「日本語を話すことができます」裡，を 和 が 各自屬於哪個動詞？
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. ひらがなを<ruby>書<rt>か</rt></ruby>くことができます。（hiragana o kaku koto ga dekimasu）</p>
+    <p>2. ここで<ruby>食<rt>た</rt></ruby>べることができますか。（koko de taberu koto ga dekimasu ka）</p>
+    <p>3. <ruby>英<rt>えい</rt>語<rt>ご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すことができません。（eigo o hanasu koto ga dekimasen）</p>
+    <p>4. こと 前面要用原形，要說 <ruby>読<rt>よ</rt></ruby>むことができます（yomu koto ga dekimasu）。</p>
+    <p>5. を 屬於 話す（說的是日文），が 屬於 できます（能做到的是「說日文這件事」）。</p>
+  </details>
+
+  <a href="2026-10-06-doushite-ndesu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">どうして〜んですか <span class="next-arrow">→</span></span>
+    <span class="next-sub">どうして日本語が話せるんですか：話せる 是 話す 的可能形，跟本篇的 話すことができます 同義</span>
+  </a>
+
+  <a href="2026-07-28-kita-koto-ga-arimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">日本に来たことがありますか <span class="next-arrow">→</span></span>
+    <span class="next-sub">同樣用 こと 把動作變成名詞：た形＋ことがあります＝曾經做過</span>
+  </a>
+
+  <a href="2026-08-09-godan-doushi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">什麼是五段動詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">ます形換回原形的方法：話します → 話す</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

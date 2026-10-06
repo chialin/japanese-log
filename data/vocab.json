@@ -1,6 +1,119 @@
 {
- "generated": "2026-10-04",
+ "generated": "2026-10-06",
  "words": [
+  {
+   "text": "どうして日本語が話せるんですか",
+   "ja": "どうして<ruby>日本語<rt>にほんご</rt></ruby>が　<ruby>話<rt>はな</rt></ruby>せるんですか",
+   "kana": "どうしてにほんごが はなせるんですか",
+   "romaji": "dōshite nihongo ga hanaseru n desu ka",
+   "meaning": "你為什麼會說日文呢？— 已經聽到對方在說日文，好奇背後的原因",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-doushite-ndesu.html",
+     "title": "どうして〜んですか"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "どうしてアメリカに行くんですか",
+   "ja": "どうしてアメリカに　<ruby>行<rt>い</rt></ruby>くんですか",
+   "kana": "どうしてアメリカに いくんですか",
+   "romaji": "dōshite Amerika ni iku n desu ka",
+   "meaning": "你為什麼要去美國呢？— 已經聽說對方要去美國，想知道理由",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-doushite-ndesu.html",
+     "title": "どうして〜んですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "母がにほんじんなんです",
+   "ja": "<ruby>母<rt>はは</rt></ruby>が　<ruby>日本人<rt>にほんじん</rt></ruby>なんです",
+   "kana": "ははが にほんじんなんです",
+   "romaji": "haha ga nihonjin na n desu",
+   "meaning": "因為我媽媽是日本人。— 名詞 日本人 要加 な 再接 んです",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-doushite-ndesu.html",
+     "title": "どうして〜んですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "日本のアニメが好きなんです",
+   "ja": "<ruby>日本<rt>にほん</rt></ruby>のアニメが　<ruby>好<rt>す</rt></ruby>きなんです",
+   "kana": "にほんのアニメが すきなんです",
+   "romaji": "Nihon no anime ga suki na n desu",
+   "meaning": "因為我喜歡日本的動畫。— な形容詞 好き 一樣加 な",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-doushite-ndesu.html",
+     "title": "どうして〜んですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "仕事で行くんです",
+   "ja": "<ruby>仕事<rt>しごと</rt></ruby>で　<ruby>行<rt>い</rt></ruby>くんです",
+   "kana": "しごとで いくんです",
+   "romaji": "shigoto de iku n desu",
+   "meaning": "我是因為工作要去。— で 表示原因，行く 用原形接 んです",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-doushite-ndesu.html",
+     "title": "どうして〜んですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "友達がいるんです",
+   "ja": "<ruby>友達<rt>ともだち</rt></ruby>が　いるんです",
+   "kana": "ともだちが いるんです",
+   "romaji": "tomodachi ga iru n desu",
+   "meaning": "因為我有朋友在那裡。— います 的原形是 いる",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-doushite-ndesu.html",
+     "title": "どうして〜んですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
   {
    "text": "重さはどのくらいですか",
    "ja": "<ruby>重<rt>おも</rt></ruby>さは　どのくらいですか",

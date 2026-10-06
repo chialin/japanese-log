@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>どうして〜んですか — 為什麼要加「ん」</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <style>
+    /* 文法課 — 青碧／松葉綠色票 */
+    :root {
+      --paper: #f2f7f0;
+      --paper-deep: #e2ecdf;
+      --ink: #16261c;
+      --ink-soft: #33513e;
+      --ink-mute: #6a8a76;
+      --accent: #3f7a52;
+      --accent-soft: #a8cbb4;
+      --accent-pale: #e0efe4;
+      --line: #cfe1d4;
+      --bg-spot-1: #eaf4e8;
+      --bg-spot-2: #d8ecdc;
+    }
+
+    .j-mark {
+      display: inline-block;
+      background: var(--accent-pale);
+      color: var(--accent);
+      font-weight: 600;
+      padding: 0 4px;
+      border-radius: 2px;
+      font-family: 'Klee One', 'Shippori Mincho', serif;
+    }
+
+    .lead {
+      margin-bottom: 14px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* 速記表 */
+    .joshi-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      background: rgba(255, 255, 255, .5);
+      font-size: 14px;
+    }
+
+    .joshi-table th,
+    .joshi-table td {
+      border: 1px solid var(--line);
+      padding: 9px 11px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .joshi-table th {
+      background: var(--accent-pale);
+      color: var(--accent);
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 600;
+    }
+
+    .joshi-table td b {
+      color: var(--accent);
+    }
+
+    .col-ja {
+      font-family: 'Klee One', 'Shippori Mincho', serif;
+      font-size: 15px;
+    }
+
+    /* 變形公式 */
+    .formula {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .6);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 16px 0;
+    }
+
+    .formula h4 {
+      margin: 0 0 10px;
+      font-family: 'Shippori Mincho', serif;
+      font-size: 16px;
+      color: var(--accent);
+    }
+
+    .fx {
+      font-family: 'Klee One', 'Shippori Mincho', serif;
+      font-size: 17px;
+      line-height: 2.2;
+      color: var(--ink);
+    }
+
+    .fx s {
+      color: var(--ink-mute);
+      text-decoration-thickness: 2px;
+    }
+
+    .fx b {
+      color: var(--accent);
+    }
+
+    .fx .arw {
+      color: var(--ink-mute);
+      margin: 0 8px;
+    }
+
+    /* 兩欄對照 */
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .vs-col {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .55);
+      padding: 16px 18px;
+      border-radius: 8px;
+    }
+
+    .vs-col h4 {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 15px;
+      color: var(--accent);
+      margin: 0 0 4px;
+    }
+
+    .vs-col .vs-sub {
+      font-size: 13px;
+      color: var(--ink-mute);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .vs-col ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 14px;
+      line-height: 2;
+      color: var(--ink-soft);
+    }
+
+    @media(max-width:560px) {
+      .vs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../shared.css" />
+  <script src="../js/site-chrome.js" defer></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <site-header></site-header>
+
+    <h1 class="page-title">どうして〜<span class="accent">んですか</span></h1>
+    <div class="page-meta">文法 · Grammar · 2026 / 10 / 06</div>
+    <p class="page-subtitle">問「為什麼」的時候句尾要加 ん，以及 ん 前面的動詞為什麼要用原形</p>
+
+    <div class="speed-control">
+      <label for="rate">速度</label>
+      <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+      <span class="speed-value" id="rateValue">1.0x</span>
+    </div>
+
+    <div class="tip">
+      💡 <strong>這篇要學的是什麼</strong><br>
+      聽到外國人說一口流利的日文，或是聽說朋友要去美國，想問「為什麼」的時候，日文會說
+      どうして<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>話<rt>はな</rt></ruby>せる<strong>ん</strong>ですか、どうしてアメリカに<ruby>行<rt>い</rt></ruby>く<strong>ん</strong>ですか。
+      這篇用這兩句當例子，說明句尾多出來的 ん 是什麼、為什麼問原因時幾乎都會加上它，
+      還有一個很容易漏掉的地方：ん 前面的動詞要用原形，不能用 ます形。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">一、以兩個問句為主軸，先把句子拆開來看</div>
+
+    <p class="lead">
+      兩句的骨架一樣，都是「どうして ＋ 一件事 ＋ んですか」。先聽一次、跟著唸，再看每個部分在做什麼。
+    </p>
+
+    <div class="section">
+      <div class="section-title">📖 課堂例句</div>
+
+      <div class="word-item" data-text="どうして日本語が話せるんですか">
+        <div class="word-content">
+          <div class="word-ja">どうして<ruby>日本語<rt>にほんご</rt></ruby>が　<ruby>話<rt>はな</rt></ruby>せる<span class="j-mark">んです</span>か</div>
+          <div class="word-romaji">dōshite nihongo ga hanaseru n desu ka</div>
+          <div class="word-meaning">你為什麼會說日文呢？— 已經聽到對方在說日文，好奇背後的原因</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="どうしてアメリカに行くんですか">
+        <div class="word-content">
+          <div class="word-ja">どうしてアメリカに　<ruby>行<rt>い</rt></ruby>く<span class="j-mark">んです</span>か</div>
+          <div class="word-romaji">dōshite Amerika ni iku n desu ka</div>
+          <div class="word-meaning">你為什麼要去美國呢？— 已經聽說對方要去美國，想知道理由</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <p class="lead">
+      拆開來看，每個部分的作用是這樣的：
+    </p>
+
+    <table class="joshi-table">
+      <thead>
+        <tr>
+          <th>部分</th>
+          <th>讀音</th>
+          <th>作用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-ja"><b>どうして</b></td>
+          <td>dōshite</td>
+          <td>為什麼。<a href="2026-08-04-mokutekichi-ni.html" style="color:var(--accent);">8/4 的課</a>用過：どうして日本に来ましたか</td>
+        </tr>
+        <tr>
+          <td class="col-ja"><b><ruby>日本語<rt>にほんご</rt></ruby>が</b></td>
+          <td>nihongo ga</td>
+          <td>日文。「會說」的對象用 が，不用 を</td>
+        </tr>
+        <tr>
+          <td class="col-ja"><b><ruby>話<rt>はな</rt></ruby>せる</b></td>
+          <td>hanaseru</td>
+          <td>會說、能說。是 話す（說）的可能形，ます形是 話せます</td>
+        </tr>
+        <tr>
+          <td class="col-ja"><b>アメリカに</b></td>
+          <td>Amerika ni</td>
+          <td>到美國。に 表示目的地</td>
+        </tr>
+        <tr>
+          <td class="col-ja"><b><ruby>行<rt>い</rt></ruby>く</b></td>
+          <td>iku</td>
+          <td>去。原形（辞書形），ます形是 行きます</td>
+        </tr>
+        <tr>
+          <td class="col-ja"><b>んですか</b></td>
+          <td>n desu ka</td>
+          <td>請對方說明。這篇的重點，下面幾節一段一段講</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      📝 <strong>話せる 的前面用 が</strong><br>
+      <a href="2026-08-07-kikoemasu.html" style="color:var(--accent);">8/7〈聞こえますか〉</a>那篇講過，可能形會把 を 換成 が：
+      日本語<strong>を</strong>話します（說日文）→ 日本語<strong>が</strong>話せます（會說日文）。
+      話せる 就是 話せます 的原形，所以這句一樣用 が。
+    </div>
+
+    <div class="note">
+      📝 <strong>アメリカ 是外來語，一定要寫片假名</strong><br>
+      アメリカ 來自地名 <strong>America</strong>，這個名字源自義大利航海家 Amerigo Vespucci。
+      以前日文用漢字寫成 <ruby>亜<rt>あ</rt>米<rt>め</rt>利<rt>り</rt>加<rt>か</rt></ruby>，
+      所以現在報紙上的 <ruby>米国<rt>べいこく</rt></ruby>（美國）、<ruby>日米<rt>にちべい</rt></ruby>（日美）用的是「米」，不是「美」。
+      另外要注意，日文單說 アメリカ 通常指美國這個國家；要講整個美洲大陸，會說 アメリカ<ruby>大陸<rt>たいりく</rt></ruby>。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">二、ん 是 の 縮短來的</div>
+
+    <p class="lead">
+      〜んです 原本是 〜のです。日文講話講得快的時候，の 會縮成 ん，就像中文口語裡「這樣子」常常講成「醬子」。
+      意思完全一樣，只是 のです 聽起來比較正式，多半出現在文章或演講裡；平常說話用 んです 比較自然。
+    </p>
+
+    <div class="formula">
+      <h4>の 縮成 ん</h4>
+      <div class="fx">
+        <ruby>話<rt>はな</rt></ruby>せる<b>の</b>ですか <span class="arw">→</span> <ruby>話<rt>はな</rt></ruby>せる<b>ん</b>ですか（口語）<br>
+        <ruby>行<rt>い</rt></ruby>く<b>の</b>ですか <span class="arw">→</span> <ruby>行<rt>い</rt></ruby>く<b>ん</b>ですか（口語）
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">三、加 ん 是因為你在請對方說明一件已經知道的事</div>
+
+    <p class="lead">
+      んです 的作用是「說明」。用在問句裡，就是請對方針對一件你已經看到或聽到的事，多講一點背景。
+      所以會不會加 ん，要看你問之前心裡有沒有一個前提。
+    </p>
+
+    <div class="vs-grid">
+      <div class="vs-col">
+        <h4>沒有前提 → 不加 ん</h4>
+        <div class="vs-sub">單純想知道是或不是</div>
+        <ul>
+          <li>日本語が話せますか</li>
+          <li>（你會說日文嗎？）</li>
+          <li>你還不知道對方會不會說，只是問問看</li>
+        </ul>
+      </div>
+      <div class="vs-col">
+        <h4>有前提 → 加 ん</h4>
+        <div class="vs-sub">已經知道這件事，想聽原因</div>
+        <ul>
+          <li>どうして日本語が話せるんですか</li>
+          <li>（你怎麼會說日文呢？）</li>
+          <li>你剛剛已經聽到對方說日文了，覺得意外</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="lead">
+      どうして 本身就是在問原因，而問原因的時候，一定是先知道了某件事才會問，所以 どうして 幾乎都會配上 んですか。
+      如果拿掉 ん，說成 どうして日本語が話せますか，文法上沒有錯，但聽起來像在冷冰冰地核對事實，
+      少了「我很好奇、想聽你說說」的語氣，有時甚至會讓對方覺得被質問。
+    </p>
+
+    <div class="note">
+      📝 <strong>8/4 那句也可以改成 んですか</strong><br>
+      <a href="2026-08-04-mokutekichi-ni.html" style="color:var(--accent);">8/4 的課</a>裡先生問的是 どうして<ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>ましたか，
+      這是課本上的基本問法。實際聊天時，日本人比較常說 どうして日本に<ruby>来<rt>き</rt></ruby>た<strong>ん</strong>ですか（dōshite Nihon ni kita n desu ka），
+      来た 是 来ました 的普通形。兩句意思一樣，加 ん 的那句聽起來比較像在關心對方。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">四、ん 前面要用普通形，不能用 ます形</div>
+
+    <p class="lead">
+      這是最容易漏掉的地方。禮貌的部分已經由句尾的 です 負責了，所以 ん 前面的詞要用普通形（原形），
+      不用再加 ます。<a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9〈五段動詞〉</a>那篇的 辞書形，就是這裡要用的形。
+    </p>
+
+    <div class="formula">
+      <h4>動詞：ます形 換回原形</h4>
+      <div class="fx">
+        <s><ruby>話<rt>はな</rt></ruby>せます</s>んですか <span class="arw">→</span> <b><ruby>話<rt>はな</rt></ruby>せる</b>んですか<br>
+        <s><ruby>行<rt>い</rt></ruby>きます</s>んですか <span class="arw">→</span> <b><ruby>行<rt>い</rt></ruby>く</b>んですか<br>
+        <s><ruby>食<rt>た</rt></ruby>べます</s>んですか <span class="arw">→</span> <b><ruby>食<rt>た</rt></ruby>べる</b>んですか
+      </div>
+    </div>
+
+    <p class="lead">
+      名詞和形容詞也可以接 んです，但接法不一樣。い形容詞直接接；名詞和な形容詞要先補一個 な，
+      這個 な 跟 <a href="2026-09-12-na-keiyoushi-meishi.html" style="color:var(--accent);">9/12 的課</a>學的「な形容詞＋な＋名詞」是同一種感覺。
+    </p>
+
+    <div class="formula">
+      <h4>名詞、形容詞的接法</h4>
+      <div class="fx">
+        い形容詞：<ruby>高<rt>たか</rt></ruby>い ＋ んです <span class="arw">→</span> <b><ruby>高<rt>たか</rt></ruby>いんです</b>（因為很貴）<br>
+        な形容詞：<ruby>好<rt>す</rt></ruby>き ＋ <b>な</b> ＋ んです <span class="arw">→</span> <b><ruby>好<rt>す</rt></ruby>きなんです</b>（因為喜歡）<br>
+        名詞：<ruby>日本人<rt>にほんじん</rt></ruby> ＋ <b>な</b> ＋ んです <span class="arw">→</span> <b><ruby>日本人<rt>にほんじん</rt></ruby>なんです</b>（因為是日本人）
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">五、回答的時候也是用 んです</div>
+
+    <p class="lead">
+      被問「為什麼」的人，回答時一樣用 〜んです 來說明理由。你問的時候用 んですか，對方回答時就用 んです，前後是一組的。
+    </p>
+
+    <div class="section">
+      <div class="section-title">📖 問與答</div>
+
+      <div class="word-item" data-text="どうして日本語が話せるんですか">
+        <div class="word-content">
+          <div class="word-ja">どうして<ruby>日本語<rt>にほんご</rt></ruby>が　<ruby>話<rt>はな</rt></ruby>せるんですか</div>
+          <div class="word-romaji">dōshite nihongo ga hanaseru n desu ka</div>
+          <div class="word-meaning">你為什麼會說日文呢？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="母がにほんじんなんです">
+        <div class="word-content">
+          <div class="word-ja"><ruby>母<rt>はは</rt></ruby>が　<ruby>日本人<rt>にほんじん</rt></ruby>なんです</div>
+          <div class="word-romaji">haha ga nihonjin na n desu</div>
+          <div class="word-meaning">因為我媽媽是日本人。— 名詞 日本人 要加 な 再接 んです</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="日本のアニメが好きなんです">
+        <div class="word-content">
+          <div class="word-ja"><ruby>日本<rt>にほん</rt></ruby>のアニメが　<ruby>好<rt>す</rt></ruby>きなんです</div>
+          <div class="word-romaji">Nihon no anime ga suki na n desu</div>
+          <div class="word-meaning">因為我喜歡日本的動畫。— な形容詞 好き 一樣加 な</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="どうしてアメリカに行くんですか">
+        <div class="word-content">
+          <div class="word-ja">どうしてアメリカに　<ruby>行<rt>い</rt></ruby>くんですか</div>
+          <div class="word-romaji">dōshite Amerika ni iku n desu ka</div>
+          <div class="word-meaning">你為什麼要去美國呢？</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="仕事で行くんです">
+        <div class="word-content">
+          <div class="word-ja"><ruby>仕事<rt>しごと</rt></ruby>で　<ruby>行<rt>い</rt></ruby>くんです</div>
+          <div class="word-romaji">shigoto de iku n desu</div>
+          <div class="word-meaning">我是因為工作要去。— で 表示原因，行く 用原形接 んです</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+
+      <div class="word-item" data-text="友達がいるんです">
+        <div class="word-content">
+          <div class="word-ja"><ruby>友達<rt>ともだち</rt></ruby>が　いるんです</div>
+          <div class="word-romaji">tomodachi ga iru n desu</div>
+          <div class="word-meaning">因為我有朋友在那裡。— います 的原形是 いる</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+
+    <div class="note">
+      📝 <strong>也可以用 からです 回答</strong><br>
+      <a href="2026-08-25-naru.html" style="color:var(--accent);">8/25 的課</a>學過用 〜からです 講原因，例如 <ruby>仕事<rt>しごと</rt></ruby>がある<strong>から</strong>です（因為有工作）。
+      からです 是把原因明確講出來，んです 則是用「說明情況」的口氣回答，聊天時 んです 聽起來比較柔和。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">六、有三個地方容易講錯</div>
+
+    <p class="lead">
+      んです 的意思不難懂，比較容易出錯的是接法和使用的時機，下面這三點要特別注意。
+    </p>
+
+    <div class="alert">
+      ⚠️ <strong>① ます形後面不能直接接 ん</strong><br>
+      <s>行きますんですか</s>、<s>話せますんですか</s> 都是錯的。
+      要先把動詞換回原形：<span class="compare">行くんですか</span>、<span class="compare">話せるんですか</span>。
+    </div>
+
+    <div class="alert">
+      ⚠️ <strong>② 名詞和な形容詞要補 な</strong><br>
+      <s>日本人んです</s>、<s>好きんです</s> 都少了一個字，
+      要說 <span class="compare">日本人なんです</span>、<span class="compare">好きなんです</span>。
+    </div>
+
+    <div class="alert">
+      ⚠️ <strong>③ 沒有前提的時候不要加 ん</strong><br>
+      第一次見面，想知道對方會不會說日文，要問 <span class="compare">日本語が話せますか</span>。
+      如果問成 日本語が話せるんですか，聽起來像是「欸，你居然會說日文？」，是已經發現了才會這樣問。
+      反過來，用 どうして 問原因時，就幾乎都要加 ん。
+    </div>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">七、整理成一張表</div>
+
+    <table class="joshi-table">
+      <thead>
+        <tr>
+          <th>前面是什麼</th>
+          <th>接法</th>
+          <th>例子</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>動詞</td>
+          <td>原形 ＋ んです</td>
+          <td class="col-ja"><b><ruby>行<rt>い</rt></ruby>くんです</b>・<b><ruby>話<rt>はな</rt></ruby>せるんです</b></td>
+        </tr>
+        <tr>
+          <td>い形容詞</td>
+          <td>直接 ＋ んです</td>
+          <td class="col-ja"><b><ruby>高<rt>たか</rt></ruby>いんです</b></td>
+        </tr>
+        <tr>
+          <td>な形容詞</td>
+          <td>＋ な ＋ んです</td>
+          <td class="col-ja"><b><ruby>好<rt>す</rt></ruby>きなんです</b></td>
+        </tr>
+        <tr>
+          <td>名詞</td>
+          <td>＋ な ＋ んです</td>
+          <td class="col-ja"><b><ruby>日本人<rt>にほんじん</rt></ruby>なんです</b></td>
+        </tr>
+        <tr>
+          <td>問原因</td>
+          <td>どうして 〜 んですか</td>
+          <td class="col-ja"><b>どうしてアメリカに<ruby>行<rt>い</rt></ruby>くんですか</b></td>
+        </tr>
+        <tr>
+          <td>沒有前提的問句</td>
+          <td>ます形 ＋ か（不加 ん）</td>
+          <td class="col-ja"><b><ruby>日本語<rt>にほんご</rt></ruby>が<ruby>話<rt>はな</rt></ruby>せますか</b></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ─────────────────────────────────────── -->
+    <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+    <div class="note">
+      ✍️ <strong>試著用日文說說看</strong><br>
+      1. 你為什麼要去台灣呢？（台湾＝たいわん）<br>
+      2. 「どうして日本に行きますんですか」哪裡錯了？<br>
+      3. 回答：因為我喜歡日本料理。（日本料理＝にほんりょうり）<br>
+      4. 第一次見面，想問對方「你會說英文嗎？」，要加 ん 嗎？（英語＝えいご）<br>
+      5. 你為什麼會說日文呢？（把本課的句子默寫出來）
+    </div>
+
+    <details>
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. どうして<ruby>台湾<rt>たいわん</rt></ruby>に<ruby>行<rt>い</rt></ruby>くんですか。（dōshite Taiwan ni iku n desu ka）</p>
+      <p>2. ん 前面不能用 ます形，要改成原形：どうして<ruby>日本<rt>にほん</rt></ruby>に<ruby>行<rt>い</rt></ruby>くんですか。（dōshite Nihon ni iku n desu ka）</p>
+      <p>3. <ruby>日本料理<rt>にほんりょうり</rt></ruby>が<ruby>好<rt>す</rt></ruby>きなんです。（Nihon ryōri ga suki na n desu）— 好き 是な形容詞，要補 な。</p>
+      <p>4. 不加。還不知道對方會不會說，是沒有前提的問句：<ruby>英語<rt>えいご</rt></ruby>が<ruby>話<rt>はな</rt></ruby>せますか。（eigo ga hanasemasu ka）</p>
+      <p>5. どうして<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>話<rt>はな</rt></ruby>せるんですか。（dōshite nihongo ga hanaseru n desu ka）</p>
+    </details>
+
+    <a href="2026-10-06-tsugi-wa-ichikara.html" class="next-link same-day">
+      <span class="next-kicker">— 同一天 / Same day —</span>
+      <span class="next-title">次は1辛にします <span class="next-arrow">→</span></span>
+      <span class="next-sub">咖哩店的對話：〜の方が 比較、辣度與點餐的決定</span>
+    </a>
+
+    <a href="2026-08-04-mokutekichi-ni.html" class="next-link">
+      <span class="next-kicker">— Related —</span>
+      <span class="next-title">目的地 ＋ に — 我跟著先生來日本 <span class="next-arrow">→</span></span>
+      <span class="next-sub">第一次用 どうして 問原因：どうして日本に来ましたか</span>
+    </a>
+
+    <a href="2026-08-07-kikoemasu.html" class="next-link">
+      <span class="next-kicker">— Related —</span>
+      <span class="next-title">聞こえますか — 聽得到 vs 去聽 <span class="next-arrow">→</span></span>
+      <span class="next-sub">可能形與 を→が：話せる 為什麼前面用 が</span>
+    </a>
+
+    <site-footer></site-footer>
+  </div>
+
+  <script src="../js/tts.js"></script>
+  <script>
+    const rateSlider = document.getElementById('rate');
+    const rateValue = document.getElementById('rateValue');
+    rateSlider.addEventListener('input', () => {
+      rateValue.textContent = rateSlider.value + 'x';
+    });
+
+    function speak(text, button) {
+      return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+    }
+
+    document.querySelectorAll('.word-item[data-text]').forEach(item => {
+      const button = item.querySelector('.play-btn');
+      const text = item.dataset.text;
+      const handler = (e) => { e.stopPropagation(); speak(text, button); };
+      button.addEventListener('click', handler);
+    });
+  </script>
+</body>
+
+</html>

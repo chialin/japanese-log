@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>次は1辛にします — 比較、辣度與點餐的決定</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票 */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><ruby>次<rt>つぎ</rt></ruby>は <span class="accent"><ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>にします</span></h1>
+  <div class="page-meta">Lesson · 2026 / 10 / 06</div>
+  <p class="page-subtitle">吃咖哩時會用到的比較句、辣度的唸法，以及「下次要點這個」的說法</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    這篇整理 10/6 課堂上聊<ruby>外食<rt>がいしょく</rt></ruby>（在外面吃飯）的對話，主題是咖哩店：哪一家比較好吃、價錢、辣度怎麼選，最後說下次要點幾辣。
+    裡面有三個新的說法。第一個是拿兩家店來比較的 <ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>美味<rt>おい</rt></ruby>しい（吉祥寺那家比較好吃），
+    第二個是 <ruby>辛<rt>から</rt></ruby>さ（辣度），它跟 <a href="2026-10-04-omosa-kyori.html" style="color:var(--accent);">10/4 的 重さ</a> 是同一個變法，
+    第三個是點餐、做決定時用的 <ruby>次<rt>つぎ</rt></ruby>は<ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>にします（下次我要點一辣）。
+    順便把 0.5辛、1辛 這種用數字分辣度的唸法一起記起來。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以課堂上的對話為主軸，把這幾句排出來</div>
+
+  <p class="lead">
+    筆記裡有些只寫了一個詞（値段、選ぶ），這裡把它們補成完整的句子，照對話的順序排好。先聽一次、跟著唸。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 課堂例句</div>
+
+    <div class="word-item" data-text="おかえりなさい">
+      <div class="word-content">
+        <div class="word-ja">おかえりなさい</div>
+        <div class="word-romaji">okaeri nasai</div>
+        <div class="word-meaning">歡迎回來 — 對回來的人說的話，<a href="2026-07-20-pair-aisatsu.html" style="color:var(--accent);">7/20 的課</a>跟 ただいま 配成一對學過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="外食">
+      <div class="word-content">
+        <div class="word-ja"><ruby>外<rt>がい</rt>食<rt>しょく</rt></ruby></div>
+        <div class="word-romaji">gaishoku</div>
+        <div class="word-meaning">外食、在外面吃飯 — 名詞，加上 します 就是動詞：よく外食します（常常在外面吃）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="よく外食します">
+      <div class="word-content">
+        <div class="word-ja">よく　<ruby>外<rt>がい</rt>食<rt>しょく</rt></ruby>します</div>
+        <div class="word-romaji">yoku gaishoku shimasu</div>
+        <div class="word-meaning">我常常在外面吃飯 — よく＝常常，外食 ＋ します 變成動詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="吉祥寺のほうが美味しいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>美味<rt>おい</rt></ruby>しいです</div>
+        <div class="word-romaji">kichijouji no hou ga oishii desu</div>
+        <div class="word-meaning">吉祥寺那家比較好吃 — 〜の方が＝「〜那一邊比較…」，拿兩樣東西比較時用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="値段はいくらですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>値<rt>ね</rt>段<rt>だん</rt></ruby>は　いくらですか</div>
+        <div class="word-romaji">nedan wa ikura desu ka</div>
+        <div class="word-meaning">價錢是多少？ — 値段＝價格，本來就是名詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="辛さを選びます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>辛<rt>から</rt></ruby>さを　<ruby>選<rt>えら</rt></ruby>びます</div>
+        <div class="word-romaji">karasa o erabimasu</div>
+        <div class="word-meaning">選辣度 — 辛い（辣的）去 い 加 さ 變成名詞；選ぶ（選）的ます形是 選びます</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="れいてんごからにしました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby>にしました</div>
+        <div class="word-romaji">reiten go kara ni shimashita</div>
+        <div class="word-meaning">我點了 0.5 辣 — にします 的過去式，講「當時選了這個」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="少し辛いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>少<rt>すこ</rt></ruby>し　<ruby>辛<rt>から</rt></ruby>いです</div>
+        <div class="word-romaji">sukoshi karai desu</div>
+        <div class="word-meaning">有一點辣 — 少し 放在形容詞前面，表示「稍微、有點」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="次はいちからにします">
+      <div class="word-content">
+        <div class="word-ja"><ruby>次<rt>つぎ</rt></ruby>は　<ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>にします</div>
+        <div class="word-romaji">tsugi wa ichi kara ni shimasu</div>
+        <div class="word-meaning">下次我要點一辣 — 名詞＋にします＝「決定要這個」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 食＝しょく 一整組</strong><br>
+    外食 的 食 唸 <span class="compare">しょく</span>，跟 <a href="2026-08-24-yotei-washoku.html">8/24 的課</a>學過的 <ruby>和食<rt>わしょく</rt></ruby>（日式料理）、<ruby>洋食<rt>ようしょく</rt></ruby>（西式料理）是同一個音。
+    前面換一個字就是另一種吃法：和（日本）＋食、洋（西洋）＋食、外（外面）＋食。
+    外 在這裡唸 <span class="compare">がい</span>，跟 <ruby>外<rt>がい</rt>国<rt>こく</rt></ruby>（外國）的 がい 一樣；單獨說「外面」時才唸 そと。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、「〜の方が」是拿兩樣東西來比較的</div>
+
+  <p class="lead">
+    中文說「吉祥寺那家比較好吃」，日文的說法是在名詞後面接 の方が，再接形容詞。
+    方 在這裡唸 <strong>ほう</strong>（hou），意思是「那一邊、那一方」，所以整句直譯是「吉祥寺那一邊比較好吃」。
+    課堂上只說了贏的那一邊，想把比較的對象也講出來，就用 より（比起）接在前面。
+    <a href="2026-08-24-yotei-washoku.html" style="color:var(--accent);">8/24 的課</a>問過 和食と洋食、どちらがいいですか（和食和洋食哪個好？），
+    回答就可以用這個句型：和食の方がいいです（和食比較好）。
+  </p>
+
+  <div class="formula">
+    <h4>比較句的骨架</h4>
+    <div class="fx">
+      <b>B</b> の<ruby>方<rt>ほう</rt></ruby>が ＋ 形容詞 <span class="arw">→</span> B 比較〜<br>
+      A <span class="j-mark">より</span> <b>B</b> の<ruby>方<rt>ほう</rt></ruby>が ＋ 形容詞 <span class="arw">→</span> 比起 A，B 比較〜
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 加上比較對象的例句</div>
+
+    <div class="word-item" data-text="このお店より吉祥寺のほうが美味しいです">
+      <div class="word-content">
+        <div class="word-ja">このお<ruby>店<rt>みせ</rt></ruby>より　<ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>美味<rt>おい</rt></ruby>しいです</div>
+        <div class="word-romaji">kono omise yori kichijouji no hou ga oishii desu</div>
+        <div class="word-meaning">比起這家店，吉祥寺那家比較好吃 — より 前面放輸的那一邊</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="吉祥寺のほうが値段が安いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>値<rt>ね</rt>段<rt>だん</rt></ruby>が　<ruby>安<rt>やす</rt></ruby>いです</div>
+        <div class="word-romaji">kichijouji no hou ga nedan ga yasui desu</div>
+        <div class="word-meaning">吉祥寺那家價錢比較便宜 — 「〜は〜が〜」的變化，比的是「價錢」這一項</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tip">
+    📗 完整的句型、どちら 的問答和容易講錯的地方，整理在同一天的文法篇
+    <a href="2026-10-06-no-hou-ga.html" style="color:var(--accent);">〈A より B の方が〉</a>。
+  </div>
+
+  <div class="note">
+    📝 <strong>中文的「比較」不用翻出來</strong><br>
+    日文的形容詞本身不會變成「比較〜」的形式，美味しい 還是 美味しい。
+    「比較」的意思全部由 の方が 和 より 來負責，所以不要另外去找一個「比較」的單字塞進去。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、辛さ 是把 辛い 變成名詞的結果</div>
+
+  <p class="lead">
+    「選辣度」要選的是一個東西，所以 を 前面要放名詞。<ruby>辛<rt>から</rt></ruby>い 是 い形容詞（辣的），
+    跟 <a href="2026-10-04-omosa-kyori.html" style="color:var(--accent);">10/4 的 重い → 重さ</a> 一樣，把最後的 い 拿掉、接上 さ，就變成名詞「辣度」。
+  </p>
+
+  <div class="formula">
+    <h4>い形容詞 → 名詞</h4>
+    <div class="fx">
+      <ruby>辛<rt>から</rt></ruby><s>い</s> ＋ <b>さ</b> <span class="arw">→</span> <ruby>辛<rt>から</rt></ruby><b>さ</b>（karasa，辣度）<br>
+      <ruby>重<rt>おも</rt></ruby><s>い</s> ＋ <b>さ</b> <span class="arw">→</span> <ruby>重<rt>おも</rt></ruby><b>さ</b>（omosa，重量）
+    </div>
+  </div>
+
+  <p class="lead">
+    <ruby>選<rt>えら</rt></ruby>ぶ（erabu，選擇）是字尾 ぶ 的五段動詞，變 ます形 時把 ぶ 換成同一行的 び，變成 選びます。
+    這跟 <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9 五段動詞</a>那篇的 飲む → 飲みます 是同一個規則。
+  </p>
+
+  <div class="word-item" data-text="辛さは選べますか">
+    <div class="word-content">
+      <div class="word-ja"><ruby>辛<rt>から</rt></ruby>さは　<ruby>選<rt>えら</rt></ruby>べますか</div>
+      <div class="word-romaji">karasa wa erabemasu ka</div>
+      <div class="word-meaning">辣度可以選嗎？ — 點餐時可以直接拿來問店員；選べます 是「能選」的意思，先整句記起來就好</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、用數字分辣度時，辛 唸 から</div>
+
+  <p class="lead">
+    <a href="2026-08-31-karakatta-desu.html" style="color:var(--accent);">8/31 的課</a>學過 甘口・中辛・辛口 這三個等級。
+    有些咖哩店分得更細，直接用數字加 辛 來標，例如連鎖店 CoCo壱番屋 就是從 1辛 排到 10辛，有的店還會在 1辛 下面多一個 0.5辛。
+    這時候 辛 跟 中辛 一樣唸 <strong>から</strong>，前面的數字照平常的唸法。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 數字辣度的唸法</div>
+
+    <div class="word-item" data-text="れいてんごから">
+      <div class="word-content">
+        <div class="word-ja"><ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby></div>
+        <div class="word-romaji">reiten go kara</div>
+        <div class="word-meaning">0.5 辣 — 小數點唸 てん，0 唸 れい</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いちから">
+      <div class="word-content">
+        <div class="word-ja"><ruby>1<rt>いち</rt>辛<rt>から</rt></ruby></div>
+        <div class="word-romaji">ichi kara</div>
+        <div class="word-meaning">一辣 — 比普通辣一級</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="にから">
+      <div class="word-content">
+        <div class="word-ja"><ruby>2<rt>に</rt>辛<rt>から</rt></ruby></div>
+        <div class="word-romaji">ni kara</div>
+        <div class="word-meaning">二辣 — 之後的 3辛、4辛 也照這樣唸</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    想說「有一點辣」，就在形容詞前面放 <ruby>少<rt>すこ</rt></ruby>し（sukoshi，一點點）。
+    朋友之間更常講 ちょっと（chotto），意思一樣，語氣比較輕鬆。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4><ruby>少<rt>すこ</rt></ruby>し<ruby>辛<rt>から</rt></ruby>いです</h4>
+      <div class="vs-sub">sukoshi karai desu</div>
+      <ul>
+        <li>有一點辣</li>
+        <li>跟老師、店員講話時用</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>ちょっと<ruby>辛<rt>から</rt></ruby>い</h4>
+      <div class="vs-sub">chotto karai</div>
+      <ul>
+        <li>有點辣</li>
+        <li>朋友之間的口語</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、〜にします 是點餐、做決定時這樣用的</div>
+
+  <p class="lead">
+    在店裡決定要點什麼，日文會說「名詞＋にします」，意思是「我決定要這個」。
+    講下一次的打算，就在前面加上 <ruby>次<rt>つぎ</rt></ruby>は（下次）。
+  </p>
+
+  <div class="formula">
+    <h4>做決定的句型</h4>
+    <div class="fx">
+      名詞 ＋ <span class="j-mark">に</span>します <span class="arw">→</span> <b>我決定要〜</b><br>
+      <ruby>次<rt>つぎ</rt></ruby>は ＋ <ruby>1<rt>いち</rt>辛<rt>から</rt></ruby> ＋ にします <span class="arw">→</span> <b>下次我要點一辣</b><br>
+      <ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby> ＋ にしました <span class="arw">→</span> <b>（這次）我點了 0.5 辣</b>
+    </div>
+  </div>
+
+  <p class="lead">
+    <a href="2026-08-29-naritai-biyouin.html" style="color:var(--accent);">8/29 美容院那篇</a>也出現過 にします，
+    不過那裡的 部屋を綺麗にします 是「把房間弄乾淨」，前面有一個被改變的東西（を）。
+    這次的 1辛にします 沒有 を，講的是「從幾個選項裡選定這一個」。
+    何にしますか 的問法、跟 になります 的差別，整理在同一天的文法篇
+    <a href="2026-10-06-ni-shimasu.html" style="color:var(--accent);">〈名詞＋にします〉</a>。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>〜を〜にします</h4>
+      <div class="vs-sub">把某樣東西變成某個樣子</div>
+      <ul>
+        <li><ruby>部屋<rt>へや</rt></ruby>を<ruby>綺麗<rt>きれい</rt></ruby>にします</li>
+        <li>heya o kirei ni shimasu</li>
+        <li>把房間整理乾淨</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>〜にします</h4>
+      <div class="vs-sub">從選項裡選定一個</div>
+      <ul>
+        <li><ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>にします</li>
+        <li>ichi kara ni shimasu</li>
+        <li>我要點一辣</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    筆記裡「下次」寫了兩種：<ruby>次回<rt>じかい</rt></ruby>（jikai）和 <ruby>次<rt>つぎ</rt></ruby>（tsugi）。
+    兩個意思都是下一次，次回 比較正式，常出現在店家的公告或預約單上（次回のご予約＝下次的預約）；
+    自己講話時用 次は 就很自然。
+  </p>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 回＝かい 一整組</strong><br>
+    次回 的 回 唸 <span class="compare">かい</span>，跟 <ruby>今回<rt>こんかい</rt></ruby>（這次）、<ruby>前回<rt>ぜんかい</rt></ruby>（上次）、<ruby>何回<rt>なんかい</rt></ruby>（幾次）是同一個字同一個音。
+    記住 回＝かい，前面換成 今・前・次 就是這次、上次、下次。
+    次 單獨一個字時唸 つぎ，跟 回 組在一起才唸 じ。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、有三個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① 方 在比較句裡唸 ほう，不是 かた</strong><br>
+    方 有兩個常見的唸法。<span class="compare">かた</span> 是「方法」或尊稱的「這位」（この方＝這位），
+    比較句裡的「那一邊」一定唸 <span class="compare">ほう</span>：吉祥寺の<b>ほう</b>が美味しい。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② 名詞後面要先接 の 才接 方が</strong><br>
+    吉祥寺 是名詞，要說 吉祥寺<b>の</b>方が，不能省掉 の 寫成 <s>吉祥寺方が</s>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>③ 1辛 的 辛 唸 から，不唸 しん</strong><br>
+    辛 的音讀是 しん（例如 香辛料），但辣度的 1辛、中辛 都唸 <span class="compare">から</span>，
+    取的是 辛い（からい）的 から。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>讀音</th><th>意思</th><th>重點</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><b><ruby>外<rt>がい</rt>食<rt>しょく</rt></ruby></b></td><td>gaishoku</td><td>外食、在外面吃飯</td><td>加 します 變動詞；食 跟 和食・洋食 同音</td></tr>
+      <tr><td class="col-ja"><b>〜の<ruby>方<rt>ほう</rt></ruby>が</b></td><td>no hou ga</td><td>〜那一邊比較…</td><td>比較句；對象用 より 帶出</td></tr>
+      <tr><td class="col-ja"><b><ruby>値<rt>ね</rt>段<rt>だん</rt></ruby></b></td><td>nedan</td><td>價格</td><td>本來就是名詞</td></tr>
+      <tr><td class="col-ja"><b><ruby>辛<rt>から</rt></ruby>さ</b></td><td>karasa</td><td>辣度</td><td>辛い 去 い 加 さ</td></tr>
+      <tr><td class="col-ja"><b><ruby>選<rt>えら</rt></ruby>ぶ</b></td><td>erabu</td><td>選擇</td><td>五段動詞，ます形 選びます</td></tr>
+      <tr><td class="col-ja"><b><ruby>少<rt>すこ</rt></ruby>し</b></td><td>sukoshi</td><td>一點點、稍微</td><td>放在形容詞前面</td></tr>
+      <tr><td class="col-ja"><b><ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby>／<ruby>1<rt>いち</rt>辛<rt>から</rt></ruby></b></td><td>reiten go kara／ichi kara</td><td>0.5 辣／一辣</td><td>辛 唸 から</td></tr>
+      <tr><td class="col-ja"><b><ruby>次回<rt>じかい</rt></ruby></b></td><td>jikai</td><td>下次</td><td>比較正式，公告、預約單常見</td></tr>
+      <tr><td class="col-ja"><b><ruby>次<rt>つぎ</rt></ruby>は</b></td><td>tsugi wa</td><td>下次</td><td>日常口語</td></tr>
+      <tr><td class="col-ja"><b>〜にします</b></td><td>ni shimasu</td><td>我決定要〜</td><td>點餐、做選擇；過去式 にしました</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看</strong><br>
+    1. 新宿那家比較便宜。（新宿＝しんじゅく、安い＝やすい）<br>
+    2. 比起拉麵，咖哩比較好吃。（ラーメン、カレー）<br>
+    3. 這個有一點辣。<br>
+    4. 下次我要點 2 辣。<br>
+    5. 我週末常常在外面吃飯。（週末＝しゅうまつ）<br>
+    6. 為什麼「辣度」要說 辛さ，不能直接用 辛い？
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. <ruby>新宿<rt>しんじゅく</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>安<rt>やす</rt></ruby>いです。（shinjuku no hou ga yasui desu）</p>
+    <p>2. ラーメンより カレーの<ruby>方<rt>ほう</rt></ruby>が<ruby>美味<rt>おい</rt></ruby>しいです。（raamen yori karee no hou ga oishii desu）</p>
+    <p>3. これは<ruby>少<rt>すこ</rt></ruby>し<ruby>辛<rt>から</rt></ruby>いです。（kore wa sukoshi karai desu）</p>
+    <p>4. <ruby>次<rt>つぎ</rt></ruby>は<ruby>2<rt>に</rt>辛<rt>から</rt></ruby>にします。（tsugi wa ni kara ni shimasu）</p>
+    <p>5. <ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>は よく<ruby>外<rt>がい</rt>食<rt>しょく</rt></ruby>します。（shuumatsu wa yoku gaishoku shimasu）</p>
+    <p>6. 因為「選辣度」要選的是一個東西，を 前面要放名詞；辛い 是形容詞，要去掉 い、加上 さ 才變成名詞。</p>
+  </details>
+
+  <a href="2026-10-06-no-hou-ga.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜の方が — 兩樣東西比較的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">吉祥寺の方が美味しい 的完整句型：より、どちら 的問答</span>
+  </a>
+
+  <a href="2026-10-06-ni-shimasu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜にします — 做決定時的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">次は1辛にします 的完整句型：何にしますか、跟 になります 的差別</span>
+  </a>
+
+  <a href="2026-08-31-karakatta-desu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">辛かったです — 形容詞的過去式 <span class="next-arrow">→</span></span>
+    <span class="next-sub">甘口・中辛・辛口 三個辣度，跟本篇的數字辣度一起看</span>
+  </a>
+
+  <a href="2026-10-04-omosa-kyori.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">重さ・距離はどのくらいですか <span class="next-arrow">→</span></span>
+    <span class="next-sub">い形容詞去 い 加 さ 變成名詞，辛さ 就是同一個變法</span>
+  </a>
+
+  <a href="2026-08-29-naritai-biyouin.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">髪が長くなりました — なる・する <span class="next-arrow">→</span></span>
+    <span class="next-sub">部屋を綺麗にします 的 にします，跟本篇做決定的 にします 對照</span>
+  </a>
+
+  <a href="2026-10-06-doushite-ndesu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">どうして〜んですか <span class="next-arrow">→</span></span>
+    <span class="next-sub">問「為什麼」時句尾要加 ん，ん 前面的動詞用原形</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

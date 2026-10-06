@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜にします — 做決定時的說法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">名詞 ＋ <span class="accent">にします</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 06</div>
+  <p class="page-subtitle">從幾個選項裡選定一個，說「我決定要這個」的句型</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    在店裡看完菜單決定要點什麼、跟朋友約時間決定哪一天，日文都用「名詞＋にします」來說「我決定要這個」。
+    10/6 課堂上的那一句是 <ruby>次<rt>つぎ</rt></ruby>は<ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>にします（下次我要點一辣）。
+    這篇先看句子怎麼組、怎麼問對方要選什麼，再跟兩個長得很像的說法比較：
+    8/29 學過的 部屋を綺麗にします（把房間整理乾淨），以及 8/25 學過的 になります。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以點餐的對話為主軸，把這幾句排出來</div>
+
+  <p class="lead">
+    下面是一段在咖哩店點餐的對話，先聽一次、跟著唸。每一句的 にします 前面都是「選中的那一個」。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="何にしますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>何<rt>なに</rt></ruby>に　しますか</div>
+        <div class="word-romaji">nani ni shimasu ka</div>
+        <div class="word-meaning">你要點什麼？ — 朋友之間問「要選哪個」；何 在 に 前面唸 なに</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カレーにします">
+      <div class="word-content">
+        <div class="word-ja">カレーに　します</div>
+        <div class="word-romaji">karee ni shimasu</div>
+        <div class="word-meaning">我要咖哩 — 名詞＋に＋します</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="辛さはどうしますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>辛<rt>から</rt></ruby>さは　どうしますか</div>
+        <div class="word-romaji">karasa wa dou shimasu ka</div>
+        <div class="word-meaning">辣度要怎麼選？ — 問「怎麼決定」時用 どう，不加 に</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="れいてんごからにします">
+      <div class="word-content">
+        <div class="word-ja"><ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby>に　します</div>
+        <div class="word-romaji">reiten go kara ni shimasu</div>
+        <div class="word-meaning">我要 0.5 辣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="次はいちからにします">
+      <div class="word-content">
+        <div class="word-ja"><ruby>次<rt>つぎ</rt></ruby>は　<ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>に　します</div>
+        <div class="word-romaji">tsugi wa ichi kara ni shimasu</div>
+        <div class="word-meaning">下次我要點一辣 — 課堂上的原句，講下一次的決定</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、に 標出的是選定的結果</div>
+
+  <p class="lead">
+    します 是「做」，に 標出「落在哪裡」。合起來就是「讓決定落在這個上面」，也就是「選這個」。
+    問對方的時候，把名詞換成 <ruby>何<rt>なに</rt></ruby> 就好。
+  </p>
+
+  <div class="formula">
+    <h4>做決定的句型</h4>
+    <div class="fx">
+      名詞 ＋ <span class="j-mark">に</span> ＋ します <span class="arw">→</span> <b>我決定要〜</b><br>
+      <ruby>何<rt>なに</rt></ruby> ＋ <span class="j-mark">に</span> ＋ しますか <span class="arw">→</span> <b>你要選什麼？</b><br>
+      名詞 ＋ <span class="j-mark">に</span> ＋ しました <span class="arw">→</span> <b>（已經）決定了〜</b>
+    </div>
+  </div>
+
+  <p class="lead">
+    不只是點餐，決定日期、地點、要買哪一個，都可以用同一個句型。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 點餐以外的例子</div>
+
+    <div class="word-item" data-text="会うのは月曜日にしましょう">
+      <div class="word-content">
+        <div class="word-ja"><ruby>会<rt>あ</rt></ruby>うのは　<ruby>月<rt>げつ</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>に　しましょう</div>
+        <div class="word-romaji">au no wa getsuyoubi ni shimashou</div>
+        <div class="word-meaning">見面就約星期一吧 — しましょう＝「一起這樣做吧」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="この青いのにします">
+      <div class="word-content">
+        <div class="word-ja">この<ruby>青<rt>あお</rt></ruby>いのに　します</div>
+        <div class="word-romaji">kono aoi no ni shimasu</div>
+        <div class="word-meaning">我要這個藍色的 — 買東西時，の 代替「那一個」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="れいてんごからにしました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby>に　しました</div>
+        <div class="word-romaji">reiten go kara ni shimashita</div>
+        <div class="word-meaning">我點了 0.5 辣 — 過去式，講事後「當時選了這個」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>跟店員點餐，〜をください 也可以</strong><br>
+    <span class="compare">カレーをください</span>（karee o kudasai，請給我咖哩）是直接向店員要東西；
+    <span class="compare">カレーにします</span> 是說出自己的決定。兩個都能拿來點餐，
+    朋友問 何にしますか 的時候，就用 にします 回答。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、同樣是 にします，有沒有 を 意思就不一樣</div>
+
+  <p class="lead">
+    <a href="2026-08-29-naritai-biyouin.html" style="color:var(--accent);">8/29 美容院那篇</a>學過 部屋を綺麗にします，
+    它也是 に＋します，但前面多了一個 を。有 を 的時候，是「把某樣東西弄成某個樣子」；
+    沒有 を 的時候，是本篇的「選定這一個」。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>〜を 〜にします</h4>
+      <div class="vs-sub">把某樣東西變成某個樣子</div>
+      <ul>
+        <li><ruby>部屋<rt>へや</rt></ruby>を<ruby>綺麗<rt>きれい</rt></ruby>にします</li>
+        <li>heya o kirei ni shimasu</li>
+        <li>把房間整理乾淨</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>〜にします</h4>
+      <div class="vs-sub">從選項裡選定一個</div>
+      <ul>
+        <li><ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>にします</li>
+        <li>ichi kara ni shimasu</li>
+        <li>我要點一辣</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、にします 和 になります，差別在是誰決定的</div>
+
+  <p class="lead">
+    <a href="2026-08-25-naru.html" style="color:var(--accent);">8/25 的課</a>學過 なる 是「變成」。
+    〜になります 講的是事情自己變成這樣、或是別人決定好的結果；〜にします 是自己做的決定。
+    同一件事換一個動詞，聽的人就知道是誰拍板的。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>〜にします</h4>
+      <div class="vs-sub">自己決定</div>
+      <ul>
+        <li><ruby>会<rt>かい</rt>議<rt>ぎ</rt></ruby>は<ruby>月<rt>げつ</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>にします</li>
+        <li>kaigi wa getsuyoubi ni shimasu</li>
+        <li>會議（我決定）訂在星期一</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>〜になります</h4>
+      <div class="vs-sub">結果變成這樣</div>
+      <ul>
+        <li><ruby>会<rt>かい</rt>議<rt>ぎ</rt></ruby>は<ruby>月<rt>げつ</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>になりました</li>
+        <li>kaigi wa getsuyoubi ni narimashita</li>
+        <li>會議變成星期一了（不是我決定的）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、有三個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① 助詞是 に，不是 を</strong><br>
+    中文說「我要咖哩」，很容易想成 <s>カレーをします</s>。但 します 前面放 を 是「做這件事」（勉強をします＝做功課），
+    選東西要用 <b>に</b>：カレー<b>に</b>します。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② 問「怎麼辦」用 どう，不加 に</strong><br>
+    問「要選哪個」是 <b>何に</b>しますか；問「要怎麼處理」是 <b>どう</b>しますか。
+    <s>どうにしますか</s> 是錯的。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>③ 已經點完了要用過去式</strong><br>
+    講當時的選擇，要說 0.5辛に<b>しました</b>。にします 是現在或之後的決定。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>意思</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><b>名詞にします</b></td><td>我決定要〜</td><td class="col-ja">カレーにします</td></tr>
+      <tr><td class="col-ja"><b>名詞にしました</b></td><td>（當時）選了〜</td><td class="col-ja">0.5辛にしました</td></tr>
+      <tr><td class="col-ja"><b>名詞にしましょう</b></td><td>就決定〜吧</td><td class="col-ja">月曜日にしましょう</td></tr>
+      <tr><td class="col-ja"><b>何にしますか</b></td><td>要選什麼？</td><td class="col-ja">何にしますか</td></tr>
+      <tr><td class="col-ja"><b>どうしますか</b></td><td>要怎麼處理？</td><td class="col-ja">辛さはどうしますか</td></tr>
+      <tr><td class="col-ja">〜を〜にします</td><td>把〜弄成〜（8/29）</td><td class="col-ja">部屋を綺麗にします</td></tr>
+      <tr><td class="col-ja">〜になります</td><td>變成〜（8/25）</td><td class="col-ja">月曜日になりました</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看</strong><br>
+    1. 我要咖啡。（コーヒー）<br>
+    2. 朋友問你要點什麼，日文怎麼問？<br>
+    3. 下次我要點二辣。<br>
+    4. 昨天我點了拉麵。（昨日＝きのう、ラーメン）<br>
+    5. 「カレーをします」哪裡錯了？
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. コーヒーにします。（koohii ni shimasu）</p>
+    <p>2. <ruby>何<rt>なに</rt></ruby>にしますか。（nani ni shimasu ka）</p>
+    <p>3. <ruby>次<rt>つぎ</rt></ruby>は<ruby>2<rt>に</rt>辛<rt>から</rt></ruby>にします。（tsugi wa ni kara ni shimasu）</p>
+    <p>4. <ruby>昨日<rt>きのう</rt></ruby>は ラーメンにしました。（kinou wa raamen ni shimashita）</p>
+    <p>5. 選東西的助詞要用 に：カレー<b>に</b>します。</p>
+  </details>
+
+  <a href="2026-10-06-tsugi-wa-ichikara.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">次は1辛にします — 比較、辣度與點餐的決定 <span class="next-arrow">→</span></span>
+    <span class="next-sub">這個句型出自這一篇的咖哩店對話</span>
+  </a>
+
+  <a href="2026-10-06-no-hou-ga.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜の方が — 兩樣東西比較的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">先比較、再決定：吉祥寺の方が美味しい</span>
+  </a>
+
+  <a href="2026-08-29-naritai-biyouin.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">髪が長くなりました — なる・する <span class="next-arrow">→</span></span>
+    <span class="next-sub">〜を〜にします：把東西弄成某個樣子的那一種 にします</span>
+  </a>
+
+  <a href="2026-08-25-naru.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜くなる／〜になる <span class="next-arrow">→</span></span>
+    <span class="next-sub">になります 是「變成」，跟本篇自己決定的 にします 對照</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

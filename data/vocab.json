@@ -115,6 +115,529 @@
    ]
   },
   {
+   "text": "何にしますか",
+   "ja": "<ruby>何<rt>なに</rt></ruby>に　しますか",
+   "kana": "なにに しますか",
+   "romaji": "nani ni shimasu ka",
+   "meaning": "你要點什麼？ — 朋友之間問「要選哪個」；何 在 に 前面唸 なに",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "title": "〜にします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "購物"
+   ]
+  },
+  {
+   "text": "カレーにします",
+   "ja": "カレーに　します",
+   "kana": "カレーに します",
+   "romaji": "karee ni shimasu",
+   "meaning": "我要咖哩 — 名詞＋に＋します",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "title": "〜にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "辛さはどうしますか",
+   "ja": "<ruby>辛<rt>から</rt></ruby>さは　どうしますか",
+   "kana": "からさは どうしますか",
+   "romaji": "karasa wa dou shimasu ka",
+   "meaning": "辣度要怎麼選？ — 問「怎麼決定」時用 どう，不加 に",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "title": "〜にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "れいてんごからにします",
+   "ja": "<ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby>に　します",
+   "kana": "れいてんごからに します",
+   "romaji": "reiten go kara ni shimasu",
+   "meaning": "我要 0.5 辣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "title": "〜にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "數字"
+   ]
+  },
+  {
+   "text": "次はいちからにします",
+   "ja": "<ruby>次<rt>つぎ</rt></ruby>は　<ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>に　します",
+   "kana": "つぎは いちからに します",
+   "romaji": "tsugi wa ichi kara ni shimasu",
+   "meaning": "下次我要點一辣 — 課堂上的原句，講下一次的決定",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "title": "〜にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "会うのは月曜日にしましょう",
+   "ja": "<ruby>会<rt>あ</rt></ruby>うのは　<ruby>月<rt>げつ</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>に　しましょう",
+   "kana": "あうのは げつようびに しましょう",
+   "romaji": "au no wa getsuyoubi ni shimashou",
+   "meaning": "見面就約星期一吧 — しましょう＝「一起這樣做吧」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "title": "〜にします"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "この青いのにします",
+   "ja": "この<ruby>青<rt>あお</rt></ruby>いのに　します",
+   "kana": "このあおいのに します",
+   "romaji": "kono aoi no ni shimasu",
+   "meaning": "我要這個藍色的 — 買東西時，の 代替「那一個」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "title": "〜にします"
+    }
+   ],
+   "tags": [
+    "購物",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "れいてんごからにしました",
+   "ja": "<ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby>に　しました",
+   "kana": "れいてんごからに しました",
+   "romaji": "reiten go kara ni shimashita",
+   "meaning": "我點了 0.5 辣 — 過去式，講事後「當時選了這個」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-ni-shimasu.html",
+     "title": "〜にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "數字"
+   ]
+  },
+  {
+   "text": "吉祥寺のほうが美味しいです",
+   "ja": "<ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>美味<rt>おい</rt></ruby>しいです",
+   "kana": "きちじょうじのほうが おいしいです",
+   "romaji": "kichijouji no hou ga oishii desu",
+   "meaning": "吉祥寺那家比較好吃 — 課堂上的原句，只講贏的那一邊",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "title": "〜の方が"
+    },
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "このお店より吉祥寺のほうが美味しいです",
+   "ja": "このお<ruby>店<rt>みせ</rt></ruby>より　<ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>美味<rt>おい</rt></ruby>しいです",
+   "kana": "このおみせより きちじょうじのほうが おいしいです",
+   "romaji": "kono omise yori kichijouji no hou ga oishii desu",
+   "meaning": "比起這家店，吉祥寺那家比較好吃 — より 帶出比較的對象",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "title": "〜の方が"
+    },
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "電車よりバスのほうが安いです",
+   "ja": "<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>より　バスの<ruby>方<rt>ほう</rt></ruby>が　<ruby>安<rt>やす</rt></ruby>いです",
+   "kana": "でんしゃより バスのほうが やすいです",
+   "romaji": "densha yori basu no hou ga yasui desu",
+   "meaning": "比起電車，公車比較便宜",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "title": "〜の方が"
+    }
+   ],
+   "tags": [
+    "交通",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "夏より冬のほうが好きです",
+   "ja": "<ruby>夏<rt>なつ</rt></ruby>より　<ruby>冬<rt>ふゆ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>好<rt>す</rt></ruby>きです",
+   "kana": "なつより ふゆのほうが すきです",
+   "romaji": "natsu yori fuyu no hou ga suki desu",
+   "meaning": "比起夏天，我比較喜歡冬天 — な形容詞（好き）也一樣接在後面",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "title": "〜の方が"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "和食と洋食と、どちらがいいですか",
+   "ja": "<ruby>和食<rt>わしょく</rt></ruby>と<ruby>洋食<rt>ようしょく</rt></ruby>と、どちらが　いいですか",
+   "kana": "わしょくとようしょくと、どちらが いいですか",
+   "romaji": "washoku to youshoku to, dochira ga ii desu ka",
+   "meaning": "日式和西式，哪一個比較好？ — 第二個 と 口語常省略",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "title": "〜の方が"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "和食のほうがいいです",
+   "ja": "<ruby>和食<rt>わしょく</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　いいです",
+   "kana": "わしょくのほうが いいです",
+   "romaji": "washoku no hou ga ii desu",
+   "meaning": "日式的比較好 — 回答時可以省掉 より 的部分，因為兩個選項對方已經講過了",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "title": "〜の方が"
+    }
+   ],
+   "tags": [
+    "食物",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "どっちが美味しい？",
+   "ja": "どっちが　<ruby>美味<rt>おい</rt></ruby>しい？",
+   "kana": "どっちが おいしい？",
+   "romaji": "docchi ga oishii?",
+   "meaning": "哪個比較好吃？ — どっち 是 どちら 的口語，朋友之間用",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-no-hou-ga.html",
+     "title": "〜の方が"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "外食",
+   "ja": "<ruby>外<rt>がい</rt>食<rt>しょく</rt></ruby>",
+   "kana": "がいしょく",
+   "romaji": "gaishoku",
+   "meaning": "外食、在外面吃飯 — 名詞，加上 します 就是動詞：よく外食します（常常在外面吃）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "場所"
+   ]
+  },
+  {
+   "text": "よく外食します",
+   "ja": "よく　<ruby>外<rt>がい</rt>食<rt>しょく</rt></ruby>します",
+   "kana": "よく がいしょくします",
+   "romaji": "yoku gaishoku shimasu",
+   "meaning": "我常常在外面吃飯 — よく＝常常，外食 ＋ します 變成動詞",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "値段はいくらですか",
+   "ja": "<ruby>値<rt>ね</rt>段<rt>だん</rt></ruby>は　いくらですか",
+   "kana": "ねだんは いくらですか",
+   "romaji": "nedan wa ikura desu ka",
+   "meaning": "價錢是多少？ — 値段＝價格，本來就是名詞",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "辛さを選びます",
+   "ja": "<ruby>辛<rt>から</rt></ruby>さを　<ruby>選<rt>えら</rt></ruby>びます",
+   "kana": "からさを えらびます",
+   "romaji": "karasa o erabimasu",
+   "meaning": "選辣度 — 辛い（辣的）去 い 加 さ 變成名詞；選ぶ（選）的ます形是 選びます",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "れいてんごからにしました",
+   "ja": "<ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby>にしました",
+   "kana": "れいてんごからにしました",
+   "romaji": "reiten go kara ni shimashita",
+   "meaning": "我點了 0.5 辣 — にします 的過去式，講「當時選了這個」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "數字"
+   ]
+  },
+  {
+   "text": "少し辛いです",
+   "ja": "<ruby>少<rt>すこ</rt></ruby>し　<ruby>辛<rt>から</rt></ruby>いです",
+   "kana": "すこし からいです",
+   "romaji": "sukoshi karai desu",
+   "meaning": "有一點辣 — 少し 放在形容詞前面，表示「稍微、有點」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "食物"
+   ]
+  },
+  {
+   "text": "次はいちからにします",
+   "ja": "<ruby>次<rt>つぎ</rt></ruby>は　<ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>にします",
+   "kana": "つぎは いちからにします",
+   "romaji": "tsugi wa ichi kara ni shimasu",
+   "meaning": "下次我要點一辣 — 名詞＋にします＝「決定要這個」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "吉祥寺のほうが値段が安いです",
+   "ja": "<ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>値<rt>ね</rt>段<rt>だん</rt></ruby>が　<ruby>安<rt>やす</rt></ruby>いです",
+   "kana": "きちじょうじのほうが ねだんが やすいです",
+   "romaji": "kichijouji no hou ga nedan ga yasui desu",
+   "meaning": "吉祥寺那家價錢比較便宜 — 「〜は〜が〜」的變化，比的是「價錢」這一項",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "購物",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "辛さは選べますか",
+   "ja": "<ruby>辛<rt>から</rt></ruby>さは　<ruby>選<rt>えら</rt></ruby>べますか",
+   "kana": "からさは えらべますか",
+   "romaji": "karasa wa erabemasu ka",
+   "meaning": "辣度可以選嗎？ — 點餐時可以直接拿來問店員；選べます 是「能選」的意思，先整句記起來就好",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "れいてんごから",
+   "ja": "<ruby>0.5<rt>れいてんご</rt>辛<rt>から</rt></ruby>",
+   "kana": "れいてんごから",
+   "romaji": "reiten go kara",
+   "meaning": "0.5 辣 — 小數點唸 てん，0 唸 れい",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "數字"
+   ]
+  },
+  {
+   "text": "いちから",
+   "ja": "<ruby>1<rt>いち</rt>辛<rt>から</rt></ruby>",
+   "kana": "いちから",
+   "romaji": "ichi kara",
+   "meaning": "一辣 — 比普通辣一級",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "數字"
+   ]
+  },
+  {
+   "text": "にから",
+   "ja": "<ruby>2<rt>に</rt>辛<rt>から</rt></ruby>",
+   "kana": "にから",
+   "romaji": "ni kara",
+   "meaning": "二辣 — 之後的 3辛、4辛 也照這樣唸",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
+    }
+   ],
+   "tags": [
+    "食物",
+    "數字"
+   ]
+  },
+  {
    "text": "重さはどのくらいですか",
    "ja": "<ruby>重<rt>おも</rt></ruby>さは　どのくらいですか",
    "kana": "おもさは どのくらいですか",
@@ -15121,6 +15644,11 @@
      "date": "2026-07-28",
      "href": "lessons/2026-07-28-hikkoshi-kaiwa.html",
      "title": "日本に引っ越ししました"
+    },
+    {
+     "date": "2026-10-06",
+     "href": "lessons/2026-10-06-tsugi-wa-ichikara.html",
+     "title": "次は1辛にします"
     }
    ],
    "tags": [

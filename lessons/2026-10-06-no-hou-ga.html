@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜の方が — 兩樣東西比較的說法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">A より B <span class="accent">の<ruby>方<rt>ほう</rt></ruby>が</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 06</div>
+  <p class="page-subtitle">拿兩樣東西比較，說「B 比較〜」的句型</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    兩家店哪一家比較好吃、哪一個比較便宜，這種「比較」在日文裡要用 〜の<ruby>方<rt>ほう</rt></ruby>が 來說。
+    10/6 課堂上聊咖哩店時說了一句 <ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>美味<rt>おい</rt></ruby>しい（吉祥寺那家比較好吃），這篇就從這句開始，
+    先看句子怎麼組，再加上比較的對象 より，最後看怎麼問「哪一個比較〜」。
+    日文的形容詞本身沒有「比較〜」的變化，美味しい 一直是 美味しい，比較的意思全部由 の方が 和 より 來負責。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以兩家店的比較為主軸，把句型排出來</div>
+
+  <p class="lead">
+    先聽課堂上的那一句，再看加上比較對象、換成別的形容詞之後的樣子。骨架都一樣，只換名詞和形容詞。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="吉祥寺のほうが美味しいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>美味<rt>おい</rt></ruby>しいです</div>
+        <div class="word-romaji">kichijouji no hou ga oishii desu</div>
+        <div class="word-meaning">吉祥寺那家比較好吃 — 課堂上的原句，只講贏的那一邊</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="このお店より吉祥寺のほうが美味しいです">
+      <div class="word-content">
+        <div class="word-ja">このお<ruby>店<rt>みせ</rt></ruby>より　<ruby>吉祥寺<rt>きちじょうじ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>美味<rt>おい</rt></ruby>しいです</div>
+        <div class="word-romaji">kono omise yori kichijouji no hou ga oishii desu</div>
+        <div class="word-meaning">比起這家店，吉祥寺那家比較好吃 — より 帶出比較的對象</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="電車よりバスのほうが安いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>より　バスの<ruby>方<rt>ほう</rt></ruby>が　<ruby>安<rt>やす</rt></ruby>いです</div>
+        <div class="word-romaji">densha yori basu no hou ga yasui desu</div>
+        <div class="word-meaning">比起電車，公車比較便宜</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="夏より冬のほうが好きです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>夏<rt>なつ</rt></ruby>より　<ruby>冬<rt>ふゆ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>好<rt>す</rt></ruby>きです</div>
+        <div class="word-romaji">natsu yori fuyu no hou ga suki desu</div>
+        <div class="word-meaning">比起夏天，我比較喜歡冬天 — な形容詞（好き）也一樣接在後面</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="formula">
+    <h4>比較句的骨架</h4>
+    <div class="fx">
+      <b>B</b> の<ruby>方<rt>ほう</rt></ruby>が ＋ 形容詞 <span class="arw">→</span> B 比較〜<br>
+      A <span class="j-mark">より</span> <b>B</b> の<ruby>方<rt>ほう</rt></ruby>が ＋ 形容詞 <span class="arw">→</span> 比起 A，B 比較〜
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、方 在這裡是「那一邊」的意思，唸 ほう</div>
+
+  <p class="lead">
+    <ruby>方<rt>ほう</rt></ruby> 的本意是「方向、那一邊」。兩樣東西擺在一起時，指著其中一邊說「這一邊比較〜」，
+    就是 の方が。所以 吉祥寺の方が美味しい 直譯是「吉祥寺那一邊比較好吃」。
+  </p>
+
+  <p class="lead">
+    の 是名詞接名詞時用的那個 の（<a href="2026-08-01-no-joshi.html" style="color:var(--accent);">8/1 的課</a>），
+    が 則是標出「比較好吃的是誰」。因為重點落在 吉祥寺 這一邊，這裡用 が 不用 は。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4><ruby>方<rt>ほう</rt></ruby>（hou）</h4>
+      <div class="vs-sub">方向、那一邊</div>
+      <ul>
+        <li>吉祥寺の<b>ほう</b>が美味しい</li>
+        <li>駅の<b>ほう</b>へ行きます（往車站那邊走）</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4><ruby>方<rt>かた</rt></ruby>（kata）</h4>
+      <div class="vs-sub">方法、尊稱的「這位」</div>
+      <ul>
+        <li>この<b>かた</b>（這位）</li>
+        <li>使い<b>かた</b>（用法）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、問「哪一個比較〜」是這樣問的</div>
+
+  <p class="lead">
+    要請對方比較兩樣東西，就用 どちら（哪一個）來問。
+    <a href="2026-08-24-yotei-washoku.html" style="color:var(--accent);">8/24 的課</a>問過 和食と洋食、どちらがいいですか，
+    那一句的回答就是本篇的句型。
+  </p>
+
+  <div class="formula">
+    <h4>問與答</h4>
+    <div class="fx">
+      A と B と、<b>どちら</b>が ＋ 形容詞 ですか <span class="arw">→</span> A 和 B 哪一個比較〜？<br>
+      <b>B</b> の<ruby>方<rt>ほう</rt></ruby>が ＋ 形容詞 です <span class="arw">→</span> B 比較〜
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 一問一答</div>
+
+    <div class="word-item" data-text="和食と洋食と、どちらがいいですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>和食<rt>わしょく</rt></ruby>と<ruby>洋食<rt>ようしょく</rt></ruby>と、どちらが　いいですか</div>
+        <div class="word-romaji">washoku to youshoku to, dochira ga ii desu ka</div>
+        <div class="word-meaning">日式和西式，哪一個比較好？ — 第二個 と 口語常省略</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="和食のほうがいいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>和食<rt>わしょく</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　いいです</div>
+        <div class="word-romaji">washoku no hou ga ii desu</div>
+        <div class="word-meaning">日式的比較好 — 回答時可以省掉 より 的部分，因為兩個選項對方已經講過了</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="どっちが美味しい？">
+      <div class="word-content">
+        <div class="word-ja">どっちが　<ruby>美味<rt>おい</rt></ruby>しい？</div>
+        <div class="word-romaji">docchi ga oishii?</div>
+        <div class="word-meaning">哪個比較好吃？ — どっち 是 どちら 的口語，朋友之間用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>差不多的時候說 同じくらい</strong><br>
+    兩邊分不出高下，可以說 <span class="compare"><ruby>同<rt>おな</rt></ruby>じくらいです</span>（onaji kurai desu，差不多）。
+    くらい 跟 <a href="2026-10-04-omosa-kyori.html" style="color:var(--accent);">10/4 的 どのくらい</a> 是同一個字。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、より 和 の方が 的位置可以對調</div>
+
+  <p class="lead">
+    より 跟著輸的那一邊，の方が 跟著贏的那一邊，只要這個搭配不變，誰放前面都可以。
+    想先講結論時，就把 の方が 那一段放到前面。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>より 在前</h4>
+      <div class="vs-sub">先講比較的對象</div>
+      <ul>
+        <li>電車より バスの方が 安いです</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>の方が 在前</h4>
+      <div class="vs-sub">先講結論</div>
+      <ul>
+        <li>バスの方が 電車より 安いです</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、有三個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① 名詞後面要先接 の</strong><br>
+    吉祥寺 是名詞，要說 吉祥寺<b>の</b>方が，不能寫成 <s>吉祥寺方が</s>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② より 要放在輸的那一邊</strong><br>
+    中文說「公車比電車便宜」，贏的公車放在最前面；日文的基本順序是 電車より バスの方が安いです，輸的電車先出來。
+    兩種語言都是把輸的那一邊接在「比／より」上，只是中文的「比」放在輸的那一邊前面，日文的 より 放在後面。
+    講之前先想一下誰贏，贏的那一邊接 の方が。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>③ 方 不要唸成 かた</strong><br>
+    比較句裡一定唸 ほう。この方（このかた）是「這位」，意思完全不一樣。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>用途</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>只講贏的一邊</td><td class="col-ja"><b>B の方が</b> 〜</td><td class="col-ja">吉祥寺の方が美味しいです</td></tr>
+      <tr><td>連比較對象一起講</td><td class="col-ja">A <b>より</b> B <b>の方が</b> 〜</td><td class="col-ja">電車よりバスの方が安いです</td></tr>
+      <tr><td>先講結論</td><td class="col-ja">B <b>の方が</b> A <b>より</b> 〜</td><td class="col-ja">バスの方が電車より安いです</td></tr>
+      <tr><td>問哪一個</td><td class="col-ja">A と B と、<b>どちら</b>が 〜ですか</td><td class="col-ja">和食と洋食と、どちらがいいですか</td></tr>
+      <tr><td>口語問法</td><td class="col-ja"><b>どっち</b>が 〜？</td><td class="col-ja">どっちが美味しい？</td></tr>
+      <tr><td>差不多</td><td class="col-ja"><b>同じくらい</b>です</td><td class="col-ja">同じくらいです</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看</strong><br>
+    1. 新宿那家比較便宜。（新宿＝しんじゅく）<br>
+    2. 比起拉麵，我比較喜歡咖哩。（ラーメン、カレー）<br>
+    3. 咖啡和紅茶，哪一個比較好？（コーヒー、紅茶＝こうちゃ）<br>
+    4. 「電車よりバスの方が安いです」是哪一個比較便宜？<br>
+    5. 「吉祥寺方が美味しいです」哪裡錯了？
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. <ruby>新宿<rt>しんじゅく</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>安<rt>やす</rt></ruby>いです。（shinjuku no hou ga yasui desu）</p>
+    <p>2. ラーメンより カレーの<ruby>方<rt>ほう</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。（raamen yori karee no hou ga suki desu）</p>
+    <p>3. コーヒーと<ruby>紅<rt>こう</rt>茶<rt>ちゃ</rt></ruby>と、どちらが いいですか。（koohii to koucha to, dochira ga ii desu ka）</p>
+    <p>4. 公車（バス）比較便宜。の方が 跟著的是贏的那一邊。</p>
+    <p>5. 少了 の，要說 <ruby>吉祥寺<rt>きちじょうじ</rt></ruby><b>の</b><ruby>方<rt>ほう</rt></ruby>が<ruby>美味<rt>おい</rt></ruby>しいです。</p>
+  </details>
+
+  <a href="2026-10-06-tsugi-wa-ichikara.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">次は1辛にします — 比較、辣度與點餐的決定 <span class="next-arrow">→</span></span>
+    <span class="next-sub">這個句型出自這一篇的咖哩店對話</span>
+  </a>
+
+  <a href="2026-10-06-ni-shimasu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜にします — 做決定時的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">比完之後要選，就用 にします：吉祥寺の方が美味しいから、吉祥寺にします</span>
+  </a>
+
+  <a href="2026-08-24-yotei-washoku.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">明日、予定がありますか <span class="next-arrow">→</span></span>
+    <span class="next-sub">和食と洋食、どちらがいいですか：第一次出現 どちら 的問句</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

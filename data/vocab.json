@@ -32,6 +32,11 @@
      "date": "2026-10-08",
      "href": "lessons/2026-10-08-dekimasen.html",
      "title": "できません"
+    },
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
     }
    ],
    "tags": [
@@ -459,6 +464,217 @@
    ],
    "tags": [
     "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "買い物に行きません",
+   "ja": "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に　<ruby>行<rt>い</rt></ruby>きません",
+   "kana": "かいものに いきません",
+   "romaji": "kaimono ni ikimasen",
+   "meaning": "我不去買東西 — 只說結果，沒講原因",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "買い物に行きたくないです",
+   "ja": "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に　<ruby>行<rt>い</rt></ruby>きたくないです",
+   "kana": "かいものに いきたくないです",
+   "romaji": "kaimono ni ikitakunai desu",
+   "meaning": "我不想去買東西 — 可以去，但不願意",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "お酒は飲みません",
+   "ja": "お<ruby>酒<rt>さけ</rt></ruby>は　<ruby>飲<rt>の</rt></ruby>みません",
+   "kana": "おさけは のみません",
+   "romaji": "osake wa nomimasen",
+   "meaning": "我不喝酒 — 平常就不喝，是自己的習慣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "お酒は飲めません",
+   "ja": "お<ruby>酒<rt>さけ</rt></ruby>は　<ruby>飲<rt>の</rt></ruby>めません",
+   "kana": "おさけは のめません",
+   "romaji": "osake wa nomemasen",
+   "meaning": "我不能喝酒 — 體質不合、要開車、正在吃藥",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "お酒は飲みたくないです",
+   "ja": "お<ruby>酒<rt>さけ</rt></ruby>は　<ruby>飲<rt>の</rt></ruby>みたくないです",
+   "kana": "おさけは のみたくないです",
+   "romaji": "osake wa nomitakunai desu",
+   "meaning": "我不想喝酒 — 可以喝，但現在沒有心情",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "納豆は食べません",
+   "ja": "<ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>は　<ruby>食<rt>た</rt></ruby>べません",
+   "kana": "なっとうは たべません",
+   "romaji": "nattou wa tabemasen",
+   "meaning": "我不吃納豆",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "納豆は食べられません",
+   "ja": "<ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>は　<ruby>食<rt>た</rt></ruby>べられません",
+   "kana": "なっとうは たべられません",
+   "romaji": "nattou wa taberaremasen",
+   "meaning": "我不敢吃納豆 — 味道受不了，吃不下去",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "納豆は食べたくないです",
+   "ja": "<ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>は　<ruby>食<rt>た</rt></ruby>べたくないです",
+   "kana": "なっとうは たべたくないです",
+   "romaji": "nattou wa tabetakunai desu",
+   "meaning": "我不想吃納豆",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "今日は運転しません",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は　<ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>しません",
+   "kana": "きょうは うんてんしません",
+   "romaji": "kyou wa unten shimasen",
+   "meaning": "這天不開車 — 例如改搭電車",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "交通",
+    "時間・日期",
+    "動詞"
+   ]
+  },
+  {
+   "text": "運転できません",
+   "ja": "<ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>できません",
+   "kana": "うんてんできません",
+   "romaji": "unten dekimasen",
+   "meaning": "我不會開車 — 沒有駕照、沒學過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "交通",
+    "動詞"
+   ]
+  },
+  {
+   "text": "雨の日は運転したくないです",
+   "ja": "<ruby>雨<rt>あめ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>は　<ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>したくないです",
+   "kana": "あめのひは うんてんしたくないです",
+   "romaji": "ame no hi wa unten shitakunai desu",
+   "meaning": "下雨天我不想開車 — 會開，但不喜歡在雨天開",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-takunai-dekinai.html",
+     "title": "不想做和不會做"
+    }
+   ],
+   "tags": [
+    "交通",
+    "季節・天氣",
     "動詞"
    ]
   },

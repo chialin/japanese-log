@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不想做和不會做 — 行きたくない・行けません・行きません</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+.tbl-scroll{overflow-x:auto;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">不想做和<span class="accent">不會做</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 08</div>
+  <p class="page-subtitle"><ruby>行<rt>い</rt></ruby>きたくないです、行けません、行きません，三種「不去」意思都不一樣</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    中文說「我不去」「我沒辦法去」「我不想去」，只差一兩個字，日文則是三種不同的變化。
+    同一天的 <a href="2026-10-08-dekimasen.html" style="color:var(--accent);">〈できません〉</a> 學了「不會、沒辦法」的 行けません，
+    這篇把它跟「不想」的 行きたくないです、單純「不做」的 行きません 放在一起比較，
+    看三種說法各自怎麼變出來，以及拒絕別人的時候該選哪一種。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以 行く 為主軸，把三種「不」排出來</div>
+
+  <p class="lead">
+    先用 <ruby>行<rt>い</rt></ruby>く（iku，去）當例子，三種說法都從同一個動詞變出來，差在字尾換到哪裡、後面接什麼。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>中文</th><th>日文</th><th>讀音</th><th>在說什麼</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>我不去</td><td class="col-ja">行<b>き</b>ません</td><td>ikimasen</td><td>做不做：自己決定不做</td></tr>
+      <tr class="key"><td>我沒辦法去</td><td class="col-ja">行<b>け</b>ません</td><td>ikemasen</td><td>能不能：想做也做不到</td></tr>
+      <tr><td>我不想去</td><td class="col-ja">行<b>きたくない</b>です</td><td>ikitakunai desu</td><td>想不想：心裡不願意</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 三種「不去」</div>
+
+    <div class="word-item" data-text="買い物に行きません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に　<ruby>行<rt>い</rt></ruby>きません</div>
+        <div class="word-romaji">kaimono ni ikimasen</div>
+        <div class="word-meaning">我不去買東西 — 只說結果，沒講原因</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="買い物に行けません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に　<ruby>行<rt>い</rt></ruby>けません</div>
+        <div class="word-romaji">kaimono ni ikemasen</div>
+        <div class="word-meaning">我沒辦法去買東西 — 例如沒空、生病</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="買い物に行きたくないです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に　<ruby>行<rt>い</rt></ruby>きたくないです</div>
+        <div class="word-romaji">kaimono ni ikitakunai desu</div>
+        <div class="word-meaning">我不想去買東西 — 可以去，但不願意</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、不想做是在ます形後面接 たくない</div>
+
+  <p class="lead">
+    「想做」是把動詞的 ます 拿掉，換成 <span class="j-mark">たい</span>。
+    <a href="2026-08-24-yotei-washoku.html" style="color:var(--accent);">8/24 的和食那篇</a>學過 <ruby>和<rt>わ</rt>食<rt>しょく</rt></ruby>が<ruby>食<rt>た</rt></ruby>べたいです（想吃和食），
+    <a href="2026-08-29-naritai-biyouin.html" style="color:var(--accent);">8/29</a> 也學過 <ruby>先<rt>せん</rt>生<rt>せい</rt></ruby>になりたいです（想當老師）。
+    「不想做」就是把這個 たい 變成否定。
+  </p>
+
+  <div class="formula">
+    <h4>行きます → 行きたくないです</h4>
+    <div class="fx">
+      行き<s>ます</s> <span class="arw">→</span> 行き ＋ <b>たい</b> <span class="arw">→</span> 行きたい（想去）<br>
+      行きた<s>い</s> <span class="arw">→</span> 行きた ＋ <b>くない</b> <span class="arw">→</span> 行きたくない（不想去）<br>
+      行きたくない ＋ <b>です</b> <span class="arw">→</span> 行きたくないです（禮貌形）
+    </div>
+  </div>
+
+  <p class="lead">
+    たい 的變化跟い形容詞一模一樣。<a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12〈否定的說法〉</a>學過 <ruby>寒<rt>さむ</rt></ruby>い → 寒くない，
+    把 い 換成 く 再加 ない；たい → たくない 也是同一個做法。
+    所以它的禮貌形是加 です，不是接 ません。
+  </p>
+
+  <div class="note">
+    📝 <strong>たくないです 和 たくありません 都可以</strong><br>
+    い形容詞的否定禮貌形有兩種說法，たい 也一樣：
+    行きたくないです（ikitakunai desu）比較口語，行きたくありません（ikitaku arimasen）比較正式。意思相同。
+  </div>
+
+  <p class="lead">
+    たい 接在ます形的位置，五段動詞是字尾換到い段。對照 <ruby>行<rt>い</rt></ruby>く 的か行：
+    行<b>き</b>ます、行<b>き</b>たい 都是い段的 き，行<b>け</b>ます 則是え段的 け。
+    「不想」跟「不做」用同一段，「不會」用的是另一段。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、不會做是可能形接 ません</div>
+
+  <p class="lead">
+    「不會、沒辦法」的變法在 <a href="2026-10-08-dekimasen.html" style="color:var(--accent);">〈できません〉</a> 講過了，這裡只整理重點：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>動詞類別</th><th>怎麼變</th><th>例子</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>五段</td><td>字尾換到え段 ＋ ません</td><td class="col-ja"><ruby>飲<rt>の</rt></ruby>む → 飲めません</td></tr>
+      <tr><td>一段</td><td>る 換成 られません</td><td class="col-ja"><ruby>食<rt>た</rt></ruby>べる → 食べられません</td></tr>
+      <tr><td>する</td><td>換成 できません</td><td class="col-ja"><ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>する → 運転できません</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、同一件事換三種說法，差別在哪裡</div>
+
+  <p class="lead">
+    下面三組，每組都用同一個動詞說三次，分別是「不做」「不會、不能」「不想」。動詞的類別不同，變法也跟著不同，可以一起對照。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原形</th><th>不做（ません）</th><th>不會、不能（可能形）</th><th>不想（たくない）</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><ruby>飲<rt>の</rt></ruby>む<br><small>五段</small></td><td class="col-ja">飲みません</td><td class="col-ja">飲めません</td><td class="col-ja">飲みたくないです</td></tr>
+      <tr><td class="col-ja"><ruby>食<rt>た</rt></ruby>べる<br><small>一段</small></td><td class="col-ja">食べません</td><td class="col-ja">食べられません</td><td class="col-ja">食べたくないです</td></tr>
+      <tr><td class="col-ja"><ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>する<br><small>する</small></td><td class="col-ja">運転しません</td><td class="col-ja">運転できません</td><td class="col-ja">運転したくないです</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 お酒（酒）</div>
+    <div class="word-item" data-text="お酒は飲みません">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>酒<rt>さけ</rt></ruby>は　<ruby>飲<rt>の</rt></ruby>みません</div>
+        <div class="word-romaji">osake wa nomimasen</div>
+        <div class="word-meaning">我不喝酒 — 平常就不喝，是自己的習慣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="お酒は飲めません">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>酒<rt>さけ</rt></ruby>は　<ruby>飲<rt>の</rt></ruby>めません</div>
+        <div class="word-romaji">osake wa nomemasen</div>
+        <div class="word-meaning">我不能喝酒 — 體質不合、要開車、正在吃藥</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="お酒は飲みたくないです">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>酒<rt>さけ</rt></ruby>は　<ruby>飲<rt>の</rt></ruby>みたくないです</div>
+        <div class="word-romaji">osake wa nomitakunai desu</div>
+        <div class="word-meaning">我不想喝酒 — 可以喝，但現在沒有心情</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 納豆</div>
+    <div class="word-item" data-text="納豆は食べません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>は　<ruby>食<rt>た</rt></ruby>べません</div>
+        <div class="word-romaji">nattou wa tabemasen</div>
+        <div class="word-meaning">我不吃納豆</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="納豆は食べられません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>は　<ruby>食<rt>た</rt></ruby>べられません</div>
+        <div class="word-romaji">nattou wa taberaremasen</div>
+        <div class="word-meaning">我不敢吃納豆 — 味道受不了，吃不下去</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="納豆は食べたくないです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>は　<ruby>食<rt>た</rt></ruby>べたくないです</div>
+        <div class="word-romaji">nattou wa tabetakunai desu</div>
+        <div class="word-meaning">我不想吃納豆</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 運転（開車）</div>
+    <div class="word-item" data-text="今日は運転しません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は　<ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>しません</div>
+        <div class="word-romaji">kyou wa unten shimasen</div>
+        <div class="word-meaning">這天不開車 — 例如改搭電車</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="運転できません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>できません</div>
+        <div class="word-romaji">unten dekimasen</div>
+        <div class="word-meaning">我不會開車 — 沒有駕照、沒學過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="雨の日は運転したくないです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>雨<rt>あめ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>は　<ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>したくないです</div>
+        <div class="word-romaji">ame no hi wa unten shitakunai desu</div>
+        <div class="word-meaning">下雨天我不想開車 — 會開，但不喜歡在雨天開</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    這幾句的 を 都換成了 は。<a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12〈否定的說法〉</a>講過，否定句常把東西用 は 提出來當話題：「酒的話，我不喝」。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、拒絕別人的時候，「不能」比「不想」委婉</div>
+
+  <p class="lead">
+    被人邀去喝酒、吃東西時，三種說法給人的感覺不一樣。
+    「不能」是說原因在自己無法控制的地方，聽的人比較不會覺得被拒絕；「不想」是直接說出自己不願意，對不熟的人講會顯得冷淡。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>聽起來</th><th>適合的場合</th></tr>
+    </thead>
+    <tbody>
+      <tr class="key"><td class="col-ja">すみません、飲めないんです</td><td>最委婉：是我做不到，不是不給面子</td><td>拒絕同事、客人敬酒</td></tr>
+      <tr><td class="col-ja">お酒は飲みません</td><td>中性：說明自己的習慣</td><td>點餐時告訴店員、自我介紹</td></tr>
+      <tr><td class="col-ja">飲みたくないです</td><td>直接：明白說出不願意</td><td>跟家人、很熟的朋友</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    📝 <strong>飲めないんです 的 ん</strong><br>
+    句尾的 んです 是在說明理由，語氣比直接說 飲めません 更柔和，用法見 <a href="2026-10-06-doushite-ndesu.html" style="color:var(--accent);">10/6〈どうして〜んですか〉</a>。
+    日本人拒絕時也常只說 <strong>お<ruby>酒<rt>さけ</rt></ruby>はちょっと…</strong>（osake wa chotto…，酒的話有點…），後半句不講完，對方就懂了。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① たい 不能接 ません</strong><br>
+    <s>行きたいません</s> 是錯的。たい 變化跟い形容詞一樣，否定是 行きた<b>くない</b>です，或 行きた<b>くありません</b>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② たい 前面要用ます形，不是原形</strong><br>
+    <s>行くたい</s>、<s>食べるたい</s> 都是錯的。要先變成ます形，再把 ます 換成 たい：行<b>き</b>たい、食<b>べ</b>たい。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、整理成一張表</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>五段（行く）</th><th>一段（食べる）</th><th>する</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>不做</td><td class="col-ja">行<b>き</b>ません</td><td class="col-ja">食べません</td><td class="col-ja">しません</td></tr>
+      <tr><td>不會、不能</td><td class="col-ja">行<b>け</b>ません</td><td class="col-ja">食べ<b>られ</b>ません</td><td class="col-ja"><b>でき</b>ません</td></tr>
+      <tr><td>不想</td><td class="col-ja">行<b>き</b>たくないです</td><td class="col-ja">食べたくないです</td><td class="col-ja">したくないです</td></tr>
+      <tr><td>不想（正式）</td><td class="col-ja">行きたくありません</td><td class="col-ja">食べたくありません</td><td class="col-ja">したくありません</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看</strong><br>
+    1. 我不想喝咖啡。（コーヒー、飲む）<br>
+    2. 我沒辦法去學校。（<ruby>学<rt>がっ</rt>校<rt>こう</rt></ruby>、行く）<br>
+    3. 我不想讀書。（<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>する）<br>
+    4. 同事邀你喝酒，你不能喝，怎麼說比較委婉？<br>
+    5. 「書きたいません」錯在哪裡？
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. コーヒーは<ruby>飲<rt>の</rt></ruby>みたくないです。（koohii wa nomitakunai desu）</p>
+    <p>2. <ruby>学<rt>がっ</rt>校<rt>こう</rt></ruby>に<ruby>行<rt>い</rt></ruby>けません。（gakkou ni ikemasen）</p>
+    <p>3. <ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>したくないです。（benkyou shitakunai desu）</p>
+    <p>4. すみません、お<ruby>酒<rt>さけ</rt></ruby>は<ruby>飲<rt>の</rt></ruby>めないんです。（sumimasen, osake wa nomenai n desu）或 お酒はちょっと…（osake wa chotto…）</p>
+    <p>5. たい 的否定跟い形容詞一樣，要說 <ruby>書<rt>か</rt></ruby>きたくないです（kakitakunai desu）或 書きたくありません（kakitaku arimasen）。</p>
+  </details>
+
+  <a href="2026-10-08-dekimasen.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">できません — 說自己「做不到」的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">「不會、不能」的可能形：五段換え段、一段加 られ</span>
+  </a>
+
+  <a href="2026-10-08-suru-dekiru.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">する 的可能形是 できる <span class="next-arrow">→</span></span>
+    <span class="next-sub">運転できません 為什麼不是照規則變出來的</span>
+  </a>
+
+  <a href="2026-08-12-hitei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">否定的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">い形容詞的否定 寒い → 寒くない，たい → たくない 是同一個做法</span>
+  </a>
+
+  <a href="2026-08-29-naritai-biyouin.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜になりたいです <span class="next-arrow">→</span></span>
+    <span class="next-sub">ます 換成 たい 的肯定說法：先生になりたいです</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

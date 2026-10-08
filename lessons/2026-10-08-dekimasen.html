@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>できません — 說自己「做不到」的說法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+.tbl-scroll{overflow-x:auto;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">できません</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 08</div>
+  <p class="page-subtitle">動詞的可能形 ＋ ません，說自己「不會」「沒辦法」做某件事</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    想跟人說「我不會說英文」「我不敢吃納豆」「我不能喝酒」，日文會把動詞換成「可能形」，再接 ません。
+    <a href="2026-10-06-koto-ga-dekimasu.html" style="color:var(--accent);">10/6〈話すことができます〉</a>那篇用的是比較長的 〜ことができません，
+    本篇改用日常對話更常聽到的短說法，例如 <ruby>話<rt>はな</rt></ruby>せません、<ruby>飲<rt>の</rt></ruby>めません。
+    這篇用課堂上的六個句子當例子，先看每個動詞原本長什麼樣子、怎麼變過來，
+    再說明五段動詞和一段動詞的變法不一樣，最後解釋 できません 的 でき 是從哪裡來的。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以課堂的六個句子為主軸，列出原本的動詞</div>
+
+  <p class="lead">
+    這六句的結構都一樣：「東西 ＋ を（に）＋ 動詞的否定」，主詞「<ruby>私<rt>わたし</rt></ruby>は」被省略了。
+    先把句子聽一次，下面的表再把每個動詞拆開來看。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 課堂例句</div>
+
+    <div class="word-item" data-text="英語を話せません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>英<rt>えい</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>せません</div>
+        <div class="word-romaji">eigo o hanasemasen</div>
+        <div class="word-meaning">我不會說英文</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="買い物に行けません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に　<ruby>行<rt>い</rt></ruby>けません</div>
+        <div class="word-romaji">kaimono ni ikemasen</div>
+        <div class="word-meaning">我沒辦法去買東西</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="新しい携帯を買えません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>あたら</rt></ruby>しい　<ruby>携<rt>けい</rt>帯<rt>たい</rt></ruby>を　<ruby>買<rt>か</rt></ruby>えません</div>
+        <div class="word-romaji">atarashii keitai o kaemasen</div>
+        <div class="word-meaning">我買不起新手機 — 携帯（手機）在 <a href="2026-07-28-lesson8-kore-sore-are.html" style="color:var(--accent);">7/28 的課</a>學過；筆記上寫成 かえま，句尾要補上 ん</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="納豆を食べられません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べられません</div>
+        <div class="word-romaji">nattou o taberaremasen</div>
+        <div class="word-meaning">我不敢吃納豆 — 筆記上寫的 たべれません 是口語的省略說法，見第四節</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お酒を飲めません">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>酒<rt>さけ</rt></ruby>を　<ruby>飲<rt>の</rt></ruby>めません</div>
+        <div class="word-romaji">osake o nomemasen</div>
+        <div class="word-meaning">我不能喝酒</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="漢字を書けません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>漢<rt>かん</rt>字<rt>じ</rt></ruby>を　<ruby>書<rt>か</rt></ruby>けません</div>
+        <div class="word-romaji">kanji o kakemasen</div>
+        <div class="word-meaning">我不會寫漢字</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    六個動詞裡，有五個是五段動詞，只有 食べる 是一段動詞。可能形這一欄就是「能夠〜」的意思，再把字尾的 る 換成 ません，就是「不能〜」。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原本的動詞</th><th>類別</th><th>怎麼變</th><th>可能形</th><th>否定（ません）</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><ruby>話<rt>はな</rt></ruby>す<br><small>hanasu 說</small></td><td>五段</td><td>す → <b>せ</b></td><td class="col-ja">話<b>せ</b>る</td><td class="col-ja">話<b>せ</b>ません<br><small>hanasemasen</small></td></tr>
+      <tr><td class="col-ja"><ruby>行<rt>い</rt></ruby>く<br><small>iku 去</small></td><td>五段</td><td>く → <b>け</b></td><td class="col-ja">行<b>け</b>る</td><td class="col-ja">行<b>け</b>ません<br><small>ikemasen</small></td></tr>
+      <tr><td class="col-ja"><ruby>買<rt>か</rt></ruby>う<br><small>kau 買</small></td><td>五段</td><td>う → <b>え</b></td><td class="col-ja">買<b>え</b>る</td><td class="col-ja">買<b>え</b>ません<br><small>kaemasen</small></td></tr>
+      <tr><td class="col-ja"><ruby>飲<rt>の</rt></ruby>む<br><small>nomu 喝</small></td><td>五段</td><td>む → <b>め</b></td><td class="col-ja">飲<b>め</b>る</td><td class="col-ja">飲<b>め</b>ません<br><small>nomemasen</small></td></tr>
+      <tr><td class="col-ja"><ruby>書<rt>か</rt></ruby>く<br><small>kaku 寫</small></td><td>五段</td><td>く → <b>け</b></td><td class="col-ja">書<b>け</b>る</td><td class="col-ja">書<b>け</b>ません<br><small>kakemasen</small></td></tr>
+      <tr class="key"><td class="col-ja"><ruby>食<rt>た</rt></ruby>べる<br><small>taberu 吃</small></td><td><strong>一段</strong></td><td>る → <b>られる</b></td><td class="col-ja">食べ<b>られ</b>る</td><td class="col-ja">食べ<b>られ</b>ません<br><small>taberaremasen</small></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、五段動詞是把字尾換成え段</div>
+
+  <p class="lead">
+    五段動詞的原形一定是う段結尾，<a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9〈什麼是五段動詞〉</a>講過，
+    字尾換到哪一段，意思就跟著變。要變成可能形，就是把字尾換到<strong>え段</strong>，再加上 る。
+  </p>
+
+  <div class="formula">
+    <h4>五段動詞的可能形</h4>
+    <div class="fx">
+      <ruby>話<rt>はな</rt></ruby><s>す</s> <span class="arw">→</span> 話<b>せ</b> ＋ る <span class="arw">→</span> 話せる（會說）<br>
+      話せ<s>る</s> <span class="arw">→</span> 話せ ＋ <b>ません</b> <span class="arw">→</span> 話せません（不會說）
+    </div>
+  </div>
+
+  <p class="lead">
+    同一行的音，往下移到え段就對了。下面把五段動詞會出現的字尾全部列出來，課堂上沒有用到的也一起放進來對照：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>字尾</th><th>換成</th><th>例子</th><th>否定（ません）</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">う</td><td class="col-ja"><b>え</b></td><td class="col-ja"><ruby>買<rt>か</rt></ruby>う → 買える</td><td class="col-ja">買えません</td></tr>
+      <tr><td class="col-ja">く</td><td class="col-ja"><b>け</b></td><td class="col-ja"><ruby>書<rt>か</rt></ruby>く → 書ける</td><td class="col-ja">書けません</td></tr>
+      <tr><td class="col-ja">ぐ</td><td class="col-ja"><b>げ</b></td><td class="col-ja"><ruby>泳<rt>およ</rt></ruby>ぐ → 泳げる</td><td class="col-ja">泳げません</td></tr>
+      <tr><td class="col-ja">す</td><td class="col-ja"><b>せ</b></td><td class="col-ja"><ruby>話<rt>はな</rt></ruby>す → 話せる</td><td class="col-ja">話せません</td></tr>
+      <tr><td class="col-ja">つ</td><td class="col-ja"><b>て</b></td><td class="col-ja"><ruby>待<rt>ま</rt></ruby>つ → 待てる</td><td class="col-ja">待てません</td></tr>
+      <tr><td class="col-ja">ぬ</td><td class="col-ja"><b>ね</b></td><td class="col-ja"><ruby>死<rt>し</rt></ruby>ぬ → 死ねる</td><td class="col-ja">死ねません</td></tr>
+      <tr><td class="col-ja">ぶ</td><td class="col-ja"><b>べ</b></td><td class="col-ja"><ruby>遊<rt>あそ</rt></ruby>ぶ → 遊べる</td><td class="col-ja">遊べません</td></tr>
+      <tr><td class="col-ja">む</td><td class="col-ja"><b>め</b></td><td class="col-ja"><ruby>飲<rt>の</rt></ruby>む → 飲める</td><td class="col-ja">飲めません</td></tr>
+      <tr><td class="col-ja">る</td><td class="col-ja"><b>れ</b></td><td class="col-ja"><ruby>帰<rt>かえ</rt></ruby>る → 帰れる</td><td class="col-ja">帰れません</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    📝 <strong>可能形本身是一段動詞，所以 ません 直接接在後面</strong><br>
+    話せる、飲める 都是 え段 ＋ る 結尾，變成可能形之後，它就照一段動詞的規則走：去掉 る 加 ません。
+    這跟 <ruby>食<rt>た</rt></ruby>べる → 食べません 是同一個做法。
+    動詞的否定怎麼接，<a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12〈否定的說法〉</a>第六節有完整的 ない ↔ ません 對照表。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>買う 的可能形是 買える，不是 買わ〜</strong><br>
+    否定的 ない 形會把 う 換成 わ（買わない），所以容易混。可能形走的是え段：か<b>う</b> → か<b>え</b>る → <b>買えません</b>（kaemasen）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、食べる 是一段動詞，要加 られ</div>
+
+  <p class="lead">
+    食べる 的 る 前面是え段的 べ，屬於一段動詞（判斷方法見
+    <a href="2026-08-09-godan-vs-ichidan.html" style="color:var(--accent);">8/9〈五段 vs 一段〉</a>）。
+    一段動詞的字尾不能「往下移一段」，規則是把 る 換成 <span class="j-mark">られる</span>。
+  </p>
+
+  <div class="formula">
+    <h4>一段動詞的可能形</h4>
+    <div class="fx">
+      <ruby>食<rt>た</rt></ruby>べ<s>る</s> <span class="arw">→</span> 食べ ＋ <b>られる</b> <span class="arw">→</span> 食べられる（敢吃、能吃）<br>
+      食べられ<s>る</s> <span class="arw">→</span> 食べられ ＋ <b>ません</b> <span class="arw">→</span> 食べられません<br>
+      <ruby>見<rt>み</rt></ruby><s>る</s> <span class="arw">→</span> 見<b>られ</b>る <span class="arw">→</span> 見られません（看不到）
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、たべれません 是口語把 ら 省掉的說法</div>
+
+  <p class="lead">
+    筆記上寫的 たべれません（taberemasen）少了一個 ら，這種說法叫做「ら<ruby>抜<rt>ぬ</rt></ruby>き<ruby>言<rt>こと</rt>葉<rt>ば</rt></ruby>」（ranuki kotoba，省掉 ら 的說法）。
+    日本人平常講話很常這樣說，聽到不用覺得奇怪，但課本、考試和正式場合寫的是 食べられません。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>課本的寫法</h4>
+      <div class="vs-sub">考試、寫文章、對長輩講話</div>
+      <ul>
+        <li>食べ<b>ら</b>れません</li>
+        <li>taberaremasen</li>
+        <li>見<b>ら</b>れません</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>口語常聽到的</h4>
+      <div class="vs-sub">朋友之間，自己寫的時候先別用</div>
+      <ul>
+        <li>食べれません</li>
+        <li>taberemasen</li>
+        <li>見れません</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>五段動詞沒有這個問題</strong><br>
+    ら抜き 只會發生在一段動詞（還有 <ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>こ</rt></ruby>られる → 来れる）。
+    話せる、飲める 本來就沒有 ら，不用擔心。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、できません 的 でき 是從 できる 來的</div>
+
+  <p class="lead">
+    できません 一樣是「ます形的否定」，原形是 <span class="j-mark">できる</span>（dekiru）。
+    できる 是一段動詞，去掉 る 剩下 でき，再接 ません，就是 でき ＋ ません ＝ できません。
+    所以 deki 不是一個獨立的字根，它就是 できる 去掉 る 之後的樣子，跟 食べ ＋ ません 是同一個做法。
+  </p>
+
+  <div class="formula">
+    <h4>できる 的變化</h4>
+    <div class="fx">
+      でき<s>る</s> <span class="arw">→</span> でき ＋ <b>ます</b> <span class="arw">→</span> できます（會、可以）<br>
+      でき<s>る</s> <span class="arw">→</span> でき ＋ <b>ません</b> <span class="arw">→</span> できません（不會、不可以）
+    </div>
+  </div>
+
+  <p class="lead">
+    できる 寫成漢字是 <ruby>出<rt>で</rt>来<rt>き</rt></ruby>る，原本是「出現、做出來」的意思，後來才變成「能夠」。
+    平常幾乎都寫平假名，但在 <ruby>出<rt>で</rt>来<rt>き</rt></ruby>ました（做好了）這類句子裡會看到漢字。
+  </p>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 出来る 就是中文的「出來」</strong><br>
+    出 唸 で，跟 <ruby>出<rt>で</rt></ruby>ます（出去）同一個 で；来 唸 き，跟 <ruby>来<rt>き</rt></ruby>ます（來）同一個 き。
+    合起來的 でき，用中文想就是「做得<strong>出來</strong>」：做得出來 ＝ できます，做不出來 ＝ できません。
+  </div>
+
+  <p class="lead">
+    できる 還有另一個身分：它是 する（做）的可能形。する 是不規則動詞，可能形不照上面的規則變，直接換成 できる。
+    所以「名詞＋する」的動詞，要說「不能〜」時，把 する 換成 できません 就可以了。為什麼 する 會變成 できる，同一天的 <a href="2026-10-08-suru-dekiru.html" style="color:var(--accent);">〈する 的可能形是 できる〉</a>有完整說明。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原本的動詞</th><th>可能形</th><th>否定（ません）</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">する</td><td class="col-ja"><b>できる</b></td><td class="col-ja">できません</td><td class="col-ja">テニスができません<br><small>tenisu ga dekimasen 我不會打網球</small></td></tr>
+      <tr><td class="col-ja"><ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>する</td><td class="col-ja">運転<b>できる</b></td><td class="col-ja">運転できません</td><td class="col-ja">車を運転できません<br><small>kuruma o unten dekimasen 我不會開車</small></td></tr>
+      <tr><td class="col-ja"><ruby>来<rt>く</rt></ruby>る</td><td class="col-ja"><ruby>来<rt>こ</rt></ruby><b>られる</b></td><td class="col-ja">来られません</td><td class="col-ja">明日は来られません<br><small>ashita wa koraremasen 我明天沒辦法來</small></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    📝 <strong>テニス 是從英語 tennis 借來的</strong><br>
+    テニス（tenisu）的意思跟英語一樣，就是網球。打網球日文用 する：テニスをする，所以「會打網球」是 テニスができる。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、換掉受詞、動詞不變是這樣用的</div>
+
+  <p class="lead">
+    把課堂的六個句子，前面的東西換掉，動詞完全不動，就能說出很多新的句子。每個動詞各換兩次：
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 話せません（不會說）</div>
+    <div class="word-item" data-text="中国語を話せません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>中<rt>ちゅう</rt>国<rt>ごく</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>せません</div>
+        <div class="word-romaji">chuugokugo o hanasemasen</div>
+        <div class="word-meaning">我不會說中文</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="台湾語を話せません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>台<rt>たい</rt>湾<rt>わん</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>せません</div>
+        <div class="word-romaji">taiwango o hanasemasen</div>
+        <div class="word-meaning">我不會說台語</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 行けません（沒辦法去）</div>
+    <div class="word-item" data-text="学校に行けません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>学<rt>がっ</rt>校<rt>こう</rt></ruby>に　<ruby>行<rt>い</rt></ruby>けません</div>
+        <div class="word-romaji">gakkou ni ikemasen</div>
+        <div class="word-meaning">我沒辦法去學校</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="旅行に行けません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>旅<rt>りょ</rt>行<rt>こう</rt></ruby>に　<ruby>行<rt>い</rt></ruby>けません</div>
+        <div class="word-romaji">ryokou ni ikemasen</div>
+        <div class="word-meaning">我沒辦法去旅行</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 買えません（買不起、買不到）</div>
+    <div class="word-item" data-text="新しい車を買えません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>あたら</rt></ruby>しい　<ruby>車<rt>くるま</rt></ruby>を　<ruby>買<rt>か</rt></ruby>えません</div>
+        <div class="word-romaji">atarashii kuruma o kaemasen</div>
+        <div class="word-meaning">我買不起新車</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="高いかばんを買えません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>高<rt>たか</rt></ruby>い　かばんを　<ruby>買<rt>か</rt></ruby>えません</div>
+        <div class="word-romaji">takai kaban o kaemasen</div>
+        <div class="word-meaning">我買不起很貴的包包</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 食べられません（不敢吃、不能吃）</div>
+    <div class="word-item" data-text="生の魚を食べられません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>生<rt>なま</rt></ruby>の　<ruby>魚<rt>さかな</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べられません</div>
+        <div class="word-romaji">nama no sakana o taberaremasen</div>
+        <div class="word-meaning">我不敢吃生魚</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="辛いカレーを食べられません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>辛<rt>から</rt></ruby>い　カレーを　<ruby>食<rt>た</rt></ruby>べられません</div>
+        <div class="word-romaji">karai karee o taberaremasen</div>
+        <div class="word-meaning">我不能吃辣的咖哩 — カレー 借自英語 curry，日文多半指日式咖哩飯；辣度的說法見 <a href="2026-10-05-tsugi-wa-ichikara.html" style="color:var(--accent);">10/5 咖哩店會話</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 飲めません（不能喝）</div>
+    <div class="word-item" data-text="コーヒーを飲めません">
+      <div class="word-content">
+        <div class="word-ja">コーヒーを　<ruby>飲<rt>の</rt></ruby>めません</div>
+        <div class="word-romaji">koohii o nomemasen</div>
+        <div class="word-meaning">我不能喝咖啡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="牛乳を飲めません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>牛<rt>ぎゅう</rt>乳<rt>にゅう</rt></ruby>を　<ruby>飲<rt>の</rt></ruby>めません</div>
+        <div class="word-romaji">gyuunyuu o nomemasen</div>
+        <div class="word-meaning">我不能喝牛奶</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>コーヒー 是從荷蘭語 koffie 借來的</strong><br>
+    コーヒー（koohii）不是照英語 coffee 唸的，它是江戶時代從長崎出島的荷蘭商人那邊傳進來的，所以是 コー<b>ヒー</b>，不是 コー<b>フィー</b>。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 書けません（不會寫）</div>
+    <div class="word-item" data-text="カタカナを書けません">
+      <div class="word-content">
+        <div class="word-ja">カタカナを　<ruby>書<rt>か</rt></ruby>けません</div>
+        <div class="word-romaji">katakana o kakemasen</div>
+        <div class="word-meaning">我不會寫片假名</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="手紙を書けません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>手<rt>て</rt>紙<rt>がみ</rt></ruby>を　<ruby>書<rt>か</rt></ruby>けません</div>
+        <div class="word-romaji">tegami o kakemasen</div>
+        <div class="word-meaning">我不會寫信</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、を 和 が 都可以用，差別在哪裡</div>
+
+  <p class="lead">
+    課堂上的句子都用 を，例如 英語<b>を</b>話せません。可能形前面也可以用 が：英語<b>が</b>話せません。
+    兩種說法日本人都會用，意思一樣。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4><ruby>英<rt>えい</rt>語<rt>ご</rt></ruby><b>が</b>話せません</h4>
+      <div class="vs-sub">課本比較常教的說法</div>
+      <ul>
+        <li>eigo ga hanasemasen</li>
+        <li>可能形表示一種能力或狀態，跟 できます 一樣前面用 が</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4><ruby>英<rt>えい</rt>語<rt>ご</rt></ruby><b>を</b>話せません</h4>
+      <div class="vs-sub">口語也很常見</div>
+      <ul>
+        <li>eigo o hanasemasen</li>
+        <li>保留原本 話す 的 を，課堂上用的就是這種</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    剛開始兩種都會就好。比較需要注意的是 〜ことができません：那邊的 を 屬於前面的動詞，
+    が 屬於 できません，兩個助詞的位置是固定的（見
+    <a href="2026-10-06-koto-ga-dekimasu.html" style="color:var(--accent);">10/6〈話すことができます〉</a>第四節）。
+  </p>
+
+  <div class="note">
+    📝 <strong>否定句也可以用 は</strong><br>
+    <a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12〈否定的說法〉</a>提過，否定句常把 を 換成 は，多一層對比的意思：
+    お<ruby>酒<rt>さけ</rt></ruby><b>は</b><ruby>飲<rt>の</rt></ruby>めません ＝ 酒的話我不能喝（但別的可以）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、有三個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① 飲めません 和 飲みません 意思不一樣</strong><br>
+    <span class="compare">飲みません</span>（nomimasen）＝ 我不喝（自己選擇不喝）<br>
+    <span class="compare">飲めません</span>（nomemasen）＝ 我不能喝（想喝也沒辦法，例如體質不合）<br>
+    兩個只差一個音，在居酒屋拒絕別人敬酒時，用 飲めません 聽起來比較委婉。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② 一段動詞不要只換一個音</strong><br>
+    <s>食べれません</s> 是口語，寫的時候要寫 食べ<b>られ</b>ません。食べる 不是五段動詞，不能照 え段 的規則變。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>③ 可能形不要再接 ことができます</strong><br>
+    <s>話せることができません</s> 等於講了兩次「能」。選一個說法就好：話せません，或 話すことができません。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">九、整理成一張表</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>動詞類別</th><th>可能形怎麼變</th><th>例子</th><th>否定（ません）</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>五段動詞</td><td>字尾 う段 → え段 ＋ る</td><td class="col-ja"><ruby>話<rt>はな</rt></ruby>す → 話せる</td><td class="col-ja">話せません</td></tr>
+      <tr><td>一段動詞</td><td>る → られる</td><td class="col-ja"><ruby>食<rt>た</rt></ruby>べる → 食べられる</td><td class="col-ja">食べられません</td></tr>
+      <tr><td>する</td><td>整個換成 できる</td><td class="col-ja">する → できる</td><td class="col-ja">できません</td></tr>
+      <tr><td>名詞＋する</td><td>する 換成 できる</td><td class="col-ja"><ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>する → 運転できる</td><td class="col-ja">運転できません</td></tr>
+      <tr><td>来る</td><td>不規則，整個記成 こられる</td><td class="col-ja"><ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>こ</rt></ruby>られる</td><td class="col-ja">来られません</td></tr>
+      <tr class="key"><td>比較正式的說法</td><td>原形 ＋ ことができません</td><td class="col-ja">話すことができません</td><td class="col-ja">—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">十、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看（用 〜ません 的短說法）</strong><br>
+    1. 我不能喝咖啡。（コーヒー、飲む）<br>
+    2. 我看不懂這本書。（この本、<ruby>読<rt>よ</rt></ruby>む）<br>
+    3. 晚上看不到星星。（<ruby>夜<rt>よる</rt></ruby>、<ruby>星<rt>ほし</rt></ruby>、<ruby>見<rt>み</rt></ruby>る）<br>
+    4. 我不會做菜。（<ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>する）<br>
+    5. 「納豆を食べれません」要寫進作文的話，該怎麼改？
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. コーヒーが<ruby>飲<rt>の</rt></ruby>めません。（koohii ga nomemasen）用 を 也可以。飲む 是五段動詞，む → め。</p>
+    <p>2. この<ruby>本<rt>ほん</rt></ruby>が<ruby>読<rt>よ</rt></ruby>めません。（kono hon ga yomemasen）読む 也是 む → め。</p>
+    <p>3. <ruby>夜<rt>よる</rt></ruby>は<ruby>星<rt>ほし</rt></ruby>が<ruby>見<rt>み</rt></ruby>られません。（yoru wa hoshi ga miraremasen）見る 是一段動詞，加 られ。</p>
+    <p>4. <ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>ができません。（ryouri ga dekimasen）或 料理できません。する 的可能形是 できる。</p>
+    <p>5. 改成 <ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>を<ruby>食<rt>た</rt></ruby>べられません（nattou o taberaremasen），補回 ら。</p>
+  </details>
+
+  <a href="2026-10-08-suru-dekiru.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">する 的可能形是 できる <span class="next-arrow">→</span></span>
+    <span class="next-sub">為什麼 運転する 的否定是 運転できません：する 不照規則變，借 できる 來用</span>
+  </a>
+
+  <a href="2026-10-06-koto-ga-dekimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">話すことができます <span class="next-arrow">→</span></span>
+    <span class="next-sub">比較長、比較正式的說法：原形＋ことができます／できません</span>
+  </a>
+
+  <a href="2026-08-12-hitei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">否定的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">四種詞性的否定接法，ない 與 ません 的對照，以及否定句的 は</span>
+  </a>
+
+  <a href="2026-08-09-godan-doushi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">什麼是五段動詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">字尾換到哪一段，意思就跟著變；可能形就是換到え段</span>
+  </a>
+
+  <a href="2026-08-09-godan-vs-ichidan.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">五段 vs 一段：那「食べる」呢 <span class="next-arrow">→</span></span>
+    <span class="next-sub">為什麼 食べる 不能變成 食べれる，要先分清楚動詞是哪一類</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

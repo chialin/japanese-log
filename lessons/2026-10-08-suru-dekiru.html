@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>する 的可能形是 できる — 運転できません 的由來</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+.tbl-scroll{overflow-x:auto;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">する 的可能形是 <span class="accent">できる</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 08</div>
+  <p class="page-subtitle">為什麼 <ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>する 的否定是 運転できません，而不是照規則變出來的形</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    想說「我不會開車」「這裡可以預約嗎」，動詞都是「名詞＋する」這一類，要說「能不能」的時候，會用到 できる。
+    同一天的 <a href="2026-10-08-dekimasen.html" style="color:var(--accent);">〈できません〉</a> 學了五段和一段動詞的可能形，
+    這篇接著處理剩下的 する：它為什麼不照規則變、而是換成 できる，
+    還有 運転する 這種兩塊組成的動詞，為什麼只要換後面的 する 就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以 する 為主軸，把它的可能形列出來</div>
+
+  <p class="lead">
+    する（suru）是「做」。它的可能形是 できる（dekiru），之後要說「會、不會、以前會、以前不會」，都是在 できる 上面變化，跟一般的一段動詞一樣。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>形</th><th>日文</th><th>讀音</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>原形</td><td class="col-ja">する</td><td>suru</td><td>做</td></tr>
+      <tr class="key"><td>可能形</td><td class="col-ja"><b>できる</b></td><td>dekiru</td><td>能做、會做</td></tr>
+      <tr><td>ます形</td><td class="col-ja">できます</td><td>dekimasu</td><td>會、可以</td></tr>
+      <tr><td>否定</td><td class="col-ja">できません</td><td>dekimasen</td><td>不會、不可以</td></tr>
+      <tr><td>過去</td><td class="col-ja">できました</td><td>dekimashita</td><td>以前會、做到了</td></tr>
+      <tr><td>過去否定</td><td class="col-ja">できませんでした</td><td>dekimasen deshita</td><td>以前不會、沒做到</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、する 的可能形是借 できる 來用的</div>
+
+  <p class="lead">
+    其他動詞的可能形都有固定的變法：五段動詞把字尾換成え段（話す → 話せる），一段動詞把 る 換成 られる（食べる → 食べられる）。
+    する 不屬於這兩類，它是不規則動詞。
+  </p>
+
+  <p class="lead">
+    如果照一段動詞的樣子硬套，會變成 される（sareru）或 せられる（serareru）。
+    但 される 已經被拿去當被動形，意思是「被做」，再拿來表示「能做」會分不清楚。
+    所以日文另外借了 できる 來用。できる 本來的意思就是「做得出來、辦得到」，剛好可以補上這個位置。
+  </p>
+
+  <div class="formula">
+    <h4>する 不照規則變</h4>
+    <div class="fx">
+      <s>されます</s> <span class="arw">→</span> 這是「被做」，不是「能做」<br>
+      する <span class="arw">→</span> <b>できる</b> <span class="arw">→</span> できます／できません
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 跟英文的 go → went 一樣</strong><br>
+    英文 go 的過去式不是 goed，而是借了另一個字 went 來用。
+    日文 する 的可能形也是這樣，不是從 する 變出來的，而是直接換成另一個字 できる。
+    兩個都是最常用的動詞，所以特別不規則，只能整個記起來。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、名詞＋する 的動詞只換後面的 する</div>
+
+  <p class="lead">
+    日文有很多動詞是「名詞＋する」組成的，例如 <ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>する（開車）、<ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>する（做菜）、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>する（讀書）。
+    前面的名詞是「做什麼事」，後面的 する 是「做」。真正會變化的只有 する，所以要說「能不能」的時候，把 する 換成 できる，前面的名詞完全不動。
+  </p>
+
+  <div class="formula">
+    <h4>運転する 拆成兩塊</h4>
+    <div class="fx">
+      <ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>（名詞：駕駛這件事）＋ する（做）<br>
+      運転<s>する</s> <span class="arw">→</span> 運転 ＋ <b>できる</b> <span class="arw">→</span> 運転できません（不會開車）
+    </div>
+  </div>
+
+  <p class="lead">
+    <a href="2026-08-28-ha-o-migakimasu.html" style="color:var(--accent);">8/28 的課</a>學過 <ruby>彼<rt>かれ</rt></ruby>は<ruby>車<rt>くるま</rt></ruby>を運転します（他開車），把 します 換掉就能說「會不會開車」。
+    同樣的做法套到其他動詞上：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原形</th><th>意思</th><th>可能形</th><th>否定（ません）</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>する</td><td>開車</td><td class="col-ja">運転<b>できる</b></td><td class="col-ja">運転できません<br><small>unten dekimasen</small></td></tr>
+      <tr><td class="col-ja"><ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>する</td><td>做菜</td><td class="col-ja">料理<b>できる</b></td><td class="col-ja">料理できません<br><small>ryouri dekimasen</small></td></tr>
+      <tr><td class="col-ja"><ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>する</td><td>讀書</td><td class="col-ja">勉強<b>できる</b></td><td class="col-ja">勉強できません<br><small>benkyou dekimasen</small></td></tr>
+      <tr><td class="col-ja"><ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>する</td><td>預約</td><td class="col-ja">予約<b>できる</b></td><td class="col-ja">予約できません<br><small>yoyaku dekimasen</small></td></tr>
+      <tr><td class="col-ja"><ruby>返<rt>へん</rt>品<rt>ぴん</rt></ruby>する</td><td>退貨</td><td class="col-ja">返品<b>できる</b></td><td class="col-ja">返品できません<br><small>henpin dekimasen</small></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 料理（りょうり）＝ 台語的 liau-li</strong><br>
+    台語的「料理」唸 <strong>liau-li</strong>，日文唸 <strong>ryou-ri</strong>，兩個唸出來很像。
+    台語的料理是「處理事情」的意思，日文則是「做菜、菜餚」，意思不一樣，但聲音可以拿來記。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、把名詞拉出來的時候要加 が</div>
+
+  <p class="lead">
+    運転 本身是名詞，所以也可以把它拉出來，跟 できます 中間加一個 が。
+    這就跟 <a href="2026-10-06-koto-ga-dekimasu.html" style="color:var(--accent);">10/6</a> 學過的 <ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>ができます（會日文）是同一個結構。兩種說法意思一樣。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>運転できません</h4>
+      <div class="vs-sub">名詞＋できる 連在一起，當成一個動詞</div>
+      <ul>
+        <li>unten dekimasen</li>
+        <li>前面可以再接 を：<ruby>車<rt>くるま</rt></ruby>を運転できません</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>運転<b>が</b>できません</h4>
+      <div class="vs-sub">名詞拉出來，用 が 接 できません</div>
+      <ul>
+        <li>unten ga dekimasen</li>
+        <li>跟 日本語ができます 同一種結構</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    〈できません〉那篇的 テニスができません（不會打網球）也是這一種：テニスをする（打網球）的 テニス 是名詞，拉出來接 が。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、放進句子裡是這樣用的</div>
+
+  <div class="section">
+    <div class="section-title">📖 講自己會不會</div>
+
+    <div class="word-item" data-text="車を運転できません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>車<rt>くるま</rt></ruby>を　<ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>できません</div>
+        <div class="word-romaji">kuruma o unten dekimasen</div>
+        <div class="word-meaning">我不會開車</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="料理ができません">
+      <div class="word-content">
+        <div class="word-ja"><ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>が　できません</div>
+        <div class="word-romaji">ryouri ga dekimasen</div>
+        <div class="word-meaning">我不會做菜</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昨日は勉強できませんでした">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は　<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>できませんでした</div>
+        <div class="word-romaji">kinou wa benkyou dekimasen deshita</div>
+        <div class="word-meaning">昨天沒辦法讀書 — 過去否定：できませんでした</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 問店家可不可以</div>
+
+    <div class="word-item" data-text="予約できますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>できますか</div>
+        <div class="word-romaji">yoyaku dekimasu ka</div>
+        <div class="word-meaning">可以預約嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="返品できますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>返<rt>へん</rt>品<rt>ぴん</rt></ruby>できますか</div>
+        <div class="word-romaji">henpin dekimasu ka</div>
+        <div class="word-meaning">可以退貨嗎？ — <a href="2026-08-16-he-tango.html" style="color:var(--accent);">8/16 的課</a>學過的句子</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="セールの商品は返品できません">
+      <div class="word-content">
+        <div class="word-ja">セールの　<ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は　<ruby>返<rt>へん</rt>品<rt>ぴん</rt></ruby>できません</div>
+        <div class="word-romaji">seeru no shouhin wa henpin dekimasen</div>
+        <div class="word-meaning">特價商品不能退貨 — セール 借自英語 sale，日文專指打折特賣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① 不要說成 運転されません</strong><br>
+    される 是被動形，<s>運転されません</s> 的意思會變成「沒有被開」。要說「不會開」，請用 運転<b>できません</b>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② する 和 できる 不要同時出現</strong><br>
+    <s>運転するができません</s> 是錯的，できる 已經取代了 する。
+    如果想保留 する，要加 こと：運転すること<b>が</b>できません（比較正式的說法）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、整理成一張表</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>「做」的可能形</td><td class="col-ja">する → <b>できる</b></td><td class="col-ja">できません</td></tr>
+      <tr><td>名詞＋する 的可能形</td><td class="col-ja">名詞 ＋ <b>できる</b></td><td class="col-ja">運転できません</td></tr>
+      <tr><td>名詞拉出來</td><td class="col-ja">名詞 ＋ <b>が</b>できる</td><td class="col-ja">運転ができません</td></tr>
+      <tr><td>比較正式的說法</td><td class="col-ja">原形 ＋ ことが<b>できる</b></td><td class="col-ja">運転することができません</td></tr>
+      <tr><td>問可不可以</td><td class="col-ja">名詞 ＋ できますか</td><td class="col-ja">予約できますか</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看</strong><br>
+    1. 這裡可以停車嗎？（<ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt></ruby>する）<br>
+    2. 我不會做菜。（用 が 的說法）<br>
+    3. 昨天沒辦法讀書。<br>
+    4. 「運転されません」錯在哪裡？<br>
+    5. 運転できません 可以換成哪兩種說法，意思不變？
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. ここで<ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt></ruby>できますか。（koko de chuusha dekimasu ka）</p>
+    <p>2. <ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>ができません。（ryouri ga dekimasen）</p>
+    <p>3. <ruby>昨日<rt>きのう</rt></ruby>は<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>できませんでした。（kinou wa benkyou dekimasen deshita）</p>
+    <p>4. される 是被動形，意思會變成「沒有被開」。「不會開」要說 運転できません。</p>
+    <p>5. 運転ができません（unten ga dekimasen），以及比較正式的 運転することができません（unten suru koto ga dekimasen）。</p>
+  </details>
+
+  <a href="2026-10-08-dekimasen.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">できません — 說自己「做不到」的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">五段動詞換え段、一段動詞加 られ，以及 でき 是從 出来る 來的</span>
+  </a>
+
+  <a href="2026-10-06-koto-ga-dekimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">話すことができます <span class="next-arrow">→</span></span>
+    <span class="next-sub">名詞＋ができます 和 動詞原形＋ことができます 的結構</span>
+  </a>
+
+  <a href="2026-08-28-ha-o-migakimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">彼は車を運転します <span class="next-arrow">→</span></span>
+    <span class="next-sub">運転します 第一次出現的那一課</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

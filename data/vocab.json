@@ -1,6 +1,467 @@
 {
- "generated": "2026-10-06",
+ "generated": "2026-10-08",
  "words": [
+  {
+   "text": "英語を話せません",
+   "ja": "<ruby>英<rt>えい</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>せません",
+   "kana": "えいごを はなせません",
+   "romaji": "eigo o hanasemasen",
+   "meaning": "我不會說英文",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "買い物に行けません",
+   "ja": "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に　<ruby>行<rt>い</rt></ruby>けません",
+   "kana": "かいものに いけません",
+   "romaji": "kaimono ni ikemasen",
+   "meaning": "我沒辦法去買東西",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "新しい携帯を買えません",
+   "ja": "<ruby>新<rt>あたら</rt></ruby>しい　<ruby>携<rt>けい</rt>帯<rt>たい</rt></ruby>を　<ruby>買<rt>か</rt></ruby>えません",
+   "kana": "あたらしい けいたいを かえません",
+   "romaji": "atarashii keitai o kaemasen",
+   "meaning": "我買不起新手機 — 携帯（手機）在 7/28 的課學過；筆記上寫成 かえま，句尾要補上 ん",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "購物",
+    "生活雜貨",
+    "動詞"
+   ]
+  },
+  {
+   "text": "納豆を食べられません",
+   "ja": "<ruby>納<rt>なっ</rt>豆<rt>とう</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べられません",
+   "kana": "なっとうを たべられません",
+   "romaji": "nattou o taberaremasen",
+   "meaning": "我不敢吃納豆 — 筆記上寫的 たべれません 是口語的省略說法，見第四節",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "お酒を飲めません",
+   "ja": "お<ruby>酒<rt>さけ</rt></ruby>を　<ruby>飲<rt>の</rt></ruby>めません",
+   "kana": "おさけを のめません",
+   "romaji": "osake o nomemasen",
+   "meaning": "我不能喝酒",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "漢字を書けません",
+   "ja": "<ruby>漢<rt>かん</rt>字<rt>じ</rt></ruby>を　<ruby>書<rt>か</rt></ruby>けません",
+   "kana": "かんじを かけません",
+   "romaji": "kanji o kakemasen",
+   "meaning": "我不會寫漢字",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "學校・工作",
+    "動詞"
+   ]
+  },
+  {
+   "text": "中国語を話せません",
+   "ja": "<ruby>中<rt>ちゅう</rt>国<rt>ごく</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>せません",
+   "kana": "ちゅうごくごを はなせません",
+   "romaji": "chuugokugo o hanasemasen",
+   "meaning": "我不會說中文",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "台湾語を話せません",
+   "ja": "<ruby>台<rt>たい</rt>湾<rt>わん</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>せません",
+   "kana": "たいわんごを はなせません",
+   "romaji": "taiwango o hanasemasen",
+   "meaning": "我不會說台語",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "学校に行けません",
+   "ja": "<ruby>学<rt>がっ</rt>校<rt>こう</rt></ruby>に　<ruby>行<rt>い</rt></ruby>けません",
+   "kana": "がっこうに いけません",
+   "romaji": "gakkou ni ikemasen",
+   "meaning": "我沒辦法去學校",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "學校・工作",
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "旅行に行けません",
+   "ja": "<ruby>旅<rt>りょ</rt>行<rt>こう</rt></ruby>に　<ruby>行<rt>い</rt></ruby>けません",
+   "kana": "りょこうに いけません",
+   "romaji": "ryokou ni ikemasen",
+   "meaning": "我沒辦法去旅行",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "交通",
+    "動詞"
+   ]
+  },
+  {
+   "text": "新しい車を買えません",
+   "ja": "<ruby>新<rt>あたら</rt></ruby>しい　<ruby>車<rt>くるま</rt></ruby>を　<ruby>買<rt>か</rt></ruby>えません",
+   "kana": "あたらしい くるまを かえません",
+   "romaji": "atarashii kuruma o kaemasen",
+   "meaning": "我買不起新車",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "交通",
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "高いかばんを買えません",
+   "ja": "<ruby>高<rt>たか</rt></ruby>い　かばんを　<ruby>買<rt>か</rt></ruby>えません",
+   "kana": "たかい かばんを かえません",
+   "romaji": "takai kaban o kaemasen",
+   "meaning": "我買不起很貴的包包",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "購物",
+    "生活雜貨",
+    "動詞"
+   ]
+  },
+  {
+   "text": "生の魚を食べられません",
+   "ja": "<ruby>生<rt>なま</rt></ruby>の　<ruby>魚<rt>さかな</rt></ruby>を　<ruby>食<rt>た</rt></ruby>べられません",
+   "kana": "なまの さかなを たべられません",
+   "romaji": "nama no sakana o taberaremasen",
+   "meaning": "我不敢吃生魚",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "辛いカレーを食べられません",
+   "ja": "<ruby>辛<rt>から</rt></ruby>い　カレーを　<ruby>食<rt>た</rt></ruby>べられません",
+   "kana": "からい カレーを たべられません",
+   "romaji": "karai karee o taberaremasen",
+   "meaning": "我不能吃辣的咖哩 — カレー 借自英語 curry，日文多半指日式咖哩飯；辣度的說法見 10/5 咖哩店會話",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "コーヒーを飲めません",
+   "ja": "コーヒーを　<ruby>飲<rt>の</rt></ruby>めません",
+   "kana": "コーヒーを のめません",
+   "romaji": "koohii o nomemasen",
+   "meaning": "我不能喝咖啡",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "牛乳を飲めません",
+   "ja": "<ruby>牛<rt>ぎゅう</rt>乳<rt>にゅう</rt></ruby>を　<ruby>飲<rt>の</rt></ruby>めません",
+   "kana": "ぎゅうにゅうを のめません",
+   "romaji": "gyuunyuu o nomemasen",
+   "meaning": "我不能喝牛奶",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "カタカナを書けません",
+   "ja": "カタカナを　<ruby>書<rt>か</rt></ruby>けません",
+   "kana": "カタカナを かけません",
+   "romaji": "katakana o kakemasen",
+   "meaning": "我不會寫片假名",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "學校・工作",
+    "動詞"
+   ]
+  },
+  {
+   "text": "手紙を書けません",
+   "ja": "<ruby>手<rt>て</rt>紙<rt>がみ</rt></ruby>を　<ruby>書<rt>か</rt></ruby>けません",
+   "kana": "てがみを かけません",
+   "romaji": "tegami o kakemasen",
+   "meaning": "我不會寫信",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-dekimasen.html",
+     "title": "できません"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "動詞"
+   ]
+  },
+  {
+   "text": "車を運転できません",
+   "ja": "<ruby>車<rt>くるま</rt></ruby>を　<ruby>運<rt>うん</rt>転<rt>てん</rt></ruby>できません",
+   "kana": "くるまを うんてんできません",
+   "romaji": "kuruma o unten dekimasen",
+   "meaning": "我不會開車",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-suru-dekiru.html",
+     "title": "する 的可能形是 できる"
+    }
+   ],
+   "tags": [
+    "交通",
+    "動詞"
+   ]
+  },
+  {
+   "text": "料理ができません",
+   "ja": "<ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>が　できません",
+   "kana": "りょうりが できません",
+   "romaji": "ryouri ga dekimasen",
+   "meaning": "我不會做菜",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-suru-dekiru.html",
+     "title": "する 的可能形是 できる"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "昨日は勉強できませんでした",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は　<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>できませんでした",
+   "kana": "きのうは べんきょうできませんでした",
+   "romaji": "kinou wa benkyou dekimasen deshita",
+   "meaning": "昨天沒辦法讀書 — 過去否定：できませんでした",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-suru-dekiru.html",
+     "title": "する 的可能形是 できる"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "學校・工作",
+    "動詞"
+   ]
+  },
+  {
+   "text": "予約できますか",
+   "ja": "<ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>できますか",
+   "kana": "よやくできますか",
+   "romaji": "yoyaku dekimasu ka",
+   "meaning": "可以預約嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-suru-dekiru.html",
+     "title": "する 的可能形是 できる"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "返品できますか",
+   "ja": "<ruby>返<rt>へん</rt>品<rt>ぴん</rt></ruby>できますか",
+   "kana": "へんぴんできますか",
+   "romaji": "henpin dekimasu ka",
+   "meaning": "可以退貨嗎？ — 8/16 的課學過的句子",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-suru-dekiru.html",
+     "title": "する 的可能形是 できる"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "セールの商品は返品できません",
+   "ja": "セールの　<ruby>商<rt>しょう</rt>品<rt>ひん</rt></ruby>は　<ruby>返<rt>へん</rt>品<rt>ぴん</rt></ruby>できません",
+   "kana": "セールの しょうひんは へんぴんできません",
+   "romaji": "seeru no shouhin wa henpin dekimasen",
+   "meaning": "特價商品不能退貨 — セール 借自英語 sale，日文專指打折特賣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-08",
+     "href": "lessons/2026-10-08-suru-dekiru.html",
+     "title": "する 的可能形是 できる"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
   {
    "text": "どうして日本語が話せるんですか",
    "ja": "どうして<ruby>日本語<rt>にほんご</rt></ruby>が　<ruby>話<rt>はな</rt></ruby>せるんですか",

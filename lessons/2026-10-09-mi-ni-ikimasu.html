@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜に行きます — 去做某件事：映画を見に行きます</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+.tbl-scroll{overflow-x:auto;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜に<span class="accent">行きます</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 09</div>
+  <p class="page-subtitle"><ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます：出門去做某件事的說法，以及它跟 映画を見ます 差在哪裡</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    跟朋友說週末要去看電影、去逛街買衣服、出去吃晚餐，日文都用同一個句型：把動詞的 ます 拿掉，接上 に<ruby>行<rt>い</rt></ruby>きます。
+    這篇先用課堂上的四句看句子怎麼組起來，再來比較 映画を見ます 和 映画を見に行きます 的差別。
+    兩句都在講看電影，差在後者多了「出門」這件事：要離開現在的地方，到別處去做。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以「去做什麼」為主軸，把課堂上的四句排出來</div>
+
+  <p class="lead">
+    四句的後半都是 〜に行きます，前半換成不同的事情，就變成「去看」「去吃」「去買」。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 去做某件事</div>
+
+    <div class="word-item" data-text="映画を見に行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">eiga o mi ni ikimasu</div>
+        <div class="word-meaning">去看電影</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="パレードを見に行きます">
+      <div class="word-content">
+        <div class="word-ja">パレードを　<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">parēdo o mi ni ikimasu</div>
+        <div class="word-meaning">去看遊行</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="夜ごはんを食べに行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>夜<rt>よる</rt></ruby>ごはんを　<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">yoru gohan o tabe ni ikimasu</div>
+        <div class="word-meaning">去吃晚餐</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="服を買いに行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>服<rt>ふく</rt></ruby>を　<ruby>買<rt>か</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">fuku o kai ni ikimasu</div>
+        <div class="word-meaning">去買衣服</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>パレード 是從英語 parade 來的</strong><br>
+    要寫成片假名 パレード（parēdo），長音用「ー」。英文的 parade 可以指各種遊行，
+    日文的 パレード 最常用在遊樂園（像迪士尼）的花車遊行和祭典、慶典的遊行隊伍；
+    上街抗議的遊行通常說 デモ（demo，來自英語 demonstration）。
+  </div>
+
+  <div class="note">
+    📝 <strong>夜ごはん 和 晩ごはん</strong><br>
+    「晚餐」也常說 <ruby>晩<rt>ばん</rt></ruby>ごはん（ban gohan），兩個都對。
+    晩ごはん 比較常見，夜ごはん 比較口語、生活化；正式一點的是 <ruby>夕<rt>ゆう</rt>食<rt>しょく</rt></ruby>（yūshoku）。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 服＝ふく</strong><br>
+    服 的音讀 <span class="compare">ふく</span>（fuku）跟中文的「服 fú」、台語的「服 hok」唸起來都很像，
+    日文的 ふ 本來就介在 h 和 f 之間。<ruby>洋<rt>よう</rt>服<rt>ふく</rt></ruby>（yōfuku，西式服裝）、<ruby>制<rt>せい</rt>服<rt>ふく</rt></ruby>（seifuku，制服）也是同一個音。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、に 前面要放ます形去掉ます的部分</div>
+
+  <p class="lead">
+    句型的做法跟 <a href="2026-10-08-takunai-dekinai.html" style="color:var(--accent);">10/8〈不想做和不會做〉</a>的 たい 一樣，
+    先把動詞變成ます形（<a href="2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">8/11〈マス形入門〉</a>），再把 ます 拿掉，剩下的部分接上 <span class="j-mark">に</span>。
+  </p>
+
+  <div class="formula">
+    <h4>見ます → 見に行きます</h4>
+    <div class="fx">
+      見<s>ます</s> <span class="arw">→</span> 見 ＋ <b>に行きます</b> <span class="arw">→</span> 見に行きます（去看）<br>
+      食べ<s>ます</s> <span class="arw">→</span> 食べ ＋ <b>に行きます</b> <span class="arw">→</span> 食べに行きます（去吃）<br>
+      買い<s>ます</s> <span class="arw">→</span> 買い ＋ <b>に行きます</b> <span class="arw">→</span> 買いに行きます（去買）
+    </div>
+  </div>
+
+  <p class="lead">
+    「名詞＋する」的動詞，例如 <ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>する（讀書），可以照規則說 勉強しに行きます，
+    也常把 する 省掉，直接用名詞接 に。<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます（去買東西）就是這種說法。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原形</th><th>ます形</th><th>去做那件事</th><th>讀音</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><ruby>見<rt>み</rt></ruby>る</td><td class="col-ja">見ます</td><td class="col-ja"><b>見に</b>行きます</td><td>mi ni ikimasu</td></tr>
+      <tr><td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td><td class="col-ja">食べます</td><td class="col-ja"><b>食べに</b>行きます</td><td>tabe ni ikimasu</td></tr>
+      <tr><td class="col-ja"><ruby>買<rt>か</rt></ruby>う</td><td class="col-ja">買います</td><td class="col-ja"><b>買いに</b>行きます</td><td>kai ni ikimasu</td></tr>
+      <tr><td class="col-ja"><ruby>飲<rt>の</rt></ruby>む</td><td class="col-ja">飲みます</td><td class="col-ja"><b>飲みに</b>行きます</td><td>nomi ni ikimasu</td></tr>
+      <tr><td class="col-ja"><ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>する</td><td class="col-ja">勉強します</td><td class="col-ja"><b>勉強しに</b>行きます<br><b>勉強に</b>行きます</td><td>benkyō shi ni ikimasu<br>benkyō ni ikimasu</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、映画を見ます 和 映画を見に行きます，差別在哪裡</div>
+
+  <p class="lead">
+    映画を見ます 只講「看電影」這個動作，在哪裡看都可以，包括在家用電腦看。
+    映画を見に行きます 的重點在後面的 行きます：要先離開現在的地方，到別處去看，例如電影院。
+    所以在家裡看 Netflix，就只能說 見ます。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>情境</th><th>說法</th><th>對不對</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>晚上在家用電腦看電影</td><td class="col-ja"><ruby>家<rt>いえ</rt></ruby>で映画を見ます</td><td>✅</td></tr>
+      <tr><td>晚上在家用電腦看電影</td><td class="col-ja"><s>家で映画を見に行きます</s></td><td>❌ 人在家裡，沒有出門</td></tr>
+      <tr class="key"><td>週末出門去電影院</td><td class="col-ja">映画を見に行きます</td><td>✅ 講這趟出門要去做什麼</td></tr>
+      <tr><td>週末出門去電影院</td><td class="col-ja"><ruby>映<rt>えい</rt>画<rt>が</rt>館<rt>かん</rt></ruby>で映画を見ます</td><td>✅ 只講在電影院看</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    朋友問週末要做什麼的時候，兩種回答給對方的資訊也不一樣：
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 週末要做什麼</div>
+
+    <div class="word-item" data-text="週末、何をしますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>、<ruby>何<rt>なに</rt></ruby>をしますか</div>
+        <div class="word-romaji">shūmatsu, nani o shimasu ka</div>
+        <div class="word-meaning">週末要做什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="服を買います">
+      <div class="word-content">
+        <div class="word-ja"><ruby>服<rt>ふく</rt></ruby>を　<ruby>買<rt>か</rt></ruby>います</div>
+        <div class="word-romaji">fuku o kaimasu</div>
+        <div class="word-meaning">我要買衣服 — 只說要買，可能是在網路上買</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="服を買いに行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>服<rt>ふく</rt></ruby>を　<ruby>買<rt>か</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">fuku o kai ni ikimasu</div>
+        <div class="word-meaning">我要去買衣服 — 對方會知道你要出門去店裡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    中文也有一樣的差別：「我週末要買衣服」和「我週末要去買衣服」，多一個「去」就多了出門的意思。
+    日文的 に行きます 就是中文的那個「去」。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、行きます 換成 来ます，要看說話的人在哪裡</div>
+
+  <p class="lead">
+    に 後面也可以接 <ruby>来<rt>き</rt></ruby>ます 或 <ruby>帰<rt>かえ</rt></ruby>ります。
+    <a href="2026-08-04-mokutekichi-ni.html" style="color:var(--accent);">8/4〈目的地＋に〉</a>學過，人在哪裡決定用 来ます 還是 行きます，這裡也一樣：
+    從說話的人這裡出發往別處去，用 行きます；別人往說話的人這裡過來，用 来ます。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 行きます・来ます・帰ります</div>
+
+    <div class="word-item" data-text="パレードを見に行きます">
+      <div class="word-content">
+        <div class="word-ja">パレードを　<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">parēdo o mi ni ikimasu</div>
+        <div class="word-meaning">（我）去看遊行 — 從我這裡出發</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="友だちがパレードを見に来ます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>友<rt>とも</rt></ruby>だちが　パレードを　<ruby>見<rt>み</rt></ruby>に<ruby>来<rt>き</rt></ruby>ます</div>
+        <div class="word-romaji">tomodachi ga parēdo o mi ni kimasu</div>
+        <div class="word-meaning">朋友要來（我這裡）看遊行</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="家に晩ごはんを食べに帰ります">
+      <div class="word-content">
+        <div class="word-ja"><ruby>家<rt>いえ</rt></ruby>に　<ruby>晩<rt>ばん</rt></ruby>ごはんを　<ruby>食<rt>た</rt></ruby>べに<ruby>帰<rt>かえ</rt></ruby>ります</div>
+        <div class="word-romaji">ie ni ban gohan o tabe ni kaerimasu</div>
+        <div class="word-meaning">回家吃晚餐</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、去哪裡和去做什麼可以放在同一句</div>
+
+  <p class="lead">
+    8/4 那課的 に 接在地點後面，表示去哪裡；本篇的 に 接在動詞後面，表示去做什麼。
+    兩個 に 可以出現在同一句，順序通常是「地點に ＋ 事情を 動詞に ＋ 行きます」。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 地點＋目的</div>
+
+    <div class="word-item" data-text="新宿に映画を見に行きます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>しん</rt>宿<rt>じゅく</rt></ruby><span class="j-mark">に</span>　<ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby><span class="j-mark">に</span><ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">Shinjuku ni eiga o mi ni ikimasu</div>
+        <div class="word-meaning">去新宿看電影</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="デパートに服を買いに行きます">
+      <div class="word-content">
+        <div class="word-ja">デパート<span class="j-mark">に</span>　<ruby>服<rt>ふく</rt></ruby>を　<ruby>買<rt>か</rt></ruby>い<span class="j-mark">に</span><ruby>行<rt>い</rt></ruby>きます</div>
+        <div class="word-romaji">depāto ni fuku o kai ni ikimasu</div>
+        <div class="word-meaning">去百貨公司買衣服</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>デパート 是從英語 department store 縮短來的</strong><br>
+    英文要說完整的 department store，日文只留下前半段 デパート（depāto），意思就是百貨公司。
+  </div>
+
+  <p class="lead">
+    地點的 に 也可以換成 へ（新宿へ映画を見に行きます），表示目的的那個 に 則不能換。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① に 前面不能放原形</strong><br>
+    <s>見るに行きます</s>、<s>食べるに行きます</s>、<s>買うに行きます</s> 都是錯的。
+    要先變成ます形，再把 ます 拿掉：見<b>に</b>、食べ<b>に</b>、買い<b>に</b>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② 沒有出門就不要加 に行きます</strong><br>
+    人已經在電影院裡，或是在家看電視，說 映画を見ます 就好。
+    に行きます 一定帶著「從這裡移動到別處」的意思。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、整理成一張表</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>日文</th><th>讀音</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>看電影（不管在哪裡）</td><td class="col-ja">映画を見ます</td><td>eiga o mimasu</td></tr>
+      <tr class="key"><td>去看電影（出門）</td><td class="col-ja">映画を見<b>に行きます</b></td><td>eiga o mi ni ikimasu</td></tr>
+      <tr><td>來看電影（往說話的人這裡）</td><td class="col-ja">映画を見<b>に来ます</b></td><td>eiga o mi ni kimasu</td></tr>
+      <tr><td>回家看電影</td><td class="col-ja">家に映画を見<b>に帰ります</b></td><td>ie ni eiga o mi ni kaerimasu</td></tr>
+      <tr><td>去新宿看電影</td><td class="col-ja">新宿<b>に</b>映画を見<b>に</b>行きます</td><td>Shinjuku ni eiga o mi ni ikimasu</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看</strong><br>
+    1. 我去喝咖啡。（コーヒー、飲む）<br>
+    2. 我去看遊行。<br>
+    3. 去百貨公司買衣服。<br>
+    4. 在家看電影，下面哪一句對？　a. 家で映画を見ます　b. 家で映画を見に行きます<br>
+    5. 「食べるに行きます」錯在哪裡？
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. コーヒーを<ruby>飲<rt>の</rt></ruby>みに<ruby>行<rt>い</rt></ruby>きます。（koohii o nomi ni ikimasu）</p>
+    <p>2. パレードを<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。（parēdo o mi ni ikimasu）</p>
+    <p>3. デパートに<ruby>服<rt>ふく</rt></ruby>を<ruby>買<rt>か</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きます。（depāto ni fuku o kai ni ikimasu）</p>
+    <p>4. a。人在家裡沒有出門，不能加 に行きます。</p>
+    <p>5. に 前面要用ます形去掉ます的部分：<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>きます（tabe ni ikimasu）。</p>
+  </details>
+
+  <a href="2026-10-09-techou-kakeibo.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">新しい手帳を買いました <span class="next-arrow">→</span></span>
+    <span class="next-sub">手帳、記帳與「大変／面倒」的會話</span>
+  </a>
+
+  <a href="2026-08-04-mokutekichi-ni.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">目的地 ＋ に <span class="next-arrow">→</span></span>
+    <span class="next-sub">接在地點後面的 に：日本に来ました、学校に行きます</span>
+  </a>
+
+  <a href="2026-08-11-masu-kei-nyuumon.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">マス形入門 <span class="next-arrow">→</span></span>
+    <span class="next-sub">見ます・食べます・買います 怎麼從原形變出來</span>
+  </a>
+
+  <a href="2026-10-08-takunai-dekinai.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">不想做和不會做 <span class="next-arrow">→</span></span>
+    <span class="next-sub">同樣是拿掉 ます 再接東西：行きたい、行きたくない</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

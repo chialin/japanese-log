@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新しい手帳を買いました — 手帳、家計簿與「好麻煩」的說法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票 */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+.tbl-scroll{overflow-x:auto;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><ruby>新<rt>あたら</rt></ruby>しい<span class="accent"><ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby></span>を<ruby>買<rt>か</rt></ruby>いました</h1>
+  <div class="page-meta">Lesson · 2026 / 10 / 09</div>
+  <p class="page-subtitle">聊新買的手帳、記帳和體重時用到的說法，以及「很辛苦」和「很麻煩」的差別</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    這篇整理 10/9 課堂上的聊天。話題從新買的<ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby>（手帳）開始：給老師看、說多少錢、上面蓋的章，
+    接著聊到用手帳記帳（<ruby>家<rt>か</rt>計<rt>けい</rt>簿<rt>ぼ</rt></ruby>をつける）、每天記很辛苦，還有體重多了三公斤。
+    筆記裡很多只寫了一個詞，這裡把它們補成完整的句子。
+    比較需要花時間弄懂的有三件事：記帳的「記」要用 つける、<ruby>大<rt>たい</rt>変<rt>へん</rt></ruby> 和 <ruby>面<rt>めん</rt>倒<rt>どう</rt></ruby> 講的是不一樣的累，以及 ハンコ 和 スタンプ 是兩種不同的章。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以課堂上的對話為主軸，把這幾句排出來</div>
+
+  <p class="lead">
+    前半段在講手帳，後半段在講記帳和生活。先聽一次、跟著唸。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 新的手帳</div>
+
+    <div class="word-item" data-text="新しい手帳を買いました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>あたら</rt></ruby>しい<ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby>を　<ruby>買<rt>か</rt></ruby>いました</div>
+        <div class="word-romaji">atarashii techō o kaimashita</div>
+        <div class="word-meaning">我買了新的手帳 — 手帳 是寫行程的記事本</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="手帳を選びました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby>を　<ruby>選<rt>えら</rt></ruby>びました</div>
+        <div class="word-romaji">techō o erabimashita</div>
+        <div class="word-meaning">我挑了手帳 — 「選擇」是 選ぶ（erabu），<a href="2026-10-05-tsugi-wa-ichikara.html" style="color:var(--accent);">10/5 咖哩店那篇</a>的 辛さを選びます 學過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="見せてください">
+      <div class="word-content">
+        <div class="word-ja"><ruby>見<rt>み</rt></ruby>せてください</div>
+        <div class="word-romaji">misete kudasai</div>
+        <div class="word-meaning">請給我看 — 見せる（miseru）是「給人看」，跟 見る（自己看）不一樣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一週間">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いっ</rt>週<rt>しゅう</rt>間<rt>かん</rt></ruby></div>
+        <div class="word-romaji">isshūkan</div>
+        <div class="word-meaning">一個星期 — 手帳裡一頁排一週的那種版面</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一か月">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby></div>
+        <div class="word-romaji">ikkagetsu</div>
+        <div class="word-meaning">一個月 — 一頁排一整個月的版面；〜か月 的唸法見 <a href="2026-08-21-kagetsu.html" style="color:var(--accent);">8/21〈〜月與〜か月〉</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="組み合わせる">
+      <div class="word-content">
+        <div class="word-ja"><ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせる</div>
+        <div class="word-romaji">kumiawaseru</div>
+        <div class="word-meaning">組合、搭配 — 例如把週計畫和月計畫兩種內頁搭在一起用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いくらでしたか">
+      <div class="word-content">
+        <div class="word-ja">いくらでしたか</div>
+        <div class="word-romaji">ikura deshita ka</div>
+        <div class="word-meaning">（那時候）花了多少錢？ — 已經買了，所以用過去式 でした</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="合計で6000円でした">
+      <div class="word-content">
+        <div class="word-ja"><ruby>合<rt>ごう</rt>計<rt>けい</rt></ruby>で　<ruby>6000<rt>ろくせん</rt>円<rt>えん</rt></ruby>でした</div>
+        <div class="word-romaji">gōkei de rokusen en deshita</div>
+        <div class="word-meaning">全部加起來是六千日圓 — 合計で＝「總共、合計起來」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ハンコ">
+      <div class="word-content">
+        <div class="word-ja">ハンコ</div>
+        <div class="word-romaji">hanko</div>
+        <div class="word-meaning">印章 — 刻著名字、代替簽名用的章，漢字寫 判子</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="スタンプ">
+      <div class="word-content">
+        <div class="word-ja">スタンプ</div>
+        <div class="word-romaji">sutanpu</div>
+        <div class="word-meaning">圖案章、紀念章 — 裝飾手帳用的那種</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 記帳與生活</div>
+
+    <div class="word-item" data-text="家計簿をつけます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>家<rt>か</rt>計<rt>けい</rt>簿<rt>ぼ</rt></ruby>を　つけます</div>
+        <div class="word-romaji">kakeibo o tsukemasu</div>
+        <div class="word-meaning">記帳 — 家計簿 是家庭的收支帳本</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="銀行">
+      <div class="word-content">
+        <div class="word-ja"><ruby>銀<rt>ぎん</rt>行<rt>こう</rt></ruby></div>
+        <div class="word-romaji">ginkō</div>
+        <div class="word-meaning">銀行 — <a href="2026-06-03-yucho-app.html" style="color:var(--accent);">6/3 的ゆうちょ銀行 App</a> 那篇看過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="毎日は大変です">
+      <div class="word-content">
+        <div class="word-ja"><ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby>は　<ruby>大<rt>たい</rt>変<rt>へん</rt></ruby>です</div>
+        <div class="word-romaji">mainichi wa taihen desu</div>
+        <div class="word-meaning">每天記很辛苦 — は 在這裡帶有「每天的話就太累了」的語氣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="面倒です">
+      <div class="word-content">
+        <div class="word-ja"><ruby>面<rt>めん</rt>倒<rt>どう</rt></ruby>です</div>
+        <div class="word-romaji">mendō desu</div>
+        <div class="word-meaning">很麻煩 — 懶得做、覺得費事</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="果物">
+      <div class="word-content">
+        <div class="word-ja"><ruby>果物<rt>くだもの</rt></ruby></div>
+        <div class="word-romaji">kudamono</div>
+        <div class="word-meaning">水果 — <a href="2026-06-09-food-drinks.html" style="color:var(--accent);">6/9 野菜・果物</a>那篇學過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="果物は高いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>果物<rt>くだもの</rt></ruby>は　<ruby>高<rt>たか</rt></ruby>いです</div>
+        <div class="word-romaji">kudamono wa takai desu</div>
+        <div class="word-meaning">水果很貴 — 記帳時很容易注意到的一項</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="3キロ増えました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>3<rt>さん</rt></ruby>キロ　<ruby>増<rt>ふ</rt></ruby>えました</div>
+        <div class="word-romaji">san kiro fuemashita</div>
+        <div class="word-meaning">（體重）多了三公斤 — 寫成 3kg，唸成 さんキロ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 銀＝ぎん、家＝か、大＝たい</strong><br>
+    這三個字的音讀跟台語唸起來幾乎一樣：<br>
+    銀 台語 gin → <span class="compare">ぎん</span>（銀行）；金 台語 kim → <span class="compare">きん</span>（<ruby>金<rt>きん</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>），金銀一起記。<br>
+    家 台語 ka（國家 kok-ka）→ <span class="compare">か</span>（家計簿）；日文的 <ruby>国<rt>こっ</rt>家<rt>か</rt></ruby> 也唸 kokka。<br>
+    大 台語 tai → <span class="compare">たい</span>（大変）。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — くだもの＝木の物，跟 けだもの 同一個結構</strong><br>
+    果物 是熟字訓，くだ 不是 果 的讀音。くだもの 拆開是 <span class="compare">く＋だ＋もの</span>：
+    く 是「樹」（木 的古音 こ 變來的），だ 是很古老的「の」，もの 是「東西」，合起來就是「樹上的東西」。<br>
+    <ruby>獣<rt>けだもの</rt></ruby>（kedamono，野獸）是同一個做法：<span class="compare">け（毛）＋だ＋もの</span>，長毛的東西。<br>
+    木 唸 こ 的痕跡還留在 <ruby>木<rt>こ</rt></ruby>の<ruby>葉<rt>は</rt></ruby>（konoha，樹葉）、<ruby>木<rt>こ</rt>陰<rt>かげ</rt></ruby>（kokage，樹蔭）、<ruby>木<rt>こ</rt></ruby><ruby>漏<rt>も</rt></ruby>れ<ruby>日<rt>び</rt></ruby>（komorebi，從樹葉間灑下的陽光）。
+    後半的 もの 則跟 <ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>、<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>、<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby> 一樣。
+    （出處：<a href="https://en.wiktionary.org/wiki/果物" target="_blank" rel="noopener">Wiktionary 果物</a>）
+  </div>
+
+  <div class="note">
+    📝 <strong>之前學過的詞：元同僚 和 両親</strong><br>
+    筆記裡的 <ruby>元<rt>もと</rt>同<rt>どう</rt>僚<rt>りょう</rt></ruby>（motodōryō，前同事）在
+    <a href="2026-09-23-tomodachi-douryou-kaiwa.html" style="color:var(--accent);">9/23〈友達と元同僚の話〉</a>學過；
+    <ruby>両<rt>りょう</rt>親<rt>しん</rt></ruby>（ryōshin，父母）在
+    <a href="2026-07-24-shokugyou-shitsumon.html" style="color:var(--accent);">7/24 問職業那篇</a>和
+    <a href="2026-09-02-taiwan-ni-kaerimasu.html" style="color:var(--accent);">9/2〈台湾に帰ります〉</a>出現過，
+    說別人的父母要加 ご，變成 ご両親。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、記帳的「記」要用 つける</div>
+
+  <p class="lead">
+    中文說「記帳」「寫日記」，直覺會想用 <ruby>書<rt>か</rt></ruby>く（寫）。
+    日文講「每天持續記錄下來」的時候，習慣用 <span class="j-mark">つける</span>，這是固定的搭配，整組記起來最快。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>中文</th><th>日文</th><th>讀音</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>記帳</td><td class="col-ja"><ruby>家<rt>か</rt>計<rt>けい</rt>簿<rt>ぼ</rt></ruby>を<b>つけ</b>ます</td><td>kakeibo o tsukemasu</td></tr>
+      <tr><td>寫日記</td><td class="col-ja"><ruby>日<rt>にっ</rt>記<rt>き</rt></ruby>を<b>つけ</b>ます</td><td>nikki o tsukemasu</td></tr>
+      <tr><td>記錄（體重等）</td><td class="col-ja"><ruby>記<rt>き</rt>録<rt>ろく</rt></ruby>を<b>つけ</b>ます</td><td>kiroku o tsukemasu</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    日記を書きます 也聽得懂，但重點會放在「寫字」這個動作上；つけます 講的是「有在記」這個習慣。
+    問別人有沒有在記帳，就說 家計簿をつけていますか（kakeibo o tsukete imasu ka），ている 的用法見
+    <a href="2026-08-12-jisei-shinkoukei.html" style="color:var(--accent);">8/12〈過去・現在・現在進行〉</a>。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、大変 和 面倒 講的是不一樣的累</div>
+
+  <p class="lead">
+    兩個詞都常被翻成「很累、很麻煩」，但出發點不同。
+    大変 是事情本身很重、很辛苦，做的人真的很吃力；面倒 是事情不難，只是步驟多、懶得做。
+    每天記帳這件事兩種都說得通，看你想講的是「好辛苦」還是「好懶得記」。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4><ruby>大<rt>たい</rt>変<rt>へん</rt></ruby>です</h4>
+      <div class="vs-sub">taihen desu · 很辛苦、很吃力</div>
+      <ul>
+        <li>每天記帳要花很多時間</li>
+        <li>工作很忙、搬家、照顧小孩</li>
+        <li>也可以用來體諒別人：大変ですね（真是辛苦你了）</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4><ruby>面<rt>めん</rt>倒<rt>どう</rt></ruby>です</h4>
+      <div class="vs-sub">mendō desu · 很麻煩、懶得做</div>
+      <ul>
+        <li>每一筆都要輸入，很費事</li>
+        <li>填表格、排隊辦手續</li>
+        <li>口語常說 めんどくさい（mendokusai）</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    毎日<span class="j-mark">は</span>大変です 的 は 也有意思。這裡的 は 是在拿「每天」跟別的頻率對比，
+    言下之意是「一個禮拜記一次還好，每天記就太累了」。
+    <a href="2026-10-08-takunai-dekinai.html" style="color:var(--accent);">10/8〈不想做和不會做〉</a>的 お酒は飲みません 也是同一種 は。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、「多了三公斤」是 増えました</div>
+
+  <p class="lead">
+    <ruby>増<rt>ふ</rt></ruby>える（fueru）是「增加」，講的是數量自己變多，所以前面用 が 或省略，不用 を。
+    完整的句子是 <ruby>体<rt>たい</rt>重<rt>じゅう</rt></ruby>が3キロ増えました（體重多了三公斤），聊天時主詞常常省掉。
+  </p>
+
+  <div class="word-item" data-text="体重が3キロ増えました">
+    <div class="word-content">
+      <div class="word-ja"><ruby>体<rt>たい</rt>重<rt>じゅう</rt></ruby>が　<ruby>3<rt>さん</rt></ruby>キロ　<ruby>増<rt>ふ</rt></ruby>えました</div>
+      <div class="word-romaji">taijū ga san kiro fuemashita</div>
+      <div class="word-meaning">體重多了三公斤</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="note">
+    📝 <strong>キロ 是 キログラム 的簡稱</strong><br>
+    キログラム（kiroguramu，公斤）日文辭典多標為來自法語 kilogramme，公制單位是跟著法國的制度傳進來的。
+    日常說話幾乎都縮成 キロ。
+    同一個 キロ 也拿來當「公里」用（5キロ歩きます＝走五公里），要看前後文判斷。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、ハンコ 和 スタンプ 是兩種不同的章</div>
+
+  <p class="lead">
+    中文都叫「章」，日文分得很清楚。手帳上蓋來裝飾的小圖案是 スタンプ；
+    ハンコ 是刻著自己名字的印章，在日本拿來代替簽名，到銀行開戶、收掛號信都用得到。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>ハンコ</h4>
+      <div class="vs-sub">hanko · 漢字寫 判子</div>
+      <ul>
+        <li>刻名字的印章，代替簽名</li>
+        <li>銀行、合約、收包裹</li>
+        <li>不是外來語，只是習慣寫成片假名</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>スタンプ</h4>
+      <div class="vs-sub">sutanpu · 來自英語 stamp</div>
+      <ul>
+        <li>圖案章、景點的紀念章</li>
+        <li>裝飾手帳、集點卡</li>
+        <li>LINE 的貼圖也叫 スタンプ</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    英語的 stamp 也可以指郵票，日文的 スタンプ 沒有這個意思，郵票要說 <ruby>切<rt>きっ</rt>手<rt>て</rt></ruby>（kitte）。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、有三個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>① 一週間、一か月 的 一 都唸 いっ</strong><br>
+    いち 後面接 し、か 開頭的音時會變成促音：<b>いっ</b>しゅうかん、<b>いっ</b>かげつ。
+    不要唸成 <s>いちしゅうかん</s>、<s>いちかげつ</s>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>② 6000 唸 ろくせん，3000 和 8000 才會變音</strong><br>
+    6000＝ろく<b>せん</b>，不變音。會變的是 3000＝さん<b>ぜん</b>、8000＝はっ<b>せん</b>。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>③ 見せてください 和 見てください 方向相反</strong><br>
+    見せてください（misete kudasai）是「請拿給我看」，老師想看你的手帳時說的。
+    見てください（mite kudasai）是「請看」，你把手帳遞給老師時說的。
+    要看東西的人說 見せて，拿東西給人看的人說 見て。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、整理成一張表</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>讀音</th><th>意思</th><th>重點</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><b><ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby></b></td><td>techō</td><td>手帳、記事本</td><td></td></tr>
+      <tr><td class="col-ja"><b><ruby>選<rt>えら</rt></ruby>ぶ</b></td><td>erabu</td><td>選擇</td><td>ます形 選びます</td></tr>
+      <tr><td class="col-ja"><b><ruby>見<rt>み</rt></ruby>せてください</b></td><td>misete kudasai</td><td>請給我看</td><td>見てください＝請你看</td></tr>
+      <tr><td class="col-ja"><b><ruby>一<rt>いっ</rt>週<rt>しゅう</rt>間<rt>かん</rt></ruby>／<ruby>一<rt>いっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby></b></td><td>isshūkan／ikkagetsu</td><td>一星期／一個月</td><td>一 唸 いっ</td></tr>
+      <tr><td class="col-ja"><b><ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせる</b></td><td>kumiawaseru</td><td>組合、搭配</td><td></td></tr>
+      <tr><td class="col-ja"><b><ruby>合<rt>ごう</rt>計<rt>けい</rt></ruby>で</b></td><td>gōkei de</td><td>總共</td><td>合計で6000円でした</td></tr>
+      <tr><td class="col-ja"><b>ハンコ／スタンプ</b></td><td>hanko／sutanpu</td><td>名字印章／圖案章</td><td>ハンコ 不是外來語</td></tr>
+      <tr><td class="col-ja"><b><ruby>家<rt>か</rt>計<rt>けい</rt>簿<rt>ぼ</rt></ruby>をつける</b></td><td>kakeibo o tsukeru</td><td>記帳</td><td>用 つける，不用 書く</td></tr>
+      <tr><td class="col-ja"><b><ruby>銀<rt>ぎん</rt>行<rt>こう</rt></ruby></b></td><td>ginkō</td><td>銀行</td><td>銀 台語 gin</td></tr>
+      <tr><td class="col-ja"><b><ruby>大<rt>たい</rt>変<rt>へん</rt></ruby>です</b></td><td>taihen desu</td><td>很辛苦</td><td>事情本身很吃力</td></tr>
+      <tr><td class="col-ja"><b><ruby>面<rt>めん</rt>倒<rt>どう</rt></ruby>です</b></td><td>mendō desu</td><td>很麻煩</td><td>不難但懶得做</td></tr>
+      <tr><td class="col-ja"><b><ruby>果物<rt>くだもの</rt></ruby></b></td><td>kudamono</td><td>水果</td><td></td></tr>
+      <tr><td class="col-ja"><b><ruby>増<rt>ふ</rt></ruby>えました</b></td><td>fuemashita</td><td>增加了</td><td>體重が3キロ増えました</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="note">
+    ✍️ <strong>試著用日文說說看</strong><br>
+    1. 我每天寫日記。<br>
+    2. 那本手帳多少錢？（已經買了）<br>
+    3. 總共是三千日圓。<br>
+    4. 朋友說「我每天都加班」，你想說「真辛苦耶」。<br>
+    5. 想請朋友讓你看她的新手帳，怎麼說？<br>
+    6. 體重少了兩公斤怎麼說？（減る＝へる，減少）
+  </div>
+
+  <details>
+    <summary>🔍 點擊查看解答</summary>
+    <p>1. <ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> <ruby>日<rt>にっ</rt>記<rt>き</rt></ruby>をつけます。（mainichi nikki o tsukemasu）</p>
+    <p>2. その<ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby>は いくらでしたか。（sono techō wa ikura deshita ka）</p>
+    <p>3. <ruby>合<rt>ごう</rt>計<rt>けい</rt></ruby>で <ruby>3000<rt>さんぜん</rt>円<rt>えん</rt></ruby>です。（gōkei de sanzen en desu）注意 3000 唸 さんぜん。</p>
+    <p>4. <ruby>大<rt>たい</rt>変<rt>へん</rt></ruby>ですね。（taihen desu ne）這裡不能用 面倒，面倒 是自己嫌麻煩。</p>
+    <p>5. <ruby>新<rt>あたら</rt></ruby>しい<ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby>を <ruby>見<rt>み</rt></ruby>せてください。（atarashii techō o misete kudasai）</p>
+    <p>6. <ruby>体<rt>たい</rt>重<rt>じゅう</rt></ruby>が <ruby>2<rt>に</rt></ruby>キロ <ruby>減<rt>へ</rt></ruby>りました。（taijū ga ni kiro herimashita）</p>
+  </details>
+
+  <a href="2026-10-10-mono.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">「物」的詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/10 把 果物＝木の物 的拆解，連同 食べ物・飲み物・買い物 整理成一篇</span>
+  </a>
+
+  <a href="2026-10-09-mi-ni-ikimasu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜に行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">服を買いに行きます：出門去做某件事的說法</span>
+  </a>
+
+  <a href="2026-10-05-tsugi-wa-ichikara.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">次は1辛にします <span class="next-arrow">→</span></span>
+    <span class="next-sub">選ぶ → 選びます，以及問價錢的 値段はいくらですか</span>
+  </a>
+
+  <a href="2026-08-21-kagetsu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜月（がつ）與〜か月（かげつ） <span class="next-arrow">→</span></span>
+    <span class="next-sub">一か月 為什麼唸 いっかげつ，跟 一月 有什麼不一樣</span>
+  </a>
+
+  <a href="2026-09-23-tomodachi-douryou-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">友達と元同僚の話 <span class="next-arrow">→</span></span>
+    <span class="next-sub">元同僚（前同事）第一次出現的會話</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

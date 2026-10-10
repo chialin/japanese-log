@@ -1,6 +1,808 @@
 {
- "generated": "2026-10-08",
+ "generated": "2026-10-10",
  "words": [
+  {
+   "text": "食べ物",
+   "ja": "<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>",
+   "kana": "たべもの",
+   "romaji": "tabemono",
+   "meaning": "食物、吃的東西 — 食べる（吃）＋ 物",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "飲み物",
+   "ja": "<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>",
+   "kana": "のみもの",
+   "romaji": "nomimono",
+   "meaning": "飲料 — 飲む（喝）＋ 物；6/9 食材與飲料那篇學過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "買い物",
+   "ja": "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>",
+   "kana": "かいもの",
+   "romaji": "kaimono",
+   "meaning": "買東西、購物 — 買う（買）＋ 物；買い物に行きます＝去買東西",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "購物"
+   ]
+  },
+  {
+   "text": "乗り物",
+   "ja": "<ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>",
+   "kana": "のりもの",
+   "romaji": "norimono",
+   "meaning": "交通工具、遊樂設施 — 乗る（搭乘）＋ 物，坐上去的東西",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "交通"
+   ]
+  },
+  {
+   "text": "忘れ物",
+   "ja": "<ruby>忘<rt>わす</rt></ruby>れ<ruby>物<rt>もの</rt></ruby>",
+   "kana": "わすれもの",
+   "romaji": "wasuremono",
+   "meaning": "忘記帶的東西、遺失物 — 忘れる（忘記）＋ 物",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "読み物",
+   "ja": "<ruby>読<rt>よ</rt></ruby>み<ruby>物<rt>もの</rt></ruby>",
+   "kana": "よみもの",
+   "romaji": "yomimono",
+   "meaning": "讀物 — 読む（讀）＋ 物",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "着物",
+   "ja": "<ruby>着<rt>き</rt>物<rt>もの</rt></ruby>",
+   "kana": "きもの",
+   "romaji": "kimono",
+   "meaning": "和服 — 着る（穿）＋ 物，原本就是「穿的東西」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "好きな食べ物は何ですか",
+   "ja": "<ruby>好<rt>す</rt></ruby>きな<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>は　<ruby>何<rt>なん</rt></ruby>ですか",
+   "kana": "すきなたべものは なんですか",
+   "romaji": "suki na tabemono wa nan desu ka",
+   "meaning": "你喜歡吃什麼？（直譯：喜歡的食物是什麼）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "飲み物は何にしますか",
+   "ja": "<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>は　<ruby>何<rt>なに</rt></ruby>にしますか",
+   "kana": "のみものは なににしますか",
+   "romaji": "nomimono wa nani ni shimasu ka",
+   "meaning": "飲料要點什麼？ — にします 見 10/5 咖哩店那篇",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "電車に忘れ物をしました",
+   "ja": "<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>に　<ruby>忘<rt>わす</rt></ruby>れ<ruby>物<rt>もの</rt></ruby>を　しました",
+   "kana": "でんしゃに わすれものを しました",
+   "romaji": "densha ni wasuremono o shimashita",
+   "meaning": "我把東西忘在電車上了",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "交通",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "けだもの",
+   "ja": "<ruby>獣<rt>けだもの</rt></ruby>",
+   "kana": "けだもの",
+   "romaji": "kedamono",
+   "meaning": "野獸 — け（毛）＋だ（的）＋もの（東西）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "動物"
+   ]
+  },
+  {
+   "text": "このは",
+   "ja": "<ruby>木<rt>こ</rt></ruby>の<ruby>葉<rt>は</rt></ruby>",
+   "kana": "このは",
+   "romaji": "konoha",
+   "meaning": "樹葉",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "自然"
+   ]
+  },
+  {
+   "text": "こかげ",
+   "ja": "<ruby>木<rt>こ</rt>陰<rt>かげ</rt></ruby>",
+   "kana": "こかげ",
+   "romaji": "kokage",
+   "meaning": "樹蔭 — 陰（かげ）是陰影",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "自然"
+   ]
+  },
+  {
+   "text": "木漏れ日",
+   "ja": "<ruby>木<rt>こ</rt></ruby><ruby>漏<rt>も</rt></ruby>れ<ruby>日<rt>び</rt></ruby>",
+   "kana": "こもれび",
+   "romaji": "komorebi",
+   "meaning": "從樹葉間灑下來的陽光 — 漏れる（漏出來）＋ 日（陽光）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "自然"
+   ]
+  },
+  {
+   "text": "動物",
+   "ja": "<ruby>動<rt>どう</rt>物<rt>ぶつ</rt></ruby>",
+   "kana": "どうぶつ",
+   "romaji": "dōbutsu",
+   "meaning": "動物 — 物＝ぶつ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "動物"
+   ]
+  },
+  {
+   "text": "映画を見に行きます",
+   "ja": "<ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "えいがを みにいきます",
+   "romaji": "eiga o mi ni ikimasu",
+   "meaning": "去看電影",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "パレードを見に行きます",
+   "ja": "パレードを　<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "パレードを みにいきます",
+   "romaji": "parēdo o mi ni ikimasu",
+   "meaning": "去看遊行",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "夜ごはんを食べに行きます",
+   "ja": "<ruby>夜<rt>よる</rt></ruby>ごはんを　<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "よるごはんを たべにいきます",
+   "romaji": "yoru gohan o tabe ni ikimasu",
+   "meaning": "去吃晚餐",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "服を買いに行きます",
+   "ja": "<ruby>服<rt>ふく</rt></ruby>を　<ruby>買<rt>か</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "ふくを かいにいきます",
+   "romaji": "fuku o kai ni ikimasu",
+   "meaning": "去買衣服",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "週末、何をしますか",
+   "ja": "<ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>、<ruby>何<rt>なに</rt></ruby>をしますか",
+   "kana": "しゅうまつ、なにをしますか",
+   "romaji": "shūmatsu, nani o shimasu ka",
+   "meaning": "週末要做什麼？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "服を買います",
+   "ja": "<ruby>服<rt>ふく</rt></ruby>を　<ruby>買<rt>か</rt></ruby>います",
+   "kana": "ふくを かいます",
+   "romaji": "fuku o kaimasu",
+   "meaning": "我要買衣服 — 只說要買，可能是在網路上買",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "友だちがパレードを見に来ます",
+   "ja": "<ruby>友<rt>とも</rt></ruby>だちが　パレードを　<ruby>見<rt>み</rt></ruby>に<ruby>来<rt>き</rt></ruby>ます",
+   "kana": "ともだちが パレードを みにきます",
+   "romaji": "tomodachi ga parēdo o mi ni kimasu",
+   "meaning": "朋友要來（我這裡）看遊行",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "動詞"
+   ]
+  },
+  {
+   "text": "家に晩ごはんを食べに帰ります",
+   "ja": "<ruby>家<rt>いえ</rt></ruby>に　<ruby>晩<rt>ばん</rt></ruby>ごはんを　<ruby>食<rt>た</rt></ruby>べに<ruby>帰<rt>かえ</rt></ruby>ります",
+   "kana": "いえに ばんごはんを たべにかえります",
+   "romaji": "ie ni ban gohan o tabe ni kaerimasu",
+   "meaning": "回家吃晚餐",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "食物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "新宿に映画を見に行きます",
+   "ja": "<ruby>新<rt>しん</rt>宿<rt>じゅく</rt></ruby>に　<ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "しんじゅくに えいがを みにいきます",
+   "romaji": "Shinjuku ni eiga o mi ni ikimasu",
+   "meaning": "去新宿看電影",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "デパートに服を買いに行きます",
+   "ja": "デパートに　<ruby>服<rt>ふく</rt></ruby>を　<ruby>買<rt>か</rt></ruby>いに<ruby>行<rt>い</rt></ruby>きます",
+   "kana": "デパートに ふくを かいにいきます",
+   "romaji": "depāto ni fuku o kai ni ikimasu",
+   "meaning": "去百貨公司買衣服",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-mi-ni-ikimasu.html",
+     "title": "〜に行きます"
+    }
+   ],
+   "tags": [
+    "購物",
+    "場所"
+   ]
+  },
+  {
+   "text": "新しい手帳を買いました",
+   "ja": "<ruby>新<rt>あたら</rt></ruby>しい<ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby>を　<ruby>買<rt>か</rt></ruby>いました",
+   "kana": "あたらしいてちょうを かいました",
+   "romaji": "atarashii techō o kaimashita",
+   "meaning": "我買了新的手帳 — 手帳 是寫行程的記事本",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "購物"
+   ]
+  },
+  {
+   "text": "手帳を選びました",
+   "ja": "<ruby>手<rt>て</rt>帳<rt>ちょう</rt></ruby>を　<ruby>選<rt>えら</rt></ruby>びました",
+   "kana": "てちょうを えらびました",
+   "romaji": "techō o erabimashita",
+   "meaning": "我挑了手帳 — 「選擇」是 選ぶ（erabu），10/5 咖哩店那篇的 辛さを選びます 學過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "動詞"
+   ]
+  },
+  {
+   "text": "見せてください",
+   "ja": "<ruby>見<rt>み</rt></ruby>せてください",
+   "kana": "みせてください",
+   "romaji": "misete kudasai",
+   "meaning": "請給我看 — 見せる（miseru）是「給人看」，跟 見る（自己看）不一樣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "一週間",
+   "ja": "<ruby>一<rt>いっ</rt>週<rt>しゅう</rt>間<rt>かん</rt></ruby>",
+   "kana": "いっしゅうかん",
+   "romaji": "isshūkan",
+   "meaning": "一個星期 — 手帳裡一頁排一週的那種版面",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "一か月",
+   "ja": "<ruby>一<rt>いっ</rt></ruby>か<ruby>月<rt>げつ</rt></ruby>",
+   "kana": "いっかげつ",
+   "romaji": "ikkagetsu",
+   "meaning": "一個月 — 一頁排一整個月的版面；〜か月 的唸法見 8/21〈〜月與〜か月〉",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "組み合わせる",
+   "ja": "<ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせる",
+   "kana": "くみあわせる",
+   "romaji": "kumiawaseru",
+   "meaning": "組合、搭配 — 例如把週計畫和月計畫兩種內頁搭在一起用",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "いくらでしたか",
+   "ja": "いくらでしたか",
+   "kana": "いくらでしたか",
+   "romaji": "ikura deshita ka",
+   "meaning": "（那時候）花了多少錢？ — 已經買了，所以用過去式 でした",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "合計で6000円でした",
+   "ja": "<ruby>合<rt>ごう</rt>計<rt>けい</rt></ruby>で　<ruby>6000<rt>ろくせん</rt>円<rt>えん</rt></ruby>でした",
+   "kana": "ごうけいで ろくせんえんでした",
+   "romaji": "gōkei de rokusen en deshita",
+   "meaning": "全部加起來是六千日圓 — 合計で＝「總共、合計起來」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "購物",
+    "數字"
+   ]
+  },
+  {
+   "text": "ハンコ",
+   "ja": "ハンコ",
+   "kana": "ハンコ",
+   "romaji": "hanko",
+   "meaning": "印章 — 刻著名字、代替簽名用的章，漢字寫 判子",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "スタンプ",
+   "ja": "スタンプ",
+   "kana": "スタンプ",
+   "romaji": "sutanpu",
+   "meaning": "圖案章、紀念章 — 裝飾手帳用的那種",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "家計簿をつけます",
+   "ja": "<ruby>家<rt>か</rt>計<rt>けい</rt>簿<rt>ぼ</rt></ruby>を　つけます",
+   "kana": "かけいぼを つけます",
+   "romaji": "kakeibo o tsukemasu",
+   "meaning": "記帳 — 家計簿 是家庭的收支帳本",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "動詞"
+   ]
+  },
+  {
+   "text": "銀行",
+   "ja": "<ruby>銀<rt>ぎん</rt>行<rt>こう</rt></ruby>",
+   "kana": "ぎんこう",
+   "romaji": "ginkō",
+   "meaning": "銀行 — 6/3 的ゆうちょ銀行 App 那篇看過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "毎日は大変です",
+   "ja": "<ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby>は　<ruby>大<rt>たい</rt>変<rt>へん</rt></ruby>です",
+   "kana": "まいにちは たいへんです",
+   "romaji": "mainichi wa taihen desu",
+   "meaning": "每天記很辛苦 — は 在這裡帶有「每天的話就太累了」的語氣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "面倒です",
+   "ja": "<ruby>面<rt>めん</rt>倒<rt>どう</rt></ruby>です",
+   "kana": "めんどうです",
+   "romaji": "mendō desu",
+   "meaning": "很麻煩 — 懶得做、覺得費事",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "果物",
+   "ja": "<ruby>果物<rt>くだもの</rt></ruby>",
+   "kana": "くだもの",
+   "romaji": "kudamono",
+   "meaning": "水果 — 6/9 野菜・果物那篇學過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    },
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "果物は高いです",
+   "ja": "<ruby>果物<rt>くだもの</rt></ruby>は　<ruby>高<rt>たか</rt></ruby>いです",
+   "kana": "くだものは たかいです",
+   "romaji": "kudamono wa takai desu",
+   "meaning": "水果很貴 — 記帳時很容易注意到的一項",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "食物",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "3キロ増えました",
+   "ja": "<ruby>3<rt>さん</rt></ruby>キロ　<ruby>増<rt>ふ</rt></ruby>えました",
+   "kana": "さんキロ ふえました",
+   "romaji": "san kiro fuemashita",
+   "meaning": "（體重）多了三公斤 — 寫成 3kg，唸成 さんキロ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "數字"
+   ]
+  },
+  {
+   "text": "体重が3キロ増えました",
+   "ja": "<ruby>体<rt>たい</rt>重<rt>じゅう</rt></ruby>が　<ruby>3<rt>さん</rt></ruby>キロ　<ruby>増<rt>ふ</rt></ruby>えました",
+   "kana": "たいじゅうが さんキロ ふえました",
+   "romaji": "taijū ga san kiro fuemashita",
+   "meaning": "體重多了三公斤",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-09",
+     "href": "lessons/2026-10-09-techou-kakeibo.html",
+     "title": "新しい手帳を買いました"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "數字"
+   ]
+  },
   {
    "text": "英語を話せません",
    "ja": "<ruby>英<rt>えい</rt>語<rt>ご</rt></ruby>を　<ruby>話<rt>はな</rt></ruby>せません",
@@ -5702,6 +6504,11 @@
      "date": "2026-08-19",
      "href": "lessons/2026-08-19-hon.html",
      "title": "「本」到底是什麼意思"
+    },
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
     }
    ],
    "tags": [
@@ -6321,6 +7128,11 @@
      "date": "2026-08-18",
      "href": "lessons/2026-08-18-machi-tana-shouhin.html",
      "title": "街・棚・商品の単語"
+    },
+    {
+     "date": "2026-10-10",
+     "href": "lessons/2026-10-10-mono.html",
+     "title": "「物」的詞"
     }
    ],
    "tags": [

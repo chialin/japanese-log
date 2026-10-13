@@ -484,3 +484,17 @@ grep -rln "練習\|会話\|乗ります" lessons/ tadoku/ readings/ *.html
    的「夫 vs ご主人」補連到 8/4 的「丈夫三種說法」）。舊頁如果還在用 inline style 寫
    連結卡，順手改成 shared.css 的 class 版。
 
+
+## Agent skills
+
+### Issue tracker
+
+Issues live in this repo's GitHub Issues, managed with the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Uses the default five triage labels (needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: one `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.

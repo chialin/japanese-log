@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>釣り・キャンプ・水族館 — 旅行時想做的事</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">釣り</span>・キャンプ・水族館</h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 10 / 13</div>
+  <p class="page-subtitle">聊旅行計畫時，講想去哪裡玩、想吃什麼會用到的四個詞</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    <a href="2026-10-12-aomori-kouyou-kaiwa.html" style="color:var(--accent);">10/12〈水曜日は青森に行きます〉</a>聊到要去青森看紅葉。
+    旅行除了看風景，也常會講到想去哪裡玩、想吃什麼，這篇補上四個詞：釣魚的 釣り、露營的 キャンプ、水族館，還有 お好み焼き。
+    青森的淺蟲溫泉旁邊就有一間 浅虫水族館（あさむしすいぞくかん），這幾個詞到了當地就用得上。
+    最後再用學過的 〜たい、〜に行きます、〜たことがありません 把它們放進句子裡。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">一、以旅行時想做的事為主軸，列出這四個詞</div>
+
+  <p class="lead">
+    釣り 和 お好み焼き 是日文原有的詞加上漢字，キャンプ 是從英語借來的外來語，水族館 則跟中文寫法完全一樣。
+    每張卡都可以按 ▶ 聽發音。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 單字卡</div>
+
+    <div class="word-item" data-text="釣り">
+      <div class="word-content">
+        <div class="word-ja"><ruby>釣<rt>つ</rt></ruby>り</div>
+        <div class="word-romaji">tsuri</div>
+        <div class="word-meaning">釣魚 — 動詞 釣る（つる）變成的名詞；「去釣魚」說 釣りに行きます，「釣魚」這件事說 釣りをします</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="キャンプ">
+      <div class="word-content">
+        <div class="word-ja">キャンプ</div>
+        <div class="word-romaji">kyanpu</div>
+        <div class="word-meaning">露營 ← 英語 camp；日常多半指在戶外搭帳篷過夜，運動隊伍的集訓也叫 キャンプ。露營場是 キャンプ場（キャンプじょう）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="水族館">
+      <div class="word-content">
+        <div class="word-ja"><ruby>水<rt>すい</rt>族<rt>ぞく</rt>館<rt>かん</rt></ruby></div>
+        <div class="word-romaji">suizokukan</div>
+        <div class="word-meaning">水族館 — 跟中文同一組漢字，三個字都是音讀</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お好み焼き">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>好<rt>この</rt></ruby>み<ruby>焼<rt>や</rt></ruby>き</div>
+        <div class="word-romaji">okonomiyaki</div>
+        <div class="word-meaning">大阪燒 — お（禮貌前綴）＋ 好み（このみ，喜好）＋ 焼き（やき，煎、烤），字面是「照自己喜歡的料去煎」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="suizokukan">二、水族館 是三個學過的字拼起來的</div>
+
+  <p class="lead">
+    水族館 三個字都是音讀，而且每個字都在之前的課裡出現過。認得這三個字，整個詞就不用另外背。
+  </p>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 水族館 拆成三個學過的字</strong><br>
+    <span class="compare">水（すい）</span>是 水曜日 的 すい，<span class="compare">族（ぞく）</span>是
+    <a href="2026-08-05-doko.html">8/5 家族（かぞく）</a> 的 ぞく，<span class="compare">館（かん）</span>是
+    <a href="2026-06-28-tokyo-life-vocab.html">6/28 図書館（としょかん）</a> 的 かん。
+    三個字都在別的詞裡唸過，水族館 直接拼起來就是 すいぞくかん。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="konomi">三、お好み焼き 的 好 是唸 この 的</div>
+
+  <p class="lead">
+    第一次看到 お好み焼き，很容易把 好 唸成別的音。好 在日文裡有好幾種唸法，放在不同的詞裡會換一個，下面三個詞各是一種：
+  </p>
+
+  <div class="note">
+    📝 <span class="compare">好み（このみ，喜好）</span>、<span class="compare">好き（すき，喜歡）</span>、
+    <span class="compare">好物（こうぶつ，愛吃的東西）</span>。お好み焼き 用的是 このみ，所以開頭是 o-ko-no-mi。
+    後面的 焼き 也沒有變成濁音，整個詞唸 okonomiyaki。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="bun">四、放進句子裡是這樣用的</div>
+
+  <p class="lead">
+    想做的事用 〜たい，要去做的事用 <a href="2026-10-09-mi-ni-ikimasu.html" style="color:var(--accent);">10/9 的 〜に行きます</a>，
+    沒做過的事則用 <a href="2026-07-28-kita-koto-ga-arimasu.html" style="color:var(--accent);">7/28〈来たことがありますか〉</a>的 〜たことがありません。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="釣りをしたことがありません。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>釣<rt>つ</rt></ruby>りを したことが ありません。</div>
+        <div class="word-romaji">tsuri o shita koto ga arimasen.</div>
+        <div class="word-meaning">我沒有釣過魚。— した（する 的た形）＋ ことが ありません（沒有過）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="友達とキャンプに行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>と キャンプに <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">tomodachi to kyanpu ni ikimasu.</div>
+        <div class="word-meaning">要跟朋友去露營。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="水族館に魚を見に行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>水<rt>すい</rt>族<rt>ぞく</rt>館<rt>かん</rt></ruby>に <ruby>魚<rt>さかな</rt></ruby>を <ruby>見<rt>み</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">suizokukan ni sakana o mi ni ikimasu.</div>
+        <div class="word-meaning">要去水族館看魚。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お好み焼きを食べたいです。">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>好<rt>この</rt></ruby>み<ruby>焼<rt>や</rt></ruby>きを <ruby>食<rt>た</rt></ruby>べたいです。</div>
+        <div class="word-romaji">okonomiyaki o tabetai desu.</div>
+        <div class="word-meaning">想吃大阪燒。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">五、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我沒有釣過魚。（提示：釣り、〜たことがありません）</li>
+      <li>要跟朋友去露營。（提示：キャンプ、〜に行きます）</li>
+      <li>要去水族館看魚。（提示：水族館、魚、〜に行きます）</li>
+      <li>想吃大阪燒。（提示：お好み焼き、〜たい）</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. 釣りをしたことがありません。<br>tsuri o shita koto ga arimasen.</p>
+      <p>2. 友達とキャンプに行きます。<br>tomodachi to kyanpu ni ikimasu.</p>
+      <p>3. 水族館に魚を見に行きます。<br>suizokukan ni sakana o mi ni ikimasu.</p>
+      <p>4. お好み焼きを食べたいです。<br>okonomiyaki o tabetai desu.</p>
+    </details>
+  </div>
+
+  <a href="2026-10-12-aomori-kouyou-kaiwa.html" class="next-link">
+    <span class="next-kicker">— 前情提要 —</span>
+    <span class="next-title">水曜日は青森に行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/12 的口語課：跟先生和前同事一起去青森看紅葉</span>
+  </a>
+
+  <a href="2026-07-28-kita-koto-ga-arimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">日本に来たことがありますか <span class="next-arrow">→</span></span>
+    <span class="next-sub">7/28 問經驗的句型 〜たことがあります</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

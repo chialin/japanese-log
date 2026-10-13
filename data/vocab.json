@@ -1,6 +1,342 @@
 {
- "generated": "2026-10-10",
+ "generated": "2026-10-13",
  "words": [
+  {
+   "text": "キャンプ",
+   "ja": "キャンプ",
+   "kana": "キャンプ",
+   "romaji": "kyanpu",
+   "meaning": "露營 ← 英語 camp；日常多半指在戶外搭帳篷過夜，運動隊伍的集訓也叫 キャンプ。露營場是 キャンプ場（キャンプじょう）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-13",
+     "href": "lessons/2026-10-13-tsuri-kyanpu-suizokukan.html",
+     "title": "釣り・キャンプ・水族館"
+    }
+   ],
+   "tags": [
+    "自然",
+    "場所"
+   ]
+  },
+  {
+   "text": "水族館",
+   "ja": "<ruby>水<rt>すい</rt>族<rt>ぞく</rt>館<rt>かん</rt></ruby>",
+   "kana": "すいぞくかん",
+   "romaji": "suizokukan",
+   "meaning": "水族館 — 跟中文同一組漢字，三個字都是音讀",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-13",
+     "href": "lessons/2026-10-13-tsuri-kyanpu-suizokukan.html",
+     "title": "釣り・キャンプ・水族館"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "お好み焼き",
+   "ja": "お<ruby>好<rt>この</rt></ruby>み<ruby>焼<rt>や</rt></ruby>き",
+   "kana": "おこのみやき",
+   "romaji": "okonomiyaki",
+   "meaning": "大阪燒 — お（禮貌前綴）＋ 好み（このみ，喜好）＋ 焼き（やき，煎、烤），字面是「照自己喜歡的料去煎」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-13",
+     "href": "lessons/2026-10-13-tsuri-kyanpu-suizokukan.html",
+     "title": "釣り・キャンプ・水族館"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "釣りをしたことがありません。",
+   "ja": "<ruby>釣<rt>つ</rt></ruby>りを したことが ありません。",
+   "kana": "つりを したことが ありません。",
+   "romaji": "tsuri o shita koto ga arimasen.",
+   "meaning": "我沒有釣過魚。— した（する 的た形）＋ ことが ありません（沒有過）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-13",
+     "href": "lessons/2026-10-13-tsuri-kyanpu-suizokukan.html",
+     "title": "釣り・キャンプ・水族館"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "自然"
+   ]
+  },
+  {
+   "text": "友達とキャンプに行きます。",
+   "ja": "<ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>と キャンプに <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "ともだちと キャンプに いきます。",
+   "romaji": "tomodachi to kyanpu ni ikimasu.",
+   "meaning": "要跟朋友去露營。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-13",
+     "href": "lessons/2026-10-13-tsuri-kyanpu-suizokukan.html",
+     "title": "釣り・キャンプ・水族館"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "水族館に魚を見に行きます。",
+   "ja": "<ruby>水<rt>すい</rt>族<rt>ぞく</rt>館<rt>かん</rt></ruby>に <ruby>魚<rt>さかな</rt></ruby>を <ruby>見<rt>み</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "すいぞくかんに さかなを みに いきます。",
+   "romaji": "suizokukan ni sakana o mi ni ikimasu.",
+   "meaning": "要去水族館看魚。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-13",
+     "href": "lessons/2026-10-13-tsuri-kyanpu-suizokukan.html",
+     "title": "釣り・キャンプ・水族館"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "お好み焼きを食べたいです。",
+   "ja": "お<ruby>好<rt>この</rt></ruby>み<ruby>焼<rt>や</rt></ruby>きを <ruby>食<rt>た</rt></ruby>べたいです。",
+   "kana": "おこのみやきを たべたいです。",
+   "romaji": "okonomiyaki o tabetai desu.",
+   "meaning": "想吃大阪燒。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-13",
+     "href": "lessons/2026-10-13-tsuri-kyanpu-suizokukan.html",
+     "title": "釣り・キャンプ・水族館"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "話題",
+   "ja": "<ruby>話<rt>わ</rt>題<rt>だい</rt></ruby>",
+   "kana": "わだい",
+   "romaji": "wadai",
+   "meaning": "話題、聊天的主題",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "トピック",
+   "ja": "トピック",
+   "kana": "トピック",
+   "romaji": "topikku",
+   "meaning": "主題、題目 ← 英語 topic；比 話題 正式一點，常用在會議、課程、網站分類",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "毎日考えること",
+   "ja": "<ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> <ruby>考<rt>かんが</rt></ruby>えること",
+   "kana": "まいにち かんがえること",
+   "romaji": "mainichi kangaeru koto",
+   "meaning": "每天在想的事 — 考える（想、思考）＋ こと（事情）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "疲れました",
+   "ja": "<ruby>疲<rt>つか</rt></ruby>れました",
+   "kana": "つかれました",
+   "romaji": "tsukaremashita",
+   "meaning": "累了 — 疲れる（變累）的過去式；現在覺得累也是這樣說",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "青森",
+   "ja": "<ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>",
+   "kana": "あおもり",
+   "romaji": "aomori",
+   "meaning": "青森（本州最北端的縣）— 青い（あおい，藍）＋ 森（もり，森林），兩個字都是訓讀",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "水曜日",
+   "ja": "<ruby>水<rt>すい</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>",
+   "kana": "すいようび",
+   "romaji": "suiyoubi",
+   "meaning": "星期三",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "会社の後",
+   "ja": "<ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby>の <ruby>後<rt>あと</rt></ruby>",
+   "kana": "かいしゃの あと",
+   "romaji": "kaisha no ato",
+   "meaning": "下班後 — 名詞 ＋ の後（〜之後）；也常說 仕事の後（しごとのあと）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "クライミングジム",
+   "ja": "クライミングジム",
+   "kana": "クライミングジム",
+   "romaji": "kuraimingu jimu",
+   "meaning": "攀岩館 ← 英語 climbing gym；ジム 原本是 gymnasium 的縮寫，日文單說 ジム 通常指健身房",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "場所",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "紅葉",
+   "ja": "<ruby>紅<rt>こう</rt>葉<rt>よう</rt></ruby>",
+   "kana": "こうよう",
+   "romaji": "kouyou",
+   "meaning": "秋天變紅、變黃的葉子；樹葉轉紅這件事 — 同樣兩個字也唸 もみじ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "自然",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "主人と友達と一緒に",
+   "ja": "<ruby>主<rt>しゅ</rt>人<rt>じん</rt></ruby>と <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>と <ruby>一緒<rt>いっしょ</rt></ruby>に",
+   "kana": "しゅじんと ともだちと いっしょに",
+   "romaji": "shujin to tomodachi to issho ni",
+   "meaning": "跟先生和朋友一起 — 第一個 と 是「和」，第二個 と 接 一緒に 是「跟……一起」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "水曜日、青森に紅葉を見に行きます。",
+   "ja": "<ruby>水<rt>すい</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>、<ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>に <ruby>紅<rt>こう</rt>葉<rt>よう</rt></ruby>を <ruby>見<rt>み</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "すいようび、あおもりに こうようを みに いきます。",
+   "romaji": "suiyoubi, aomori ni kouyou o mi ni ikimasu.",
+   "meaning": "星期三要去青森看紅葉。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
   {
    "text": "食べ物",
    "ja": "<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>",
@@ -2566,6 +2902,11 @@
      "date": "2026-09-23",
      "href": "lessons/2026-09-23-tomodachi-douryou-kaiwa.html",
      "title": "友達と元同僚の話"
+    },
+    {
+     "date": "2026-10-12",
+     "href": "lessons/2026-10-12-aomori-kouyou-kaiwa.html",
+     "title": "水曜日は青森に行きます"
     }
    ],
    "tags": [
@@ -12087,10 +12428,16 @@
      "date": "2026-08-06",
      "href": "lessons/2026-08-06-soko-wa-desu-yo.html",
      "title": "そこは〜ですよ"
+    },
+    {
+     "date": "2026-10-13",
+     "href": "lessons/2026-10-13-tsuri-kyanpu-suizokukan.html",
+     "title": "釣り・キャンプ・水族館"
     }
    ],
    "tags": [
-    "自然"
+    "自然",
+    "動詞"
    ]
   },
   {

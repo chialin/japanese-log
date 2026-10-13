@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水曜日は青森に行きます — 元同僚と紅葉を見る旅</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:56px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">水曜日は<span class="accent">青森</span>に行きます</h1>
+  <div class="page-meta">會話紀錄 · Conversation · 2026 / 10 / 12</div>
+  <p class="page-subtitle">跟老師聊「每天在想的事」：和先生、前同事一起去青森看紅葉</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    10/12 的口語課，老師出的話題是「毎日考えること」（每天在想的事）。我聊的是週三要跟先生和朋友一起去青森，
+    那位朋友是以前公司的同事，從台灣過來，以前下班後常常一起去攀岩館，這次想一起去看紅葉。<br>
+    這篇先把整段對話整理出來，再看課上被提醒的幾個地方：疲れました 和 疲れていました 差在哪裡、
+    行っていました 為什麼是在講以前的習慣，還有中文的「楓葉」在日文要說成 紅葉。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaiwa">一、以課堂上的聊天為主軸，把對話整理出來</div>
+
+  <p class="lead">
+    下面是照課堂筆記重新整理的對話。我說過的句子都保留原樣，老師的問句是依當時的流程補上的，
+    每一句都可以按 ▶ 跟著唸。
+  </p>
+
+  <div class="dialog">
+    <div class="turn" data-text="おはようございます。元気ですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">おはようございます。<ruby>元気<rt>げんき</rt></ruby>ですか。</div>
+        <div class="turn-romaji">ohayou gozaimasu. genki desu ka.</div>
+        <div class="turn-meaning">早安，你好嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="ちょっと疲れました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">ちょっと <ruby>疲<rt>つか</rt></ruby>れました。</div>
+        <div class="turn-romaji">chotto tsukaremashita.</div>
+        <div class="turn-meaning">有點累。（我一開始說成 疲れていました，見<a href="#tsukare" style="color:var(--accent);">第三節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="今日の話題は、毎日考えることです。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今日<rt>きょう</rt></ruby>の <ruby>話<rt>わ</rt>題<rt>だい</rt></ruby>は、<ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> <ruby>考<rt>かんが</rt></ruby>えることです。</div>
+        <div class="turn-romaji">kyou no wadai wa, mainichi kangaeru koto desu.</div>
+        <div class="turn-meaning">今天的話題是「每天在想的事」。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="最近、毎日何を考えていますか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>最<rt>さい</rt>近<rt>きん</rt></ruby>、<ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> <ruby>何<rt>なに</rt></ruby>を <ruby>考<rt>かんが</rt></ruby>えていますか。</div>
+        <div class="turn-romaji">saikin, mainichi nani o kangaete imasu ka.</div>
+        <div class="turn-meaning">最近每天都在想什麼呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="水曜日は、主人と友達と一緒に青森に行きます。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>水<rt>すい</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>は、<ruby>主<rt>しゅ</rt>人<rt>じん</rt></ruby>と <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>と <ruby>一緒<rt>いっしょ</rt></ruby>に <ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="turn-romaji">suiyoubi wa, shujin to tomodachi to issho ni aomori ni ikimasu.</div>
+        <div class="turn-meaning">星期三要跟先生和朋友一起去青森。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="いいですね。お友達はどんな人ですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいですね。お<ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>は どんな <ruby>人<rt>ひと</rt></ruby>ですか。</div>
+        <div class="turn-romaji">ii desu ne. otomodachi wa donna hito desu ka.</div>
+        <div class="turn-meaning">真好。那位朋友是什麼樣的人？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="わたしの元同僚です。台湾から来ます。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">わたしの <ruby>元<rt>もと</rt></ruby><ruby>同<rt>どう</rt>僚<rt>りょう</rt></ruby>です。<ruby>台<rt>たい</rt>湾<rt>わん</rt></ruby>から <ruby>来<rt>き</rt></ruby>ます。</div>
+        <div class="turn-romaji">watashi no moto douryou desu. taiwan kara kimasu.</div>
+        <div class="turn-meaning">是我以前的同事，要從台灣過來。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="会社の後、いつも一緒にクライミングジムに行っていました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby>の <ruby>後<rt>あと</rt></ruby>、いつも <ruby>一緒<rt>いっしょ</rt></ruby>に クライミングジムに <ruby>行<rt>い</rt></ruby>っていました。</div>
+        <div class="turn-romaji">kaisha no ato, itsumo issho ni kuraimingu jimu ni itte imashita.</div>
+        <div class="turn-meaning">以前下班後，我們總是一起去攀岩館。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="そうですか。青森で何をしたいですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">そうですか。<ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>で <ruby>何<rt>なに</rt></ruby>を したいですか。</div>
+        <div class="turn-romaji">sou desu ka. aomori de nani o shitai desu ka.</div>
+        <div class="turn-meaning">這樣啊。在青森想做什麼呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="紅葉を見たいです。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>紅<rt>こう</rt>葉<rt>よう</rt></ruby>を <ruby>見<rt>み</rt></ruby>たいです。</div>
+        <div class="turn-romaji">kouyou o mitai desu.</div>
+        <div class="turn-meaning">想看紅葉。（我一開始想說「楓葉」，見<a href="#kouyou" style="color:var(--accent);">第六節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="今、青森は紅葉の季節ですね。楽しんでください。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今<rt>いま</rt></ruby>、<ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>は <ruby>紅<rt>こう</rt>葉<rt>よう</rt></ruby>の <ruby>季<rt>き</rt>節<rt>せつ</rt></ruby>ですね。<ruby>楽<rt>たの</rt></ruby>しんでください。</div>
+        <div class="turn-romaji">ima, aomori wa kouyou no kisetsu desu ne. tanoshinde kudasai.</div>
+        <div class="turn-meaning">現在青森正是紅葉的季節呢，好好玩喔。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">二、對話裡的新單字是這些</div>
+
+  <p class="lead">
+    「話題」這個意思，日文有漢字詞和外來語兩種說法，課上兩個都出現了。
+    其他是旅行計畫會用到的地名、人物和活動。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 單字卡</div>
+
+    <div class="word-item" data-text="話題">
+      <div class="word-content">
+        <div class="word-ja"><ruby>話<rt>わ</rt>題<rt>だい</rt></ruby></div>
+        <div class="word-romaji">wadai</div>
+        <div class="word-meaning">話題、聊天的主題</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="トピック">
+      <div class="word-content">
+        <div class="word-ja">トピック</div>
+        <div class="word-romaji">topikku</div>
+        <div class="word-meaning">主題、題目 ← 英語 topic；比 話題 正式一點，常用在會議、課程、網站分類</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="毎日考えること">
+      <div class="word-content">
+        <div class="word-ja"><ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> <ruby>考<rt>かんが</rt></ruby>えること</div>
+        <div class="word-romaji">mainichi kangaeru koto</div>
+        <div class="word-meaning">每天在想的事 — 考える（想、思考）＋ こと（事情）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="疲れました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>疲<rt>つか</rt></ruby>れました</div>
+        <div class="word-romaji">tsukaremashita</div>
+        <div class="word-meaning">累了 — 疲れる（變累）的過去式；現在覺得累也是這樣說</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="青森">
+      <div class="word-content">
+        <div class="word-ja"><ruby>青<rt>あお</rt>森<rt>もり</rt></ruby></div>
+        <div class="word-romaji">aomori</div>
+        <div class="word-meaning">青森（本州最北端的縣）— 青い（あおい，藍）＋ 森（もり，森林），兩個字都是訓讀</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="水曜日">
+      <div class="word-content">
+        <div class="word-ja"><ruby>水<rt>すい</rt>曜<rt>よう</rt>日<rt>び</rt></ruby></div>
+        <div class="word-romaji">suiyoubi</div>
+        <div class="word-meaning">星期三</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="元同僚">
+      <div class="word-content">
+        <div class="word-ja"><ruby>元<rt>もと</rt></ruby><ruby>同<rt>どう</rt>僚<rt>りょう</rt></ruby></div>
+        <div class="word-romaji">moto douryou</div>
+        <div class="word-meaning">前同事 — 元（もと）接在身分前面表示「以前的」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="会社の後">
+      <div class="word-content">
+        <div class="word-ja"><ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby>の <ruby>後<rt>あと</rt></ruby></div>
+        <div class="word-romaji">kaisha no ato</div>
+        <div class="word-meaning">下班後 — 名詞 ＋ の後（〜之後）；也常說 仕事の後（しごとのあと）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="クライミングジム">
+      <div class="word-content">
+        <div class="word-ja">クライミングジム</div>
+        <div class="word-romaji">kuraimingu jimu</div>
+        <div class="word-meaning">攀岩館 ← 英語 climbing gym；ジム 原本是 gymnasium 的縮寫，日文單說 ジム 通常指健身房</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="紅葉">
+      <div class="word-content">
+        <div class="word-ja"><ruby>紅<rt>こう</rt>葉<rt>よう</rt></ruby></div>
+        <div class="word-romaji">kouyou</div>
+        <div class="word-meaning">秋天變紅、變黃的葉子；樹葉轉紅這件事 — 同樣兩個字也唸 もみじ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 話題的 わ 和 だい 各有一組詞</strong><br>
+    話 唸 わ 的詞，學過 <span class="compare">会話（かいわ）</span>，還有 <span class="compare">電話（でんわ）</span>；
+    題 唸 だい 的詞有 <span class="compare">問題（もんだい）</span>、<span class="compare">宿題（しゅくだい）</span>。
+    兩組各認一個字，話題 就自己拼得出來了。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tsukare">三、疲れました 跟 疲れていました 差在講的是哪個時間點</div>
+
+  <p class="lead">
+    課上我先說了 疲れていました，老師改成 疲れました。兩句文法都對，但講的時間點不一樣。
+    關鍵是 疲れる 這個動詞的性質：它不是「一直在做的動作」，而是「從不累變成累」那一瞬間的變化。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>例句</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>疲れました</b></td>
+        <td class="col-ja">ちょっと <b><ruby>疲<rt>つか</rt></ruby>れました</b>。</td>
+        <td>已經變累了，而且<strong>現在還是累</strong>。被問「你好嗎？」時回答現在的感覺，用這個。</td>
+      </tr>
+      <tr>
+        <td><b>疲れています</b></td>
+        <td class="col-ja"><ruby>今<rt>いま</rt></ruby>、<b><ruby>疲<rt>つか</rt></ruby>れています</b>。</td>
+        <td>處在累的狀態裡。也是講現在，口氣比較像在描述自己的狀況。</td>
+      </tr>
+      <tr>
+        <td><b>疲れていました</b></td>
+        <td class="col-ja"><ruby>昨日<rt>きのう</rt></ruby>は <b><ruby>疲<rt>つか</rt></ruby>れていました</b>。</td>
+        <td><strong>過去某段時間</strong>處在累的狀態，現在不一定還累。要搭配「昨日」這類過去的時間詞。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 疲れる 屬於 ている 的「結果狀態」那一型，跟 住む、結婚する 一樣：動作一瞬間就完成，結果一直掛在那裡。
+    這在 <a href="2026-08-12-jisei-shinkoukei.html#futatsu" style="color:var(--accent);">8/12〈過去・現在・現在進行〉第六節</a>講過。
+    老師問的是「現在好不好」，用 ていました 會變成在講過去的事，所以回答現在的感覺用 疲れました 最自然。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="shuukan">四、行っていました 是在講以前的習慣</div>
+
+  <p class="lead">
+    〜ていました 除了「那時正在做」，還有一個常見的用法：搭配 いつも、毎日、よく 這類頻率詞，
+    表示<strong>以前經常做、現在已經沒有在做</strong>的習慣。中文會說「以前總是……」。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>例句</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>行きます</b></td>
+        <td class="col-ja">いつも ジムに <b><ruby>行<rt>い</rt></ruby>きます</b>。</td>
+        <td>（現在）總是去健身房。現在的習慣。</td>
+      </tr>
+      <tr>
+        <td><b>行っていました</b></td>
+        <td class="col-ja"><ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby>の<ruby>後<rt>あと</rt></ruby>、いつも <b><ruby>行<rt>い</rt></ruby>っていました</b>。</td>
+        <td>以前下班後總是去。那段時間的習慣，現在已經不是同事了，所以也沒有一起去了。</td>
+      </tr>
+      <tr>
+        <td><b>行きました</b></td>
+        <td class="col-ja"><ruby>昨日<rt>きのう</rt></ruby>、ジムに <b><ruby>行<rt>い</rt></ruby>きました</b>。</td>
+        <td>昨天去了。只講一次的事。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    所以「元同僚」和「行っていました」在這段對話裡是互相呼應的：對方「以前」是同事，那些攀岩的日子也是「以前」的習慣。
+    攀岩相關的說法可以回頭看 <a href="2026-08-21-bouldering-kaiwa.html" style="color:var(--accent);">8/21〈ボルダリングの話〉</a>，
+    元同僚 第一次出現在 <a href="2026-09-23-tomodachi-douryou-kaiwa.html" style="color:var(--accent);">9/23〈友達と元同僚の話〉</a>。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="to">五、主人と友達と一緒に：と 可以連著用</div>
+
+  <p class="lead">
+    「跟 A 和 B 一起」在日文裡，A 和 B 之間用 と 連起來，最後一個人後面再接 と一緒に。
+    中文只需要一個「和」，日文則是每個人後面都有一個 と。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="主人と友達と一緒に">
+      <div class="word-content">
+        <div class="word-ja"><ruby>主<rt>しゅ</rt>人<rt>じん</rt></ruby><span class="j-mark">と</span> <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby><span class="j-mark">と</span> <ruby>一緒<rt>いっしょ</rt></ruby>に</div>
+        <div class="word-romaji">shujin to tomodachi to issho ni</div>
+        <div class="word-meaning">跟先生和朋友一起 — 第一個 と 是「和」，第二個 と 接 一緒に 是「跟……一起」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    主人 是跟別人提到<strong>自己的</strong>先生時的說法，講別人的先生要用 ご主人。
+    三種說法的差別整理在 <a href="2026-08-04-mokutekichi-ni.html" style="color:var(--accent);">8/4〈「丈夫」的三種說法〉</a>；
+    〜と一緒に 第一次出現在 <a href="2026-08-07-kankouchi-he.html" style="color:var(--accent);">8/7〈観光地へ行きます〉</a>。
+    另外，「台湾<span class="j-mark">から</span>来ます」的 から 是出發點，跟 <a href="2026-09-02-taiwan-ni-kaerimasu.html" style="color:var(--accent);">9/2〈台湾に帰ります〉</a>的 に（目的地）正好方向相反。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kouyou">六、中文的「楓葉」在日文要說 紅葉</div>
+
+  <p class="lead">
+    我想說「想看楓葉」時直接寫了 楓葉，老師改成 紅葉（こうよう）。日文沒有 楓葉 這個詞，
+    秋天樹葉轉紅、轉黃，日文是用 紅葉 來講，而且不限楓樹，銀杏變黃也算在裡面。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>寫法</th><th>唸法</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><b>紅葉</b></td>
+        <td class="col-ja">こうよう</td>
+        <td>樹葉轉紅、轉黃的現象，或那些葉子。新聞、旅遊資訊講「賞楓」都用這個唸法。</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b>紅葉</b></td>
+        <td class="col-ja">もみじ</td>
+        <td>同樣的漢字，口語也常唸 もみじ，多半指楓樹或楓樹轉紅的葉子。</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b>楓</b></td>
+        <td class="col-ja">かえで</td>
+        <td>楓樹這種樹本身的名字。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    「紅葉を見たいです」用的是 <a href="2026-10-08-takunai-dekinai.html" style="color:var(--accent);">10/8〈不想做和不會做〉</a>的 〜たい（想做）。
+    把 10/9 學的 <a href="2026-10-09-mi-ni-ikimasu.html" style="color:var(--accent);">〜に行きます</a>也接上，
+    整個旅行計畫可以合成一句：<span class="compare">青森に紅葉を見に行きます</span>（要去青森看紅葉）。
+  </p>
+
+  <div class="word-item" data-text="水曜日、青森に紅葉を見に行きます。">
+    <div class="word-content">
+      <div class="word-ja"><ruby>水<rt>すい</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>、<ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>に <ruby>紅<rt>こう</rt>葉<rt>よう</rt></ruby>を <ruby>見<rt>み</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。</div>
+      <div class="word-romaji">suiyoubi, aomori ni kouyou o mi ni ikimasu.</div>
+      <div class="word-meaning">星期三要去青森看紅葉。</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>被問「元気ですか」時，回答「有點累」。（提示：疲れる）</li>
+      <li>昨天一整天都很累。（提示：昨日、疲れる，講過去的狀態）</li>
+      <li>以前下班後總是一起去攀岩館。（提示：会社の後、いつも、〜ていました）</li>
+      <li>星期三要跟先生和朋友一起去青森。（提示：と、一緒に）</li>
+      <li>想看紅葉。（提示：紅葉、〜たい）</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. ちょっと疲れました。<br>chotto tsukaremashita.</p>
+      <p>2. 昨日は疲れていました。<br>kinou wa tsukarete imashita.</p>
+      <p>3. 会社の後、いつも一緒にクライミングジムに行っていました。<br>kaisha no ato, itsumo issho ni kuraimingu jimu ni itte imashita.</p>
+      <p>4. 水曜日は主人と友達と一緒に青森に行きます。<br>suiyoubi wa shujin to tomodachi to issho ni aomori ni ikimasu.</p>
+      <p>5. 紅葉を見たいです。（紅葉が見たいです 也可以）<br>kouyou o mitai desu.</p>
+    </details>
+  </div>
+
+  <a href="2026-10-13-tsuri-kyanpu-suizokukan.html" class="next-link">
+    <span class="next-kicker">— Next —</span>
+    <span class="next-title">釣り・キャンプ・水族館 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/13 接著補上旅行時想做的事：釣魚、露營、水族館、お好み焼き</span>
+  </a>
+
+  <a href="2026-09-23-tomodachi-douryou-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">友達と元同僚の話 <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/23 第一次學到 元同僚 和「〜の時の友達」</span>
+  </a>
+
+  <a href="2026-08-21-bouldering-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">ボルダリングの話 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/21 的抱石會話，ボルダリング 跟 クライミング 的差別在那篇</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

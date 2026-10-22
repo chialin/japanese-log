@@ -2,6 +2,204 @@
  "generated": "2026-10-22",
  "words": [
   {
+   "text": "買って",
+   "ja": "<ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>って",
+   "kana": "かう → かって",
+   "romaji": "kau → katte",
+   "meaning": "買",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "待って",
+   "ja": "<ruby>待<rt>ま</rt></ruby>つ → <ruby>待<rt>ま</rt></ruby>って",
+   "kana": "まつ → まって",
+   "romaji": "matsu → matte",
+   "meaning": "等",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "飲んで",
+   "ja": "<ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby>んで",
+   "kana": "のむ → のんで",
+   "romaji": "nomu → nonde",
+   "meaning": "喝",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "遊んで",
+   "ja": "<ruby>遊<rt>あそ</rt></ruby>ぶ → <ruby>遊<rt>あそ</rt></ruby>んで",
+   "kana": "あそぶ → あそんで",
+   "romaji": "asobu → asonde",
+   "meaning": "玩",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "書いて",
+   "ja": "<ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby>いて",
+   "kana": "かく → かいて",
+   "romaji": "kaku → kaite",
+   "meaning": "寫",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "泳いで",
+   "ja": "<ruby>泳<rt>およ</rt></ruby>ぐ → <ruby>泳<rt>およ</rt></ruby>いで",
+   "kana": "およぐ → およいで",
+   "romaji": "oyogu → oyoide",
+   "meaning": "游泳",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "話して",
+   "ja": "<ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby>して",
+   "kana": "はなす → はなして",
+   "romaji": "hanasu → hanashite",
+   "meaning": "說話",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "食べて",
+   "ja": "<ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べて",
+   "kana": "たべる → たべて",
+   "romaji": "taberu → tabete",
+   "meaning": "吃（一段動詞）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "行って",
+   "ja": "<ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby>って",
+   "kana": "いく → いって",
+   "romaji": "iku → itte",
+   "meaning": "去（例外，不是 行いて）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "帰って",
+   "ja": "<ruby>帰<rt>かえ</rt></ruby>ります → <ruby>帰<rt>かえ</rt></ruby>って",
+   "kana": "かえります → かえって",
+   "romaji": "kaerimasu → kaette",
+   "meaning": "回家（五段）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "借りて",
+   "ja": "<ruby>借<rt>か</rt></ruby>ります → <ruby>借<rt>か</rt></ruby>りて",
+   "kana": "かります → かりて",
+   "romaji": "karimasu → karite",
+   "meaning": "借（一段）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-22",
+     "href": "lessons/2026-10-22-te-kei.html",
+     "title": "て形怎麼變"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
    "text": "スーパーまで歩いて行きます。",
    "ja": "スーパーまで <ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。",
    "kana": "スーパーまで あるいて いきます。",
@@ -521,168 +719,6 @@
    ],
    "tags": [
     "問候・句型"
-   ]
-  },
-  {
-   "text": "買って",
-   "ja": "<ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>って",
-   "kana": "かう → かって",
-   "romaji": "kau → katte",
-   "meaning": "買",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "待って",
-   "ja": "<ruby>待<rt>ま</rt></ruby>つ → <ruby>待<rt>ま</rt></ruby>って",
-   "kana": "まつ → まって",
-   "romaji": "matsu → matte",
-   "meaning": "等",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "飲んで",
-   "ja": "<ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby>んで",
-   "kana": "のむ → のんで",
-   "romaji": "nomu → nonde",
-   "meaning": "喝",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "遊んで",
-   "ja": "<ruby>遊<rt>あそ</rt></ruby>ぶ → <ruby>遊<rt>あそ</rt></ruby>んで",
-   "kana": "あそぶ → あそんで",
-   "romaji": "asobu → asonde",
-   "meaning": "玩",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "書いて",
-   "ja": "<ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby>いて",
-   "kana": "かく → かいて",
-   "romaji": "kaku → kaite",
-   "meaning": "寫",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "泳いで",
-   "ja": "<ruby>泳<rt>およ</rt></ruby>ぐ → <ruby>泳<rt>およ</rt></ruby>いで",
-   "kana": "およぐ → およいで",
-   "romaji": "oyogu → oyoide",
-   "meaning": "游泳",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "話して",
-   "ja": "<ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby>して",
-   "kana": "はなす → はなして",
-   "romaji": "hanasu → hanashite",
-   "meaning": "說話",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "食べて",
-   "ja": "<ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べて",
-   "kana": "たべる → たべて",
-   "romaji": "taberu → tabete",
-   "meaning": "吃（一段動詞）",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "行って",
-   "ja": "<ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby>って",
-   "kana": "いく → いって",
-   "romaji": "iku → itte",
-   "meaning": "去（例外，不是 行いて）",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-10-21",
-     "href": "lessons/2026-10-21-te-kei.html",
-     "title": "て形怎麼變"
-    }
-   ],
-   "tags": [
-    "動詞"
    ]
   },
   {

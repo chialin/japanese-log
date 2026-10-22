@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>て形怎麼變 — 從原型換掉最後一個字，不是直接加 て</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;line-height:2.1;}
+.tbl-scroll{overflow-x:auto;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">て形</span>怎麼變</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 21</div>
+  <p class="page-subtitle">て形是從動詞原型變出來的，但不是直接加 て：看最後一個字換音，以及它跟五段動詞那張表的關係</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    寫 <a href="2026-10-21-aruite-ikimasu.html" style="color:var(--accent);">10/21〈歩いて行きます〉</a>的時候冒出一個問題：て形是用動詞原型去變的嗎？
+    答案是對，但不是在原型後面直接加 て。歩く 不會變成 歩くて，而是把最後的 く 換掉，變成 歩いて。<br>
+    這篇先把各種結尾怎麼換整理成一張表，再回頭接上 <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9〈什麼是五段動詞〉</a>那張 あいうえお 的表：
+    那篇最後說 住んで 是「另一種音變，不在這五格裡」，這篇就是在講那個音變是怎麼來的。
+    最後看一段動詞為什麼不用換音，以及 た形 為什麼跟て形變法一模一樣。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hyou">一、以原型最後一個字為主軸，把て形的變法排出來</div>
+
+  <p class="lead">
+    動詞原型（辭書形）最後一個字一定是う段的音，這在 8/9〈什麼是五段動詞〉第一節講過。
+    要變成て形，就看這個字是哪一個，照下表換掉。按 ▶ 可以聽て形的唸法。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原型最後一個字</th><th>換成</th><th>例子</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">う・つ・る</td><td class="col-ja"><b>って</b></td>
+        <td class="col-ja"><ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>って、<ruby>待<rt>ま</rt></ruby>つ → <ruby>待<rt>ま</rt></ruby>って、<ruby>走<rt>はし</rt></ruby>る → <ruby>走<rt>はし</rt></ruby>って</td>
+      </tr>
+      <tr>
+        <td class="col-ja">む・ぶ・ぬ</td><td class="col-ja"><b>んで</b></td>
+        <td class="col-ja"><ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby>んで、<ruby>遊<rt>あそ</rt></ruby>ぶ → <ruby>遊<rt>あそ</rt></ruby>んで、<ruby>死<rt>し</rt></ruby>ぬ → <ruby>死<rt>し</rt></ruby>んで</td>
+      </tr>
+      <tr>
+        <td class="col-ja">く</td><td class="col-ja"><b>いて</b></td>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>く → <ruby>歩<rt>ある</rt></ruby>いて、<ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby>いて</td>
+      </tr>
+      <tr>
+        <td class="col-ja">ぐ</td><td class="col-ja"><b>いで</b></td>
+        <td class="col-ja"><ruby>泳<rt>およ</rt></ruby>ぐ → <ruby>泳<rt>およ</rt></ruby>いで、<ruby>急<rt>いそ</rt></ruby>ぐ → <ruby>急<rt>いそ</rt></ruby>いで</td>
+      </tr>
+      <tr>
+        <td class="col-ja">す</td><td class="col-ja"><b>して</b></td>
+        <td class="col-ja"><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby>して</td>
+      </tr>
+      <tr class="key">
+        <td>一段動詞（食べる、見る）</td><td class="col-ja">去掉 る ＋ <b>て</b></td>
+        <td class="col-ja"><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べて、<ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby>て</td>
+      </tr>
+      <tr>
+        <td>不規則</td><td>直接背</td>
+        <td class="col-ja">する → して、<ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>き</rt></ruby>て、<ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><b>って</b></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🔊 唸唸看</div>
+
+    <div class="word-item" data-text="買って">
+      <div class="word-content">
+        <div class="word-ja"><ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby><span class="j-mark">って</span></div>
+        <div class="word-romaji">kau → katte</div>
+        <div class="word-meaning">買</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="待って">
+      <div class="word-content">
+        <div class="word-ja"><ruby>待<rt>ま</rt></ruby>つ → <ruby>待<rt>ま</rt></ruby><span class="j-mark">って</span></div>
+        <div class="word-romaji">matsu → matte</div>
+        <div class="word-meaning">等</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="飲んで">
+      <div class="word-content">
+        <div class="word-ja"><ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby><span class="j-mark">んで</span></div>
+        <div class="word-romaji">nomu → nonde</div>
+        <div class="word-meaning">喝</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="遊んで">
+      <div class="word-content">
+        <div class="word-ja"><ruby>遊<rt>あそ</rt></ruby>ぶ → <ruby>遊<rt>あそ</rt></ruby><span class="j-mark">んで</span></div>
+        <div class="word-romaji">asobu → asonde</div>
+        <div class="word-meaning">玩</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="書いて">
+      <div class="word-content">
+        <div class="word-ja"><ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby><span class="j-mark">いて</span></div>
+        <div class="word-romaji">kaku → kaite</div>
+        <div class="word-meaning">寫</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="泳いで">
+      <div class="word-content">
+        <div class="word-ja"><ruby>泳<rt>およ</rt></ruby>ぐ → <ruby>泳<rt>およ</rt></ruby><span class="j-mark">いで</span></div>
+        <div class="word-romaji">oyogu → oyoide</div>
+        <div class="word-meaning">游泳</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="話して">
+      <div class="word-content">
+        <div class="word-ja"><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="j-mark">して</span></div>
+        <div class="word-romaji">hanasu → hanashite</div>
+        <div class="word-meaning">說話</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="食べて">
+      <div class="word-content">
+        <div class="word-ja"><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="j-mark">て</span></div>
+        <div class="word-romaji">taberu → tabete</div>
+        <div class="word-meaning">吃（一段動詞）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="行って">
+      <div class="word-content">
+        <div class="word-ja"><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="j-mark">って</span></div>
+        <div class="word-romaji">iku → itte</div>
+        <div class="word-meaning">去（例外，不是 行いて）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 把表唸成一串口訣</strong><br>
+    <span class="compare">うつる って、むぶぬ んで、く いて、ぐ いで、す して</span>。
+    五段的部分就這五組，唸熟之後看到結尾就能直接接上。一段動詞跟不規則的 する、来る、行く 另外記。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="idan">二、て形是從い段那一格變出來的，所以不在五段那張表裡</div>
+
+  <p class="lead">
+    8/9〈什麼是五段動詞〉把五段動詞的變化排成 あ・い・う・え・お 五格：字幹不動，最後一個字換到哪一段，就是哪一種意思。
+    那篇最後提到 住んで 是「另一種音變，不在這五格裡」。原因是て形不佔自己的一格，它是從
+    <strong>い段那一格（也就是ます形去掉ます的樣子）</strong>出發，接上 て，再變一次音。
+  </p>
+
+  <div class="formula">
+    <h4>從い段接上 て，再變音</h4>
+    <div class="fx">
+      <ruby>書<rt>か</rt></ruby>く <span class="arw">→</span> い段 <ruby>書<rt>か</rt></ruby>き <span class="arw">→</span> <s><ruby>書<rt>か</rt></ruby>きて</s> <span class="arw">→</span> <b><ruby>書<rt>か</rt></ruby>いて</b><br>
+      <ruby>買<rt>か</rt></ruby>う <span class="arw">→</span> い段 <ruby>買<rt>か</rt></ruby>い <span class="arw">→</span> <s><ruby>買<rt>か</rt></ruby>いて</s> <span class="arw">→</span> <b><ruby>買<rt>か</rt></ruby>って</b><br>
+      <ruby>住<rt>す</rt></ruby>む <span class="arw">→</span> い段 <ruby>住<rt>す</rt></ruby>み <span class="arw">→</span> <s><ruby>住<rt>す</rt></ruby>みて</s> <span class="arw">→</span> <b><ruby>住<rt>す</rt></ruby>んで</b><br>
+      <ruby>話<rt>はな</rt></ruby>す <span class="arw">→</span> い段 <ruby>話<rt>はな</rt></ruby>し <span class="arw">→</span> <b><ruby>話<rt>はな</rt></ruby>して</b>（不用再變）
+    </div>
+  </div>
+
+  <p class="lead">
+    所以前面那張表也可以從ます形倒回去想：把 ます 拿掉，剩下的就是い段那一格，再照規則變音。
+    原型一時想不起來的時候，這樣比較快：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原型</th><th>ます形</th><th>去掉ます（い段）</th><th>て形</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>く</td>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>きます</td>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>き</td>
+        <td class="col-ja"><b><ruby>歩<rt>ある</rt></ruby>いて</b></td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby>る</td>
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby>ります</td>
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby>り</td>
+        <td class="col-ja"><b><ruby>走<rt>はし</rt></ruby>って</b></td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>並<rt>なら</rt></ruby>ぶ</td>
+        <td class="col-ja"><ruby>並<rt>なら</rt></ruby>びます</td>
+        <td class="col-ja"><ruby>並<rt>なら</rt></ruby>び</td>
+        <td class="col-ja"><b><ruby>並<rt>なら</rt></ruby>んで</b></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="onbin">三、音會變是因為原本的唸法不順口</div>
+
+  <p class="lead">
+    書きて、住みて 這種「沒變音」的說法，在古典日文裡是真的這樣講的。
+    後來大家講快了，嘴巴自動把音簡化，就固定成現在的樣子。日文把這種變化叫 <strong>音便</strong>（おんびん），
+    依照變出來的音分成三種：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>名稱</th><th>變成什麼音</th><th>哪些結尾</th><th>例子</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>い音便</td><td>き・ぎ 變成 い</td><td class="col-ja">く・ぐ</td>
+        <td class="col-ja"><ruby>書<rt>か</rt></ruby>きて → <ruby>書<rt>か</rt></ruby><b>い</b>て、<ruby>泳<rt>およ</rt></ruby>ぎて → <ruby>泳<rt>およ</rt></ruby><b>い</b>で</td>
+      </tr>
+      <tr>
+        <td>促音便</td><td>變成小っ（停一拍）</td><td class="col-ja">う・つ・る</td>
+        <td class="col-ja"><ruby>買<rt>か</rt></ruby>いて → <ruby>買<rt>か</rt></ruby><b>っ</b>て、<ruby>走<rt>はし</rt></ruby>りて → <ruby>走<rt>はし</rt></ruby><b>っ</b>て</td>
+      </tr>
+      <tr>
+        <td>撥音便</td><td>變成 ん，て 也跟著變 で</td><td class="col-ja">む・ぶ・ぬ</td>
+        <td class="col-ja"><ruby>飲<rt>の</rt></ruby>みて → <ruby>飲<rt>の</rt></ruby><b>んで</b>、<ruby>遊<rt>あそ</rt></ruby>びて → <ruby>遊<rt>あそ</rt></ruby><b>んで</b></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    📝 促音 っ 的唸法在 <a href="2026-05-09-dakuten-sokuon.html" style="color:var(--accent);">5/9〈濁音・促音〉</a>學過。
+    ぐ 變成 いで、む・ぶ・ぬ 變成 んで，て 都變成濁音 で，原因是前面的音本來就是濁音（ぐ・ぶ）或鼻音（む・ぬ），て 被帶著一起變濁。
+    す 的 して 唸起來本來就順，所以沒有變。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ichidan">四、一段動詞不用換音，但 る 結尾要先分清楚是哪一類</div>
+
+  <p class="lead">
+    一段動詞的い段（ます形去掉ます）本來就是 食べ、見 這種乾淨的樣子，接上 て 唸起來很順，所以直接加 て 就好，不會變音。
+    麻煩的是，一段動詞的原型都是 る 結尾，五段動詞也有 る 結尾的，兩種的て形完全不同：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原型</th><th>類別</th><th>ます形</th><th>て形</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td><td>一段</td>
+        <td class="col-ja"><ruby>食<rt>た</rt></ruby>べます</td>
+        <td class="col-ja"><b><ruby>食<rt>た</rt></ruby>べて</b></td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>見<rt>み</rt></ruby>る</td><td>一段</td>
+        <td class="col-ja"><ruby>見<rt>み</rt></ruby>ます</td>
+        <td class="col-ja"><b><ruby>見<rt>み</rt></ruby>て</b></td>
+      </tr>
+      <tr class="key">
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby>る</td><td>五段</td>
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby><b>り</b>ます</td>
+        <td class="col-ja"><b><ruby>走<rt>はし</rt></ruby>って</b></td>
+      </tr>
+      <tr class="key">
+        <td class="col-ja"><ruby>帰<rt>かえ</rt></ruby>る</td><td>五段</td>
+        <td class="col-ja"><ruby>帰<rt>かえ</rt></ruby><b>り</b>ます</td>
+        <td class="col-ja"><b><ruby>帰<rt>かえ</rt></ruby>って</b></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    已經知道ます形的話，看 る 有沒有變成 り：走ります、帰ります 的 る 變成 り，是五段；食べます、見ます 的 る 直接不見，是一段。
+    只知道原型的時候怎麼判斷，<a href="2026-08-09-godan-vs-ichidan.html" style="color:var(--accent);">8/9〈五段 vs 一段〉</a>有三步判斷流程。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="takei">五、た形的變法跟て形完全一樣</div>
+
+  <p class="lead">
+    <a href="2026-08-12-ta-kei.html#doushi" style="color:var(--accent);">8/12〈過去式 た形〉第二節</a>的變法，其實就是把て形的 て 換成 た、で 換成 だ。
+    學會一個，另一個就會了：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原型</th><th>て形</th><th>た形</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><ruby>買<rt>か</rt></ruby>う</td><td class="col-ja"><ruby>買<rt>か</rt></ruby>っ<b>て</b></td><td class="col-ja"><ruby>買<rt>か</rt></ruby>っ<b>た</b></td></tr>
+      <tr><td class="col-ja"><ruby>飲<rt>の</rt></ruby>む</td><td class="col-ja"><ruby>飲<rt>の</rt></ruby>ん<b>で</b></td><td class="col-ja"><ruby>飲<rt>の</rt></ruby>ん<b>だ</b></td></tr>
+      <tr><td class="col-ja"><ruby>歩<rt>ある</rt></ruby>く</td><td class="col-ja"><ruby>歩<rt>ある</rt></ruby>い<b>て</b></td><td class="col-ja"><ruby>歩<rt>ある</rt></ruby>い<b>た</b></td></tr>
+      <tr><td class="col-ja"><ruby>食<rt>た</rt></ruby>べる</td><td class="col-ja"><ruby>食<rt>た</rt></ruby>べ<b>て</b></td><td class="col-ja"><ruby>食<rt>た</rt></ruby>べ<b>た</b></td></tr>
+      <tr><td class="col-ja"><ruby>行<rt>い</rt></ruby>く</td><td class="col-ja"><ruby>行<rt>い</rt></ruby>っ<b>て</b></td><td class="col-ja"><ruby>行<rt>い</rt></ruby>っ<b>た</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    〈ジムとカフェに行きました〉那篇會話裡的 並んだ（排了隊）、疲れた（累了），就是 並んで、疲れて 的 て 換成 た。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tsukaikata">六、變好的て形可以接在很多東西前面</div>
+
+  <p class="lead">
+    て形本身不收尾，作用是把動詞接到後面的東西上（原因在〈歩いて行きます〉第二節）。
+    目前學過的接法有這些，前半的て形都是同一套變法：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>接法</th><th>例句</th><th>意思</th><th>出處</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>て形 ＋ います</td>
+        <td class="col-ja"><ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>んでいます</td>
+        <td>正在看書</td>
+        <td><a href="2026-09-02-teimasu.html" style="color:var(--accent);">9/2〈〜ています〉</a></td>
+      </tr>
+      <tr>
+        <td>て形 ＋ 行きます</td>
+        <td class="col-ja"><ruby>駅<rt>えき</rt></ruby>まで <ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます</td>
+        <td>走路去車站</td>
+        <td><a href="2026-10-21-aruite-ikimasu.html" style="color:var(--accent);">10/21〈歩いて行きます〉</a></td>
+      </tr>
+      <tr>
+        <td>て形 ＋ ください</td>
+        <td class="col-ja">ここに <ruby>書<rt>か</rt></ruby>いてください</td>
+        <td>請寫在這裡</td>
+        <td><a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9〈什麼是五段動詞〉</a>提過</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">七、有三個地方容易講錯</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>✗ 錯誤</th><th>✓ 正確</th><th>原因</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><s>歩くて</s></td>
+        <td class="col-ja"><b>歩いて</b></td>
+        <td>て形不是在原型後面直接加 て，要把最後的 く 換成 いて。</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><s>走て</s></td>
+        <td class="col-ja"><b>走って</b></td>
+        <td>走る 是五段動詞（走ります），不是一段，る 要變成 って。</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><s>行いて</s></td>
+        <td class="col-ja"><b>行って</b></td>
+        <td>行く 是唯一的例外，く 結尾卻變成 って。</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">八、整理成一張表</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>動詞類別</th><th>變法</th><th>音便</th><th>例</th></tr>
+    </thead>
+    <tbody>
+      <tr><td rowspan="5">五段</td><td class="col-ja">う・つ・る → って</td><td>促音便</td><td class="col-ja"><ruby>走<rt>はし</rt></ruby>って</td></tr>
+      <tr><td class="col-ja">む・ぶ・ぬ → んで</td><td>撥音便</td><td class="col-ja"><ruby>並<rt>なら</rt></ruby>んで</td></tr>
+      <tr><td class="col-ja">く → いて</td><td>い音便</td><td class="col-ja"><ruby>歩<rt>ある</rt></ruby>いて</td></tr>
+      <tr><td class="col-ja">ぐ → いで</td><td>い音便</td><td class="col-ja"><ruby>急<rt>いそ</rt></ruby>いで</td></tr>
+      <tr><td class="col-ja">す → して</td><td>不變音</td><td class="col-ja"><ruby>話<rt>はな</rt></ruby>して</td></tr>
+      <tr class="key"><td>一段</td><td class="col-ja">去掉 る ＋ て</td><td>不變音</td><td class="col-ja"><ruby>食<rt>た</rt></ruby>べて</td></tr>
+      <tr><td>不規則・例外</td><td class="col-ja">する → して、<ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>き</rt></ruby>て、<ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby>って</td><td>直接背</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">九、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 把下面的動詞變成て形</div>
+    <ol class="quiz-ol">
+      <li>待つ（等）</li>
+      <li>読む（讀）</li>
+      <li>急ぐ（趕）</li>
+      <li>帰る（回家）— 先想它是五段還是一段</li>
+      <li>起きる（起床）— 先想它是五段還是一段</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. 待って（matte）— つ → って</p>
+      <p>2. 読んで（yonde）— む → んで</p>
+      <p>3. 急いで（isoide）— ぐ → いで</p>
+      <p>4. 帰って（kaette）— 五段（帰ります），る → って</p>
+      <p>5. 起きて（okite）— 一段（起きます），去掉 る 加 て</p>
+    </details>
+  </div>
+
+  <a href="2026-10-21-aruite-ikimasu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">歩いて行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">て形＋行きます＝用什麼方式去；為什麼要變成て形</span>
+  </a>
+
+  <a href="2026-08-09-godan-doushi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">什麼是五段動詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/9 あいうえお 五格的變化表，て形是從い段那一格出發的</span>
+  </a>
+
+  <a href="2026-08-09-godan-vs-ichidan.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">五段 vs 一段 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/9 る 結尾的動詞怎麼分是五段還是一段</span>
+  </a>
+
+  <a href="2026-08-12-ta-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">過去式 た形 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12 た形的變法，跟て形只差 て／た</span>
+  </a>
+
+  <a href="2026-09-02-teimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜ています <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/2 第一次學て形變法的地方</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

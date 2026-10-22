@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>歩いて行きます — 用什麼方式去：て形＋行きます</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;line-height:2.1;}
+.tbl-scroll{overflow-x:auto;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">歩いて</span>行きます</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 21</div>
+  <p class="page-subtitle">スーパーまで<ruby>歩<rt>ある</rt></ruby>いて<ruby>行<rt>い</rt></ruby>きます：用て形說「用什麼方式去」，以及它跟 電車で行きます、歩きに行きます 差在哪裡</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    跟別人說「我走路去超市」「快遲到了，跑去車站」，日文會說 スーパーまで歩いて行きます、駅まで走って行きます。這兩句是
+    <a href="2026-10-21-jimu-kafe-kaiwa.html" style="color:var(--accent);">10/21 會話課</a>最後老師示範的例句。<br>
+    「走路去」裡面有兩個動作：走路 和 去。中文把兩個動詞直接排在一起就好，日文不行，前面那個動詞要先變成て形，才能接到 行きます 上。
+    て形的用途就是把兩個動作接起來，很像中文「走<strong>著</strong>去」的「著」。
+    這篇先說明為什麼要變成て形，再來比較幾組容易混在一起的說法：走路去要用て形，搭電車去卻是用 で；
+    歩いて行きます 和 歩きに行きます 只差一個字，意思完全不同；終點用 まで 和用 に 的感覺也不太一樣。最後再看 荷物を置いて行きます：同樣是て形＋行きます，卻是「先把行李放下再走」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="narabe">一、以「怎麼去」為主軸，把幾種去法排出來</div>
+
+  <p class="lead">
+    先把各種「去」的方式排在一起看。上面兩句是老師的例句，用的是動詞；下面三句是搭交通工具，用的是名詞。
+    兩種的句子長得不一樣：動詞要先變成て形（第二節），交通工具則是加 で（第三節）。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="スーパーまで歩いて行きます。">
+      <div class="word-content">
+        <div class="word-ja">スーパーまで <ruby>歩<rt>ある</rt></ruby><span class="j-mark">いて</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">suupaa made aruite ikimasu.</div>
+        <div class="word-meaning">走路去超市。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="駅まで走って行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>駅<rt>えき</rt></ruby>まで <ruby>走<rt>はし</rt></ruby><span class="j-mark">って</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">eki made hashitte ikimasu.</div>
+        <div class="word-meaning">跑去車站。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="会社まで電車で行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby>まで <ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby><span class="j-mark">で</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">kaisha made densha de ikimasu.</div>
+        <div class="word-meaning">搭電車去公司。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ジムまで自転車で行きます。">
+      <div class="word-content">
+        <div class="word-ja">ジムまで <ruby>自<rt>じ</rt>転<rt>てん</rt>車<rt>しゃ</rt></ruby><span class="j-mark">で</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">jimu made jitensha de ikimasu.</div>
+        <div class="word-meaning">騎腳踏車去健身房。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="空港までバスで行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>空<rt>くう</rt>港<rt>こう</rt></ruby>まで バス<span class="j-mark">で</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">kuukou made basu de ikimasu.</div>
+        <div class="word-meaning">搭公車去機場。— バス ← 英語 bus</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="formula">
+    <h4>句型公式</h4>
+    <div class="fx">（地點）まで ＋ <b>動詞て形</b> ＋ 行きます<br>（地點）まで ＋ <b>交通工具 で</b> ＋ 行きます</div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 電車 的兩個字跟台語很像</strong><br>
+    電 台語唸 tian，日文是 でん；車 台語唸 tshia，日文是 しゃ。
+    <span class="compare">電車（でんしゃ）</span>、<span class="compare">自転車（じてんしゃ）</span>的 車 都是 しゃ，
+    電 也出現在 <span class="compare">電話（でんわ）</span>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="naze">二、要變成て形，是因為兩個動詞不能直接排在一起</div>
+
+  <p class="lead">
+    中文說「走路去」，是把「走路」和「去」兩個動詞直接排在一起。日文的句子不能這樣排：
+    一句話最後只會有一個動詞負責收尾，ます、過去式、否定都掛在這個動詞上。
+    如果前面還有另一個動詞，就要先把它變成て形，才能接到後面的動詞上。
+  </p>
+
+  <div class="formula">
+    <h4>把兩個動作接成一句</h4>
+    <div class="fx">
+      <ruby>歩<rt>ある</rt></ruby>きます。＋ <ruby>行<rt>い</rt></ruby>きます。<br>
+      ✗ <s><ruby>歩<rt>ある</rt></ruby>きます<ruby>行<rt>い</rt></ruby>きます</s><br>
+      ✓ <b><ruby>歩<rt>ある</rt></ruby>いて</b> <ruby>行<rt>い</rt></ruby>きます
+    </div>
+  </div>
+
+  <p class="lead">
+    て形可以想成「先不收尾、後面還有話」的形。它本身不帶時間、也不帶禮貌，這些都交給最後那個動詞。
+    所以要改成過去或否定時，只動最後的 行きます，前面的 歩いて 一直不變：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>前面的動詞（て形，不變）</th><th>最後的動詞（負責收尾）</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>走路去</td>
+        <td class="col-ja"><b><ruby>歩<rt>ある</rt></ruby>いて</b></td>
+        <td class="col-ja"><ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td>走路去了</td>
+        <td class="col-ja"><b><ruby>歩<rt>ある</rt></ruby>いて</b></td>
+        <td class="col-ja"><ruby>行<rt>い</rt></ruby>き<b>ました</b></td>
+      </tr>
+      <tr>
+        <td>不走路去</td>
+        <td class="col-ja"><b><ruby>歩<rt>ある</rt></ruby>いて</b></td>
+        <td class="col-ja"><ruby>行<rt>い</rt></ruby>き<b>ません</b></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    て形只負責把兩個動作接起來，兩個動作是什麼關係，要看前面是什麼動詞。
+    歩く、走る 本身就是一種移動，跟「去」同時發生，所以變成「用這個方式去」，就像中文的「走著去」「跑著去」。
+    如果前面是 置く（放下）這種不能拿來移動的動詞，就變成「先做這件事再走」，這在第七節會講到。
+  </p>
+
+  <div class="note">
+    📝 這個接法其實學過：<a href="2026-09-02-teimasu.html" style="color:var(--accent);">9/2〈〜ています〉</a>的 食べています，
+    也是把 食べる 變成て形 食べて，再接上 います。て形後面接 います 是「正在做」，接 行きます 就是「做著這個動作去」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="te-de">三、方式是一個動作就用て形，是交通工具就用 で</div>
+
+  <p class="lead">
+    走路、跑步是自己身體在做的動作，日文用動詞 歩く、走る 來表示，所以要把動詞變成て形，再接 行きます。
+    第二節說過，意思是「用走的方式去」，兩個動作同時發生。<br>
+    電車、腳踏車、公車是東西（名詞），名詞後面要加助詞 で，表示「用這個工具」。
+    跟 箸で食べます（用筷子吃）、日本語で話します（用日文講）的 で 是同一個。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>方式</th><th>詞性</th><th>接法</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr class="key">
+        <td>走路</td><td>動詞 歩く</td><td>て形</td>
+        <td class="col-ja"><b><ruby>歩<rt>ある</rt></ruby>いて</b> <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr class="key">
+        <td>跑步</td><td>動詞 走る</td><td>て形</td>
+        <td class="col-ja"><b><ruby>走<rt>はし</rt></ruby>って</b> <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td>電車</td><td>名詞 電車</td><td>＋ で</td>
+        <td class="col-ja"><b><ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>で</b> <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td>計程車</td><td>名詞 タクシー</td><td>＋ で</td>
+        <td class="col-ja"><b>タクシーで</b> <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    📝 <strong>交通工具也可以用て形來說</strong><br>
+    「搭計程車」本身也是一個動作：タクシーに<ruby>乗<rt>の</rt></ruby>る（坐上計程車）。把 乗る 變成て形，
+    就可以說 <span class="compare">タクシーに乗って行きます</span>，意思跟 タクシーで行きます 一樣，
+    只是多強調了「坐上車」這個動作。タクシー ← 英語 taxi。
+  </div>
+
+  <div class="note">
+    📝 走路沒有名詞版的 「歩きで」。正式的文章會寫 <span class="compare"><ruby>徒<rt>と</rt>歩<rt>ほ</rt></ruby>で</span>（とほで，步行），
+    像車站指示牌寫的「駅から徒歩5分」（從車站走路五分鐘）。平常說話用 歩いて 就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tekei">四、て形照語尾變，走る 要特別注意</div>
+
+  <p class="lead">
+    て形的變法在 <a href="2026-09-02-teimasu.html" style="color:var(--accent);">9/2〈〜ています〉第二節</a>整理過，
+    規則是看辭書形最後一個字。下面挑跟「移動」有關的動詞，都可以直接放在 行きます 前面。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>辭書形</th><th>語尾</th><th>て形</th><th>放進句子</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>く（走路）</td><td>く → いて</td>
+        <td class="col-ja"><b><ruby>歩<rt>ある</rt></ruby>いて</b></td>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>急<rt>いそ</rt></ruby>ぐ（趕、快一點）</td><td>ぐ → いで</td>
+        <td class="col-ja"><b><ruby>急<rt>いそ</rt></ruby>いで</b></td>
+        <td class="col-ja"><ruby>急<rt>いそ</rt></ruby>いで <ruby>行<rt>い</rt></ruby>きます（趕過去）</td>
+      </tr>
+      <tr class="key">
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby>る（跑）</td><td>る → って</td>
+        <td class="col-ja"><b><ruby>走<rt>はし</rt></ruby>って</b></td>
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby>って <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>乗<rt>の</rt></ruby>る（搭乘）</td><td>る → って</td>
+        <td class="col-ja"><b><ruby>乗<rt>の</rt></ruby>って</b></td>
+        <td class="col-ja">タクシーに <ruby>乗<rt>の</rt></ruby>って <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>泳<rt>およ</rt></ruby>ぐ（游泳）</td><td>ぐ → いで</td>
+        <td class="col-ja"><b><ruby>泳<rt>およ</rt></ruby>いで</b></td>
+        <td class="col-ja"><ruby>島<rt>しま</rt></ruby>まで <ruby>泳<rt>およ</rt></ruby>いで <ruby>行<rt>い</rt></ruby>きます（游到島上）</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>走る 看起來像 食べる，其實是五段動詞</strong><br>
+    走る 結尾是 る，很容易以為跟 食べる 一樣去掉 る 加 て，變成 走て。但它是五段動詞，跟 帰る、乗る 同一類，
+    要變成 <span class="compare">走って</span>。分辨方法是看ます形：<span class="compare">走<b>り</b>ます</span>，る 變成 り，
+    就是五段；<span class="compare">食べます</span> 的 る 直接不見，才是一段。
+    五段和一段的分法可以回頭看 <a href="2026-08-09-godan-vs-ichidan.html" style="color:var(--accent);">8/9〈五段 vs 一段〉</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="made">五、終點用 まで 和用 に，差在有沒有講到路程</div>
+
+  <p class="lead">
+    老師的例句用的是 まで，不是 に。兩個都可以接終點，但 に 只說「目的地是哪裡」，
+    まで 是「到那裡為止」，把從出發到抵達的那一段路程也包含進去。
+    句子裡有 歩いて、走って 這種講「一路怎麼移動」的詞，用 まで 聽起來最自然。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>例句</th><th>感覺</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>に</b></td>
+        <td class="col-ja">スーパー<b>に</b> <ruby>行<rt>い</rt></ruby>きます。</td>
+        <td>要去超市。只講目的地。</td>
+      </tr>
+      <tr class="key">
+        <td><b>まで</b></td>
+        <td class="col-ja">スーパー<b>まで</b> <ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。</td>
+        <td>一路走到超市。重點放在「這段路用走的」。</td>
+      </tr>
+      <tr>
+        <td><b>に</b>（也可以）</td>
+        <td class="col-ja">スーパー<b>に</b> <ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。</td>
+        <td>文法沒錯，但重點會偏回「去超市」，走路變成順便補充。</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    まで 也可以跟 から 搭在一起，把起點和終點都說出來：
+  </p>
+
+  <div class="word-item" data-text="家から駅まで歩いて十分です。">
+    <div class="word-content">
+      <div class="word-ja"><ruby>家<rt>いえ</rt></ruby>から <ruby>駅<rt>えき</rt></ruby>まで <ruby>歩<rt>ある</rt></ruby>いて <ruby>10<rt>じゅっ</rt>分<rt>ぷん</rt></ruby>です。</div>
+      <div class="word-romaji">ie kara eki made aruite juppun desu.</div>
+      <div class="word-meaning">從家裡走到車站要十分鐘。— から〜まで 第一次出現在 <a href="2026-05-10-joshi-wa.html" style="color:var(--accent);">5/10〈助詞〉</a></div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ni-iku">六、歩いて行きます 和 歩きに行きます，差別在哪裡</div>
+
+  <p class="lead">
+    <a href="2026-10-09-mi-ni-ikimasu.html" style="color:var(--accent);">10/9〈〜に行きます〉</a>學過，ます形去掉ます再接 に行きます，
+    是「出門去做某件事」。兩個句型都在 行きます 前面放動詞，只差在動詞的形和中間那個字，意思卻完全不同：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>例句</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr class="key">
+        <td><b>て形</b> ＋ 行きます</td>
+        <td class="col-ja">ジムまで <b><ruby>走<rt>はし</rt></ruby>って</b> <ruby>行<rt>い</rt></ruby>きます。</td>
+        <td><strong>怎麼去</strong>：用跑的去健身房。跑步是移動的方式。</td>
+      </tr>
+      <tr>
+        <td><b>ます形去ます ＋ に</b> 行きます</td>
+        <td class="col-ja"><ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>に <b><ruby>走<rt>はし</rt></ruby>りに</b> <ruby>行<rt>い</rt></ruby>きます。</td>
+        <td><strong>去做什麼</strong>：去公園跑步。跑步是出門的目的。</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    分辨的方法是問自己：這個動詞是在回答「怎麼去」，還是「去幹嘛」？怎麼去用て形，去幹嘛用 〜に。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="公園に走りに行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>に <ruby>走<rt>はし</rt></ruby>りに <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">kouen ni hashiri ni ikimasu.</div>
+        <div class="word-meaning">去公園跑步。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="oite">七、荷物を置いて行きます 是先做一件事再出發</div>
+
+  <p class="lead">
+    同樣是「て形＋行きます」，前面換成 置く（放下）這種動詞，意思就不是「怎麼去」了。
+    歩いて行きます 是一邊走一邊去，走路跟移動同時發生；
+    置いて行きます 是先把東西放下，然後才離開，兩件事有先後順序。
+    所以 荷物を置いて行きます 是「把行李放著再走」，也就是不帶走、留在這裡的意思。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="荷物を置いて行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>荷<rt>に</rt>物<rt>もつ</rt></ruby>を <ruby>置<rt>お</rt></ruby><span class="j-mark">いて</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">nimotsu o oite ikimasu.</div>
+        <div class="word-meaning">我把行李放著（先走了）。— 置く → 置いて（く 變成 いて，跟 歩く 一樣）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="荷物をホテルに置いて行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>荷<rt>に</rt>物<rt>もつ</rt></ruby>を ホテルに <ruby>置<rt>お</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">nimotsu o hoteru ni oite ikimasu.</div>
+        <div class="word-meaning">把行李放在飯店再出去。— 放在哪裡用 に；ホテル ← 英語 hotel</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="朝ご飯を食べて行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べて <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">asagohan o tabete ikimasu.</div>
+        <div class="word-meaning">吃完早餐再走。— 同樣是先做再出發</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>例句</th><th>て形的動作和「去」的關係</th><th>中文</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます</td>
+        <td><strong>同時</strong>：走路就是去的方式</td>
+        <td>走路去</td>
+      </tr>
+      <tr class="key">
+        <td class="col-ja"><ruby>荷<rt>に</rt>物<rt>もつ</rt></ruby>を <ruby>置<rt>お</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます</td>
+        <td><strong>先後</strong>：先放下行李，再出發</td>
+        <td>把行李留著再走</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    📝 要分辨是哪一種，看て形前面的動詞能不能拿來「移動」：歩く、走る、急ぐ 可以，就是在講方式；
+    置く、食べる 不能拿來移動，就是先做完這件事再走。
+    荷物 是 <a href="2026-10-10-mono.html" style="color:var(--accent);">10/10〈「物」的詞〉</a>學過的字，物 在這裡唸 もつ。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kuru">八、行きます 換成 来ます、帰ります 也是一樣的用法</div>
+
+  <p class="lead">
+    て形放在移動動詞前面的用法不限 行きます。來、回家也都可以，講過去就把最後的動詞改成過去式。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="ジムまで歩いて来ました。">
+      <div class="word-content">
+        <div class="word-ja">ジムまで <ruby>歩<rt>ある</rt></ruby>いて <ruby>来<rt>き</rt></ruby>ました。</div>
+        <div class="word-romaji">jimu made aruite kimashita.</div>
+        <div class="word-meaning">（我人在健身房）是走路來的。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="雨だったので、走って帰りました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>雨<rt>あめ</rt></ruby>だったので、<ruby>走<rt>はし</rt></ruby>って <ruby>帰<rt>かえ</rt></ruby>りました。</div>
+        <div class="word-romaji">ame datta node, hashitte kaerimashita.</div>
+        <div class="word-meaning">因為下雨，所以跑回家了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">九、有兩個地方容易講錯</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>✗ 錯誤</th><th>✓ 正確</th><th>原因</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">駅まで <s>走て</s> 行きます</td>
+        <td class="col-ja">駅まで <b>走って</b> 行きます</td>
+        <td>走る 是五段動詞，る → って。</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><s>歩くで</s> 行きます</td>
+        <td class="col-ja"><b>歩いて</b> 行きます</td>
+        <td>で 要接名詞。歩く 是動詞，要變成て形。</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">十、整理成一張表</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr class="key">
+        <td>用某個動作去（走路、跑步）</td>
+        <td>動詞て形 ＋ 行きます</td>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>いて／<ruby>走<rt>はし</rt></ruby>って <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td>搭交通工具去</td>
+        <td>名詞 ＋ で ＋ 行きます</td>
+        <td class="col-ja"><ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>で／バスで <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td>一路到某地</td>
+        <td>（地點）まで</td>
+        <td class="col-ja"><ruby>駅<rt>えき</rt></ruby>まで <ruby>走<rt>はし</rt></ruby>って <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td>出門去做某件事</td>
+        <td>ます形去ます ＋ に行きます</td>
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby>りに <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td>先做一件事再走</td>
+        <td>動詞て形 ＋ 行きます</td>
+        <td class="col-ja"><ruby>荷<rt>に</rt>物<rt>もつ</rt></ruby>を <ruby>置<rt>お</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+      <tr>
+        <td>來、回家</td>
+        <td>て形 ＋ 来ます／帰ります</td>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>いて <ruby>来<rt>き</rt></ruby>ました</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">十一、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我走路去健身房。（提示：まで、歩く）</li>
+      <li>快遲到了，跑去車站。（提示：走る 的て形）</li>
+      <li>搭電車去新宿。（提示：電車、で）</li>
+      <li>去公園跑步。（提示：〜に行きます）</li>
+      <li>昨天走路回家了。（提示：帰る）</li>
+      <li>我把行李放在飯店再出去。（提示：置く、ホテルに）</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. ジムまで歩いて行きます。<br>jimu made aruite ikimasu.</p>
+      <p>2. 駅まで走って行きます。<br>eki made hashitte ikimasu.</p>
+      <p>3. 新宿まで電車で行きます。（新宿に電車で行きます 也可以）<br>shinjuku made densha de ikimasu.</p>
+      <p>4. 公園に走りに行きます。<br>kouen ni hashiri ni ikimasu.</p>
+      <p>5. 昨日は歩いて帰りました。<br>kinou wa aruite kaerimashita.</p>
+      <p>6. 荷物をホテルに置いて行きます。<br>nimotsu o hoteru ni oite ikimasu.</p>
+    </details>
+  </div>
+
+  <a href="2026-10-21-jimu-kafe-kaiwa.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">ジムとカフェに行きました <span class="next-arrow">→</span></span>
+    <span class="next-sub">這兩句例句出現的會話課：健身房、咖啡廳、混んでいなかった</span>
+  </a>
+
+  <a href="2026-10-09-mi-ni-ikimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜に行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/9 出門去做某件事：見に行きます、走りに行きます</span>
+  </a>
+
+  <a href="2026-09-02-teimasu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">〜ています <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/2 て形怎麼照語尾變</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

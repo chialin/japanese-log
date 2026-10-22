@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ジムとカフェに行きました — 混んでいなかった・歩いて行きます</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:56px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">ジム</span>と<span class="accent">カフェ</span>に行きました</h1>
+  <div class="page-meta">會話紀錄 · Conversation · 2026 / 10 / 21</div>
+  <p class="page-subtitle">跟老師聊前一天的事：一個人去抱石的健身房，練完去咖啡廳喝燕麥拿鐵</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    10/21 的口語課，老師問我前一天做了什麼。我說去了西新宿車站附近的抱石健身房，一個人練了兩個小時，
+    因為一個星期沒去所以很累，之後又去了一間小咖啡廳喝燕麥拿鐵。<br>
+    這篇先把整段對話整理出來，再看課上碰到的幾個文法：講原因的 ので 和 から、
+    「沒有很擠」要怎麼說成 混んでいなかった、並んだ 和 並んでいた 的差別、形容詞放在名詞前面或後面，
+    最後是老師示範的 歩いて行きます、走って行きます，用來說「走路去」「跑過去」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaiwa">一、以課堂上的聊天為主軸，把對話整理出來</div>
+
+  <p class="lead">
+    下面是照課堂筆記重新整理的對話。我說過的句子大致保留原樣，課上被改過的地方直接放修正後的版本，
+    老師的問句是依當時的流程補上的。每一句都可以按 ▶ 跟著唸。
+  </p>
+
+  <div class="dialog">
+    <div class="turn" data-text="昨日は何をしましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>昨日<rt>きのう</rt></ruby>は <ruby>何<rt>なに</rt></ruby>を しましたか。</div>
+        <div class="turn-romaji">kinou wa nani o shimashita ka.</div>
+        <div class="turn-meaning">昨天做了什麼呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="昨日は、西新宿駅の近くのジムに行きました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>昨日<rt>きのう</rt></ruby>は、<ruby>西<rt>にし</rt>新<rt>しん</rt>宿<rt>じゅく</rt>駅<rt>えき</rt></ruby>の <ruby>近<rt>ちか</rt></ruby>くの ジムに <ruby>行<rt>い</rt></ruby>きました。</div>
+        <div class="turn-romaji">kinou wa, nishi-shinjuku eki no chikaku no jimu ni ikimashita.</div>
+        <div class="turn-meaning">昨天去了西新宿車站附近的（抱石）健身房。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="誰と行きましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>誰<rt>だれ</rt></ruby>と <ruby>行<rt>い</rt></ruby>きましたか。</div>
+        <div class="turn-romaji">dare to ikimashita ka.</div>
+        <div class="turn-meaning">跟誰去的？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="一人で行きました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>一人<rt>ひとり</rt></ruby>で <ruby>行<rt>い</rt></ruby>きました。</div>
+        <div class="turn-romaji">hitori de ikimashita.</div>
+        <div class="turn-meaning">一個人去的。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="どのくらいジムにいましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">どのくらい ジムに いましたか。</div>
+        <div class="turn-romaji">dono kurai jimu ni imashita ka.</div>
+        <div class="turn-meaning">在健身房待了多久？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="二時間です。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>2<rt>に</rt>時<rt>じ</rt>間<rt>かん</rt></ruby>です。</div>
+        <div class="turn-romaji">ni jikan desu.</div>
+        <div class="turn-meaning">兩個小時。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="どうでしたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">どうでしたか。</div>
+        <div class="turn-romaji">dou deshita ka.</div>
+        <div class="turn-meaning">感覺怎麼樣？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="疲れました。でも、面白かったです。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>疲<rt>つか</rt></ruby>れました。でも、<ruby>面<rt>おも</rt>白<rt>しろ</rt></ruby>かったです。</div>
+        <div class="turn-romaji">tsukaremashita. demo, omoshirokatta desu.</div>
+        <div class="turn-meaning">很累，不過很好玩。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="どうして疲れましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">どうして <ruby>疲<rt>つか</rt></ruby>れましたか。</div>
+        <div class="turn-romaji">doushite tsukaremashita ka.</div>
+        <div class="turn-meaning">為什麼會累呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="一週間行かなかったので、疲れました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>一<rt>いっ</rt>週<rt>しゅう</rt>間<rt>かん</rt></ruby> <ruby>行<rt>い</rt></ruby>かなかった<span class="j-mark">ので</span>、<ruby>疲<rt>つか</rt></ruby>れました。</div>
+        <div class="turn-romaji">isshuukan ikanakatta node, tsukaremashita.</div>
+        <div class="turn-meaning">因為一個星期沒去，所以很累。（也可以說 行かなかったから，見<a href="#riyuu" style="color:var(--accent);">第三節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ジムは混んでいましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">ジムは <ruby>混<rt>こ</rt></ruby>んでいましたか。</div>
+        <div class="turn-romaji">jimu wa konde imashita ka.</div>
+        <div class="turn-meaning">健身房人多嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="いいえ、混んでいなかったです。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいえ、<ruby>混<rt>こ</rt></ruby>んでいなかったです。</div>
+        <div class="turn-romaji">iie, konde inakatta desu.</div>
+        <div class="turn-meaning">不會，人不多。（課上我說的是 混んでいなかった，這個否定怎麼來的見<a href="#hitei" style="color:var(--accent);">第四節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="その後、カフェに行きました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">その <ruby>後<rt>あと</rt></ruby>、カフェに <ruby>行<rt>い</rt></ruby>きました。</div>
+        <div class="turn-romaji">sono ato, kafe ni ikimashita.</div>
+        <div class="turn-meaning">之後去了咖啡廳。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="何を飲みましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>何<rt>なに</rt></ruby>を <ruby>飲<rt>の</rt></ruby>みましたか。</div>
+        <div class="turn-romaji">nani o nomimashita ka.</div>
+        <div class="turn-meaning">喝了什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="疲れたので、オーツラテを飲みました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>疲<rt>つか</rt></ruby>れた<span class="j-mark">ので</span>、オーツラテを <ruby>飲<rt>の</rt></ruby>みました。</div>
+        <div class="turn-romaji">tsukareta node, ootsu rate o nomimashita.</div>
+        <div class="turn-meaning">因為累了，所以喝了燕麥拿鐵。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="カフェは混んでいましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">カフェは <ruby>混<rt>こ</rt></ruby>んでいましたか。</div>
+        <div class="turn-romaji">kafe wa konde imashita ka.</div>
+        <div class="turn-meaning">咖啡廳人多嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい、たくさん人がいました。小さいカフェです。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、たくさん <ruby>人<rt>ひと</rt></ruby>が いました。<ruby>小<rt>ちい</rt></ruby>さい カフェです。</div>
+        <div class="turn-romaji">hai, takusan hito ga imashita. chiisai kafe desu.</div>
+        <div class="turn-meaning">嗯，人很多。是一間小咖啡廳。（也可以說 カフェは小さいです，見<a href="#keiyoushi" style="color:var(--accent);">第六節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="人が並んでいました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>人<rt>ひと</rt></ruby>が <ruby>並<rt>なら</rt></ruby>んでいました。</div>
+        <div class="turn-romaji">hito ga narande imashita.</div>
+        <div class="turn-meaning">有人在排隊。（我先說了 並んだ，再改成 並んでいた，見<a href="#narabu" style="color:var(--accent);">第五節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="スーパーまで歩いて行きます。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">スーパーまで <ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="turn-romaji">suupaa made aruite ikimasu.</div>
+        <div class="turn-meaning">走路去超市。（老師示範的例句，見<a href="#aruite" style="color:var(--accent);">第七節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="駅まで走って行きます。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>駅<rt>えき</rt></ruby>まで <ruby>走<rt>はし</rt></ruby>って <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="turn-romaji">eki made hashitte ikimasu.</div>
+        <div class="turn-meaning">跑去車站。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="質問です。走るは、何と読みますか。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>質<rt>しつ</rt>問<rt>もん</rt></ruby>です。「<ruby>走<rt>はし</rt></ruby>る」は、<ruby>何<rt>なん</rt></ruby>と <ruby>読<rt>よ</rt></ruby>みますか。</div>
+        <div class="turn-romaji">shitsumon desu. "hashiru" wa, nan to yomimasu ka.</div>
+        <div class="turn-meaning">我有問題。「走る」怎麼唸？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="はしるです。歩くは、あるくです。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">はしるです。「<ruby>歩<rt>ある</rt></ruby>く」は あるくです。</div>
+        <div class="turn-romaji">hashiru desu. "aruku" wa aruku desu.</div>
+        <div class="turn-meaning">唸 はしる。「歩く」唸 あるく。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">二、對話裡的新單字是這些</div>
+
+  <p class="lead">
+    這段對話的單字分成三組：去健身房時的地點和時間、咖啡廳裡看到的情況，還有老師最後教的兩個移動方式的動詞。
+    外來語都附上了來源語言。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 單字卡</div>
+
+    <div class="word-item" data-text="西新宿駅">
+      <div class="word-content">
+        <div class="word-ja"><ruby>西<rt>にし</rt>新<rt>しん</rt>宿<rt>じゅく</rt>駅<rt>えき</rt></ruby></div>
+        <div class="word-romaji">nishi-shinjuku eki</div>
+        <div class="word-meaning">西新宿站（東京地鐵丸之內線）；西 是訓讀 にし，新宿 是音讀</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="近く">
+      <div class="word-content">
+        <div class="word-ja"><ruby>近<rt>ちか</rt></ruby>く</div>
+        <div class="word-romaji">chikaku</div>
+        <div class="word-meaning">附近 — 形容詞 近い 變來的名詞，〇〇の近くの△△＝〇〇附近的△△</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ジム">
+      <div class="word-content">
+        <div class="word-ja">ジム</div>
+        <div class="word-romaji">jimu</div>
+        <div class="word-meaning">健身房 ← 英語 gym（gymnasium 的縮寫）；英語的 gym 也可以指學校體育館，日文單說 ジム 幾乎只指健身房</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一人で">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一人<rt>ひとり</rt></ruby>で</div>
+        <div class="word-romaji">hitori de</div>
+        <div class="word-meaning">一個人（做某事）— 這裡的 で 表示「以什麼人數、方式」；兩個人是 二人で（ふたりで）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="二時間">
+      <div class="word-content">
+        <div class="word-ja"><ruby>2<rt>に</rt>時<rt>じ</rt>間<rt>かん</rt></ruby></div>
+        <div class="word-romaji">ni jikan</div>
+        <div class="word-meaning">兩個小時 — 時間 接在數字後面是「幾個小時」；2時（にじ）則是「兩點」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一週間">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いっ</rt>週<rt>しゅう</rt>間<rt>かん</rt></ruby></div>
+        <div class="word-romaji">isshuukan</div>
+        <div class="word-meaning">一個星期 — いち＋しゅう 連在一起，いち 縮成促音 いっ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="面白かったです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>面<rt>おも</rt>白<rt>しろ</rt></ruby>かったです</div>
+        <div class="word-romaji">omoshirokatta desu</div>
+        <div class="word-meaning">很有趣、很好玩 — い形容詞 面白い 的過去式（い → かった）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="混む">
+      <div class="word-content">
+        <div class="word-ja"><ruby>混<rt>こ</rt></ruby>む</div>
+        <div class="word-romaji">komu</div>
+        <div class="word-meaning">變擁擠 — 講「現在很擠」要用 混んでいます；相反是 空いています（すいています）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="その後">
+      <div class="word-content">
+        <div class="word-ja">その <ruby>後<rt>あと</rt></ruby></div>
+        <div class="word-romaji">sono ato</div>
+        <div class="word-meaning">在那之後 — 講完一件事接下一件事時用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カフェ">
+      <div class="word-content">
+        <div class="word-ja">カフェ</div>
+        <div class="word-romaji">kafe</div>
+        <div class="word-meaning">咖啡廳 ← 法語 café；店名或時髦的咖啡店多用 カフェ，傳統的老咖啡店則叫 喫茶店（きっさてん）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="オーツラテ">
+      <div class="word-content">
+        <div class="word-ja">オーツラテ</div>
+        <div class="word-romaji">ootsu rate</div>
+        <div class="word-meaning">燕麥拿鐵 ← 英語 oats ＋ 義大利語 latte（牛奶）；ラテ 是 カフェラテ（caffè latte）的簡稱</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="たくさん">
+      <div class="word-content">
+        <div class="word-ja">たくさん</div>
+        <div class="word-romaji">takusan</div>
+        <div class="word-meaning">很多 — 放在動詞前面：たくさん人がいました／人がたくさんいました 都可以</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="並ぶ">
+      <div class="word-content">
+        <div class="word-ja"><ruby>並<rt>なら</rt></ruby>ぶ</div>
+        <div class="word-romaji">narabu</div>
+        <div class="word-meaning">排隊、排成一列 — て形是 並んで</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="スーパー">
+      <div class="word-content">
+        <div class="word-ja">スーパー</div>
+        <div class="word-romaji">suupaa</div>
+        <div class="word-meaning">超市 ← 英語 supermarket 的縮寫；英語 super 本身是形容詞，日文的 スーパー 單獨用就是指超市</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="歩く">
+      <div class="word-content">
+        <div class="word-ja"><ruby>歩<rt>ある</rt></ruby>く</div>
+        <div class="word-romaji">aruku</div>
+        <div class="word-meaning">走路 — て形是 歩いて</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="走る">
+      <div class="word-content">
+        <div class="word-ja"><ruby>走<rt>はし</rt></ruby>る</div>
+        <div class="word-romaji">hashiru</div>
+        <div class="word-meaning">跑 — 注意中文的「走」是 walk，日文的 走る 是 run；て形是 走って</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="質問">
+      <div class="word-content">
+        <div class="word-ja"><ruby>質<rt>しつ</rt>問<rt>もん</rt></ruby></div>
+        <div class="word-romaji">shitsumon</div>
+        <div class="word-meaning">問題、提問 — 課堂上想發問時說 質問です／質問があります</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 新 和 間 的唸法跟台語一樣</strong><br>
+    新 台語唸 sin，日文音讀是 しん：<span class="compare">新宿（しんじゅく）</span>、<span class="compare">新聞（しんぶん）</span>。<br>
+    間 台語唸 kan，日文音讀是 かん：本課的 <span class="compare">時間（じかん）</span>、<span class="compare">一週間（いっしゅうかん）</span>都是它。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 中文的「走」在日文是「跑」</strong><br>
+    日文的 走る 保留了古漢語「走」＝奔跑的意思（像成語「奔走」「走馬看花」）。
+    中文現在說的「走路」，日文要用 <span class="compare">歩く</span>。看到 走 就想成「跑」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="riyuu">三、講原因可以用 ので，也可以用 から</div>
+
+  <p class="lead">
+    老師問「どうして疲れましたか」的時候，我回答 一週間行かなかった<b>ので</b>、疲れました。
+    課上老師也提到可以用 から。兩個都是「因為……所以……」，都接在普通形後面，
+    差別在口氣：ので 比較客觀、柔和，から 則比較直接，帶著自己的主張。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>例句</th><th>什麼時候用</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>〜ので、〜</b></td>
+        <td class="col-ja"><ruby>一<rt>いっ</rt>週<rt>しゅう</rt>間<rt>かん</rt></ruby> <ruby>行<rt>い</rt></ruby>かなかった<b>ので</b>、<ruby>疲<rt>つか</rt></ruby>れました。</td>
+        <td>把原因和結果連成一句。聽起來像在說明情況，跟老師、店員講話時比較客氣。</td>
+      </tr>
+      <tr>
+        <td><b>〜から、〜</b></td>
+        <td class="col-ja"><ruby>一<rt>いっ</rt>週<rt>しゅう</rt>間<rt>かん</rt></ruby> <ruby>行<rt>い</rt></ruby>かなかった<b>から</b>、<ruby>疲<rt>つか</rt></ruby>れました。</td>
+        <td>意思一樣，口氣直接一點，跟朋友聊天很常用。</td>
+      </tr>
+      <tr>
+        <td><b>〜からです</b></td>
+        <td class="col-ja"><ruby>一<rt>いっ</rt>週<rt>しゅう</rt>間<rt>かん</rt></ruby> <ruby>行<rt>い</rt></ruby>かなかった<b>からです</b>。</td>
+        <td>被問「為什麼」時只回答原因。這個位置只能用 から，<strong>不能說 〜のでです</strong>。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 「疲れた<b>ので</b>、オーツラテを飲みました」也是同一個句型：前半句是原因（因為累了），後半句是結果（所以喝了燕麥拿鐵）。
+    〜からです 第一次出現在 <a href="2026-08-25-naru.html" style="color:var(--accent);">8/25〈〜くなる／〜になる〉</a>，
+    用 んです 回答「為什麼」的方式在 <a href="2026-10-06-doushite-ndesu.html" style="color:var(--accent);">10/6〈どうして〜んですか〉</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hitei">四、混んでいなかった 是 混んでいる 的過去否定</div>
+
+  <p class="lead">
+    老師問「ジムは混んでいましたか」，我回答 混んでいなかった（人不多）。這個詞看起來很長，
+    其實是兩段組起來的：前面的 混んで 是 混む 的て形，後面的 いる 才是真正在變化的部分。
+    いる 怎麼變，混んでいる 就跟著怎麼變。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th></th><th>普通形（跟朋友說）</th><th>ます形（跟老師說）</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>現在・肯定</td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>いる</b></td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>います</b></td>
+        <td>（現在）很擠</td>
+      </tr>
+      <tr>
+        <td>現在・否定</td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>いない</b></td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>いません</b></td>
+        <td>（現在）不擠</td>
+      </tr>
+      <tr>
+        <td>過去・肯定</td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>いた</b></td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>いました</b></td>
+        <td>（那時）很擠</td>
+      </tr>
+      <tr>
+        <td>過去・否定</td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>いなかった</b></td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>いませんでした</b><br><ruby>混<rt>こ</rt></ruby>んで<b>いなかったです</b></td>
+        <td>（那時）不擠</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    變化的規則就是 <a href="2026-08-12-ta-kei.html#hitei" style="color:var(--accent);">8/12〈過去式 た形〉第三節</a>的
+    ない → なかった：いる → いない → いなかった。對話裡的 <span class="compare">行かなかった</span> 也是同一條路，
+    行く → 行かない → 行かなかった（一個星期都沒有去）。
+    ている 的否定 ていない 在 <a href="2026-08-12-hitei.html#teinai" style="color:var(--accent);">8/12〈否定的說法〉第二節</a>講過，本課只是再往過去推一步。
+  </p>
+
+  <div class="note">
+    📝 <strong>跟老師講話時要加上禮貌的結尾</strong><br>
+    混んでいなかった 是普通形，跟朋友說沒問題。回答老師的問題時，比較好的說法是
+    <span class="compare">混んでいませんでした</span>，或在後面加 です 變成 <span class="compare">混んでいなかったです</span>。
+    兩個都是禮貌體，混んでいませんでした 更正式一點，混んでいなかったです 在口語裡也很常聽到。
+  </div>
+
+  <div class="note">
+    📝 <strong>為什麼不說 混まなかった</strong><br>
+    混む 是「變擠」這個變化，人潮湧進來的那一刻才算 混む。「那時候擠不擠」講的是當時的狀態，
+    所以要用 混んでいる 這個 ている 的形，否定也是從 混んでいる 去變。
+    混まなかった 的意思會變成「（原本以為會擠）結果沒有變擠」，在講一件事的結果，不是在描述現場的樣子。
+    這是 <a href="2026-08-12-jisei-shinkoukei.html#futatsu" style="color:var(--accent);">8/12〈過去・現在・現在進行〉</a>講過的「結果狀態」，
+    跟 疲れている、住んでいる 是同一類；混んでいます／空いています 的用法也可以回頭看
+    <a href="2026-08-06-soko-wa-desu-yo.html" style="color:var(--accent);">8/6〈そこは〜ですよ〉</a>。
+  </div>
+
+  <div class="word-item" data-text="いいえ、混んでいませんでした。空いていました。">
+    <div class="word-content">
+      <div class="word-ja">いいえ、<ruby>混<rt>こ</rt></ruby>んでいませんでした。<ruby>空<rt>す</rt></ruby>いていました。</div>
+      <div class="word-romaji">iie, konde imasen deshita. suite imashita.</div>
+      <div class="word-meaning">不會，人不多，很空。</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="narabu">五、並んだ 和 並んでいた 差在是動作還是當時的樣子</div>
+
+  <p class="lead">
+    講咖啡廳人很多的時候，我先說了 並んだ，再改成 並んでいた。兩個都是過去式，但畫面不一樣：
+    並んだ 是「排了隊」這個動作，並んでいた 是「（我到的時候）大家正排著隊」的樣子。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>例句</th><th>畫面</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>並びました</b><br>（並んだ）</td>
+        <td class="col-ja">カフェで <ruby>10<rt>じゅっ</rt>分<rt>ぷん</rt></ruby> <b><ruby>並<rt>なら</rt></ruby>びました</b>。</td>
+        <td>我在咖啡廳排了十分鐘。講的是自己做了排隊這件事。</td>
+      </tr>
+      <tr>
+        <td><b>並んでいました</b><br>（並んでいた）</td>
+        <td class="col-ja"><ruby>人<rt>ひと</rt></ruby>が <b><ruby>並<rt>なら</rt></ruby>んでいました</b>。</td>
+        <td>（我到的時候）有人在排隊。在描述當時店門口的樣子。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    想說「咖啡廳很擠、很多人」，用 人が並んでいました 最自然，跟前面的 混んでいました 是同一種描述現場的說法。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="keiyoushi">六、小さいカフェです 和 カフェは小さいです，重點放的地方不一樣</div>
+
+  <p class="lead">
+    形容詞可以放在名詞前面，也可以放在 は 後面。兩句都對，差別在你想讓對方知道的是哪一件事。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>例句</th><th>重點</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>形容詞 ＋ 名詞</td>
+        <td class="col-ja"><b><ruby>小<rt>ちい</rt></ruby>さい</b> カフェです。</td>
+        <td>「那是一間小咖啡廳」。在介紹這間店是什麼樣的店，小 是用來形容 カフェ 的。</td>
+      </tr>
+      <tr>
+        <td>名詞 は 形容詞</td>
+        <td class="col-ja">カフェは <b><ruby>小<rt>ちい</rt></ruby>さいです</b>。</td>
+        <td>「那間咖啡廳（很）小」。先說好話題是咖啡廳，再評論它的大小。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    在這段對話裡，前面已經提到咖啡廳了，用 小さいカフェです 補充「是間小店」，順便解釋為什麼人那麼多。
+    い形容詞直接放在名詞前面的規則，在 <a href="2026-09-09-i-keiyoushi-meishi.html" style="color:var(--accent);">9/9〈い形容詞 ＋ 名詞〉</a>有完整說明。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="aruite">七、歩いて行きます 是在說用什麼方式去</div>
+
+  <p class="lead">
+    老師最後示範了兩句：スーパーまで歩いて行きます、駅まで走って行きます。
+    把動詞的て形放在 行きます 前面，表示「用這個方式去」，中文就是「走路去」「跑過去」。
+    要注意 走る 的て形是 走って，不是 走て。
+    這個句型另外整理成一篇文法課，裡面比較了 歩いて行きます 和 電車で行きます、歩きに行きます 的差別，
+    也說明了終點用 まで 和用 に 的感覺有什麼不同，以及 荷物を置いて行きます 這種「先做一件事再走」的用法。
+  </p>
+
+  <a href="2026-10-21-aruite-ikimasu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">歩いて行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">て形＋行きます＝用什麼方式去；跟 電車で行きます、歩きに行きます 的差別</span>
+  </a>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">八、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>日文</th><th>重點</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>一個人去</td>
+        <td class="col-ja"><ruby>一人<rt>ひとり</rt></ruby>で <ruby>行<rt>い</rt></ruby>きました</td>
+        <td>人數／方式 ＋ で</td>
+      </tr>
+      <tr>
+        <td>因為一週沒去所以累</td>
+        <td class="col-ja"><ruby>行<rt>い</rt></ruby>かなかった<b>ので</b>、<ruby>疲<rt>つか</rt></ruby>れました</td>
+        <td>ので 柔和、から 直接；只答原因用 〜からです</td>
+      </tr>
+      <tr>
+        <td>（那時）人不多</td>
+        <td class="col-ja"><ruby>混<rt>こ</rt></ruby>んで<b>いませんでした</b>／<ruby>混<rt>こ</rt></ruby>んで<b>いなかった</b></td>
+        <td>いる → いない → いなかった；對老師用禮貌體</td>
+      </tr>
+      <tr>
+        <td>有人在排隊</td>
+        <td class="col-ja"><ruby>人<rt>ひと</rt></ruby>が <ruby>並<rt>なら</rt></ruby>んでいました</td>
+        <td>ていた＝當時的樣子；並んだ＝自己排了隊</td>
+      </tr>
+      <tr>
+        <td>是間小咖啡廳</td>
+        <td class="col-ja"><ruby>小<rt>ちい</rt></ruby>さい カフェです</td>
+        <td>形容詞直接放在名詞前</td>
+      </tr>
+      <tr>
+        <td>走路去／跑去</td>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>いて／<ruby>走<rt>はし</rt></ruby>って <ruby>行<rt>い</rt></ruby>きます</td>
+        <td>て形 ＋ 行きます；走る 是 run</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">九、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>昨天一個人去了車站附近的健身房。（提示：駅の近く、一人で）</li>
+      <li>因為很累，所以喝了燕麥拿鐵。（提示：ので）</li>
+      <li>被老師問「カフェは混んでいましたか」，用禮貌的說法回答「不會，人不多」。</li>
+      <li>把「混んでいる」改成跟朋友說的過去否定。</li>
+      <li>我每天走路去車站。（提示：毎日、まで、歩く）</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. 昨日は一人で駅の近くのジムに行きました。<br>kinou wa hitori de eki no chikaku no jimu ni ikimashita.</p>
+      <p>2. 疲れたので、オーツラテを飲みました。<br>tsukareta node, ootsu rate o nomimashita.</p>
+      <p>3. いいえ、混んでいませんでした。（混んでいなかったです 也可以）<br>iie, konde imasen deshita.</p>
+      <p>4. 混んでいなかった。<br>konde inakatta.</p>
+      <p>5. 毎日駅まで歩いて行きます。<br>mainichi eki made aruite ikimasu.</p>
+    </details>
+  </div>
+
+  <a href="2026-10-21-aruite-ikimasu.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">歩いて行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">文法課：て形＋行きます，用什麼方式去</span>
+  </a>
+
+  <a href="2026-10-12-aomori-kouyou-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">水曜日は青森に行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/12 的會話課，疲れました 和 疲れていました 的差別在那篇</span>
+  </a>
+
+  <a href="2026-10-06-doushite-ndesu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">どうして〜んですか <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/6 被問「為什麼」時，用 んです 和 からです 回答</span>
+  </a>
+
+  <a href="2026-08-12-ta-kei.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">過去式 た形 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12 ない → なかった 的變化，混んでいなかった、行かなかった 都是這條規則</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

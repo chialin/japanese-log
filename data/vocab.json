@@ -1,6 +1,528 @@
 {
- "generated": "2026-10-13",
+ "generated": "2026-10-22",
  "words": [
+  {
+   "text": "スーパーまで歩いて行きます。",
+   "ja": "スーパーまで <ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "スーパーまで あるいて いきます。",
+   "romaji": "suupaa made aruite ikimasu.",
+   "meaning": "走路去超市。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "駅まで走って行きます。",
+   "ja": "<ruby>駅<rt>えき</rt></ruby>まで <ruby>走<rt>はし</rt></ruby>って <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "えきまで はしって いきます。",
+   "romaji": "eki made hashitte ikimasu.",
+   "meaning": "跑去車站。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "会社まで電車で行きます。",
+   "ja": "<ruby>会<rt>かい</rt>社<rt>しゃ</rt></ruby>まで <ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>で <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "かいしゃまで でんしゃで いきます。",
+   "romaji": "kaisha made densha de ikimasu.",
+   "meaning": "搭電車去公司。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "ジムまで自転車で行きます。",
+   "ja": "ジムまで <ruby>自<rt>じ</rt>転<rt>てん</rt>車<rt>しゃ</rt></ruby>で <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "ジムまで じてんしゃで いきます。",
+   "romaji": "jimu made jitensha de ikimasu.",
+   "meaning": "騎腳踏車去健身房。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "空港までバスで行きます。",
+   "ja": "<ruby>空<rt>くう</rt>港<rt>こう</rt></ruby>まで バスで <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "くうこうまで バスで いきます。",
+   "romaji": "kuukou made basu de ikimasu.",
+   "meaning": "搭公車去機場。— バス ← 英語 bus",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "家から駅まで歩いて十分です。",
+   "ja": "<ruby>家<rt>いえ</rt></ruby>から <ruby>駅<rt>えき</rt></ruby>まで <ruby>歩<rt>ある</rt></ruby>いて <ruby>10<rt>じゅっ</rt>分<rt>ぷん</rt></ruby>です。",
+   "kana": "いえから えきまで あるいて じゅっぷんです。",
+   "romaji": "ie kara eki made aruite juppun desu.",
+   "meaning": "從家裡走到車站要十分鐘。— から〜まで 第一次出現在 5/10〈助詞〉",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "公園に走りに行きます。",
+   "ja": "<ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>に <ruby>走<rt>はし</rt></ruby>りに <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "こうえんに はしりに いきます。",
+   "romaji": "kouen ni hashiri ni ikimasu.",
+   "meaning": "去公園跑步。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "荷物を置いて行きます。",
+   "ja": "<ruby>荷<rt>に</rt>物<rt>もつ</rt></ruby>を <ruby>置<rt>お</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "にもつを おいて いきます。",
+   "romaji": "nimotsu o oite ikimasu.",
+   "meaning": "我把行李放著（先走了）。— 置く → 置いて（く 變成 いて，跟 歩く 一樣）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "荷物をホテルに置いて行きます。",
+   "ja": "<ruby>荷<rt>に</rt>物<rt>もつ</rt></ruby>を ホテルに <ruby>置<rt>お</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "にもつを ホテルに おいて いきます。",
+   "romaji": "nimotsu o hoteru ni oite ikimasu.",
+   "meaning": "把行李放在飯店再出去。— 放在哪裡用 に；ホテル ← 英語 hotel",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "朝ご飯を食べて行きます。",
+   "ja": "<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べて <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "あさごはんを たべて いきます。",
+   "romaji": "asagohan o tabete ikimasu.",
+   "meaning": "吃完早餐再走。— 同樣是先做再出發",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "ジムまで歩いて来ました。",
+   "ja": "ジムまで <ruby>歩<rt>ある</rt></ruby>いて <ruby>来<rt>き</rt></ruby>ました。",
+   "kana": "ジムまで あるいて きました。",
+   "romaji": "jimu made aruite kimashita.",
+   "meaning": "（我人在健身房）是走路來的。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "雨だったので、走って帰りました。",
+   "ja": "<ruby>雨<rt>あめ</rt></ruby>だったので、<ruby>走<rt>はし</rt></ruby>って <ruby>帰<rt>かえ</rt></ruby>りました。",
+   "kana": "あめだったので、はしって かえりました。",
+   "romaji": "ame datta node, hashitte kaerimashita.",
+   "meaning": "因為下雨，所以跑回家了。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-aruite-ikimasu.html",
+     "title": "歩いて行きます"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "西新宿駅",
+   "ja": "<ruby>西<rt>にし</rt>新<rt>しん</rt>宿<rt>じゅく</rt>駅<rt>えき</rt></ruby>",
+   "kana": "にししんじゅくえき",
+   "romaji": "nishi-shinjuku eki",
+   "meaning": "西新宿站（東京地鐵丸之內線）；西 是訓讀 にし，新宿 是音讀",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "場所",
+    "交通"
+   ]
+  },
+  {
+   "text": "近く",
+   "ja": "<ruby>近<rt>ちか</rt></ruby>く",
+   "kana": "ちかく",
+   "romaji": "chikaku",
+   "meaning": "附近 — 形容詞 近い 變來的名詞，〇〇の近くの△△＝〇〇附近的△△",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "ジム",
+   "ja": "ジム",
+   "kana": "ジム",
+   "romaji": "jimu",
+   "meaning": "健身房 ← 英語 gym（gymnasium 的縮寫）；英語的 gym 也可以指學校體育館，日文單說 ジム 幾乎只指健身房",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "場所",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "一人で",
+   "ja": "<ruby>一人<rt>ひとり</rt></ruby>で",
+   "kana": "ひとりで",
+   "romaji": "hitori de",
+   "meaning": "一個人（做某事）— 這裡的 で 表示「以什麼人數、方式」；兩個人是 二人で（ふたりで）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "二時間",
+   "ja": "<ruby>2<rt>に</rt>時<rt>じ</rt>間<rt>かん</rt></ruby>",
+   "kana": "にじかん",
+   "romaji": "ni jikan",
+   "meaning": "兩個小時 — 時間 接在數字後面是「幾個小時」；2時（にじ）則是「兩點」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "數字"
+   ]
+  },
+  {
+   "text": "面白かったです",
+   "ja": "<ruby>面<rt>おも</rt>白<rt>しろ</rt></ruby>かったです",
+   "kana": "おもしろかったです",
+   "romaji": "omoshirokatta desu",
+   "meaning": "很有趣、很好玩 — い形容詞 面白い 的過去式（い → かった）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "混む",
+   "ja": "<ruby>混<rt>こ</rt></ruby>む",
+   "kana": "こむ",
+   "romaji": "komu",
+   "meaning": "變擁擠 — 講「現在很擠」要用 混んでいます；相反是 空いています（すいています）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "その後",
+   "ja": "その <ruby>後<rt>あと</rt></ruby>",
+   "kana": "その あと",
+   "romaji": "sono ato",
+   "meaning": "在那之後 — 講完一件事接下一件事時用",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "オーツラテ",
+   "ja": "オーツラテ",
+   "kana": "オーツラテ",
+   "romaji": "ootsu rate",
+   "meaning": "燕麥拿鐵 ← 英語 oats ＋ 義大利語 latte（牛奶）；ラテ 是 カフェラテ（caffè latte）的簡稱",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "たくさん",
+   "ja": "たくさん",
+   "kana": "たくさん",
+   "romaji": "takusan",
+   "meaning": "很多 — 放在動詞前面：たくさん人がいました／人がたくさんいました 都可以",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "並ぶ",
+   "ja": "<ruby>並<rt>なら</rt></ruby>ぶ",
+   "kana": "ならぶ",
+   "romaji": "narabu",
+   "meaning": "排隊、排成一列 — て形是 並んで",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "スーパー",
+   "ja": "スーパー",
+   "kana": "スーパー",
+   "romaji": "suupaa",
+   "meaning": "超市 ← 英語 supermarket 的縮寫；英語 super 本身是形容詞，日文的 スーパー 單獨用就是指超市",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "場所",
+    "購物"
+   ]
+  },
+  {
+   "text": "歩く",
+   "ja": "<ruby>歩<rt>ある</rt></ruby>く",
+   "kana": "あるく",
+   "romaji": "aruku",
+   "meaning": "走路 — て形是 歩いて",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "交通"
+   ]
+  },
+  {
+   "text": "走る",
+   "ja": "<ruby>走<rt>はし</rt></ruby>る",
+   "kana": "はしる",
+   "romaji": "hashiru",
+   "meaning": "跑 — 注意中文的「走」是 walk，日文的 走る 是 run；て形是 走って",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "交通"
+   ]
+  },
+  {
+   "text": "質問",
+   "ja": "<ruby>質<rt>しつ</rt>問<rt>もん</rt></ruby>",
+   "kana": "しつもん",
+   "romaji": "shitsumon",
+   "meaning": "問題、提問 — 課堂上想發問時說 質問です／質問があります",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "いいえ、混んでいませんでした。空いていました。",
+   "ja": "いいえ、<ruby>混<rt>こ</rt></ruby>んでいませんでした。<ruby>空<rt>す</rt></ruby>いていました。",
+   "kana": "いいえ、こんでいませんでした。すいていました。",
+   "romaji": "iie, konde imasen deshita. suite imashita.",
+   "meaning": "不會，人不多，很空。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
   {
    "text": "キャンプ",
    "ja": "キャンプ",
@@ -869,6 +1391,11 @@
      "date": "2026-10-09",
      "href": "lessons/2026-10-09-techou-kakeibo.html",
      "title": "新しい手帳を買いました"
+    },
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
     }
    ],
    "tags": [
@@ -12129,6 +12656,11 @@
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kuyakusho-te.html",
      "title": "区役所で申し込みました"
+    },
+    {
+     "date": "2026-10-21",
+     "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
+     "title": "ジムとカフェに行きました"
     }
    ],
    "tags": [

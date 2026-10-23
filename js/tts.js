@@ -95,19 +95,11 @@ window.JTalk = (function () {
 
   // ── 中斷正在播放的東西 ──
   let _currentAudio = null;
-  // pause() 不會觸發 ended，被中斷的 speak() 會永遠等下去；
-  // 留住它的 resolve，中斷時一起結束（跟讀播放器要靠這個才停得下來）
-  let _resolveCurrent = null;
   function stopAll() {
     try { speechSynthesis.cancel(); } catch {}
     if (_currentAudio) {
       try { _currentAudio.pause(); } catch {}
       _currentAudio = null;
-    }
-    if (_resolveCurrent) {
-      const r = _resolveCurrent;
-      _resolveCurrent = null;
-      r();
     }
   }
 
@@ -127,23 +119,18 @@ window.JTalk = (function () {
       _currentAudio = audio;
 
       await new Promise((resolve, reject) => {
-        const done = () => { _resolveCurrent = null; setBtnIdle(button); resolve(); };
-        _resolveCurrent = done;
         audio.addEventListener('ended', () => {
           if (_currentAudio === audio) _currentAudio = null;
-          done();
+          setBtnIdle(button);
+          resolve();
         });
-        audio.addEventListener('error', () => {
-          _resolveCurrent = null;
-          reject(new Error('local audio not available'));
-        });
+        audio.addEventListener('error', () => reject(new Error('local audio not available')));
         audio.play().catch(reject);
       });
       return; // ✓ 本地音檔播完
     } catch {
       // 2. fallback 到 speechSynthesis
       _currentAudio = null;
-      _resolveCurrent = null;
     }
 
     await new Promise((resolve) => {

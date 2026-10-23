@@ -467,8 +467,6 @@ rt {
 .lesson-link[href^="readings/"]:hover { border-color: var(--reading-accent, var(--accent)); }
 .lesson-link[href^="tadoku/"] { border-left-color: var(--tadoku-accent, var(--accent)); }
 .lesson-link[href^="tadoku/"]:hover { border-color: var(--tadoku-accent, var(--accent)); }
-.lesson-link[href^="shadowing/"] { border-left-color: var(--shadow-accent, var(--accent)); }
-.lesson-link[href^="shadowing/"]:hover { border-color: var(--shadow-accent, var(--accent)); }
 /* 文法課住在 lessons/ 底下，href 前綴分不出來，改用 .grammar class 手動標 */
 .lesson-link.grammar { border-left-color: var(--grammar-accent, var(--accent)); }
 .lesson-link.grammar:hover { border-color: var(--grammar-accent, var(--accent)); }
@@ -566,56 +564,4 @@ rt {
   .gojuon { gap: 6px; }
   .kana-big { font-size: 26px; }
   .kana-compare { grid-template-columns: 1fr; }
-}
-
-/* ── 跟讀播放器（shadowing/*，js/shadowing.js）── */
-.shadow-player {
-  position: sticky; top: 8px; z-index: 5;
-  background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--accent);
-  padding: 14px 16px; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(0,0,0,.05);
-}
-.sp-modes { display: flex; flex-wrap: wrap; gap: 6px; }
-.sp-mode {
-  flex: 1 1 auto; font: inherit; font-size: 14px; padding: 6px 10px; cursor: pointer;
-  background: transparent; color: var(--ink-soft); border: 1px solid var(--line);
-}
-.sp-mode.active { background: var(--accent); color: white; border-color: var(--accent); }
-.sp-hint { font-size: 13px; color: var(--ink-mute); margin: 8px 0 10px; line-height: 1.6; }
-.sp-transport { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.sp-btn {
-  font: inherit; font-size: 15px; padding: 8px 14px; min-height: 40px; cursor: pointer;
-  background: transparent; color: var(--accent); border: 1px solid var(--accent-soft);
-}
-.sp-btn:hover { border-color: var(--accent); }
-.sp-main { background: var(--accent); color: white; border-color: var(--accent); min-width: 104px; }
-.sp-rec { margin-left: auto; }
-.sp-rec.recording { background: #d92818; border-color: #d92818; color: white; animation: pulse .8s infinite; }
-.sp-status { font-size: 13px; color: var(--accent); margin-top: 8px; min-height: 1.4em; }
-.sp-options { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; font-size: 13px; color: var(--ink-soft); }
-.sp-options select { font: inherit; }
-
-.shadow-line {
-  display: flex; align-items: center; gap: 16px;
-  background: rgba(255,255,255,.55); border: 1px solid var(--line); border-left: 3px solid var(--line);
-  padding: 16px 20px; margin-bottom: 10px; transition: border-color .15s, background .15s;
-  scroll-margin-top: 220px;
-}
-.shadow-line.is-current { border-left-color: var(--accent); background: rgba(255,255,255,.9); }
-.shadow-text { flex: 1; }
-.shadow-ja { font-family: 'Shippori Mincho', serif; font-size: 22px; line-height: 1.6; color: var(--ink); }
-.shadow-romaji { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--accent); }
-.shadow-zh { font-size: 14px; color: var(--ink-soft); margin-top: 2px; }
-.shadow-note { font-size: 13px; color: var(--ink-mute); margin-top: 6px; line-height: 1.7; }
-.sp-no-furigana .shadow-line rt { visibility: hidden; }
-.sp-no-romaji .shadow-romaji { display: none; }
-/* 影子跟讀／看中文說：日文先模糊，點句子（或播完答案）才清楚 */
-.sp-hide-ja .shadow-line .shadow-ja,
-.sp-hide-ja .shadow-line .shadow-romaji { filter: blur(7px); transition: filter .2s; cursor: pointer; user-select: none; }
-.sp-hide-ja .shadow-line.revealed .shadow-ja,
-.sp-hide-ja .shadow-line.revealed .shadow-romaji { filter: none; }
-@media (max-width: 600px) {
-  .shadow-player { padding: 12px; }
-  .sp-rec { margin-left: 0; }
-  .shadow-line { padding: 14px 16px; }
-  .shadow-ja { font-size: 19px; }
 }

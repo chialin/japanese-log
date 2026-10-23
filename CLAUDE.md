@@ -29,7 +29,6 @@ my-name-katakana.html            ← 「私の名前」自我介紹（藍色主�
 lessons/YYYY-MM-DD-topic.html    ← 每日課程（棕色主題）
 readings/YYYY-MM-DD-topic.html   ← 閱讀筆記（深紅主題，真實日文短文素材；目前目錄為空）
 tadoku/YYYY-MM-DD-topic.html     ← 自製迷你多読小故事（藤色主題，跟 tadoku.html 同一套；同時仍列進 index.html 的 log/calendar）
-shadowing/YYYY-MM-DD-topic.html  ← 跟讀頁（浅葱主題，口語課的句子＋js/shadowing.js 播放器；列進 index.html 的 log/calendar）
 images/tadoku/*.png              ← 多読故事的插圖（いらすとや，自存不直連）
 data/vocab*.json                 ← 単語帳資料（vocab.json／vocab-tags.json／vocab-extra.json），build-vocab.mjs 產出＋登記
 anki/tango-*.apkg                ← 単語帳 Anki 牌組（各月＋all），build-anki-vocab.py 產出；
@@ -85,7 +84,6 @@ The calendar is built dynamically from `data-date` attributes. The script **auto
 | `lessons/*`（每日課程，含五十音行／主題／文法／概念） | `lessons/YYYY-MM-DD-<slug>.html` | **複製 [`lessons/_skeleton.html`](lessons/_skeleton.html)**，依「子類型」加上對應 CSS 區塊（見下表） |
 | 閱讀筆記（真實日文短文） | `readings/YYYY-MM-DD-topic.html` | **目前沒有現存範例**（唯一一篇 2026-05-05「蝶の話」已於 2026-07-28 刪除，要撈舊版看 `git log -- readings/`）；色票與 `shared.css` 的 `readings/` 規則都還在，新頁比照 `tadoku/*` 結構再套深紅色票 |
 | 自製迷你多読小故事（掛在多読入口底下） | `tadoku/YYYY-MM-DD-topic.html` | 複製 [tadoku-kami](tadoku/2026-07-27-tadoku-kami.html)，並在 [tadoku.html](tadoku.html) 的 `<ul>` 加一個 `<li>` 卡片 |
-| 跟讀（口語課的句子排成一段，搭播放器） | `shadowing/YYYY-MM-DD-topic.html` | 複製 [hikkoshi-shigoto](shadowing/2026-10-23-hikkoshi-shigoto.html)，句子用 `.shadow-line[data-text]`，頁面放一個空的 `.shadow-player` ＋載入 `js/shadowing.js` |
 | 一次性介紹頁 | 根目錄 | 複製 [my-name-katakana](my-name-katakana.html) |
 
 **Step 2 — 把 skeleton 內所有 `TODO:` 註解區塊填掉**（標題、masthead、divider、word-item …），不需要的 `<section>` 整段刪。色票寫死在 `:root`，**不要改**。
@@ -173,20 +171,6 @@ kana 卡片純視覺對照。只有單字／句子（含外來語）才有發音
 Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning)。
 綁 `.speed-control input` 控制傳給 `JTalk.speak` 的 `rate`。
 
-### 跟讀播放器 `js/shadowing.js`（2026-10-23 新增）
-
-`shadowing/*` 頁面用的播放器：抓頁面上所有 `.shadow-line[data-text]` 排成清單，
-在空的 `<div class="shadow-player">` 裡長出控制列，播放一樣走 `JTalk.speak`（先 mp3、再 speechSynthesis），
-所以 `generate-audio.mjs` 照跑就有 VOICEVOX 音檔。四個模式由淺到深：
-跟述（播一句停一下，停頓＝實際播放時間 × 倍數）／看字同步／影子跟讀（日文模糊）／看中文說（先說再播答案）；
-另有每句重複次數、振り仮名與羅馬字開關（存 localStorage）、錄音對照（MediaRecorder，錄音只留在瀏覽器）。
-
-> `JTalk.stopAll()` 會一併 resolve 被中斷的 `speak()`（`pause()` 不觸發 `ended`，
-> 不這樣做播放清單停不下來）。改 `tts.js` 時別把這段拿掉。
-
-素材來源是 Native Camp 課上**老師打在聊天框的句子**。教材原文有版權，不要整段照抄上站，改寫成意思相同的句子；
-老師的錄音也一律不進版控（老師的聲音是個人資料）。
-
 ### EPUB — 給 Supernote A5X 離線閱讀
 
 `node scripts/build-epub.mjs [輸出路徑.epub]`（2026-07-28 新增）把某一天的課程**重新編排**成一本 EPUB，
@@ -230,7 +214,6 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 | `tadoku.html`、`tadoku/*`（自製迷你多読） | 藤色 / 淡紫 | `#f8f6fc` | `#7a68a6` |
 | `grammar.html` ＋ 它收錄的文法課 | 青碧 / 松葉綠 | `#f2f7f0` | `#3f7a52` |
 | `vocab.html`（単語帳） | 小豆／海老茶 | `#fbf3f1` | `#96504b` |
-| `shadowing/*`（跟讀） | 浅葱 | `#f1f7f7` | `#2b7a85` |
 
 > **文法課用青碧色票**（2026-08-11 起）——`grammar.html` 索引頁，以及它 `<ul>` 裡收錄的每一篇
 > `lessons/*` 文法課，都換成青碧，進頁面一眼就知道「這篇在講規則」。
@@ -263,7 +246,6 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 --reading-accent: #8b3a3a;  /* readings/* 卡片左邊框 */
 --about-accent:   #2a5f9e;  /* my-name-katakana.html 卡片左邊框 */
 --tadoku-accent:  #7a68a6;  /* tadoku/* 卡片左邊框（shared.css 用 .lesson-link[href^="tadoku/"] 選取） */
---shadow-accent:  #2b7a85;  /* shadowing/* 卡片左邊框 */
 --grammar-accent: #3f7a52;  /* 文法課卡片左邊框；文法課住在 lessons/ 底下，href 前綴分不出來，
                                改用 .lesson-link.grammar 手動標 */
 ```

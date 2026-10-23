@@ -1,6 +1,158 @@
 {
- "generated": "2026-10-22",
+ "generated": "2026-10-23",
  "words": [
+  {
+   "text": "朝起きて、朝ご飯を食べます。",
+   "ja": "<ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます。",
+   "kana": "あさ おきて、あさごはんを たべます。",
+   "romaji": "asa okite, asagohan o tabemasu.",
+   "meaning": "早上起床，然後吃早餐。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-23",
+     "href": "lessons/2026-10-23-okite-tabete.html",
+     "title": "起きて、食べて"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "朝ご飯を食べて、歯を磨きます。",
+   "ja": "<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べて、<ruby>歯<rt>は</rt></ruby>を <ruby>磨<rt>みが</rt></ruby>きます。",
+   "kana": "あさごはんを たべて、はを みがきます。",
+   "romaji": "asagohan o tabete, ha o migakimasu.",
+   "meaning": "吃完早餐，然後刷牙。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-23",
+     "href": "lessons/2026-10-23-okite-tabete.html",
+     "title": "起きて、食べて"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "図書館に行って、勉強します。",
+   "ja": "<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>って、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します。",
+   "kana": "としょかんに いって、べんきょうします。",
+   "romaji": "toshokan ni itte, benkyou shimasu.",
+   "meaning": "去圖書館，然後讀書。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-23",
+     "href": "lessons/2026-10-23-okite-tabete.html",
+     "title": "起きて、食べて"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "歯を磨いて、朝ご飯を食べます。",
+   "ja": "<ruby>歯<rt>は</rt></ruby>を <ruby>磨<rt>みが</rt></ruby>いて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます。",
+   "kana": "はを みがいて、あさごはんを たべます。",
+   "romaji": "ha o migaite, asagohan o tabemasu.",
+   "meaning": "先刷牙，然後吃早餐。（跟第一節第二句的順序相反）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-23",
+     "href": "lessons/2026-10-23-okite-tabete.html",
+     "title": "起きて、食べて"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "昨日は朝起きて、朝ご飯を食べました。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は <ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べました。",
+   "kana": "きのうは あさ おきて、あさごはんを たべました。",
+   "romaji": "kinou wa asa okite, asagohan o tabemashita.",
+   "meaning": "昨天早上起床，然後吃了早餐。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-23",
+     "href": "lessons/2026-10-23-okite-tabete.html",
+     "title": "起きて、食べて"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "図書館まで歩いて行きます。",
+   "ja": "<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>まで <ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "としょかんまで あるいて いきます。",
+   "romaji": "toshokan made aruite ikimasu.",
+   "meaning": "走路去圖書館。（走路＝去的方式，兩個動作同時）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-23",
+     "href": "lessons/2026-10-23-okite-tabete.html",
+     "title": "起きて、食べて"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "朝起きて、朝ご飯を食べて、歯を磨いて、図書館に行って、勉強します。",
+   "ja": "<ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べて、<ruby>歯<rt>は</rt></ruby>を <ruby>磨<rt>みが</rt></ruby>いて、<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>って、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します。",
+   "kana": "あさ おきて、あさごはんを たべて、はを みがいて、としょかんに いって、べんきょうします。",
+   "romaji": "asa okite, asagohan o tabete, ha o migaite, toshokan ni itte, benkyou shimasu.",
+   "meaning": "早上起床、吃早餐、刷牙、去圖書館，然後讀書。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-23",
+     "href": "lessons/2026-10-23-okite-tabete.html",
+     "title": "起きて、食べて"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "朝起きて、朝ご飯を食べます。それから、図書館に行って、勉強します。",
+   "ja": "<ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます。それから、<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>って、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します。",
+   "kana": "あさ おきて、あさごはんを たべます。それから、としょかんに いって、べんきょうします。",
+   "romaji": "asa okite, asagohan o tabemasu. sorekara, toshokan ni itte, benkyou shimasu.",
+   "meaning": "早上起床，吃早餐。之後去圖書館讀書。— それから＝「之後、接著」，用來接下一句",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-23",
+     "href": "lessons/2026-10-23-okite-tabete.html",
+     "title": "起きて、食べて"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
   {
    "text": "買って",
    "ja": "<ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>って",

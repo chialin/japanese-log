@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>起きて、食べて — て形把動作照先後順序接起來</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table tr.key td{background:var(--accent-pale);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;line-height:2.1;}
+.tbl-scroll{overflow-x:auto;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">起きて</span>、<span class="accent">食べて</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 23</div>
+  <p class="page-subtitle"><ruby>朝<rt>あさ</rt></ruby><ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます：用て形把動作照先後順序接起來，以及它跟 歩いて行きます 差在哪裡</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    跟別人講自己早上做了哪些事，例如「起床，吃早餐，刷牙，然後去圖書館讀書」，日文會用て形把這些動作一個一個接起來。
+    這篇的例句是 Scarlett 學完 <a href="2026-10-22-te-kei.html" style="color:var(--accent);">10/22〈て形怎麼變〉</a>之後自己造的句子。<br>
+    <a href="2026-10-21-aruite-ikimasu.html" style="color:var(--accent);">10/21〈歩いて行きます〉</a>的て形是在講「用什麼方式去」，走路和去是同時發生的。
+    這篇的て形用法不一樣，前一個動作做完，才做下一個，講的是先後順序，中文會翻成「…，然後…」。
+    這篇先把早上的行程排出來，看て形怎麼一個接一個串下去，再跟 歩いて行きます 放在一起比較，最後整理這幾個動詞的て形怎麼變。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="narabe">一、以早上的行程為主軸，把動作一個接一個排出來</div>
+
+  <p class="lead">
+    先看 Scarlett 造的三個句子。每一句都有兩個動作，前面的動作變成て形，後面的動作用 ます 收尾。
+    三句都是前一件事先做完，才做下一件事。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="朝起きて、朝ご飯を食べます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>き<span class="j-mark">て</span>、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます。</div>
+        <div class="word-romaji">asa okite, asagohan o tabemasu.</div>
+        <div class="word-meaning">早上起床，然後吃早餐。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="朝ご飯を食べて、歯を磨きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べ<span class="j-mark">て</span>、<ruby>歯<rt>は</rt></ruby>を <ruby>磨<rt>みが</rt></ruby>きます。</div>
+        <div class="word-romaji">asagohan o tabete, ha o migakimasu.</div>
+        <div class="word-meaning">吃完早餐，然後刷牙。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="図書館に行って、勉強します。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>っ<span class="j-mark">て</span>、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します。</div>
+        <div class="word-romaji">toshokan ni itte, benkyou shimasu.</div>
+        <div class="word-meaning">去圖書館，然後讀書。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="formula">
+    <h4>句型公式</h4>
+    <div class="fx">動作 A 的<b>て形</b>、動作 B 的<b>ます形</b><span class="arw">→</span>先做 A，然後做 B</div>
+  </div>
+
+  <div class="note">
+    📝 這三句用到的詞都學過：歯を磨きます 在 <a href="2026-08-28-ha-o-migakimasu.html" style="color:var(--accent);">8/28〈歯を磨きます〉</a>，
+    朝ご飯 在 <a href="2026-07-12-colors-asagohan.html" style="color:var(--accent);">7/12〈色と朝〉</a>，
+    図書館 在 <a href="2026-06-28-tokyo-life-vocab.html" style="color:var(--accent);">6/28〈東京生活單字〉</a>。
+    歯（は，ha）是名詞「牙齒」，唸 ha；句子裡當助詞用的 は 才唸 wa。
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 図書館 的 館 跟其他場館是同一個 かん</strong><br>
+    <span class="compare">図書館（としょかん）</span>、<a href="2026-08-18-machi-tana-shouhin.html">8/18 体育館（たいいくかん）</a>、
+    <a href="2026-10-13-tsuri-kyanpu-suizokukan.html">10/13 水族館（すいぞくかん）</a>，
+    最後的 館 都唸 かん，台語的 館 kuan 唸起來也很接近。看到「〇〇館」是一棟建築，就唸 〇〇かん。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="junban">二、て形接起來的動作是照順序發生的</div>
+
+  <p class="lead">
+    用て形接起來的兩個動作，寫在前面的就是先發生的。所以把順序換過來，意思也跟著換：
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="歯を磨いて、朝ご飯を食べます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>歯<rt>は</rt></ruby>を <ruby>磨<rt>みが</rt></ruby>い<span class="j-mark">て</span>、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます。</div>
+        <div class="word-romaji">ha o migaite, asagohan o tabemasu.</div>
+        <div class="word-meaning">先刷牙，然後吃早餐。（跟第一節第二句的順序相反）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    跟 10/21 學到的一樣，て形本身不帶時間，也不帶禮貌，這些都交給最後一個動詞。
+    要講昨天做的事，只要把最後的 食べます 改成 食べました，前面的 起きて 不用動：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>前面的動作（て形，不變）</th><th>最後的動作（負責收尾）</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>起床，然後吃早餐</td>
+        <td class="col-ja"><b><ruby>起<rt>お</rt></ruby>きて</b></td>
+        <td class="col-ja"><ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます</td>
+      </tr>
+      <tr>
+        <td>起床，然後吃了早餐</td>
+        <td class="col-ja"><b><ruby>起<rt>お</rt></ruby>きて</b></td>
+        <td class="col-ja"><ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べ<b>ました</b></td>
+      </tr>
+      <tr>
+        <td>起床，然後沒吃早餐</td>
+        <td class="col-ja"><b><ruby>起<rt>お</rt></ruby>きて</b></td>
+        <td class="col-ja"><ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べ<b>ませんでした</b></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="section">
+    <div class="word-item" data-text="昨日は朝起きて、朝ご飯を食べました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は <ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べ<span class="j-mark">ました</span>。</div>
+        <div class="word-romaji">kinou wa asa okite, asagohan o tabemashita.</div>
+        <div class="word-meaning">昨天早上起床，然後吃了早餐。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="taihi">三、跟 歩いて行きます 的差別，在兩個動作是不是同時發生</div>
+
+  <p class="lead">
+    兩種用法的句子長得一樣，都是「て形＋另一個動詞」，差別在兩個動作的時間關係。
+    歩いて行きます 是走路的同時就在「去」，走路是去的方式；
+    起きて、食べます 是起床這件事做完了，才開始吃早餐。
+  </p>
+
+  <p class="lead">
+    同樣用到 行く，放的位置不同，意思也不同。下面兩句都跟圖書館有關，可以對照著看：
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="図書館まで歩いて行きます。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>まで <ruby>歩<rt>ある</rt></ruby>い<span class="j-mark">て</span> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="word-romaji">toshokan made aruite ikimasu.</div>
+        <div class="word-meaning">走路去圖書館。（走路＝去的方式，兩個動作同時）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="図書館に行って、勉強します。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>っ<span class="j-mark">て</span>、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します。</div>
+        <div class="word-romaji">toshokan ni itte, benkyou shimasu.</div>
+        <div class="word-meaning">去圖書館，然後讀書。（先到圖書館，再讀書）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    分辨的方法是把句子翻成中文，看て形那裡比較像「〜著」還是「〜，然後」：
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>例句</th><th>中文</th><th>兩個動作的關係</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます</td>
+        <td>走<strong>著</strong>去</td>
+        <td><strong>同時</strong>：走路就是去的方式</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>走<rt>はし</rt></ruby>って <ruby>行<rt>い</rt></ruby>きます</td>
+        <td>跑<strong>著</strong>去</td>
+        <td><strong>同時</strong>：跑步就是去的方式</td>
+      </tr>
+      <tr class="key">
+        <td class="col-ja"><ruby>起<rt>お</rt></ruby>きて、<ruby>食<rt>た</rt></ruby>べます</td>
+        <td>起床，<strong>然後</strong>吃</td>
+        <td><strong>先後</strong>：起床做完，才吃早餐</td>
+      </tr>
+      <tr class="key">
+        <td class="col-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>って、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します</td>
+        <td>去圖書館，<strong>然後</strong>讀書</td>
+        <td><strong>先後</strong>：到了圖書館，才讀書</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    📝 10/21 那篇第七節其實已經碰到先後順序的用法：<span class="compare">荷物を置いて行きます</span>（nimotsu o oite ikimasu，把行李放著再走）、
+    <span class="compare">朝ご飯を食べて行きます</span>（asagohan o tabete ikimasu，吃完早餐再走）。
+    那兩句的最後一個動詞剛好是 行きます，所以放在那篇一起講；換成 磨きます、勉強します 這些不是移動的動詞，就是本篇的用法。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tsunagu">四、て形可以一直往下接，只有最後一個動詞收尾</div>
+
+  <p class="lead">
+    事情不只兩件的時候，就繼續用て形往下接，一句話裡要接幾個動作都可以。
+    中間的動詞全部變成て形，只有最後一個用 ます 收尾，時間和禮貌也都看最後那一個。
+    把第一節的三句串成一句是這樣：
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="朝起きて、朝ご飯を食べて、歯を磨いて、図書館に行って、勉強します。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>き<span class="j-mark">て</span>、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べ<span class="j-mark">て</span>、<ruby>歯<rt>は</rt></ruby>を <ruby>磨<rt>みが</rt></ruby>い<span class="j-mark">て</span>、<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>っ<span class="j-mark">て</span>、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します。</div>
+        <div class="word-romaji">asa okite, asagohan o tabete, ha o migaite, toshokan ni itte, benkyou shimasu.</div>
+        <div class="word-meaning">早上起床、吃早餐、刷牙、去圖書館，然後讀書。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>順序</th><th>動作</th><th>在句子裡的樣子</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>起床</td><td class="col-ja"><b><ruby>起<rt>お</rt></ruby>きて</b>（て形）</td></tr>
+      <tr><td>2</td><td>吃早餐</td><td class="col-ja"><b><ruby>食<rt>た</rt></ruby>べて</b>（て形）</td></tr>
+      <tr><td>3</td><td>刷牙</td><td class="col-ja"><b><ruby>磨<rt>みが</rt></ruby>いて</b>（て形）</td></tr>
+      <tr><td>4</td><td>去圖書館</td><td class="col-ja"><b><ruby>行<rt>い</rt></ruby>って</b>（て形）</td></tr>
+      <tr class="key"><td>5</td><td>讀書</td><td class="col-ja"><ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby><b>します</b>（收尾）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    串得太長會不好懂，平常講話大概接到三、四個動作就會斷句。斷句的時候，前一句用 ます 收尾，下一句再重新開始：
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="朝起きて、朝ご飯を食べます。それから、図書館に行って、勉強します。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます。<span class="j-mark">それから</span>、<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>って、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します。</div>
+        <div class="word-romaji">asa okite, asagohan o tabemasu. sorekara, toshokan ni itte, benkyou shimasu.</div>
+        <div class="word-meaning">早上起床，吃早餐。之後去圖書館讀書。— それから＝「之後、接著」，用來接下一句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="henka">五、這幾個動詞的て形是這樣變的</div>
+
+  <p class="lead">
+    本篇用到的五個動詞，剛好涵蓋了 10/22 那張表的四種情況：一段動詞、く → いて、例外的 行く，還有 する。
+    其中 起きる 最容易弄錯，下面另外說明。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>辭書形</th><th>ます形</th><th>類別與規則</th><th>て形</th></tr>
+    </thead>
+    <tbody>
+      <tr class="key">
+        <td class="col-ja"><ruby>起<rt>お</rt></ruby>きる（起床）</td>
+        <td class="col-ja"><ruby>起<rt>お</rt></ruby>きます</td>
+        <td>一段，去掉 る 加 て</td>
+        <td class="col-ja"><b><ruby>起<rt>お</rt></ruby>きて</b> okite</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>食<rt>た</rt></ruby>べる（吃）</td>
+        <td class="col-ja"><ruby>食<rt>た</rt></ruby>べます</td>
+        <td>一段，去掉 る 加 て</td>
+        <td class="col-ja"><b><ruby>食<rt>た</rt></ruby>べて</b> tabete</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>磨<rt>みが</rt></ruby>く（刷、磨）</td>
+        <td class="col-ja"><ruby>磨<rt>みが</rt></ruby>きます</td>
+        <td>五段，く → いて</td>
+        <td class="col-ja"><b><ruby>磨<rt>みが</rt></ruby>いて</b> migaite</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>行<rt>い</rt></ruby>く（去）</td>
+        <td class="col-ja"><ruby>行<rt>い</rt></ruby>きます</td>
+        <td>例外，不是 行いて</td>
+        <td class="col-ja"><b><ruby>行<rt>い</rt></ruby>って</b> itte</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>する（讀書）</td>
+        <td class="col-ja"><ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します</td>
+        <td>する → して</td>
+        <td class="col-ja"><b><ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>して</b> benkyou shite</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>起きる 是一段動詞，要變成 起きて，不是 起って</strong><br>
+    從ます形看，<span class="compare">起<b>き</b>ます</span> 去掉ます後是い段的 き，跟五段的 <span class="compare">歩<b>き</b>ます</span> 長得一樣，
+    很容易照 き → いて 變成 起いて，或照 る → って 變成 起って。
+    但 起きる 是一段動詞，去掉 る 直接加 て 就好，變成 <span class="compare">起きて</span>。
+    這就是 <a href="2026-10-22-te-kei.html" style="color:var(--accent);">10/22〈て形怎麼變〉</a>第二節提醒的「い段結尾也可能是一段動詞」，
+    借りる、見る 也是同一類，要一個一個記。
+  </div>
+
+  <a href="2026-10-22-te-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">て形怎麼變 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/22 うつる って、むぶぬ んで、く いて、ぐ いで、す して；行く 是例外</span>
+  </a>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">六、有幾個地方容易講錯</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>✗ 錯誤</th><th>✓ 正確</th><th>原因</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja">朝 <s>起って</s>、…</td>
+        <td class="col-ja">朝 <b>起きて</b>、…</td>
+        <td>起きる 是一段動詞，去掉 る 加 て。</td>
+      </tr>
+      <tr>
+        <td class="col-ja">歯を <s>磨きて</s>、…</td>
+        <td class="col-ja">歯を <b>磨いて</b>、…</td>
+        <td>磨く 是五段動詞，く 要換成 いて，不能在ます形後面直接加 て。</td>
+      </tr>
+      <tr>
+        <td class="col-ja">図書館に <s>行いて</s>、…</td>
+        <td class="col-ja">図書館に <b>行って</b>、…</td>
+        <td>行く 是例外，雖然是 く 結尾，て形卻是 行って。</td>
+      </tr>
+      <tr>
+        <td class="col-ja">朝ご飯を <s>食べます</s>、歯を磨きます。</td>
+        <td class="col-ja">朝ご飯を <b>食べて</b>、歯を磨きます。</td>
+        <td>一句話裡只有最後一個動詞用 ます，中間的動詞要變成て形。</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、整理成一張表</div>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr class="key">
+        <td>先做 A，然後做 B</td>
+        <td>A て形、B ます</td>
+        <td class="col-ja"><ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます</td>
+      </tr>
+      <tr class="key">
+        <td>一連串的動作</td>
+        <td>A て形、B て形、C て形、D ます</td>
+        <td class="col-ja"><ruby>食<rt>た</rt></ruby>べて、<ruby>磨<rt>みが</rt></ruby>いて、<ruby>行<rt>い</rt></ruby>って、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します</td>
+      </tr>
+      <tr>
+        <td>講過去做過的事</td>
+        <td>只改最後一個動詞</td>
+        <td class="col-ja"><ruby>起<rt>お</rt></ruby>きて、<ruby>食<rt>た</rt></ruby>べました</td>
+      </tr>
+      <tr>
+        <td>用某個方式去（10/21）</td>
+        <td>移動方式的て形 ＋ 行きます</td>
+        <td class="col-ja"><ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きます</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>吃完早餐，然後去公司。（提示：会社に行きます）</li>
+      <li>去圖書館，然後看書。（提示：本を読みます）</li>
+      <li>回家，然後睡覺。（提示：帰る、寝る）</li>
+      <li>昨天去圖書館讀了書。（提示：最後一個動詞改過去式）</li>
+      <li>下面兩句的て形，哪一句是「方式」，哪一句是「先後順序」？<br>
+        (a) 駅まで走って行きます。 (b) 歯を磨いて、寝ます。</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. 朝ご飯を食べて、会社に行きます。<br>asagohan o tabete, kaisha ni ikimasu.</p>
+      <p>2. 図書館に行って、本を読みます。<br>toshokan ni itte, hon o yomimasu.</p>
+      <p>3. 家に帰って、寝ます。（帰る 是五段，る → って；寝る 是一段，用 寝ます 收尾）<br>ie ni kaette, nemasu.</p>
+      <p>4. 昨日は図書館に行って、勉強しました。<br>kinou wa toshokan ni itte, benkyou shimashita.</p>
+      <p>5. (a) 是方式：跑著去車站（eki made hashitte ikimasu）。(b) 是先後順序：刷完牙，然後睡覺（ha o migaite, nemasu）。</p>
+    </details>
+  </div>
+
+  <a href="2026-10-21-aruite-ikimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">歩いて行きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/21 て形的另一種用法：用什麼方式去，兩個動作同時發生</span>
+  </a>
+
+  <a href="2026-10-22-te-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">て形怎麼變 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/22 起きて、磨いて、行って 是怎麼變出來的</span>
+  </a>
+
+  <a href="2026-08-28-ha-o-migakimasu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">歯を磨きます <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/28 第一次學 歯を磨きます 的地方</span>
+  </a>
+
+  <a href="2026-09-02-teimasu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">〜ています <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/2 第一次學て形變法的地方</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

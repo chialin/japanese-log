@@ -132,7 +132,6 @@
       }
     }
     stop();
-    current = 0;   // 下一次「開始」從第一句重來
     statusEl.textContent = '全部唸完了，可以換一個模式再來一次';
   }
 

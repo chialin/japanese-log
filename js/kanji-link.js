@@ -6,7 +6,7 @@
   if (!idx) return;
 
   const HOT = 3;                       // 出現天數門檻
-  const prefix = /\/(lessons|readings|tadoku)\//.test(location.pathname) ? '../' : '';
+  const prefix = /\/(lessons|readings|tadoku|shadowing)\//.test(location.pathname) ? '../' : '';
   const isKanji = (ch) => {
     const c = ch.codePointAt(0);
     return (c >= 0x4e00 && c <= 0x9fff) || (c >= 0x3400 && c <= 0x4dbf);

@@ -3,7 +3,7 @@
 // Web Component，模板字串內嵌在這支檔案裡（不用 fetch，file:// 開檔也沒有 CORS 問題）
 
 function siteChromePrefix() {
-  return /\/(lessons|readings|tadoku)\//.test(location.pathname) ? '../' : '';
+  return /\/(lessons|readings|tadoku|shadowing)\//.test(location.pathname) ? '../' : '';
 }
 
 function isHomePage() {
@@ -156,7 +156,7 @@ document.querySelectorAll('.speed-control').forEach(upgradeSpeedControl);
 
 // ── 漢字連結：只在課程／閱讀／多読頁載入，先載 index 再載邏輯 ──
 (function () {
-  if (!/\/(lessons|readings|tadoku)\//.test(location.pathname)) return;
+  if (!/\/(lessons|readings|tadoku|shadowing)\//.test(location.pathname)) return;
   const prefix = '../';
   const load = (src) =>
     new Promise((res) => {

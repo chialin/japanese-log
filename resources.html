@@ -3,11 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>資源 · Resources — 手帖與練字帖</title>
+<title>資源 · Resources — 會話・多読・速查表・練字帖</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <style>
 /* root 資源頁 棕橘色票（跟 lessons/* 同一套） */
 :root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 會話類：金茶色（跟對話裡「私」那欄、同一天連結卡同一個色），一眼跟其他資源分開 */
+.kaiwa{--kaiwa:#a9762a;}
+.kaiwa .divider{color:var(--kaiwa);font-weight:600;}
+.kaiwa .divider::before,.kaiwa .divider::after{background:var(--kaiwa);opacity:.45;}
+.kaiwa .lesson-link{border-left-color:var(--kaiwa);background:rgba(169,118,42,.06);}
+.kaiwa .lesson-link:hover{border-color:var(--kaiwa);}
+.kaiwa .lesson-link:hover .lesson-title .arrow{color:var(--kaiwa);}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +29,23 @@
 
   <h1 class="page-title">資 <span class="accent">源</span></h1>
   <div class="page-meta">資源 · Resources</div>
-  <p class="page-subtitle">手帖與練字帖資源</p>
+  <p class="page-subtitle">會話、多読、速查表與練字帖</p>
+
+  <section class="kaiwa">
+    <div class="divider">會話 · Conversation</div>
+
+    <ul class="lesson-list">
+      <li>
+        <a class="lesson-link" href="tenin.html">
+          <div class="lesson-meta">店員の言葉 · Shop Phrases Index</div>
+          <div class="lesson-title">店員的對話・總整理 <span class="arrow">→</span></div>
+          <div class="lesson-summary">進門・內用外帶・點餐・結帳・其他的店・店員敬語，照情境列出常聽到的句子和講到它們的課；店員對話手帖（含 PDF）也從這裡進去</div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <div class="divider">多読 · Tadoku</div>
 
   <ul class="lesson-list">
     <li>
@@ -38,6 +62,11 @@
         <div class="lesson-summary">一頁一場景的自製小故事，全部可發音 — 原導覽列「多読」入口移到這裡</div>
       </a>
     </li>
+  </ul>
+
+  <div class="divider">速查表 · Reference</div>
+
+  <ul class="lesson-list">
     <li>
       <a class="lesson-link" href="jikan.html">
         <div class="lesson-meta">時間 · Reference</div>
@@ -52,20 +81,11 @@
         <div class="lesson-summary">學過的字在哪些課出現過、各唸什麼 — 音讀多半跟台語相通</div>
       </a>
     </li>
-    <li>
-      <a class="lesson-link" href="tenin.html">
-        <div class="lesson-meta">店員の言葉 · Shop Phrases Index</div>
-        <div class="lesson-title">店員的對話・總整理 <span class="arrow">→</span></div>
-        <div class="lesson-summary">進門・內用外帶・點餐・結帳・其他的店・店員敬語，照情境列出常聽到的句子和講到它們的課</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="store-phrasebook.html">
-        <div class="lesson-meta">店員さんとの会話帖 · Phrases for the Counter</div>
-        <div class="lesson-title">店員對話手帖 <span class="arrow">→</span></div>
-        <div class="lesson-summary">餐廳・咖啡・花店・超市・便利商店・拉麵店 — 店員會問什麼、你可以怎麼回（可發音，另附 PDF）</div>
-      </a>
-    </li>
+  </ul>
+
+  <div class="divider">練字帖 · Writing Practice</div>
+
+  <ul class="lesson-list">
     <li>
       <a class="lesson-link" href="slowpaper.html">
         <div class="lesson-meta">slowpaper · ひらがな練字帖（大部分免費）</div>
@@ -77,13 +97,6 @@
         <div class="lesson-meta">ちびむすドリル · 幼児の学習素材館（日本・免費）</div>
         <div class="lesson-title">假名練字帖 · 知育プリント <span class="arrow">→</span></div>
         <div class="lesson-summary">日本免費教材站，PDF 直接下載列印 — 平假名／片假名田字格練字、筆順、數字與時鐘</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="credits.html">
-        <div class="lesson-meta">素材與出處 · Credits</div>
-        <div class="lesson-title">素材與出處說明 <span class="arrow">→</span></div>
-        <div class="lesson-summary">全站插圖（いらすとや / AI 生成客製插圖）、語音發音（VOICEVOX）與開源字型出處彙整</div>
       </a>
     </li>
   </ul>

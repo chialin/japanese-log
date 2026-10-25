@@ -22,8 +22,14 @@ There is no build, lint, or test step. Development workflow:
 index.html                       ← 首頁：calendar + log（棕色主題）
 shared.css                       ← 全站共用元件樣式（masthead/word-item/play-btn/...）
 vocab.html                       ← 単語帳：全站單字索引（檢索），小豆色票，自動產生資料靠 build-vocab
-resources.html                   ← 資源入口：多読起步清單、時間速記表、店員對話帖、練字帖（棕色主題）
+resources.html                   ← 資源入口，分四類：會話／多読／速查表／練字帖（棕色主題）；
+                                   **會話類一律置頂**，包在 `<section class="kaiwa">` 裡用金茶 #a9762a
+                                   標示（分隔線＋卡片左邊框）；之後新增的會話整理頁都放進這一區；
+                                   credits.html 只放在頁尾，不在這裡列卡片
 jikan.html                       ← 時間速記表：星期／日期／月份／時刻／期間（棕色主題，從 resources.html 連過去）
+tenin.html                       ← 店員對話總整理：照情境（進門／內用外帶／點餐／結帳／其他的店／敬語）
+                                   列句子＋相關課程（棕色主題，手寫索引頁）；store-phrasebook.html 從這裡進，
+                                   不再單獨掛在 resources.html。**新增店員相關的課時要手動加進對應的情境**
 tadoku.html                      ← 多読入口：自製迷你多読小故事清單（藤色主題）
 my-name-katakana.html            ← 「私の名前」自我介紹（藍色主題）
 lessons/YYYY-MM-DD-topic.html    ← 每日課程（棕色主題）

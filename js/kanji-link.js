@@ -38,7 +38,7 @@
       a.className = 'kanji-chip';
       a.dataset.kanji = ch;
       a.href = link(ch);
-      a.textContent = `${ch} ×${idx[ch]} →`;
+      a.textContent = `${ch} →`;
       // 徽章統一收在卡片最後的 .kanji-chips 一整列裡 —— 徽章一多就不會把
       // 日文句子擠成一字一行（卡片是 flex 時靠 flex-basis:100% 自成一列）。
       // 放進卡片的文字欄（block），不要當 flex 卡片的直接子節點 ——

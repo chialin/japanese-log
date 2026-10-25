@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>店員的對話・總整理 — 照情境排好的店員用語與課程</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+/* root 資源頁 棕橘色票（跟 lessons/* 同一套） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;
+  --accent-deep:#9c4416;}   /* 深橘 — Index 標題用 */
+
+/* Index — 跟 jikan.html 同一套 */
+.toc{margin:22px 0 30px;}
+.toc-h{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;margin-bottom:12px;
+  border-bottom:2px solid var(--accent-deep);}
+.toc-h .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;
+  letter-spacing:.26em;color:var(--accent-deep);text-transform:uppercase;}
+.toc-list{list-style:none;margin:0;padding:0;}
+.toc-list a{display:block;text-decoration:none;color:var(--ink);padding:7px 0;
+  font-family:'Shippori Mincho',serif;font-size:19px;font-weight:600;letter-spacing:.04em;
+  transition:color .15s,padding-left .15s;}
+.toc-list a:hover{color:var(--accent);padding-left:6px;}
+.toc-n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
+  color:var(--accent);margin-right:9px;vertical-align:super;letter-spacing:.06em;}
+.toc-s{font-family:'Klee One','Shippori Mincho',serif;font-size:12px;
+  color:var(--ink-mute);font-weight:400;margin-left:10px;}
+.divider[id]{scroll-margin-top:24px;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+/* 句子表：誰說／日文＋羅馬拼音／意思 */
+.joshi-table{width:100%;border-collapse:collapse;margin:16px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td:first-child{white-space:nowrap;width:1%;color:var(--ink-mute);}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja .r{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);line-height:1.4;}
+.joshi-table tr.you td:first-child{color:#a9762a;}
+
+.sub-h{font-family:'Shippori Mincho',serif;font-size:15px;font-weight:700;color:var(--ink-mute);margin:20px 0 8px;letter-spacing:.05em;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<script src="js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">店員</span>的對話・總整理</h1>
+  <div class="page-meta">店員用語 · Shop Phrases · Index</div>
+  <p class="page-subtitle">進門、點餐、結帳、等位子，照情境把店員會說的話和學過的課排在一起</p>
+
+  <div class="tip">
+    💡 <strong>這頁是做什麼用的</strong><br>
+    跟店員有關的句子分散在好幾篇課裡，有的是課堂上學的，有的是自己在店裡聽到回來查的。
+    這頁照「在店裡會碰到的順序」把它們排好：每個情境先列出店員最常說的幾句、你可以怎麼回，
+    下面再列出講到這些句子的課，想複習哪一段就點進去。
+    每一句的發音都在各課的頁面裡。
+  </div>
+
+  <nav class="toc">
+    <div class="toc-h"><span class="en">Index</span></div>
+    <ul class="toc-list">
+      <li><a href="#hairu"><span class="toc-n">01</span>進門、帶位、等位子<span class="toc-s">いらっしゃいませ・お待ちください</span></a></li>
+      <li><a href="#tennai"><span class="toc-n">02</span>內用還是外帶<span class="toc-s">店内・持ち帰り</span></a></li>
+      <li><a href="#chuumon"><span class="toc-n">03</span>點餐<span class="toc-s">ください・にします・かしこまりました</span></a></li>
+      <li><a href="#kaikei"><span class="toc-n">04</span>結帳<span class="toc-s">よろしいですか・袋・このまま</span></a></li>
+      <li><a href="#mise"><span class="toc-n">05</span>其他的店<span class="toc-s">花屋・パン屋・美容院</span></a></li>
+      <li><a href="#keigo"><span class="toc-n">06</span>店員才會用的敬語<span class="toc-s">かしこまる・よろしい・召し上がる</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hairu">一、進門、帶位、等位子</div>
+
+  <p class="lead">
+    一進門店員會先打招呼、問幾位。店裡客滿或要確認位子時，就會請你等一下，
+    要注意的是 こちらで 和 そのまま 要你做的事不一樣。
+  </p>
+
+  <table class="joshi-table">
+    <thead><tr><th>誰說</th><th>日文</th><th>意思</th></tr></thead>
+    <tbody>
+      <tr><td>店員</td><td class="col-ja">いらっしゃいませ<span class="r">irasshaimase</span></td><td>歡迎光臨。不用回話，點個頭就好</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>何<rt>なん</rt>名<rt>めい</rt>様<rt>さま</rt></ruby>ですか<span class="r">nanmei-sama desu ka</span></td><td>請問幾位？</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja"><ruby>一人<rt>ひとり</rt></ruby>です／<ruby>二人<rt>ふたり</rt></ruby>です<span class="r">hitori desu / futari desu</span></td><td>一位／兩位</td></tr>
+      <tr><td>店員</td><td class="col-ja">こちらで <ruby>少々<rt>しょうしょう</rt></ruby> お<ruby>待<rt>ま</rt></ruby>ちください<span class="r">kochira de shoushou omachi kudasai</span></td><td>請在這裡稍等（走到店員指的地方）</td></tr>
+      <tr><td>店員</td><td class="col-ja">その まま お<ruby>待<rt>ま</rt></ruby>ちください<span class="r">sono mama omachi kudasai</span></td><td>請在原地稍等（不用動）</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja">カウンター<ruby>席<rt>せき</rt></ruby>を お<ruby>願<rt>ねが</rt></ruby>いします<span class="r">kauntaa-seki o onegai shimasu</span></td><td>我想坐吧檯座位</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-h">講到這些句子的課</div>
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-kashikomarimashita-kono-mama.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 10 / 25</div>
+        <div class="lesson-title">生活篇 — 與店員的對話 <span class="arrow">→</span></div>
+        <div class="lesson-summary">餐廳門口等位子：こちらで vs そのまま、お掛けになって・お名前を書いてお待ちください</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-29-seki.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 08 / 29</div>
+        <div class="lesson-title">席 — 店裡的五種座位 <span class="arrow">→</span></div>
+        <div class="lesson-summary">座敷・椅子席・カウンター席，以及 座敷は空いていますか 這類問位子的句子</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="store-phrasebook.html#ch0">
+        <div class="lesson-meta">店員さんとの会話帖 · 序章・第一章</div>
+        <div class="lesson-title">進門開口的招呼、餐廳內用 <span class="arrow">→</span></div>
+        <div class="lesson-summary">いらっしゃいませ、何名様ですか，以及 すみません 怎麼叫店員</div>
+      </a>
+    </li>
+  </ul>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tennai">二、內用還是外帶</div>
+
+  <p class="lead">
+    在咖啡店、速食店點餐，店員通常會先問你要在店裡吃，還是要帶走。
+  </p>
+
+  <table class="joshi-table">
+    <thead><tr><th>誰說</th><th>日文</th><th>意思</th></tr></thead>
+    <tbody>
+      <tr><td>店員</td><td class="col-ja"><ruby>店<rt>てん</rt>内<rt>ない</rt></ruby>で お<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がりですか<span class="r">tennai de omeshiagari desu ka</span></td><td>在店裡用嗎？</td></tr>
+      <tr><td>店員</td><td class="col-ja">お<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>りですか<span class="r">omochikaeri desu ka</span></td><td>要外帶嗎？</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja"><ruby>店<rt>てん</rt>内<rt>ない</rt></ruby>で／<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>りで<span class="r">tennai de / mochikaeri de</span></td><td>內用／外帶</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-h">講到這些句子的課</div>
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-16-tennai-mochikaeri.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 06 / 16</div>
+        <div class="lesson-title">店内 or 持ち帰り <span class="arrow">→</span></div>
+        <div class="lesson-summary">內用還是外帶，結帳必聽的問句與回答</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-18-tenin-keywords.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 06 / 18</div>
+        <div class="lesson-title">店員會話 5 個關鍵 <span class="arrow">→</span></div>
+        <div class="lesson-summary">持ち帰り 是 持つ＋帰る 兩個動詞黏起來，另外有 ます、〜ぐらいで、いりますか</div>
+      </a>
+    </li>
+  </ul>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="chuumon">三、點餐</div>
+
+  <p class="lead">
+    點餐時你只要說「〇〇をください」或「〇〇にします」，店員接下來會用 かしこまりました 回你，
+    點完再用 以上でよろしいですか 確認。
+  </p>
+
+  <table class="joshi-table">
+    <thead><tr><th>誰說</th><th>日文</th><th>意思</th></tr></thead>
+    <tbody>
+      <tr><td>店員</td><td class="col-ja">ご<ruby>注<rt>ちゅう</rt>文<rt>もん</rt></ruby>は お<ruby>決<rt>き</rt></ruby>まりですか<span class="r">gochuumon wa okimari desu ka</span></td><td>決定好要點什麼了嗎？</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>何<rt>なに</rt></ruby>に しますか<span class="r">nani ni shimasu ka</span></td><td>要點什麼？（朋友之間也會這樣問）</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja">これを ください<span class="r">kore o kudasai</span></td><td>請給我這個</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja">カレーに します<span class="r">karee ni shimasu</span></td><td>我要咖哩（從選項裡選定一個）</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>畏<rt>かしこ</rt></ruby>まりました<span class="r">kashikomarimashita</span></td><td>好的（接下你的要求）</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>で よろしいですか<span class="r">ijou de yoroshii desu ka</span></td><td>您點的就這些嗎？</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja">はい、<ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>です<span class="r">hai, ijou desu</span></td><td>對，就這些</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-h">講到這些句子的課</div>
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-05-ni-shimasu.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 10 / 05</div>
+        <div class="lesson-title">〜にします — 做決定時的說法 <span class="arrow">→</span></div>
+        <div class="lesson-summary">名詞＋にします＝從選項裡選定一個，問法是 何にしますか</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-05-tsugi-wa-ichikara.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 10 / 05</div>
+        <div class="lesson-title">次は1辛にします <span class="arrow">→</span></div>
+        <div class="lesson-summary">咖哩店的辣度怎麼點、怎麼比較兩家店</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-08-lunch-menu.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 07 / 08</div>
+        <div class="lesson-title">午餐菜單 — おすすめ <span class="arrow">→</span></div>
+        <div class="lesson-summary">看懂菜單：おすすめ・本日・おかわり・お選びください</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-29-mos-burger-order.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 06 / 29</div>
+        <div class="lesson-title">モスバーガーで注文 <span class="arrow">→</span></div>
+        <div class="lesson-summary">用桌上的 QR 碼點餐，告示牌上的 お席・決済・現金不可，以及 お席でお待ちください</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-kashikomarimashita-kono-mama.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 10 / 25</div>
+        <div class="lesson-title">生活篇 — 與店員的對話 <span class="arrow">→</span></div>
+        <div class="lesson-summary">かしこまりました 是 畏まる＋ました，只在接下要求時用</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="store-phrasebook.html#ch1">
+        <div class="lesson-meta">店員さんとの会話帖 · 第一、二、六章</div>
+        <div class="lesson-title">餐廳內用、買咖啡、拉麵店 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ご注文はお決まりですか、ホットとアイス、どちらになさいますか 等整套對話</div>
+      </a>
+    </li>
+  </ul>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaikei">四、結帳</div>
+
+  <p class="lead">
+    結帳時店員會問的問題最多：要不要袋子、要不要加熱、怎麼付款。
+    大部分都是「〇〇でよろしいですか」或「〇〇ますか」的形式，聽懂前面的詞就知道在問什麼。
+  </p>
+
+  <table class="joshi-table">
+    <thead><tr><th>誰說</th><th>日文</th><th>意思</th></tr></thead>
+    <tbody>
+      <tr><td>店員</td><td class="col-ja"><ruby>袋<rt>ふくろ</rt></ruby>は いりますか<span class="r">fukuro wa irimasu ka</span></td><td>需要袋子嗎？</td></tr>
+      <tr><td>店員</td><td class="col-ja">この ままで よろしいですか<span class="r">kono mama de yoroshii desu ka</span></td><td>就這樣（不裝袋）可以嗎？</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>袋<rt>ふくろ</rt></ruby>は ご<ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>で よろしいですか<span class="r">fukuro wa go-issho de yoroshii desu ka</span></td><td>放同一個袋子可以嗎？</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>電<rt>でん</rt>子<rt>し</rt></ruby>レンジで <ruby>温<rt>あたた</rt></ruby>めますか<span class="r">denshi renji de atatamemasu ka</span></td><td>要用微波爐加熱嗎？</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja">はい、この ままで <ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です<span class="r">hai, kono mama de daijoubu desu</span></td><td>好，就這樣沒關係</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja"><ruby>袋<rt>ふくろ</rt></ruby>を お<ruby>願<rt>ねが</rt></ruby>いします<span class="r">fukuro o onegai shimasu</span></td><td>請給我袋子</td></tr>
+      <tr class="you"><td>你</td><td class="col-ja">その ままで<span class="r">sono mama de</span></td><td>就這樣就好（例如不用加熱）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-h">講到這些句子的課</div>
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-kashikomarimashita-kono-mama.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 10 / 25</div>
+        <div class="lesson-title">生活篇 — 與店員的對話 <span class="arrow">→</span></div>
+        <div class="lesson-summary">このままでよろしいですか＝不裝袋可以嗎，怎麼回答；跟 以上でよろしいですか 的差別</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-yoroshii.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 10 / 25</div>
+        <div class="lesson-title">よろしい — 「いい」的客氣版 <span class="arrow">→</span></div>
+        <div class="lesson-summary">店員常問的 〜でよろしいですか 整理，以及 よろしければ、よろしく</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-16-reji-renji.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 08 / 16</div>
+        <div class="lesson-title">レジ と レンジ <span class="arrow">→</span></div>
+        <div class="lesson-summary">收銀台 レジ 跟微波爐 レンジ 差一個ン，還有 レジ袋、少々</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-18-tenin-keywords.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 06 / 18</div>
+        <div class="lesson-title">店員會話 5 個關鍵 <span class="arrow">→</span></div>
+        <div class="lesson-summary">袋はいりますか 的 いる 是「需要」（要る），不是「在」（居る）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="store-phrasebook.html#ch4">
+        <div class="lesson-meta">店員さんとの会話帖 · 第四、五章</div>
+        <div class="lesson-title">超市結帳、便利商店 <span class="arrow">→</span></div>
+        <div class="lesson-summary">温めますか、お箸はおつけしますか、袋はご一緒でよろしいですか 等整套對話</div>
+      </a>
+    </li>
+  </ul>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="mise">五、其他的店</div>
+
+  <p class="lead">
+    花店、麵包店、美容院各有自己的用字，但店員的說話方式跟餐廳、便利商店是同一套。
+  </p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="store-phrasebook.html#ch3">
+        <div class="lesson-meta">店員さんとの会話帖 · 第三章</div>
+        <div class="lesson-title">花店買花 <span class="arrow">→</span></div>
+        <div class="lesson-summary">プレゼントですか、ご予算はおいくらですか，以及 自分用です 怎麼回</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="tadoku/2026-07-27-tadoku-kami.html">
+        <div class="lesson-meta">多読 · Tadoku · 2026 / 07 / 27</div>
+        <div class="lesson-title">ミニ多読 花を買いました <span class="arrow">→</span></div>
+        <div class="lesson-summary">在吉祥寺買花的超短小故事，一句話配一張插圖</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-18-pan.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 08 / 18</div>
+        <div class="lesson-title">パン屋のことば <span class="arrow">→</span></div>
+        <div class="lesson-summary">麵包店的字：菓子パン・惣菜パン・焼きたて</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link grammar" href="lessons/2026-08-29-naritai-biyouin.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 08 / 29</div>
+        <div class="lesson-title">髪が長くなりました <span class="arrow">→</span></div>
+        <div class="lesson-summary">在美容院說「剪短一點」「像她那樣」，以及店員的 かしこまりました</div>
+      </a>
+    </li>
+  </ul>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="keigo">六、店員才會用的敬語</div>
+
+  <p class="lead">
+    店員講話時會把一般的詞換成更客氣的說法。這些詞是聽的，客人不用學著說，
+    但認得它們，整句話的意思就猜得出來。
+  </p>
+
+  <table class="joshi-table">
+    <thead><tr><th>一般說法</th><th>店員的說法</th><th>意思</th></tr></thead>
+    <tbody>
+      <tr><td class="col-ja">わかりました</td><td class="col-ja"><ruby>畏<rt>かしこ</rt></ruby>まりました<span class="r">kashikomarimashita</span></td><td>好的，我照您說的做</td></tr>
+      <tr><td class="col-ja">いいですか</td><td class="col-ja">よろしいですか<span class="r">yoroshii desu ka</span></td><td>可以嗎？</td></tr>
+      <tr><td class="col-ja"><ruby>食<rt>た</rt></ruby>べる・<ruby>飲<rt>の</rt></ruby>む</td><td class="col-ja"><ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がる<span class="r">meshiagaru</span></td><td>吃、喝（尊敬語）</td></tr>
+      <tr><td class="col-ja">どう</td><td class="col-ja">いかが<span class="r">ikaga</span></td><td>如何、怎麼樣</td></tr>
+      <tr><td class="col-ja">ちょっと</td><td class="col-ja"><ruby>少々<rt>しょうしょう</rt></ruby><span class="r">shoushou</span></td><td>稍微、一下</td></tr>
+    </tbody>
+  </table>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-yoroshii.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 10 / 25</div>
+        <div class="lesson-title">よろしい — 「いい」的客氣版 <span class="arrow">→</span></div>
+        <div class="lesson-summary">よろしい・よろしければ・よろしく，回答時不說 よろしいです</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-kashikomarimashita-kono-mama.html">
+        <div class="lesson-meta">課程 · Lesson · 2026 / 10 / 25</div>
+        <div class="lesson-title">生活篇 — 與店員的對話 <span class="arrow">→</span></div>
+        <div class="lesson-summary">かしこまりました 的拆法與用法，客人回 わかりました</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="store-phrasebook.html#ch7">
+        <div class="lesson-meta">店員さんとの会話帖 · 終章</div>
+        <div class="lesson-title">店員敬語的兩個關鍵字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">召し上がる 是吃跟喝共用的尊敬語，いかが 是 どう 的禮貌版</div>
+      </a>
+    </li>
+  </ul>
+
+<site-footer></site-footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>よろしい — 「いい」的客氣版：〜でよろしいですか・よろしければ・よろしく</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.formula{background:rgba(255,255,255,.6);border:1px solid var(--line);border-top:3px solid var(--accent);padding:20px 18px;margin-bottom:16px;text-align:center;}
+.formula .f-line{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--ink);letter-spacing:.04em;line-height:1.9;}
+.formula .f-line .p{display:inline-block;background:var(--accent-pale);color:var(--accent);padding:1px 10px;border-radius:3px;margin:0 2px;}
+.formula .f-line .plus{color:var(--ink-mute);margin:0 6px;font-family:'Cormorant Garamond',serif;}
+.formula .f-eq{display:block;margin-top:10px;font-size:16px;color:var(--ink-soft);font-family:'Noto Serif TC',serif;}
+.formula .f-eq strong{color:var(--accent);}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">よろしい</span> — 「いい」的客氣版</h1>
+  <div class="page-meta">店員用語 · Shop Phrases · 2026 / 10 / 25</div>
+  <p class="page-subtitle">店員用 〜でよろしいですか 跟你確認，以及 よろしければ、よろしく 這兩個親戚</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    在店裡結帳、點餐的時候，店員最常用來跟你確認的一句話就是「〇〇でよろしいですか」。
+    聽懂 よろしい 是 いい 的客氣說法，就知道店員在問「〇〇這樣可以嗎」，接下來只要聽清楚 で 前面是什麼就好。<br>
+    這篇先看 よろしい 跟 いい 的關係，再整理店員常問的幾句和回答方式，
+    最後看 よろしければ（不介意的話）和你早就會的 よろしくお願いします，它們都是從 よろしい 變來的。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、よろしい 是 いい 比較客氣的說法</div>
+
+  <p class="lead">
+    <span class="compare">よろしい</span>（yoroshii）跟 <span class="compare">いい／よい</span>（ii / yoi）意思一樣，都是「好、可以」，
+    只是更正式、更有禮貌。店員對客人說話時幾乎都用 よろしい，不會用 いい。
+    這段原本寫在 <a href="2026-06-18-tenin-keywords.html" style="color:var(--accent);">6/18〈店員會話 5 個關鍵〉</a>的第五節，這篇把它獨立出來，再補上更多例句。
+  </p>
+
+  <div class="formula">
+    <div class="f-line">
+      <span class="p">いい</span><span class="plus">→（更客氣）→</span><span class="p">よろしい</span>
+      <span class="f-eq">＝ 好、可以（<strong>よろしいですか</strong>＝可以嗎？這樣好嗎？）</span>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>一般說法</th><th>客氣說法</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja">いいですか</td><td class="col-ja"><b>よろしい</b>ですか</td><td>可以嗎？這樣好嗎？</td></tr>
+      <tr><td class="col-ja">これで いいです</td><td class="col-ja">これで <b>よろしい</b>です</td><td>這樣就可以了</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、店員用 〜でよろしいですか 跟你確認</div>
+
+  <p class="lead">
+    「〇〇で よろしいですか」的意思是「用〇〇這個方式／狀態，可以嗎？」。
+    で 前面放的就是店員要確認的事，聽懂那個詞，就知道要回答什麼。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 店員常問的幾句</div>
+
+    <div class="word-item" data-text="以上でよろしいですか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>で よろしいですか。</div>
+        <div class="word-romaji">ijou de yoroshii desu ka.</div>
+        <div class="word-meaning">您點的就這些嗎？（確認還要不要加點）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="このままでよろしいですか。">
+      <div class="word-content">
+        <div class="word-ja">この ままで よろしいですか。</div>
+        <div class="word-romaji">kono mama de yoroshii desu ka.</div>
+        <div class="word-meaning">就這樣（不裝袋，直接給您）可以嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="袋はご一緒でよろしいですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>袋<rt>ふくろ</rt></ruby>は ご<ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>で よろしいですか。</div>
+        <div class="word-romaji">fukuro wa go-issho de yoroshii desu ka.</div>
+        <div class="word-meaning">東西放同一個袋子可以嗎？（便利商店常問，例如熱食跟冷飲要不要分開裝）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お支払いはカードでよろしいですか。">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>支<rt>し</rt>払<rt>はら</rt></ruby>いは カードで よろしいですか。</div>
+        <div class="word-romaji">oshiharai wa kaado de yoroshii desu ka.</div>
+        <div class="word-meaning">用卡片付款可以嗎？（你把卡片拿出來時，店員確認付款方式）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>カード 是英語 card</strong><br>
+    カード（kaado）來自英語 card。日文裡講付款時，カード 通常指信用卡（クレジットカード），
+    也可以泛指各種卡片，例如集點卡 ポイントカード。
+  </div>
+
+  <p class="lead">
+    被問到的時候，答案通常很短。是的話用 はい 加上一句確認，不是的話就直接講你要的東西：
+  </p>
+
+  <div class="section">
+    <div class="section-title">🙋 你可以這樣回</div>
+
+    <div class="word-item" data-text="はい、以上です。">
+      <div class="word-content">
+        <div class="word-ja">はい、<ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>です。</div>
+        <div class="word-romaji">hai, ijou desu.</div>
+        <div class="word-meaning">對，就這些。（回答 以上でよろしいですか）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="はい、大丈夫です。">
+      <div class="word-content">
+        <div class="word-ja">はい、<ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です。</div>
+        <div class="word-romaji">hai, daijoubu desu.</div>
+        <div class="word-meaning">好，沒問題。（大部分的 よろしいですか 都可以這樣回）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="別々でお願いします。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>別々<rt>べつべつ</rt></ruby>で お<ruby>願<rt>ねが</rt></ruby>いします。</div>
+        <div class="word-romaji">betsubetsu de onegai shimasu.</div>
+        <div class="word-meaning">請分開裝。（回答 袋はご一緒でよろしいですか，想分開時）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、よろしければ 是「不介意的話」</div>
+
+  <p class="lead">
+    よろしい 把尾巴的 い 換成 ければ，就變成 <span class="compare">よろしければ</span>（yoroshikereba），
+    意思是「如果可以的話、不介意的話」。店員請你試吃、推薦東西、帶你到某個位子時常會先加這一句，聽起來比較委婉。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="よろしければ、どうぞ。">
+      <div class="word-content">
+        <div class="word-ja">よろしければ、どうぞ。</div>
+        <div class="word-romaji">yoroshikereba, douzo.</div>
+        <div class="word-meaning">不介意的話，請用。（遞試吃品、傳單給你時）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="よろしければ、こちらのお席へどうぞ。">
+      <div class="word-content">
+        <div class="word-ja">よろしければ、こちらの お<ruby>席<rt>せき</rt></ruby>へ どうぞ。</div>
+        <div class="word-romaji">yoroshikereba, kochira no oseki e douzo.</div>
+        <div class="word-meaning">如果可以的話，請坐這邊的位子。（帶位時）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、よろしく 是 よろしい 變成的副詞</div>
+
+  <p class="lead">
+    よろしい 把 い 換成 く，就是 <span class="compare">よろしく</span>（yoroshiku）。
+    い形容詞去 い 加 く 會變成副詞，跟 早い → 早く 是同一條規則。
+    你在 <a href="2026-06-24-aisatsu.html" style="color:var(--accent);">6/24〈あいさつ〉</a> 學過的
+    よろしくお願いします，字面意思就是「請好好地（關照我）」。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="よろしくおねがいします">
+      <div class="word-content">
+        <div class="word-ja">よろしく お<ruby>願<rt>ねが</rt></ruby>いします。</div>
+        <div class="word-romaji">yoroshiku onegai shimasu.</div>
+        <div class="word-meaning">請多指教／麻煩你了。自我介紹結尾、拜託別人事情時都會用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>形</th><th>寫法</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>原形</td><td class="col-ja">よろし<b>い</b></td><td>好、可以（客氣）</td></tr>
+      <tr><td>假設</td><td class="col-ja">よろし<b>ければ</b></td><td>如果可以的話、不介意的話</td></tr>
+      <tr><td>副詞</td><td class="col-ja">よろし<b>く</b></td><td>好好地（よろしくお願いします）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 宜＝適宜</strong><br>
+    よろしい 的漢字寫成 <ruby>宜<rt>よろ</rt></ruby>しい，「宜」就是「適宜」的宜，意思是合適、恰當。
+    よろしいですか 就是在問「這樣合適嗎？」。這是訓讀，跟 宜 的漢字音 ぎ 無關，台語也對不上，
+    所以靠字義來記。平常幾乎都寫平假名 よろしい。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、有一個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>回答的時候不說「はい、よろしいです」</strong><br>
+    よろしい 用在回答時，有「我允許你」的意思，像是上司批准下屬那種口氣。
+    店員問 よろしいですか，客人回 よろしいです 會顯得有點高高在上。
+    回答時用 <span class="compare">はい、大丈夫です</span>、<span class="compare">はい、お願いします</span>
+    或 <span class="compare">はい、以上です</span> 就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>誰說</th><th>日文</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>店員</td><td class="col-ja"><ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>で <b>よろしいですか</b></td><td>點的就這些嗎</td></tr>
+      <tr><td>店員</td><td class="col-ja">この ままで <b>よろしいですか</b></td><td>就這樣（不裝袋）可以嗎</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>袋<rt>ふくろ</rt></ruby>は ご<ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>で <b>よろしいですか</b></td><td>放同一個袋子可以嗎</td></tr>
+      <tr><td>店員</td><td class="col-ja">お<ruby>支<rt>し</rt>払<rt>はら</rt></ruby>いは カードで <b>よろしいですか</b></td><td>用卡片付款可以嗎</td></tr>
+      <tr><td>店員</td><td class="col-ja"><b>よろしければ</b>、どうぞ</td><td>不介意的話，請用</td></tr>
+      <tr><td>客人</td><td class="col-ja">はい、<ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>です</td><td>對，就這些</td></tr>
+      <tr><td>客人</td><td class="col-ja">はい、<ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です</td><td>好，沒問題</td></tr>
+      <tr><td>客人</td><td class="col-ja"><ruby>別々<rt>べつべつ</rt></ruby>で お<ruby>願<rt>ねが</rt></ruby>いします</td><td>請分開裝</td></tr>
+      <tr><td>都可以</td><td class="col-ja"><b>よろしく</b> お<ruby>願<rt>ねが</rt></ruby>いします</td><td>請多指教、麻煩你了</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示回答</div>
+    <ol class="quiz-ol">
+      <li>把「これでいいですか」改成店員會用的客氣說法。</li>
+      <li>店員問「お支払いはカードでよろしいですか」，是在確認什麼？</li>
+      <li>店員問「袋はご一緒でよろしいですか」，你想分開裝，該怎麼說？</li>
+      <li>よろしい 的 い 換成 ければ、く，各變成什麼意思？</li>
+      <li>店員問「以上でよろしいですか」，可以回「はい、よろしいです」嗎？為什麼？</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. これで よろしいですか。<br>kore de yoroshii desu ka.</p>
+      <p>2. 確認付款方式，問你是不是要用卡片付。</p>
+      <p>3. 別々でお願いします。<br>betsubetsu de onegai shimasu.</p>
+      <p>4. よろしければ（yoroshikereba）＝不介意的話；よろしく（yoroshiku）＝好好地，用在 よろしくお願いします。</p>
+      <p>5. 不太好。回答時說 よろしいです 有「我允許你」的口氣，回 はい、以上です（hai, ijou desu）就好。</p>
+    </details>
+  </div>
+
+  <a href="2026-10-25-kashikomarimashita-kono-mama.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">生活篇 — 與店員的對話 <span class="next-arrow">→</span></span>
+    <span class="next-sub">かしこまりました、このままでよろしいですか，以及在餐廳門口請你等候的說法</span>
+  </a>
+
+  <a href="2026-06-18-tenin-keywords.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">店員會話 5 個關鍵 <span class="next-arrow">→</span></span>
+    <span class="next-sub">6/18 よろしい 第一次出現的地方，同一篇還有 持ち帰り、いりますか、〜ぐらいで</span>
+  </a>
+
+  <a href="../tenin.html" class="next-link">
+    <span class="next-kicker">— 整理 —</span>
+    <span class="next-title">店員的對話・總整理 <span class="next-arrow">→</span></span>
+    <span class="next-sub">照情境把所有跟店員有關的課排在一起</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

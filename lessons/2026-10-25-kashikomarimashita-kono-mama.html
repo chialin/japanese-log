@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生活篇 — 與店員的對話：かしこまりました・このままでよろしいですか・お待ちください</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.dialog-title{font-family:'Shippori Mincho',serif;font-size:15px;font-weight:700;color:var(--ink-mute);margin-bottom:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:56px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+.tip-list{margin:6px 0 6px 0;padding-left:22px;line-height:1.9;}
+.tip-list a{color:var(--accent);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">生活篇 — 與<span class="accent">店員</span>的對話</h1>
+  <div class="page-meta">店員用語 · Shop Phrases · 2026 / 10 / 25</div>
+  <p class="page-subtitle">店員接下要求時說的 かしこまりました、結帳時問的 このままでよろしいですか，以及在餐廳門口請你等候的說法</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    在日本的餐廳和便利商店，店員講的話大多是固定的幾句，而且用的都是很客氣的說法，
+    第一次聽常常抓不到意思。這篇的目的是聽懂店員在說什麼、在問什麼，並且知道自己該怎麼反應。<br>
+    內容分成三個情境：
+    <ul class="tip-list">
+      <li><strong>跟店員提出要求時</strong>：店員回的 かしこまりました 是「好的，我照您說的做」。
+        見 <a href="#kashikomaru">二、從 畏まる 變來的</a>、<a href="#tsukaikata">三、什麼時候用</a></li>
+      <li><strong>結帳時</strong>：聽到 このままでよろしいですか（聽起來像有個「mama」的音），是在問「不裝袋、直接給你可以嗎」。
+        見 <a href="#konomama">四、このまま 的意思</a>、<a href="#kotaekata">五、怎麼回答</a></li>
+      <li><strong>在餐廳門口等位子時</strong>：店員會用 こちらで、そのまま 這些說法請你等候，兩者要你做的事不一樣。
+        見 <a href="#iriguchi">六、在餐廳門口等位子</a></li>
+    </ul>
+    每一句都會說明店員的意思，以及你可以怎麼回答。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以點餐和結帳的流程為主軸，把對話排出來</div>
+
+  <p class="lead">
+    第一段是在餐廳跟店員要水，第二段是在便利商店結帳。店員的句子是這篇的重點，
+    「私」那一欄是客人可以照著講的回答。每一句都可以按 ▶ 跟著唸。
+  </p>
+
+  <div class="dialog">
+    <div class="dialog-title">🍽️ 餐廳裡</div>
+
+    <div class="turn me" data-text="すみません、お水をください。">
+      <div class="who"><ruby>私<rt>わたし</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja">すみません、お<ruby>水<rt>みず</rt></ruby>を ください。</div>
+        <div class="turn-romaji">sumimasen, omizu o kudasai.</div>
+        <div class="turn-meaning">不好意思，請給我水。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="かしこまりました。少々お待ちください。">
+      <div class="who"><ruby>店<rt>てん</rt>員<rt>いん</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>畏<rt>かしこ</rt></ruby>まりました。<ruby>少々<rt>しょうしょう</rt></ruby> お<ruby>待<rt>ま</rt></ruby>ちください。</div>
+        <div class="turn-romaji">kashikomarimashita. shoushou omachi kudasai.</div>
+        <div class="turn-meaning">好的，請稍等一下。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="dialog">
+    <div class="dialog-title">🏪 便利商店的收銀台</div>
+
+    <div class="turn me" data-text="これ、お願いします。">
+      <div class="who"><ruby>私<rt>わたし</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja">これ、お<ruby>願<rt>ねが</rt></ruby>いします。</div>
+        <div class="turn-romaji">kore, onegai shimasu.</div>
+        <div class="turn-meaning">（把東西放到櫃檯上）麻煩結這個。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="このままでよろしいですか。">
+      <div class="who"><ruby>店<rt>てん</rt>員<rt>いん</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja">この ままで よろしいですか。</div>
+        <div class="turn-romaji">kono mama de yoroshii desu ka.</div>
+        <div class="turn-meaning">就這樣（不裝袋，直接給您）可以嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい、このままで大丈夫です。">
+      <div class="who"><ruby>私<rt>わたし</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、この ままで <ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です。</div>
+        <div class="turn-romaji">hai, kono mama de daijoubu desu.</div>
+        <div class="turn-meaning">好，就這樣沒關係。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kashikomaru">二、かしこまりました 是從動詞 畏まる 變來的</div>
+
+  <p class="lead">
+    かしこまりました 看起來很長，其實就是一個動詞加上 ました。
+    原形是 <span class="compare"><ruby>畏<rt>かしこ</rt></ruby>まる</span>（kashikomaru），
+    漢字「畏」只負責 かしこ 這三個音，後面的 まる 是會跟著變化的平假名，叫做<strong>送り仮名</strong>（okurigana）。
+    這跟 <ruby>食<rt>た</rt></ruby>べる 的「食」固定唸 た、後面的 べる 才在變，是一樣的結構。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>形</th><th>寫法</th><th>讀音</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>原形</td><td class="col-ja"><ruby>畏<rt>かしこ</rt></ruby><b>まる</b></td><td>kashikomaru</td></tr>
+      <tr><td>ます形</td><td class="col-ja"><ruby>畏<rt>かしこ</rt></ruby><b>まります</b></td><td>kashikomarimasu</td></tr>
+      <tr><td>過去（禮貌體）</td><td class="col-ja"><ruby>畏<rt>かしこ</rt></ruby><b>まりました</b></td><td>kashikomarimashita</td></tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    用過去式的原因跟 わかりました 一樣：客人一講完要求，店員「聽到、接下」這件事就已經完成了，
+    所以用 〜ました，不是在講很久以前的事。<br>
+    畏まる 原本的意思是在地位高的人面前畢恭畢敬、坐得很端正，後來變成「恭敬地接受吩咐」，
+    所以整句字面上是「我已經恭敬地接下了」。實際上店員、菜單、告示幾乎都直接寫平假名 かしこまりました，
+    漢字的寫法認得就好。
+  </p>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 看「畏」這個字</strong><br>
+    畏 就是「敬畏」的畏。店員把自己放低、對客人表示敬意，用的就是帶著敬畏的詞。
+    這是訓讀，跟 畏 的漢字音 い 無關，台語也對不上，所以就靠字義來記。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tsukaikata">三、かしこまりました 是接下要求的時候才用的</div>
+
+  <p class="lead">
+    かしこまりました 不是單純的「我聽懂了」，一定要有一個要求或吩咐讓對方接下。
+    <a href="2026-08-29-naritai-biyouin.html" style="color:var(--accent);">8/29〈髪が長くなりました〉</a>
+    已經比較過它跟 わかりました、承知しました 的客氣程度，這裡補上三個使用時要注意的地方。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 有要求，才會說 かしこまりました</div>
+
+    <div class="word-item" data-text="ご飯を大盛りでお願いします。">
+      <div class="word-content">
+        <div class="word-ja">ご<ruby>飯<rt>はん</rt></ruby>を <ruby>大<rt>おお</rt>盛<rt>も</rt></ruby>りで お<ruby>願<rt>ねが</rt></ruby>いします。</div>
+        <div class="word-romaji">gohan o oomori de onegai shimasu.</div>
+        <div class="word-meaning">白飯請給我大碗的。（客人提出要求）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="かしこまりました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>畏<rt>かしこ</rt></ruby>まりました。</div>
+        <div class="word-romaji">kashikomarimashita.</div>
+        <div class="word-meaning">好的。（店員接下要求，接著就會去處理）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 只是聽懂說明，用 わかりました</div>
+
+    <div class="word-item" data-text="お手洗いは二階です。">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>手<rt>て</rt>洗<rt>あら</rt></ruby>いは <ruby>2<rt>に</rt>階<rt>かい</rt></ruby>です。</div>
+        <div class="word-romaji">otearai wa nikai desu.</div>
+        <div class="word-meaning">洗手間在二樓。（店員在說明一件事）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="わかりました。ありがとうございます。">
+      <div class="word-content">
+        <div class="word-ja">わかりました。ありがとう ございます。</div>
+        <div class="word-romaji">wakarimashita. arigatou gozaimasu.</div>
+        <div class="word-meaning">我知道了，謝謝。（客人回答。わかりました 在 <a href="2026-05-08-wa-row.html" style="color:var(--accent);">5/8 わ行</a> 就學過）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 辦不到的時候，不會先說 かしこまりました</div>
+
+    <div class="word-item" data-text="申し訳ございません。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません。</div>
+        <div class="word-romaji">moushiwake gozaimasen.</div>
+        <div class="word-meaning">非常抱歉。（店員沒辦法照做時，會先道歉再說明）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    かしこまりました 本身就是「我答應了」的意思，所以只用來答應，不會拿來拒絕。
+    後面最常接的是 <ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください，
+    少々 在 <a href="2026-08-16-reji-renji.html" style="color:var(--accent);">8/16〈レジ と レンジ〉</a>出現過，
+    お待ちください 的組法在 <a href="2026-06-29-mos-burger-order.html" style="color:var(--accent);">6/29 モスバーガー點餐</a> 那篇有拆開講。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="konomama">四、このまま 是「照現在這樣」的意思</div>
+
+  <p class="lead">
+    <span class="compare">まま</span>（mama）是「保持原樣、不去改變」的意思，前面接 この、その，
+    就是「照這個樣子」「照那個樣子」。後面加 で，表示「用這個狀態來處理」。
+    所以 このままでよろしいですか 就是「照現在這樣（不另外裝袋），可以嗎？」。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>讀音</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><b>この</b>まま</td><td>kono mama</td><td>照這樣（東西在說話的人這邊）</td></tr>
+      <tr><td class="col-ja"><b>その</b>まま</td><td>sono mama</td><td>照那樣（東西在聽的人那邊，或照剛剛的狀態）</td></tr>
+      <tr><td class="col-ja">このまま<b>で</b></td><td>kono mama de</td><td>就用這個狀態，後面接 いいです、よろしいですか、大丈夫です</td></tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    よろしいですか 是 いいですか 的客氣版，同一天的<a href="2026-10-25-yoroshii.html" style="color:var(--accent);">〈よろしい — 「いい」的客氣版〉</a>
+    有完整整理。同一個句型也會出現在點完餐的時候：
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 店員也會這樣問</div>
+
+    <div class="word-item" data-text="以上でよろしいですか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>で よろしいですか。</div>
+        <div class="word-romaji">ijou de yoroshii desu ka.</div>
+        <div class="word-meaning">您點的就這些嗎？（問有沒有要再加點）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="そのままお待ちください。">
+      <div class="word-content">
+        <div class="word-ja">その まま お<ruby>待<rt>ま</rt></ruby>ちください。</div>
+        <div class="word-romaji">sono mama omachi kudasai.</div>
+        <div class="word-meaning">請就這樣（在原地）稍等。店員去拿東西、刷卡處理中時會說</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 聽到「mama」就是不用袋子</strong><br>
+    まま 是日文固有的詞，沒有漢字音或台語可以借。我就記收銀台的畫面：
+    店員手上拿著我的東西問 <span class="compare">このまま</span>，意思就是「直接這樣給你，不裝袋喔」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kotaekata">五、被問 このままでよろしいですか 時是這樣回的</div>
+
+  <p class="lead">
+    不需要袋子就說「好，就這樣」；想要袋子就直接說要袋子。
+    <a href="../store-phrasebook.html" style="color:var(--accent);">店員會話帖</a>裡被問「要加熱嗎」時回答的
+    そのままで，也是同一個 まま。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🙋 你可以這樣回</div>
+
+    <div class="word-item" data-text="はい、このままで大丈夫です。">
+      <div class="word-content">
+        <div class="word-ja">はい、この ままで <ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です。</div>
+        <div class="word-romaji">hai, kono mama de daijoubu desu.</div>
+        <div class="word-meaning">好，就這樣沒關係。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="はい、そのままで。">
+      <div class="word-content">
+        <div class="word-ja">はい、その ままで。</div>
+        <div class="word-romaji">hai, sono mama de.</div>
+        <div class="word-meaning">好，就那樣。（東西在店員手上，所以用 その，比較短的說法）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="袋をお願いします。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>袋<rt>ふくろ</rt></ruby>を お<ruby>願<rt>ねが</rt></ruby>いします。</div>
+        <div class="word-romaji">fukuro o onegai shimasu.</div>
+        <div class="word-meaning">請給我袋子。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="iriguchi">六、在餐廳門口等位子時是這樣說的</div>
+
+  <p class="lead">
+    在餐廳門口等帶位，店員也會請你等一下。そのまま 也會出現在這裡，意思跟收銀台那句一樣，
+    是「請留在原地」。不過門口更常聽到的是指定地點的 こちらで，另外還有請你坐著等、寫名字等的說法。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 店員請你等候的幾種說法</div>
+
+    <div class="word-item" data-text="こちらで少々お待ちください。">
+      <div class="word-content">
+        <div class="word-ja">こちらで <ruby>少々<rt>しょうしょう</rt></ruby> お<ruby>待<rt>ま</rt></ruby>ちください。</div>
+        <div class="word-romaji">kochira de shoushou omachi kudasai.</div>
+        <div class="word-meaning">請在這裡稍等一下。帶位前最常聽到的一句，店員通常會用手指著等候的地方</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="確認しますので、そのまま少々お待ちください。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>確<rt>かく</rt>認<rt>にん</rt></ruby>しますので、その まま <ruby>少々<rt>しょうしょう</rt></ruby> お<ruby>待<rt>ま</rt></ruby>ちください。</div>
+        <div class="word-romaji">kakunin shimasu node, sono mama shoushou omachi kudasai.</div>
+        <div class="word-meaning">我去確認一下，請您在原地稍候。店員要走開去看有沒有空位時會說</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お掛けになってお待ちください。">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>掛<rt>か</rt></ruby>けに なって お<ruby>待<rt>ま</rt></ruby>ちください。</div>
+        <div class="word-romaji">okake ni natte omachi kudasai.</div>
+        <div class="word-meaning">請坐著等候。門口有椅子時會說，お掛けになる 是「坐」（掛ける）的敬語</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お名前を書いて、お待ちください。">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>名<rt>な</rt>前<rt>まえ</rt></ruby>を <ruby>書<rt>か</rt></ruby>いて、お<ruby>待<rt>ま</rt></ruby>ちください。</div>
+        <div class="word-romaji">onamae o kaite, omachi kudasai.</div>
+        <div class="word-meaning">請寫下名字後等候。門口有候位單時會說，書いて 是 書く 的て形</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    後面兩句都是「先做一件事，再等」，用て形把兩個動作接起來，
+    跟 <a href="2026-10-23-okite-tabete.html" style="color:var(--accent);">10/23〈起きて、食べて〉</a>的用法一樣；
+    書く 變成 書いて 的規則在 <a href="2026-10-22-te-kei.html" style="color:var(--accent);">10/22〈て形怎麼變〉</a>。
+  </p>
+
+  <p class="lead">
+    そのまま 和 こちらで 都是請你等，差別在於一個講「狀態」，一個講「地點」：
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>說法</th><th>重點</th><th>你該怎麼做</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><b>その まま</b> お<ruby>待<rt>ま</rt></ruby>ちください</td><td>保持現在的狀態</td><td>留在原地不動</td></tr>
+      <tr><td class="col-ja"><b>こちらで</b> お<ruby>待<rt>ま</rt></ruby>ちください</td><td>指定等候的地點</td><td>走到店員指的地方去等</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 <strong>打電話時也會聽到 そのまま</strong><br>
+    電話裡對方說 そのまま お<ruby>待<rt>ま</rt></ruby>ちください，意思是「請不要掛斷，稍等一下」，
+    一樣是請你保持現在的狀態。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>客人不說 かしこまりました</strong><br>
+    這句是店員對客人、員工對客戶用的，說話的人要把自己放低。
+    客人對店員說，或是朋友之間說，聽起來會像在演戲或開玩笑。客人要回「我知道了」，用 わかりました 就好。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>このままで 回答的是「要不要袋子」，不是「點完了沒」</strong><br>
+    結帳時店員有兩種「這樣可以嗎」：<span class="compare">このままで</span>よろしいですか 問的是包裝，
+    回 はい、このままで大丈夫です；<span class="compare">以上で</span>よろしいですか 問的是還要不要加點，
+    回 はい、以上です（hai, ijou desu，對，就這些）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>誰說</th><th>日文</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>店員</td><td class="col-ja"><ruby>畏<rt>かしこ</rt></ruby>まりました</td><td>好的（接下客人的要求）</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>少々<rt>しょうしょう</rt></ruby> お<ruby>待<rt>ま</rt></ruby>ちください</td><td>請稍等</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません</td><td>非常抱歉（辦不到時）</td></tr>
+      <tr><td>客人</td><td class="col-ja">わかりました</td><td>我知道了（聽懂說明）</td></tr>
+      <tr><td>店員</td><td class="col-ja"><b>この まま</b>で よろしいですか</td><td>就這樣（不裝袋）可以嗎</td></tr>
+      <tr><td>店員</td><td class="col-ja"><ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>で よろしいですか</td><td>點的就這些嗎</td></tr>
+      <tr><td>店員</td><td class="col-ja"><b>その まま</b> お<ruby>待<rt>ま</rt></ruby>ちください</td><td>請在原地稍等</td></tr>
+      <tr><td>客人</td><td class="col-ja">はい、この ままで <ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です</td><td>好，就這樣沒關係</td></tr>
+      <tr><td>客人</td><td class="col-ja"><ruby>袋<rt>ふくろ</rt></ruby>を お<ruby>願<rt>ねが</rt></ruby>いします</td><td>請給我袋子</td></tr>
+      <tr><td>店員</td><td class="col-ja"><b>こちらで</b> <ruby>少々<rt>しょうしょう</rt></ruby> お<ruby>待<rt>ま</rt></ruby>ちください</td><td>請在這裡稍等（指定地點）</td></tr>
+      <tr><td>店員</td><td class="col-ja">お<ruby>掛<rt>か</rt></ruby>けに なって お<ruby>待<rt>ま</rt></ruby>ちください</td><td>請坐著等候</td></tr>
+      <tr><td>店員</td><td class="col-ja">お<ruby>名<rt>な</rt>前<rt>まえ</rt></ruby>を <ruby>書<rt>か</rt></ruby>いて、お<ruby>待<rt>ま</rt></ruby>ちください</td><td>請寫下名字後等候</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">九、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示回答</div>
+    <ol class="quiz-ol">
+      <li>寫出 かしこまりました 的動詞原形，並標出哪一段是送り仮名。</li>
+      <li>在餐廳門口，店員說「こちらでお待ちください」和「そのままお待ちください」，你各該怎麼做？</li>
+      <li>店員告訴你「洗手間在二樓」，你要回「我知道了」，該用 かしこまりました 還是 わかりました？</li>
+      <li>結帳時店員問「このままでよろしいですか」，你想要袋子，該怎麼說？</li>
+      <li>「このままでよろしいですか」和「以上でよろしいですか」各在問什麼？</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. 畏まる（かしこまる，kashikomaru）。畏 唸 かしこ，後面的 まる 是送り仮名。</p>
+      <p>2. こちらで（kochira de）是指定地點，走到店員指的地方去等；そのまま（sono mama）是保持現在的狀態，留在原地不動。</p>
+      <p>3. わかりました（wakarimashita）。這是聽懂說明，而且客人不對店員說 かしこまりました。</p>
+      <p>4. 袋をお願いします。<br>fukuro o onegai shimasu.</p>
+      <p>5. このままで 問要不要裝袋（就這樣直接給你可以嗎）；以上で 問還要不要加點（點的就這些嗎）。</p>
+    </details>
+  </div>
+
+  <a href="2026-10-25-yoroshii.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">よろしい — 「いい」的客氣版 <span class="next-arrow">→</span></span>
+    <span class="next-sub">〜でよろしいですか 怎麼聽、怎麼回，以及 よろしければ、よろしく</span>
+  </a>
+
+  <a href="../tenin.html" class="next-link">
+    <span class="next-kicker">— 整理 —</span>
+    <span class="next-title">店員的對話・總整理 <span class="next-arrow">→</span></span>
+    <span class="next-sub">照情境把所有跟店員有關的課排在一起</span>
+  </a>
+
+  <a href="2026-08-29-naritai-biyouin.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">髪が長くなりました <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/29 第一次學到 かしこまりました，並比較 承知しました、わかりました、了解です</span>
+  </a>
+
+  <a href="2026-06-18-tenin-keywords.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">店員會話 5 個關鍵 <span class="next-arrow">→</span></span>
+    <span class="next-sub">6/18 よろしい 是 いい 的客氣版，以上でよろしいですか、袋はいりますか 都在那篇</span>
+  </a>
+
+  <a href="../store-phrasebook.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">店員會話帖 <span class="next-arrow">→</span></span>
+    <span class="next-sub">便利商店整套對話，回答「要加熱嗎」的 そのままで 也在裡面</span>
+  </a>
+
+  <a href="2026-08-16-reji-renji.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">レジ と レンジ <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/16 レジ袋、少々 這些收銀台的用字</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

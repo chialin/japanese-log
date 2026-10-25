@@ -1,6 +1,440 @@
 {
- "generated": "2026-10-23",
+ "generated": "2026-10-25",
  "words": [
+  {
+   "text": "ご飯を大盛りでお願いします。",
+   "ja": "ご<ruby>飯<rt>はん</rt></ruby>を <ruby>大<rt>おお</rt>盛<rt>も</rt></ruby>りで お<ruby>願<rt>ねが</rt></ruby>いします。",
+   "kana": "ごはんを おおもりで おねがいします。",
+   "romaji": "gohan o oomori de onegai shimasu.",
+   "meaning": "白飯請給我大碗的。（客人提出要求）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "かしこまりました。",
+   "ja": "<ruby>畏<rt>かしこ</rt></ruby>まりました。",
+   "kana": "かしこまりました。",
+   "romaji": "kashikomarimashita.",
+   "meaning": "好的。（店員接下要求，接著就會去處理）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "お手洗いは二階です。",
+   "ja": "お<ruby>手<rt>て</rt>洗<rt>あら</rt></ruby>いは <ruby>2<rt>に</rt>階<rt>かい</rt></ruby>です。",
+   "kana": "おてあらいは にかいです。",
+   "romaji": "otearai wa nikai desu.",
+   "meaning": "洗手間在二樓。（店員在說明一件事）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "場所",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "わかりました。ありがとうございます。",
+   "ja": "わかりました。ありがとう ございます。",
+   "kana": "わかりました。ありがとう ございます。",
+   "romaji": "wakarimashita. arigatou gozaimasu.",
+   "meaning": "我知道了，謝謝。（客人回答。わかりました 在 5/8 わ行 就學過）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "申し訳ございません。",
+   "ja": "<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません。",
+   "kana": "もうしわけございません。",
+   "romaji": "moushiwake gozaimasen.",
+   "meaning": "非常抱歉。（店員沒辦法照做時，會先道歉再說明）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "以上でよろしいですか。",
+   "ja": "<ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>で よろしいですか。",
+   "kana": "いじょうで よろしいですか。",
+   "romaji": "ijou de yoroshii desu ka.",
+   "meaning": "您點的就這些嗎？（問有沒有要再加點）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    },
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "そのままお待ちください。",
+   "ja": "その まま お<ruby>待<rt>ま</rt></ruby>ちください。",
+   "kana": "その まま おまちください。",
+   "romaji": "sono mama omachi kudasai.",
+   "meaning": "請就這樣（在原地）稍等。店員去拿東西、刷卡處理中時會說",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "はい、このままで大丈夫です。",
+   "ja": "はい、この ままで <ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です。",
+   "kana": "はい、この ままで だいじょうぶです。",
+   "romaji": "hai, kono mama de daijoubu desu.",
+   "meaning": "好，就這樣沒關係。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "はい、そのままで。",
+   "ja": "はい、その ままで。",
+   "kana": "はい、その ままで。",
+   "romaji": "hai, sono mama de.",
+   "meaning": "好，就那樣。（東西在店員手上，所以用 その，比較短的說法）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "袋をお願いします。",
+   "ja": "<ruby>袋<rt>ふくろ</rt></ruby>を お<ruby>願<rt>ねが</rt></ruby>いします。",
+   "kana": "ふくろを おねがいします。",
+   "romaji": "fukuro o onegai shimasu.",
+   "meaning": "請給我袋子。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "こちらで少々お待ちください。",
+   "ja": "こちらで <ruby>少々<rt>しょうしょう</rt></ruby> お<ruby>待<rt>ま</rt></ruby>ちください。",
+   "kana": "こちらで しょうしょう おまちください。",
+   "romaji": "kochira de shoushou omachi kudasai.",
+   "meaning": "請在這裡稍等一下。帶位前最常聽到的一句，店員通常會用手指著等候的地方",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "場所",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "確認しますので、そのまま少々お待ちください。",
+   "ja": "<ruby>確<rt>かく</rt>認<rt>にん</rt></ruby>しますので、その まま <ruby>少々<rt>しょうしょう</rt></ruby> お<ruby>待<rt>ま</rt></ruby>ちください。",
+   "kana": "かくにんしますので、その まま しょうしょう おまちください。",
+   "romaji": "kakunin shimasu node, sono mama shoushou omachi kudasai.",
+   "meaning": "我去確認一下，請您在原地稍候。店員要走開去看有沒有空位時會說",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "お掛けになってお待ちください。",
+   "ja": "お<ruby>掛<rt>か</rt></ruby>けに なって お<ruby>待<rt>ま</rt></ruby>ちください。",
+   "kana": "おかけに なって おまちください。",
+   "romaji": "okake ni natte omachi kudasai.",
+   "meaning": "請坐著等候。門口有椅子時會說，お掛けになる 是「坐」（掛ける）的敬語",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "お名前を書いて、お待ちください。",
+   "ja": "お<ruby>名<rt>な</rt>前<rt>まえ</rt></ruby>を <ruby>書<rt>か</rt></ruby>いて、お<ruby>待<rt>ま</rt></ruby>ちください。",
+   "kana": "おなまえを かいて、おまちください。",
+   "romaji": "onamae o kaite, omachi kudasai.",
+   "meaning": "請寫下名字後等候。門口有候位單時會說，書いて 是 書く 的て形",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-kashikomarimashita-kono-mama.html",
+     "title": "生活篇"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "このままでよろしいですか。",
+   "ja": "この ままで よろしいですか。",
+   "kana": "この ままで よろしいですか。",
+   "romaji": "kono mama de yoroshii desu ka.",
+   "meaning": "就這樣（不裝袋，直接給您）可以嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "袋はご一緒でよろしいですか",
+   "ja": "<ruby>袋<rt>ふくろ</rt></ruby>は ご<ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>で よろしいですか。",
+   "kana": "ふくろは ごいっしょで よろしいですか。",
+   "romaji": "fukuro wa go-issho de yoroshii desu ka.",
+   "meaning": "東西放同一個袋子可以嗎？（便利商店常問，例如熱食跟冷飲要不要分開裝）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "お支払いはカードでよろしいですか。",
+   "ja": "お<ruby>支<rt>し</rt>払<rt>はら</rt></ruby>いは カードで よろしいですか。",
+   "kana": "おしはらいは カードで よろしいですか。",
+   "romaji": "oshiharai wa kaado de yoroshii desu ka.",
+   "meaning": "用卡片付款可以嗎？（你把卡片拿出來時，店員確認付款方式）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "はい、以上です。",
+   "ja": "はい、<ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>です。",
+   "kana": "はい、いじょうです。",
+   "romaji": "hai, ijou desu.",
+   "meaning": "對，就這些。（回答 以上でよろしいですか）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "はい、大丈夫です。",
+   "ja": "はい、<ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です。",
+   "kana": "はい、だいじょうぶです。",
+   "romaji": "hai, daijoubu desu.",
+   "meaning": "好，沒問題。（大部分的 よろしいですか 都可以這樣回）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "別々でお願いします。",
+   "ja": "<ruby>別々<rt>べつべつ</rt></ruby>で お<ruby>願<rt>ねが</rt></ruby>いします。",
+   "kana": "べつべつで おねがいします。",
+   "romaji": "betsubetsu de onegai shimasu.",
+   "meaning": "請分開裝。（回答 袋はご一緒でよろしいですか，想分開時）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "購物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "よろしければ、どうぞ。",
+   "ja": "よろしければ、どうぞ。",
+   "kana": "よろしければ、どうぞ。",
+   "romaji": "yoroshikereba, douzo.",
+   "meaning": "不介意的話，請用。（遞試吃品、傳單給你時）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "よろしければ、こちらのお席へどうぞ。",
+   "ja": "よろしければ、こちらの お<ruby>席<rt>せき</rt></ruby>へ どうぞ。",
+   "kana": "よろしければ、こちらの おせきへ どうぞ。",
+   "romaji": "yoroshikereba, kochira no oseki e douzo.",
+   "meaning": "如果可以的話，請坐這邊的位子。（帶位時）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "場所",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "よろしくおねがいします",
+   "ja": "よろしく お<ruby>願<rt>ねが</rt></ruby>いします。",
+   "kana": "よろしく おねがいします。",
+   "romaji": "yoroshiku onegai shimasu.",
+   "meaning": "請多指教／麻煩你了。自我介紹結尾、拜託別人事情時都會用",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-yoroshii.html",
+     "title": "よろしい"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
   {
    "text": "朝起きて、朝ご飯を食べます。",
    "ja": "<ruby>朝<rt>あさ</rt></ruby> <ruby>起<rt>お</rt></ruby>きて、<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます。",

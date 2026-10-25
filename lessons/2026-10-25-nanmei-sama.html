@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>何名様ですか — 店員怎麼數客人：名＋様・お一人様・二人です</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:56px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+.joshi-table .col-ja .r{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);line-height:1.4;}
+.joshi-table tr.odd td{background:var(--accent-pale);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">何名様</span>ですか</h1>
+  <div class="page-meta">店員用語 · Shop Phrases · 2026 / 10 / 25</div>
+  <p class="page-subtitle">店員問幾位、確認人數時說的 〇名様，以及客人自己要怎麼回答</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    走進餐廳，店員第一句問的通常是 何名様ですか（幾位？）。你回答「兩個人」之後，
+    店員常會再說一次 二名様ですね 跟你確認，聽起來像是「ni-me-sa」。<br>
+    這篇先把門口問人數的對話排出來，再拆開看 名 和 様 各是什麼意思、人數怎麼數，
+    最後講客人自己回答時為什麼不加 様。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以門口的對話為主軸，把問幾位的流程排出來</div>
+
+  <p class="lead">
+    下面是兩個人走進餐廳時的對話。注意店員和客人講人數的方式不一樣：
+    客人說 <span class="compare"><ruby>二人<rt>ふたり</rt></ruby></span>，店員說 <span class="compare"><ruby>二<rt>に</rt>名<rt>めい</rt>様<rt>さま</rt></ruby></span>。
+  </p>
+
+  <div class="dialog">
+    <div class="turn" data-text="いらっしゃいませ。何名様ですか。">
+      <div class="who"><ruby>店<rt>てん</rt>員<rt>いん</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja">いらっしゃいませ。<ruby>何<rt>なん</rt>名<rt>めい</rt>様<rt>さま</rt></ruby>ですか。</div>
+        <div class="turn-romaji">irasshaimase. nanmei-sama desu ka.</div>
+        <div class="turn-meaning">歡迎光臨，請問幾位？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="二人です。">
+      <div class="who"><ruby>私<rt>わたし</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>二人<rt>ふたり</rt></ruby>です。</div>
+        <div class="turn-romaji">futari desu.</div>
+        <div class="turn-meaning">兩個人。（也可以比出兩根手指）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="2名様ですね。こちらへどうぞ。">
+      <div class="who"><ruby>店<rt>てん</rt>員<rt>いん</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>二<rt>に</rt>名<rt>めい</rt>様<rt>さま</rt></ruby>ですね。こちらへ どうぞ。</div>
+        <div class="turn-romaji">nimei-sama desu ne. kochira e douzo.</div>
+        <div class="turn-meaning">兩位對吧，這邊請。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="2名様、ご案内です。">
+      <div class="who"><ruby>店<rt>てん</rt>員<rt>いん</rt></ruby></div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>二<rt>に</rt>名<rt>めい</rt>様<rt>さま</rt></ruby>、ご<ruby>案<rt>あん</rt>内<rt>ない</rt></ruby>です。</div>
+        <div class="turn-romaji">nimei-sama, goannai desu.</div>
+        <div class="turn-meaning">兩位客人入座。（對店裡其他店員喊的，客人不用回答）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、何名様 是 何＋名＋様 組起來的</div>
+
+  <p class="lead">
+    何名様 拆開來是三個部分。<span class="compare">名</span> 是數人用的量詞，跟中文「兩名客人」的「名」一樣，
+    比一般的 人（にん）正式；<span class="compare">様</span> 是「〜先生、〜小姐」那種敬稱，加在客人身上表示尊敬。
+    所以 二名様 就是「兩位貴賓」。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>部分</th><th>讀音</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><ruby>何<rt>なん</rt></ruby></td><td>nan</td><td>幾（問數量）</td></tr>
+      <tr><td class="col-ja"><ruby>名<rt>めい</rt></ruby></td><td>mei</td><td>數人的量詞，比 人 正式</td></tr>
+      <tr><td class="col-ja"><ruby>様<rt>さま</rt></ruby></td><td>sama</td><td>敬稱，用在對方身上</td></tr>
+    </tbody>
+  </table>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 名＝めい，跟 有名 同一個音</strong><br>
+    名 的音讀 めい，跟 <ruby>有<rt>ゆう</rt>名<rt>めい</rt></ruby>（yuumei，有名）、<ruby>名<rt>めい</rt>刺<rt>し</rt></ruby>（meishi，名片）是同一個 めい，
+    認得一個就整組都通。台語的「名」唸起來不像，所以就用這組日文詞來記。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、人數是這樣數的</div>
+
+  <p class="lead">
+    客人用一般的數法 〜人（にん），店員用 〜名様（めいさま）。
+    要注意一個人、兩個人的唸法是特別的：客人說 ひとり、ふたり，店員對一位客人通常說 お<ruby>一人<rt>ひとり</rt></ruby><ruby>様<rt>さま</rt></ruby>，很少說 一名様。
+    橘底的是唸法不照規則的。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>人數</th><th>客人說</th><th>店員說</th></tr>
+    </thead>
+    <tbody>
+      <tr class="odd"><td>一位</td><td class="col-ja"><ruby>一人<rt>ひとり</rt></ruby><span class="r">hitori</span></td><td class="col-ja">お<ruby>一人<rt>ひとり</rt></ruby><ruby>様<rt>さま</rt></ruby><span class="r">ohitori-sama</span></td></tr>
+      <tr class="odd"><td>兩位</td><td class="col-ja"><ruby>二人<rt>ふたり</rt></ruby><span class="r">futari</span></td><td class="col-ja"><ruby>二<rt>に</rt>名<rt>めい</rt>様<rt>さま</rt></ruby><span class="r">nimei-sama</span></td></tr>
+      <tr><td>三位</td><td class="col-ja"><ruby>三<rt>さん</rt>人<rt>にん</rt></ruby><span class="r">sannin</span></td><td class="col-ja"><ruby>三<rt>さん</rt>名<rt>めい</rt>様<rt>さま</rt></ruby><span class="r">sanmei-sama</span></td></tr>
+      <tr class="odd"><td>四位</td><td class="col-ja"><ruby>四<rt>よ</rt>人<rt>にん</rt></ruby><span class="r">yonin</span></td><td class="col-ja"><ruby>四<rt>よん</rt>名<rt>めい</rt>様<rt>さま</rt></ruby><span class="r">yonmei-sama</span></td></tr>
+      <tr><td>五位</td><td class="col-ja"><ruby>五<rt>ご</rt>人<rt>にん</rt></ruby><span class="r">gonin</span></td><td class="col-ja"><ruby>五<rt>ご</rt>名<rt>めい</rt>様<rt>さま</rt></ruby><span class="r">gomei-sama</span></td></tr>
+      <tr><td>幾位？</td><td class="col-ja"><ruby>何<rt>なん</rt>人<rt>にん</rt></ruby><span class="r">nannin</span></td><td class="col-ja"><ruby>何<rt>なん</rt>名<rt>めい</rt>様<rt>さま</rt></ruby><span class="r">nanmei-sama</span></td></tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    四人 唸 よにん，不唸 しにん 或 よんにん；但店員說的 四名様 是 よんめいさま。
+    一個人來的時候，店員會這樣問：
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 一個人的時候</div>
+
+    <div class="word-item" data-text="おひとりさまですか。">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>一人<rt>ひとり</rt></ruby><ruby>様<rt>さま</rt></ruby>ですか。</div>
+        <div class="word-romaji">ohitori-sama desu ka.</div>
+        <div class="word-meaning">一位嗎？（看到你一個人進來時直接問）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="はい、一人です。">
+      <div class="word-content">
+        <div class="word-ja">はい、<ruby>一人<rt>ひとり</rt></ruby>です。</div>
+        <div class="word-romaji">hai, hitori desu.</div>
+        <div class="word-meaning">對，一個人。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、客人自己回答時不加 様</div>
+
+  <p class="lead">
+    様 是用來尊敬對方的，不能加在自己身上。客人回答時用一般的 〜人です 就好；
+    想講得正式一點，可以用 〜名です，但一樣不加 様。
+  </p>
+
+  <div class="section">
+    <div class="section-title">🙋 你可以這樣回</div>
+
+    <div class="word-item" data-text="二人です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>二人<rt>ふたり</rt></ruby>です。</div>
+        <div class="word-romaji">futari desu.</div>
+        <div class="word-meaning">兩個人。最常用、最自然的回答</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="二名です。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>二<rt>に</rt>名<rt>めい</rt></ruby>です。</div>
+        <div class="word-romaji">nimei desu.</div>
+        <div class="word-meaning">兩名。比較正式，打電話訂位時也會用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>不說「二名様です」</strong><br>
+    客人說 二名様です，等於是自己稱自己「貴賓」，聽起來很怪。
+    聽到店員說 〇名様 時只要點頭，或回一句 はい 就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示回答</div>
+    <ol class="quiz-ol">
+      <li>店員問「何名様ですか」，你們有三個人，該怎麼回答？</li>
+      <li>何名様 的 名 和 様 各是什麼意思？</li>
+      <li>一個人進餐廳時，店員最可能怎麼問？</li>
+      <li>四個人，客人說和店員說各是什麼？</li>
+      <li>可以回答「二名様です」嗎？為什麼？</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. 三人です。<br>sannin desu.</p>
+      <p>2. 名（mei）是數人的量詞，比 人 正式；様（sama）是對客人的敬稱。</p>
+      <p>3. お一人様ですか。<br>ohitori-sama desu ka.</p>
+      <p>4. 客人說 四人（yonin），店員說 四名様（yonmei-sama）。</p>
+      <p>5. 不行。様 是尊敬對方的敬稱，不能用在自己身上，回 二人です（futari desu）或 二名です（nimei desu）就好。</p>
+    </details>
+  </div>
+
+  <a href="2026-10-25-kashikomarimashita-kono-mama.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">生活篇 — 與店員的對話 <span class="next-arrow">→</span></span>
+    <span class="next-sub">問完人數之後，店員請你等候的 こちらで／そのまま 等說法</span>
+  </a>
+
+  <a href="2026-10-25-yoroshii.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">よろしい — 「いい」的客氣版 <span class="next-arrow">→</span></span>
+    <span class="next-sub">店員用 〜でよろしいですか 跟你確認的各種說法</span>
+  </a>
+
+  <a href="../store-phrasebook.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">店員會話帖 <span class="next-arrow">→</span></span>
+    <span class="next-sub">第一章 餐廳內用，何名様ですか 和 一人です、二人です 的回答</span>
+  </a>
+
+  <a href="../tenin.html" class="next-link">
+    <span class="next-kicker">— 整理 —</span>
+    <span class="next-title">店員的對話・總整理 <span class="next-arrow">→</span></span>
+    <span class="next-sub">照情境把所有跟店員有關的課排在一起</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

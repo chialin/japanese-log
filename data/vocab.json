@@ -268,6 +268,82 @@
    ]
   },
   {
+   "text": "おひとりさまですか。",
+   "ja": "お<ruby>一人<rt>ひとり</rt></ruby><ruby>様<rt>さま</rt></ruby>ですか。",
+   "kana": "おひとりさまですか。",
+   "romaji": "ohitori-sama desu ka.",
+   "meaning": "一位嗎？（看到你一個人進來時直接問）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-nanmei-sama.html",
+     "title": "何名様ですか"
+    }
+   ],
+   "tags": [
+    "數字",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "はい、一人です。",
+   "ja": "はい、<ruby>一人<rt>ひとり</rt></ruby>です。",
+   "kana": "はい、ひとりです。",
+   "romaji": "hai, hitori desu.",
+   "meaning": "對，一個人。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-nanmei-sama.html",
+     "title": "何名様ですか"
+    }
+   ],
+   "tags": [
+    "數字",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "二人です。",
+   "ja": "<ruby>二人<rt>ふたり</rt></ruby>です。",
+   "kana": "ふたりです。",
+   "romaji": "futari desu.",
+   "meaning": "兩個人。最常用、最自然的回答",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-nanmei-sama.html",
+     "title": "何名様ですか"
+    }
+   ],
+   "tags": [
+    "數字",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "二名です。",
+   "ja": "<ruby>二<rt>に</rt>名<rt>めい</rt></ruby>です。",
+   "kana": "にめいです。",
+   "romaji": "nimei desu.",
+   "meaning": "兩名。比較正式，打電話訂位時也會用",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-25",
+     "href": "lessons/2026-10-25-nanmei-sama.html",
+     "title": "何名様ですか"
+    }
+   ],
+   "tags": [
+    "數字",
+    "問候・句型"
+   ]
+  },
+  {
    "text": "このままでよろしいですか。",
    "ja": "この ままで よろしいですか。",
    "kana": "この ままで よろしいですか。",

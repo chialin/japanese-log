@@ -16,15 +16,24 @@
   // ① 徽章：掛在含 ruby 的卡片上
   const CARDS = '.word-item, .turn, .ta-card, .scene, td.col-ja';
   const seenAll = new Set();
+  // 表格裡同一個字只在第一次出現的那格掛徽章，不然人數表這種每列都有 人・名 的表會很擠
+  const seenInTable = new WeakMap();
 
   document.querySelectorAll('ruby').forEach((ruby) => {
     const chars = [...ruby.textContent].filter(isKanji);
     chars.forEach((c) => seenAll.add(c));
     const card = ruby.closest(CARDS);
     if (!card) return;
+    const table = card.matches('td.col-ja') ? card.closest('table') : null;
+    if (table && !seenInTable.has(table)) seenInTable.set(table, new Set());
     const hot = [...new Set(chars)].filter((c) => (idx[c] || 0) >= HOT);
     for (const ch of hot) {
       if (card.querySelector(`.kanji-chip[data-kanji="${ch}"]`)) continue;
+      if (table) {
+        const seenHere = seenInTable.get(table);
+        if (seenHere.has(ch)) continue;
+        seenHere.add(ch);
+      }
       const a = document.createElement('a');
       a.className = 'kanji-chip';
       a.dataset.kanji = ch;

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>付き合っています — 交往、陪人、跟人相處</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent"><ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>って</span>います</h1>
+  <div class="page-meta">句型 · Phrases · 2026 / 10 / 27</div>
+  <p class="page-subtitle">同樣是 ています，看電影是「正在做」，交往是「一直是這個狀態」；付き合う 還可以用來說陪人和跟人相處</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    跟別人聊到感情狀況時，「我在跟女朋友交往」日文是 彼女と付き合っています。
+    這句跟 映画を見ています 一樣用 ています，意思卻不太一樣：看電影是說話的這一刻正在做的事，交往則是一段持續的關係。
+    這篇先把這兩種 ています 放在一起比較，再拆開 付き合って 這個字是怎麼變出來的，
+    接著看 付き合う 除了交往之外，還能用來說「陪人做某件事」和「跟人相處」，而分辨的方法是看前面的助詞。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、同樣是 ています，這兩組句子的意思不一樣</div>
+
+  <p class="lead">
+    ています 的基本用法在 <a href="2026-09-02-teimasu.html" style="color:var(--accent);">9/2〈〜ています〉</a>那篇學過。
+    那篇第四段提到，ています 的意思要看動詞本身：要花一段時間做的動作，講的是「正在做」；
+    會持續下去的關係或一下子就完成的變化，講的是「一直處在某個狀態」。下面兩組剛好各是一種。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 正在做的事：見る</div>
+
+    <div class="word-item" data-text="映画を見ています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ています</div>
+        <div class="word-romaji">eiga o mite imasu</div>
+        <div class="word-meaning">我在看電影。說話的這一刻，電影正在播。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="何を見ていますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>何<rt>なに</rt></ruby>を<ruby>見<rt>み</rt></ruby>ていますか</div>
+        <div class="word-romaji">nani o mite imasu ka</div>
+        <div class="word-meaning">你在看什麼？看到朋友盯著手機或電視時可以這樣問。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 一直是這個狀態：付き合う、結婚する</div>
+
+    <div class="word-item" data-text="彼女と付き合っています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています</div>
+        <div class="word-romaji">kanojo to tsukiatte imasu</div>
+        <div class="word-meaning">我在跟女朋友交往。不是這一秒在做什麼，而是兩個人現在的關係。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="誰かと付き合っていますか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>誰<rt>だれ</rt></ruby>かと<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っていますか</div>
+        <div class="word-romaji">dareka to tsukiatte imasu ka</div>
+        <div class="word-meaning">你現在有在跟誰交往嗎？誰（だれ）＝誰，加上 か 變成「某個人」。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="結婚しています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>結婚<rt>けっこん</rt></ruby>しています</div>
+        <div class="word-romaji">kekkon shite imasu</div>
+        <div class="word-meaning">我已婚。結婚這個動作一下子就完成了，ています 講的是結完婚之後的狀態。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <table class="joshi-table">
+    <tr><th>句子</th><th>動詞是哪一種</th><th>ています 的意思</th></tr>
+    <tr><td class="col-ja"><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ています</td><td>要花一段時間的動作</td><td><b>正在做</b></td></tr>
+    <tr><td class="col-ja"><ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています</td><td>會持續下去的關係</td><td><b>持續的狀態</b></td></tr>
+    <tr><td class="col-ja"><ruby>結婚<rt>けっこん</rt></ruby>しています</td><td>一下子就完成的變化</td><td><b>完成後留下的狀態</b></td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、付き合って 是從 付き合う 變過來的</div>
+
+  <p class="lead">
+    句子裡看到的是 付き合って，字典上查到的則是 付き合う。
+    中間那個小小的 っ 是變成て形時多出來的，單獨的 付き合っ 不能拿來用，後面一定會接 て。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 原形</div>
+    <div class="word-item" data-text="付き合う">
+      <div class="word-content">
+        <div class="word-ja"><ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>う</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>つ<span class="ar">↗</span>きあ<span class="ar">↘</span>う</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">tsukiau</div>
+        <div class="word-meaning">交往；陪；跟人相處 — Ⅰ類（五段）動詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="付き合って">
+      <div class="word-content">
+        <div class="word-ja"><ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>って</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>つ<span class="ar">↗</span>きあ<span class="ar">↘</span>って</span></span>
+          <span class="acc-note">て形，重音位置不變</span>
+        </div>
+        <div class="word-romaji">tsukiatte</div>
+        <div class="word-meaning">て形，後面接 います、ください 等</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="formula">
+    <h4>語尾是 う，照「う・つ・る → って」變</h4>
+    <div class="fx">
+      <ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby><b>う</b><span class="arw">→</span><ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby><b>って</b><span class="arw">→</span><ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>って<b>います</b><br>
+      <ruby>買<rt>か</rt></ruby><b>う</b><span class="arw">→</span><ruby>買<rt>か</rt></ruby><b>って</b>　／　<ruby>会<rt>あ</rt></ruby><b>う</b><span class="arw">→</span><ruby>会<rt>あ</rt></ruby><b>って</b>
+    </div>
+  </div>
+
+  <p class="lead">
+    這條規則跟 <a href="2026-10-22-te-kei.html" style="color:var(--accent);">10/22〈て形怎麼變〉</a>是同一套。
+    っ 是促音，唸的時候停一拍、不發聲音，再接著唸 て。
+    つ・き・あ・っ・て 總共五拍，拍手數的時候 っ 也要算一拍，少算的話聽起來會變成 つきあて。
+  </p>
+
+  <div class="note">
+    📝 <strong>付き合う 是兩個動詞黏起來的</strong><br>
+    <span class="compare"><ruby>付<rt>つ</rt></ruby>く</span>（tsuku）是「附著、黏上去」，
+    <span class="compare"><ruby>合<rt>あ</rt></ruby>う</span>（au）是「互相、相合」，兩個加起來就是「互相黏在一起」。
+    前面的 付く 接上另一個動詞時要變成 付き（tsuki），跟 ます 形 付きます 是同一個樣子。
+    這是日文本來就有的詞（訓讀），讀音跟中文、台語都對不上，用「互相黏在一起」這個畫面來記比較快。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、付き合う 有三種用法，看前面的助詞就分得出來</div>
+
+  <p class="lead">
+    「互相黏在一起」可以是兩個人在交往，可以是陪別人去做一件事，也可以是跟鄰居、同事平常的往來。
+    三種意思用的是同一個動詞，差別在前面接的是人還是事情。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 交往：人＋と</div>
+    <div class="word-item" data-text="大学院の時から付き合っています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>大学院<rt>だいがくいん</rt></ruby>の<ruby>時<rt>とき</rt></ruby>から<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています</div>
+        <div class="word-romaji">daigakuin no toki kara tsukiatte imasu</div>
+        <div class="word-meaning">我們從研究所的時候開始交往（到現在）。〇〇の時から＝從〇〇的時候開始。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>研究所的日文是 大学院，不是 研究所</strong><br>
+    日文也有 <span class="compare"><ruby>研究所<rt>けんきゅうじょ</rt></ruby></span>（kenkyuujo）這個詞，但它指的是做研究的機構，像中文的「研究院、研究中心」。
+    中文說「我研究所畢業」「研究所的時候」，指的是碩士班，日文要說
+    <span class="compare"><ruby>大学院<rt>だいがくいん</rt></ruby></span>（daigakuin），字面上就是「大學裡面的院」。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 陪人做某件事：事情＋に</div>
+    <div class="word-item" data-text="友達の買い物に付き合いました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>友達<rt>ともだち</rt></ruby>の<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>いました</div>
+        <div class="word-romaji">tomodachi no kaimono ni tsukiaimashita</div>
+        <div class="word-meaning">我陪朋友去買東西了。陪是一次就結束的事，所以用 ました，不用 ています。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 跟人相處、往來：人＋と</div>
+    <div class="word-item" data-text="近所の人と仲良く付き合っています">
+      <div class="word-content">
+        <div class="word-ja"><ruby>近所<rt>きんじょ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>と<ruby>仲<rt>なか</rt></ruby><ruby>良<rt>よ</rt></ruby>く<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています</div>
+        <div class="word-romaji">kinjo no hito to nakayoku tsukiatte imasu</div>
+        <div class="word-meaning">我跟鄰居相處得很好。仲良く（nakayoku）＝感情很好地。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    交往和相處前面都是「人＋と」，要靠前後文分辨：對象是 彼女、彼 這種，通常是在講交往；
+    對象是 近所の人、会社の人，或是句子裡有 仲良く，講的就是平常的往來。
+    買い物 這個詞在 <a href="2026-06-27-vocab-shopping.html" style="color:var(--accent);">6/27 的購物單字</a>學過，
+    近所 則出現在 <a href="2026-08-06-soko-wa-desu-yo.html" style="color:var(--accent);">8/6〈そこは〜ですよ〉</a>那篇。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    ⚠️ <strong>交往的對象用 と，不用 を</strong><br>
+    中文說「交往女朋友」聽起來像是動作直接作用在對方身上，很容易寫成 ✗ 彼女<span class="j-mark">を</span>付き合っています。
+    付き合う 是兩個人互相的動作，對象要用 <span class="j-mark">と</span>（跟誰）帶出來：
+    ○ 彼女<span class="j-mark">と</span>付き合っています。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>交往中是 付き合っています，付き合いました 比較像「陪過了」</strong><br>
+    想說「我們現在在一起」，要用 ています 表示關係還在持續。
+    句尾換成 ました，聽起來像是一件已經做完的事，在 友達の買い物に付き合いました 這種「陪」的句子裡才自然。
+    講以前交往過、現在已經分開，則用 付き合っていました（tsukiatte imashita）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、整理成一張表</div>
+
+  <table class="joshi-table">
+    <tr><th>意思</th><th>前面接什麼</th><th>例句</th></tr>
+    <tr><td><b>交往</b></td><td>人＋と</td><td class="col-ja"><ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています<br><ruby>大学院<rt>だいがくいん</rt></ruby>の<ruby>時<rt>とき</rt></ruby>から<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています</td></tr>
+    <tr><td><b>陪</b></td><td>事情＋に</td><td class="col-ja"><ruby>友達<rt>ともだち</rt></ruby>の<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>いました</td></tr>
+    <tr><td><b>相處、往來</b></td><td>人＋と</td><td class="col-ja"><ruby>近所<rt>きんじょ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>と<ruby>仲<rt>なか</rt></ruby><ruby>良<rt>よ</rt></ruby>く<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています</td></tr>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、換你自己做做看 · Self-Quiz</div>
+
+  <details>
+    <summary>🔍 第一題：「你在看什麼？」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>何<rt>なに</rt></ruby>を<ruby>見<rt>み</rt></ruby>ていますか。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">nani o mite imasu ka.<br>
+      問的是對方此刻正在做的事，所以用 ています。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第二題：把 付き合う 改成て形，並說出總共幾拍。</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>って，五拍（つ・き・あ・っ・て）。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">tsukiatte.<br>
+      語尾 う 變成 って，促音 っ 也算一拍。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第三題：下面這句錯在哪裡？「<ruby>彼<rt>かれ</rt></ruby>を<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています。」</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      要改成 <ruby>彼<rt>かれ</rt></ruby>と<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">kare to tsukiatte imasu.<br>
+      交往是兩個人互相的事，對象用 と。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第四題：「我陪朋友去買東西了。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>友達<rt>ともだち</rt></ruby>の<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>いました。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">tomodachi no kaimono ni tsukiaimashita.<br>
+      陪去做的事情用 に；已經陪完了，用 ました。</span>
+    </p>
+  </details>
+
+  <details>
+    <summary>🔍 第五題：「我們從研究所的時候開始交往。」日文怎麼說？</summary>
+    <p style="margin:10px 0 0;font-size:15px;line-height:2;">
+      <ruby>大学院<rt>だいがくいん</rt></ruby>の<ruby>時<rt>とき</rt></ruby>から<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています。<br>
+      <span style="color:var(--ink-mute);font-size:13px;">daigakuin no toki kara tsukiatte imasu.<br>
+      研究所（碩士班）的日文是 大学院；關係持續到現在，用 ています。</span>
+    </p>
+  </details>
+
+  <a href="2026-10-27-hantaigo.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">形容詞的反義詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">寬和窄、髒和乾淨、高和矮、長和短，再加上一批常一起出現的反義詞</span>
+  </a>
+
+  <a href="2026-09-02-teimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜ています — 正在做的事要這樣說 <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/2 ています 的完整整理：て形的變法、三種意思、否定與過去</span>
+  </a>
+
+  <a href="2026-10-22-te-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">て形怎麼變 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/22 て形變法的完整整理，付き合う → 付き合って 就是 う → って 這一組</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

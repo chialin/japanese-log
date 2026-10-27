@@ -542,6 +542,195 @@
    ]
   },
   {
+   "text": "映画を見ています",
+   "ja": "<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ています",
+   "kana": "えいがをみています",
+   "romaji": "eiga o mite imasu",
+   "meaning": "我在看電影。說話的這一刻，電影正在播。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "何を見ていますか",
+   "ja": "<ruby>何<rt>なに</rt></ruby>を<ruby>見<rt>み</rt></ruby>ていますか",
+   "kana": "なにをみていますか",
+   "romaji": "nani o mite imasu ka",
+   "meaning": "你在看什麼？看到朋友盯著手機或電視時可以這樣問。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "彼女と付き合っています",
+   "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>と<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています",
+   "kana": "かのじょとつきあっています",
+   "romaji": "kanojo to tsukiatte imasu",
+   "meaning": "我在跟女朋友交往。不是這一秒在做什麼，而是兩個人現在的關係。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "誰かと付き合っていますか",
+   "ja": "<ruby>誰<rt>だれ</rt></ruby>かと<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っていますか",
+   "kana": "だれかとつきあっていますか",
+   "romaji": "dareka to tsukiatte imasu ka",
+   "meaning": "你現在有在跟誰交往嗎？誰（だれ）＝誰，加上 か 變成「某個人」。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "結婚しています",
+   "ja": "<ruby>結婚<rt>けっこん</rt></ruby>しています",
+   "kana": "けっこんしています",
+   "romaji": "kekkon shite imasu",
+   "meaning": "我已婚。結婚這個動作一下子就完成了，ています 講的是結完婚之後的狀態。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "付き合う",
+   "ja": "<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>う",
+   "kana": "つきあう",
+   "romaji": "tsukiau",
+   "meaning": "交往；陪；跟人相處 — Ⅰ類（五段）動詞",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>つ<span class=\"ar\">↗</span>きあ<span class=\"ar\">↘</span>う</span></span>\n          <span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "付き合って",
+   "ja": "<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>って",
+   "kana": "つきあって",
+   "romaji": "tsukiatte",
+   "meaning": "て形，後面接 います、ください 等",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>つ<span class=\"ar\">↗</span>きあ<span class=\"ar\">↘</span>って</span></span>\n          <span class=\"acc-note\">て形，重音位置不變</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "大学院の時から付き合っています",
+   "ja": "<ruby>大学院<rt>だいがくいん</rt></ruby>の<ruby>時<rt>とき</rt></ruby>から<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています",
+   "kana": "だいがくいんのときからつきあっています",
+   "romaji": "daigakuin no toki kara tsukiatte imasu",
+   "meaning": "我們從研究所的時候開始交往（到現在）。〇〇の時から＝從〇〇的時候開始。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "友達の買い物に付き合いました",
+   "ja": "<ruby>友達<rt>ともだち</rt></ruby>の<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>いました",
+   "kana": "ともだちのかいものにつきあいました",
+   "romaji": "tomodachi no kaimono ni tsukiaimashita",
+   "meaning": "我陪朋友去買東西了。陪是一次就結束的事，所以用 ました，不用 ています。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "購物"
+   ]
+  },
+  {
+   "text": "近所の人と仲良く付き合っています",
+   "ja": "<ruby>近所<rt>きんじょ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>と<ruby>仲<rt>なか</rt></ruby><ruby>良<rt>よ</rt></ruby>く<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>っています",
+   "kana": "きんじょのひととなかよくつきあっています",
+   "romaji": "kinjo no hito to nakayoku tsukiatte imasu",
+   "meaning": "我跟鄰居相處得很好。仲良く（nakayoku）＝感情很好地。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-27",
+     "href": "lessons/2026-10-27-tsukiatte-imasu.html",
+     "title": "付き合っています"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "家族・人"
+   ]
+  },
+  {
    "text": "ご飯を大盛りでお願いします。",
    "ja": "ご<ruby>飯<rt>はん</rt></ruby>を <ruby>大<rt>おお</rt>盛<rt>も</rt></ruby>りで お<ruby>願<rt>ねが</rt></ruby>いします。",
    "kana": "ごはんを おおもりで おねがいします。",

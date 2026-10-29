@@ -1,6 +1,893 @@
 {
- "generated": "2026-10-27",
+ "generated": "2026-10-29",
  "words": [
+  {
+   "text": "靴",
+   "ja": "<ruby>靴<rt>くつ</rt></ruby>",
+   "kana": "くつ",
+   "romaji": "kutsu",
+   "meaning": "鞋子 — 日文本來就有的詞（訓讀），襪子是 靴下（くつした），字面上是「鞋子底下」",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>く<span class=\"ar\">↗</span>つ</span></span>\n          <span class=\"acc-note\">尾高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "購物"
+   ]
+  },
+  {
+   "text": "専用",
+   "ja": "<ruby>専<rt>せん</rt>用<rt>よう</rt></ruby>",
+   "kana": "せんよう",
+   "romaji": "sen'you",
+   "meaning": "專用 — 〇〇専用の△△＝〇〇專用的△△，跟中文的用法一樣；ん 後面接 よ，羅馬拼音寫成 sen'you 避免唸成 se-nyou",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "履く",
+   "ja": "<ruby>履<rt>は</rt></ruby>く",
+   "kana": "はく",
+   "romaji": "haku",
+   "meaning": "穿（鞋子、褲子、襪子）— て形是 履いて；跟 着る 的分別見第三節",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>はく<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "履き心地",
+   "ja": "<ruby>履<rt>は</rt></ruby>き<ruby>心<rt>ごこ</rt>地<rt>ち</rt></ruby>",
+   "kana": "はきごこち",
+   "romaji": "hakigokochi",
+   "meaning": "（鞋子）穿起來的感覺 — 履き＋心地（ここち，感覺），接在後面時 こ 變成濁音 ご",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "柔らかい",
+   "ja": "<ruby>柔<rt>やわ</rt></ruby>らかい",
+   "kana": "やわらかい",
+   "romaji": "yawarakai",
+   "meaning": "柔軟的 — い形容詞；接下一句時變成 柔らかくて",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>や<span class=\"ar\">↗</span>わらか<span class=\"ar\">↘</span>い</span></span>\n          <span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "きつい",
+   "ja": "きつい",
+   "kana": "きつい",
+   "romaji": "kitsui",
+   "meaning": "（衣服、鞋子）很緊 — い形容詞；也可以用來說工作很累、很辛苦",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>きつい<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "痛い",
+   "ja": "<ruby>痛<rt>いた</rt></ruby>い",
+   "kana": "いたい",
+   "romaji": "itai",
+   "meaning": "痛的 — 撞到東西時脫口而出的「好痛！」就是 痛い！",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>い<span class=\"ar\">↗</span>た<span class=\"ar\">↘</span>い</span></span>\n          <span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "サイズ",
+   "ja": "サイズ",
+   "kana": "サイズ",
+   "romaji": "saizu",
+   "meaning": "尺寸 ← 英語 size；買鞋買衣服時問「有大一號的嗎」是 大きいサイズはありますか",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "購物"
+   ]
+  },
+  {
+   "text": "今度",
+   "ja": "<ruby>今<rt>こん</rt>度<rt>ど</rt></ruby>",
+   "kana": "こんど",
+   "romaji": "kondo",
+   "meaning": "這次；下次 — 對比上一次時用，像 今度は大きい靴を買いました（這次買了大的）；也可以指「下次」：今度一緒に行きましょう",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "靴屋",
+   "ja": "<ruby>靴<rt>くつ</rt>屋<rt>や</rt></ruby>",
+   "kana": "くつや",
+   "romaji": "kutsuya",
+   "meaning": "鞋店 — 屋（や）接在商品後面表示「賣〇〇的店」，像 本屋（書店）、花屋（花店）、パン屋（麵包店）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "購物",
+    "場所"
+   ]
+  },
+  {
+   "text": "プロ",
+   "ja": "プロ",
+   "kana": "プロ",
+   "romaji": "puro",
+   "meaning": "職業選手、專家 ← 英語 professional 的前半截；相反是 アマ（amateur，業餘）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "人物・職業"
+   ]
+  },
+  {
+   "text": "上級者",
+   "ja": "<ruby>上<rt>じょう</rt>級<rt>きゅう</rt>者<rt>しゃ</rt></ruby>",
+   "kana": "じょうきゅうしゃ",
+   "romaji": "joukyuusha",
+   "meaning": "高手、程度高的人 — 上級＋者（〜的人）；初學者是 初級者（しょきゅうしゃ）或 初心者（しょしんしゃ）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>じょ<span class=\"ar\">↗</span>うきゅ<span class=\"ar\">↘</span>うしゃ</span></span>\n          <span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "人物・職業"
+   ]
+  },
+  {
+   "text": "初級",
+   "ja": "<ruby>初<rt>しょ</rt>級<rt>きゅう</rt></ruby>",
+   "kana": "しょきゅう",
+   "romaji": "shokyuu",
+   "meaning": "初級 — 初級・中級（ちゅうきゅう）・上級 是一組，日文課的程度也是這樣分",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>しょきゅう<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "半年",
+   "ja": "<ruby>半<rt>はん</rt>年<rt>とし</rt></ruby>",
+   "kana": "はんとし",
+   "romaji": "hantoshi",
+   "meaning": "半年 — 年 在這裡唸 とし，不是 ねん；〇〇で替える＝用了〇〇（這麼久）就換",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>は<span class=\"ar\">↗</span>んとし</span></span>\n          <span class=\"acc-note\">尾高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "替える",
+   "ja": "<ruby>替<rt>か</rt></ruby>える",
+   "kana": "かえる",
+   "romaji": "kaeru",
+   "meaning": "換（新的）— 一段動詞，ます形 替えます；跟 買う（かう）只差一個音，別聽混",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "以上",
+   "ja": "<ruby>以<rt>い</rt>上<rt>じょう</rt></ruby>",
+   "kana": "いじょう",
+   "romaji": "ijou",
+   "meaning": "以上 — 接在數量後面，跟中文一樣：2～3年以上＝兩三年以上；結帳時的 以上でよろしいですか 則是「就這些嗎」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "數字"
+   ]
+  },
+  {
+   "text": "緑",
+   "ja": "<ruby>緑<rt>みどり</rt></ruby>",
+   "kana": "みどり",
+   "romaji": "midori",
+   "meaning": "綠色 — 名詞，沒有 い 形容詞的形；講「綠色的鞋子」要說 緑の靴",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>み<span class=\"ar\">↘</span>どり</span></span>\n          <span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "黒",
+   "ja": "<ruby>黒<rt>くろ</rt></ruby>",
+   "kana": "くろ",
+   "romaji": "kuro",
+   "meaning": "黑色 — 名詞；另外有い形容詞 黒い（くろい），黒い靴 和 黒の靴 都可以",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>く<span class=\"ar\">↘</span>ろ</span></span>\n          <span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "今度一緒に行きましょう。",
+   "ja": "<ruby>今<rt>こん</rt>度<rt>ど</rt></ruby> <ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>に <ruby>行<rt>い</rt></ruby>きましょう。",
+   "kana": "こんど いっしょに いきましょう。",
+   "romaji": "kondo issho ni ikimashou.",
+   "meaning": "下次一起去吧。（還沒發生的事，今度＝下次；日本人常把這句當客套話）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "今回は大きい靴を買いました。",
+   "ja": "<ruby>今<rt>こん</rt>回<rt>かい</rt></ruby>は <ruby>大<rt>おお</rt></ruby>きい <ruby>靴<rt>くつ</rt></ruby>を <ruby>買<rt>か</rt></ruby>いました。",
+   "kana": "こんかいは おおきい くつを かいました。",
+   "romaji": "konkai wa ookii kutsu o kaimashita.",
+   "meaning": "這次買了大一點的鞋子。（今回 只有「這次」的意思）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "購物"
+   ]
+  },
+  {
+   "text": "きついし、痛いし、もう履きたくないです。",
+   "ja": "きついし、<ruby>痛<rt>いた</rt></ruby>いし、もう <ruby>履<rt>は</rt></ruby>きたくないです。",
+   "kana": "きついし、いたいし、もう はきたくないです。",
+   "romaji": "kitsui shi, itai shi, mou hakitakunai desu.",
+   "meaning": "又緊又痛，已經不想再穿了。（把結論說出來的完整版）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "このジムは近いし、安いし、いいですよ。",
+   "ja": "このジムは <ruby>近<rt>ちか</rt></ruby>いし、<ruby>安<rt>やす</rt></ruby>いし、いいですよ。",
+   "kana": "このジムは ちかいし、やすいし、いいですよ。",
+   "romaji": "kono jimu wa chikai shi, yasui shi, ii desu yo.",
+   "meaning": "這間健身房又近又便宜，很不錯喔。（好的理由也可以這樣列）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "あそこでギターを弾いている人が兄です。",
+   "ja": "あそこで ギターを <ruby>弾<rt>ひ</rt></ruby>いている <ruby>人<rt>ひと</rt></ruby>が <ruby>兄<rt>あに</rt></ruby>です。",
+   "kana": "あそこで ギターを ひいている ひとが あにです。",
+   "romaji": "asoko de gitaa o hiite iru hito ga ani desu.",
+   "meaning": "在那邊彈吉他的人是我哥哥。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "弾く",
+   "ja": "<ruby>弾<rt>ひ</rt></ruby>く",
+   "kana": "ひく",
+   "romaji": "hiku",
+   "meaning": "彈（樂器）— て形是 弾いて；ピアノを弾く、ギターを弾く",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>ひく<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "ギター",
+   "ja": "ギター",
+   "kana": "ギター",
+   "romaji": "gitaa",
+   "meaning": "吉他 ← 英語 guitar，再往前是西班牙語 guitarra",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>ぎ<span class=\"ar\">↘</span>たー</span></span>\n          <span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "兄",
+   "ja": "<ruby>兄<rt>あに</rt></ruby>",
+   "kana": "あに",
+   "romaji": "ani",
+   "meaning": "（我的）哥哥 — 跟別人講自己的哥哥用 兄；講別人的哥哥或當面叫哥哥用 お兄さん（おにいさん）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>あ<span class=\"ar\">↘</span>に</span></span>\n          <span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "夫",
+   "ja": "<ruby>夫<rt>おっと</rt></ruby>",
+   "kana": "おっと",
+   "romaji": "otto",
+   "meaning": "（我的）先生 — 講別人的先生用 ご主人；丈夫的幾種說法見 8/4 的課",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>おっと<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "寝ている猫",
+   "ja": "<ruby>寝<rt>ね</rt></ruby>ている <ruby>猫<rt>ねこ</rt></ruby>",
+   "kana": "ねている ねこ",
+   "romaji": "nete iru neko",
+   "meaning": "在睡覺的貓。睡覺的是貓。寝る 是一段動詞，て形是 寝て。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "動物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "公園で遊んでいる犬",
+   "ja": "<ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>で <ruby>遊<rt>あそ</rt></ruby>んでいる <ruby>犬<rt>いぬ</rt></ruby>",
+   "kana": "こうえんで あそんでいる いぬ",
+   "romaji": "kouen de asonde iru inu",
+   "meaning": "在公園玩的狗。遊ぶ（玩）的て形是 遊んで。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "動物",
+    "場所"
+   ]
+  },
+  {
+   "text": "走っている電車",
+   "ja": "<ruby>走<rt>はし</rt></ruby>っている <ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>",
+   "kana": "はしっている でんしゃ",
+   "romaji": "hashitte iru densha",
+   "meaning": "正在行駛的電車。走る 用在車子上是「行駛」。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "交通",
+    "動詞"
+   ]
+  },
+  {
+   "text": "兄が弾いているギター",
+   "ja": "<ruby>兄<rt>あに</rt></ruby>が <ruby>弾<rt>ひ</rt></ruby>いている ギター",
+   "kana": "あにが ひいている ギター",
+   "romaji": "ani ga hiite iru gitaa",
+   "meaning": "哥哥在彈的吉他。彈的人是哥哥，吉他是被彈的東西。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "動詞"
+   ]
+  },
+  {
+   "text": "いつも履いている靴",
+   "ja": "いつも <ruby>履<rt>は</rt></ruby>いている <ruby>靴<rt>くつ</rt></ruby>",
+   "kana": "いつも はいている くつ",
+   "romaji": "itsumo haite iru kutsu",
+   "meaning": "（我）平常穿的鞋子。主詞「私が」省略了，這裡的 ている 是「平常都這樣做」的習慣。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "動詞"
+   ]
+  },
+  {
+   "text": "兄がギターを弾いている店",
+   "ja": "<ruby>兄<rt>あに</rt></ruby>が ギターを <ruby>弾<rt>ひ</rt></ruby>いている <ruby>店<rt>みせ</rt></ruby>",
+   "kana": "あにが ギターを ひいている みせ",
+   "romaji": "ani ga gitaa o hiite iru mise",
+   "meaning": "哥哥在那裡彈吉他的店。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "場所"
+   ]
+  },
+  {
+   "text": "昨日買った靴は、柔らかいです。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby> <ruby>買<rt>か</rt></ruby>った <ruby>靴<rt>くつ</rt></ruby>は、<ruby>柔<rt>やわ</rt></ruby>らかいです。",
+   "kana": "きのう かった くつは、やわらかいです。",
+   "romaji": "kinou katta kutsu wa, yawarakai desu.",
+   "meaning": "昨天買的鞋子很軟。整串 昨日買った靴 當成一個名詞，後面再接 は。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "購物",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "ここで映画を見ている人が夫です。",
+   "ja": "ここで <ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>ている <ruby>人<rt>ひと</rt></ruby>が <ruby>夫<rt>おっと</rt></ruby>です。",
+   "kana": "ここで えいがを みている ひとが おっとです。",
+   "romaji": "koko de eiga o mite iru hito ga otto desu.",
+   "meaning": "（指著照片）在這裡看電影的人是我先生。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "スーパーの駐車場で車を止めている人が夫です。",
+   "ja": "スーパーの <ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt>場<rt>じょう</rt></ruby>で <ruby>車<rt>くるま</rt></ruby>を <ruby>止<rt>と</rt></ruby>めている <ruby>人<rt>ひと</rt></ruby>が <ruby>夫<rt>おっと</rt></ruby>です。",
+   "kana": "スーパーの ちゅうしゃじょうで くるまを とめている ひとが おっとです。",
+   "romaji": "suupaa no chuushajou de kuruma o tomete iru hito ga otto desu.",
+   "meaning": "在超市停車場停車的人是我先生。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "交通"
+   ]
+  },
+  {
+   "text": "小学校",
+   "ja": "<ruby>小<rt>しょう</rt>学<rt>がっ</rt>校<rt>こう</rt></ruby>",
+   "kana": "しょうがっこう",
+   "romaji": "shougakkou",
+   "meaning": "小學 — がく＋こう 連在一起，がく 縮成 がっ",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>しょ<span class=\"ar\">↗</span>うが<span class=\"ar\">↘</span>っこう</span></span>\n          <span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "中学校",
+   "ja": "<ruby>中<rt>ちゅう</rt>学<rt>がっ</rt>校<rt>こう</rt></ruby>",
+   "kana": "ちゅうがっこう",
+   "romaji": "chuugakkou",
+   "meaning": "國中 — 台灣說「國中」，日文說「中學」，口語常簡稱 中学（ちゅうがく）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>ちゅ<span class=\"ar\">↗</span>うが<span class=\"ar\">↘</span>っこう</span></span>\n          <span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "中学生",
+   "ja": "<ruby>中<rt>ちゅう</rt>学<rt>がく</rt>生<rt>せい</rt></ruby>",
+   "kana": "ちゅうがくせい",
+   "romaji": "chuugakusei",
+   "meaning": "國中生 — 小學生是 小学生（しょうがくせい），高中生是 高校生（こうこうせい）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>ちゅ<span class=\"ar\">↗</span>うが<span class=\"ar\">↘</span>くせい</span></span>\n          <span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "學校・工作",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "高校",
+   "ja": "<ruby>高<rt>こう</rt>校<rt>こう</rt></ruby>",
+   "kana": "こうこう",
+   "romaji": "koukou",
+   "meaning": "高中 — 高等学校（こうとうがっこう）的簡稱；中文的「高校」是大專院校，意思不一樣",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>こうこう<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "大学",
+   "ja": "<ruby>大<rt>だい</rt>学<rt>がく</rt></ruby>",
+   "kana": "だいがく",
+   "romaji": "daigaku",
+   "meaning": "大學 — 研究所是 大学院（だいがくいん），見 10/27 的課",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>だいがく<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "注射",
+   "ja": "<ruby>注<rt>ちゅう</rt>射<rt>しゃ</rt></ruby>",
+   "kana": "ちゅうしゃ",
+   "romaji": "chuusha",
+   "meaning": "打針 — 注射をする／注射を打つ",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>ちゅうしゃ<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "駐輪場",
+   "ja": "<ruby>駐<rt>ちゅう</rt>輪<rt>りん</rt>場<rt>じょう</rt></ruby>",
+   "kana": "ちゅうりんじょう",
+   "romaji": "chuurinjou",
+   "meaning": "腳踏車停車場 — 輪 是車輪，指腳踏車；日本車站旁很常見，亂停會被拖走",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>ちゅうりんじょう<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "交通",
+    "場所"
+   ]
+  },
+  {
+   "text": "家の近くに駐輪場があります。",
+   "ja": "<ruby>家<rt>いえ</rt></ruby>の <ruby>近<rt>ちか</rt></ruby>くに <ruby>駐<rt>ちゅう</rt>輪<rt>りん</rt>場<rt>じょう</rt></ruby>が あります。",
+   "kana": "いえの ちかくに ちゅうりんじょうが あります。",
+   "romaji": "ie no chikaku ni chuurinjou ga arimasu.",
+   "meaning": "我家附近有腳踏車停車場。（課上我說的是 家の近くで見ました，在家附近看到過；要說「那裡有」用 に＋あります）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "交通",
+    "場所"
+   ]
+  },
+  {
+   "text": "予防接種",
+   "ja": "<ruby>予<rt>よ</rt>防<rt>ぼう</rt>接<rt>せっ</rt>種<rt>しゅ</rt></ruby>",
+   "kana": "よぼうせっしゅ",
+   "romaji": "yobou sesshu",
+   "meaning": "預防接種、打預防針 — 動詞用 受ける（うける）：予防接種を受けました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "インフルエンザ",
+   "ja": "インフルエンザ",
+   "kana": "インフルエンザ",
+   "romaji": "infuruenza",
+   "meaning": "流感 — 字源是義大利語 influenza（影響，古人以為是星象造成的），英語、德語也都用這個字，日文是從哪個語言借進來的我不確定；口語常簡稱 インフル",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "インフルエンザの予防接種を受けました。",
+   "ja": "インフルエンザの <ruby>予<rt>よ</rt>防<rt>ぼう</rt>接<rt>せっ</rt>種<rt>しゅ</rt></ruby>を <ruby>受<rt>う</rt></ruby>けました。",
+   "kana": "インフルエンザの よぼうせっしゅを うけました。",
+   "romaji": "infuruenza no yobou sesshu o ukemashita.",
+   "meaning": "我打了流感疫苗。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
   {
    "text": "広い",
    "ja": "<ruby>広<rt>ひろ</rt></ruby>い",
@@ -8043,6 +8930,11 @@
      "date": "2026-08-21",
      "href": "lessons/2026-08-21-bouldering-kaiwa.html",
      "title": "ボルダリングの話"
+    },
+    {
+     "date": "2026-10-29",
+     "href": "lessons/2026-10-29-atarashii-kutsu.html",
+     "title": "新しい靴を買いました"
     }
    ],
    "tags": [
@@ -11567,6 +12459,11 @@
      "date": "2026-08-15",
      "href": "lessons/2026-08-15-x-ga-arimasen.html",
      "title": "Xがありません"
+    },
+    {
+     "date": "2026-10-28",
+     "href": "lessons/2026-10-28-te-iru-meishi.html",
+     "title": "〜ている＋名詞"
     }
    ],
    "tags": [

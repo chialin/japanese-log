@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新しい靴を買いました — 攀岩鞋的會話紀錄</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:56px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">新しい<span class="accent">靴</span>を買いました</h1>
+  <div class="page-meta">會話紀錄 · Conversation · 2026 / 10 / 29</div>
+  <p class="page-subtitle">跟老師聊新買的抱石鞋：為什麼要買小一號、穿起來的感覺、多久換一雙</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    10/29 的口語課，我跟老師說前一天買了一雙新的抱石鞋。舊的那雙有點小，穿起來又緊又痛，
+    所以換了一雙大一點、比較軟的。抱石鞋本來就要買得比平常的鞋子小，
+    上級者大概半年就換一雙，像我這樣的初學者會穿兩三年以上。<br>
+    這篇先把整段對話整理出來，再看課上碰到的幾件事：穿鞋子要用 履く，不是 着る；
+    柔らかくて 是把兩個形容詞連在一起的形；きついし、痛いし 的 し 用來列出好幾個理由；
+    最後是比較兩樣東西時的 より 和 のほうが。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaiwa">一、以課堂上的聊天為主軸，把對話整理出來</div>
+
+  <p class="lead">
+    下面是照課堂筆記重新整理的對話。我說過的句子大致保留原樣，課上被改過的地方直接放修正後的版本，
+    老師的問句有幾句是依當時的流程補上的。每一句都可以按 ▶ 跟著唸。
+  </p>
+
+  <div class="dialog">
+    <div class="turn me" data-text="新しい靴を買いました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>新<rt>あたら</rt></ruby>しい <ruby>靴<rt>くつ</rt></ruby>を <ruby>買<rt>か</rt></ruby>いました。</div>
+        <div class="turn-romaji">atarashii kutsu o kaimashita.</div>
+        <div class="turn-meaning">我買了新鞋子。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="どんな靴ですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">どんな <ruby>靴<rt>くつ</rt></ruby>ですか。</div>
+        <div class="turn-romaji">donna kutsu desu ka.</div>
+        <div class="turn-meaning">是什麼樣的鞋子？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="ボルダリング専用の靴です。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">ボルダリング<ruby>専<rt>せん</rt>用<rt>よう</rt></ruby>の <ruby>靴<rt>くつ</rt></ruby>です。</div>
+        <div class="turn-romaji">borudaringu sen'you no kutsu desu.</div>
+        <div class="turn-meaning">是抱石專用的鞋子。（筆記上只寫了「専用の」，這裡補成完整的句子）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="古い靴は、ちょっと小さかったです。きついし、痛いし。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>古<rt>ふる</rt></ruby>い <ruby>靴<rt>くつ</rt></ruby>は、ちょっと <ruby>小<rt>ちい</rt></ruby>さかったです。きつい<span class="j-mark">し</span>、<ruby>痛<rt>いた</rt></ruby>い<span class="j-mark">し</span>。</div>
+        <div class="turn-romaji">furui kutsu wa, chotto chiisakatta desu. kitsui shi, itai shi.</div>
+        <div class="turn-meaning">舊的鞋子有點小，又緊又痛。（し 的用法見<a href="#shi" style="color:var(--accent);">第五節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="だから、今度は大きい靴を買いました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">だから、<ruby>今<rt>こん</rt>度<rt>ど</rt></ruby>は <ruby>大<rt>おお</rt></ruby>きい <ruby>靴<rt>くつ</rt></ruby>を <ruby>買<rt>か</rt></ruby>いました。</div>
+        <div class="turn-romaji">dakara, kondo wa ookii kutsu o kaimashita.</div>
+        <div class="turn-meaning">所以這次買了大一點的鞋子。（我原本說 今は，講「這一次」用 今度は 比較自然）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="履き心地はどうですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>履<rt>は</rt></ruby>き<ruby>心<rt>ごこ</rt>地<rt>ち</rt></ruby>は どうですか。</div>
+        <div class="turn-romaji">hakigokochi wa dou desu ka.</div>
+        <div class="turn-meaning">穿起來感覺怎麼樣？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="柔らかくて、気持ちいいです。履き心地がいいです。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>柔<rt>やわ</rt></ruby>らか<span class="j-mark">くて</span>、<ruby>気<rt>き</rt>持<rt>も</rt></ruby>ちいいです。<ruby>履<rt>は</rt></ruby>き<ruby>心<rt>ごこ</rt>地<rt>ち</rt></ruby>が いいです。</div>
+        <div class="turn-romaji">yawarakakute, kimochi ii desu. hakigokochi ga ii desu.</div>
+        <div class="turn-meaning">很軟，穿起來很舒服，很好穿。（くて 的用法見<a href="#kute" style="color:var(--accent);">第四節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="ボルダリングの靴は、いつも履いている靴より小さいサイズです。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">ボルダリングの <ruby>靴<rt>くつ</rt></ruby>は、いつも <ruby>履<rt>は</rt></ruby>いている <ruby>靴<rt>くつ</rt></ruby><span class="j-mark">より</span> <ruby>小<rt>ちい</rt></ruby>さい サイズです。</div>
+        <div class="turn-romaji">borudaringu no kutsu wa, itsumo haite iru kutsu yori chiisai saizu desu.</div>
+        <div class="turn-meaning">抱石鞋的尺寸比平常穿的鞋子小。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="ボルダリングの靴のほうが、いつもの靴より小さいです。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">ボルダリングの <ruby>靴<rt>くつ</rt></ruby><span class="j-mark">のほうが</span>、いつもの <ruby>靴<rt>くつ</rt></ruby><span class="j-mark">より</span> <ruby>小<rt>ちい</rt></ruby>さいです。</div>
+        <div class="turn-romaji">borudaringu no kutsu no hou ga, itsumo no kutsu yori chiisai desu.</div>
+        <div class="turn-meaning">抱石鞋比平常的鞋子小。（兩種比較的說法見<a href="#yori" style="color:var(--accent);">第六節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="いつ買いましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">いつ <ruby>買<rt>か</rt></ruby>いましたか。</div>
+        <div class="turn-romaji">itsu kaimashita ka.</div>
+        <div class="turn-meaning">什麼時候買的？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="昨日買いました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>昨日<rt>きのう</rt></ruby> <ruby>買<rt>か</rt></ruby>いました。</div>
+        <div class="turn-romaji">kinou kaimashita.</div>
+        <div class="turn-meaning">昨天買的。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="靴屋で買いましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>靴<rt>くつ</rt>屋<rt>や</rt></ruby>で <ruby>買<rt>か</rt></ruby>いましたか。</div>
+        <div class="turn-romaji">kutsuya de kaimashita ka.</div>
+        <div class="turn-meaning">是在鞋店買的嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="時々、ボルダリングのジムで買います。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>時々<rt>ときどき</rt></ruby>、ボルダリングの ジムで <ruby>買<rt>か</rt></ruby>います。</div>
+        <div class="turn-romaji">tokidoki, borudaringu no jimu de kaimasu.</div>
+        <div class="turn-meaning">有時候會在抱石館買。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="プロや上級者は、半年で替えます。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">プロや <ruby>上<rt>じょう</rt>級<rt>きゅう</rt>者<rt>しゃ</rt></ruby>は、<ruby>半<rt>はん</rt>年<rt>とし</rt></ruby>で <ruby>替<rt>か</rt></ruby>えます。</div>
+        <div class="turn-romaji">puro ya joukyuusha wa, hantoshi de kaemasu.</div>
+        <div class="turn-meaning">職業選手和高手大概半年就換一雙。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="私は初級なので、二、三年以上履きます。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>私<rt>わたし</rt></ruby>は <ruby>初<rt>しょ</rt>級<rt>きゅう</rt></ruby>なので、<ruby>2<rt>に</rt></ruby>～<ruby>3<rt>さん</rt>年<rt>ねん</rt></ruby><ruby>以<rt>い</rt>上<rt>じょう</rt></ruby> <ruby>履<rt>は</rt></ruby>きます。</div>
+        <div class="turn-romaji">watashi wa shokyuu na node, ni, sannen ijou hakimasu.</div>
+        <div class="turn-meaning">我是初學者，所以一雙會穿兩三年以上。（筆記上只有「2～3年以上はきます」，前半句是補上的）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="何色ですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>何<rt>なに</rt>色<rt>いろ</rt></ruby>ですか。</div>
+        <div class="turn-romaji">nani iro desu ka.</div>
+        <div class="turn-meaning">什麼顏色的？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="緑と黒です。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>緑<rt>みどり</rt></ruby>と <ruby>黒<rt>くろ</rt></ruby>です。</div>
+        <div class="turn-romaji">midori to kuro desu.</div>
+        <div class="turn-meaning">綠色跟黑色。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">二、對話裡的新單字是這些</div>
+
+  <p class="lead">
+    這段對話的單字大多跟鞋子有關：鞋子本身、穿起來的感覺，還有攀岩的程度。
+    外來語附上了來源語言，常用的幾個字也標了高低重音（查 <a href="https://www.gavo.t.u-tokyo.ac.jp/ojad/" target="_blank" rel="noopener" style="color:var(--accent);">OJAD</a>）。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 單字卡</div>
+
+    <div class="word-item" data-text="靴">
+      <div class="word-content">
+        <div class="word-ja"><ruby>靴<rt>くつ</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>く<span class="ar">↗</span>つ</span></span>
+          <span class="acc-note">尾高型</span>
+        </div>
+        <div class="word-romaji">kutsu</div>
+        <div class="word-meaning">鞋子 — 日文本來就有的詞（訓讀），襪子是 靴下（くつした），字面上是「鞋子底下」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ボルダリング">
+      <div class="word-content">
+        <div class="word-ja">ボルダリング</div>
+        <div class="word-romaji">borudaringu</div>
+        <div class="word-meaning">抱石 ← 英語 bouldering，boulder 是「大石頭」；不綁繩子、爬幾公尺高的短路線</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="専用">
+      <div class="word-content">
+        <div class="word-ja"><ruby>専<rt>せん</rt>用<rt>よう</rt></ruby></div>
+        <div class="word-romaji">sen'you</div>
+        <div class="word-meaning">專用 — 〇〇専用の△△＝〇〇專用的△△，跟中文的用法一樣；ん 後面接 よ，羅馬拼音寫成 sen'you 避免唸成 se-nyou</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="履く">
+      <div class="word-content">
+        <div class="word-ja"><ruby>履<rt>は</rt></ruby>く</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>はく<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">haku</div>
+        <div class="word-meaning">穿（鞋子、褲子、襪子）— て形是 履いて；跟 着る 的分別見<a href="#haku" style="color:var(--accent);">第三節</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="履き心地">
+      <div class="word-content">
+        <div class="word-ja"><ruby>履<rt>は</rt></ruby>き<ruby>心<rt>ごこ</rt>地<rt>ち</rt></ruby></div>
+        <div class="word-romaji">hakigokochi</div>
+        <div class="word-meaning">（鞋子）穿起來的感覺 — 履き＋心地（ここち，感覺），接在後面時 こ 變成濁音 ご</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="柔らかい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>柔<rt>やわ</rt></ruby>らかい</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>や<span class="ar">↗</span>わらか<span class="ar">↘</span>い</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">yawarakai</div>
+        <div class="word-meaning">柔軟的 — い形容詞；接下一句時變成 柔らかくて</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きつい">
+      <div class="word-content">
+        <div class="word-ja">きつい</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>きつい<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">kitsui</div>
+        <div class="word-meaning">（衣服、鞋子）很緊 — い形容詞；也可以用來說工作很累、很辛苦</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="痛い">
+      <div class="word-content">
+        <div class="word-ja"><ruby>痛<rt>いた</rt></ruby>い</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>い<span class="ar">↗</span>た<span class="ar">↘</span>い</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">itai</div>
+        <div class="word-meaning">痛的 — 撞到東西時脫口而出的「好痛！」就是 痛い！</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="サイズ">
+      <div class="word-content">
+        <div class="word-ja">サイズ</div>
+        <div class="word-romaji">saizu</div>
+        <div class="word-meaning">尺寸 ← 英語 size；買鞋買衣服時問「有大一號的嗎」是 大きいサイズはありますか</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今度">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今<rt>こん</rt>度<rt>ど</rt></ruby></div>
+        <div class="word-romaji">kondo</div>
+        <div class="word-meaning">這次；下次 — 對比上一次時用，像 今度は大きい靴を買いました（這次買了大的）；也可以指「下次」：今度一緒に行きましょう</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="靴屋">
+      <div class="word-content">
+        <div class="word-ja"><ruby>靴<rt>くつ</rt>屋<rt>や</rt></ruby></div>
+        <div class="word-romaji">kutsuya</div>
+        <div class="word-meaning">鞋店 — 屋（や）接在商品後面表示「賣〇〇的店」，像 本屋（書店）、花屋（花店）、パン屋（麵包店）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="プロ">
+      <div class="word-content">
+        <div class="word-ja">プロ</div>
+        <div class="word-romaji">puro</div>
+        <div class="word-meaning">職業選手、專家 ← 英語 professional 的前半截；相反是 アマ（amateur，業餘）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="上級者">
+      <div class="word-content">
+        <div class="word-ja"><ruby>上<rt>じょう</rt>級<rt>きゅう</rt>者<rt>しゃ</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>じょ<span class="ar">↗</span>うきゅ<span class="ar">↘</span>うしゃ</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">joukyuusha</div>
+        <div class="word-meaning">高手、程度高的人 — 上級＋者（〜的人）；初學者是 初級者（しょきゅうしゃ）或 初心者（しょしんしゃ）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="初級">
+      <div class="word-content">
+        <div class="word-ja"><ruby>初<rt>しょ</rt>級<rt>きゅう</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>しょきゅう<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">shokyuu</div>
+        <div class="word-meaning">初級 — 初級・中級（ちゅうきゅう）・上級 是一組，日文課的程度也是這樣分</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="半年">
+      <div class="word-content">
+        <div class="word-ja"><ruby>半<rt>はん</rt>年<rt>とし</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>は<span class="ar">↗</span>んとし</span></span>
+          <span class="acc-note">尾高型</span>
+        </div>
+        <div class="word-romaji">hantoshi</div>
+        <div class="word-meaning">半年 — 年 在這裡唸 とし，不是 ねん；〇〇で替える＝用了〇〇（這麼久）就換</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="替える">
+      <div class="word-content">
+        <div class="word-ja"><ruby>替<rt>か</rt></ruby>える</div>
+        <div class="word-romaji">kaeru</div>
+        <div class="word-meaning">換（新的）— 一段動詞，ます形 替えます；跟 買う（かう）只差一個音，別聽混</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="以上">
+      <div class="word-content">
+        <div class="word-ja"><ruby>以<rt>い</rt>上<rt>じょう</rt></ruby></div>
+        <div class="word-romaji">ijou</div>
+        <div class="word-meaning">以上 — 接在數量後面，跟中文一樣：2～3年以上＝兩三年以上；結帳時的 以上でよろしいですか 則是「就這些嗎」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="緑">
+      <div class="word-content">
+        <div class="word-ja"><ruby>緑<rt>みどり</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>み<span class="ar">↘</span>どり</span></span>
+          <span class="acc-note">頭高型</span>
+        </div>
+        <div class="word-romaji">midori</div>
+        <div class="word-meaning">綠色 — 名詞，沒有 い 形容詞的形；講「綠色的鞋子」要說 緑の靴</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="黒">
+      <div class="word-content">
+        <div class="word-ja"><ruby>黒<rt>くろ</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>く<span class="ar">↘</span>ろ</span></span>
+          <span class="acc-note">頭高型</span>
+        </div>
+        <div class="word-romaji">kuro</div>
+        <div class="word-meaning">黑色 — 名詞；另外有い形容詞 黒い（くろい），黒い靴 和 黒の靴 都可以</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>今度 是「這次」還是「下次」，看句子是過去式還是未來的事</strong><br>
+    今度 兩種意思都有。句子是過去式的時候指「這次」：<span class="compare">今度は大きい靴を買いました</span>（這次買了大的），
+    買鞋子已經發生了，所以只能是這次，は 是在跟上一次對比。講還沒發生的事就是「下次」：
+    <span class="compare">今度一緒に行きましょう</span>（下次一起去吧）。
+    想講得更清楚的話，「這次」可以說 <span class="compare">今回</span>（こんかい），「下次」可以說 <span class="compare">次</span>（つぎ）或 <span class="compare">次回</span>（じかい），這幾個字只有一種意思。
+  </div>
+
+  <div class="word-item" data-text="今度一緒に行きましょう。">
+    <div class="word-content">
+      <div class="word-ja"><ruby>今<rt>こん</rt>度<rt>ど</rt></ruby> <ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>に <ruby>行<rt>い</rt></ruby>きましょう。</div>
+      <div class="word-romaji">kondo issho ni ikimashou.</div>
+      <div class="word-meaning">下次一起去吧。（還沒發生的事，今度＝下次；日本人常把這句當客套話）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="word-item" data-text="今回は大きい靴を買いました。">
+    <div class="word-content">
+      <div class="word-ja"><ruby>今<rt>こん</rt>回<rt>かい</rt></ruby>は <ruby>大<rt>おお</rt></ruby>きい <ruby>靴<rt>くつ</rt></ruby>を <ruby>買<rt>か</rt></ruby>いました。</div>
+      <div class="word-romaji">konkai wa ookii kutsu o kaimashita.</div>
+      <div class="word-meaning">這次買了大一點的鞋子。（今回 只有「這次」的意思）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="note">
+    📝 <strong>這幾個字跟台語對不太起來</strong><br>
+    靴、履く、柔らかい、きつい 都是日文本來就有的詞（訓讀），跟漢字的讀音沒關係。
+    上級者、初級 的 級 雖然是音讀，台語唸 kip、日文唸 きゅう，只有開頭像，整串唸起來不像，
+    所以改用 初級・中級・上級 這一組一起記比較快。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="haku">三、穿鞋子要用 履く，穿上衣才用 着る</div>
+
+  <p class="lead">
+    中文的「穿」什麼都能用，日文要看穿在身體哪個地方。課上老師特別把 履く 和 着る 寫在一起比較：
+    從腳套上去的東西用 履く，從頭或手套上去、穿在上半身的用 着る。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>動詞</th><th>穿在哪裡</th><th>例子</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><b><ruby>履<rt>は</rt></ruby>く</b><br>haku</td>
+        <td>腳、下半身</td>
+        <td class="col-ja"><ruby>靴<rt>くつ</rt></ruby>を<ruby>履<rt>は</rt></ruby>く・<ruby>靴<rt>くつ</rt>下<rt>した</rt></ruby>を<ruby>履<rt>は</rt></ruby>く・ズボンを<ruby>履<rt>は</rt></ruby>く</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b><ruby>着<rt>き</rt></ruby>る</b><br>kiru</td>
+        <td>上半身、整件的衣服</td>
+        <td class="col-ja"><ruby>服<rt>ふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>る・シャツを<ruby>着<rt>き</rt></ruby>る・コートを<ruby>着<rt>き</rt></ruby>る</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    對話裡的 いつも履いている靴（平常穿的鞋子）就是 履く 的 ている 形，講的是「平常都穿著」的習慣。
+    ている 放在名詞前面形容它的用法，在 <a href="2026-10-28-te-iru-meishi.html" style="color:var(--accent);">10/28 的文法課〈〜ている＋名詞〉</a>有完整的說明。
+  </p>
+
+  <div class="note">
+    📝 ズボン（褲子）← 法語 jupon，原本是女生的襯裙，進日文之後變成「褲子」，意思差很多。
+    シャツ ← 英語 shirt、コート ← 英語 coat。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kute">四、柔らかくて 是把形容詞接到下一句的形</div>
+
+  <p class="lead">
+    想說「很軟，而且很舒服」，日文不會說 柔らかい、気持ちいい 兩句硬接在一起，
+    而是把前面的い形容詞改成 くて，再接後面那一句。做法是把最後的 い 拿掉，換成 くて。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原形</th><th>くて 形</th><th>接下一句</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>柔<rt>やわ</rt></ruby>らか<b>い</b></td>
+        <td class="col-ja"><ruby>柔<rt>やわ</rt></ruby>らか<b>くて</b></td>
+        <td class="col-ja"><ruby>柔<rt>やわ</rt></ruby>らかくて、<ruby>気<rt>き</rt>持<rt>も</rt></ruby>ちいいです。</td>
+      </tr>
+      <tr>
+        <td class="col-ja">きつ<b>い</b></td>
+        <td class="col-ja">きつ<b>くて</b></td>
+        <td class="col-ja">きつくて、<ruby>痛<rt>いた</rt></ruby>いです。</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>小<rt>ちい</rt></ruby>さ<b>い</b></td>
+        <td class="col-ja"><ruby>小<rt>ちい</rt></ruby>さ<b>くて</b></td>
+        <td class="col-ja"><ruby>小<rt>ちい</rt></ruby>さくて、きついです。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 <strong>いい 要變成 よくて</strong><br>
+    いい 是例外，不能說 いくて，要從老的形 よい 去變：<span class="compare">履き心地がよくて、柔らかいです</span>。
+    這跟 いい 的過去式是 よかった、否定是 よくない 是同一個原因。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="shi">五、きついし、痛いし 的 し 是一個一個列出理由</div>
+
+  <p class="lead">
+    講舊鞋子為什麼不能穿了，我說的是 きついし、痛いし。し 接在句子後面，表示「而且還有這個」，
+    用來把好幾個理由排在一起，聽起來像「又緊、又痛」。最後常常不把結論說出來，留給對方自己意會，
+    像這句的言外之意就是「所以不想再穿了」。
+  </p>
+
+  <div class="word-item" data-text="きついし、痛いし、もう履きたくないです。">
+    <div class="word-content">
+      <div class="word-ja">きつい<span class="j-mark">し</span>、<ruby>痛<rt>いた</rt></ruby>い<span class="j-mark">し</span>、もう <ruby>履<rt>は</rt></ruby>きたくないです。</div>
+      <div class="word-romaji">kitsui shi, itai shi, mou hakitakunai desu.</div>
+      <div class="word-meaning">又緊又痛，已經不想再穿了。（把結論說出來的完整版）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="word-item" data-text="このジムは近いし、安いし、いいですよ。">
+    <div class="word-content">
+      <div class="word-ja">このジムは <ruby>近<rt>ちか</rt></ruby>い<span class="j-mark">し</span>、<ruby>安<rt>やす</rt></ruby>い<span class="j-mark">し</span>、いいですよ。</div>
+      <div class="word-romaji">kono jimu wa chikai shi, yasui shi, ii desu yo.</div>
+      <div class="word-meaning">這間健身房又近又便宜，很不錯喔。（好的理由也可以這樣列）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="note">
+    📝 跟前一節的 くて 比起來，柔らかくて、気持ちいい 只是把兩個特點連起來描述；
+    きついし、痛いし 則帶著「理由不只一個」的語氣，通常是為了說明某個結論。
+    い形容詞接 し 不用變形，直接接在原形後面就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="yori">六、比較兩雙鞋可以用 より，也可以用 のほうが</div>
+
+  <p class="lead">
+    講抱石鞋比平常的鞋子小，我說了兩種句子。兩句的意思一樣，差別在哪一個放在前面當主角。
+    A より B 和 のほうが 的基本用法在 <a href="2026-10-05-no-hou-ga.html" style="color:var(--accent);">10/5〈A より B の方が〉</a>學過。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>句型</th><th>例句</th><th>重點</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A は B より〜</td>
+        <td class="col-ja">ボルダリングの<ruby>靴<rt>くつ</rt></ruby>は、いつも<ruby>履<rt>は</rt></ruby>いている<ruby>靴<rt>くつ</rt></ruby><b>より</b><ruby>小<rt>ちい</rt></ruby>さいサイズです。</td>
+        <td>話題是抱石鞋，順便拿平常的鞋子來比。</td>
+      </tr>
+      <tr>
+        <td>A のほうが B より〜</td>
+        <td class="col-ja">ボルダリングの<ruby>靴<rt>くつ</rt></ruby><b>のほうが</b>、いつもの<ruby>靴<rt>くつ</rt></ruby><b>より</b><ruby>小<rt>ちい</rt></ruby>さいです。</td>
+        <td>兩樣東西擺在一起比，強調「抱石鞋才是比較小的那一邊」。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    より 前面放的是被拿來比較的對象（平常的鞋子），意思是「跟〇〇比起來」。
+    第一句的 いつも履いている靴 和第二句的 いつもの靴 指的是同一個東西，一個用動詞說明，一個用 の 帶過，
+    口語裡 いつもの〇〇（平常那個〇〇）非常好用：いつものカフェ、いつもの電車。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>日文</th><th>重點</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>抱石專用的鞋子</td>
+        <td class="col-ja">ボルダリング<ruby>専<rt>せん</rt>用<rt>よう</rt></ruby>の<ruby>靴<rt>くつ</rt></ruby></td>
+        <td>〇〇専用の△△</td>
+      </tr>
+      <tr>
+        <td>穿鞋子／穿衣服</td>
+        <td class="col-ja"><ruby>靴<rt>くつ</rt></ruby>を<b><ruby>履<rt>は</rt></ruby>く</b>／<ruby>服<rt>ふく</rt></ruby>を<b><ruby>着<rt>き</rt></ruby>る</b></td>
+        <td>下半身 履く、上半身 着る</td>
+      </tr>
+      <tr>
+        <td>很軟，很舒服</td>
+        <td class="col-ja"><ruby>柔<rt>やわ</rt></ruby>らか<b>くて</b>、<ruby>気<rt>き</rt>持<rt>も</rt></ruby>ちいいです</td>
+        <td>い → くて；いい → よくて</td>
+      </tr>
+      <tr>
+        <td>又緊又痛</td>
+        <td class="col-ja">きつい<b>し</b>、<ruby>痛<rt>いた</rt></ruby>い<b>し</b></td>
+        <td>し 列出好幾個理由</td>
+      </tr>
+      <tr>
+        <td>比平常的鞋子小</td>
+        <td class="col-ja">いつもの<ruby>靴<rt>くつ</rt></ruby><b>より</b><ruby>小<rt>ちい</rt></ruby>さい</td>
+        <td>より＝跟〇〇比起來</td>
+      </tr>
+      <tr>
+        <td>半年就換</td>
+        <td class="col-ja"><ruby>半<rt>はん</rt>年<rt>とし</rt></ruby><b>で</b><ruby>替<rt>か</rt></ruby>えます</td>
+        <td>期間 ＋ で</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我昨天買了新的抱石鞋。（提示：新しい、ボルダリングの靴）</li>
+      <li>穿襪子，動詞要用哪一個？寫出「穿襪子」。（提示：靴下）</li>
+      <li>這雙鞋子很軟，很好穿。（提示：柔らかい → くて、履き心地）</li>
+      <li>這間店又近又便宜。（提示：し）</li>
+      <li>抱石鞋比平常的鞋子小。用 のほうが 寫寫看。</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. 昨日、新しいボルダリングの靴を買いました。<br>kinou, atarashii borudaringu no kutsu o kaimashita.</p>
+      <p>2. 靴下を履く。（襪子穿在腳上，用 履く）<br>kutsushita o haku.</p>
+      <p>3. この靴は柔らかくて、履き心地がいいです。<br>kono kutsu wa yawarakakute, hakigokochi ga ii desu.</p>
+      <p>4. この店は近いし、安いです。（近いし、安いし、いいです 也可以）<br>kono mise wa chikai shi, yasui desu.</p>
+      <p>5. ボルダリングの靴のほうが、いつもの靴より小さいです。<br>borudaringu no kutsu no hou ga, itsumo no kutsu yori chiisai desu.</p>
+    </details>
+  </div>
+
+  <a href="2026-10-28-te-iru-meishi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜ている＋名詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/28 文法課：あそこでギターを弾いている人が兄です，用正在做的事指出是哪一個人</span>
+  </a>
+
+  <a href="2026-08-21-bouldering-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">ボルダリングの話 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/21 第一次用日文聊自己的抱石習慣</span>
+  </a>
+
+  <a href="2026-10-05-no-hou-ga.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">A より B の方が <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/5 兩樣東西比較的說法，本課的 より、のほうが 都是它</span>
+  </a>
+
+  <a href="2026-10-21-jimu-kafe-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">ジムとカフェに行きました <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/21 的會話課，去西新宿的抱石館練了兩個小時</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

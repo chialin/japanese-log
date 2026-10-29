@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜ている＋名詞 — 用動作說明是哪一個人、哪一樣東西</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票（不要動） */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+/* 句子拆解 */
+.breakdown{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:16px 0 18px;}
+.bd-part{background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:4px;padding:10px 12px;text-align:center;min-width:72px;}
+.bd-part.key{border-color:var(--accent);background:var(--accent-pale);}
+.bd-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:19px;color:var(--ink);line-height:1.9;}
+.bd-role{font-size:12px;color:var(--ink-mute);margin-top:2px;}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜<span class="accent">ている</span>＋名詞</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 10 / 28</div>
+  <p class="page-subtitle">ギターを弾いている人、いつも履いている靴：把動作放在名詞前面，說明是哪一個人、哪一樣東西</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    給朋友看照片，或在人很多的地方想告訴對方「那個在彈吉他的人是我哥哥」，
+    日文會把 ギターを弾いている 整串放在 人 的前面，說成 あそこでギターを弾いている人が兄です。
+    想跟別人指出、介紹某個人的時候，日常會話裡很常用到這個句型。
+    這篇先把例句拆開，看「正在做的事」怎麼直接放到 人 前面當說明，
+    接著看這串動詞除了說明人，也能說明東西和地點（像 いつも履いている靴），
+    再看我造句時錯的兩個地方：動作的地點要用 で，還有 駐車場 不能接 乗る。
+    最後整理例句裡出現的學校名稱，以及唸起來很像的 注射、駐車場、駐輪場。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kouzou">一、ギターを弾いている 這一整串是在說明「人」</div>
+
+  <p class="lead">
+    先看這個例句。中文會說「在那邊彈吉他<b>的</b>人」，中間要有一個「的」；
+    日文不需要任何連接的字，動詞 ている 直接放在 人 前面就好，就像い形容詞直接放在名詞前面一樣（<a href="2026-09-09-i-keiyoushi-meishi.html" style="color:var(--accent);">9/9〈い形容詞 ＋ 名詞〉</a>）。
+  </p>
+
+  <div class="word-item" data-text="あそこでギターを弾いている人が兄です。">
+    <div class="word-content">
+      <div class="word-ja">あそこで ギターを <ruby>弾<rt>ひ</rt></ruby>いている <ruby>人<rt>ひと</rt></ruby>が <ruby>兄<rt>あに</rt></ruby>です。</div>
+      <div class="word-romaji">asoko de gitaa o hiite iru hito ga ani desu.</div>
+      <div class="word-meaning">在那邊彈吉他的人是我哥哥。</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="breakdown">
+    <div class="bd-part"><div class="bd-ja">あそこで</div><div class="bd-role">在那邊</div></div>
+    <div class="bd-part"><div class="bd-ja">ギターを</div><div class="bd-role">吉他（を＝對象）</div></div>
+    <div class="bd-part"><div class="bd-ja"><ruby>弾<rt>ひ</rt></ruby>いている</div><div class="bd-role">正在彈</div></div>
+    <div class="bd-part key"><div class="bd-ja"><ruby>人<rt>ひと</rt></ruby></div><div class="bd-role">人（被說明的主角）</div></div>
+    <div class="bd-part"><div class="bd-ja">が <ruby>兄<rt>あに</rt></ruby>です</div><div class="bd-role">是我哥哥</div></div>
+  </div>
+
+  <p class="lead">
+    前面三塊 あそこで ギターを 弾いている 全部都在說明 人，告訴對方「是哪一個人」。
+    ている 的「正在做」這個意思在 <a href="2026-09-02-teimasu.html" style="color:var(--accent);">9/2〈〜ています〉</a>學過，
+    那時候是放在句子最後（ギターを弾いています），這次是把它搬到名詞前面。
+    放在名詞前面時要用普通形 ている，不能用 ています。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th></th><th>放在句子最後</th><th>放在 人 前面</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>彈吉他</td>
+        <td class="col-ja">ギターを<ruby>弾<rt>ひ</rt></ruby>いて<b>います</b>。</td>
+        <td class="col-ja">ギターを<ruby>弾<rt>ひ</rt></ruby>いて<b>いる</b><ruby>人<rt>ひと</rt></ruby></td>
+      </tr>
+      <tr>
+        <td>看電影</td>
+        <td class="col-ja"><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>て<b>います</b>。</td>
+        <td class="col-ja"><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>て<b>いる</b><ruby>人<rt>ひと</rt></ruby></td>
+      </tr>
+      <tr>
+        <td>看書</td>
+        <td class="col-ja"><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んで<b>います</b>。</td>
+        <td class="col-ja"><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んで<b>いる</b><ruby>人<rt>ひと</rt></ruby></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 <strong>為什麼用 が 不用 は</strong><br>
+    這句是在回答「哪一個是你哥哥？」，答案的重點落在「彈吉他的那個人」身上，所以用 が。
+    如果話題本來就是哥哥，也可以反過來說 <span class="compare"><ruby>兄<rt>あに</rt></ruby>は あそこで ギターを <ruby>弾<rt>ひ</rt></ruby>いている <ruby>人<rt>ひと</rt></ruby>です</span>（我哥哥是那個在彈吉他的人），意思一樣。
+    あそこ 是離說話的人和聽的人都遠的地方，見 <a href="2026-07-29-koko-soko-asoko.html" style="color:var(--accent);">7/29〈ここ・そこ・あそこ〉</a>。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 例句裡的單字</div>
+
+    <div class="word-item" data-text="弾く">
+      <div class="word-content">
+        <div class="word-ja"><ruby>弾<rt>ひ</rt></ruby>く</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>ひく<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">hiku</div>
+        <div class="word-meaning">彈（樂器）— て形是 弾いて；ピアノを弾く、ギターを弾く</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ギター">
+      <div class="word-content">
+        <div class="word-ja">ギター</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>ぎ<span class="ar">↘</span>たー</span></span>
+          <span class="acc-note">頭高型</span>
+        </div>
+        <div class="word-romaji">gitaa</div>
+        <div class="word-meaning">吉他 ← 英語 guitar，再往前是西班牙語 guitarra</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="兄">
+      <div class="word-content">
+        <div class="word-ja"><ruby>兄<rt>あに</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>あ<span class="ar">↘</span>に</span></span>
+          <span class="acc-note">頭高型</span>
+        </div>
+        <div class="word-romaji">ani</div>
+        <div class="word-meaning">（我的）哥哥 — 跟別人講自己的哥哥用 兄；講別人的哥哥或當面叫哥哥用 お兄さん（おにいさん）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="夫">
+      <div class="word-content">
+        <div class="word-ja"><ruby>夫<rt>おっと</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>おっと<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">otto</div>
+        <div class="word-meaning">（我的）先生 — 講別人的先生用 ご主人；丈夫的幾種說法見 <a href="2026-08-04-mokutekichi-ni.html" style="color:var(--accent);">8/4 的課</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hoka">二、前面那串動詞不只能說明人，也能說明東西和地點</div>
+
+  <p class="lead">
+    上一節拿「人」當例子，是因為「指出是哪一個人」最常用到。其實 〜ている 可以放在任何名詞前面，
+    而且那個名詞不一定是做動作的人，也可以是動作的對象，或是做動作的地方。
+    看懂這一點，很多原本以為很難的長句子就拆得開了。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 做動作的是名詞本身（不一定是人）</div>
+
+    <div class="word-item" data-text="寝ている猫">
+      <div class="word-content">
+        <div class="word-ja"><ruby>寝<rt>ね</rt></ruby>ている <ruby>猫<rt>ねこ</rt></ruby></div>
+        <div class="word-romaji">nete iru neko</div>
+        <div class="word-meaning">在睡覺的貓。睡覺的是貓。寝る 是一段動詞，て形是 寝て。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="公園で遊んでいる犬">
+      <div class="word-content">
+        <div class="word-ja"><ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>で <ruby>遊<rt>あそ</rt></ruby>んでいる <ruby>犬<rt>いぬ</rt></ruby></div>
+        <div class="word-romaji">kouen de asonde iru inu</div>
+        <div class="word-meaning">在公園玩的狗。遊ぶ（玩）的て形是 遊んで。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="走っている電車">
+      <div class="word-content">
+        <div class="word-ja"><ruby>走<rt>はし</rt></ruby>っている <ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby></div>
+        <div class="word-romaji">hashitte iru densha</div>
+        <div class="word-meaning">正在行駛的電車。走る 用在車子上是「行駛」。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 名詞是動作的對象</div>
+
+    <div class="word-item" data-text="兄が弾いているギター">
+      <div class="word-content">
+        <div class="word-ja"><ruby>兄<rt>あに</rt></ruby>が <ruby>弾<rt>ひ</rt></ruby>いている ギター</div>
+        <div class="word-romaji">ani ga hiite iru gitaa</div>
+        <div class="word-meaning">哥哥在彈的吉他。彈的人是哥哥，吉他是被彈的東西。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いつも履いている靴">
+      <div class="word-content">
+        <div class="word-ja">いつも <ruby>履<rt>は</rt></ruby>いている <ruby>靴<rt>くつ</rt></ruby></div>
+        <div class="word-romaji">itsumo haite iru kutsu</div>
+        <div class="word-meaning">（我）平常穿的鞋子。主詞「私が」省略了，這裡的 ている 是「平常都這樣做」的習慣。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 名詞是做動作的地點</div>
+
+    <div class="word-item" data-text="兄がギターを弾いている店">
+      <div class="word-content">
+        <div class="word-ja"><ruby>兄<rt>あに</rt></ruby>が ギターを <ruby>弾<rt>ひ</rt></ruby>いている <ruby>店<rt>みせ</rt></ruby></div>
+        <div class="word-romaji">ani ga gitaa o hiite iru mise</div>
+        <div class="word-meaning">哥哥在那裡彈吉他的店。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    📝 <strong>放在名詞前面的那一串裡，做動作的人用 が</strong><br>
+    兄<b>が</b>弾いているギター 不能說成 兄<b>は</b>弾いているギター。
+    は 是整句話的話題，放進修飾名詞的那一小串裡會讓句子斷掉，所以裡面的主詞一律用 が。
+    いつも履いている靴 是 私が 被省略了，補回來就是 <span class="compare">私がいつも履いている靴</span>。
+    這雙鞋子出現在 <a href="2026-10-29-atarashii-kutsu.html" style="color:var(--accent);">10/29〈新しい靴を買いました〉</a>的會話裡。
+  </div>
+
+  <p class="lead">
+    也不只有 ている 可以這樣用。動詞的其他普通形一樣直接放在名詞前面，規則都相同：用普通形，不用加像中文「的」那樣的字。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>動詞的形</th><th>例子</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ている</td>
+        <td class="col-ja"><ruby>履<rt>は</rt></ruby>いて<b>いる</b><ruby>靴<rt>くつ</rt></ruby></td>
+        <td>（平常）穿的鞋子</td>
+      </tr>
+      <tr>
+        <td>た形</td>
+        <td class="col-ja"><ruby>昨日<rt>きのう</rt></ruby><ruby>買<rt>か</rt></ruby><b>った</b><ruby>靴<rt>くつ</rt></ruby></td>
+        <td>昨天買的鞋子</td>
+      </tr>
+      <tr>
+        <td>辞書形</td>
+        <td class="col-ja"><ruby>明日<rt>あした</rt></ruby><ruby>行<rt>い</rt></ruby><b>く</b>ジム</td>
+        <td>明天要去的健身房</td>
+      </tr>
+      <tr>
+        <td>ない形</td>
+        <td class="col-ja"><ruby>履<rt>は</rt></ruby>か<b>ない</b><ruby>靴<rt>くつ</rt></ruby></td>
+        <td>不穿的鞋子</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="word-item" data-text="昨日買った靴は、柔らかいです。">
+    <div class="word-content">
+      <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby> <ruby>買<rt>か</rt></ruby>った <ruby>靴<rt>くつ</rt></ruby>は、<ruby>柔<rt>やわ</rt></ruby>らかいです。</div>
+      <div class="word-romaji">kinou katta kutsu wa, yawarakai desu.</div>
+      <div class="word-meaning">昨天買的鞋子很軟。整串 昨日買った靴 當成一個名詞，後面再接 は。</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="de">三、做動作的地點要用 で，不能用 は</div>
+
+  <p class="lead">
+    我第一次造句時寫成 ここは映画を見ている人が夫です，老師改成 ここで。
+    看電影是一個動作，「在哪裡做這個動作」要用 で 標出地點，跟 ジムで買います、カフェで飲みます 是同一個 で。
+    は 是用來提出話題的，ここは 會變成「這裡呢，……」，後面就接不上「在看電影的人」了。
+  </p>
+
+  <div class="word-item" data-text="ここで映画を見ている人が夫です。">
+    <div class="word-content">
+      <div class="word-ja">ここ<span class="j-mark">で</span> <ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>ている <ruby>人<rt>ひと</rt></ruby>が <ruby>夫<rt>おっと</rt></ruby>です。</div>
+      <div class="word-romaji">koko de eiga o mite iru hito ga otto desu.</div>
+      <div class="word-meaning">（指著照片）在這裡看電影的人是我先生。</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th></th><th>句子</th><th>問題在哪</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>✗</td>
+        <td class="col-ja">ここ<b>は</b><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ている<ruby>人<rt>ひと</rt></ruby>が<ruby>夫<rt>おっと</rt></ruby>です。</td>
+        <td>は 把「這裡」變成話題，句子變成「這裡是……」，跟後面接不起來。</td>
+      </tr>
+      <tr>
+        <td>○</td>
+        <td class="col-ja">ここ<b>で</b><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ている<ruby>人<rt>ひと</rt></ruby>が<ruby>夫<rt>おっと</rt></ruby>です。</td>
+        <td>で 標出看電影的地點，整串一起說明 人。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 映画を見ている 在 <a href="2026-10-27-tsukiatte-imasu.html" style="color:var(--accent);">10/27〈付き合っています〉</a>出現過，那篇比較了「正在做」和「持續的狀態」兩種 ています。
+    ここで映画を見ている人 用的是「正在做」那一種，因為要指出的是對方此刻看得到的動作。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tomeru">四、停車要說 車を止める，駐車場 不能接 乗る</div>
+
+  <p class="lead">
+    第二個例句我想說「在超市停車場停車的人是我先生」，寫成了 スーパーで駐車場をのっている人が。
+    問題出在動詞：乗る 是「搭乘、坐上」交通工具，而且要用 に（車に乗る），不能拿來說停車，也不能接 駐車場。
+    停車的動詞是 止める，對象是車子，駐車場 是停車的地點，所以要用 で。
+  </p>
+
+  <div class="word-item" data-text="スーパーの駐車場で車を止めている人が夫です。">
+    <div class="word-content">
+      <div class="word-ja">スーパーの <ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt>場<rt>じょう</rt></ruby><span class="j-mark">で</span> <ruby>車<rt>くるま</rt></ruby><span class="j-mark">を</span> <ruby>止<rt>と</rt></ruby>めている <ruby>人<rt>ひと</rt></ruby>が <ruby>夫<rt>おっと</rt></ruby>です。</div>
+      <div class="word-romaji">suupaa no chuushajou de kuruma o tomete iru hito ga otto desu.</div>
+      <div class="word-meaning">在超市停車場停車的人是我先生。</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>日文</th><th>注意</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>停車</td>
+        <td class="col-ja"><ruby>車<rt>くるま</rt></ruby><b>を</b><ruby>止<rt>と</rt></ruby>める</td>
+        <td>車子是對象，用 を</td>
+      </tr>
+      <tr>
+        <td>上車、坐車</td>
+        <td class="col-ja"><ruby>車<rt>くるま</rt></ruby><b>に</b><ruby>乗<rt>の</rt></ruby>る</td>
+        <td>坐進交通工具裡，用 に，不是 を</td>
+      </tr>
+      <tr>
+        <td>在停車場</td>
+        <td class="col-ja"><ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt>場<rt>じょう</rt></ruby><b>で</b></td>
+        <td>做動作的地點，用 で</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    📝 想說「坐在車裡的人」也可以，那就是 <span class="compare"><ruby>車<rt>くるま</rt></ruby>に<ruby>乗<rt>の</rt></ruby>っている<ruby>人<rt>ひと</rt></ruby></span>。
+    乗っている 是「坐上去之後一直在車上」的狀態，跟 結婚しています 一樣是動作完成後留下來的樣子。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">五、練習時順便學到的單字有這些</div>
+
+  <p class="lead">
+    造句練習的時候聊到家人在哪裡上學，還有打預防針的事，冒出了一些新單字。
+    學校的名稱跟中文很像，但「國中」「高中」的說法不一樣；
+    注射、駐車場、駐輪場 則是唸起來很像、很容易混在一起的三個字。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 學校</div>
+
+    <div class="word-item" data-text="小学校">
+      <div class="word-content">
+        <div class="word-ja"><ruby>小<rt>しょう</rt>学<rt>がっ</rt>校<rt>こう</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>しょ<span class="ar">↗</span>うが<span class="ar">↘</span>っこう</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">shougakkou</div>
+        <div class="word-meaning">小學 — がく＋こう 連在一起，がく 縮成 がっ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="中学校">
+      <div class="word-content">
+        <div class="word-ja"><ruby>中<rt>ちゅう</rt>学<rt>がっ</rt>校<rt>こう</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>ちゅ<span class="ar">↗</span>うが<span class="ar">↘</span>っこう</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">chuugakkou</div>
+        <div class="word-meaning">國中 — 台灣說「國中」，日文說「中學」，口語常簡稱 中学（ちゅうがく）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="中学生">
+      <div class="word-content">
+        <div class="word-ja"><ruby>中<rt>ちゅう</rt>学<rt>がく</rt>生<rt>せい</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↘</span>ちゅ<span class="ar">↗</span>うが<span class="ar">↘</span>くせい</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">chuugakusei</div>
+        <div class="word-meaning">國中生 — 小學生是 小学生（しょうがくせい），高中生是 高校生（こうこうせい）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="高校">
+      <div class="word-content">
+        <div class="word-ja"><ruby>高<rt>こう</rt>校<rt>こう</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>こうこう<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">koukou</div>
+        <div class="word-meaning">高中 — 高等学校（こうとうがっこう）的簡稱；中文的「高校」是大專院校，意思不一樣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="大学">
+      <div class="word-content">
+        <div class="word-ja"><ruby>大<rt>だい</rt>学<rt>がく</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>だいがく<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">daigaku</div>
+        <div class="word-meaning">大學 — 研究所是 大学院（だいがくいん），見 10/27 的課</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 大学 跟台語的「大學」很像</strong><br>
+    大學 台語唸 tai-hak，日文是 <span class="compare">だいがく</span>（daigaku），整串唸起來很接近。
+    学 一律唸 がく，<span class="compare">小学校</span>、<span class="compare">中学生</span>、<span class="compare">大学</span> 都是它，
+    只有後面接 こう 的時候縮成 がっ（がっこう）。
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 唸起來很像的三個字</div>
+
+    <div class="word-item" data-text="注射">
+      <div class="word-content">
+        <div class="word-ja"><ruby>注<rt>ちゅう</rt>射<rt>しゃ</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>ちゅうしゃ<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">chuusha</div>
+        <div class="word-meaning">打針 — 注射をする／注射を打つ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="駐車場">
+      <div class="word-content">
+        <div class="word-ja"><ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt>場<rt>じょう</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>ちゅうしゃじょう<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">chuushajou</div>
+        <div class="word-meaning">停車場 — 駐車（停車）＋場（地方）；駐車 和 注射 唸法完全一樣，都是 ちゅうしゃ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="駐輪場">
+      <div class="word-content">
+        <div class="word-ja"><ruby>駐<rt>ちゅう</rt>輪<rt>りん</rt>場<rt>じょう</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>ちゅうりんじょう<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">chuurinjou</div>
+        <div class="word-meaning">腳踏車停車場 — 輪 是車輪，指腳踏車；日本車站旁很常見，亂停會被拖走</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    🧠 <strong>我的記憶小撇步 — 注 和 駐 在中文、日文裡都同音</strong><br>
+    華語的「注」「駐」都唸 zhù，日文也一樣都唸 ちゅう，所以 <span class="compare">注射</span> 和 <span class="compare">駐車</span> 在日文裡是同音字。
+    後半的 射、車 台語唸 sia、tshia，跟 しゃ 很像，聽到 ちゅうしゃ 要靠前後文判斷是打針還是停車。
+    後面多一個 場（じょう）就一定是停車場；把 車 換成 輪，就是停腳踏車的 駐輪場。
+  </div>
+
+  <div class="word-item" data-text="家の近くに駐輪場があります。">
+    <div class="word-content">
+      <div class="word-ja"><ruby>家<rt>いえ</rt></ruby>の <ruby>近<rt>ちか</rt></ruby>くに <ruby>駐<rt>ちゅう</rt>輪<rt>りん</rt>場<rt>じょう</rt></ruby>が あります。</div>
+      <div class="word-romaji">ie no chikaku ni chuurinjou ga arimasu.</div>
+      <div class="word-meaning">我家附近有腳踏車停車場。（課上我說的是 家の近くで見ました，在家附近看到過；要說「那裡有」用 に＋あります）</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 打預防針</div>
+
+    <div class="word-item" data-text="予防接種">
+      <div class="word-content">
+        <div class="word-ja"><ruby>予<rt>よ</rt>防<rt>ぼう</rt>接<rt>せっ</rt>種<rt>しゅ</rt></ruby></div>
+        <div class="word-romaji">yobou sesshu</div>
+        <div class="word-meaning">預防接種、打預防針 — 動詞用 受ける（うける）：予防接種を受けました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="インフルエンザ">
+      <div class="word-content">
+        <div class="word-ja">インフルエンザ</div>
+        <div class="word-romaji">infuruenza</div>
+        <div class="word-meaning">流感 — 字源是義大利語 influenza（影響，古人以為是星象造成的），英語、德語也都用這個字，日文是從哪個語言借進來的我不確定；口語常簡稱 インフル</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="インフルエンザの予防接種を受けました。">
+      <div class="word-content">
+        <div class="word-ja">インフルエンザの <ruby>予<rt>よ</rt>防<rt>ぼう</rt>接<rt>せっ</rt>種<rt>しゅ</rt></ruby>を <ruby>受<rt>う</rt></ruby>けました。</div>
+        <div class="word-romaji">infuruenza no yobou sesshu o ukemashita.</div>
+        <div class="word-meaning">我打了流感疫苗。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>日文</th><th>重點</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>在那邊彈吉他的人是我哥哥</td>
+        <td class="col-ja">あそこで ギターを <ruby>弾<rt>ひ</rt></ruby>いて<b>いる</b> <ruby>人<rt>ひと</rt></ruby>が <ruby>兄<rt>あに</rt></ruby>です</td>
+        <td>動詞 ている 直接放在 人 前面，不用加「的」</td>
+      </tr>
+      <tr>
+        <td>在這裡看電影的人</td>
+        <td class="col-ja">ここ<b>で</b> <ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>ている <ruby>人<rt>ひと</rt></ruby></td>
+        <td>做動作的地點用 で，不用 は</td>
+      </tr>
+      <tr>
+        <td>在停車場停車的人</td>
+        <td class="col-ja"><ruby>駐<rt>ちゅう</rt>車<rt>しゃ</rt>場<rt>じょう</rt></ruby><b>で</b> <ruby>車<rt>くるま</rt></ruby><b>を</b> <ruby>止<rt>と</rt></ruby>めている <ruby>人<rt>ひと</rt></ruby></td>
+        <td>停車＝車を止める；坐車＝車に乗る</td>
+      </tr>
+      <tr>
+        <td>哥哥在彈的吉他</td>
+        <td class="col-ja"><ruby>兄<rt>あに</rt></ruby><b>が</b> <ruby>弾<rt>ひ</rt></ruby>いている ギター</td>
+        <td>名詞也可以是對象或地點；裡面的主詞用 が</td>
+      </tr>
+      <tr>
+        <td>放在名詞前面的形</td>
+        <td class="col-ja">〜て<b>いる</b> ＋ 名詞</td>
+        <td>用普通形，不能說 〜ています人</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>在那邊看書的人是國中生。（提示：本を読む、中学生）</li>
+      <li>下面這句哪裡錯了？改成正確的句子：「ここは コーヒーを 飲んでいる 人が 兄です。」</li>
+      <li>在腳踏車停車場停腳踏車的人是我先生。（提示：駐輪場、自転車、止める）</li>
+      <li>「坐在車裡的人」日文怎麼說？</li>
+      <li>「我平常喝的咖啡」日文怎麼說？（提示：いつも、飲む、ている）</li>
+      <li>「注射」和「駐車」的讀音一樣嗎？各寫出讀音和意思。</li>
+    </ol>
+    <details class="quiz-ans">
+      <summary>🔍 點擊查看解答</summary>
+      <p>1. あそこで本を読んでいる人は中学生です。（人が中学生です 也可以）<br>asoko de hon o yonde iru hito wa chuugakusei desu.</p>
+      <p>2. ここは → ここで。喝咖啡的地點要用 で：ここでコーヒーを飲んでいる人が兄です。<br>koko de koohii o nonde iru hito ga ani desu.</p>
+      <p>3. 駐輪場で自転車を止めている人が夫です。<br>chuurinjou de jitensha o tomete iru hito ga otto desu.</p>
+      <p>4. 車に乗っている人。（乗る 用 に）<br>kuruma ni notte iru hito.</p>
+      <p>5. いつも飲んでいるコーヒー。（私がいつも飲んでいるコーヒー 也可以，咖啡是被喝的東西）<br>itsumo nonde iru koohii.</p>
+      <p>6. 一樣，都唸 ちゅうしゃ（chuusha）。注射＝打針，駐車＝停車。</p>
+    </details>
+  </div>
+
+  <a href="2026-10-29-atarashii-kutsu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">新しい靴を買いました <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/29 的會話課，いつも履いている靴 也是 ている 放在名詞前面</span>
+  </a>
+
+  <a href="2026-09-02-teimasu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">〜ています <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/2 ている 放在句子最後，「正在做」的基本用法</span>
+  </a>
+
+  <a href="2026-10-27-tsukiatte-imasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">付き合っています <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/27 映画を見ています（正在做）和 付き合っています（持續的狀態）的差別</span>
+  </a>
+
+  <a href="2026-09-09-i-keiyoushi-meishi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">い形容詞 ＋ 名詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/9 形容詞直接放在名詞前面，動詞 ている 也是同樣的放法</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

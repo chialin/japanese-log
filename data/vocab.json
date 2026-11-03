@@ -323,6 +323,99 @@
    ]
   },
   {
+   "text": "北海道に行きたいです。",
+   "ja": "<ruby>北<rt>ほっ</rt>海<rt>かい</rt>道<rt>どう</rt></ruby>に <ruby>行<rt>い</rt></ruby>きたいです。",
+   "kana": "ほっかいどうに いきたいです。",
+   "romaji": "hokkaidou ni ikitai desu.",
+   "meaning": "我想去北海道。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-02",
+     "href": "lessons/2026-11-02-shitai-desu.html",
+     "title": "〜たいです"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "選手の試合を見たいです。",
+   "ja": "<ruby>選<rt>せん</rt>手<rt>しゅ</rt></ruby>の <ruby>試<rt>し</rt>合<rt>あい</rt></ruby>を <ruby>見<rt>み</rt></ruby>たいです。",
+   "kana": "せんしゅの しあいを みたいです。",
+   "romaji": "senshu no shiai o mitai desu.",
+   "meaning": "我想看選手的比賽。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-02",
+     "href": "lessons/2026-11-02-shitai-desu.html",
+     "title": "〜たいです"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "来年も来たいです。",
+   "ja": "<ruby>来<rt>らい</rt>年<rt>ねん</rt></ruby>も <ruby>来<rt>き</rt></ruby>たいです。",
+   "kana": "らいねんも きたいです。",
+   "romaji": "rainen mo kitai desu.",
+   "meaning": "明年也想再來。（来る 的 ます形是 来ます，所以唸 きたい）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-02",
+     "href": "lessons/2026-11-02-shitai-desu.html",
+     "title": "〜たいです"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "動詞"
+   ]
+  },
+  {
+   "text": "次はイベントに参加したいです。",
+   "ja": "<ruby>次<rt>つぎ</rt></ruby>は イベントに <ruby>参<rt>さん</rt>加<rt>か</rt></ruby>したいです。",
+   "kana": "つぎは イベントに さんかしたいです。",
+   "romaji": "tsugi wa ibento ni sanka shitai desu.",
+   "meaning": "下次想參加活動。（參加的對象用 に）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-02",
+     "href": "lessons/2026-11-02-shitai-desu.html",
+     "title": "〜たいです"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "もっと日本語を勉強したいです。",
+   "ja": "もっと <ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>を <ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>したいです。",
+   "kana": "もっと にほんごを べんきょうしたいです。",
+   "romaji": "motto nihongo o benkyou shitai desu.",
+   "meaning": "我想再多學一點日文。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-02",
+     "href": "lessons/2026-11-02-shitai-desu.html",
+     "title": "〜たいです"
+    }
+   ],
+   "tags": [
+    "學校・工作",
+    "動詞"
+   ]
+  },
+  {
    "text": "靴",
    "ja": "<ruby>靴<rt>くつ</rt></ruby>",
    "kana": "くつ",

@@ -1,6 +1,271 @@
 {
- "generated": "2026-10-29",
+ "generated": "2026-11-03",
  "words": [
+  {
+   "text": "普通",
+   "ja": "<ruby>普<rt>ふ</rt>通<rt>つう</rt></ruby>",
+   "kana": "ふつう",
+   "romaji": "futsuu",
+   "meaning": "普通、平常 — 放在名詞前面要加 の：普通の日（平常的日子）、普通の人（一般人）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>ふつう<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "祝日",
+   "ja": "<ruby>祝<rt>しゅく</rt>日<rt>じつ</rt></ruby>",
+   "kana": "しゅくじつ",
+   "romaji": "shukujitsu",
+   "meaning": "國定假日 — 法律規定的節日，像 文化の日、こどもの日；週末的休假不叫 祝日，叫 休日（きゅうじつ）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>しゅくじつ<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "文化の日",
+   "ja": "<ruby>文<rt>ぶん</rt>化<rt>か</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>",
+   "kana": "ぶんかのひ",
+   "romaji": "bunka no hi",
+   "meaning": "文化之日 — 每年 11 月 3 日。1946 年的這一天公布了日本國憲法，1948 年定為「愛好自由與和平、推廣文化」的國定假日",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>ぶ<span class=\"ar\">↘</span>んか</span></span>\n          <span class=\"acc-note\">文化＝頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "今年",
+   "ja": "<ruby>今<rt>こ</rt>年<rt>とし</rt></ruby>",
+   "kana": "ことし",
+   "romaji": "kotoshi",
+   "meaning": "今年 — 兩個字整組唸 ことし（熟字訓），不是 いまとし 也不是 こんねん；去年是 去年（きょねん）、明年是 来年（らいねん）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>ことし<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "イベント",
+   "ja": "イベント",
+   "kana": "イベント",
+   "romaji": "ibento",
+   "meaning": "活動 ← 英語 event；日文多指有人主辦的活動、展覽、比賽，像〈夫と漫画のイベントに行きました〉那篇的漫畫活動",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "選手",
+   "ja": "<ruby>選<rt>せん</rt>手<rt>しゅ</rt></ruby>",
+   "kana": "せんしゅ",
+   "romaji": "senshu",
+   "meaning": "選手 — 跟中文同一個詞；稱呼特定選手時接在名字後面當敬稱：大谷選手",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>せ<span class=\"ar\">↘</span>んしゅ</span></span>\n          <span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "試合",
+   "ja": "<ruby>試<rt>し</rt>合<rt>あい</rt></ruby>",
+   "kana": "しあい",
+   "romaji": "shiai",
+   "meaning": "比賽 — 兩方對打的比賽都用這個字（足球、網球、棒球）；合 唸 あい 是訓讀，跟中文「試合」的意思無關，要當成一個新字記",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>しあい<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "参加",
+   "ja": "<ruby>参<rt>さん</rt>加<rt>か</rt></ruby>（する）",
+   "kana": "さんか（する）",
+   "romaji": "sanka (suru)",
+   "meaning": "參加 — 加 する 變動詞；參加的對象用 に：イベントに参加します（參加活動）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>さんか<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "予約",
+   "ja": "<ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>（する）",
+   "kana": "よやく（する）",
+   "romaji": "yoyaku (suru)",
+   "meaning": "預約 — 〈打電話預約剪髮〉那篇學過；能不能預約用 できる：予約できます／できません",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>よやく<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "購物",
+    "動詞"
+   ]
+  },
+  {
+   "text": "上手",
+   "ja": "<ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby>",
+   "kana": "じょうず",
+   "romaji": "jouzu",
+   "meaning": "很厲害、很拿手 — な形容詞，放在名詞前面要加 な：上手な人（厲害的人）；相反是 下手（へた）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↘</span>じょ<span class=\"ar\">↗</span>うず</span></span>\n          <span class=\"acc-note\">尾高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "モール",
+   "ja": "モール",
+   "kana": "モール",
+   "romaji": "mooru",
+   "meaning": "購物中心 ← 英語 mall，是 ショッピングモール（shopping mall）的簡稱",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "場所",
+    "購物"
+   ]
+  },
+  {
+   "text": "デート",
+   "ja": "デート（する）",
+   "kana": "デート（する）",
+   "romaji": "deeto (suru)",
+   "meaning": "約會 ← 英語 date；日文只有「約會」的意思，英文 date「日期」的意思日文用 日付（ひづけ）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "カフェで勉強している友達を見ました。",
+   "ja": "カフェで <ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>している <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>を <ruby>見<rt>み</rt></ruby>ました。",
+   "kana": "カフェで べんきょうしている ともだちを みました。",
+   "romaji": "kafe de benkyou shite iru tomodachi o mimashita.",
+   "meaning": "我看到了在咖啡廳讀書的朋友。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "モールでデートしている友達を見ました。",
+   "ja": "モールで デートしている <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>を <ruby>見<rt>み</rt></ruby>ました。",
+   "kana": "モールで デートしている ともだちを みました。",
+   "romaji": "mooru de deeto shite iru tomodachi o mimashita.",
+   "meaning": "我看到了在購物中心約會的朋友。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
   {
    "text": "靴",
    "ja": "<ruby>靴<rt>くつ</rt></ruby>",
@@ -2754,6 +3019,11 @@
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-jimu-kafe-kaiwa.html",
      "title": "ジムとカフェに行きました"
+    },
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
     }
    ],
    "tags": [
@@ -7225,6 +7495,229 @@
    ]
   },
   {
+   "text": "もう一度お願いします",
+   "ja": "もう<ruby>一<rt>いち</rt>度<rt>ど</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします",
+   "kana": "もういちどおねがいします",
+   "romaji": "mou ichido onegai shimasu",
+   "meaning": "請再說一次",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "ゆっくりお願いします",
+   "ja": "ゆっくりお<ruby>願<rt>ねが</rt></ruby>いします",
+   "kana": "ゆっくりおねがいします",
+   "romaji": "yukkuri onegai shimasu",
+   "meaning": "請說慢一點。ゆっくり＝慢慢地，是 ゆっくり話していただけますか 的短版",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "いつでも大丈夫です",
+   "ja": "いつでも<ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です",
+   "kana": "いつでもだいじょうぶです",
+   "romaji": "itsu demo daijoubu desu",
+   "meaning": "什麼時候都可以。いつ（什麼時候）＋ でも＝任何時候。 7/10 自我介紹那堂課老師說的「いつでも教えてください」也是這個 いつでも",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "午後ならいつでも大丈夫です",
+   "ja": "<ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>ならいつでも<ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です",
+   "kana": "ごごならいつでもだいじょうぶです",
+   "romaji": "gogo nara itsu demo daijoubu desu",
+   "meaning": "下午的話什麼時候都可以。前面加「〇〇なら」可以先把範圍縮小",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "何時でもいいです",
+   "ja": "<ruby>何<rt>なん</rt>時<rt>じ</rt></ruby>でもいいです",
+   "kana": "なんじでもいいです",
+   "romaji": "nanji demo ii desu",
+   "meaning": "幾點都可以。換成 どこでも（哪裡都）、何でも（什麼都）、誰でも（誰都）也是同一個套法；時刻的說法見 時間速記表",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "肩くらいの長さにしてください",
+   "ja": "<ruby>肩<rt>かた</rt></ruby>くらいの<ruby>長<rt>なが</rt></ruby>さにしてください",
+   "kana": "かたくらいのながさにしてください",
+   "romaji": "kata kurai no nagasa ni shite kudasai",
+   "meaning": "請剪到肩膀左右的長度。長さ 是 長い 去掉 い 加 さ 變成的名詞（長度）， 這個 さ 在 10/4 重さ那篇講過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "この写真みたいにしたいです",
+   "ja": "この<ruby>写<rt>しゃ</rt>真<rt>しん</rt></ruby>みたいにしたいです",
+   "kana": "このしゃしんみたいにしたいです",
+   "romaji": "kono shashin mitai ni shitai desu",
+   "meaning": "我想剪成像這張照片一樣。說的是自己的希望，比 してください 柔和一點",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "前髪は眉くらいでお願いします",
+   "ja": "<ruby>前<rt>まえ</rt>髪<rt>がみ</rt></ruby>は<ruby>眉<rt>まゆ</rt></ruby>くらいでお<ruby>願<rt>ねが</rt></ruby>いします",
+   "kana": "まえがみはまゆくらいでおねがいします",
+   "romaji": "maegami wa mayu kurai de onegai shimasu",
+   "meaning": "瀏海請剪到眉毛左右。前髪 的 かみ 濁化成 がみ，跟 髪型（かみがた）一樣是連濁",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "少しだけ切ってください",
+   "ja": "<ruby>少<rt>すこ</rt></ruby>しだけ<ruby>切<rt>き</rt></ruby>ってください",
+   "kana": "すこしだけきってください",
+   "romaji": "sukoshi dake kitte kudasai",
+   "meaning": "請稍微修一下就好。切る（剪、切）的て形是 切って",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "動詞"
+   ]
+  },
+  {
+   "text": "肩くらいで",
+   "ja": "<ruby>肩<rt>かた</rt></ruby>くらいで",
+   "kana": "かたくらいで",
+   "romaji": "kata kurai de",
+   "meaning": "到肩膀左右",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "この写真みたいに",
+   "ja": "この<ruby>写<rt>しゃ</rt>真<rt>しん</rt></ruby>みたいに",
+   "kana": "このしゃしんみたいに",
+   "romaji": "kono shashin mitai ni",
+   "meaning": "像這張照片一樣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "前髪は眉まで",
+   "ja": "<ruby>前<rt>まえ</rt>髪<rt>がみ</rt></ruby>は<ruby>眉<rt>まゆ</rt></ruby>まで",
+   "kana": "まえがみはまゆまで",
+   "romaji": "maegami wa mayu made",
+   "meaning": "瀏海到眉毛。短句後面加上 お願いします 會更有禮貌，例如 肩くらいでお願いします，長度還是很短",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-08-29",
+     "href": "lessons/2026-08-29-naritai-biyouin.html",
+     "title": "髪が長くなりました"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
    "text": "座敷",
    "ja": "<ruby>座敷<rt>ざしき</rt></ruby>",
    "kana": "ざしき",
@@ -7683,6 +8176,11 @@
      "date": "2026-08-26",
      "href": "lessons/2026-08-26-aite-imasu.html",
      "title": "空いていますか"
+    },
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
+     "title": "文化の日はボルダリングのイベント"
     }
    ],
    "tags": [

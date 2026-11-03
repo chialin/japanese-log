@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>空いています — あいて 和 すいて 的差別</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ol .quiz-ans{margin-top:6px;padding:8px 14px;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">空</span>いています — あいて 和 すいて</h1>
+  <div class="page-meta">單字辨析 · Vocabulary · 2026 / 11 / 03</div>
+  <p class="page-subtitle">同一個漢字 空く 有兩種讀音：あく 是「沒被佔用」，すく 是「人少、不擠」</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    問別人上午有沒有空，會說 午前は空いていますか；說平日的抱石館人很少，也會說 平日はジムが空いています。
+    兩句的漢字寫法一模一樣，前一句唸 <span class="compare">あいています</span>，後一句唸 <span class="compare">すいています</span>，意思也不一樣。
+    〈<a href="2026-08-26-aite-imasu.html" style="color:var(--accent);">空いていますか</a>〉那篇學的是 あいて，
+    〈<a href="2026-10-21-jimu-kafe-kaiwa.html" style="color:var(--accent);">ジムとカフェに行きました</a>〉那篇用到的是 すいて，
+    這篇把兩個讀音放在一起比，再看分辨的方法：先想它的反義詞是什麼。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hikaku">一、以反義詞為主軸，把兩種讀音排出來</div>
+
+  <p class="lead">
+    空く 是一個動詞，但有兩種讀音，各自是不同的意思。最好分的方法是想它的反面：
+    あく 的反面是「被佔用」，すく 的反面是「很擠」。兩個都是平板型（查 <a href="https://www.gavo.t.u-tokyo.ac.jp/ojad/" target="_blank" rel="noopener" style="color:var(--accent);">OJAD</a>）。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>讀音</th><th>意思</th><th>反義</th><th>常見的主詞</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja"><ruby>空<rt>あ</rt></ruby>く<br><span style="font-size:13px;color:var(--ink-mute);">aku</span></td>
+        <td>沒被佔用，空著</td>
+        <td>有預定（予定があります）、有人坐了</td>
+        <td>時間、座位、房間、職缺</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><ruby>空<rt>す</rt></ruby>く<br><span style="font-size:13px;color:var(--ink-mute);">suku</span></td>
+        <td>人少，不擠</td>
+        <td><ruby>混<rt>こ</rt></ruby>む（很擠）</td>
+        <td>電車、店、路、抱石館</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <div class="section-title">📖 兩個動詞</div>
+
+    <div class="word-item" data-text="あく">
+      <div class="word-content">
+        <div class="word-ja"><ruby>空<rt>あ</rt></ruby>く</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>あく<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">aku</div>
+        <div class="word-meaning">空著、沒被佔用 — て形 空いて（あいて），狀態用 空いています</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="すく">
+      <div class="word-content">
+        <div class="word-ja"><ruby>空<rt>す</rt></ruby>く</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>すく<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">suku</div>
+        <div class="word-meaning">人少、不擠 — て形 空いて（すいて），狀態用 空いています</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="aku">二、あいています 是「沒被佔用」的意思</div>
+
+  <p class="lead">
+    あく 講的是某個位置或時段還沒有被東西、被人、被行程填進去。問人有沒有空，就是在問那段時間有沒有被排了事情。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="午前はあいていますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は <ruby>空<rt>あ</rt></ruby>いていますか。</div>
+        <div class="word-romaji">gozen wa aite imasu ka.</div>
+        <div class="word-meaning">上午有空嗎？（時間沒有被行程佔用）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="この席はあいていますか。">
+      <div class="word-content">
+        <div class="word-ja">この <ruby>席<rt>せき</rt></ruby>は <ruby>空<rt>あ</rt></ruby>いていますか。</div>
+        <div class="word-romaji">kono seki wa aite imasu ka.</div>
+        <div class="word-meaning">這個位子有人坐嗎？（在電車、咖啡廳想坐下時用）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今日は部屋があいています。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は <ruby>部<rt>へ</rt>屋<rt>や</rt></ruby>が <ruby>空<rt>あ</rt></ruby>いています。</div>
+        <div class="word-romaji">kyou wa heya ga aite imasu.</div>
+        <div class="word-meaning">今天還有空房。（飯店、旅館訂房時聽得到）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="suku">三、すいています 是「人少、不擠」的意思</div>
+
+  <p class="lead">
+    すく 講的是一個地方裡面的人不多，跟 混んでいます（很擠）剛好相反。
+    〈<a href="2026-10-21-jimu-kafe-kaiwa.html" style="color:var(--accent);">ジムとカフェに行きました</a>〉那篇說的
+    いいえ、混んでいませんでした。空いていました。就是這個意思。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="平日はジムがすいています。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は ジムが <ruby>空<rt>す</rt></ruby>いています。</div>
+        <div class="word-romaji">heijitsu wa jimu ga suite imasu.</div>
+        <div class="word-meaning">平日抱石館人很少。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="朝の電車は混んでいますが、昼はすいています。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>朝<rt>あさ</rt></ruby>の <ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>は <ruby>混<rt>こ</rt></ruby>んでいますが、<ruby>昼<rt>ひる</rt></ruby>は <ruby>空<rt>す</rt></ruby>いています。</div>
+        <div class="word-romaji">asa no densha wa konde imasu ga, hiru wa suite imasu.</div>
+        <div class="word-meaning">早上的電車很擠，中午就很空。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お腹がすきました。">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>腹<rt>なか</rt></ruby>が <ruby>空<rt>す</rt></ruby>きました。</div>
+        <div class="word-romaji">onaka ga sukimashita.</div>
+        <div class="word-meaning">肚子餓了。（肚子「空了」，也是 すく）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="onaji">四、同一句話換個讀音，差別在哪裡</div>
+
+  <p class="lead">
+    因為漢字一樣，有些句子光看字分不出是哪一個，要靠前後文。下面這句問的是抱石館，兩種讀音都說得通，意思卻不一樣。
+  </p>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>寫法</th><th>唸成</th><th>意思</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-ja" rowspan="2">ジムは空いていますか。</td>
+        <td class="col-ja"><b>あいて</b>いますか<br><span style="font-size:13px;color:var(--ink-mute);">aite imasu ka</span></td>
+        <td>抱石館現在有沒有開？還有沒有空的時段？</td>
+      </tr>
+      <tr>
+        <td class="col-ja"><b>すいて</b>いますか<br><span style="font-size:13px;color:var(--ink-mute);">suite imasu ka</span></td>
+        <td>抱石館現在人多不多？</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="lead">
+    說話的時候讀音聽得出來，不會混淆。看文字時如果分不出來，就把反義詞套進去試試：
+    能換成「很擠」的是 すいて，能換成「有人用了、有行程了」的是 あいて。
+  </p>
+
+  <div class="alert">
+    ⚠️ <strong>あく 還有另一個漢字：開く</strong><br>
+    店有沒有開門，日文也說 あいていますか，但漢字寫成 <span class="compare">開いています</span>。
+    開く（あく）是「打開」，空く（あく）是「空著」，唸法一樣、漢字不同。
+    上面那句問抱石館有沒有開，嚴格來說寫成 ジムは開いていますか 比較正確。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">五、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 下面的 空いて 要唸 あいて 還是 すいて？</div>
+    <ol class="quiz-ol">
+      <li>明日の午後は空いていますか。
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>あいて — 問明天下午有沒有空，是時間有沒有被佔用。<br>ashita no gogo wa aite imasu ka.</p>
+        </details>
+      </li>
+      <li>日曜日のカフェは空いていますね。
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>すいて — 說咖啡廳人很少，反面是 混んでいます。<br>nichiyoubi no kafe wa suite imasu ne.</p>
+        </details>
+      </li>
+      <li>すみません、この席は空いていますか。
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>あいて — 問位子有沒有人坐。<br>sumimasen, kono seki wa aite imasu ka.</p>
+        </details>
+      </li>
+      <li>寫出日文：肚子餓了。
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>お腹が空きました。（すきました）<br>onaka ga sukimashita.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-03-bunka-no-hi-bouldering.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">文化の日はボルダリングのイベント <span class="next-arrow">→</span></span>
+    <span class="next-sub">平日は混んでいません：講抱石館擠不擠的那段對話</span>
+  </a>
+  <a href="2026-08-26-aite-imasu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">空いていますか — 問人有沒有空 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/26 午前は空いていますか，あいて 的用法</span>
+  </a>
+  <a href="2026-10-21-jimu-kafe-kaiwa.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">ジムとカフェに行きました <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/21 混んでいませんでした。空いていました：すいて 的用法</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

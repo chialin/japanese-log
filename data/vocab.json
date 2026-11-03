@@ -2,6 +2,157 @@
  "generated": "2026-11-03",
  "words": [
   {
+   "text": "あく",
+   "ja": "<ruby>空<rt>あ</rt></ruby>く",
+   "kana": "あく",
+   "romaji": "aku",
+   "meaning": "空著、沒被佔用 — て形 空いて（あいて），狀態用 空いています",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>あく<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-aku-suku.html",
+     "title": "空いています"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "すく",
+   "ja": "<ruby>空<rt>す</rt></ruby>く",
+   "kana": "すく",
+   "romaji": "suku",
+   "meaning": "人少、不擠 — て形 空いて（すいて），狀態用 空いています",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>すく<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-aku-suku.html",
+     "title": "空いています"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "午前はあいていますか。",
+   "ja": "<ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>は <ruby>空<rt>あ</rt></ruby>いていますか。",
+   "kana": "ごぜんは あいていますか。",
+   "romaji": "gozen wa aite imasu ka.",
+   "meaning": "上午有空嗎？（時間沒有被行程佔用）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-aku-suku.html",
+     "title": "空いています"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "この席はあいていますか。",
+   "ja": "この <ruby>席<rt>せき</rt></ruby>は <ruby>空<rt>あ</rt></ruby>いていますか。",
+   "kana": "この せきは あいていますか。",
+   "romaji": "kono seki wa aite imasu ka.",
+   "meaning": "這個位子有人坐嗎？（在電車、咖啡廳想坐下時用）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-aku-suku.html",
+     "title": "空いています"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "今日は部屋があいています。",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は <ruby>部<rt>へ</rt>屋<rt>や</rt></ruby>が <ruby>空<rt>あ</rt></ruby>いています。",
+   "kana": "きょうは へやが あいています。",
+   "romaji": "kyou wa heya ga aite imasu.",
+   "meaning": "今天還有空房。（飯店、旅館訂房時聽得到）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-aku-suku.html",
+     "title": "空いています"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "平日はジムがすいています。",
+   "ja": "<ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby>は ジムが <ruby>空<rt>す</rt></ruby>いています。",
+   "kana": "へいじつは ジムが すいています。",
+   "romaji": "heijitsu wa jimu ga suite imasu.",
+   "meaning": "平日抱石館人很少。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-aku-suku.html",
+     "title": "空いています"
+    }
+   ],
+   "tags": [
+    "場所",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "朝の電車は混んでいますが、昼はすいています。",
+   "ja": "<ruby>朝<rt>あさ</rt></ruby>の <ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>は <ruby>混<rt>こ</rt></ruby>んでいますが、<ruby>昼<rt>ひる</rt></ruby>は <ruby>空<rt>す</rt></ruby>いています。",
+   "kana": "あさの でんしゃは こんでいますが、ひるは すいています。",
+   "romaji": "asa no densha wa konde imasu ga, hiru wa suite imasu.",
+   "meaning": "早上的電車很擠，中午就很空。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-aku-suku.html",
+     "title": "空いています"
+    }
+   ],
+   "tags": [
+    "交通",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "お腹がすきました。",
+   "ja": "お<ruby>腹<rt>なか</rt></ruby>が <ruby>空<rt>す</rt></ruby>きました。",
+   "kana": "おなかが すきました。",
+   "romaji": "onaka ga sukimashita.",
+   "meaning": "肚子餓了。（肚子「空了」，也是 すく）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-aku-suku.html",
+     "title": "空いています"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "食物"
+   ]
+  },
+  {
    "text": "普通",
    "ja": "<ruby>普<rt>ふ</rt>通<rt>つう</rt></ruby>",
    "kana": "ふつう",
@@ -82,7 +233,7 @@
    "ja": "イベント",
    "kana": "イベント",
    "romaji": "ibento",
-   "meaning": "活動 ← 英語 event；日文多指有人主辦的活動、展覽、比賽，像〈夫と漫画のイベントに行きました〉那篇的漫畫活動",
+   "meaning": "活動 ← 英語 event；日文多指有人主辦的活動、展覽、比賽，像 8/2 那篇去的漫畫活動",
    "kind": "word",
    "lessons": [
     {
@@ -153,26 +304,6 @@
    ]
   },
   {
-   "text": "予約",
-   "ja": "<ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>（する）",
-   "kana": "よやく（する）",
-   "romaji": "yoyaku (suru)",
-   "meaning": "預約 — 〈打電話預約剪髮〉那篇學過；能不能預約用 できる：予約できます／できません",
-   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>よやく<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-11-03",
-     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
-     "title": "文化の日はボルダリングのイベント"
-    }
-   ],
-   "tags": [
-    "購物",
-    "動詞"
-   ]
-  },
-  {
    "text": "上手",
    "ja": "<ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby>",
    "kana": "じょうず",
@@ -189,81 +320,6 @@
    ],
    "tags": [
     "形容詞・副詞"
-   ]
-  },
-  {
-   "text": "モール",
-   "ja": "モール",
-   "kana": "モール",
-   "romaji": "mooru",
-   "meaning": "購物中心 ← 英語 mall，是 ショッピングモール（shopping mall）的簡稱",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-11-03",
-     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
-     "title": "文化の日はボルダリングのイベント"
-    }
-   ],
-   "tags": [
-    "場所",
-    "購物"
-   ]
-  },
-  {
-   "text": "デート",
-   "ja": "デート（する）",
-   "kana": "デート（する）",
-   "romaji": "deeto (suru)",
-   "meaning": "約會 ← 英語 date；日文只有「約會」的意思，英文 date「日期」的意思日文用 日付（ひづけ）",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-11-03",
-     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
-     "title": "文化の日はボルダリングのイベント"
-    }
-   ],
-   "tags": [
-    "動詞"
-   ]
-  },
-  {
-   "text": "カフェで勉強している友達を見ました。",
-   "ja": "カフェで <ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>している <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>を <ruby>見<rt>み</rt></ruby>ました。",
-   "kana": "カフェで べんきょうしている ともだちを みました。",
-   "romaji": "kafe de benkyou shite iru tomodachi o mimashita.",
-   "meaning": "我看到了在咖啡廳讀書的朋友。",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-11-03",
-     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
-     "title": "文化の日はボルダリングのイベント"
-    }
-   ],
-   "tags": [
-    "場所",
-    "動詞"
-   ]
-  },
-  {
-   "text": "モールでデートしている友達を見ました。",
-   "ja": "モールで デートしている <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>を <ruby>見<rt>み</rt></ruby>ました。",
-   "kana": "モールで デートしている ともだちを みました。",
-   "romaji": "mooru de deeto shite iru tomodachi o mimashita.",
-   "meaning": "我看到了在購物中心約會的朋友。",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-11-03",
-     "href": "lessons/2026-11-03-bunka-no-hi-bouldering.html",
-     "title": "文化の日はボルダリングのイベント"
-    }
-   ],
-   "tags": [
-    "場所",
-    "動詞"
    ]
   },
   {

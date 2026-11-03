@@ -396,7 +396,7 @@ curl -s "https://www.irasutoya.com/feeds/posts/default?q=<關鍵字URL編碼>&al
 
   | 收尾的小測驗 | 換你自己做做看 · Self-Quiz | 八、換你自己做做看 · Self-Quiz |
 
-  小測驗那段的內容規格（3～5 題 ＋ `<details>` 解答）不變，只是標題也照口語的寫法。
+  小測驗那段的內容規格（3～5 題，**每一題各自附一個 `<details>` 解答**）不變，只是標題也照口語的寫法。
 - **開頭第一塊先講主題**：用 `.tip` 寫「這篇要學的是什麼」——先講什麼情境會用到，再說這篇要處理哪幾件事，
   用完整句子，不要 ①②③ 條列。後面才一段一段展開。
 - **每個小節開頭先鋪陳一兩句再帶出重點**，不要一進去就丟表格。
@@ -411,7 +411,9 @@ curl -s "https://www.irasutoya.com/feeds/posts/default?q=<關鍵字URL編碼>&al
 - 五十音行（行）課程每頁恰好 5 個 kana：附羅馬拼音、發音重點、單字、用已學 kana 拼出來的簡單句子。
 - 主題課程（數字／季節／句型／假名概念）專注在日常實用。
 - 閱讀筆記（readings/）拿真實日文短文當素材，標出假名讀法、單字、助詞、文法句型。
-- **課後複習小測驗 (Self-Quiz)**：每日課程講義與筆記末尾必須附上「課後複習小測驗（Self-Quiz）」，提供 3~5 題造句或單字翻譯測驗，並以可折疊 HTML `<details><summary>🔍 點擊查看解答</summary>...</details>` 附上解答。
+- **課後複習小測驗 (Self-Quiz)**：每日課程講義與筆記末尾必須附上「課後複習小測驗（Self-Quiz）」，提供 3~5 題造句或單字翻譯測驗。**一題配一個解答，各自可以開合**（2026-11-03 起）：
+  每個 `<li>` 裡放題目，緊接著一個 `<details class="quiz-ans"><summary>🔍 看解答</summary><p>日文<br>romaji</p></details>`，
+  不要把全部答案塞進同一個 `<details>`。範例見 [bunka-no-hi-bouldering](lessons/2026-11-03-bunka-no-hi-bouldering.html)。
 
 ### 音讀連結：漢字音／台語對應（必做）
 

@@ -35,6 +35,8 @@
 .quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
 .quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
 .quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ol .quiz-ans{margin-top:6px;padding:8px 14px;}
 
 .lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
 .divider[id]{scroll-margin-top:24px;}
@@ -62,11 +64,10 @@
   <div class="tip">
     💡 <strong>這篇要學的是什麼</strong><br>
     11/3 是日本的國定假日「文化の日」，這天抱石館從中午 12 點到下午 3 點半有活動，會有職業選手來，人也很多。
-    我平常都是平日跟朋友去，比較不擠；先生只陪我去過一次。今年我去看過一次抱石館的活動，
-    在很近的地方看選手比賽，下次很想自己參加，不過這種活動不能預約，是程度好的人才會參加。<br>
-    這篇先把課上的對話整理出來，再看幾個課上碰到的句型：說時間範圍的 から〜まで、表示「只有」的 だけ、
-    說原因的 なので 和看得到的 見られます、想做什麼的 したいです，
-    最後是用 〜ている 說明「在做什麼的朋友」的兩句練習。
+    我平常都是平日跟朋友去，比較不擠。今年我去看過一次抱石館的活動，
+    在很近的地方看選手比賽，下次很想自己參加，不過這種活動是程度好的人才會參加。<br>
+    這篇先把課上的對話整理出來，再看幾個課上碰到的句型：說時間範圍的 から〜まで、
+    說原因的 なので 和看得到的 見られます，還有想做什麼的 したいです。
   </div>
 
   <!-- ─────────────────────────────────────── -->
@@ -149,26 +150,6 @@
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
 
-    <div class="turn" data-text="ご主人も一緒に行きますか。">
-      <div class="who">先生</div>
-      <div class="turn-body">
-        <div class="turn-ja">ご<ruby>主<rt>しゅ</rt>人<rt>じん</rt></ruby>も <ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>に <ruby>行<rt>い</rt></ruby>きますか。</div>
-        <div class="turn-romaji">goshujin mo issho ni ikimasu ka.</div>
-        <div class="turn-meaning">你先生也會一起去嗎？</div>
-      </div>
-      <button class="play-btn" aria-label="播放">▶</button>
-    </div>
-
-    <div class="turn me" data-text="夫は一回だけ一緒に行きました。">
-      <div class="who">わたし</div>
-      <div class="turn-body">
-        <div class="turn-ja"><ruby>夫<rt>おっと</rt></ruby>は <ruby>1<rt>いっ</rt>回<rt>かい</rt></ruby><span class="j-mark">だけ</span> <ruby>一<rt>いっ</rt>緒<rt>しょ</rt></ruby>に <ruby>行<rt>い</rt></ruby>きました。</div>
-        <div class="turn-romaji">otto wa ikkai dake issho ni ikimashita.</div>
-        <div class="turn-meaning">我先生只跟我一起去過一次。（だけ 見<a href="#dake" style="color:var(--accent);">第四節</a>）</div>
-      </div>
-      <button class="play-btn" aria-label="播放">▶</button>
-    </div>
-
     <div class="turn me" data-text="私は平日に行きます。平日は混んでいません。">
       <div class="who">わたし</div>
       <div class="turn-body">
@@ -214,7 +195,7 @@
       <div class="turn-body">
         <div class="turn-ja"><ruby>人<rt>ひと</rt></ruby>は たくさん いました<span class="j-mark">が</span>、<ruby>近<rt>ちか</rt></ruby>くで <ruby>見<rt>み</rt></ruby><span class="j-mark">られました</span>。</div>
         <div class="turn-romaji">hito wa takusan imashita ga, chikaku de miraremashita.</div>
-        <div class="turn-meaning">雖然人很多，還是可以在很近的地方看。（我原本說 たくさんの人なので 近くで見れます，為什麼這樣改見<a href="#node" style="color:var(--accent);">第五節</a>）</div>
+        <div class="turn-meaning">雖然人很多，還是可以在很近的地方看。（我原本說 たくさんの人なので 近くで見れます，為什麼這樣改見<a href="#node" style="color:var(--accent);">第四節</a>）</div>
       </div>
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
@@ -224,27 +205,17 @@
       <div class="turn-body">
         <div class="turn-ja"><ruby>次<rt>つぎ</rt></ruby>は <ruby>参<rt>さん</rt>加<rt>か</rt></ruby><span class="j-mark">したいです</span>。</div>
         <div class="turn-romaji">tsugi wa sanka shitai desu.</div>
-        <div class="turn-meaning">下次我想參加。（したい 見<a href="#tai" style="color:var(--accent);">第六節</a>）</div>
+        <div class="turn-meaning">下次我想參加。（したい 見<a href="#tai" style="color:var(--accent);">第五節</a>）</div>
       </div>
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
 
-    <div class="turn" data-text="予約できますか。">
-      <div class="who">先生</div>
-      <div class="turn-body">
-        <div class="turn-ja"><ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>できますか。</div>
-        <div class="turn-romaji">yoyaku dekimasu ka.</div>
-        <div class="turn-meaning">可以預約嗎？</div>
-      </div>
-      <button class="play-btn" aria-label="播放">▶</button>
-    </div>
-
-    <div class="turn me" data-text="予約はできません。上手な人が参加します。">
+    <div class="turn me" data-text="上手な人が参加します。">
       <div class="who">わたし</div>
       <div class="turn-body">
-        <div class="turn-ja"><ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>は できません。<ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby>な <ruby>人<rt>ひと</rt></ruby>が <ruby>参<rt>さん</rt>加<rt>か</rt></ruby>します。</div>
-        <div class="turn-romaji">yoyaku wa dekimasen. jouzu na hito ga sanka shimasu.</div>
-        <div class="turn-meaning">不能預約，是程度好的人才會參加。（筆記上是「上手な人が参加する」，這裡改成禮貌體）</div>
+        <div class="turn-ja"><ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby>な <ruby>人<rt>ひと</rt></ruby>が <ruby>参<rt>さん</rt>加<rt>か</rt></ruby>します。</div>
+        <div class="turn-romaji">jouzu na hito ga sanka shimasu.</div>
+        <div class="turn-meaning">是程度好的人才會參加。（筆記上是「上手な人が参加する」，這裡改成禮貌體）</div>
       </div>
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
@@ -254,7 +225,7 @@
   <div class="divider" id="tango">二、對話裡的新單字是這些</div>
 
   <p class="lead">
-    這段對話的單字分成兩組：一組跟日期有關（假日、平日、今年），一組跟活動和比賽有關（選手、比賽、參加、預約）。
+    這段對話的單字分成兩組：一組跟日期有關（假日、平日、今年），一組跟活動和比賽有關（選手、比賽、參加）。
     外來語附上了來源語言，漢字詞標了高低重音（查 <a href="https://www.gavo.t.u-tokyo.ac.jp/ojad/" target="_blank" rel="noopener" style="color:var(--accent);">OJAD</a>）。
     プロ 在 <a href="2026-10-29-atarashii-kutsu.html" style="color:var(--accent);">10/29 買抱石鞋那篇</a>學過，
     ボルダリング 第一次出現在 <a href="2026-08-21-bouldering-kaiwa.html" style="color:var(--accent);">8/21 的會話</a>，這裡就不再列。
@@ -344,7 +315,7 @@
       <div class="word-content">
         <div class="word-ja">イベント</div>
         <div class="word-romaji">ibento</div>
-        <div class="word-meaning">活動 ← 英語 event；日文多指有人主辦的活動、展覽、比賽，像〈<a href="2026-08-02-manga-event.html" style="color:var(--accent);">夫と漫画のイベントに行きました</a>〉那篇的漫畫活動</div>
+        <div class="word-meaning">活動 ← 英語 event；日文多指有人主辦的活動、展覽、比賽，像 <a href="2026-08-02-manga-event.html" style="color:var(--accent);">8/2 那篇</a>去的漫畫活動</div>
       </div>
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
@@ -397,19 +368,6 @@
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
 
-    <div class="word-item" data-text="予約">
-      <div class="word-content">
-        <div class="word-ja"><ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>（する）</div>
-        <div>
-          <span class="acc"><span class="acc-k"><span class="ar">→</span>よやく<span class="ar">→</span></span></span>
-          <span class="acc-note">平板型</span>
-        </div>
-        <div class="word-romaji">yoyaku (suru)</div>
-        <div class="word-meaning">預約 — 〈<a href="2026-08-29-naritai-biyouin.html" style="color:var(--accent);">打電話預約剪髮</a>〉那篇學過；能不能預約用 できる：予約できます／できません</div>
-      </div>
-      <button class="play-btn" aria-label="播放">▶</button>
-    </div>
-
     <div class="word-item" data-text="上手">
       <div class="word-content">
         <div class="word-ja"><ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby></div>
@@ -423,23 +381,6 @@
       <button class="play-btn" aria-label="播放">▶</button>
     </div>
 
-    <div class="word-item" data-text="モール">
-      <div class="word-content">
-        <div class="word-ja">モール</div>
-        <div class="word-romaji">mooru</div>
-        <div class="word-meaning">購物中心 ← 英語 mall，是 ショッピングモール（shopping mall）的簡稱</div>
-      </div>
-      <button class="play-btn" aria-label="播放">▶</button>
-    </div>
-
-    <div class="word-item" data-text="デート">
-      <div class="word-content">
-        <div class="word-ja">デート（する）</div>
-        <div class="word-romaji">deeto (suru)</div>
-        <div class="word-meaning">約會 ← 英語 date；日文只有「約會」的意思，英文 date「日期」的意思日文用 日付（ひづけ）</div>
-      </div>
-      <button class="play-btn" aria-label="播放">▶</button>
-    </div>
   </div>
 
   <!-- ─────────────────────────────────────── -->
@@ -480,40 +421,7 @@
   </p>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider" id="dake">四、だけ 是「只有」的意思</div>
-
-  <p class="lead">
-    夫は1回だけ一緒に行きました 的 だけ 接在數量後面，意思是「只有這麼多」。
-    中文的「只」放在動詞前面，日文的 だけ 則是直接黏在要限定的那個詞後面。
-  </p>
-
-  <table class="joshi-table">
-    <thead>
-      <tr><th>例句</th><th>意思</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="col-ja"><ruby>1<rt>いっ</rt>回<rt>かい</rt></ruby><b>だけ</b><ruby>行<rt>い</rt></ruby>きました。</td>
-        <td>只去過一次。</td>
-      </tr>
-      <tr>
-        <td class="col-ja"><ruby>夫<rt>おっと</rt></ruby><b>だけ</b><ruby>行<rt>い</rt></ruby>きました。</td>
-        <td>只有我先生去了。</td>
-      </tr>
-      <tr>
-        <td class="col-ja"><ruby>平<rt>へい</rt>日<rt>じつ</rt></ruby><b>だけ</b><ruby>行<rt>い</rt></ruby>きます。</td>
-        <td>只在平日去。（平日に だけ 也可以）</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p class="lead">
-    次數的說法「1回、2回」在〈<a href="2026-08-21-ni-kai.html" style="color:var(--accent);">一週間に二回</a>〉那篇學過，
-    1回 唸 いっかい，い 後面的 ち 變成促音。
-  </p>
-
-  <!-- ─────────────────────────────────────── -->
-  <div class="divider" id="node">五、なので 是用來說原因的，前後意思相反時要用 が</div>
+  <div class="divider" id="node">四、なので 是用來說原因的，前後意思相反時要用 が</div>
 
   <p class="lead">
     課上我想說「雖然人很多，還是可以在很近的地方看」，說成了「たくさんの人なので 近くで見れます」。
@@ -563,7 +471,7 @@
   </p>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider" id="tai">六、想做的事用 〜たいです，参加する 變成 参加したいです</div>
+  <div class="divider" id="tai">五、想做的事用 〜たいです，参加する 變成 参加したいです</div>
 
   <p class="lead">
     次は参加したいです 的 したい 是 する 的「想做」的形。〜たい 接在 ます形 去掉 ます 的地方，
@@ -595,119 +503,39 @@
 
   <p class="lead">
     句子開頭的 <span class="compare">次は</span>（下一次）用 は 帶出來，有「這次是去看，下次換成參加」的對比感。
-    後面老師問能不能預約，回答 予約はできません 也用了 は，表示「預約這件事是沒辦法的」。
-    〇〇できます／できません 是 する 動詞的可能形，見〈<a href="2026-10-08-suru-dekiru.html" style="color:var(--accent);">する 的可能形是 できる</a>〉。
   </p>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider" id="te-iru">七、正在做的事可以放在名詞前面，說明是哪一個人</div>
-
-  <p class="lead">
-    課的最後練習了兩句「看到在〇〇做△△的朋友」。カフェで勉強している 整段放在 友達 前面，
-    說明是「正在咖啡廳讀書的」那個朋友，跟 <a href="2026-10-28-te-iru-meishi.html" style="color:var(--accent);">10/28 〜ている＋名詞</a> 的
-    あそこでギターを弾いている人 是同一個結構。中文也是把說明放在名詞前面，順序剛好一樣。
-  </p>
-
-  <div class="section">
-    <div class="section-title">📖 練習句</div>
-
-    <div class="word-item" data-text="カフェで勉強している友達を見ました。">
-      <div class="word-content">
-        <div class="word-ja">カフェで <ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby><span class="j-mark">している</span> <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>を <ruby>見<rt>み</rt></ruby>ました。</div>
-        <div class="word-romaji">kafe de benkyou shite iru tomodachi o mimashita.</div>
-        <div class="word-meaning">我看到了在咖啡廳讀書的朋友。</div>
-      </div>
-      <button class="play-btn" aria-label="播放">▶</button>
-    </div>
-
-    <div class="word-item" data-text="モールでデートしている友達を見ました。">
-      <div class="word-content">
-        <div class="word-ja">モールで デート<span class="j-mark">している</span> <ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>を <ruby>見<rt>み</rt></ruby>ました。</div>
-        <div class="word-romaji">mooru de deeto shite iru tomodachi o mimashita.</div>
-        <div class="word-meaning">我看到了在購物中心約會的朋友。</div>
-      </div>
-      <button class="play-btn" aria-label="播放">▶</button>
-    </div>
-  </div>
-
-  <div class="note">
-    📝 <strong>見ました 不需要改成 見ていました</strong><br>
-    「看到」是一下子就發生的事，所以句尾用 見ました 就好。
-    正在進行的是朋友的動作，所以 ている 放在朋友前面那一段：勉強<b>している</b>友達。
-  </div>
-
-  <!-- ─────────────────────────────────────── -->
-  <div class="divider" id="matome">八、整理成一張表</div>
-
-  <table class="joshi-table">
-    <thead>
-      <tr><th>想說的</th><th>日文</th><th>重點</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>今天是國定假日</td>
-        <td class="col-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>祝<rt>しゅく</rt>日<rt>じつ</rt></ruby>です</td>
-        <td>祝日・平日 的 日 唸 じつ</td>
-      </tr>
-      <tr>
-        <td>從 12 點到 3 點半</td>
-        <td class="col-ja"><ruby>12<rt>じゅうに</rt>時<rt>じ</rt></ruby><b>から</b><ruby>3<rt>さん</rt>時<rt>じ</rt>半<rt>はん</rt></ruby><b>まで</b></td>
-        <td>から 和 まで 一起用</td>
-      </tr>
-      <tr>
-        <td>只去過一次</td>
-        <td class="col-ja"><ruby>1<rt>いっ</rt>回<rt>かい</rt></ruby><b>だけ</b><ruby>行<rt>い</rt></ruby>きました</td>
-        <td>だけ 黏在要限定的詞後面</td>
-      </tr>
-      <tr>
-        <td>人很多，但是看得很近</td>
-        <td class="col-ja"><ruby>人<rt>ひと</rt></ruby>はたくさんいました<b>が</b>、<ruby>近<rt>ちか</rt></ruby>くで<ruby>見<rt>み</rt></ruby><b>られました</b></td>
-        <td>相反用 が；見る → 見られる</td>
-      </tr>
-      <tr>
-        <td>下次想參加</td>
-        <td class="col-ja"><ruby>次<rt>つぎ</rt></ruby>は<ruby>参<rt>さん</rt>加<rt>か</rt></ruby><b>したい</b>です</td>
-        <td>します → したいです</td>
-      </tr>
-      <tr>
-        <td>不能預約</td>
-        <td class="col-ja"><ruby>予<rt>よ</rt>約<rt>やく</rt></ruby>は<b>できません</b></td>
-        <td>する 的可能形 できる</td>
-      </tr>
-      <tr>
-        <td>在咖啡廳讀書的朋友</td>
-        <td class="col-ja">カフェで<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby><b>している</b><ruby>友<rt>とも</rt>達<rt>だち</rt></ruby></td>
-        <td>〜ている＋名詞</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- ─────────────────────────────────────── -->
-  <div class="divider" id="quiz">九、換你自己做做看 · Self-Quiz</div>
+  <div class="divider" id="quiz">六、換你自己做做看 · Self-Quiz</div>
 
   <div class="quiz-box">
     <div class="quiz-title">✏️ 依提示寫出日文</div>
     <ol class="quiz-ol">
-      <li>抱石館從早上 10 點開到晚上 10 點。（提示：ジム、から、まで）</li>
-      <li>我只吃了一個。（提示：一つ、だけ）</li>
-      <li>平日人很少，所以不擠。（提示：少ない、ので、混んでいません）</li>
-      <li>下次想跟先生一起參加活動。（提示：次は、イベントに、したい）</li>
-      <li>我看到了在公園跑步的朋友。（提示：公園で、走っている）</li>
+      <li>抱石館從早上 10 點開到晚上 10 點。（提示：ジム、から、まで）
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>ジムは午前10時から午後10時までです。<br>jimu wa gozen juuji kara gogo juuji made desu.</p>
+        </details>
+      </li>
+      <li>平日人很少，所以不擠。（提示：少ない、ので、混んでいません）
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>平日は人が少ないので、混んでいません。<br>heijitsu wa hito ga sukunai node, konde imasen.</p>
+        </details>
+      </li>
+      <li>下次想跟朋友一起參加活動。（提示：次は、イベントに、したい）
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>次は友達と一緒にイベントに参加したいです。<br>tsugi wa tomodachi to issho ni ibento ni sanka shitai desu.</p>
+        </details>
+      </li>
     </ol>
-    <details class="quiz-ans">
-      <summary>🔍 點擊查看解答</summary>
-      <p>1. ジムは午前10時から午後10時までです。<br>jimu wa gozen juuji kara gogo juuji made desu.</p>
-      <p>2. 一つだけ食べました。<br>hitotsu dake tabemashita.</p>
-      <p>3. 平日は人が少ないので、混んでいません。<br>heijitsu wa hito ga sukunai node, konde imasen.</p>
-      <p>4. 次は夫と一緒にイベントに参加したいです。<br>tsugi wa otto to issho ni ibento ni sanka shitai desu.</p>
-      <p>5. 公園で走っている友達を見ました。<br>kouen de hashitte iru tomodachi o mimashita.</p>
-    </details>
   </div>
 
-  <a href="2026-10-28-te-iru-meishi.html" class="next-link">
-    <span class="next-kicker">— 複習 —</span>
-    <span class="next-title">〜ている＋名詞 <span class="next-arrow">→</span></span>
-    <span class="next-sub">10/28 文法課：本篇最後兩句練習 カフェで勉強している友達 就是這個結構</span>
+  <a href="2026-11-03-aku-suku.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">空いています — あいて 和 すいて <span class="next-arrow">→</span></span>
+    <span class="next-sub">平日は混んでいません 的反面 空いています：あいて 和 すいて 怎麼分</span>
   </a>
   <a href="2026-10-29-atarashii-kutsu.html" class="next-link">
     <span class="next-kicker">— Related —</span>

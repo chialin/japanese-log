@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>場所を紹介します — 広場・登り口・下り口</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;color:var(--ink);line-height:2.1;}
+.joshi-table .col-ja b{color:var(--accent);}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ans{margin-top:14px;background:var(--paper-deep);padding:12px 16px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ol .quiz-ans{margin-top:6px;padding:8px 14px;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><ruby>場<rt>ば</rt>所<rt>しょ</rt></ruby>を<span class="accent"><ruby>紹<rt>しょう</rt>介<rt>かい</rt></ruby></span>します</h1>
+  <div class="page-meta">單字 · Vocabulary · 2026 / 11 / 03</div>
+  <p class="page-subtitle">帶人逛公園、爬小山時用得到的六個字：場所・紹介・広場・登る・登り口・下り口，順便把唸起來像的字串成一組</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    💡 <strong>這篇要學的是什麼</strong><br>
+    帶朋友去一個地方，邊走邊介紹「這裡是廣場」「從這裡開始爬」「下山的路在那邊」，就會用到這組單字。
+    這篇先把 場所（地方）、紹介（介紹）、広場（廣場）、登る（爬上去）、登り口（往上爬的入口）、下り口（往下走的入口）這六個字排出來，
+    再看它們之間的關係：好幾個字唸起來很像，是因為它們本來就是從同一個字長出來的，記住一個就能帶出另一個。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">一、以介紹一個地方為主軸，把這組單字排出來</div>
+
+  <p class="lead">
+    前三個是名詞，第四個是動詞，最後兩個是「動詞＋口」組成的名詞。
+    重音查的是 <a href="https://www.gavo.t.u-tokyo.ac.jp/ojad/" target="_blank" rel="noopener" style="color:var(--accent);">OJAD</a>
+    和 <a href="https://en.wiktionary.org/wiki/%E5%BA%83%E5%A0%B4" target="_blank" rel="noopener" style="color:var(--accent);">Wiktionary</a>；
+    登り口、下り口 這兩個複合詞在手邊的辭典查不到重音，先不標。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 名詞與動詞</div>
+
+    <div class="word-item" data-text="場所">
+      <div class="word-content">
+        <div class="word-ja"><ruby>場<rt>ば</rt>所<rt>しょ</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>ばしょ<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">basho</div>
+        <div class="word-meaning">地方、場所</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="紹介">
+      <div class="word-content">
+        <div class="word-ja"><ruby>紹<rt>しょう</rt>介<rt>かい</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>しょうかい<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">shoukai</div>
+        <div class="word-meaning">介紹 — 動詞用 紹介します（しょうかいします）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="広場">
+      <div class="word-content">
+        <div class="word-ja"><ruby>広<rt>ひろ</rt>場<rt>ば</rt></ruby></div>
+        <div>
+          <span class="acc"><span class="acc-k">ひ<span class="ar">↘</span>ろば</span></span>
+          <span class="acc-note">頭高型</span>
+        </div>
+        <div class="word-romaji">hiroba</div>
+        <div class="word-meaning">廣場、空曠的地方</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="登る">
+      <div class="word-content">
+        <div class="word-ja"><ruby>登<rt>のぼ</rt></ruby>る</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>のぼる<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">noboru</div>
+        <div class="word-meaning">往上爬、登上 — ます形 登ります，て形 登って（のぼって）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="のぼって">
+      <div class="word-content">
+        <div class="word-ja"><ruby>登<rt>のぼ</rt></ruby>って</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">→</span>のぼって<span class="ar">→</span></span></span>
+          <span class="acc-note">平板型</span>
+        </div>
+        <div class="word-romaji">nobotte</div>
+        <div class="word-meaning">爬上去之後…（て形，把兩個動作接起來）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📖 「動詞＋口」的兩個名詞</div>
+
+    <div class="word-item" data-text="のぼりぐち">
+      <div class="word-content">
+        <div class="word-ja"><ruby>登<rt>のぼ</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby></div>
+        <div class="word-romaji">noboriguchi</div>
+        <div class="word-meaning">往上爬的起點，登山口、樓梯或坡道往上的入口</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おりぐち">
+      <div class="word-content">
+        <div class="word-ja"><ruby>下<rt>お</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby></div>
+        <div class="word-romaji">origuchi</div>
+        <div class="word-meaning">往下走的起點，下山的路口、樓梯往下的入口</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="下りる">
+      <div class="word-content">
+        <div class="word-ja"><ruby>下<rt>お</rt></ruby>りる</div>
+        <div>
+          <span class="acc"><span class="acc-k"><span class="ar">↗</span>お<span class="ar">↘</span>りる</span></span>
+          <span class="acc-note">中高型</span>
+        </div>
+        <div class="word-romaji">oriru</div>
+        <div class="word-meaning">往下走（山、樓梯）— ます形 下ります（おります），下り口 就是從這個字來的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="rensou">二、唸起來像的字是同一家人</div>
+
+  <p class="lead">
+    這組單字有好幾個跟以前學過的字唸起來很像：のぼりぐち 跟 のぼります、ひろば 跟 ばしょ、しょうかい 跟 じこしょうかい。
+    這不是巧合，它們本來就是用同一個字組出來的。下面先把學過的字和新字一對一對排出來，
+    再把合成的字拆成一格一格的音，最後把共用 〜ぐち 的字放在一起看。
+  </p>
+
+  <div class="rs-pairs">
+    <div class="rs-pair">
+      <div class="rs-card old"><span class="kick">學過 <a class="rs-old" href="2026-08-21-bouldering-kaiwa.html">8/21</a></span><span class="jp"><span class="rs-hl"><ruby>登<rt>のぼ</rt></ruby>り</span>ます</span><span class="rm">noborimasu</span><span class="mean">往上爬</span></div>
+      <div class="rs-bridge"><span class="snd">のぼり</span><span class="arr">→</span></div>
+      <div class="rs-card new"><span class="kick">本課 <span class="rs-new">新</span></span><span class="jp"><span class="rs-hl"><ruby>登<rt>のぼ</rt></ruby>り</span><ruby>口<rt>ぐち</rt></ruby></span><span class="rm">noboriguchi</span><span class="mean">往上爬的入口</span></div>
+    </div>
+    <div class="rs-pair">
+      <div class="rs-card old"><span class="kick">學過 <a class="rs-old" href="2026-08-05-doko.html">8/5</a></span><span class="jp"><span class="rs-hl"><ruby>降<rt>お</rt></ruby>り</span>ます</span><span class="rm">orimasu</span><span class="mean">下車</span></div>
+      <div class="rs-bridge"><span class="snd">おり</span><span class="arr">→</span></div>
+      <div class="rs-card new"><span class="kick">本課 <span class="rs-new">新</span></span><span class="jp"><span class="rs-hl"><ruby>下<rt>お</rt></ruby>り</span><ruby>口<rt>ぐち</rt></ruby></span><span class="rm">origuchi</span><span class="mean">往下走的入口（唸法一樣，漢字換成 下）</span></div>
+    </div>
+    <div class="rs-pair">
+      <div class="rs-card old"><span class="kick">學過 <a class="rs-old" href="2026-08-14-basho-mono-tango.html">8/14</a></span><span class="jp"><span class="rs-hl"><ruby>場<rt>ば</rt></ruby></span><ruby>所<rt>しょ</rt></ruby></span><span class="rm">basho</span><span class="mean">地方</span></div>
+      <div class="rs-bridge"><span class="snd">ば</span><span class="arr">→</span></div>
+      <div class="rs-card new"><span class="kick">本課 <span class="rs-new">新</span></span><span class="jp"><ruby>広<rt>ひろ</rt></ruby><span class="rs-hl"><ruby>場<rt>ば</rt></ruby></span></span><span class="rm">hiroba</span><span class="mean">廣場</span></div>
+    </div>
+    <div class="rs-pair">
+      <div class="rs-card old"><span class="kick">學過 <a class="rs-old" href="2026-07-10-jikoshoukai.html">7/10</a></span><span class="jp"><ruby>自<rt>じ</rt>己<rt>こ</rt></ruby><span class="rs-hl"><ruby>紹<rt>しょう</rt>介<rt>かい</rt></ruby></span></span><span class="rm">jiko shoukai</span><span class="mean">自我介紹</span></div>
+      <div class="rs-bridge"><span class="snd">しょうかい</span><span class="arr">→</span></div>
+      <div class="rs-card new"><span class="kick">本課 <span class="rs-new">新</span></span><span class="jp"><span class="rs-hl"><ruby>紹<rt>しょう</rt>介<rt>かい</rt></ruby></span>します</span><span class="rm">shoukai shimasu</span><span class="mean">介紹（不只介紹自己）</span></div>
+    </div>
+  </div>
+
+  <p class="lead">
+    広場 和 登り口 是兩個字合成的。把每個假名拆成一格，棕橘色和金茶色分別是從哪個字來的，白色的格子是組合時丟掉的音。
+    広場 的兩個字都是訓讀，跟中文的唸法沒有關係，要從 ひろい 和 ばしょ 去記。
+  </p>
+
+  <div class="rs-eq">
+    <div class="rs-word">
+      <div class="rs-blocks"><span class="rs-b c1">ひ</span><span class="rs-b c1">ろ</span><span class="rs-b">い</span></div>
+      <div class="rs-cap"><span class="jp">広い</span><br>hiroi・寬敞</div>
+    </div>
+    <div class="rs-op">＋</div>
+    <div class="rs-word">
+      <div class="rs-blocks"><span class="rs-b c2">ば</span><span class="rs-b">しょ</span></div>
+      <div class="rs-cap"><span class="jp">場所</span><br>basho・地方</div>
+    </div>
+    <div class="rs-op">＝</div>
+    <div class="rs-word result">
+      <div class="rs-blocks"><span class="rs-b c1">ひ</span><span class="rs-b c1">ろ</span><span class="rs-b c2">ば</span></div>
+      <div class="rs-cap"><span class="jp">広場</span><span class="rs-new">新</span><br>hiroba・廣場</div>
+    </div>
+  </div>
+
+  <div class="rs-eq">
+    <div class="rs-word">
+      <div class="rs-blocks"><span class="rs-b c1">の</span><span class="rs-b c1">ぼ</span><span class="rs-b c1">り</span><span class="rs-b">ま</span><span class="rs-b">す</span></div>
+      <div class="rs-cap"><span class="jp">登ります</span><br>noborimasu</div>
+    </div>
+    <div class="rs-op">＋</div>
+    <div class="rs-word">
+      <div class="rs-blocks"><span class="rs-b c2">ぐ</span><span class="rs-b c2">ち</span></div>
+      <div class="rs-cap"><span class="jp">口</span><br>kuchi → guchi</div>
+    </div>
+    <div class="rs-op">＝</div>
+    <div class="rs-word result">
+      <div class="rs-blocks"><span class="rs-b c1">の</span><span class="rs-b c1">ぼ</span><span class="rs-b c1">り</span><span class="rs-b c2">ぐ</span><span class="rs-b c2">ち</span></div>
+      <div class="rs-cap"><span class="jp">登り口</span><span class="rs-new">新</span><br>noboriguchi</div>
+    </div>
+  </div>
+
+  <p class="lead">
+    登り口 的做法是把 ます形 去掉 ます，後面接 口。口 本來唸 くち，接在別的字後面會變成 ぐち。
+    用 〜ぐち 結尾的字目前已經累積了六個，學過的標日期，本課新學的標「新」。
+  </p>
+
+  <div class="rs-hub">
+    <div class="rs-spoke"><span class="jp"><ruby>北<rt>きた</rt>口<rt>ぐち</rt></ruby></span><span class="rm">kitaguchi <a class="rs-old" href="2026-07-28-hikkoshi-kaiwa.html">7/28</a></span></div>
+    <div class="rs-spoke"><span class="jp"><ruby>南<rt>みなみ</rt>口<rt>ぐち</rt></ruby></span><span class="rm">minamiguchi <a class="rs-old" href="2026-07-28-hikkoshi-kaiwa.html">7/28</a></span></div>
+    <div class="rs-spoke"><span class="jp"><ruby>入口<rt>いりぐち</rt></ruby></span><span class="rm">iriguchi <a class="rs-old" href="2026-08-16-x-ga-imasu.html">8/16</a></span></div>
+    <div class="rs-spoke is-new"><span class="jp"><ruby>登<rt>のぼ</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby></span><span class="rm">noboriguchi <span class="rs-new">新</span></span></div>
+    <div class="rs-center"><span class="jp">〜ぐち</span><small>口・出入的口</small></div>
+    <div class="rs-spoke is-new"><span class="jp"><ruby>下<rt>お</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby></span><span class="rm">origuchi <span class="rs-new">新</span></span></div>
+    <div class="rs-spoke empty"></div>
+    <div class="rs-spoke is-new"><span class="jp"><ruby>東<rt>ひがし</rt>出<rt>で</rt>口<rt>ぐち</rt></ruby></span><span class="rm">higashi-deguchi <span class="rs-new">新</span></span></div>
+  </div>
+
+  <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 紹介＝台語的 siau-kai</strong><br>
+    華語說「介紹」，日文寫成 <span class="compare">紹介</span>，兩個字順序顛倒。
+    台語剛好也說 <span class="compare">siau-kai（紹介）</span>，順序跟日文一樣，唸起來也像 しょうかい。
+    用台語去記，就不會把順序寫反。
+    （台語讀音見 <a href="https://en.wiktionary.org/wiki/%E7%B4%B9%E4%BB%8B" target="_blank" rel="noopener">Wiktionary 紹介</a>）
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="reibun">三、放進句子裡是這樣用的</div>
+
+  <p class="lead">
+    假設帶朋友去一座有廣場的小山，從廣場出發、爬上去、再從另一邊下來。
+    下面這幾句照走路的順序排，可以連起來當一段介紹。
+  </p>
+
+  <div class="section">
+    <div class="section-title">📖 例句</div>
+
+    <div class="word-item" data-text="この場所を紹介します。">
+      <div class="word-content">
+        <div class="word-ja">この <ruby>場<rt>ば</rt>所<rt>しょ</rt></ruby>を <ruby>紹<rt>しょう</rt>介<rt>かい</rt></ruby>します。</div>
+        <div class="word-romaji">kono basho o shoukai shimasu.</div>
+        <div class="word-meaning">我來介紹這個地方。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ここは広場です。週末は子どもがたくさんいます。">
+      <div class="word-content">
+        <div class="word-ja">ここは <ruby>広<rt>ひろ</rt>場<rt>ば</rt></ruby>です。<ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>は <ruby>子<rt>こ</rt></ruby>どもが たくさん います。</div>
+        <div class="word-romaji">koko wa hiroba desu. shuumatsu wa kodomo ga takusan imasu.</div>
+        <div class="word-meaning">這裡是廣場，週末有很多小孩。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="のぼりぐちは広場の右にあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>登<rt>のぼ</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby>は <ruby>広<rt>ひろ</rt>場<rt>ば</rt></ruby>の <ruby>右<rt>みぎ</rt></ruby>に あります。</div>
+        <div class="word-romaji">noboriguchi wa hiroba no migi ni arimasu.</div>
+        <div class="word-meaning">往上爬的入口在廣場的右邊。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ここから山に登ります。">
+      <div class="word-content">
+        <div class="word-ja">ここから <ruby>山<rt>やま</rt></ruby>に <ruby>登<rt>のぼ</rt></ruby>ります。</div>
+        <div class="word-romaji">koko kara yama ni noborimasu.</div>
+        <div class="word-meaning">從這裡開始爬山。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="山に登って、おりぐちからおります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>山<rt>やま</rt></ruby>に <ruby>登<rt>のぼ</rt></ruby>って、<ruby>下<rt>お</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby>から <ruby>下<rt>お</rt></ruby>ります。</div>
+        <div class="word-romaji">yama ni nobotte, origuchi kara orimasu.</div>
+        <div class="word-meaning">爬上山，再從下山的路口下來。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="chuui">四、有兩個地方容易講錯</div>
+
+  <p class="lead">
+    第一個是 登る 前面的助詞，第二個是 おりる 的漢字。
+  </p>
+
+  <div class="alert">
+    ⚠️ <strong>要爬到的地方用 に，沿著走的路用 を</strong><br>
+    爬到山上，目的地是山，說 <span class="compare">山に登ります</span>。
+    沿著樓梯、坡道一路往上，說 <span class="compare">階段を登ります</span>。
+    <a href="2026-08-21-bouldering-kaiwa.html">8/21 抱石的會話</a>裡 一緒に登ります 沒有說要爬什麼，所以兩個助詞都沒出現。
+  </div>
+
+  <div class="alert">
+    ⚠️ <strong>おりる 有兩個漢字：下りる 和 降りる</strong><br>
+    從山上、樓梯往下走寫 <span class="compare">下りる</span>，所以 おりぐち 寫成 下り口。
+    下電車、下公車寫 <span class="compare">降りる</span>，就是 <a href="2026-08-05-doko.html">8/5〈どこですか〉</a>學的 電車を降ります。
+    兩個唸法一樣，漢字照情境分。另外 下り口 有時也唸 くだりぐち，意思一樣，聽到別慌。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">五、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>單字</th><th>讀音</th><th>意思</th><th>從哪來</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-ja"><ruby>場<rt>ば</rt>所<rt>しょ</rt></ruby></td><td>basho</td><td>地方</td><td>場（ば）＋所（しょ）</td></tr>
+      <tr><td class="col-ja"><ruby>紹<rt>しょう</rt>介<rt>かい</rt></ruby>します</td><td>shoukai shimasu</td><td>介紹</td><td>台語 siau-kai，同順序</td></tr>
+      <tr><td class="col-ja"><ruby>広<rt>ひろ</rt>場<rt>ば</rt></ruby></td><td>hiroba</td><td>廣場</td><td>広い ＋ 場所</td></tr>
+      <tr><td class="col-ja"><ruby>登<rt>のぼ</rt></ruby>ります</td><td>noborimasu</td><td>往上爬</td><td>て形 登って</td></tr>
+      <tr><td class="col-ja"><ruby>登<rt>のぼ</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby></td><td>noboriguchi</td><td>往上爬的入口</td><td>登り（ます）＋口</td></tr>
+      <tr><td class="col-ja"><ruby>下<rt>お</rt></ruby>ります</td><td>orimasu</td><td>往下走</td><td>下電車寫 降ります</td></tr>
+      <tr><td class="col-ja"><ruby>下<rt>お</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby></td><td>origuchi</td><td>往下走的入口</td><td>下り（ます）＋口</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">六、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title">✏️ 翻成日文，或填入空格</div>
+    <ol class="quiz-ol">
+      <li>我來介紹我的家。（家＝うち）
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>うちを紹介します。<br>uchi o shoukai shimasu.</p>
+        </details>
+      </li>
+      <li>廣場在哪裡？
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>広場はどこですか。<br>hiroba wa doko desu ka.</p>
+        </details>
+      </li>
+      <li>入ります 去掉 ます 加上 口，會變成哪個字？是什麼意思？
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>入り口（いりぐち）— 入口。跟 登り口・下り口 同一個做法。<br>iriguchi.</p>
+        </details>
+      </li>
+      <li>山（　）登ります。／階段（　）登ります。空格各填什麼？
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>山に登ります（爬到山上）／階段を登ります（沿著樓梯往上）。<br>yama ni noborimasu. / kaidan o noborimasu.</p>
+        </details>
+      </li>
+      <li>爬上去之後，從下山的路口下來。
+        <details class="quiz-ans">
+          <summary>🔍 看解答</summary>
+          <p>登って、下り口から下ります。<br>nobotte, origuchi kara orimasu.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-03-bunka-no-hi-bouldering.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">文化の日はボルダリングのイベント <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/3 抱石館活動的會話</span>
+  </a>
+  <a href="2026-11-03-aku-suku.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">空いています — あいて 和 すいて <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一個 空く 兩種讀音</span>
+  </a>
+  <a href="2026-08-21-bouldering-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">ボルダリングの話 — 室內抱石會話紀錄 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/21 第一次學 登ります：一緒に登ります、登ったあとは疲れます</span>
+  </a>
+  <a href="2026-08-05-doko.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">どこですか — 問路與交通工具 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/5 電車を降ります：下交通工具的 おります</span>
+  </a>
+  <a href="2026-07-10-jikoshoukai.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">初めまして — 自己紹介と質問 <span class="next-arrow">→</span></span>
+    <span class="next-sub">7/10 自己紹介：紹介 第一次出現</span>
+  </a>
+  <a href="2026-06-01-directions.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">方向のことば — 東西南北 <span class="next-arrow">→</span></span>
+    <span class="next-sub">6/1 東＝ひがし：ひ 就是太陽，東出口 的 ひがし 從這裡來</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -9,6 +9,8 @@
 //   2. 系統需有 ffmpeg（brew install ffmpeg）
 //
 // 短字（2-4 字無空格）句尾補「。」並降 intonation，避免 TTS 抑揚過頭。
+// 含漢字的短字會另外比對「加。前後」VOICEVOX 判讀的讀音，不一樣就在最後列警告
+// （例：登って。→ とおって、買って。→ かいって）；看到警告就把 data-text 改成假名再重生。
 // 單字／句子維持一般合成。全部用兩段式峰值正規化拉到 -1.5 dBFS（不經限幅器，不破音）。
 // （孤立單音不再餵進來——所有頁面已移除單音 data-text，故無單音特殊處理。）
 //
@@ -110,6 +112,23 @@ function hashText(text) {
 }
 
 // ── 5. 單句生成 ──────────────────────────
+async function audioQuery(text) {
+  const res = await fetch(
+    `${ENGINE}/audio_query?text=${encodeURIComponent(text)}&speaker=${SPEAKER}`,
+    { method: 'POST' }
+  );
+  if (!res.ok) throw new Error(`audio_query failed: ${res.status}`);
+  return res.json();
+}
+
+// audio_query 的 moras 串成片假名，給讀音比對用
+function queryKana(query) {
+  return query.accent_phrases.flatMap(p => p.moras.map(m => m.text)).join('');
+}
+
+const HAS_KANJI = /[\u4e00-\u9fff]/;
+
+// 回傳 { wav, warning }；warning 只在「加。」改變了讀音時才有值
 async function synthesize(text) {
   // 短字（≤4 字無空格）：句尾加「。」騙模型當完整句、降 intonation 避免抑揚過頭
   const isShort = text.length <= 4 && !text.includes(' ');
@@ -120,12 +139,15 @@ async function synthesize(text) {
   const speedScale = SPEED;
 
   // step a: audio_query
-  const queryRes = await fetch(
-    `${ENGINE}/audio_query?text=${encodeURIComponent(synthText)}&speaker=${SPEAKER}`,
-    { method: 'POST' }
-  );
-  if (!queryRes.ok) throw new Error(`audio_query failed: ${queryRes.status}`);
-  const query = await queryRes.json();
+  const query = await audioQuery(synthText);
+
+  // 加了「。」可能讓 VOICEVOX 換一種漢字讀法，跟不加的比一次
+  let warning = null;
+  if (isShort && HAS_KANJI.test(text)) {
+    const plain = queryKana(await audioQuery(text));
+    const used = queryKana(query);
+    if (plain !== used) warning = `不加「。」唸 ${plain}，加了唸 ${used}（音檔用的是後者）`;
+  }
   query.speedScale = speedScale;
   // 給短字（1-2 個 kana）多一點頭尾空白，避免神經模型 render 太擠造成破音
   query.prePhonemeLength = 0.3;
@@ -141,7 +163,7 @@ async function synthesize(text) {
     body: JSON.stringify(query),
   });
   if (!synthRes.ok) throw new Error(`synthesis failed: ${synthRes.status}`);
-  return Buffer.from(await synthRes.arrayBuffer());
+  return { wav: Buffer.from(await synthRes.arrayBuffer()), warning };
 }
 
 // ── 6. WAV → MP3：兩段式峰值正規化 ────────
@@ -203,6 +225,7 @@ console.log(`📝 ${texts.size} 句獨立文字（去重）`);
 await mkdir(AUDIO_DIR, { recursive: true });
 
 let generated = 0, skipped = 0, failed = 0;
+const readingWarnings = [];
 const total = texts.size;
 let i = 0;
 
@@ -221,10 +244,11 @@ for (const [text, files] of texts) {
 
   process.stdout.write(`[${i}/${total}] ${text.slice(0, 30).padEnd(30)} → ${filename}  `);
   try {
-    const wav = await synthesize(text);
+    const { wav, warning } = await synthesize(text);
     await wavToMp3(wav, filepath);
     generated++;
-    console.log('✓');
+    console.log(warning ? '✓ ⚠️ 讀音' : '✓');
+    if (warning) readingWarnings.push({ text, files, warning, filename });
   } catch (err) {
     failed++;
     console.log('✗ ' + err.message);
@@ -233,3 +257,12 @@ for (const [text, files] of texts) {
 
 console.log(`\n完成。新生成: ${generated}, 已存在: ${skipped}, 失敗: ${failed}`);
 console.log(`輸出資料夾: ${AUDIO_DIR}/`);
+
+if (readingWarnings.length) {
+  console.log(`\n⚠️  ${readingWarnings.length} 個短字的讀音可能被 VOICEVOX 唸錯，請聽一下：`);
+  for (const { text, files, warning, filename } of readingWarnings) {
+    console.log(`   ${text}：${warning}`);
+    console.log(`      → ${[...files].join(', ')}（${filename}）`);
+  }
+  console.log('   唸錯的話：把該頁的 data-text 改成假名，刪掉上面的 mp3，再跑一次。');
+}

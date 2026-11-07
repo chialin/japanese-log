@@ -37,7 +37,7 @@
     const same = Object.entries(data)
       .filter(([c, x]) => c !== ch && x.taigi && x.taigi.coda === e.taigi.coda)
       .slice(0, 4).map(([c]) => c).join('・');
-    return `<div class="mnemonic">🧠 <strong>台語線索</strong><br>` +
+    return `<div class="mnemonic taigi"><span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索</strong><br>` +
       `音讀收 <strong>${esc(e.taigi.kana)}</strong> → 中古${esc(e.taigi.label)} ` +
       `<strong>${esc(e.taigi.coda)}</strong> → 台語也收 <strong>${esc(e.taigi.coda)}</strong>，唸唸看。` +
       (same ? `<br>同款收 ${esc(e.taigi.coda)} 的字：${esc(same)}` : '') + `</div>`;

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03",
+ "generated": "2026-11-07",
  "words": [
   {
    "text": "あく",
@@ -320,6 +320,233 @@
    ],
    "tags": [
     "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "紹介",
+   "ja": "<ruby>紹<rt>しょう</rt>介<rt>かい</rt></ruby>",
+   "kana": "しょうかい",
+   "romaji": "shoukai",
+   "meaning": "介紹 — 動詞用 紹介します（しょうかいします）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>しょうかい<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "広場",
+   "ja": "<ruby>広<rt>ひろ</rt>場<rt>ば</rt></ruby>",
+   "kana": "ひろば",
+   "romaji": "hiroba",
+   "meaning": "廣場、空曠的地方",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\">ひ<span class=\"ar\">↘</span>ろば</span></span>\n          <span class=\"acc-note\">頭高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "登る",
+   "ja": "<ruby>登<rt>のぼ</rt></ruby>る",
+   "kana": "のぼる",
+   "romaji": "noboru",
+   "meaning": "往上爬、登上 — ます形 登ります，て形 登って（のぼって）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>のぼる<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "のぼって",
+   "ja": "<ruby>登<rt>のぼ</rt></ruby>って",
+   "kana": "のぼって",
+   "romaji": "nobotte",
+   "meaning": "爬上去之後…（て形，把兩個動作接起來）",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">→</span>のぼって<span class=\"ar\">→</span></span></span>\n          <span class=\"acc-note\">平板型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "のぼりぐち",
+   "ja": "<ruby>登<rt>のぼ</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby>",
+   "kana": "のぼりぐち",
+   "romaji": "noboriguchi",
+   "meaning": "往上爬的起點，登山口、樓梯或坡道往上的入口",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "場所",
+    "自然"
+   ]
+  },
+  {
+   "text": "おりぐち",
+   "ja": "<ruby>下<rt>お</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby>",
+   "kana": "おりぐち",
+   "romaji": "origuchi",
+   "meaning": "往下走的起點，下山的路口、樓梯往下的入口",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "場所",
+    "自然"
+   ]
+  },
+  {
+   "text": "下りる",
+   "ja": "<ruby>下<rt>お</rt></ruby>りる",
+   "kana": "おりる",
+   "romaji": "oriru",
+   "meaning": "往下走（山、樓梯）— ます形 下ります（おります），下り口 就是從這個字來的",
+   "accent": "<span class=\"acc\"><span class=\"acc-k\"><span class=\"ar\">↗</span>お<span class=\"ar\">↘</span>りる</span></span>\n          <span class=\"acc-note\">中高型</span>",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "この場所を紹介します。",
+   "ja": "この <ruby>場<rt>ば</rt>所<rt>しょ</rt></ruby>を <ruby>紹<rt>しょう</rt>介<rt>かい</rt></ruby>します。",
+   "kana": "この ばしょを しょうかいします。",
+   "romaji": "kono basho o shoukai shimasu.",
+   "meaning": "我來介紹這個地方。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "ここは広場です。週末は子どもがたくさんいます。",
+   "ja": "ここは <ruby>広<rt>ひろ</rt>場<rt>ば</rt></ruby>です。<ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>は <ruby>子<rt>こ</rt></ruby>どもが たくさん います。",
+   "kana": "ここは ひろばです。しゅうまつは こどもが たくさん います。",
+   "romaji": "koko wa hiroba desu. shuumatsu wa kodomo ga takusan imasu.",
+   "meaning": "這裡是廣場，週末有很多小孩。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "場所",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "のぼりぐちは広場の右にあります。",
+   "ja": "<ruby>登<rt>のぼ</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby>は <ruby>広<rt>ひろ</rt>場<rt>ば</rt></ruby>の <ruby>右<rt>みぎ</rt></ruby>に あります。",
+   "kana": "のぼりぐちは ひろばの みぎに あります。",
+   "romaji": "noboriguchi wa hiroba no migi ni arimasu.",
+   "meaning": "往上爬的入口在廣場的右邊。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "ここから山に登ります。",
+   "ja": "ここから <ruby>山<rt>やま</rt></ruby>に <ruby>登<rt>のぼ</rt></ruby>ります。",
+   "kana": "ここから やまに のぼります。",
+   "romaji": "koko kara yama ni noborimasu.",
+   "meaning": "從這裡開始爬山。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "自然",
+    "動詞"
+   ]
+  },
+  {
+   "text": "山に登って、おりぐちからおります。",
+   "ja": "<ruby>山<rt>やま</rt></ruby>に <ruby>登<rt>のぼ</rt></ruby>って、<ruby>下<rt>お</rt></ruby>り<ruby>口<rt>ぐち</rt></ruby>から <ruby>下<rt>お</rt></ruby>ります。",
+   "kana": "やまに のぼって、おりぐちから おります。",
+   "romaji": "yama ni nobotte, origuchi kara orimasu.",
+   "meaning": "爬上山，再從下山的路口下來。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
+    }
+   ],
+   "tags": [
+    "自然",
+    "動詞"
    ]
   },
   {
@@ -2694,7 +2921,7 @@
    ]
   },
   {
-   "text": "買って",
+   "text": "かって",
    "ja": "<ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>って",
    "kana": "かう → かって",
    "romaji": "kau → katte",
@@ -9656,6 +9883,11 @@
      "date": "2026-08-21",
      "href": "lessons/2026-08-21-bouldering-kaiwa.html",
      "title": "ボルダリングの話"
+    },
+    {
+     "date": "2026-11-03",
+     "href": "lessons/2026-11-03-hiroba-noboriguchi.html",
+     "title": "場所を紹介します"
     }
    ],
    "tags": [

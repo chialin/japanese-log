@@ -219,21 +219,37 @@ rt {
   font-size: 14px; color: var(--ink-soft); line-height: 1.85;
 }
 
-/* ── 自己想出來的記憶小撇步（紅框，跟一般 tip/note 區隔）──
-   用法：<div class="mnemonic">🧠 <strong>標題</strong><br>內容</div>
-   紅色是「這是我自己的聯想，不是課本教的」的標記，全站統一。 */
+/* ── 自己想出來的記憶小撇步（貼紙樣式，跟一般 tip/note 區隔）──
+   分兩種，顏色不同（2026-11-07 起）：
+   <div class="mnemonic"><span class="mi mi-memo"></span><strong>我的記憶小撇步 — 標題</strong><br>內容</div>
+     → 藍色：台語以外的記法（字形、字義、日文詞群、生活情境、語源）
+   <div class="mnemonic taigi"><span class="mi mi-taigi"></span><strong>台語線索 — 標題</strong><br>內容</div>
+     → 紅色：用台語讀音連到日文音讀（整串唸起來要像才寫） */
 .mnemonic {
-  --memo: #d92818;
+  --memo: #2b6cb0; --memo-rgb: 43,108,176;
   /* 貼紙感：圓角 ＋ 白底外圈 ＋ 淺投影，像貼上去的一張小紙 */
   background: rgba(255,255,255,.75);
   border: 2px solid var(--memo); border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(217,40,24,.14);
+  box-shadow: 0 2px 10px rgba(var(--memo-rgb),.14);
   padding: 18px 22px; margin: 4px 0 20px;
   font-size: 14px; color: var(--ink-soft); line-height: 1.9;
 }
+.mnemonic.taigi { --memo: #d92818; --memo-rgb: 217,40,24; }
 .mnemonic strong { color: var(--memo); }
-.mnemonic .compare { background: rgba(217,40,24,.13); color: var(--memo); }
+.mnemonic .compare { background: rgba(var(--memo-rgb),.13); color: var(--memo); }
 .mnemonic a { color: var(--memo); }
+
+/* 貼紙標題前的 icon（2026-11-07 起，自製線條 SVG，取代 emoji）
+   <span class="mi mi-taigi" aria-hidden="true"></span> 台語線索：有聲波的對話框
+   <span class="mi mi-memo"  aria-hidden="true"></span> 記憶小撇步：一大一小的閃光
+   用 mask 上色，顏色跟著 --memo 走（紅／藍），不在貼紙裡時退回 --accent */
+.mi {
+  display: inline-block; width: 1.5em; height: 1.5em; vertical-align: -.42em; margin-right: 6px;
+  background-color: var(--memo, var(--accent));
+  -webkit-mask: var(--mi-img) center / contain no-repeat; mask: var(--mi-img) center / contain no-repeat;
+}
+.mi-taigi { --mi-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4.5 5.5h15a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2H11l-4.5 3.5V17H4.5a2 2 0 0 1-2-2V7.5a2 2 0 0 1 2-2z' fill='none' stroke='black' stroke-width='1.7' stroke-linejoin='round'/%3E%3Cpath d='M7.5 11.2q1.2-1.6 2.4 0t2.4 0 2.4 0 2.4 0' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.mi-memo { --mi-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 3.5c.5 4 2 5.5 6 6-4 .5-5.5 2-6 6-.5-4-2-5.5-6-6 4-.5 5.5-2 6-6z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M18 14c.25 2 1 2.75 3 3-2 .25-2.75 1-3 3-.25-2-1-2.75-3-3 2-.25 2.75-1 3-3z'/%3E%3Ccircle cx='19' cy='5' r='1.2'/%3E%3C/svg%3E"); }
 
 /* ── 漢字音讀對照（kanji.html ＋ 課程頁徽章）── */
 .kanji-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
@@ -551,6 +567,88 @@ rt {
 }
 @media (max-width: 520px) {
   .acc { font-size: 19px; padding: 8px 18px; }
+}
+
+/* ── 聯想詞彙 .rs-*（2026-11-04 新增） ──
+   三種樣板依單字的情況挑用，可以同一頁並用：
+   .rs-pair 舊詞接新詞：新字跟以前學過的字共用音或漢字（預設）
+   .rs-eq   音節積木：新字是兩個字合成的，拆成一格一格的音
+   .rs-hub  放射圖：同一個音／字尾／漢字已經串起四個字以上
+   範例見 lessons/2026-11-03-hiroba-noboriguchi.html */
+.rs-hl {
+  color: var(--accent); font-weight: 600;
+  text-decoration: underline; text-decoration-color: var(--accent-soft);
+  text-decoration-thickness: .16em; text-underline-offset: .22em;
+}
+.rs-new {
+  display: inline-block; font-size: 11px; font-family: 'Noto Serif TC', serif; color: #fff;
+  background: var(--accent); border-radius: 9px; padding: 0 7px; margin-left: 6px; vertical-align: middle;
+}
+.rs-old {
+  display: inline-block; font-size: 11px; color: #a9762a; border: 1px solid #a9762a;
+  border-radius: 9px; padding: 0 7px; margin-left: 6px; vertical-align: middle; text-decoration: none;
+}
+a.rs-old:hover { background: #f6ead2; }
+
+/* D. 舊詞接新詞 */
+.rs-pairs { margin: 16px 0; }
+.rs-pair { display: grid; grid-template-columns: 1fr 76px 1fr; align-items: stretch; margin-bottom: 12px; }
+.rs-card { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; }
+.rs-card.old { border-left: 4px solid #a9762a; }
+.rs-card.new { border-left: 4px solid var(--accent); }
+.rs-card .kick { font-size: 11px; letter-spacing: .05em; color: var(--ink-mute); }
+.rs-card .jp { display: block; font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 20px; color: var(--ink); margin: 2px 0; }
+.rs-card .rm { font-size: 12px; color: var(--ink-mute); }
+.rs-card .mean { display: block; font-size: 13px; color: var(--ink-soft); }
+.rs-bridge { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 8px; }
+.rs-bridge .snd {
+  font-family: 'Klee One', serif; font-size: 14px; color: var(--accent); font-weight: 600;
+  background: var(--accent-pale); border-radius: 10px; padding: 1px 8px; white-space: nowrap;
+}
+.rs-bridge .arr { font-size: 18px; color: var(--accent-soft); line-height: 1; }
+
+/* B. 音節積木 */
+.rs-eq {
+  display: flex; align-items: flex-start; justify-content: center; flex-wrap: wrap; gap: 8px 10px;
+  background: rgba(255,255,255,.6); border: 1px solid var(--line); border-radius: 6px; padding: 20px 12px; margin: 16px 0;
+}
+.rs-word { text-align: center; }
+.rs-blocks { display: flex; gap: 3px; justify-content: center; }
+.rs-b {
+  font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 20px; min-width: 34px; padding: 6px;
+  border-radius: 5px; border: 1px solid var(--line); background: #fff; color: var(--ink-mute);
+}
+.rs-b.c1 { background: var(--accent-pale); border-color: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.rs-b.c2 { background: #f6ead2; border-color: #e0c793; color: #a9762a; font-weight: 600; }
+.rs-cap { font-size: 12px; color: var(--ink-mute); margin-top: 6px; line-height: 1.5; }
+.rs-cap .jp { font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 15px; color: var(--ink); }
+.rs-op { font-size: 22px; color: var(--ink-mute); padding-top: 8px; font-family: 'Cormorant Garamond', serif; }
+.rs-word.result .rs-b { font-size: 24px; }
+
+/* C. 放射圖：3×3 格，中間是 .rs-center，空位放 .rs-spoke.empty */
+.rs-hub {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: center;
+  background: rgba(255,255,255,.6); border: 1px solid var(--line); border-radius: 6px; padding: 18px 12px; margin: 16px 0;
+}
+.rs-center {
+  grid-column: 2; grid-row: 2; aspect-ratio: 1; width: 100%; max-width: 130px; margin: 0 auto;
+  border-radius: 50%; border: 2px solid var(--accent); background: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.rs-center .jp { font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 30px; color: var(--accent); line-height: 1.2; }
+.rs-center small { font-size: 12px; color: var(--ink-mute); }
+.rs-spoke { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 8px 6px; text-align: center; }
+.rs-spoke .jp { font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 18px; color: var(--ink); }
+.rs-spoke .rm { display: block; font-size: 11px; color: var(--ink-mute); }
+.rs-spoke.is-new { border-color: var(--accent); }
+.rs-spoke.empty { visibility: hidden; }
+
+@media (max-width: 520px) {
+  .rs-pair { grid-template-columns: 1fr; }
+  .rs-bridge { flex-direction: row; gap: 6px; padding: 6px 0; }
+  .rs-bridge .arr { transform: rotate(90deg); }
+  .rs-hub { gap: 6px; }
+  .rs-spoke .jp { font-size: 15px; }
 }
 
 /* ── Responsive ── */

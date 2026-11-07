@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一番〜＋名詞 は X です — 一番 放在名詞前面</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span>〜＋名詞 は X です</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 07</div>
+  <p class="page-subtitle">「最〜的〇〇是 X」：一番 放在名詞前面</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    「最快的交通工具」「最喜歡的季節」這種說法，是把 一番〜 放在名詞前面。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 一番〜＋名詞 は X です 說「最〜的〇〇是 X」</li>
+      <li>い形容詞直接接名詞，な形容詞要加 な（一番好きな季節）</li>
+      <li>知道這跟 X が一番〜です 是同一件事換個講法，話題接 は</li>
+      <li>用 一番好きな〜は何ですか 問對方最喜歡什麼，適合自我介紹</li>
+      <li>認得書面語的 最も</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以「一番速い乗り物」為主軸，把句型排出來</div>
+
+  <p class="lead">
+    一番＋形容詞 整段放在名詞前面，當成修飾語，再用 は 〜です 說出答案。
+  </p>
+
+  <div class="formula">
+    <h4>一番 放在名詞前面</h4>
+    <div class="fx">
+      <b><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></b> 形容詞 ＋ 名詞 は　X です <span class="arw">→</span> 最〜的〇〇是 X
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="word-item" data-text="一番速い乗り物は新幹線です">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span> <ruby>速<rt>はや</rt></ruby>い <ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>は　<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>です</div>
+        <div class="word-romaji">ichiban hayai norimono wa shinkansen desu</div>
+        <div class="word-meaning">最快的交通工具是新幹線</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一番好きな季節は秋です">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span> <ruby>好<rt>す</rt></ruby>きな <ruby>季<rt>き</rt>節<rt>せつ</rt></ruby>は　<ruby>秋<rt>あき</rt></ruby>です</div>
+        <div class="word-romaji">ichiban suki na kisetsu wa aki desu</div>
+        <div class="word-meaning">我最喜歡的季節是秋天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一番好きな食べ物は何ですか">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span> <ruby>好<rt>す</rt></ruby>きな <ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>は　<ruby>何<rt>なん</rt></ruby>ですか</div>
+        <div class="word-romaji">ichiban suki na tabemono wa nan desu ka</div>
+        <div class="word-meaning">你最喜歡的食物是什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本で一番高い山は富士山です">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>で　<span class="j-mark"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span> <ruby>高<rt>たか</rt></ruby>い <ruby>山<rt>やま</rt></ruby>は　<ruby>富<rt>ふ</rt>士<rt>じ</rt>山<rt>さん</rt></ruby>です</div>
+        <div class="word-romaji">nihon de ichiban takai yama wa fujisan desu</div>
+        <div class="word-meaning">日本最高的山是富士山 — 範圍 で 放在最前面</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、形容詞接名詞的規則跟平常一樣</div>
+
+  <p class="lead">
+    い形容詞直接接名詞（<a href="2026-09-09-i-keiyoushi-meishi.html" style="color:var(--accent);">9/9 的課</a>），な形容詞要加 な（<a href="2026-09-12-na-keiyoushi-meishi.html" style="color:var(--accent);">9/12 的課</a>）。前面多了 一番，規則不變。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>い形容詞</h4>
+      <div class="vs-sub">直接接</div>
+      <ul>
+        <li>一番<b>速い</b>乗り物</li>
+        <li>一番<b>高い</b>山</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>な形容詞</h4>
+      <div class="vs-sub">加 な</div>
+      <ul>
+        <li>一番<b>好きな</b>季節</li>
+        <li>一番<b>好きな</b>食べ物</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    <a href="2026-08-29-naritai-biyouin.html" style="color:var(--accent);">8/29 打電話預約美容院</a>時說的 一番早い時間でお願いします（麻煩給我最早的時段），也是 一番早い 放在 時間 前面。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、這跟「X が一番〜です」是同一件事換個講法</div>
+
+  <p class="lead">
+    兩種說法意思一樣，差在先講什麼。① 的句子先講答案，這篇的句子先講「最〜的是什麼」，答案留到最後。答案留到最後時，前面那一段是話題，所以接 は。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>X が一番〜です</h4>
+      <div class="vs-sub">先講答案</div>
+      <ul>
+        <li>新幹線が一番速いです</li>
+        <li>第一名接 が</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>一番〜名詞 は X です</h4>
+      <div class="vs-sub">先講話題，答案放最後</div>
+      <ul>
+        <li>一番速い乗り物は新幹線です</li>
+        <li>話題接 は</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>書面語會用 最も</strong><br>
+    新聞、說明文裡常看到 <ruby>最<rt>もっと</rt></ruby>も（mottomo），意思跟 一番 一樣，是比較正式的寫法：日本で最も高い山。日常說話用 一番 就好，認得 最も 這個字就夠了。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① な形容詞不要漏掉 な</strong><br>
+    <s>一番好き季節は秋です</s> 少了 な，要說 一番好き<b>な</b>季節。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② 這個句型的話題接 は</strong><br>
+    <s>一番速い乗り物が新幹線です</s> 聽起來怪。一番速い乗り物 是話題，接 は：一番速い乗り物<b>は</b>新幹線です。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>最〜的〇〇是 X（い形容詞）</td><td class="col-ja"><b>一番</b> 〜い 名詞 は X です</td><td class="col-ja">一番速い乗り物は新幹線です</td></tr>
+      <tr><td>最〜的〇〇是 X（な形容詞）</td><td class="col-ja"><b>一番</b> 〜<b>な</b> 名詞 は X です</td><td class="col-ja">一番好きな季節は秋です</td></tr>
+      <tr><td>問最〜的〇〇</td><td class="col-ja"><b>一番</b> 〜 名詞 は 何ですか</td><td class="col-ja">一番好きな食べ物は何ですか</td></tr>
+      <tr><td>加上範圍</td><td class="col-ja">〜で <b>一番</b> 〜 名詞 は X です</td><td class="col-ja">日本で一番高い山は富士山です</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">六、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我最喜歡的食物是咖哩。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>一番好きな食べ物はカレーです。<br>ichiban suki na tabemono wa karee desu.</p>
+        </details>
+      </li>
+      <li>日本最高的山是哪一座？（提示：何ですか）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>日本で一番高い山は何ですか。<br>nihon de ichiban takai yama wa nan desu ka.</p>
+        </details>
+      </li>
+      <li>你最喜歡的季節是什麼？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>一番好きな季節は何ですか。<br>ichiban suki na kisetsu wa nan desu ka.</p>
+        </details>
+      </li>
+      <li>把「新幹線が一番速いです」改成「最快的交通工具是新幹線」。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>一番速い乗り物は新幹線です。<br>ichiban hayai norimono wa shinkansen desu.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-07-ichiban-hayai.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">① X が一番〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">最基本的「X が一番〜です」</span>
+  </a>
+
+  <a href="2026-11-07-ichiban-no-naka-de.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">② 〜の中で〜が一番〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">加上範圍：在三個以上的東西裡比</span>
+  </a>
+
+  <a href="2026-11-07-ichiban-dore.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">③ 疑問詞が一番〜ですか <span class="next-arrow">→</span></span>
+    <span class="next-sub">問「哪一個最〜」：何・どれ・誰・どこ・いつ</span>
+  </a>
+
+  <a href="2026-08-29-naritai-biyouin.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜くなります・〜くします・〜になりたいです <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/29：一番早い時間でお願いします</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

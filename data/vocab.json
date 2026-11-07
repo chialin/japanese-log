@@ -2,6 +2,692 @@
  "generated": "2026-11-07",
  "words": [
   {
+   "text": "乗り物の中で何が一番速いですか",
+   "ja": "<ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<ruby>何<rt>なに</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いですか",
+   "kana": "のりもののなかで なにが いちばん はやいですか",
+   "romaji": "norimono no naka de nani ga ichiban hayai desu ka",
+   "meaning": "交通工具裡什麼最快？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "新幹線が一番速いです",
+   "ja": "<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いです",
+   "kana": "しんかんせんが いちばん はやいです",
+   "romaji": "shinkansen ga ichiban hayai desu",
+   "meaning": "新幹線最快",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    },
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-hayai.html",
+     "title": "X が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "果物の中で何が一番好きですか",
+   "ja": "<ruby>果<rt>くだ</rt>物<rt>もの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<ruby>何<rt>なに</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きですか",
+   "kana": "くだもののなかで なにが いちばん すきですか",
+   "romaji": "kudamono no naka de nani ga ichiban suki desu ka",
+   "meaning": "水果裡你最喜歡什麼？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "この三つの中でどれが一番安いですか",
+   "ja": "この <ruby>三<rt>みっ</rt></ruby>つの<ruby>中<rt>なか</rt></ruby>で　どれが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>安<rt>やす</rt></ruby>いですか",
+   "kana": "この みっつのなかで どれが いちばん やすいですか",
+   "romaji": "kono mittsu no naka de dore ga ichiban yasui desu ka",
+   "meaning": "這三個裡面哪一個最便宜？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "購物"
+   ]
+  },
+  {
+   "text": "家族の中で誰が一番料理が上手ですか",
+   "ja": "<ruby>家<rt>か</rt>族<rt>ぞく</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<ruby>誰<rt>だれ</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>が <ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby>ですか",
+   "kana": "かぞくのなかで だれが いちばん りょうりが じょうずですか",
+   "romaji": "kazoku no naka de dare ga ichiban ryouri ga jouzu desu ka",
+   "meaning": "家人裡誰最會做菜？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "日本でどこが一番好きですか",
+   "ja": "<ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>で　どこが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きですか",
+   "kana": "にほんで どこが いちばん すきですか",
+   "romaji": "nihon de doko ga ichiban suki desu ka",
+   "meaning": "在日本你最喜歡哪裡？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "一年でいつが一番寒いですか",
+   "ja": "<ruby>一<rt>いち</rt>年<rt>ねん</rt></ruby>で　いつが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>寒<rt>さむ</rt></ruby>いですか",
+   "kana": "いちねんで いつが いちばん さむいですか",
+   "romaji": "ichinen de itsu ga ichiban samui desu ka",
+   "meaning": "一年裡什麼時候最冷？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "新幹線です",
+   "ja": "<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>です",
+   "kana": "しんかんせんです",
+   "romaji": "shinkansen desu",
+   "meaning": "新幹線 — 最短的回答",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    }
+   ],
+   "tags": [
+    "交通"
+   ]
+  },
+  {
+   "text": "母が一番上手です",
+   "ja": "<ruby>母<rt>はは</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby>です",
+   "kana": "ははが いちばん じょうずです",
+   "romaji": "haha ga ichiban jouzu desu",
+   "meaning": "媽媽最會 — 料理が 可以省略",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-dore.html",
+     "title": "疑問詞が一番〜ですか"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "これが一番安いです",
+   "ja": "これが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>安<rt>やす</rt></ruby>いです",
+   "kana": "これが いちばん やすいです",
+   "romaji": "kore ga ichiban yasui desu",
+   "meaning": "這個最便宜 — 在店裡指著東西說",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-hayai.html",
+     "title": "X が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "購物"
+   ]
+  },
+  {
+   "text": "このラーメンが一番美味しいです",
+   "ja": "このラーメンが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>美味<rt>おい</rt></ruby>しいです",
+   "kana": "このラーメンが いちばん おいしいです",
+   "romaji": "kono raamen ga ichiban oishii desu",
+   "meaning": "這碗拉麵最好吃",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-hayai.html",
+     "title": "X が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "秋が一番好きです",
+   "ja": "<ruby>秋<rt>あき</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きです",
+   "kana": "あきが いちばん すきです",
+   "romaji": "aki ga ichiban suki desu",
+   "meaning": "我最喜歡秋天 — な形容詞 好き 也一樣，直接放在 一番 後面",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-hayai.html",
+     "title": "X が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "七時の電車が一番早いです",
+   "ja": "<ruby>七<rt>しち</rt>時<rt>じ</rt></ruby>の<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>早<rt>はや</rt></ruby>いです",
+   "kana": "しちじのでんしゃが いちばん はやいです",
+   "romaji": "shichiji no densha ga ichiban hayai desu",
+   "meaning": "七點那班電車最早 — 時間",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-hayai.html",
+     "title": "X が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "一番速い乗り物は新幹線です",
+   "ja": "<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby> <ruby>速<rt>はや</rt></ruby>い <ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>は　<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>です",
+   "kana": "いちばん はやい のりものは しんかんせんです",
+   "romaji": "ichiban hayai norimono wa shinkansen desu",
+   "meaning": "最快的交通工具是新幹線",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-meishi.html",
+     "title": "一番〜＋名詞 は X です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "一番好きな季節は秋です",
+   "ja": "<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby> <ruby>好<rt>す</rt></ruby>きな <ruby>季<rt>き</rt>節<rt>せつ</rt></ruby>は　<ruby>秋<rt>あき</rt></ruby>です",
+   "kana": "いちばん すきな きせつは あきです",
+   "romaji": "ichiban suki na kisetsu wa aki desu",
+   "meaning": "我最喜歡的季節是秋天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-meishi.html",
+     "title": "一番〜＋名詞 は X です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "一番好きな食べ物は何ですか",
+   "ja": "<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby> <ruby>好<rt>す</rt></ruby>きな <ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>は　<ruby>何<rt>なん</rt></ruby>ですか",
+   "kana": "いちばん すきな たべものは なんですか",
+   "romaji": "ichiban suki na tabemono wa nan desu ka",
+   "meaning": "你最喜歡的食物是什麼？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-meishi.html",
+     "title": "一番〜＋名詞 は X です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "日本で一番高い山は富士山です",
+   "ja": "<ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>で　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby> <ruby>高<rt>たか</rt></ruby>い <ruby>山<rt>やま</rt></ruby>は　<ruby>富<rt>ふ</rt>士<rt>じ</rt>山<rt>さん</rt></ruby>です",
+   "kana": "にほんで いちばん たかい やまは ふじさんです",
+   "romaji": "nihon de ichiban takai yama wa fujisan desu",
+   "meaning": "日本最高的山是富士山 — 範圍 で 放在最前面",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-meishi.html",
+     "title": "一番〜＋名詞 は X です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "自然"
+   ]
+  },
+  {
+   "text": "乗り物の中で新幹線が一番速いです",
+   "ja": "<ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いです",
+   "kana": "のりもののなかで しんかんせんが いちばん はやいです",
+   "romaji": "norimono no naka de shinkansen ga ichiban hayai desu",
+   "meaning": "交通工具裡新幹線最快",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-no-naka-de.html",
+     "title": "〜の中で〜が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "電車とバスと新幹線の中で新幹線が一番速いです",
+   "ja": "<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>とバスと<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いです",
+   "kana": "でんしゃとバスとしんかんせんのなかで しんかんせんが いちばん はやいです",
+   "romaji": "densha to basu to shinkansen no naka de shinkansen ga ichiban hayai desu",
+   "meaning": "電車、公車、新幹線三個裡面，新幹線最快 — 把三個選項直接列出來",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-no-naka-de.html",
+     "title": "〜の中で〜が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "季節の中で秋が一番好きです",
+   "ja": "<ruby>季<rt>き</rt>節<rt>せつ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<ruby>秋<rt>あき</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きです",
+   "kana": "きせつのなかで あきが いちばん すきです",
+   "romaji": "kisetsu no naka de aki ga ichiban suki desu",
+   "meaning": "四季裡我最喜歡秋天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-no-naka-de.html",
+     "title": "〜の中で〜が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "果物の中でりんごが一番好きです",
+   "ja": "<ruby>果<rt>くだ</rt>物<rt>もの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　りんごが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きです",
+   "kana": "くだもののなかで りんごが いちばん すきです",
+   "romaji": "kudamono no naka de ringo ga ichiban suki desu",
+   "meaning": "水果裡我最喜歡蘋果",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-no-naka-de.html",
+     "title": "〜の中で〜が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "日本で富士山が一番高いです",
+   "ja": "<ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>で　<ruby>富<rt>ふ</rt>士<rt>じ</rt>山<rt>さん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>高<rt>たか</rt></ruby>いです",
+   "kana": "にほんで ふじさんが いちばん たかいです",
+   "romaji": "nihon de fujisan ga ichiban takai desu",
+   "meaning": "在日本，富士山最高",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-no-naka-de.html",
+     "title": "〜の中で〜が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "自然"
+   ]
+  },
+  {
+   "text": "この店でカレーが一番美味しいです",
+   "ja": "この <ruby>店<rt>みせ</rt></ruby>で　カレーが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>美味<rt>おい</rt></ruby>しいです",
+   "kana": "この みせで カレーが いちばん おいしいです",
+   "romaji": "kono mise de karee ga ichiban oishii desu",
+   "meaning": "這家店裡咖哩最好吃",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-no-naka-de.html",
+     "title": "〜の中で〜が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "一年で八月が一番暑いです",
+   "ja": "<ruby>一<rt>いち</rt>年<rt>ねん</rt></ruby>で　<ruby>八<rt>はち</rt>月<rt>がつ</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>暑<rt>あつ</rt></ruby>いです",
+   "kana": "いちねんで はちがつが いちばん あついです",
+   "romaji": "ichinen de hachigatsu ga ichiban atsui desu",
+   "meaning": "一年裡八月最熱",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-07",
+     "href": "lessons/2026-11-07-ichiban-no-naka-de.html",
+     "title": "〜の中で〜が一番〜です"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "昨日より今日のほうが寒いです",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>より　<ruby>今日<rt>きょう</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>寒<rt>さむ</rt></ruby>いです",
+   "kana": "きのうより きょうのほうが さむいです",
+   "romaji": "kinou yori kyou no hou ga samui desu",
+   "meaning": "比起昨天，今天比較冷",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "大阪より東京のほうが大きいです",
+   "ja": "<ruby>大<rt>おお</rt>阪<rt>さか</rt></ruby>より　<ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が　<ruby>大<rt>おお</rt></ruby>きいです",
+   "kana": "おおさかより とうきょうのほうが おおきいです",
+   "romaji": "oosaka yori toukyou no hou ga ookii desu",
+   "meaning": "比起大阪，東京比較大",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "バスは電車より安いです",
+   "ja": "バスは　<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>より　<ruby>安<rt>やす</rt></ruby>いです",
+   "kana": "バスは でんしゃより やすいです",
+   "romaji": "basu wa densha yori yasui desu",
+   "meaning": "公車比電車便宜",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "交通"
+   ]
+  },
+  {
+   "text": "今日は昨日より寒いです",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は　<ruby>昨日<rt>きのう</rt></ruby>より　<ruby>寒<rt>さむ</rt></ruby>いです",
+   "kana": "きょうは きのうより さむいです",
+   "romaji": "kyou wa kinou yori samui desu",
+   "meaning": "今天比昨天冷 — 時間也可以拿來比",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "東京は大阪より大きいです",
+   "ja": "<ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby>は　<ruby>大<rt>おお</rt>阪<rt>さか</rt></ruby>より　<ruby>大<rt>おお</rt></ruby>きいです",
+   "kana": "とうきょうは おおさかより おおきいです",
+   "romaji": "toukyou wa oosaka yori ookii desu",
+   "meaning": "東京比大阪大",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "私は夏より冬が好きです",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　<ruby>夏<rt>なつ</rt></ruby>より　<ruby>冬<rt>ふゆ</rt></ruby>が　<ruby>好<rt>す</rt></ruby>きです",
+   "kana": "わたしは なつより ふゆが すきです",
+   "romaji": "watashi wa natsu yori fuyu ga suki desu",
+   "meaning": "比起夏天，我更喜歡冬天 — 好き 的對象用 が，は 留給「我」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "バスは電車よりずっと安いです",
+   "ja": "バスは　<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>より　ずっと　<ruby>安<rt>やす</rt></ruby>いです",
+   "kana": "バスは でんしゃより ずっと やすいです",
+   "romaji": "basu wa densha yori zutto yasui desu",
+   "meaning": "公車比電車便宜得多",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "交通"
+   ]
+  },
+  {
+   "text": "今日は昨日より少し寒いです",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は　<ruby>昨日<rt>きのう</rt></ruby>より　<ruby>少<rt>すこ</rt></ruby>し　<ruby>寒<rt>さむ</rt></ruby>いです",
+   "kana": "きょうは きのうより すこし さむいです",
+   "romaji": "kyou wa kinou yori sukoshi samui desu",
+   "meaning": "今天比昨天冷一點",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "コーヒーと紅茶と、どちらが好きですか",
+   "ja": "コーヒーと　<ruby>紅<rt>こう</rt>茶<rt>ちゃ</rt></ruby>と、どちらが　<ruby>好<rt>す</rt></ruby>きですか",
+   "kana": "コーヒーと こうちゃと、どちらが すきですか",
+   "romaji": "koohii to koucha to, dochira ga suki desu ka",
+   "meaning": "咖啡和紅茶，你比較喜歡哪一個？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "食物"
+   ]
+  },
+  {
+   "text": "どちらも好きです",
+   "ja": "どちらも　<ruby>好<rt>す</rt></ruby>きです",
+   "kana": "どちらも すきです",
+   "romaji": "dochira mo suki desu",
+   "meaning": "兩個都喜歡",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "どちらも大丈夫です",
+   "ja": "どちらも　<ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です",
+   "kana": "どちらも だいじょうぶです",
+   "romaji": "dochira mo daijoubu desu",
+   "meaning": "兩個都可以 — 對方讓你選、你沒有偏好時",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "どちらもあまり好きじゃないです",
+   "ja": "どちらも　あまり　<ruby>好<rt>す</rt></ruby>きじゃないです",
+   "kana": "どちらも あまり すきじゃないです",
+   "romaji": "dochira mo amari suki ja nai desu",
+   "meaning": "兩個都不太喜歡 — あまり 加否定是「不太〜」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "形容詞・副詞"
+   ]
+  },
+  {
    "text": "あく",
    "ja": "<ruby>空<rt>あ</rt></ruby>く",
    "kana": "あく",
@@ -2779,7 +3465,7 @@
     {
      "date": "2026-10-23",
      "href": "lessons/2026-10-23-okite-tabete.html",
-     "title": "起きて、食べて"
+     "title": "〜て、〜て"
     }
    ],
    "tags": [
@@ -2798,7 +3484,7 @@
     {
      "date": "2026-10-23",
      "href": "lessons/2026-10-23-okite-tabete.html",
-     "title": "起きて、食べて"
+     "title": "〜て、〜て"
     }
    ],
    "tags": [
@@ -2817,7 +3503,7 @@
     {
      "date": "2026-10-23",
      "href": "lessons/2026-10-23-okite-tabete.html",
-     "title": "起きて、食べて"
+     "title": "〜て、〜て"
     }
    ],
    "tags": [
@@ -2836,7 +3522,7 @@
     {
      "date": "2026-10-23",
      "href": "lessons/2026-10-23-okite-tabete.html",
-     "title": "起きて、食べて"
+     "title": "〜て、〜て"
     }
    ],
    "tags": [
@@ -2855,7 +3541,7 @@
     {
      "date": "2026-10-23",
      "href": "lessons/2026-10-23-okite-tabete.html",
-     "title": "起きて、食べて"
+     "title": "〜て、〜て"
     }
    ],
    "tags": [
@@ -2874,7 +3560,7 @@
     {
      "date": "2026-10-23",
      "href": "lessons/2026-10-23-okite-tabete.html",
-     "title": "起きて、食べて"
+     "title": "〜て、〜て"
     }
    ],
    "tags": [
@@ -2893,7 +3579,7 @@
     {
      "date": "2026-10-23",
      "href": "lessons/2026-10-23-okite-tabete.html",
-     "title": "起きて、食べて"
+     "title": "〜て、〜て"
     }
    ],
    "tags": [
@@ -2912,7 +3598,7 @@
     {
      "date": "2026-10-23",
      "href": "lessons/2026-10-23-okite-tabete.html",
-     "title": "起きて、食べて"
+     "title": "〜て、〜て"
     }
    ],
    "tags": [
@@ -3129,7 +3815,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3148,7 +3834,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3167,7 +3853,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3186,7 +3872,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3205,7 +3891,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3224,7 +3910,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3243,7 +3929,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3262,7 +3948,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3281,7 +3967,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3300,7 +3986,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3319,7 +4005,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -3338,7 +4024,7 @@
     {
      "date": "2026-10-21",
      "href": "lessons/2026-10-21-aruite-ikimasu.html",
-     "title": "歩いて行きます"
+     "title": "〜て行きます"
     }
    ],
    "tags": [
@@ -5979,6 +6665,11 @@
      "date": "2026-10-05",
      "href": "lessons/2026-10-05-no-hou-ga.html",
      "title": "〜の方が"
+    },
+    {
+     "date": "2026-11-06",
+     "href": "lessons/2026-11-06-yori-no-hou-ga.html",
+     "title": "A より B の方が〜・B は A より〜"
     }
    ],
    "tags": [
@@ -6302,7 +6993,7 @@
     {
      "date": "2026-10-04",
      "href": "lessons/2026-10-04-omosa-kyori.html",
-     "title": "重さ・距離はどのくらいですか"
+     "title": "〜（さ）はどのくらいですか"
     }
    ],
    "tags": [
@@ -6322,7 +7013,7 @@
     {
      "date": "2026-10-04",
      "href": "lessons/2026-10-04-omosa-kyori.html",
-     "title": "重さ・距離はどのくらいですか"
+     "title": "〜（さ）はどのくらいですか"
     }
    ],
    "tags": [
@@ -6341,7 +7032,7 @@
     {
      "date": "2026-10-04",
      "href": "lessons/2026-10-04-omosa-kyori.html",
-     "title": "重さ・距離はどのくらいですか"
+     "title": "〜（さ）はどのくらいですか"
     }
    ],
    "tags": [
@@ -6360,7 +7051,7 @@
     {
      "date": "2026-10-04",
      "href": "lessons/2026-10-04-omosa-kyori.html",
-     "title": "重さ・距離はどのくらいですか"
+     "title": "〜（さ）はどのくらいですか"
     }
    ],
    "tags": [
@@ -6379,7 +7070,7 @@
     {
      "date": "2026-10-04",
      "href": "lessons/2026-10-04-omosa-kyori.html",
-     "title": "重さ・距離はどのくらいですか"
+     "title": "〜（さ）はどのくらいですか"
     }
    ],
    "tags": [
@@ -6397,7 +7088,7 @@
     {
      "date": "2026-10-04",
      "href": "lessons/2026-10-04-omosa-kyori.html",
-     "title": "重さ・距離はどのくらいですか"
+     "title": "〜（さ）はどのくらいですか"
     }
    ],
    "tags": [
@@ -6416,7 +7107,7 @@
     {
      "date": "2026-10-04",
      "href": "lessons/2026-10-04-omosa-kyori.html",
-     "title": "重さ・距離はどのくらいですか"
+     "title": "〜（さ）はどのくらいですか"
     }
    ],
    "tags": [
@@ -6435,7 +7126,7 @@
     {
      "date": "2026-10-04",
      "href": "lessons/2026-10-04-omosa-kyori.html",
-     "title": "重さ・距離はどのくらいですか"
+     "title": "〜（さ）はどのくらいですか"
     }
    ],
    "tags": [
@@ -7325,7 +8016,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7343,7 +8034,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7361,7 +8052,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7379,7 +8070,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7397,7 +8088,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7415,7 +8106,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7433,7 +8124,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7451,7 +8142,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7469,7 +8160,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7487,7 +8178,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7505,7 +8196,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7523,7 +8214,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -7653,7 +8344,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7672,7 +8363,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7691,7 +8382,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7710,7 +8401,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7729,7 +8420,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7748,7 +8439,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7767,7 +8458,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7786,7 +8477,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7805,7 +8496,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7824,7 +8515,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7843,7 +8534,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7862,7 +8553,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7881,7 +8572,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7899,7 +8590,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7917,7 +8608,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7936,7 +8627,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7955,7 +8646,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7974,7 +8665,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -7993,7 +8684,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -8012,7 +8703,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -8031,7 +8722,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -8050,7 +8741,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -8068,7 +8759,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -8086,7 +8777,7 @@
     {
      "date": "2026-08-29",
      "href": "lessons/2026-08-29-naritai-biyouin.html",
-     "title": "髪が長くなりました"
+     "title": "〜くなります・〜くします・〜になりたいです"
     }
    ],
    "tags": [
@@ -12809,7 +13500,7 @@
     {
      "date": "2026-08-31",
      "href": "lessons/2026-08-31-karakatta-desu.html",
-     "title": "辛かったです"
+     "title": "〜かったです／〜でした"
     }
    ],
    "tags": [
@@ -15736,7 +16427,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15755,7 +16446,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15774,7 +16465,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15793,7 +16484,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15811,7 +16502,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15829,7 +16520,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15847,7 +16538,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15866,7 +16557,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15884,7 +16575,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -15902,7 +16593,7 @@
     {
      "date": "2026-08-07",
      "href": "lessons/2026-08-07-kikoemasu.html",
-     "title": "聞こえますか"
+     "title": "〜が聞こえます・〜が見えます"
     }
    ],
    "tags": [
@@ -20127,7 +20818,7 @@
     {
      "date": "2026-07-28",
      "href": "lessons/2026-07-28-kita-koto-ga-arimasu.html",
-     "title": "日本に来たことがありますか"
+     "title": "〜たことがあります"
     }
    ],
    "tags": [
@@ -20146,7 +20837,7 @@
     {
      "date": "2026-07-28",
      "href": "lessons/2026-07-28-kita-koto-ga-arimasu.html",
-     "title": "日本に来たことがありますか"
+     "title": "〜たことがあります"
     }
    ],
    "tags": [
@@ -20164,7 +20855,7 @@
     {
      "date": "2026-07-28",
      "href": "lessons/2026-07-28-kita-koto-ga-arimasu.html",
-     "title": "日本に来たことがありますか"
+     "title": "〜たことがあります"
     }
    ],
    "tags": [
@@ -20183,7 +20874,7 @@
     {
      "date": "2026-07-28",
      "href": "lessons/2026-07-28-kita-koto-ga-arimasu.html",
-     "title": "日本に来たことがありますか"
+     "title": "〜たことがあります"
     }
    ],
    "tags": [

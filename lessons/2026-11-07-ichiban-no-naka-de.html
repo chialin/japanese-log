@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜の中で〜が一番〜です — 加上範圍，在三個以上的東西裡比</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜<span class="accent">の<ruby>中<rt>なか</rt></ruby>で</span>〜が<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>〜です</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 07</div>
+  <p class="page-subtitle">在三個以上的東西裡比出第一名：範圍用 の中で 或 で</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    ① 只說了第一名是誰，這篇加上「在哪一群裡比」。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 〜の中で X が一番〜です 說「在〜之中，X 最〜」</li>
+      <li>範圍能一個一個列出來時用 の中で（乗り物・季節・果物）</li>
+      <li>範圍是地方、團體、一段時間時用 で（日本で・この店で・一年で）</li>
+      <li>分清楚：兩樣東西用 の方が，三樣以上才用 一番</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以「乗り物の中で」為主軸，把範圍加進句子</div>
+
+  <p class="lead">
+    範圍放在句子最前面，接 の中で（在〜之中），後面接上 ① 的句子就好。<ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>（のりもの）是「交通工具」，乗る（のる，搭乘）加上 物（もの，東西），就是「搭的東西」。
+  </p>
+
+  <div class="formula">
+    <h4>加上範圍</h4>
+    <div class="fx">
+      範圍 <span class="j-mark">の<ruby>中<rt>なか</rt></ruby>で</span>　<b>X</b> が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　形容詞 です <span class="arw">→</span> 在〜之中，X 最〜
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="word-item" data-text="乗り物の中で新幹線が一番速いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby><span class="j-mark">の<ruby>中<rt>なか</rt></ruby>で</span>　<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いです</div>
+        <div class="word-romaji">norimono no naka de shinkansen ga ichiban hayai desu</div>
+        <div class="word-meaning">交通工具裡新幹線最快</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="電車とバスと新幹線の中で新幹線が一番速いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>とバスと<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby><span class="j-mark">の<ruby>中<rt>なか</rt></ruby>で</span>　<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いです</div>
+        <div class="word-romaji">densha to basu to shinkansen no naka de shinkansen ga ichiban hayai desu</div>
+        <div class="word-meaning">電車、公車、新幹線三個裡面，新幹線最快 — 把三個選項直接列出來</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="季節の中で秋が一番好きです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>季<rt>き</rt>節<rt>せつ</rt></ruby><span class="j-mark">の<ruby>中<rt>なか</rt></ruby>で</span>　<ruby>秋<rt>あき</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きです</div>
+        <div class="word-romaji">kisetsu no naka de aki ga ichiban suki desu</div>
+        <div class="word-meaning">四季裡我最喜歡秋天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="果物の中でりんごが一番好きです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>果<rt>くだ</rt>物<rt>もの</rt></ruby><span class="j-mark">の<ruby>中<rt>なか</rt></ruby>で</span>　りんごが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きです</div>
+        <div class="word-romaji">kudamono no naka de ringo ga ichiban suki desu</div>
+        <div class="word-meaning">水果裡我最喜歡蘋果</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、の中で 的 中，跟「Y の中です」是同一個字</div>
+
+  <p class="lead">
+    <a href="2026-08-19-naka.html" style="color:var(--accent);">8/19 的〈XはYの中です〉</a>學過 中（なか）是「裡面」，鑰匙在包包裡就是 かばんの中です。の中で 的 中 是同一個字，只是後面多了 で，意思從「在裡面」變成「在這一群裡面（比）」。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、範圍是地方、團體或一段時間時，用 で 就可以</div>
+
+  <p class="lead">
+    範圍是「日本」「這家店」「一年」這種地方、團體或一段時間時，通常不說 の中で，直接加 で。の中で 比較像是「從這一堆裡面挑」，所以用在季節、水果、交通工具這種可以一個一個列出來的東西。
+  </p>
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="word-item" data-text="日本で富士山が一番高いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日<rt>に</rt>本<rt>ほん</rt></ruby><span class="j-mark">で</span>　<ruby>富<rt>ふ</rt>士<rt>じ</rt>山<rt>さん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>高<rt>たか</rt></ruby>いです</div>
+        <div class="word-romaji">nihon de fujisan ga ichiban takai desu</div>
+        <div class="word-meaning">在日本，富士山最高</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="この店でカレーが一番美味しいです">
+      <div class="word-content">
+        <div class="word-ja">この <ruby>店<rt>みせ</rt></ruby><span class="j-mark">で</span>　カレーが　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>美味<rt>おい</rt></ruby>しいです</div>
+        <div class="word-romaji">kono mise de karee ga ichiban oishii desu</div>
+        <div class="word-meaning">這家店裡咖哩最好吃</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一年で八月が一番暑いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いち</rt>年<rt>ねん</rt></ruby><span class="j-mark">で</span>　<ruby>八<rt>はち</rt>月<rt>がつ</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>暑<rt>あつ</rt></ruby>いです</div>
+        <div class="word-romaji">ichinen de hachigatsu ga ichiban atsui desu</div>
+        <div class="word-meaning">一年裡八月最熱</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>の中で 和 で 不是死規定</strong><br>
+    日本の中で 也聽得懂，只是比較囉嗦；季節で一番好き 也有人說。拿不準的時候，能列出成員的（季節、果物、乗り物）用 の中で，地方、團體、一段時間（日本、この店、一年）用 で，這樣講最自然。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、兩樣東西用 の方が，三樣以上才用 一番</div>
+
+  <p class="lead">
+    只有兩樣東西時，「比較〜」的那一邊就是贏家，用<a href="2026-11-06-yori-no-hou-ga.html" style="color:var(--accent);">11/6 的 の方が</a>就好。範圍裡有三樣以上，才需要用 一番 挑出第一名。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>兩樣東西</h4>
+      <div class="vs-sub">電車 vs 新幹線</div>
+      <ul>
+        <li>電車より新幹線の方が速いです</li>
+        <li>用 の方が</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>三樣以上</h4>
+      <div class="vs-sub">電車・バス・新幹線</div>
+      <ul>
+        <li>電車とバスと新幹線の中で、新幹線が一番速いです</li>
+        <li>用 一番</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① 範圍後面的 で 不能漏</strong><br>
+    <s>乗り物の中新幹線が一番速いです</s> 少了 で。の中 是「裡面」，要加 で 才是「在裡面（比）」。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② 只有兩樣時不用 一番</strong><br>
+    <s>電車と新幹線の中で、新幹線が一番速いです</s> 不自然，兩樣東西改用 の方が：電車より新幹線の方が速いです。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>一群東西裡 X 最〜</td><td class="col-ja">〜<b>の中で</b> X が 一番 〜</td><td class="col-ja">乗り物の中で新幹線が一番速いです</td></tr>
+      <tr><td>列出三個選項</td><td class="col-ja">A と B と C <b>の中で</b> X が 一番 〜</td><td class="col-ja">電車とバスと新幹線の中で新幹線が一番速いです</td></tr>
+      <tr><td>地方、團體、一段時間裡</td><td class="col-ja">〜<b>で</b> X が 一番 〜</td><td class="col-ja">日本で富士山が一番高いです</td></tr>
+      <tr><td>只有兩樣</td><td class="col-ja">A より B <b>の方が</b> 〜</td><td class="col-ja">電車より新幹線の方が速いです</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>四季裡我最喜歡春天。（提示：季節、春＝はる）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>季節の中で春が一番好きです。<br>kisetsu no naka de haru ga ichiban suki desu.</p>
+        </details>
+      </li>
+      <li>這家店裡拉麵最好吃。（提示：この店で）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>この店でラーメンが一番美味しいです。<br>kono mise de raamen ga ichiban oishii desu.</p>
+        </details>
+      </li>
+      <li>一年裡一月最冷。（提示：一年で、一月＝いちがつ、寒い）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>一年で一月が一番寒いです。<br>ichinen de ichigatsu ga ichiban samui desu.</p>
+        </details>
+      </li>
+      <li>咖啡和紅茶，要說哪一個比較好喝，用 一番 還是 の方が？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>の方が。只有兩樣東西，用 の方が：コーヒーより紅茶の方が美味しいです。<br>koohii yori koucha no hou ga oishii desu.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-07-ichiban-hayai.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">① X が一番〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">最基本的「X が一番〜です」</span>
+  </a>
+
+  <a href="2026-11-07-ichiban-dore.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">③ 疑問詞が一番〜ですか <span class="next-arrow">→</span></span>
+    <span class="next-sub">問「哪一個最〜」：何・どれ・誰・どこ・いつ</span>
+  </a>
+
+  <a href="2026-11-07-ichiban-meishi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">④ 一番〜＋名詞 は X です <span class="next-arrow">→</span></span>
+    <span class="next-sub">一番 放在名詞前面</span>
+  </a>
+
+  <a href="2026-08-19-naka.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">XはYの中です <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/19：中（なか）＝裡面</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

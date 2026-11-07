@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>疑問詞が一番〜ですか — 問「哪一個最〜」：何・どれ・誰・どこ・いつ</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">疑問詞</span>が<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>〜ですか</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 07</div>
+  <p class="page-subtitle">問「哪一個最〜」，疑問詞照問的對象換</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    前兩篇都是自己說「X 最〜」，這篇換成問對方「哪一個最〜」。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 〜の中で 疑問詞が一番〜ですか 問「哪一個最〜」</li>
+      <li>照問的對象換疑問詞：何・どれ（東西）、誰（人）、どこ（地方）、いつ（時間）</li>
+      <li>分清楚 何（選項沒列出來）和 どれ（選項在眼前）</li>
+      <li>回答時只講第一名就可以，例如 新幹線です</li>
+      <li>記得三樣以上不用 どちら</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以「何が一番速いですか」為主軸，把問句排出來</div>
+
+  <p class="lead">
+    把 ② 的句子裡「第一名」的位置換成疑問詞，句尾加 か，就變成問句。回答時再把疑問詞換回答案。
+  </p>
+
+  <div class="formula">
+    <h4>問與答</h4>
+    <div class="fx">
+      範圍 の中で　<b>疑問詞</b> が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>〜ですか <span class="arw">→</span> 〜裡面，哪一個最〜？<br><b>X</b> が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>〜です <span class="arw">→</span> X 最〜
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>一問一答</div>
+
+    <div class="word-item" data-text="乗り物の中で何が一番速いですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<span class="j-mark"><ruby>何<rt>なに</rt></ruby></span>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いですか</div>
+        <div class="word-romaji">norimono no naka de nani ga ichiban hayai desu ka</div>
+        <div class="word-meaning">交通工具裡什麼最快？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="新幹線が一番速いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いです</div>
+        <div class="word-romaji">shinkansen ga ichiban hayai desu</div>
+        <div class="word-meaning">新幹線最快</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、疑問詞要看問的是什麼</div>
+
+  <p class="lead">
+    問東西用 何 或 どれ，問人用 誰，問地方用 どこ，問時間用 いつ。疑問詞後面一律接 が。
+  </p>
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="word-item" data-text="果物の中で何が一番好きですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>果<rt>くだ</rt>物<rt>もの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<span class="j-mark"><ruby>何<rt>なに</rt></ruby></span>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きですか</div>
+        <div class="word-romaji">kudamono no naka de nani ga ichiban suki desu ka</div>
+        <div class="word-meaning">水果裡你最喜歡什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="この三つの中でどれが一番安いですか">
+      <div class="word-content">
+        <div class="word-ja">この <ruby>三<rt>みっ</rt></ruby>つの<ruby>中<rt>なか</rt></ruby>で　<span class="j-mark">どれ</span>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>安<rt>やす</rt></ruby>いですか</div>
+        <div class="word-romaji">kono mittsu no naka de dore ga ichiban yasui desu ka</div>
+        <div class="word-meaning">這三個裡面哪一個最便宜？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="家族の中で誰が一番料理が上手ですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>家<rt>か</rt>族<rt>ぞく</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<span class="j-mark"><ruby>誰<rt>だれ</rt></ruby></span>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>が <ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby>ですか</div>
+        <div class="word-romaji">kazoku no naka de dare ga ichiban ryouri ga jouzu desu ka</div>
+        <div class="word-meaning">家人裡誰最會做菜？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本でどこが一番好きですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>で　<span class="j-mark">どこ</span>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>好<rt>す</rt></ruby>きですか</div>
+        <div class="word-romaji">nihon de doko ga ichiban suki desu ka</div>
+        <div class="word-meaning">在日本你最喜歡哪裡？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="一年でいつが一番寒いですか">
+      <div class="word-content">
+        <div class="word-ja"><ruby>一<rt>いち</rt>年<rt>ねん</rt></ruby>で　<span class="j-mark">いつ</span>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>寒<rt>さむ</rt></ruby>いですか</div>
+        <div class="word-romaji">ichinen de itsu ga ichiban samui desu ka</div>
+        <div class="word-meaning">一年裡什麼時候最冷？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、何 和 どれ 的差別在選項有沒有擺在眼前</div>
+
+  <p class="lead">
+    兩個都是問東西，差別在選項。範圍很大、沒有一個一個列出來時用 何；選項就在眼前，或是已經列出來的時候用 どれ。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>何（なに）</h4>
+      <div class="vs-sub">選項沒有列出來</div>
+      <ul>
+        <li>果物の中で何が一番好きですか</li>
+        <li>水果有很多種，讓對方自己說</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>どれ</h4>
+      <div class="vs-sub">選項就在眼前</div>
+      <ul>
+        <li>この三つの中でどれが一番安いですか</li>
+        <li>從這三個裡面挑</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、回答時可以只講第一名</div>
+
+  <p class="lead">
+    對方已經問了「什麼最快」，回答時不用整句重複，只講答案加 です 就夠了。
+  </p>
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="word-item" data-text="新幹線です">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>です</div>
+        <div class="word-romaji">shinkansen desu</div>
+        <div class="word-meaning">新幹線 — 最短的回答</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="母が一番上手です">
+      <div class="word-content">
+        <div class="word-ja"><ruby>母<rt>はは</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>上<rt>じょう</rt>手<rt>ず</rt></ruby>です</div>
+        <div class="word-romaji">haha ga ichiban jouzu desu</div>
+        <div class="word-meaning">媽媽最會 — 料理が 可以省略</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① 疑問詞後面接 が，不接 は</strong><br>
+    <s>何は一番速いですか</s> 是錯的，疑問詞後面一定用 が。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② 三樣以上不用 どちら</strong><br>
+    どちら 只用在兩樣之間（<a href="2026-10-05-no-hou-ga.html" style="color:var(--accent);">10/5 那篇</a>）。<s>乗り物の中でどちらが一番速いですか</s> 不自然，要用 何 或 どれ。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>問東西（範圍大）</td><td class="col-ja"><b>何</b>が一番〜ですか</td><td class="col-ja">乗り物の中で何が一番速いですか</td></tr>
+      <tr><td>問東西（選項在眼前）</td><td class="col-ja"><b>どれ</b>が一番〜ですか</td><td class="col-ja">この三つの中でどれが一番安いですか</td></tr>
+      <tr><td>問人</td><td class="col-ja"><b>誰</b>が一番〜ですか</td><td class="col-ja">家族の中で誰が一番料理が上手ですか</td></tr>
+      <tr><td>問地方</td><td class="col-ja"><b>どこ</b>が一番〜ですか</td><td class="col-ja">日本でどこが一番好きですか</td></tr>
+      <tr><td>問時間</td><td class="col-ja"><b>いつ</b>が一番〜ですか</td><td class="col-ja">一年でいつが一番寒いですか</td></tr>
+      <tr><td>兩樣之間</td><td class="col-ja"><b>どちら</b>が〜ですか</td><td class="col-ja">電車と新幹線と、どちらが速いですか</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>這三個裡面，哪一個最好吃？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>この三つの中でどれが一番美味しいですか。<br>kono mittsu no naka de dore ga ichiban oishii desu ka.</p>
+        </details>
+      </li>
+      <li>一年裡什麼時候最熱？（提示：暑い）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>一年でいつが一番暑いですか。<br>ichinen de itsu ga ichiban atsui desu ka.</p>
+        </details>
+      </li>
+      <li>朋友裡誰最高？（提示：友達＝ともだち、背が高い）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>友達の中で誰が一番背が高いですか。<br>tomodachi no naka de dare ga ichiban se ga takai desu ka.</p>
+        </details>
+      </li>
+      <li>「乗り物の中でどちらが一番速いですか」哪裡要改？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>交通工具有很多種，どちら 要改成 何：乗り物の中で何が一番速いですか。<br>norimono no naka de nani ga ichiban hayai desu ka.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-07-ichiban-hayai.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">① X が一番〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">最基本的「X が一番〜です」</span>
+  </a>
+
+  <a href="2026-11-07-ichiban-no-naka-de.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">② 〜の中で〜が一番〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">加上範圍：在三個以上的東西裡比</span>
+  </a>
+
+  <a href="2026-11-07-ichiban-meishi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">④ 一番〜＋名詞 は X です <span class="next-arrow">→</span></span>
+    <span class="next-sub">一番 放在名詞前面</span>
+  </a>
+
+  <a href="2026-10-05-no-hou-ga.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">A より B の方が <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/5：兩樣比較時用 どちら 問</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

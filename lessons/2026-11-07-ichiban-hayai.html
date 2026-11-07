@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X が一番〜です — 說「最〜」的基本句型 一番</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">X が <span class="accent"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span>〜です</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 07</div>
+  <p class="page-subtitle">說「X 最〜」的最基本說法：X が 一番 形容詞 です</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    想說「新幹線最快」「這個最便宜」，日文用 一番。這是「最〜」系列的第一篇，讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 X が一番〜です 說「X 最〜」，形容詞本身不用變</li>
+      <li>知道 一番 是「第一號」，所以是「最」</li>
+      <li>知道第一名後面接 が，不接 は</li>
+      <li>分清楚 はやい 的兩個漢字：速い 是速度，早い 是時間</li>
+      <li>範圍、問句、一番放在名詞前面，留到同一天的 ②③④ 篇</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以「新幹線が一番速いです」為主軸，把句型排出來</div>
+
+  <p class="lead">
+    把要說的第一名放在最前面接 が，後面放 一番，最後是形容詞。一番 就是中文的「最」，形容詞本身完全不用變，速い 還是 速い，好き 還是 好き。
+  </p>
+
+  <div class="formula">
+    <h4>最高級的骨架</h4>
+    <div class="fx">
+      <b>X</b> が　<b><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></b>　形容詞 です <span class="arw">→</span> X 最〜
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="word-item" data-text="新幹線が一番速いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>が　<span class="j-mark"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span>　<ruby>速<rt>はや</rt></ruby>いです</div>
+        <div class="word-romaji">shinkansen ga ichiban hayai desu</div>
+        <div class="word-meaning">新幹線最快</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="これが一番安いです">
+      <div class="word-content">
+        <div class="word-ja">これが　<span class="j-mark"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span>　<ruby>安<rt>やす</rt></ruby>いです</div>
+        <div class="word-romaji">kore ga ichiban yasui desu</div>
+        <div class="word-meaning">這個最便宜 — 在店裡指著東西說</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="このラーメンが一番美味しいです">
+      <div class="word-content">
+        <div class="word-ja">このラーメンが　<span class="j-mark"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span>　<ruby>美味<rt>おい</rt></ruby>しいです</div>
+        <div class="word-romaji">kono raamen ga ichiban oishii desu</div>
+        <div class="word-meaning">這碗拉麵最好吃</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="秋が一番好きです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>秋<rt>あき</rt></ruby>が　<span class="j-mark"><ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby></span>　<ruby>好<rt>す</rt></ruby>きです</div>
+        <div class="word-romaji">aki ga ichiban suki desu</div>
+        <div class="word-meaning">我最喜歡秋天 — な形容詞 好き 也一樣，直接放在 一番 後面</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    這幾句都沒有說「在什麼裡面最〜」，因為聊天時通常前面已經在講交通工具、講店裡的菜，聽的人知道在比什麼。要把範圍講出來的說法在<a href="2026-11-07-ichiban-no-naka-de.html" style="color:var(--accent);">〈② 〜の中で〜が一番〜です〉</a>。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、一番 本來的意思是「第一號」</div>
+
+  <p class="lead">
+    一番 是 一（いち，一）加上 番（ばん，號、順序），直譯就是「第一號」。排第一的就是「最〜」的那一個，所以 一番速い 就是「最快」。番 也出現在 一番線（いちばんせん，一號月台）這種說法裡，在車站廣播常常聽到。
+  </p>
+
+  <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 一 唸 いち，新幹線 三個字都對得上</strong><br>
+    台語的「一」唸 <span class="compare">it</span>，日文音讀是 <span class="compare">いち</span>（ichi），跟<a href="2026-05-03-numbers.html" style="color:var(--accent);">數字那一課</a>的 いち 是同一個字。<br>
+    新幹線 用台語的文讀來唸是 <span class="compare">sin-kan-sian</span>，日文是 <span class="compare">しんかんせん</span>（shinkansen），三個字一路對下來：新 sin → しん、幹 kan → かん、線 sian → せん。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、第一名後面用 が，因為它是被挑出來的那一個</div>
+
+  <p class="lead">
+    說「X 最〜」的時候，重點是「挑出來的是 X，不是別的」。這種要把某一個東西點出來的時候，日文用 が，跟<a href="2026-10-05-no-hou-ga.html" style="color:var(--accent);">10/5 的 の方が</a>用 が 是同一個道理。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>新幹線<b>が</b>一番速いです</h4>
+      <div class="vs-sub">自然的說法</div>
+      <ul>
+        <li>在一群交通工具裡，挑出新幹線</li>
+        <li>回答「什麼最快？」</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>新幹線<b>は</b>一番速いです</h4>
+      <div class="vs-sub">不太自然</div>
+      <ul>
+        <li>は 是「說到新幹線…」</li>
+        <li>聽起來像在介紹新幹線，跟「最」的語氣對不上</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、はやい 有兩個漢字，新幹線用 速い</div>
+
+  <p class="lead">
+    はやい 這個音有兩個寫法。講速度快用 速い，講時間早用 早い。<a href="2026-10-27-hantaigo.html" style="color:var(--accent);">10/27 反義詞那篇</a>學過的 早い・遅い 是時間的早晚，新幹線跑得快是速度，所以要寫 速い。兩個字唸法一樣，聽的時候分不出來，寫的時候要選對。
+  </p>
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="word-item" data-text="新幹線が一番速いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<span class="j-mark"><ruby>速<rt>はや</rt></ruby>い</span>です</div>
+        <div class="word-romaji">shinkansen ga ichiban hayai desu</div>
+        <div class="word-meaning">新幹線最快 — 速度</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="七時の電車が一番早いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>七<rt>しち</rt>時<rt>じ</rt></ruby>の<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<span class="j-mark"><ruby>早<rt>はや</rt></ruby>い</span>です</div>
+        <div class="word-romaji">shichiji no densha ga ichiban hayai desu</div>
+        <div class="word-meaning">七點那班電車最早 — 時間</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 速 是速度，早 是早上</strong><br>
+    速い 的 速 就是中文「速度」的速，跟快慢有關；早い 的 早 是「早上」的早，跟時間有關。照中文的意思挑字就不會錯。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① 一番 要放在形容詞前面</strong><br>
+    中文說「最快」，「最」在前面，日文也一樣，一番 放在 速い 前面。<s>新幹線が速い一番です</s> 是錯的。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② 新幹線的「快」不要寫成 早い</strong><br>
+    早い 是時間早，新幹線跑得快要寫 速い。<s>新幹線が一番早いです</s> 變成「新幹線最早（出發）」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>X 最〜</td><td class="col-ja">X が <b>一番</b> 〜です</td><td class="col-ja">新幹線が一番速いです</td></tr>
+      <tr><td>速度最快</td><td class="col-ja">一番 <b>速い</b></td><td class="col-ja">新幹線が一番速いです</td></tr>
+      <tr><td>時間最早</td><td class="col-ja">一番 <b>早い</b></td><td class="col-ja">七時の電車が一番早いです</td></tr>
+      <tr><td>最喜歡</td><td class="col-ja">X が 一番 <b>好き</b>です</td><td class="col-ja">秋が一番好きです</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>這個最便宜。（提示：これ、安い）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>これが一番安いです。<br>kore ga ichiban yasui desu.</p>
+        </details>
+      </li>
+      <li>我最喜歡冬天。（提示：冬＝ふゆ）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>冬が一番好きです。<br>fuyu ga ichiban suki desu.</p>
+        </details>
+      </li>
+      <li>這家店的咖哩最好吃。（提示：この店のカレー）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>この店のカレーが一番美味しいです。<br>kono mise no karee ga ichiban oishii desu.</p>
+        </details>
+      </li>
+      <li>「新幹線最快」的「快」要寫 速い 還是 早い？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>速い。講速度用 速い，講時間早用 早い。<br>shinkansen ga ichiban hayai desu.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-07-ichiban-no-naka-de.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">② 〜の中で〜が一番〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">加上範圍：在三個以上的東西裡比</span>
+  </a>
+
+  <a href="2026-11-07-ichiban-dore.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">③ 疑問詞が一番〜ですか <span class="next-arrow">→</span></span>
+    <span class="next-sub">問「哪一個最〜」：何・どれ・誰・どこ・いつ</span>
+  </a>
+
+  <a href="2026-11-07-ichiban-meishi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">④ 一番〜＋名詞 は X です <span class="next-arrow">→</span></span>
+    <span class="next-sub">一番 放在名詞前面</span>
+  </a>
+
+  <a href="2026-11-06-yori-no-hou-ga.html" class="next-link">
+    <span class="next-kicker">— 前情提要 —</span>
+    <span class="next-title">A より B の方が〜・B は A より〜 <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/6：兩樣東西比較時用 の方が</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

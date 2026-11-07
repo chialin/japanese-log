@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A より B の方が〜・B は A より〜 — 比較的說法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">A より B <span class="accent">の<ruby>方<rt>ほう</rt></ruby>が</span>〜・B は A <span class="accent">より</span>〜</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 06</div>
+  <p class="page-subtitle">兩樣東西比較時用 より 和 の方が，講差多少與兩個都〜的回答</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    比較兩樣東西，像「公車比電車便宜」「今天比昨天冷」，日文用 より 和 の方が 來說。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 A より B の方が〜 說「比起 A，B 比較〜」，回答「哪一個比較〜」</li>
+      <li>用 B は A より〜 主動介紹 B，說「B 比 A〜」</li>
+      <li>知道 より 本來是「從〜」，接在拿來當基準的那一邊</li>
+      <li>用 ずっと（〜得多）、少し（〜一點）講差多少</li>
+      <li>兩個都喜歡、都可以的時候，回答 どちらも〜</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、比較句以 より 和 の方が 為主軸，有兩種排法</div>
+
+  <p class="lead">
+    比較句裡有兩個固定的記號：より 接在輸的那一邊（被拿來比的對象）後面，の方が 接在贏的那一邊後面。
+    最常聽到的是兩個一起用的 A より B の方が〜；另一種是用 は 開頭，只用 より 的 A は B より〜，
+    順序跟中文的「A 比 B〜」很像，中文的「比」放在 B 前面，日文的 より 放在 B 後面。
+  </p>
+
+  <div class="formula">
+    <h4>比較句的兩種骨架</h4>
+    <div class="fx">
+      A <span class="j-mark">より</span>　<b>B</b> <span class="j-mark">の<ruby>方<rt>ほう</rt></ruby>が</span>　形容詞 です <span class="arw">→</span> 比起 A，B 比較〜<br>
+      <b>B</b> は　A <span class="j-mark">より</span>　形容詞 です <span class="arw">→</span> B 比 A〜
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>より 本來的意思是「從〜」</strong><br>
+    より 原本是表示出發點的助詞，意思跟 から 很像。現在書信的署名還看得到，像 <span class="compare">母より</span>（haha yori，媽媽寄），
+    正式的公告也會把 から 寫成 より，像 <span class="compare">10時より始まります</span>（juuji yori hajimarimasu，十點開始）。<br>
+    放進比較句裡，就是「從 A 這邊看過去」，A 是拿來當基準的那一邊。
+    所以 電車より バスの方が安いです 的意思是「以電車為基準來看，公車比較便宜」。
+    中文的「比」也是這樣：「公車比電車便宜」裡，電車是基準。差別只在位置，中文的「比」放在基準前面，日文的 より 放在基準後面。
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>より ＋ の方が 的例句</div>
+
+    <div class="word-item" data-text="電車よりバスのほうが安いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby><span class="j-mark">より</span>　バス<span class="j-mark">の<ruby>方<rt>ほう</rt></ruby>が</span>　<ruby>安<rt>やす</rt></ruby>いです</div>
+        <div class="word-romaji">densha yori basu no hou ga yasui desu</div>
+        <div class="word-meaning">比起電車，公車比較便宜</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昨日より今日のほうが寒いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby><span class="j-mark">より</span>　<ruby>今日<rt>きょう</rt></ruby><span class="j-mark">の<ruby>方<rt>ほう</rt></ruby>が</span>　<ruby>寒<rt>さむ</rt></ruby>いです</div>
+        <div class="word-romaji">kinou yori kyou no hou ga samui desu</div>
+        <div class="word-meaning">比起昨天，今天比較冷</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="大阪より東京のほうが大きいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>大<rt>おお</rt>阪<rt>さか</rt></ruby><span class="j-mark">より</span>　<ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby><span class="j-mark">の<ruby>方<rt>ほう</rt></ruby>が</span>　<ruby>大<rt>おお</rt></ruby>きいです</div>
+        <div class="word-romaji">oosaka yori toukyou no hou ga ookii desu</div>
+        <div class="word-meaning">比起大阪，東京比較大</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    下面是同樣的意思，改用 は 開頭的說法。の方が 拿掉了，贏的那一邊移到句子最前面接 は。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>は ＋ より 的例句</div>
+
+    <div class="word-item" data-text="バスは電車より安いです">
+      <div class="word-content">
+        <div class="word-ja">バスは　<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby><span class="j-mark">より</span>　<ruby>安<rt>やす</rt></ruby>いです</div>
+        <div class="word-romaji">basu wa densha yori yasui desu</div>
+        <div class="word-meaning">公車比電車便宜</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今日は昨日より寒いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は　<ruby>昨日<rt>きのう</rt></ruby><span class="j-mark">より</span>　<ruby>寒<rt>さむ</rt></ruby>いです</div>
+        <div class="word-romaji">kyou wa kinou yori samui desu</div>
+        <div class="word-meaning">今天比昨天冷 — 時間也可以拿來比</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="東京は大阪より大きいです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>東<rt>とう</rt>京<rt>きょう</rt></ruby>は　<ruby>大<rt>おお</rt>阪<rt>さか</rt></ruby><span class="j-mark">より</span>　<ruby>大<rt>おお</rt></ruby>きいです</div>
+        <div class="word-romaji">toukyou wa oosaka yori ookii desu</div>
+        <div class="word-meaning">東京比大阪大</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は夏より冬が好きです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　<ruby>夏<rt>なつ</rt></ruby><span class="j-mark">より</span>　<ruby>冬<rt>ふゆ</rt></ruby>が　<ruby>好<rt>す</rt></ruby>きです</div>
+        <div class="word-romaji">watashi wa natsu yori fuyu ga suki desu</div>
+        <div class="word-meaning">比起夏天，我更喜歡冬天 — 好き 的對象用 が，は 留給「我」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    <a href="2026-10-29-atarashii-kutsu.html" style="color:var(--accent);">10/29 買抱石鞋的會話</a>裡說過
+    ボルダリングの靴は、いつも履いている靴より小さいサイズです，用的就是這個句型。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、の方が 和 は 開頭的句子，回答的問題不一樣</div>
+
+  <p class="lead">
+    バスは電車より安いです 和 電車よりバスの方が安いです，翻成中文都是「公車比較便宜」，但兩句是在回答不同的問題。
+    は 開頭的句子是在介紹 A，先把話題定在公車上，再說它跟電車比起來怎麼樣；
+    の方が 是在兩個裡面挑出一個，通常是回答「哪一個比較〜」。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>A は B より〜</h4>
+      <div class="vs-sub">話題是 A，說明 A 的特點</div>
+      <ul>
+        <li>バスは どうですか。</li>
+        <li>→ バスは電車より安いです。</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>A より B の方が〜</h4>
+      <div class="vs-sub">兩個裡面選一個</div>
+      <ul>
+        <li>バスと電車と、どちらが安いですか。</li>
+        <li>→ バスの方が安いです。</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    所以被問到 どちらが〜ですか 時，回答用 の方が 最自然；自己主動介紹某樣東西時，用 は 開頭比較順。
+    の方が 那一段也可以放到 より 前面，先講結論：バスの方が電車より安いです（10/5 那篇的第四節）。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、差多少是用 ずっと 和 少し 來說的</div>
+
+  <p class="lead">
+    只說「比較便宜」聽不出差多少。想說「便宜得多」就在形容詞前面加 ずっと，「稍微便宜一點」就加 少し。
+    這兩個字都放在 より 後面、形容詞前面。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="word-item" data-text="バスは電車よりずっと安いです">
+      <div class="word-content">
+        <div class="word-ja">バスは　<ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>より　<span class="j-mark">ずっと</span>　<ruby>安<rt>やす</rt></ruby>いです</div>
+        <div class="word-romaji">basu wa densha yori zutto yasui desu</div>
+        <div class="word-meaning">公車比電車便宜得多</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="今日は昨日より少し寒いです">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は　<ruby>昨日<rt>きのう</rt></ruby>より　<span class="j-mark"><ruby>少<rt>すこ</rt></ruby>し</span>　<ruby>寒<rt>さむ</rt></ruby>いです</div>
+        <div class="word-romaji">kyou wa kinou yori sukoshi samui desu</div>
+        <div class="word-meaning">今天比昨天冷一點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — ずっと 本來是「一直」</strong><br>
+    ずっと 還有「一直、始終」的意思，像 ずっと待っています（一直在等）。
+    放進比較句裡，就是「一路差下去、差了一大段」，所以變成「〜得多」。兩個意思都是「距離拉得很長」，一起記就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、兩個都〜的時候，是用 どちらも 回答的</div>
+
+  <p class="lead">
+    被問 どちらが好きですか，有時候兩個都喜歡，或是兩個都可以。這時候不用硬選一邊，回答 どちらも 就好。
+    どちらも 後面接肯定是「兩個都〜」，接否定是「兩個都不〜」。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>一問一答</div>
+
+    <div class="word-item" data-text="コーヒーと紅茶と、どちらが好きですか">
+      <div class="word-content">
+        <div class="word-ja">コーヒーと　<ruby>紅<rt>こう</rt>茶<rt>ちゃ</rt></ruby>と、どちらが　<ruby>好<rt>す</rt></ruby>きですか</div>
+        <div class="word-romaji">koohii to koucha to, dochira ga suki desu ka</div>
+        <div class="word-meaning">咖啡和紅茶，你比較喜歡哪一個？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="どちらも好きです">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark">どちらも</span>　<ruby>好<rt>す</rt></ruby>きです</div>
+        <div class="word-romaji">dochira mo suki desu</div>
+        <div class="word-meaning">兩個都喜歡</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="どちらも大丈夫です">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark">どちらも</span>　<ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>です</div>
+        <div class="word-romaji">dochira mo daijoubu desu</div>
+        <div class="word-meaning">兩個都可以 — 對方讓你選、你沒有偏好時</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="どちらもあまり好きじゃないです">
+      <div class="word-content">
+        <div class="word-ja"><span class="j-mark">どちらも</span>　あまり　<ruby>好<rt>す</rt></ruby>きじゃないです</div>
+        <div class="word-romaji">dochira mo amari suki ja nai desu</div>
+        <div class="word-meaning">兩個都不太喜歡 — あまり 加否定是「不太〜」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    差不多、分不出高下的時候，10/5 那篇學過的 同じくらいです 也可以用。
+    どちらも 是兩個都符合，同じくらい 是兩個程度差不多，意思接近但不完全一樣。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① より 已經有「比」的意思，不用再加 もっと</strong><br>
+    中文習慣說「公車比電車更便宜」，但日文 バスは電車より安いです 就已經是完整的比較句。
+    加上 もっと 會變成「（本來就便宜，）又更便宜」，只有在前面已經講過兩邊都便宜的時候才這樣說。
+    想強調差很多，用 ずっと。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② 好き 的比較句，は 和 が 不要放錯</strong><br>
+    私は夏より冬が好きです 裡，は 是「我」，が 是喜歡的對象。
+    <s>私が夏より冬は好きです</s> 會讓整句的重心跑掉。照著「誰は　比較的對象より　喜歡的東西が　好きです」的順序放就不會錯。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、整理成一張表</div>
+
+  <table class="joshi-table">
+    <thead>
+      <tr><th>想說的</th><th>句型</th><th>例句</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>A 比 B〜</td><td class="col-ja">A は B <b>より</b> 〜</td><td class="col-ja">バスは電車より安いです</td></tr>
+      <tr><td>兩個裡面選一個</td><td class="col-ja">A より B <b>の方が</b> 〜</td><td class="col-ja">電車よりバスの方が安いです</td></tr>
+      <tr><td>〜得多</td><td class="col-ja">A は B より <b>ずっと</b> 〜</td><td class="col-ja">バスは電車よりずっと安いです</td></tr>
+      <tr><td>〜一點</td><td class="col-ja">A は B より <b>少し</b> 〜</td><td class="col-ja">今日は昨日より少し寒いです</td></tr>
+      <tr><td>兩個都〜</td><td class="col-ja"><b>どちらも</b> 〜</td><td class="col-ja">どちらも好きです</td></tr>
+      <tr><td>兩個都不〜</td><td class="col-ja"><b>どちらも</b> 〜ない</td><td class="col-ja">どちらもあまり好きじゃないです</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">七、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>拉麵比咖哩便宜。（提示：ラーメン、カレー、より）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>ラーメンはカレーより安いです。<br>raamen wa karee yori yasui desu.</p>
+        </details>
+      </li>
+      <li>東京比大阪大得多。（提示：ずっと）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>東京は大阪よりずっと大きいです。<br>toukyou wa oosaka yori zutto ookii desu.</p>
+        </details>
+      </li>
+      <li>被問「咖啡和紅茶，哪一個比較好？」，回答「兩個都可以」。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>どちらも大丈夫です。<br>dochira mo daijoubu desu.<br>（どちらもいいです 也可以）</p>
+        </details>
+      </li>
+      <li>「電車よりバスの方が安いです」裡，哪一個是拿來當基準的？哪一個比較便宜？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>より 前面的電車是基準，の方が 前面的公車比較便宜。<br>densha yori basu no hou ga yasui desu.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-07-ichiban-hayai.html" class="next-link">
+    <span class="next-kicker">— Next —</span>
+    <span class="next-title">X が一番〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/7：說「最〜」的系列第一篇，X が一番〜です</span>
+  </a>
+
+  <a href="2026-10-05-no-hou-ga.html" class="next-link">
+    <span class="next-kicker">— 前情提要 —</span>
+    <span class="next-title">A より B の方が <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/5：の方が 接贏的一邊、どちらが〜ですか 的問答、同じくらい</span>
+  </a>
+
+  <a href="2026-10-29-atarashii-kutsu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">新しい靴を買いました <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/29 會話：ボルダリングの靴は、いつも履いている靴より小さいサイズです</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

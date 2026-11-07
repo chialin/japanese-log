@@ -88,7 +88,7 @@ ${PAGE_CSS}
   <p class="page-subtitle">${subtitle}</p>
 
   <div class="tip">
-    💡 <strong>一句話</strong><br>
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>一句話</strong><br>
     ${tipHtml}
   </div>
 

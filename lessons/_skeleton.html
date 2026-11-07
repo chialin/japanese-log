@@ -15,7 +15,7 @@
     · 標題用一般中文口語說明事情的方式寫（「一、二、三」編號可以留著）
       ○「一、以今天為主軸，列出前後幾天的說法」「二、前綴是有規則的」
       ✗「一、七格時間軸」「四、發音：拍子怎麼數」
-    · 開頭第一塊先講清楚「這篇要學的是什麼」，後面再一段一段展開
+    · 開頭第一塊先講清楚「讀完這篇可以這樣說」，後面再一段一段展開
     · 內文提到數量用中文（三拍、四個），數字留給真正的數據（時刻、百分比、日期）
 
   色票：lessons/* 一律棕橘（已寫死於下方 :root，不要動）
@@ -75,10 +75,10 @@
     <span class="speed-value" id="rateValue">1.0x</span>
   </div>
 
-  <!-- TODO: 開頭這塊「這篇要學的是什麼」建議保留，先講主題再展開；
-       其餘可選的 callout：note（📝）/ alert（⚠️）/ warning（🗾）/ mnemonic（藍，icon 用 <span class="mi mi-memo"> ；台語線索用 mnemonic taigi 紅＋ mi-taigi） -->
+  <!-- TODO: 開頭這塊「讀完這篇可以這樣說」建議保留，先講主題再展開；
+       其餘可選的 callout：note（ui-note）/ alert、warning（ui-alert）；開頭 icon 一律用 <span class="ui-ic ui-xxx">，不用 emoji/ mnemonic（藍，icon 用 <span class="mi mi-memo"> ；台語線索用 mnemonic taigi 紅＋ mi-taigi） -->
   <div class="tip">
-    💡 <strong>這篇要學的是什麼</strong><br>
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣說</strong><br>
     先講讀者為什麼會需要這個（什麼情境會用到），
     再說這篇要處理哪幾件事。用完整的句子寫，不要條列 ①②③。
   </div>
@@ -95,7 +95,7 @@
   </p>
 
   <div class="section">
-    <div class="section-title">📖 例句／單字</div>
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句／單字</div>
 
     <!-- 單字／例句卡片：data-text 是 TTS 朗讀的內容（純假名） -->
     <div class="word-item" data-text="ここに 例文を 書く">

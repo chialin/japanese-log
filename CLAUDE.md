@@ -265,6 +265,29 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 
 各類頁面共用 `shared.css` 的這組基礎結構：`.wrap` / `.masthead` / `.back-link` / `.page-title` / `.page-subtitle` / `.speed-control` / `.divider` / `.tip` `.note` `.alert` `.warning` `.mnemonic` / `.compare` / `.play-btn` / `.next-link` / `.acc`（高低アクセント）。
 
+#### 元件開頭的圓章 icon `.ui-ic`（2026-11-07 起）
+
+tip／note／alert／warning／section-title／quiz-title／看解答 `<summary>` 開頭**一律用自製圓章 icon，不放 emoji**。
+主色實心圓＋白色和風小物，顏色跟著每頁 `--accent` 走（CSS 在 [shared.css](shared.css)）。
+
+| 元件 | class | 圖 |
+|------|------|------|
+| `.section-title` | `ui-book` | 卷軸 |
+| `.tip` | `ui-tip` | 御守り |
+| `.note` | `ui-note` | 付箋 |
+| `.alert`／`.warning` | `ui-alert` | 立て札 |
+| `.quiz-title`（和練習用的小標） | `ui-quiz` | 毛筆 |
+| `<summary>` 看解答 | `ui-ans` | 鑰匙 |
+
+```html
+<div class="tip"><span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣說</strong><br>…</div>
+<div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+<summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+```
+
+- 新的 icon 也要自製 SVG，先做比較頁給 Scarlett 選樣式再套用，不要直接放 emoji。
+- 小標前面的主題小圖（🍽️、🚃 這類）還是 emoji，之後要換再另外設計。
+
 #### 高低アクセント `.acc`（2026-08-11 收進 shared.css）
 
 **全站只有這一套重音標記樣式，不要在頁面裡另外自創示意圖**（底線／色塊／階梯圖）。
@@ -435,7 +458,7 @@ curl -s "https://www.irasutoya.com/feeds/posts/default?q=<關鍵字URL編碼>&al
   | 收尾的小測驗 | 換你自己做做看 · Self-Quiz | 八、換你自己做做看 · Self-Quiz |
 
   小測驗那段的內容規格（3～5 題，**每一題各自附一個 `<details>` 解答**）不變，只是標題也照口語的寫法。
-- **開頭第一塊先講主題**：用 `.tip` 寫「這篇要學的是什麼」——先講什麼情境會用到，再說這篇要處理哪幾件事，
+- **開頭第一塊先講主題**：用 `.tip` 寫「讀完這篇可以這樣說」（文法課——`index.html` 掛 `grammar` class 的那些——改寫「讀完這篇可以這樣用」）——先講什麼情境會用到，再說這篇要處理哪幾件事，
   用完整句子，不要 ①②③ 條列。後面才一段一段展開。
 - **每個小節開頭先鋪陳一兩句再帶出重點**，不要一進去就丟表格。
 - **內文提到數量用中文**（三拍、四個、兩天前），阿拉伯數字留給真正的數據（時刻、百分比、日期、年份）。
@@ -450,7 +473,7 @@ curl -s "https://www.irasutoya.com/feeds/posts/default?q=<關鍵字URL編碼>&al
 - 主題課程（數字／季節／句型／假名概念）專注在日常實用。
 - 閱讀筆記（readings/）拿真實日文短文當素材，標出假名讀法、單字、助詞、文法句型。
 - **課後複習小測驗 (Self-Quiz)**：每日課程講義與筆記末尾必須附上「課後複習小測驗（Self-Quiz）」，提供 3~5 題造句或單字翻譯測驗。**一題配一個解答，各自可以開合**（2026-11-03 起）：
-  每個 `<li>` 裡放題目，緊接著一個 `<details class="quiz-ans"><summary>🔍 看解答</summary><p>日文<br>romaji</p></details>`，
+  每個 `<li>` 裡放題目，緊接著一個 `<details class="quiz-ans"><summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary><p>日文<br>romaji</p></details>`，
   不要把全部答案塞進同一個 `<details>`。範例見 [bunka-no-hi-bouldering](lessons/2026-11-03-bunka-no-hi-bouldering.html)。
 
 ### 音讀連結：漢字音／台語對應（必做）

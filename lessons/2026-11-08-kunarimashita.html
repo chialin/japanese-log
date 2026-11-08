@@ -19,21 +19,6 @@
 .joshi-table td b{color:var(--accent);}
 .joshi-table small{color:var(--ink-mute);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;}
 .col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
-/* 兩個籃子 */
-.bins{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 12px;}
-.bin{border-radius:12px;padding:14px 16px;background:#fff;border:2px solid var(--accent-soft);}
-.bin h4{margin:0 0 4px;font-family:'Shippori Mincho',serif;font-size:21px;color:var(--ink);text-align:center;}
-.bin h4 b,.bin td b,.bin-exc b{color:var(--accent);}
-.bin .who{text-align:center;font-size:13px;color:var(--ink-mute);margin-bottom:8px;}
-.bin table{width:100%;border-collapse:collapse;}
-.bin td.jp{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;}
-.bin td{padding:6px 4px;border-top:1px dashed var(--line);white-space:nowrap;}
-.bin td.arw,.bin-exc .arw{color:var(--ink-mute);text-align:center;width:22px;}
-.ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;}
-.bin-exc{display:flex;gap:14px;align-items:flex-start;border:2px dashed var(--accent);border-radius:12px;padding:12px 16px;margin:0 0 16px;background:rgba(255,255,255,.5);}
-.exc-tag{flex:none;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;transform:rotate(-4deg);margin-top:4px;}
-.exc-note{font-size:13px;color:var(--ink-soft);line-height:1.8;margin-top:4px;}
-@media(max-width:560px){.bins{grid-template-columns:1fr;}}
 
 /* 變形公式 */
 .formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
@@ -396,8 +381,8 @@
     表裡換成上面沒出現過的字，順便複習之前學過的詞。
   </p>
 
-  <div class="bins">
-    <div class="bin">
+  <div class="sum-bins">
+    <div class="sum-bin">
       <h4>〜<b>く</b>なりました</h4>
       <div class="who">い形容詞（接名詞不用加 な）</div>
       <table>
@@ -406,7 +391,7 @@
         <tr><td class="jp"><ruby>高<rt>たか</rt></ruby>い</td><td class="arw">→</td><td class="jp"><ruby>高<rt>たか</rt></ruby><b>く</b></td><td class="ro">takaku</td></tr>
       </table>
     </div>
-    <div class="bin">
+    <div class="sum-bin">
       <h4>〜<b>に</b>なりました</h4>
       <div class="who">な形容詞、名詞</div>
       <table>
@@ -418,10 +403,10 @@
     </div>
   </div>
 
-  <div class="bin-exc">
+  <div class="sum-exc">
     <span class="exc-tag">例外</span>
     <div>
-      <div class="col-ja">いい <span class="arw">→</span> <b>よく</b>なりました <span class="ro">yoku narimashita</span></div>
+      <div class="jp">いい <span class="arw">→</span> <b>よく</b>なりました <span class="ro">yoku narimashita</span></div>
       <div class="exc-note">いい 是い形容詞，但不能變成「いく」，要先換回老形狀 よい 再變。例：<ruby>天気<rt>てんき</rt></ruby>がよくなりました（tenki ga yoku narimashita，天氣變好了）</div>
     </div>
   </div>

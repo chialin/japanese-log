@@ -686,3 +686,78 @@ a.rs-old:hover { background: #f6ead2; }
   .kana-big { font-size: 26px; }
   .kana-compare { grid-template-columns: 1fr; }
 }
+
+/* ── 收尾整理樣板 .sum-*（2026-11-08 起，取代「整理成一張表」的 joshi-table）──
+   照內容挑一種，範例見 lessons/2026-11-08-kunarimashita.html 等：
+   A 句型卡  .sum-cards > .sum-card（.want 想說的／.pat 句型，<b> 上色／.ex 例句＋.ro）
+   B 分成幾堆 .sum-bins > .sum-bin（h4／.who／table：td.q 中文、td.jp 日文、td.ro 羅馬拼音）＋ 例外 .sum-exc
+   C 刻度軸  .sum-scale > .sum-zone(.neg) ＋ .sum-step（.w 詞＋.ro／.m 意思／.beat 拍數）
+   D 變化格  .sum-grid（.h 欄名、.rl 列名、.c 格子＋data-h="欄名"，例外加 .exc；欄數用 style="--cols:3"；列名是單一漢字時包 <span class="big">）
+   ⚠️ 日文格子不要用 td.col-ja——kanji-link.js 會在那裡插漢字徽章 */
+.sum-grid .ro, .sum-card .ro, .sum-bin .ro, .sum-step .ro, .sum-exc .ro {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ink-mute); font-size: 14px;
+}
+.sum-cards .jp, .sum-bin .jp, .sum-grid .jp, .sum-exc .jp { font-family: 'Klee One', 'Shippori Mincho', serif; }
+
+/* 收尾段落的引言（各頁 <style> 有同名規則的會被這條蓋掉，數值相同） */
+.lead { margin-bottom: 14px; color: var(--ink-soft); font-size: 14px; line-height: 1.8; }
+
+/* A 句型卡 */
+.sum-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 20px; }
+.sum-card { background: rgba(255,255,255,.85); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 8px; padding: 12px 16px; }
+.sum-card .want { font-size: 13px; color: var(--ink-mute); }
+.sum-card .pat { font-family: 'Shippori Mincho', serif; font-size: 19px; color: var(--ink); margin: 2px 0 8px; font-weight: 600; line-height: 1.6; }
+.sum-card .pat b { color: var(--accent); }
+.sum-card .ex { border-top: 1px dashed var(--line); padding-top: 6px; font-size: 15px; line-height: 1.7; color: var(--ink); }
+.sum-card .ex .ro { display: block; }
+.sum-card .tip-line { font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+
+/* B 分成幾堆 */
+.sum-bins { display: grid; grid-template-columns: repeat(var(--cols, 2), 1fr); gap: 14px; margin: 16px 0 12px; }
+.sum-bin { border-radius: 12px; padding: 14px 16px; background: #fff; border: 2px solid var(--accent-soft); }
+.sum-bin h4 { margin: 0 0 4px; font-family: 'Shippori Mincho', serif; font-size: 20px; color: var(--ink); text-align: center; }
+.sum-bin b { color: var(--accent); }
+.sum-bin .who { text-align: center; font-size: 13px; color: var(--ink-mute); margin-bottom: 8px; }
+.sum-bin table { width: 100%; border-collapse: collapse; }
+.sum-bin td { padding: 6px 4px; border-top: 1px dashed var(--line); white-space: nowrap; font-size: 15px; color: var(--ink); }
+.sum-bin td.jp { font-size: 16px; }
+.sum-bin td.q { font-size: 13px; color: var(--ink-mute); }
+.sum-bin td.arw { color: var(--ink-mute); text-align: center; width: 22px; }
+.sum-exc { display: flex; gap: 14px; align-items: flex-start; border: 2px dashed var(--accent); border-radius: 12px; padding: 12px 16px; margin: 0 0 16px; background: rgba(255,255,255,.5); }
+.sum-exc .exc-tag { flex: none; background: var(--accent); color: #fff; font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; transform: rotate(-4deg); margin-top: 4px; }
+.sum-exc b { color: var(--accent); }
+.sum-exc .arw { color: var(--ink-mute); margin: 0 4px; }
+.sum-exc .exc-note { font-size: 13px; color: var(--ink-soft); line-height: 1.8; margin-top: 4px; }
+
+/* C 刻度軸 */
+.sum-scale { position: relative; margin: 18px 0 20px; padding-left: 34px; }
+.sum-scale::before { content: ""; position: absolute; left: 12px; top: 10px; bottom: 10px; width: 4px; border-radius: 2px; background: linear-gradient(var(--accent), var(--accent-pale)); }
+.sum-step { position: relative; display: grid; grid-template-columns: 11em 1fr; align-items: baseline; gap: 10px; padding: 7px 0; }
+.sum-step::before { content: ""; position: absolute; left: -28px; top: 14px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 3px solid var(--accent); }
+.sum-step .w { white-space: nowrap; font-family: 'Klee One', 'Shippori Mincho', serif; font-size: 19px; color: var(--ink); }
+.sum-step .m { font-size: 14px; color: var(--ink-soft); }
+.sum-step .beat { font-size: 12px; color: var(--ink-mute); border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; margin-left: 6px; }
+.sum-zone { margin: 8px 0 4px; padding: 3px 10px; font-size: 12px; font-weight: 600; color: #fff; background: var(--accent); border-radius: 999px; display: inline-block; }
+.sum-zone.neg { background: #d0892a; }
+
+/* D 變化格 */
+.sum-grid { display: grid; grid-template-columns: 6.5em repeat(var(--cols, 3), 1fr); gap: 6px; margin: 16px 0 20px; font-size: 15px; }
+.sum-grid .h { font-size: 13px; color: var(--ink-mute); text-align: center; padding: 4px 0; }
+.sum-grid .rl { background: var(--accent); color: #fff; border-radius: 8px; padding: 8px 10px; font-size: 13px; line-height: 1.5; }
+.sum-grid .rl .jp { font-size: 15px; }
+.sum-grid .rl .big { font-family: 'Shippori Mincho', serif; font-size: 26px; line-height: 1.2; }
+.sum-grid .c { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; line-height: 1.5; color: var(--ink); }
+.sum-grid .c b { color: var(--accent); }
+.sum-grid .c .ro { display: block; font-size: 13px; }
+.sum-grid .exc { border-style: dashed; border-color: var(--accent); }
+.sum-grid .rl.exc { background: #fff; color: var(--accent); border: 2px dashed var(--accent); }
+
+@media (max-width: 560px) {
+  .sum-cards, .sum-bins { grid-template-columns: 1fr; }
+  /* 手機：每一列的名稱佔一整行，格子兩兩一排，欄名改寫在格子裡（data-h） */
+  .sum-grid { grid-template-columns: 1fr 1fr; }
+  .sum-grid .h, .sum-grid > div:not([class]) { display: none; }
+  .sum-grid .rl { grid-column: 1 / -1; margin-top: 6px; }
+  .sum-grid .c[data-h]::before { content: attr(data-h); display: block; font-family: 'Noto Serif TC', serif; font-size: 11px; color: var(--ink-mute); }
+  .sum-step { grid-template-columns: 1fr; gap: 0; }
+}

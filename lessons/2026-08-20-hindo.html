@@ -28,10 +28,10 @@
 .rung + .rung{border-top:1px solid var(--line);}
 .rung.split{border-top:2px solid var(--accent);}
 .rung-pct{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-mute);text-align:right;}
-.rung-bar{position:relative;height:26px;background:var(--paper-deep);border-radius:3px;overflow:hidden;}
-.rung-fill{position:absolute;inset:0 auto 0 0;background:var(--accent-soft);}
+.rung-bar{position:relative;height:36px;background:var(--paper-deep);border-radius:3px;}
+.rung-fill{position:absolute;inset:0 auto 0 0;background:var(--accent-soft);border-radius:3px;}
 .rung.is-neg .rung-fill{background:#e3b3a2;}
-.rung-word{position:relative;z-index:1;display:flex;align-items:center;height:100%;padding-left:9px;
+.rung-word{position:relative;z-index:1;display:flex;align-items:center;height:100%;padding:6px 0 0 9px;box-sizing:border-box;
   font-family:'Klee One','Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--ink);}
 .rung-cn{font-size:13px;color:var(--ink-soft);}
 .ladder-note{font-size:12.5px;color:var(--ink-mute);padding:4px 18px 8px;line-height:1.7;}
@@ -101,7 +101,7 @@
       <li><a href="#hatsuon"><span class="toc-n">04</span>唸不順是因為拍子少算了<span class="toc-s">ん・っ 各佔一整拍</span></a></li>
       <li><a href="#reibun"><span class="toc-n">05</span>同一句話換個副詞，差別在哪裡<span class="toc-s">本を読みます</span></a></li>
       <li><a href="#machigai"><span class="toc-n">06</span>有幾種說法特別容易寫錯<span class="toc-s">あまり読みます ✗</span></a></li>
-      <li><a href="#matome"><span class="toc-n">07</span>整理成一張表<span class="toc-s">まとめ</span></a></li>
+      <li><a href="#matome"><span class="toc-n">07</span>照頻率高低排一次<span class="toc-s">まとめ</span></a></li>
       <li><a href="#quiz"><span class="toc-n">08</span>換你自己做做看<span class="toc-s">Self-Quiz</span></a></li>
     </ul>
   </nav>
@@ -502,20 +502,24 @@
   </table>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider" id="matome">七、整理成一張表</div>
+  <div class="divider" id="matome">七、最後照頻率高低排一次：あまり 以下句尾要用否定</div>
 
-  <table class="joshi-table">
-    <tr><th style="width:23%">詞</th><th style="width:20%">羅馬拼音</th><th style="width:9%">拍子</th><th style="width:22%">意思</th><th>句尾</th></tr>
-    <tr><td class="col-ja">いつも</td><td>itsumo</td><td>三拍</td><td>總是（100%）</td><td class="pos">肯定</td></tr>
-    <tr><td class="col-ja">よく</td><td>yoku</td><td>兩拍</td><td>常常</td><td class="pos">肯定</td></tr>
-    <tr><td class="col-ja"><ruby>時々<rt>ときどき</rt></ruby></td><td>tokidoki</td><td>四拍</td><td>有時候</td><td class="pos">肯定</td></tr>
-    <tr class="key"><td class="col-ja">たまに</td><td>tama ni</td><td>三拍</td><td>偶爾、難得</td><td class="pos">肯定</td></tr>
-    <tr><td class="col-ja">あまり</td><td>amari</td><td>三拍</td><td>不太〜</td><td class="neg">否定</td></tr>
-    <tr class="key"><td class="col-ja">ほとんど</td><td>hotondo</td><td><b>四拍</b></td><td>幾乎不〜</td><td class="neg">否定</td></tr>
-    <tr class="key"><td class="col-ja"><ruby>全<rt>まった</rt></ruby>く</td><td>mattaku</td><td><b>四拍</b></td><td>完全不〜（正式）</td><td class="neg">否定</td></tr>
-    <tr><td class="col-ja"><ruby>全然<rt>ぜんぜん</rt></ruby></td><td>zenzen</td><td><b>四拍</b></td><td>完全不〜（口語）</td><td class="neg">否定</td></tr>
-  </table>
+  <p class="lead">
+    從最常到完全不，由上往下排。上半段的句尾是肯定，從 あまり 開始句尾要換成否定（〜ません）。右邊的拍數是唸的時候要數滿的拍子。
+  </p>
 
+  <div class="sum-scale">
+    <span class="sum-zone">句尾用肯定</span>
+    <div class="sum-step"><span class="w">いつも <span class="ro">itsumo</span></span><span class="m">總是（100%）<span class="beat">三拍</span></span></div>
+    <div class="sum-step"><span class="w">よく <span class="ro">yoku</span></span><span class="m">常常<span class="beat">兩拍</span></span></div>
+    <div class="sum-step"><span class="w"><ruby>時々<rt>ときどき</rt></ruby> <span class="ro">tokidoki</span></span><span class="m">有時候<span class="beat">四拍</span></span></div>
+    <div class="sum-step"><span class="w">たまに <span class="ro">tama ni</span></span><span class="m">偶爾、難得<span class="beat">三拍</span></span></div>
+    <span class="sum-zone neg">句尾用否定</span>
+    <div class="sum-step"><span class="w">あまり <span class="ro">amari</span></span><span class="m">不太〜<span class="beat">三拍</span></span></div>
+    <div class="sum-step"><span class="w">ほとんど <span class="ro">hotondo</span></span><span class="m">幾乎不〜<span class="beat">四拍</span></span></div>
+    <div class="sum-step"><span class="w"><ruby>全<rt>まった</rt></ruby>く <span class="ro">mattaku</span></span><span class="m">完全不〜（正式）<span class="beat">四拍</span></span></div>
+    <div class="sum-step"><span class="w"><ruby>全然<rt>ぜんぜん</rt></ruby> <span class="ro">zenzen</span></span><span class="m">完全不〜（口語）<span class="beat">四拍</span></span></div>
+  </div>
   <!-- ─────────────────────────────────────── -->
   <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
 

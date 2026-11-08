@@ -370,6 +370,21 @@ CSS 在 [shared.css](shared.css)（`.acc` / `.acc-k` / `.ar` / `.ar-legend` / `.
 
 音讀＝`--accent` 棕橘、訓讀＝`#a9762a` 金茶、台語線索＝`.mnemonic.taigi` 紅貼紙，與全站一致。
 
+#### 收尾整理 `.sum-*`（2026-11-08 起，取代「整理成一張表」）
+
+課程倒數第二段（小測驗前面）的整理**不再用 `.joshi-table` 表格**，照內容挑一種樣板（CSS 在 [shared.css](shared.css)）：
+
+| 內容長什麼樣 | 樣板 | 範例 |
+|------|------|------|
+| 「想說的／句型／例句」一條一條（最常見） | A 句型卡 `.sum-cards` > `.sum-card`（`.want`／`.pat`／`.ex` ＋ `.ro`） | [yori-no-hou-ga](lessons/2026-11-06-yori-no-hou-ga.html) |
+| 照規則或詞性分組（く／に、加不加 さ） | B 分成幾堆 `.sum-bins` > `.sum-bin`，例外另放 `.sum-exc` 虛線框 | [kunarimashita](lessons/2026-11-08-kunarimashita.html)、[omosa-kyori](lessons/2026-10-04-omosa-kyori.html) |
+| 本身有順序（頻率、遠近、次數） | C 刻度軸 `.sum-scale`，`.sum-zone`（`.neg` 亮琥珀）分段 | [hindo](lessons/2026-08-20-hindo.html) |
+| 兩個方向都要對照（詞性 × 時態） | D 變化格 `.sum-grid`，格子帶 `data-h="欄名"`，手機會自動疊成兩欄 | [karakatta-desu](lessons/2026-08-31-karakatta-desu.html) |
+
+- 段落開頭照樣先用 `.lead` 鋪一兩句；標題寫結論（見下方〈中文的寫法〉的收尾句型），不叫「整理成一張表」或「速記表」。
+- 例字盡量不要跟正文例句重複，**每個日文都附羅馬拼音**。
+- ⚠️ 樣板裡的日文**不要用 `td.col-ja`**——`kanji-link.js` 會在那種格子插漢字徽章，把版面撐亂。
+
 #### 跨頁連結卡 `.next-link`（2026-08-05 統一）
 
 `.next-link` ＋ `.next-kicker` `.next-title` `.next-arrow` `.next-sub` 已收進 **shared.css**，新頁直接用 class，
@@ -397,7 +412,7 @@ CSS 在 [shared.css](shared.css)（`.acc` / `.acc-k` / `.ar` / `.ar-legend` / `.
 | 主題 — 季節 | [seasons](lessons/2026-05-04-seasons.html) | `.seasons` + `.season-card` (spring/summer/autumn/winter) / `.extras` + `.extra-item` / 自有 `.all-seasons-btn` `.small-play-btn` |
 | 主題 — 句型／問候 | [ashita](lessons/2026-05-02-ashita.html) | `.category` + `.category-title` / `.phrase` `.phrase-content` `.phrase-ja` `.phrase-romaji` `.phrase-meaning` / `.warning` |
 | 文法 — 助詞／音變 | [joshi-wa](lessons/2026-05-10-joshi-wa.html), [joshi-2](lessons/2026-05-10-joshi-2.html), [dakuten-sokuon](lessons/2026-05-09-dakuten-sokuon.html) | `.joshi-table` + `.col-kana` `.col-romaji` `.col-role` `.col-meaning` / `.j-mark`（行內助詞高亮）/ `.vs-grid` + `.vs-col` 對照欄 / `.next-link` 跨頁 |
-| 文法 — 詞彙概念（人稱／音讀） | [jinshou](lessons/2026-05-13-jinshou.html), [onyomi-sensei](lessons/2026-05-13-onyomi-sensei.html) | 自製 `.pron-card` / `.job-card`（漢字大＋假名小＋羅馬＋意思的卡片）/ `.kanji-spot` 單字大字解析 / 速記表沿用 `.joshi-table` 同款 |
+| 文法 — 詞彙概念（人稱／音讀） | [jinshou](lessons/2026-05-13-jinshou.html), [onyomi-sensei](lessons/2026-05-13-onyomi-sensei.html) | 自製 `.pron-card` / `.job-card`（漢字大＋假名小＋羅馬＋意思的卡片）/ `.kanji-spot` 單字大字解析 / 收尾整理改用 `.sum-grid`（見〈收尾整理 `.sum-*`〉） |
 | 假名概念 | [kana](lessons/2026-05-04-kana.html) | 自有 `.tree-box` `.branch-card` (hira/kata) / `.compare-table` / `.example-row` + `.ex-hira` `.ex-kata` |
 | 自我介紹（片假名） | [my-name-katakana](my-name-katakana.html) | 自有 `.card`（藍色主題、結構接近 reading hero） |
 | 閱讀筆記 | *（已無現存頁，樣式僅存於 git 歷史）* | `.hero` + `.hero-title` `.hero-sub` `.hero-meta` / `.vertical-text` + `.vertical-card` / `.particles` + `.particle` / `.row` + `.kana` + `.translate` / `.grammar` |
@@ -453,7 +468,7 @@ curl -s "https://www.irasutoya.com/feeds/posts/default?q=<關鍵字URL編碼>&al
   | 講怎麼用 | …是這樣用的 | 五、放進句子裡是這樣用的 |
   | 要讀者自己比較 | …，差別在哪裡 | 五、同一句話換個副詞，差別在哪裡 |
   | 提醒陷阱 | 有〇個地方容易講錯／有幾種說法特別容易寫錯 | 六、有兩個地方容易講錯 |
-  | 收尾 | 整理成一張表 | 七、整理成一張表 |
+  | 收尾（2026-11-08 起不再用表格） | 最後把〇〇放在一起看／分成兩邊：…／照〇〇排一次：… | 六、最後把比較的說法放在一起看<br>八、最後把字分成兩邊：い形容詞用 く，其他都用 に<br>七、最後照頻率高低排一次：あまり 以下句尾要用否定 |
 
   | 收尾的小測驗 | 換你自己做做看 · Self-Quiz | 八、換你自己做做看 · Self-Quiz |
 

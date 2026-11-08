@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X が〜くなりました／〜になりました — 用三組反義詞講「變得〜了」</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 速記表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.joshi-table small{color:var(--ink-mute);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;}
+.col-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+/* 兩個籃子 */
+.bins{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 12px;}
+.bin{border-radius:12px;padding:14px 16px;background:#fff;border:2px solid var(--accent-soft);}
+.bin h4{margin:0 0 4px;font-family:'Shippori Mincho',serif;font-size:21px;color:var(--ink);text-align:center;}
+.bin h4 b,.bin td b,.bin-exc b{color:var(--accent);}
+.bin .who{text-align:center;font-size:13px;color:var(--ink-mute);margin-bottom:8px;}
+.bin table{width:100%;border-collapse:collapse;}
+.bin td.jp{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;}
+.bin td{padding:6px 4px;border-top:1px dashed var(--line);white-space:nowrap;}
+.bin td.arw,.bin-exc .arw{color:var(--ink-mute);text-align:center;width:22px;}
+.ro{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;}
+.bin-exc{display:flex;gap:14px;align-items:flex-start;border:2px dashed var(--accent);border-radius:12px;padding:12px 16px;margin:0 0 16px;background:rgba(255,255,255,.5);}
+.exc-tag{flex:none;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;transform:rotate(-4deg);margin-top:4px;}
+.exc-note{font-size:13px;color:var(--ink-soft);line-height:1.8;margin-top:4px;}
+@media(max-width:560px){.bins{grid-template-columns:1fr;}}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* 反義詞成對 */
+.pair-head{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:22px 0 4px;font-weight:600;}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">X が〜<span class="accent">く</span>なりました／〜<span class="accent">に</span>なりました</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 08</div>
+  <p class="page-subtitle">用 汚い・きれい、明るい・暗い、高い・低い 三組反義詞，講「X 變得〜了」</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    車子洗完變乾淨了、傍晚天色變暗了、夏天氣溫變高了，這些都是「本來不是這樣，後來變成這樣」。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 X が〜くなりました 說「X 變得〜了」（汚くなりました、暗くなりました）</li>
+      <li>知道 きれい 為什麼要用 に，說成 きれいになりました</li>
+      <li>分清楚 明るく 的 く 跟 きれいに 的 に 其實是同一個位置，差別只在形容詞的種類</li>
+      <li>分清楚 外が暗いです（現在很暗）和 外が暗くなりました（變暗了）</li>
+      <li>知道 気温 要配 高い・低い，不配 暑い・寒い</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">一、以三組反義詞為主軸，把六個句子排出來</div>
+
+  <p class="lead">
+    這六句都是同一個句型：<strong>X が ＋ 形容詞變形 ＋ なりました</strong>。三組形容詞都是
+    <a href="2026-10-27-hantaigo.html" style="color:var(--accent);">10/27 反義詞那篇</a>學過的，
+    這裡只是在後面接上 なりました，從「是什麼樣子」變成「變成什麼樣子了」。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>例句</div>
+
+    <div class="pair-head">髒 ↔ 乾淨</div>
+
+    <div class="word-item" data-text="車が汚くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>車<rt>くるま</rt></ruby>が　<ruby>汚<rt>きたな</rt></ruby><span class="j-mark">く</span>なりました</div>
+        <div class="word-romaji">kuruma ga kitanaku narimashita</div>
+        <div class="word-meaning">車子變髒了。汚い 是い形容詞，い 換成 く</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="車がきれいになりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>車<rt>くるま</rt></ruby>が　きれい<span class="j-mark">に</span>なりました</div>
+        <div class="word-romaji">kuruma ga kirei ni narimashita</div>
+        <div class="word-meaning">車子變乾淨了。きれい 是な形容詞，後面加 に</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="pair-head">亮 ↔ 暗</div>
+
+    <div class="word-item" data-text="外が明るくなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>外<rt>そと</rt></ruby>が　<ruby>明<rt>あか</rt></ruby>る<span class="j-mark">く</span>なりました</div>
+        <div class="word-romaji">soto ga akaruku narimashita</div>
+        <div class="word-meaning">外面變亮了（天亮了）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="外が暗くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>外<rt>そと</rt></ruby>が　<ruby>暗<rt>くら</rt></ruby><span class="j-mark">く</span>なりました</div>
+        <div class="word-romaji">soto ga kuraku narimashita</div>
+        <div class="word-meaning">外面變暗了（天黑了）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="pair-head">高 ↔ 低</div>
+
+    <div class="word-item" data-text="気温が高くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>気<rt>き</rt>温<rt>おん</rt></ruby>が　<ruby>高<rt>たか</rt></ruby><span class="j-mark">く</span>なりました</div>
+        <div class="word-romaji">kion ga takaku narimashita</div>
+        <div class="word-meaning">氣溫變高了</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="気温が低くなりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>気<rt>き</rt>温<rt>おん</rt></ruby>が　<ruby>低<rt>ひく</rt></ruby><span class="j-mark">く</span>なりました</div>
+        <div class="word-romaji">kion ga hikuku narimashita</div>
+        <div class="word-meaning">氣溫變低了</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    六句裡面只有 きれい 那一句是 に，其他五句都是 く。原因在下面兩節。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">二、い形容詞是把最後那個 い 換成 く</div>
+
+  <p class="lead">
+    汚い、明るい、暗い、高い、低い 這五個都是い形容詞。變法只有一步：<strong>拿掉字尾的 い，換成 く</strong>，
+    後面直接接 なりました。前面的部分一個假名都不動。
+  </p>
+
+  <div class="formula">
+    <h4>い形容詞 → 〜くなりました</h4>
+    <div class="fx">
+      <ruby>汚<rt>きたな</rt></ruby><s>い</s><span class="arw">→</span><ruby>汚<rt>きたな</rt></ruby><b>く</b>なりました　<small style="color:var(--ink-mute);font-size:13px;">kitanaku</small><br>
+      <ruby>明<rt>あか</rt></ruby>る<s>い</s><span class="arw">→</span><ruby>明<rt>あか</rt></ruby>る<b>く</b>なりました　<small style="color:var(--ink-mute);font-size:13px;">akaruku</small><br>
+      <ruby>暗<rt>くら</rt></ruby><s>い</s><span class="arw">→</span><ruby>暗<rt>くら</rt></ruby><b>く</b>なりました　<small style="color:var(--ink-mute);font-size:13px;">kuraku</small><br>
+      <ruby>高<rt>たか</rt></ruby><s>い</s><span class="arw">→</span><ruby>高<rt>たか</rt></ruby><b>く</b>なりました　<small style="color:var(--ink-mute);font-size:13px;">takaku</small><br>
+      <ruby>低<rt>ひく</rt></ruby><s>い</s><span class="arw">→</span><ruby>低<rt>ひく</rt></ruby><b>く</b>なりました　<small style="color:var(--ink-mute);font-size:13px;">hikuku</small>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>低くなりました 有兩個 く，不是打錯</strong><br>
+    低い 本來就是 ひく＋い，把 い 換成 く 之後變成 ひく<b>く</b>（hikuku），く 連著出現兩次。
+    唸的時候兩拍都要唸出來，不要縮成「ひくなりました」。
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 明るい 藏著「紅」，暗い 跟「黑」很像</strong><br>
+    <strong><ruby>明<rt>あか</rt></ruby>るい（akarui）</strong>：前兩個音就是 <ruby>赤<rt>あか</rt></ruby>い（紅色的）的 <span class="compare">あか</span>。太陽、火都是紅紅亮亮的，「紅」跟「亮」本來就是一家人。<br>
+    <strong><ruby>暗<rt>くら</rt></ruby>い（kurai）</strong>：跟 <ruby>黒<rt>くろ</rt></ruby>い（黑色的）只差一個母音，<span class="compare">くら</span> ↔ <span class="compare">くろ</span>，暗暗的就是黑黑的。<br>
+    日語的語源說法也是這樣：赤 跟「明」同源，黒 跟「暗」同源。赤い、黒い 在 <a href="2026-08-03-colors.html" style="color:var(--accent);">8/3 顏色那篇</a>學過。<br>
+    <span style="color:var(--ink-mute);">漢字的話，明 是 日＋月，兩個會發光的東西放在一起，所以是亮；暗 的左邊也有 日，右邊是 音。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">三、きれい 的 い 不是字尾，所以它接 に</div>
+
+  <p class="lead">
+    きれい 最後也是 い，看起來很像い形容詞，可是它其實是な形容詞。きれい 的漢字是 綺麗，最後那個 い 是「麗（れい）」這個字自己的音，
+    不是形容詞的字尾，所以不能拿掉。な形容詞接 なりました 的時候，直接在後面加 <span class="j-mark">に</span>。
+  </p>
+
+  <div class="formula">
+    <h4>な形容詞 → 〜になりました</h4>
+    <div class="fx">
+      きれい<span class="arw">→</span>きれい<b>に</b>なりました　<small style="color:var(--ink-mute);font-size:13px;">kirei ni narimashita</small>
+    </div>
+  </div>
+
+  <p class="lead">
+    分不出來是哪一種的時候，就想想它接名詞的時候要不要加 な。要加 な 的就是な形容詞，接 なります 時用 に：
+  </p>
+
+  <table class="joshi-table">
+    <tr><th></th><th><ruby>汚<rt>きたな</rt></ruby>い（い形容詞）</th><th>きれい（な形容詞）</th></tr>
+    <tr>
+      <td>接名詞</td>
+      <td class="col-ja"><ruby>汚<rt>きたな</rt></ruby>い<ruby>車<rt>くるま</rt></ruby><br><small>kitanai kuruma</small></td>
+      <td class="col-ja">きれい<b>な</b><ruby>車<rt>くるま</rt></ruby><br><small>kirei na kuruma</small></td>
+    </tr>
+    <tr>
+      <td>否定</td>
+      <td class="col-ja"><ruby>汚<rt>きたな</rt></ruby><b>くない</b>です<br><small>kitanakunai desu</small></td>
+      <td class="col-ja">きれい<b>じゃない</b>です<br><small>kirei janai desu</small></td>
+    </tr>
+    <tr>
+      <td>接 なりました</td>
+      <td class="col-ja"><ruby>汚<rt>きたな</rt></ruby><b>く</b>なりました<br><small>kitanaku narimashita</small></td>
+      <td class="col-ja">きれい<b>に</b>なりました<br><small>kirei ni narimashita</small></td>
+    </tr>
+  </table>
+
+  <p class="lead">
+    三行都是同一個道理：い形容詞自己變形（い 換成 く），な形容詞本身不動，在後面另外加東西（な、じゃない、に）。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">四、明るく 的 く 和 きれいに 的 に 是同一個位置</div>
+
+  <p class="lead">
+    明るく 和 きれいに 看起來不一樣，其實做的是同一件事：形容詞要接在動詞 なります 前面，得先換成「接動詞的形狀」。
+    い形容詞的這個形狀是 〜く，な形容詞的這個形狀是 〜に。中文說「變<strong>得</strong>亮」「變<strong>得</strong>乾淨」，
+    く 和 に 就像那個「得」，負責把形容詞跟動詞接起來。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>い形容詞：自己變成 く</h4>
+      <div class="vs-sub">字尾的 い 換掉</div>
+      <ul>
+        <li>明るい → 明る<b>く</b> ＋ なりました</li>
+        <li>暗い → 暗<b>く</b> ＋ なりました</li>
+        <li>高い → 高<b>く</b> ＋ なりました</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>な形容詞：後面加 に</h4>
+      <div class="vs-sub">本身不動，名詞也一樣</div>
+      <ul>
+        <li>きれい → きれい<b>に</b> ＋ なりました</li>
+        <li>元気 → 元気<b>に</b> ＋ なりました</li>
+        <li>大学生 → 大学生<b>に</b> ＋ なりました</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    所以真正要判斷的只有一件事：它是不是い形容詞。是的話用 く，不是的話（な形容詞、名詞）一律用 に。
+    名詞接 に 的說法在 <a href="2026-08-25-naru.html" style="color:var(--accent);">8/25〈〜くなる／〜になる〉</a>那篇有更多例子。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">五、なりました 是在講「變了，現在是這樣」</div>
+
+  <p class="lead">
+    なります 是「變成」，過去式 なりました 表示變化已經發生，現在的狀態就是變完之後的樣子。
+    跟只用 です 的句子比一比，差別在有沒有「變」的過程：
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>外が暗いです</h4>
+      <div class="vs-sub">soto ga kurai desu</div>
+      <ul>
+        <li>外面很暗</li>
+        <li>單純描述現在的樣子，不管之前怎樣</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>外が暗くなりました</h4>
+      <div class="vs-sub">soto ga kuraku narimashita</div>
+      <ul>
+        <li>外面變暗了（天黑了）</li>
+        <li>本來是亮的，後來變暗，現在是暗的</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    變化的主角後面用 <span class="j-mark">が</span>（車が、外が、気温が），因為「變」是它自己發生的事。
+    還沒變、接下來才會變的，就用現在式 なります：
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>なります 和 なりました 對照</div>
+
+    <div class="word-item" data-text="これから気温が低くなります">
+      <div class="word-content">
+        <div class="word-ja">これから　<ruby>気<rt>き</rt>温<rt>おん</rt></ruby>が　<ruby>低<rt>ひく</rt></ruby>く<span class="j-mark">なります</span></div>
+        <div class="word-romaji">korekara kion ga hikuku narimasu</div>
+        <div class="word-meaning">接下來氣溫會變低。還沒發生，用 なります</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="洗いましたから、車がきれいになりました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>洗<rt>あら</rt></ruby>いましたから、<ruby>車<rt>くるま</rt></ruby>が　きれいに<span class="j-mark">なりました</span></div>
+        <div class="word-romaji">araimashita kara, kuruma ga kirei ni narimashita</div>
+        <div class="word-meaning">因為洗過了，車子變乾淨了。已經發生，用 なりました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">六、気温 要配 高い・低い，不配 暑い・寒い</div>
+
+  <p class="lead">
+    気温 是溫度計上的數字，數字只有高低，所以說 気温が高い／気温が低い。
+    要講身體感覺到的熱和冷，主角就換成天氣或日子，用 暑い・寒い。
+    暑い 的用法見 <a href="2026-08-14-ne-no-tango.html" style="color:var(--accent);">8/14 的單字課</a>。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>講數字：高い・低い</h4>
+      <div class="vs-sub">主角是 気温</div>
+      <ul>
+        <li>気温が高くなりました</li>
+        <li>気温が低くなりました</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>講感覺：暑い・寒い</h4>
+      <div class="vs-sub">主角省略，或換成 今日</div>
+      <ul>
+        <li><ruby>暑<rt>あつ</rt></ruby>くなりました（變熱了）</li>
+        <li><ruby>寒<rt>さむ</rt></ruby>くなりました（變冷了）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 気温 拆成 気 和 温，各有一組學過的字</strong><br>
+    <strong>気（き）</strong>：跟 <ruby>天<rt>てん</rt>気<rt>き</rt></ruby>（天氣）、<ruby>元<rt>げん</rt>気<rt>き</rt></ruby>（有精神）是同一個 き。<br>
+    <strong>温（おん）</strong>：就是 <a href="2026-08-25-masen-tango.html" style="color:var(--accent);">8/25 學過的</a> <ruby>温<rt>あたた</rt></ruby>かい 的「温」，
+    在漢字詞裡唸 おん，像 <ruby>温<rt>おん</rt>泉<rt>せん</rt></ruby>（溫泉）。<br>
+    「空氣的溫度」＝<span class="compare">き＋おん</span>＝ きおん（kion）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">七、有兩個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① きれい 不能把 い 換成 く</strong><br>
+    ✗ <s>きれくなりました</s>　○ きれいになりました<br>
+    <span style="color:var(--ink-mute);">きれい 的 い 是「麗」的音，拿掉就不是這個字了。同一類的還有 有名（ゆうめい）、嫌い（きらい），結尾是 い 卻是な形容詞。</span>
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② い形容詞不要留著 い 再加東西</strong><br>
+    ✗ <s>暗いになりました</s>　✗ <s>暗いくなりました</s>　✗ <s>暗いですなりました</s><br>
+    ○ <ruby>暗<rt>くら</rt></ruby>くなりました（kuraku narimashita）<br>
+    <span style="color:var(--ink-mute);">い 一定要換成 く，而且只換一次。禮貌的語氣由句尾的 なりました 負責，前面不用再放 です。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider">八、最後把字分成兩邊：い形容詞用 く，其他都用 に</div>
+
+  <p class="lead">
+    把要接 なりました 的字分成兩堆。い形容詞放左邊，い 換成 く；な形容詞和名詞放右邊，後面加 に。
+    表裡換成上面沒出現過的字，順便複習之前學過的詞。
+  </p>
+
+  <div class="bins">
+    <div class="bin">
+      <h4>〜<b>く</b>なりました</h4>
+      <div class="who">い形容詞（接名詞不用加 な）</div>
+      <table>
+        <tr><td class="jp"><ruby>寒<rt>さむ</rt></ruby>い</td><td class="arw">→</td><td class="jp"><ruby>寒<rt>さむ</rt></ruby><b>く</b></td><td class="ro">samuku</td></tr>
+        <tr><td class="jp"><ruby>暗<rt>くら</rt></ruby>い</td><td class="arw">→</td><td class="jp"><ruby>暗<rt>くら</rt></ruby><b>く</b></td><td class="ro">kuraku</td></tr>
+        <tr><td class="jp"><ruby>高<rt>たか</rt></ruby>い</td><td class="arw">→</td><td class="jp"><ruby>高<rt>たか</rt></ruby><b>く</b></td><td class="ro">takaku</td></tr>
+      </table>
+    </div>
+    <div class="bin">
+      <h4>〜<b>に</b>なりました</h4>
+      <div class="who">な形容詞、名詞</div>
+      <table>
+        <tr><td class="jp">きれい</td><td class="arw">→</td><td class="jp">きれい<b>に</b></td><td class="ro">kirei ni</td></tr>
+        <tr><td class="jp"><ruby>有名<rt>ゆうめい</rt></ruby></td><td class="arw">→</td><td class="jp"><ruby>有名<rt>ゆうめい</rt></ruby><b>に</b></td><td class="ro">yuumei ni</td></tr>
+        <tr><td class="jp"><ruby>静<rt>しず</rt></ruby>か</td><td class="arw">→</td><td class="jp"><ruby>静<rt>しず</rt></ruby>か<b>に</b></td><td class="ro">shizuka ni</td></tr>
+        <tr><td class="jp"><ruby>大人<rt>おとな</rt></ruby></td><td class="arw">→</td><td class="jp"><ruby>大人<rt>おとな</rt></ruby><b>に</b></td><td class="ro">otona ni</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="bin-exc">
+    <span class="exc-tag">例外</span>
+    <div>
+      <div class="col-ja">いい <span class="arw">→</span> <b>よく</b>なりました <span class="ro">yoku narimashita</span></div>
+      <div class="exc-note">いい 是い形容詞，但不能變成「いく」，要先換回老形狀 よい 再變。例：<ruby>天気<rt>てんき</rt></ruby>がよくなりました（tenki ga yoku narimashita，天氣變好了）</div>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>きれい、有名 最後也是 い，為什麼放在右邊</strong><br>
+    因為它們的 い 是漢字本身的音，不是い形容詞的字尾。把字寫成漢字就看得出來：
+    <ul class="tip-list">
+      <li>い形容詞的 い 寫在漢字外面：<ruby>寒<rt>さむ</rt></ruby><b>い</b>、<ruby>高<rt>たか</rt></ruby><b>い</b>、<ruby>暗<rt>くら</rt></ruby><b>い</b>。這個 い 是可以換掉的字尾，所以能變成 寒く。</li>
+      <li>きれい 寫成漢字是 <ruby>綺麗<rt>きれい</rt></ruby>，い 是「麗（れい）」的音；<ruby>有名<rt>ゆうめい</rt></ruby> 的 い 是「名（めい）」的音。い 包在漢字裡面，拿掉就不是這個字了，所以只能在後面加 な、に。</li>
+    </ul>
+    這兩個字都是從中文借來的漢字詞（綺麗、有名），這種詞拿來當形容詞時大多是な形容詞，所以接名詞要加 な（きれいな車 kirei na kuruma、有名な店 yuumei na mise）。<br>
+    <span style="color:var(--ink-mute);">少數例外是 <ruby>嫌<rt>きら</rt></ruby>い（kirai，討厭）：い 寫在漢字外面，卻是な形容詞（嫌いな食べ物）。遇到沒把握的字，還是用第三節的方法想一下接名詞要不要加 な。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">九、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>房間變乾淨了。（提示：部屋＝へや）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>部屋がきれいになりました。<br>heya ga kirei ni narimashita.</p>
+        </details>
+      </li>
+      <li>房間變暗了。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>部屋が暗くなりました。<br>heya ga kuraku narimashita.</p>
+        </details>
+      </li>
+      <li>鞋子變髒了。（提示：靴＝くつ）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>靴が汚くなりました。<br>kutsu ga kitanaku narimashita.</p>
+        </details>
+      </li>
+      <li>「接下來氣溫會變高」，句尾要用 なります 還是 なりました？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>なります，因為還沒發生。<br>これから気温が高くなります。<br>korekara kion ga takaku narimasu.</p>
+        </details>
+      </li>
+      <li>「きれくなりました」錯在哪裡？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>きれい 是な形容詞，い 不能拿掉，要說 きれいになりました。<br>kirei ni narimashita.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-08-25-naru.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">〜くなる／〜になる <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/25：第一次學 なる，含例外的 いい → よくなる、名詞＋になる</span>
+  </a>
+
+  <a href="2026-10-27-hantaigo.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">形容詞的反義詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/27：汚い・きれい、高い・低い、明るい・暗い 這幾組字第一次出現的地方</span>
+  </a>
+
+  <a href="2026-08-29-naritai-biyouin.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜くなります・〜くします <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/29：自己變用 なる，有人動手讓它變用 する</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

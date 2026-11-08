@@ -1,6 +1,156 @@
 {
- "generated": "2026-11-07",
+ "generated": "2026-11-08",
  "words": [
+  {
+   "text": "車が汚くなりました",
+   "ja": "<ruby>車<rt>くるま</rt></ruby>が　<ruby>汚<rt>きたな</rt></ruby>くなりました",
+   "kana": "くるまが きたなくなりました",
+   "romaji": "kuruma ga kitanaku narimashita",
+   "meaning": "車子變髒了。汚い 是い形容詞，い 換成 く",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-08",
+     "href": "lessons/2026-11-08-kunarimashita.html",
+     "title": "X が〜くなりました／〜になりました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "交通"
+   ]
+  },
+  {
+   "text": "車がきれいになりました",
+   "ja": "<ruby>車<rt>くるま</rt></ruby>が　きれいになりました",
+   "kana": "くるまが きれいになりました",
+   "romaji": "kuruma ga kirei ni narimashita",
+   "meaning": "車子變乾淨了。きれい 是な形容詞，後面加 に",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-08",
+     "href": "lessons/2026-11-08-kunarimashita.html",
+     "title": "X が〜くなりました／〜になりました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "交通"
+   ]
+  },
+  {
+   "text": "外が明るくなりました",
+   "ja": "<ruby>外<rt>そと</rt></ruby>が　<ruby>明<rt>あか</rt></ruby>るくなりました",
+   "kana": "そとが あかるくなりました",
+   "romaji": "soto ga akaruku narimashita",
+   "meaning": "外面變亮了（天亮了）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-08",
+     "href": "lessons/2026-11-08-kunarimashita.html",
+     "title": "X が〜くなりました／〜になりました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "外が暗くなりました",
+   "ja": "<ruby>外<rt>そと</rt></ruby>が　<ruby>暗<rt>くら</rt></ruby>くなりました",
+   "kana": "そとが くらくなりました",
+   "romaji": "soto ga kuraku narimashita",
+   "meaning": "外面變暗了（天黑了）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-08",
+     "href": "lessons/2026-11-08-kunarimashita.html",
+     "title": "X が〜くなりました／〜になりました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "気温が高くなりました",
+   "ja": "<ruby>気<rt>き</rt>温<rt>おん</rt></ruby>が　<ruby>高<rt>たか</rt></ruby>くなりました",
+   "kana": "きおんが たかくなりました",
+   "romaji": "kion ga takaku narimashita",
+   "meaning": "氣溫變高了",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-08",
+     "href": "lessons/2026-11-08-kunarimashita.html",
+     "title": "X が〜くなりました／〜になりました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "気温が低くなりました",
+   "ja": "<ruby>気<rt>き</rt>温<rt>おん</rt></ruby>が　<ruby>低<rt>ひく</rt></ruby>くなりました",
+   "kana": "きおんが ひくくなりました",
+   "romaji": "kion ga hikuku narimashita",
+   "meaning": "氣溫變低了",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-08",
+     "href": "lessons/2026-11-08-kunarimashita.html",
+     "title": "X が〜くなりました／〜になりました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "これから気温が低くなります",
+   "ja": "これから　<ruby>気<rt>き</rt>温<rt>おん</rt></ruby>が　<ruby>低<rt>ひく</rt></ruby>くなります",
+   "kana": "これから きおんが ひくくなります",
+   "romaji": "korekara kion ga hikuku narimasu",
+   "meaning": "接下來氣溫會變低。還沒發生，用 なります",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-08",
+     "href": "lessons/2026-11-08-kunarimashita.html",
+     "title": "X が〜くなりました／〜になりました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "洗いましたから、車がきれいになりました",
+   "ja": "<ruby>洗<rt>あら</rt></ruby>いましたから、<ruby>車<rt>くるま</rt></ruby>が　きれいになりました",
+   "kana": "あらいましたから、くるまが きれいになりました",
+   "romaji": "araimashita kara, kuruma ga kirei ni narimashita",
+   "meaning": "因為洗過了，車子變乾淨了。已經發生，用 なりました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-08",
+     "href": "lessons/2026-11-08-kunarimashita.html",
+     "title": "X が〜くなりました／〜になりました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "交通"
+   ]
+  },
   {
    "text": "乗り物の中で何が一番速いですか",
    "ja": "<ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で　<ruby>何<rt>なに</rt></ruby>が　<ruby>一<rt>いち</rt>番<rt>ばん</rt></ruby>　<ruby>速<rt>はや</rt></ruby>いですか",

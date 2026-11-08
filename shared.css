@@ -235,7 +235,7 @@ rt {
   background: rgba(255,255,255,.75);
   border: 2px solid var(--memo); border-radius: 16px;
   box-shadow: 0 2px 10px rgba(var(--memo-rgb),.14);
-  padding: 18px 22px; margin: 4px 0 20px;
+  padding: 18px 22px; margin: 16px 0 20px;  /* 上方 16px：接在 .note（margin-bottom:0）後面才不會黏住 */
   font-size: 14px; color: var(--ink-soft); line-height: 1.9;
 }
 .mnemonic.taigi { --memo: #d92818; --memo-rgb: 217,40,24; }

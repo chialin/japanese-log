@@ -485,6 +485,153 @@
    ]
   },
   {
+   "text": "探す",
+   "ja": "<ruby>探<rt>さが</rt></ruby>す",
+   "kana": "さがす",
+   "romaji": "sagasu",
+   "meaning": "找、尋找。五段動詞，ます形 探します、て形 探して",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "マウスを探します",
+   "ja": "マウスを<ruby>探<rt>さが</rt></ruby>します",
+   "kana": "マウスをさがします",
+   "romaji": "mausu o sagashimasu",
+   "meaning": "我要找滑鼠。還沒找到，正要開始找",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "マウスを探しています",
+   "ja": "マウスを<ruby>探<rt>さが</rt></ruby>しています",
+   "kana": "マウスをさがしています",
+   "romaji": "mausu o sagashite imasu",
+   "meaning": "我正在找滑鼠。9/2〈〜ています〉的「彼は財布を探しています」也是這個字",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "見つける",
+   "ja": "<ruby>見<rt>み</rt></ruby>つける",
+   "kana": "みつける",
+   "romaji": "mitsukeru",
+   "meaning": "找到、發現。一段動詞，ます形 見つけます、た形 見つけた",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "新しいお店を見つけました",
+   "ja": "<ruby>新<rt>あたら</rt></ruby>しいお<ruby>店<rt>みせ</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけました",
+   "kana": "あたらしいおみせをみつけました",
+   "romaji": "atarashii omise o mitsukemashita",
+   "meaning": "我找到一家新的店了。不一定有特地在找，路上剛好發現也用 見つける",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "購物"
+   ]
+  },
+  {
+   "text": "ずっと探していたマウスを見つけた！",
+   "ja": "ずっと<ruby>探<rt>さが</rt></ruby>していたマウスを<ruby>見<rt>み</rt></ruby>つけた！",
+   "kana": "ずっとさがしていたマウスをみつけた！",
+   "romaji": "zutto sagashite ita mausu o mitsuketa!",
+   "meaning": "找到一直在找的滑鼠了！（普通形，跟朋友講話的說法）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "ずっと探していたマウスを見つけました。",
+   "ja": "ずっと<ruby>探<rt>さが</rt></ruby>していたマウスを<ruby>見<rt>み</rt></ruby>つけました。",
+   "kana": "ずっとさがしていたマウスをみつけました。",
+   "romaji": "zutto sagashite ita mausu o mitsukemashita.",
+   "meaning": "同一句的禮貌形，跟老師講就用這個",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "探しましたが、見つかりませんでした。",
+   "ja": "<ruby>探<rt>さが</rt></ruby>しましたが、<ruby>見<rt>み</rt></ruby>つかりませんでした。",
+   "kana": "さがしましたが、みつかりませんでした。",
+   "romaji": "sagashimashita ga, mitsukarimasen deshita.",
+   "meaning": "找了，但是沒找到。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
    "text": "図書館の人が教えました",
    "ja": "<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が <ruby>教<rt>おし</rt></ruby>えました",
    "kana": "としょかんの ひとが おしえました",

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>探す vs 見つける — 「找」和「找到」</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">探</span>す vs <span class="accent">見</span>つける</h1>
+  <div class="page-meta">單字比較 · Vocabulary · 2026 / 11 / 09</div>
+  <p class="page-subtitle">中文都翻成「找」，但一個是還在找，一個是已經找到了</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8">
+    <span class="speed-value" id="rateValue">0.8x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣說</strong><br>
+    東西不見了在找、終於找到了，或是發現一家新的店，都會用到這兩個字。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 探します 說「我要找〜」，用 探しています 說「正在找〜」</li>
+      <li>用 見つけました 說「找到〜了」「發現〜了」</li>
+      <li>把兩個字放進同一句：ずっと探していたマウスを見つけた！</li>
+      <li>知道「找了但沒找到」要說 見つかりませんでした</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">一、探す 是「找」，見つける 是「找到」</div>
+
+  <p class="lead">
+    中文的「找」可以是還在找，也可以是找到了（「我找了一家新店」）。日文會分成兩個字：
+    探す（さがす）講的是<strong>過程</strong>，還不一定找得到；見つける（みつける）講的是<strong>結果</strong>，已經找到了。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>找（過程）</div>
+
+    <div class="word-item" data-text="探す">
+      <div class="word-content">
+        <div class="word-ja"><ruby>探<rt>さが</rt></ruby>す</div>
+        <div class="word-romaji">sagasu</div>
+        <div class="word-meaning">找、尋找。五段動詞，ます形 探します、て形 探して</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="マウスを探します">
+      <div class="word-content">
+        <div class="word-ja">マウス<span class="j-mark">を</span><ruby>探<rt>さが</rt></ruby>します</div>
+        <div class="word-romaji">mausu o sagashimasu</div>
+        <div class="word-meaning">我要找滑鼠。還沒找到，正要開始找</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="マウスを探しています">
+      <div class="word-content">
+        <div class="word-ja">マウス<span class="j-mark">を</span><ruby>探<rt>さが</rt></ruby>しています</div>
+        <div class="word-romaji">mausu o sagashite imasu</div>
+        <div class="word-meaning">我正在找滑鼠。<a href="2026-09-02-teimasu.html" style="color:var(--accent);">9/2〈〜ています〉</a>的「彼は財布を探しています」也是這個字</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>找到（結果）</div>
+
+    <div class="word-item" data-text="見つける">
+      <div class="word-content">
+        <div class="word-ja"><ruby>見<rt>み</rt></ruby>つける</div>
+        <div class="word-romaji">mitsukeru</div>
+        <div class="word-meaning">找到、發現。一段動詞，ます形 見つけます、た形 見つけた</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="新しいお店を見つけました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>新<rt>あたら</rt></ruby>しいお<ruby>店<rt>みせ</rt></ruby><span class="j-mark">を</span><ruby>見<rt>み</rt></ruby>つけました</div>
+        <div class="word-romaji">atarashii omise o mitsukemashita</div>
+        <div class="word-meaning">我找到一家新的店了。不一定有特地在找，路上剛好發現也用 見つける</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 看漢字的部首就分得出來</strong><br>
+    <strong>探</strong> 的左邊是提手旁（扌），手在東西堆裡翻來翻去，就是「找」的過程。<br>
+    <strong>見つける</strong> 開頭是 <span class="compare">見</span>（看見）：眼睛看到了，就是「找到」。<br>
+    <span style="color:var(--ink-mute);">さがす、みつける 都是訓讀（日文固有的詞），跟台語的漢字音沒有關係，所以用字形記。</span>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>マウス 是從英語來的</strong><br>
+    マウス（mausu）來自英語 mouse。英文的 mouse 是老鼠也是滑鼠，日文的 マウス 幾乎只指電腦的滑鼠，
+    動物的老鼠要說 ネズミ（nezumi）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="issho">二、兩個字放在同一句，就是「找到一直在找的〜」</div>
+
+  <p class="lead">
+    這兩個字很常一起出現，因為「找」的下一步就是「找到」。下面這句把找的過程放在名詞前面，最後用 見つけた 收尾。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="ずっと探していたマウスを見つけた！">
+      <div class="word-content">
+        <div class="word-ja">ずっと<ruby>探<rt>さが</rt></ruby>していたマウス<span class="j-mark">を</span><ruby>見<rt>み</rt></ruby>つけた！</div>
+        <div class="word-romaji">zutto sagashite ita mausu o mitsuketa!</div>
+        <div class="word-meaning">找到一直在找的滑鼠了！（普通形，跟朋友講話的說法）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ずっと探していたマウスを見つけました。">
+      <div class="word-content">
+        <div class="word-ja">ずっと<ruby>探<rt>さが</rt></ruby>していたマウス<span class="j-mark">を</span><ruby>見<rt>み</rt></ruby>つけました。</div>
+        <div class="word-romaji">zutto sagashite ita mausu o mitsukemashita.</div>
+        <div class="word-meaning">同一句的禮貌形，跟老師講就用這個</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">拆開來看是三塊：</p>
+  <ul class="lead">
+    <li><strong>ずっと探していた</strong>：一直在找的。探していた 是 探している 的過去，放在名詞前面當說明，
+      跟 <a href="2026-10-28-te-iru-meishi.html" style="color:var(--accent);">10/28〈〜ている＋名詞〉</a>的 いつも履いている靴 是同一種結構。</li>
+    <li><strong>マウス</strong>：被說明的東西，「哪一隻滑鼠？一直在找的那隻」。</li>
+    <li><strong>を見つけた</strong>：找到了。見つける 的 た形，參見 <a href="2026-08-12-ta-kei.html" style="color:var(--accent);">8/12〈た形〉</a>。</li>
+  </ul>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="chuui">三、有兩個地方容易講錯</div>
+
+  <p class="lead">
+    第一個是「找了但沒找到」。中文直覺會說成 見つけませんでした，但日文講「東西沒找到」通常用另一個字 見つかる（みつかる）。
+  </p>
+
+  <div class="section">
+    <div class="word-item" data-text="探しましたが、見つかりませんでした。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>探<rt>さが</rt></ruby>しましたが、<ruby>見<rt>み</rt></ruby>つかりませんでした。</div>
+        <div class="word-romaji">sagashimashita ga, mitsukarimasen deshita.</div>
+        <div class="word-meaning">找了，但是沒找到。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>見つける 和 見つかる 差一個字</strong><br>
+    見つ<strong>ける</strong>：人去找到東西，所以是「我 が マウス<strong>を</strong> 見つけました」。<br>
+    見つ<strong>かる</strong>：東西被找到、出現了，所以是「マウス<strong>が</strong> 見つかりました」（滑鼠找到了）。<br>
+    說「沒找到」的時候，重點是東西沒出現，所以用 見つかりませんでした 最自然。這組先認得就好，不用急著背。
+  </div>
+
+  <p class="lead" style="margin-top:16px;">
+    第二個是 ずっと。<a href="2026-11-06-yori-no-hou-ga.html" style="color:var(--accent);">11/6〈より・のほうが〉</a>的 ずっと 放在形容詞前面，意思是「〜得多」（ずっと安い＝便宜得多）。
+    本篇的 ずっと 放在動詞前面，意思是「一直」（ずっと探していた＝一直在找）。同一個字，看後面接什麼來判斷。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">四、最後把字分成兩邊：還在找用 探す，找到了用 見つける</div>
+
+  <p class="lead">同一個東西，在找的時候和找到的時候各說一次。例句換成跟上面不一樣的東西。</p>
+
+  <div class="sum-bins">
+    <div class="sum-bin">
+      <h4><b>探</b>す</h4>
+      <div class="who">找（過程，還沒找到）</div>
+      <table>
+        <tr><td class="q">找鑰匙</td><td class="jp">かぎを<ruby>探<rt>さが</rt></ruby>します<br><span class="ro">kagi o sagashimasu</span></td></tr>
+        <tr><td class="q">正在找工作</td><td class="jp"><ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>を<ruby>探<rt>さが</rt></ruby>しています<br><span class="ro">shigoto o sagashite imasu</span></td></tr>
+      </table>
+    </div>
+    <div class="sum-bin">
+      <h4><b>見</b>つける</h4>
+      <div class="who">找到（結果，已經發現）</div>
+      <table>
+        <tr><td class="q">找到鑰匙了</td><td class="jp">かぎを<ruby>見<rt>み</rt></ruby>つけました<br><span class="ro">kagi o mitsukemashita</span></td></tr>
+        <tr><td class="q">找到工作了</td><td class="jp"><ruby>仕<rt>し</rt>事<rt>ごと</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけました<br><span class="ro">shigoto o mitsukemashita</span></td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="sum-exc">
+    <span class="exc-tag">沒找到</span>
+    <div>
+      <span class="jp"><ruby>見<rt>み</rt></ruby>つかりませんでした</span> <span class="ro">mitsukarimasen deshita</span>
+      <div class="exc-note">找了但東西沒出現，換成 見つかる 的否定</div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">五、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我正在找錢包。（提示：財布）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>財布を探しています。<br>saifu o sagashite imasu.</p>
+        </details>
+      </li>
+      <li>我找到一家好吃的拉麵店了。（提示：おいしい、ラーメン屋）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>おいしいラーメン屋を見つけました。<br>oishii raamen-ya o mitsukemashita.</p>
+        </details>
+      </li>
+      <li>找到一直在找的書了！（普通形）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>ずっと探していた本を見つけた！<br>zutto sagashite ita hon o mitsuketa!</p>
+        </details>
+      </li>
+      <li>找了，但是沒找到。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>探しましたが、見つかりませんでした。<br>sagashimashita ga, mitsukarimasen deshita.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-09-02-teimasu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜ています — 正在做的事要這樣說 <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/2 的「彼は財布を探しています」，探しています 就是正在找</span>
+  </a>
+  <a href="2026-10-28-te-iru-meishi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜ている＋名詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/28 動詞ている 放在名詞前面，探していたマウス 是同一種結構</span>
+  </a>
+  <a href="2026-11-06-yori-no-hou-ga.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">A より B の方が〜 <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/6 的 ずっと 是「〜得多」，跟本篇的「一直」不一樣</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

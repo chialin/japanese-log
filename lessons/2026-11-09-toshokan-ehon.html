@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>図書館で絵本を借りました — 會話紀錄</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.dialog-title{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.no{flex-shrink:0;width:18px;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink-mute);padding-top:5px;text-align:right;}
+.who{flex-shrink:0;width:52px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+/* 冊 的唸法 */
+.count-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 18px;}
+.count-cell{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 8px;text-align:center;}
+.count-cell .jp{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);}
+.count-cell .kana{font-size:14px;color:var(--ink-soft);margin-top:2px;}
+.count-cell .kana b{color:var(--accent);}
+.count-cell .ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);}
+@media(max-width:560px){.count-row{grid-template-columns:repeat(2,1fr);}}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">図書館</span>で絵本を借りました</h1>
+  <div class="page-meta">會話紀錄 · Conversation · 2026 / 11 / 09</div>
+  <p class="page-subtitle">週末去圖書館辦借書證，圖書館的人教我怎麼辦，借了兩本簡單的繪本</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣說</strong><br>
+    11/9 的口語課後半，老師問我週末做了什麼。我說去了圖書館，辦了借書證，還借了兩本簡單的繪本。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 カードを作りました 說「辦了卡」</li>
+      <li>用 〜てくれました 說「別人幫我做了某件事」</li>
+      <li>用 冊 數書，知道 一冊 要唸 いっさつ</li>
+      <li>用 〜を選びました 說「挑了〜」</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaiwa2">一、以週末去圖書館為主軸，把對話整理出來</div>
+
+  <p class="lead">
+    老師問週末做了什麼，我說去了圖書館，辦了借書證，還借了兩本簡單的繪本。
+  </p>
+
+  <div class="dialog">
+    <div class="dialog-title">對話：去圖書館借書</div>
+
+    <div class="turn" data-text="週末は何をしましたか。">
+      <div class="no">1</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>は <ruby>何<rt>なに</rt></ruby>を しましたか？</div>
+        <div class="turn-romaji">shuumatsu wa nani o shimashita ka?</div>
+        <div class="turn-meaning">週末做了什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="図書館に行きました。カードを作りました。">
+      <div class="no">2</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>きました。カードを <ruby>作<rt>つく</rt></ruby>りました。</div>
+        <div class="turn-romaji">toshokan ni ikimashita. kaado o tsukurimashita.</div>
+        <div class="turn-meaning">我去了圖書館，辦了借書證。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="図書館の人が、作り方を教えてくれました。">
+      <div class="no">3</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が、<ruby>作<rt>つく</rt></ruby>り<ruby>方<rt>かた</rt></ruby>を <ruby>教<rt>おし</rt></ruby>えて<span class="j-mark">くれました</span>。</div>
+        <div class="turn-romaji">toshokan no hito ga, tsukurikata o oshiete kuremashita.</div>
+        <div class="turn-meaning">圖書館的人教我怎麼辦。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="本を借りましたか。">
+      <div class="no">4</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>本<rt>ほん</rt></ruby>を <ruby>借<rt>か</rt></ruby>りましたか？</div>
+        <div class="turn-romaji">hon o karimashita ka?</div>
+        <div class="turn-meaning">有借書嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい、絵本を借りました。">
+      <div class="no">5</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、<ruby>絵<rt>え</rt>本<rt>ほん</rt></ruby>を <ruby>借<rt>か</rt></ruby>りました。</div>
+        <div class="turn-romaji">hai, ehon o karimashita.</div>
+        <div class="turn-meaning">有，我借了繪本。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="何冊借りましたか。">
+      <div class="no">6</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>何<rt>なん</rt>冊<rt>さつ</rt></ruby> <ruby>借<rt>か</rt></ruby>りましたか？</div>
+        <div class="turn-romaji">nansatsu karimashita ka?</div>
+        <div class="turn-meaning">借了幾本？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="二冊借りました。">
+      <div class="no">7</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>二<rt>に</rt>冊<rt>さつ</rt></ruby> <ruby>借<rt>か</rt></ruby>りました。</div>
+        <div class="turn-romaji">nisatsu karimashita.</div>
+        <div class="turn-meaning">借了兩本。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="簡単な絵本を選びました。">
+      <div class="no">8</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby>な <ruby>絵<rt>え</rt>本<rt>ほん</rt></ruby>を <ruby>選<rt>えら</rt></ruby>びました。</div>
+        <div class="turn-romaji">kantan na ehon o erabimashita.</div>
+        <div class="turn-meaning">我挑了簡單的繪本。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kureru">二、〜てくれました 是別人為我做的事</div>
+
+  <p class="lead">
+    對話的第三句「教えてくれました」，是 教える（教）的て形加上 くれました。
+    加了 くれました，意思就是「別人<strong>為我</strong>做了這件事」，句子裡帶著一點謝意。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>有沒有 くれました，差在哪裡</div>
+
+    <div class="word-item" data-text="図書館の人が教えました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が <ruby>教<rt>おし</rt></ruby>えました</div>
+        <div class="word-romaji">toshokan no hito ga oshiemashita</div>
+        <div class="word-meaning">圖書館的人教了。只是在說發生了什麼事</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="図書館の人が教えてくれました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が <ruby>教<rt>おし</rt></ruby>えて<span class="j-mark">くれました</span></div>
+        <div class="word-romaji">toshokan no hito ga oshiete kuremashita</div>
+        <div class="word-meaning">圖書館的人（為我）教了我。是我受到幫忙，口氣比較溫暖</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>做事的人是別人，接受的人是我</strong><br>
+    〜てくれました 的主詞是幫忙的人，用 が 標出來（図書館の人<strong>が</strong>）。「我」通常不說出來，從 くれました 就聽得出來是我受到幫忙。
+    這是 くれる 第一次出現，本篇先記住這一句，之後學到再整理成一篇。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="satsu">三、數書是用 冊 數的，一冊 要唸 いっさつ</div>
+
+  <p class="lead">
+    書、筆記本這類東西要用 冊（さつ）來數，<a href="2026-08-19-hon.html" style="color:var(--accent);">8/19〈「本」到底是什麼意思〉</a>那篇提過：
+    本を二冊 是兩本書，〜本（ほん）則是數細長的東西。冊 前面接數字時，要注意 一 會變成促音。
+  </p>
+
+  <div class="count-row">
+    <div class="count-cell"><div class="jp"><ruby>一<rt>いっ</rt>冊<rt>さつ</rt></ruby></div><div class="kana"><b>いっ</b>さつ</div><div class="ro">issatsu</div></div>
+    <div class="count-cell"><div class="jp"><ruby>二<rt>に</rt>冊<rt>さつ</rt></ruby></div><div class="kana">にさつ</div><div class="ro">nisatsu</div></div>
+    <div class="count-cell"><div class="jp"><ruby>三<rt>さん</rt>冊<rt>さつ</rt></ruby></div><div class="kana">さんさつ</div><div class="ro">sansatsu</div></div>
+    <div class="count-cell"><div class="jp"><ruby>何<rt>なん</rt>冊<rt>さつ</rt></ruby></div><div class="kana"><b>なん</b>さつ</div><div class="ro">nansatsu</div></div>
+  </div>
+
+  <p class="lead">
+    一冊 唸 いっさつ，不是 いちさつ：一 的後面接 さ 開頭的音時，いち 的 ち 會變成促音っ。
+    一回（いっかい）、一個（いっこ）也是這樣變的。
+    問「幾本」用 何冊（なんさつ），何 在這裡唸 なん。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>對話裡的其他單字</div>
+
+    <div class="word-item" data-text="図書館">
+      <div class="word-content">
+        <div class="word-ja"><ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby></div>
+        <div class="word-romaji">toshokan</div>
+        <div class="word-meaning">圖書館。6/28〈東京生活單字〉學過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="カードを作ります">
+      <div class="word-content">
+        <div class="word-ja">カードを <ruby>作<rt>つく</rt></ruby>ります</div>
+        <div class="word-romaji">kaado o tsukurimasu</div>
+        <div class="word-meaning">辦卡。日文辦卡是用 作る（做），不用「辦」。カード 來自英語 card，這裡指借書證</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="絵本">
+      <div class="word-content">
+        <div class="word-ja"><ruby>絵<rt>え</rt>本<rt>ほん</rt></ruby></div>
+        <div class="word-romaji">ehon</div>
+        <div class="word-meaning">繪本。絵（圖畫）＋本（書），8/3〈日本生活、氣候與近期讀書〉出現過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="借りました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>借<rt>か</rt></ruby>りました</div>
+        <div class="word-romaji">karimashita</div>
+        <div class="word-meaning">借了（向別人借來）。原型 借りる，10/23 學過，是一段動詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="選びました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>選<rt>えら</rt></ruby>びました</div>
+        <div class="word-romaji">erabimashita</div>
+        <div class="word-meaning">挑了、選了。原型 選ぶ，五段動詞，ぶ 換成 び 再加 ました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="簡単な絵本">
+      <div class="word-content">
+        <div class="word-ja"><ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby>な <ruby>絵<rt>え</rt>本<rt>ほん</rt></ruby></div>
+        <div class="word-romaji">kantan na ehon</div>
+        <div class="word-meaning">簡單的繪本。簡単 是な形容詞，放在名詞前面要加 な（見 <a href="2026-09-12-na-keiyoushi-meishi.html" style="color:var(--accent);">9/12 那篇</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">四、最後把這段對話用得到的句型放在一起看</div>
+
+  <p class="lead">對話裡可以直接拿去用的句子，照「想說什麼」排在一起，例句換成跟對話不一樣的內容。</p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">別人幫我做了〜</div><div class="pat">〜が 〜て<b>くれました</b></div><div class="ex jp"><ruby>先<rt>せん</rt>生<rt>せい</rt></ruby>が <ruby>教<rt>おし</rt></ruby>えて くれました<span class="ro">sensei ga oshiete kuremashita</span></div></div>
+    <div class="sum-card"><div class="want">借了幾本</div><div class="pat"><b>何冊</b> 借りましたか</div><div class="ex jp"><ruby>一<rt>いっ</rt>冊<rt>さつ</rt></ruby> <ruby>借<rt>か</rt></ruby>りました<span class="ro">issatsu karimashita</span></div></div>
+    <div class="sum-card"><div class="want">挑了〜的東西</div><div class="pat">〜な ＋ 名詞 を <b>選びました</b></div><div class="ex jp"><ruby>好<rt>す</rt></ruby>きな <ruby>色<rt>いろ</rt></ruby>を <ruby>選<rt>えら</rt></ruby>びました<span class="ro">suki na iro o erabimashita</span></div></div>
+  </div>
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">五、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我去圖書館辦了卡。（提示：作る）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>図書館に行きました。カードを作りました。<br>toshokan ni ikimashita. kaado o tsukurimashita.</p>
+        </details>
+      </li>
+      <li>朋友教了我（帶謝意的說法）。（提示：友達、教える）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>友達が教えてくれました。<br>tomodachi ga oshiete kuremashita.</p>
+        </details>
+      </li>
+      <li>我在圖書館借了一本書。（提示：一冊 的唸法）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>図書館で本を一冊借りました。<br>toshokan de hon o issatsu karimashita.</p>
+        </details>
+      </li>
+      <li>問對方「借了幾本？」
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>何冊借りましたか？<br>nansatsu karimashita ka?</p>
+        </details>
+      </li>
+      <li>我挑了簡單的書。（提示：簡単、選ぶ）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>簡単な本を選びました。<br>kantan na hon o erabimashita.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-09-kyuu-ni-samuku.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">急に寒くなりましたね <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一堂課的第一段對話：天氣變冷、家人感冒</span>
+  </a>
+  <a href="2026-08-19-hon.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">「本」到底是什麼意思 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/19 數書用 冊、數細長的東西用 本</span>
+  </a>
+  <a href="2026-06-28-tokyo-life-vocab.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">東京生活單字 <span class="next-arrow">→</span></span>
+    <span class="next-sub">6/28 第一次學到 図書館</span>
+  </a>
+  <a href="2026-09-12-na-keiyoushi-meishi.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">な形容詞・連體詞 ＋ 名詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">9/12 簡単な絵本 的 な，就是這篇講的規則</span>
+  </a>
+  <a href="2026-10-22-te-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">て形怎麼變 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/22 教える → 教えて，〜てくれました 前面接的就是て形</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

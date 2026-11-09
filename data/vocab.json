@@ -1,6 +1,619 @@
 {
- "generated": "2026-11-08",
+ "generated": "2026-11-09",
  "words": [
+  {
+   "text": "風邪ですか。",
+   "ja": "<ruby>風邪<rt>かぜ</rt></ruby>ですか？",
+   "kana": "かぜですか？",
+   "romaji": "kaze desu ka?",
+   "meaning": "是感冒嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "いいえ、風邪じゃないです。",
+   "ja": "いいえ、<ruby>風邪<rt>かぜ</rt></ruby>じゃないです。",
+   "kana": "いいえ、かぜじゃないです。",
+   "romaji": "iie, kaze ja nai desu.",
+   "meaning": "不，不是感冒。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "この絵本は簡単ですか。",
+   "ja": "この <ruby>絵<rt>え</rt>本<rt>ほん</rt></ruby>は <ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby>ですか？",
+   "kana": "この えほんは かんたんですか？",
+   "romaji": "kono ehon wa kantan desu ka?",
+   "meaning": "這本繪本簡單嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "いいえ、簡単じゃないです。",
+   "ja": "いいえ、<ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby>じゃないです。",
+   "kana": "いいえ、かんたんじゃないです。",
+   "romaji": "iie, kantan ja nai desu.",
+   "meaning": "不，不簡單。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "外は寒いですか。",
+   "ja": "<ruby>外<rt>そと</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>いですか？",
+   "kana": "そとは さむいですか？",
+   "romaji": "soto wa samui desu ka?",
+   "meaning": "外面冷嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "いいえ、寒くないです。",
+   "ja": "いいえ、<ruby>寒<rt>さむ</rt></ruby>くないです。",
+   "kana": "いいえ、さむくないです。",
+   "romaji": "iie, samuku nai desu.",
+   "meaning": "不，不冷。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "今日も本を借りますか。",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>も <ruby>本<rt>ほん</rt></ruby>を <ruby>借<rt>か</rt></ruby>りますか？",
+   "kana": "きょうも ほんを かりますか？",
+   "romaji": "kyou mo hon o karimasu ka?",
+   "meaning": "今天也要借書嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "いいえ、借りません。",
+   "ja": "いいえ、<ruby>借<rt>か</rt></ruby>りません。",
+   "kana": "いいえ、かりません。",
+   "romaji": "iie, karimasen.",
+   "meaning": "不，不借。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "風邪でしたか。",
+   "ja": "<ruby>風邪<rt>かぜ</rt></ruby>でしたか？",
+   "kana": "かぜでしたか？",
+   "romaji": "kaze deshita ka?",
+   "meaning": "（那時候）是感冒嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "いいえ、風邪じゃなかったです。",
+   "ja": "いいえ、<ruby>風邪<rt>かぜ</rt></ruby>じゃなかったです。",
+   "kana": "いいえ、かぜじゃなかったです。",
+   "romaji": "iie, kaze ja nakatta desu.",
+   "meaning": "不，不是感冒。（已經知道人不舒服，回答「生的病不是感冒」）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "昨日は寒かったですか。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>かったですか？",
+   "kana": "きのうは さむかったですか？",
+   "romaji": "kinou wa samukatta desu ka?",
+   "meaning": "昨天冷嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "いいえ、寒くなかったです。",
+   "ja": "いいえ、<ruby>寒<rt>さむ</rt></ruby>くなかったです。",
+   "kana": "いいえ、さむくなかったです。",
+   "romaji": "iie, samuku nakatta desu.",
+   "meaning": "不，不冷。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "週末、図書館に行きましたか。",
+   "ja": "<ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>、<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>きましたか？",
+   "kana": "しゅうまつ、としょかんに いきましたか？",
+   "romaji": "shuumatsu, toshokan ni ikimashita ka?",
+   "meaning": "週末有去圖書館嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "いいえ、行きませんでした。",
+   "ja": "いいえ、<ruby>行<rt>い</rt></ruby>きませんでした。",
+   "kana": "いいえ、いきませんでした。",
+   "romaji": "iie, ikimasen deshita.",
+   "meaning": "沒有，沒去。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "いいえ、ひいていません。",
+   "ja": "いいえ、ひいていません。",
+   "kana": "いいえ、ひいていません。",
+   "romaji": "iie, hiite imasen.",
+   "meaning": "沒有，（到現在都）沒感冒。講的是現在的狀態，口語說成 ひいてないです",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "動詞"
+   ]
+  },
+  {
+   "text": "いいえ、ひきませんでした。",
+   "ja": "いいえ、ひきませんでした。",
+   "kana": "いいえ、ひきませんでした。",
+   "romaji": "iie, hikimasen deshita.",
+   "meaning": "沒有，（那段時間）沒感冒。講的是一段已經過去的時間，例如「去年冬天沒感冒」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "動詞"
+   ]
+  },
+  {
+   "text": "寒くないです",
+   "ja": "寒いじゃないです → <ruby>寒<rt>さむ</rt></ruby>くないです",
+   "kana": "寒いじゃないです → さむくないです",
+   "romaji": "samuku nai desu",
+   "meaning": "寒い 是い形容詞，要把 い 換成 く，不能在後面直接加 じゃないです",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "きれいじゃないです",
+   "ja": "きれくないです → きれいじゃないです",
+   "kana": "きれくないです → きれいじゃないです",
+   "romaji": "kirei ja nai desu",
+   "meaning": "きれい 雖然是 い 結尾，卻是な形容詞，所以用 じゃないです（10/27 和 11/8 都提過）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "よくないです",
+   "ja": "いくないです → よくないです",
+   "kana": "いくないです → よくないです",
+   "romaji": "yoku nai desu",
+   "meaning": "いい 是例外，變化時要換成 よ 開頭",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-iie-hitei.html",
+     "title": "いいえ、〜ません／〜じゃないです"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "急に",
+   "ja": "<ruby>急<rt>きゅう</rt></ruby>に",
+   "kana": "きゅうに",
+   "romaji": "kyuu ni",
+   "meaning": "突然。音讀 きゅう，後面加 に 當副詞用：急に寒くなりました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-kyuu-ni-samuku.html",
+     "title": "急に寒くなりましたね"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "急いで",
+   "ja": "<ruby>急<rt>いそ</rt></ruby>いで",
+   "kana": "いそいで",
+   "romaji": "isoide",
+   "meaning": "趕快、急著。急ぐ（いそぐ）的て形，訓讀，10/22 學過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-kyuu-ni-samuku.html",
+     "title": "急に寒くなりましたね"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "風邪をひきました",
+   "ja": "<ruby>風邪<rt>かぜ</rt></ruby>を ひきました",
+   "kana": "かぜを ひきました",
+   "romaji": "kaze o hikimashita",
+   "meaning": "感冒了。風邪 兩個字一起唸 かぜ，跟「風」的 かぜ 同音",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-kyuu-ni-samuku.html",
+     "title": "急に寒くなりましたね"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "動詞"
+   ]
+  },
+  {
+   "text": "ひいていません",
+   "ja": "ひいて いません",
+   "kana": "ひいて いません",
+   "romaji": "hiite imasen",
+   "meaning": "（現在）沒有感冒。口語常說成 ひいてないです",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-kyuu-ni-samuku.html",
+     "title": "急に寒くなりましたね"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "動詞"
+   ]
+  },
+  {
+   "text": "うつります",
+   "ja": "うつります",
+   "kana": "うつります",
+   "romaji": "utsurimasu",
+   "meaning": "（病）傳染。原型 うつる，10/22〈て形〉的例子裡出現過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-kyuu-ni-samuku.html",
+     "title": "急に寒くなりましたね"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "動詞"
+   ]
+  },
+  {
+   "text": "別々にします",
+   "ja": "<ruby>別<rt>べつ</rt>々<rt>べつ</rt></ruby>に します",
+   "kana": "べつべつに します",
+   "romaji": "betsubetsu ni shimasu",
+   "meaning": "分開來、各用各的。10/25 結帳時的「別々でお願いします」（分開付）也是這個字",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-kyuu-ni-samuku.html",
+     "title": "急に寒くなりましたね"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "分けます",
+   "ja": "<ruby>分<rt>わ</rt></ruby>けます",
+   "kana": "わけます",
+   "romaji": "wakemasu",
+   "meaning": "分開、分成幾份。原型 分ける，一段動詞",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-kyuu-ni-samuku.html",
+     "title": "急に寒くなりましたね"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "図書館の人が教えました",
+   "ja": "<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が <ruby>教<rt>おし</rt></ruby>えました",
+   "kana": "としょかんの ひとが おしえました",
+   "romaji": "toshokan no hito ga oshiemashita",
+   "meaning": "圖書館的人教了。只是在說發生了什麼事",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-toshokan-ehon.html",
+     "title": "図書館で絵本を借りました"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "図書館の人が教えてくれました",
+   "ja": "<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が <ruby>教<rt>おし</rt></ruby>えてくれました",
+   "kana": "としょかんの ひとが おしえてくれました",
+   "romaji": "toshokan no hito ga oshiete kuremashita",
+   "meaning": "圖書館的人（為我）教了我。是我受到幫忙，口氣比較溫暖",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-toshokan-ehon.html",
+     "title": "図書館で絵本を借りました"
+    }
+   ],
+   "tags": [
+    "場所",
+    "動詞"
+   ]
+  },
+  {
+   "text": "カードを作ります",
+   "ja": "カードを <ruby>作<rt>つく</rt></ruby>ります",
+   "kana": "カードを つくります",
+   "romaji": "kaado o tsukurimasu",
+   "meaning": "辦卡。日文辦卡是用 作る（做），不用「辦」。カード 來自英語 card，這裡指借書證",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-toshokan-ehon.html",
+     "title": "図書館で絵本を借りました"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "動詞"
+   ]
+  },
+  {
+   "text": "絵本",
+   "ja": "<ruby>絵<rt>え</rt>本<rt>ほん</rt></ruby>",
+   "kana": "えほん",
+   "romaji": "ehon",
+   "meaning": "繪本。絵（圖畫）＋本（書），8/3〈日本生活、氣候與近期讀書〉出現過",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-toshokan-ehon.html",
+     "title": "図書館で絵本を借りました"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "借りました",
+   "ja": "<ruby>借<rt>か</rt></ruby>りました",
+   "kana": "かりました",
+   "romaji": "karimashita",
+   "meaning": "借了（向別人借來）。原型 借りる，10/23 學過，是一段動詞",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-toshokan-ehon.html",
+     "title": "図書館で絵本を借りました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "選びました",
+   "ja": "<ruby>選<rt>えら</rt></ruby>びました",
+   "kana": "えらびました",
+   "romaji": "erabimashita",
+   "meaning": "挑了、選了。原型 選ぶ，五段動詞，ぶ 換成 び 再加 ました",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-toshokan-ehon.html",
+     "title": "図書館で絵本を借りました"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "簡単な絵本",
+   "ja": "<ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby>な <ruby>絵<rt>え</rt>本<rt>ほん</rt></ruby>",
+   "kana": "かんたんな えほん",
+   "romaji": "kantan na ehon",
+   "meaning": "簡單的繪本。簡単 是な形容詞，放在名詞前面要加 な（見 9/12 那篇）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-toshokan-ehon.html",
+     "title": "図書館で絵本を借りました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "生活雜貨"
+   ]
+  },
   {
    "text": "車が汚くなりました",
    "ja": "<ruby>車<rt>くるま</rt></ruby>が　<ruby>汚<rt>きたな</rt></ruby>くなりました",
@@ -20310,6 +20923,11 @@
      "date": "2026-07-29",
      "href": "lessons/2026-07-29-koko-soko-asoko.html",
      "title": "ここ・そこ・あそこ"
+    },
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-toshokan-ehon.html",
+     "title": "図書館で絵本を借りました"
     }
    ],
    "tags": [

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>いいえ、〜ません／〜じゃないです — 用禮貌形回答「不是」「沒有」</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+/* 問與答 */
+.qa{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:8px;padding:6px 16px;margin-bottom:12px;}
+.qa-tag{display:inline-block;font-size:12px;color:#fff;background:var(--accent);border-radius:999px;padding:1px 10px;margin:8px 0 2px;}
+.qa .word-item{border-bottom:1px dashed var(--line);}
+.qa .word-item:last-child{border-bottom:none;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+.fx .ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);margin-left:8px;}
+
+/* 錯誤對照 */
+.wrong{color:#b5462f;text-decoration:line-through;text-decoration-thickness:1.5px;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">いいえ、〜<span class="accent">ません</span>／〜<span class="accent">じゃないです</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 09</div>
+  <p class="page-subtitle">被老師或店員問問題時，用禮貌形回答「不是」「不〜」「沒有」</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    上課時老師常問「〜ですか？」「〜ましたか？」，想回答「不是」「沒有」時，句尾要看前面那個字是什麼詞性來變。讀完這篇可以：
+    <ul class="tip-list">
+      <li>先判斷是名詞、な形容詞、い形容詞還是動詞，再決定怎麼變</li>
+      <li>用 じゃないです、くないです、ません 回答現在的「不是」「不〜」</li>
+      <li>用 じゃなかったです、くなかったです、ませんでした 回答過去的「不是」「沒有」</li>
+      <li>分清楚 ひきませんでした 和 ひいていません 的差別</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>這篇跟 8/12 那篇的分工</strong><br>
+    <a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12〈否定的說法〉</a>講的是常體（ない、くない、じゃない），跟朋友說話用的。
+    本篇只講<strong>禮貌形</strong>，也就是上課跟老師、在店裡跟店員說話時用的說法，所以每一句都是 です 或 ます 結尾。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="zentai">一、以「いいえ」的回答為主軸，把四種詞性排出來</div>
+
+  <p class="lead">
+    先看四組問答。老師問的都是「是不是〜」「會不會〜」，我都回答「不是」。
+    注意看每一組的回答，句尾都不一樣，因為前面那個字的詞性不一樣。
+  </p>
+
+  <div class="qa">
+    <span class="qa-tag">名詞 風邪</span>
+    <div class="word-item" data-text="風邪ですか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>風邪<rt>かぜ</rt></ruby>ですか？</div>
+        <div class="word-romaji">kaze desu ka?</div>
+        <div class="word-meaning">是感冒嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="いいえ、風邪じゃないです。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>風邪<rt>かぜ</rt></ruby><span class="j-mark">じゃないです</span>。</div>
+        <div class="word-romaji">iie, kaze ja nai desu.</div>
+        <div class="word-meaning">不，不是感冒。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">な形容詞 簡単</span>
+    <div class="word-item" data-text="この絵本は簡単ですか。">
+      <div class="word-content">
+        <div class="word-ja">この <ruby>絵<rt>え</rt>本<rt>ほん</rt></ruby>は <ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby>ですか？</div>
+        <div class="word-romaji">kono ehon wa kantan desu ka?</div>
+        <div class="word-meaning">這本繪本簡單嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="いいえ、簡単じゃないです。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby><span class="j-mark">じゃないです</span>。</div>
+        <div class="word-romaji">iie, kantan ja nai desu.</div>
+        <div class="word-meaning">不，不簡單。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">い形容詞 寒い</span>
+    <div class="word-item" data-text="外は寒いですか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>外<rt>そと</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>いですか？</div>
+        <div class="word-romaji">soto wa samui desu ka?</div>
+        <div class="word-meaning">外面冷嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="いいえ、寒くないです。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>寒<rt>さむ</rt></ruby><span class="j-mark">くないです</span>。</div>
+        <div class="word-romaji">iie, samuku nai desu.</div>
+        <div class="word-meaning">不，不冷。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">動詞 借ります</span>
+    <div class="word-item" data-text="今日も本を借りますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>も <ruby>本<rt>ほん</rt></ruby>を <ruby>借<rt>か</rt></ruby>りますか？</div>
+        <div class="word-romaji">kyou mo hon o karimasu ka?</div>
+        <div class="word-meaning">今天也要借書嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="いいえ、借りません。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>借<rt>か</rt></ruby>り<span class="j-mark">ません</span>。</div>
+        <div class="word-romaji">iie, karimasen.</div>
+        <div class="word-meaning">不，不借。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    四組排在一起看，會發現名詞和な形容詞的回答長得一模一樣，都是 じゃないです。
+    所以要記的變法其實只有三種，下面一種一種看。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="meishi">二、名詞和な形容詞的否定是一樣的</div>
+
+  <p class="lead">
+    名詞和な形容詞自己都不會變，要換的是後面的 です。把 です 換成 じゃないです，就是「不是〜」「不〜」。
+  </p>
+
+  <div class="formula">
+    <h4>です → じゃないです</h4>
+    <div class="fx">
+      <ruby>風邪<rt>かぜ</rt></ruby><s>です</s><span class="arw">→</span><ruby>風邪<rt>かぜ</rt></ruby><b>じゃないです</b><span class="ro">kaze ja nai desu</span><br>
+      <ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby><s>です</s><span class="arw">→</span><ruby>簡<rt>かん</rt>単<rt>たん</rt></ruby><b>じゃないです</b><span class="ro">kantan ja nai desu</span><br>
+      <ruby>元<rt>げん</rt>気<rt>き</rt></ruby><s>です</s><span class="arw">→</span><ruby>元<rt>げん</rt>気<rt>き</rt></ruby><b>じゃないです</b><span class="ro">genki ja nai desu</span>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>課本上會看到 ではありません</strong><br>
+    風邪<strong>ではありません</strong>（kaze dewa arimasen）跟 風邪じゃないです 意思一樣，是比較正式、書面的說法，
+    <a href="2026-08-31-karakatta-desu.html" style="color:var(--accent);">8/31〈〜かったです／〜でした〉</a>用的就是這一種。
+    上課聊天、跟店員說話用 じゃないです 就可以了，看到 ではありません 知道是同一件事就好。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ikei">三、い形容詞的否定是把 い 換成 く</div>
+
+  <p class="lead">
+    い形容詞不一樣，要變的是形容詞本身。拿掉字尾的 い，換成 く，再加 ないです。
+    後面的 です 不用拿掉，留著就是禮貌形。
+  </p>
+
+  <div class="formula">
+    <h4>〜い → 〜くないです</h4>
+    <div class="fx">
+      <ruby>寒<rt>さむ</rt></ruby><s>い</s>です<span class="arw">→</span><ruby>寒<rt>さむ</rt></ruby><b>くないです</b><span class="ro">samuku nai desu</span><br>
+      <ruby>汚<rt>きたな</rt></ruby><s>い</s>です<span class="arw">→</span><ruby>汚<rt>きたな</rt></ruby><b>くないです</b><span class="ro">kitanaku nai desu</span><br>
+      <ruby>高<rt>たか</rt></ruby><s>い</s>です<span class="arw">→</span><ruby>高<rt>たか</rt></ruby><b>くないです</b><span class="ro">takaku nai desu</span>
+    </div>
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>いい 是例外，要說 よくないです</strong><br>
+    いい（好）的否定不是 いくないです，而是 <strong>よくないです</strong>（yoku nai desu）。
+    いい 本來寫作 よい，變化的時候都用 よ 開頭，過去式 よかったです 也是這樣。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="doushi">四、動詞的否定是把 ます 換成 ません</div>
+
+  <p class="lead">
+    動詞最簡單：ます 形已經會了，把 ます 換成 ません 就好。前面的部分完全不動。
+  </p>
+
+  <div class="formula">
+    <h4>〜ます → 〜ません</h4>
+    <div class="fx">
+      <ruby>借<rt>か</rt></ruby>り<s>ます</s><span class="arw">→</span><ruby>借<rt>か</rt></ruby>り<b>ません</b><span class="ro">karimasen</span><br>
+      <ruby>行<rt>い</rt></ruby>き<s>ます</s><span class="arw">→</span><ruby>行<rt>い</rt></ruby>き<b>ません</b><span class="ro">ikimasen</span><br>
+      <ruby>分<rt>わ</rt></ruby>け<s>ます</s><span class="arw">→</span><ruby>分<rt>わ</rt></ruby>け<b>ません</b><span class="ro">wakemasen</span>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kako">五、過去的否定，是在現在的否定上再改一次</div>
+
+  <p class="lead">
+    老師問的如果是過去的事（「〜でしたか？」「〜ましたか？」），回答也要用過去。
+    方法是拿上面現在的否定再改一次：ないです 改成 なかったです，ません 後面加 でした。
+  </p>
+
+  <div class="formula">
+    <h4>現在的否定 → 過去的否定</h4>
+    <div class="fx">
+      <ruby>風邪<rt>かぜ</rt></ruby>じゃ<s>ない</s>です<span class="arw">→</span><ruby>風邪<rt>かぜ</rt></ruby>じゃ<b>なかった</b>です<span class="ro">kaze ja nakatta desu</span><br>
+      <ruby>寒<rt>さむ</rt></ruby>く<s>ない</s>です<span class="arw">→</span><ruby>寒<rt>さむ</rt></ruby>く<b>なかった</b>です<span class="ro">samuku nakatta desu</span><br>
+      <ruby>借<rt>か</rt></ruby>りません<span class="arw">→</span><ruby>借<rt>か</rt></ruby>りません<b>でした</b><span class="ro">karimasen deshita</span>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">名詞</span>
+    <div class="word-item" data-text="風邪でしたか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>風邪<rt>かぜ</rt></ruby>でしたか？</div>
+        <div class="word-romaji">kaze deshita ka?</div>
+        <div class="word-meaning">（那時候）是感冒嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="いいえ、風邪じゃなかったです。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>風邪<rt>かぜ</rt></ruby><span class="j-mark">じゃなかったです</span>。</div>
+        <div class="word-romaji">iie, kaze ja nakatta desu.</div>
+        <div class="word-meaning">不，不是感冒。（已經知道人不舒服，回答「生的病不是感冒」）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">い形容詞</span>
+    <div class="word-item" data-text="昨日は寒かったですか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>かったですか？</div>
+        <div class="word-romaji">kinou wa samukatta desu ka?</div>
+        <div class="word-meaning">昨天冷嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="いいえ、寒くなかったです。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>寒<rt>さむ</rt></ruby><span class="j-mark">くなかったです</span>。</div>
+        <div class="word-romaji">iie, samuku nakatta desu.</div>
+        <div class="word-meaning">不，不冷。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">動詞</span>
+    <div class="word-item" data-text="週末、図書館に行きましたか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>、<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に <ruby>行<rt>い</rt></ruby>きましたか？</div>
+        <div class="word-romaji">shuumatsu, toshokan ni ikimashita ka?</div>
+        <div class="word-meaning">週末有去圖書館嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="いいえ、行きませんでした。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、<ruby>行<rt>い</rt></ruby>き<span class="j-mark">ませんでした</span>。</div>
+        <div class="word-romaji">iie, ikimasen deshita.</div>
+        <div class="word-meaning">沒有，沒去。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="teimasen">六、回答「到現在都還沒有」，是用 ていません 的</div>
+
+  <p class="lead">
+    <a href="2026-11-09-kyuu-ni-samuku.html" style="color:var(--accent);">同一天的會話〈急に寒くなりましたね〉</a>裡，老師問「風邪、ひきましたか？」（妳感冒了嗎），
+    照第五節的規則，回答好像應該是 ひきませんでした。不過我回答的是 ひいてないです，日本人也比較常這樣說。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>兩種「沒有感冒」</div>
+
+    <div class="word-item" data-text="いいえ、ひいていません。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、ひいて<span class="j-mark">いません</span>。</div>
+        <div class="word-romaji">iie, hiite imasen.</div>
+        <div class="word-meaning">沒有，（到現在都）沒感冒。講的是現在的狀態，口語說成 ひいてないです</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="いいえ、ひきませんでした。">
+      <div class="word-content">
+        <div class="word-ja">いいえ、ひき<span class="j-mark">ませんでした</span>。</div>
+        <div class="word-romaji">iie, hikimasen deshita.</div>
+        <div class="word-meaning">沒有，（那段時間）沒感冒。講的是一段已經過去的時間，例如「去年冬天沒感冒」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    差別在講的是哪一段時間。ひいていません 是「到現在為止都沒有」，ひきませんでした 是「過去那段時間沒有」。
+    吃飯也是一樣：被問「もう<ruby>食<rt>た</rt></ruby>べましたか？」（mou tabemashita ka，吃了嗎），還沒吃要說
+    まだ<ruby>食<rt>た</rt></ruby>べていません（mada tabete imasen），不說 食べませんでした。
+    這件事在 <a href="2026-08-12-hitei.html#teinai" style="color:var(--accent);">8/12 那篇的第二節</a>有用常體講過一次。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">七、有三個地方容易講錯</div>
+
+  <p class="lead">
+    這三個錯都是因為沒有先看詞性就直接套用。說之前先想一下，這個字是名詞、な形容詞，還是い形容詞。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>常見的錯</div>
+
+    <div class="word-item" data-text="寒くないです">
+      <div class="word-content">
+        <div class="word-ja"><span class="wrong">寒いじゃないです</span> → <ruby>寒<rt>さむ</rt></ruby>くないです</div>
+        <div class="word-romaji">samuku nai desu</div>
+        <div class="word-meaning">寒い 是い形容詞，要把 い 換成 く，不能在後面直接加 じゃないです</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きれいじゃないです">
+      <div class="word-content">
+        <div class="word-ja"><span class="wrong">きれくないです</span> → きれいじゃないです</div>
+        <div class="word-romaji">kirei ja nai desu</div>
+        <div class="word-meaning">きれい 雖然是 い 結尾，卻是な形容詞，所以用 じゃないです（10/27 和 11/8 都提過）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="よくないです">
+      <div class="word-content">
+        <div class="word-ja"><span class="wrong">いくないです</span> → よくないです</div>
+        <div class="word-romaji">yoku nai desu</div>
+        <div class="word-meaning">いい 是例外，變化時要換成 よ 開頭</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">八、最後把四種詞性排在一起：名詞和な形容詞一組，い形容詞和動詞各自變</div>
+
+  <p class="lead">
+    例字換成跟正文不一樣的字。名詞和な形容詞那兩列變的都是句尾，い形容詞和動詞變的是字本身。
+  </p>
+
+  <div class="sum-grid" style="--cols:3">
+    <div></div><div class="h">肯定</div><div class="h">否定</div><div class="h">過去否定</div>
+    <div class="rl">名詞<br><span class="jp"><ruby>雨<rt>あめ</rt></ruby></span></div>
+    <div data-h="肯定" class="c jp"><ruby>雨<rt>あめ</rt></ruby>です<span class="ro">ame desu</span></div>
+    <div data-h="否定" class="c jp"><ruby>雨<rt>あめ</rt></ruby><b>じゃないです</b><span class="ro">ame ja nai desu</span></div>
+    <div data-h="過去否定" class="c jp"><ruby>雨<rt>あめ</rt></ruby><b>じゃなかったです</b><span class="ro">ame ja nakatta desu</span></div>
+    <div class="rl">な形容詞<br><span class="jp"><ruby>静<rt>しず</rt></ruby>か</span></div>
+    <div data-h="肯定" class="c jp"><ruby>静<rt>しず</rt></ruby>かです<span class="ro">shizuka desu</span></div>
+    <div data-h="否定" class="c jp"><ruby>静<rt>しず</rt></ruby>か<b>じゃないです</b><span class="ro">shizuka ja nai desu</span></div>
+    <div data-h="過去否定" class="c jp"><ruby>静<rt>しず</rt></ruby>か<b>じゃなかったです</b><span class="ro">shizuka ja nakatta desu</span></div>
+    <div class="rl">い形容詞<br><span class="jp"><ruby>暑<rt>あつ</rt></ruby>い</span></div>
+    <div data-h="肯定" class="c jp"><ruby>暑<rt>あつ</rt></ruby>いです<span class="ro">atsui desu</span></div>
+    <div data-h="否定" class="c jp"><ruby>暑<rt>あつ</rt></ruby><b>くないです</b><span class="ro">atsuku nai desu</span></div>
+    <div data-h="過去否定" class="c jp"><ruby>暑<rt>あつ</rt></ruby><b>くなかったです</b><span class="ro">atsuku nakatta desu</span></div>
+    <div class="rl">動詞<br><span class="jp"><ruby>飲<rt>の</rt></ruby>みます</span></div>
+    <div data-h="肯定" class="c jp"><ruby>飲<rt>の</rt></ruby>みます<span class="ro">nomimasu</span></div>
+    <div data-h="否定" class="c jp"><ruby>飲<rt>の</rt></ruby>み<b>ません</b><span class="ro">nomimasen</span></div>
+    <div data-h="過去否定" class="c jp"><ruby>飲<rt>の</rt></ruby>み<b>ませんでした</b><span class="ro">nomimasen deshita</span></div>
+    <div class="rl exc">例外<br><span class="jp">いい</span></div>
+    <div data-h="肯定" class="c jp exc">いいです<span class="ro">ii desu</span></div>
+    <div data-h="否定" class="c jp exc"><b>よくないです</b><span class="ro">yoku nai desu</span></div>
+    <div data-h="過去否定" class="c jp exc"><b>よくなかったです</b><span class="ro">yoku nakatta desu</span></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">九、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>用「いいえ」回答</div>
+    <ol class="quiz-ol">
+      <li>学生ですか？（是學生嗎）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>いいえ、学生じゃないです。<br>iie, gakusei ja nai desu.<br>学生 是名詞，です 換成 じゃないです。</p>
+        </details>
+      </li>
+      <li>この部屋はきれいですか？（這個房間乾淨嗎）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>いいえ、きれいじゃないです。<br>iie, kirei ja nai desu.<br>きれい 是な形容詞，不能說 きれくないです。</p>
+        </details>
+      </li>
+      <li>そのラーメンは高いですか？（那碗拉麵貴嗎）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>いいえ、高くないです。<br>iie, takaku nai desu.<br>高い 是い形容詞，い 換成 く。</p>
+        </details>
+      </li>
+      <li>昨日、コーヒーを飲みましたか？（昨天有喝咖啡嗎）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>いいえ、飲みませんでした。<br>iie, nomimasen deshita.<br>問的是昨天，用過去的否定。</p>
+        </details>
+      </li>
+      <li>天気はよかったですか？（天氣好嗎，問過去）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>いいえ、よくなかったです。<br>iie, yoku nakatta desu.<br>いい 是例外，用 よ 開頭。</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-09-kyuu-ni-samuku.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">急に寒くなりましたね <span class="next-arrow">→</span></span>
+    <span class="next-sub">會話紀錄：「風邪、ひきましたか？」「いいえ、ひいてないです」就是從這段對話來的</span>
+  </a>
+  <a href="2026-11-09-toshokan-ehon.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">図書館で絵本を借りました <span class="next-arrow">→</span></span>
+    <span class="next-sub">會話紀錄：去圖書館辦卡、借繪本</span>
+  </a>
+  <a href="2026-08-12-hitei.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">否定的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12 常體的否定：ない、くない、じゃない，還有 ていない 的「還沒」</span>
+  </a>
+  <a href="2026-08-31-karakatta-desu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜かったです／〜でした <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/31 形容詞和名詞的過去式，過去否定用的是 ではありませんでした</span>
+  </a>
+  <a href="2026-10-27-hantaigo.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">形容詞的反義詞 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/27 汚い（い形容詞）和 きれい（な形容詞）的詞性不一樣</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

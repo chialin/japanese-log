@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>急に寒くなりましたね — 會話紀錄：天氣變冷、家人感冒</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.dialog-title{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.no{flex-shrink:0;width:18px;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink-mute);padding-top:5px;text-align:right;}
+.who{flex-shrink:0;width:52px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">急</span>に寒くなりましたね</h1>
+  <div class="page-meta">會話紀錄 · Conversation · 2026 / 11 / 09</div>
+  <p class="page-subtitle">跟老師聊天氣突然變冷，家人感冒了，毛巾和盤子要分開用</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣說</strong><br>
+    11/9 的口語課一開始先聊天氣：突然變冷了，老師問我有沒有感冒，我說自己沒有，但家人感冒了。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 急に寒くなりましたね 開始聊天氣</li>
+      <li>用 風邪をひきました 和 ひいてないです 說有沒有感冒</li>
+      <li>用 別々にします、分けます 說東西分開用</li>
+      <li>知道 急に 的 急，跟學過的 急ぐ 是同一個字</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaiwa1">一、以天氣變冷為主軸，把對話整理出來</div>
+
+  <p class="lead">
+    這段是上課一開始的聊天。老師先說天氣突然變冷，問我有沒有感冒，我說自己沒有，但家人感冒了，
+    老師就提醒感冒會傳染，東西要分開用。最後一句是老師下課時說的，放在這裡一起練。
+  </p>
+
+  <div class="dialog">
+    <div class="dialog-title">對話：突然變冷了</div>
+
+    <div class="turn" data-text="急に寒くなりましたね。">
+      <div class="no">1</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>急<rt>きゅう</rt></ruby>に <ruby>寒<rt>さむ</rt></ruby>く なりましたね。</div>
+        <div class="turn-romaji">kyuu ni samuku narimashita ne.</div>
+        <div class="turn-meaning">突然變冷了呢。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい、寒くなりました。">
+      <div class="no">2</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、<ruby>寒<rt>さむ</rt></ruby>く なりました。</div>
+        <div class="turn-romaji">hai, samuku narimashita.</div>
+        <div class="turn-meaning">對，變冷了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="風邪、ひきましたか。">
+      <div class="no">3</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>風邪<rt>かぜ</rt></ruby>、ひきましたか？</div>
+        <div class="turn-romaji">kaze, hikimashita ka?</div>
+        <div class="turn-meaning">妳感冒了嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="いいえ、ひいてないです。">
+      <div class="no">4</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいえ、<span class="j-mark">ひいてない</span>です。</div>
+        <div class="turn-romaji">iie, hiitenai desu.</div>
+        <div class="turn-meaning">沒有，我沒感冒。（ひいていません 的口語說法，見<a href="#hitei" style="color:var(--accent);">第三節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="でも、家族が風邪をひきました。">
+      <div class="no">5</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">でも、<ruby>家<rt>か</rt>族<rt>ぞく</rt></ruby>が <ruby>風邪<rt>かぜ</rt></ruby>を ひきました。</div>
+        <div class="turn-romaji">demo, kazoku ga kaze o hikimashita.</div>
+        <div class="turn-meaning">不過我家人感冒了。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="風邪はうつりますから、タオルは別々にしてください。">
+      <div class="no">6</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>風邪<rt>かぜ</rt></ruby>は <span class="j-mark">うつります</span>から、タオルは <ruby>別<rt>べつ</rt>々<rt>べつ</rt></ruby>に して ください。</div>
+        <div class="turn-romaji">kaze wa utsurimasu kara, taoru wa betsubetsu ni shite kudasai.</div>
+        <div class="turn-meaning">感冒會傳染，毛巾要分開用。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい、お皿も分けます。">
+      <div class="no">7</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、お<ruby>皿<rt>さら</rt></ruby>も <ruby>分<rt>わ</rt></ruby>けます。</div>
+        <div class="turn-romaji">hai, osara mo wakemasu.</div>
+        <div class="turn-meaning">好，盤子也會分開。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="寒くなりましたから、風邪をひかないように気をつけてください。">
+      <div class="no">8</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>寒<rt>さむ</rt></ruby>く なりましたから、<ruby>風邪<rt>かぜ</rt></ruby>を ひかないように <ruby>気<rt>き</rt></ruby>を つけて ください。</div>
+        <div class="turn-romaji">samuku narimashita kara, kaze o hikanai you ni ki o tsukete kudasai.</div>
+        <div class="turn-meaning">天氣變冷了，小心別感冒。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kyuu">二、急 有兩種唸法，跟 急ぐ 是同一個字</div>
+
+  <p class="lead">
+    對話的第一句 急に（きゅうに）是「突然」。這個 急 其實學過，<a href="2026-10-21-aruite-ikimasu.html" style="color:var(--accent);">10/21〈〜て行きます〉</a>和
+    <a href="2026-10-22-te-kei.html" style="color:var(--accent);">10/22〈て形〉</a>的 急ぐ（いそぐ，趕）就是同一個字，只是那時候用的是訓讀。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>同一個 急，兩種唸法</div>
+
+    <div class="word-item" data-text="急に">
+      <div class="word-content">
+        <div class="word-ja"><ruby>急<rt>きゅう</rt></ruby>に</div>
+        <div class="word-romaji">kyuu ni</div>
+        <div class="word-meaning">突然。音讀 きゅう，後面加 に 當副詞用：急に寒くなりました</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="急いで">
+      <div class="word-content">
+        <div class="word-ja"><ruby>急<rt>いそ</rt></ruby>いで</div>
+        <div class="word-romaji">isoide</div>
+        <div class="word-meaning">趕快、急著。急ぐ（いそぐ）的て形，訓讀，10/22 學過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 急 唸 きゅう 的字，日本到處都看得到</strong><br>
+    <strong>意思連在一起</strong>：事情來得很「急」，就是「突然」。急ぐ 是自己趕，急に 是事情突然發生，都是同一個「急」。<br>
+    <strong>搭電車就會看到的 きゅう</strong>：<ruby>急<rt>きゅう</rt>行<rt>こう</rt></ruby>（kyuukou，急行列車）、<ruby>特<rt>とっ</rt>急<rt>きゅう</rt></ruby>（tokkyuu，特急列車），
+    路上的救護車是 <ruby>救<rt>きゅう</rt>急<rt>きゅう</rt>車<rt>しゃ</rt></ruby>（kyuukyuusha）。看到這幾個詞裡的 急，都唸 <span class="compare">きゅう</span>。<br>
+    <strong>字形</strong>：下面是一個「心」，心裡很著急。<br>
+    <span style="color:var(--ink-mute);">台語的 急 唸 kip，跟 きゅう 唸起來不像，所以這個字不用台語記。</span>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hitei">三、感冒是用「ひく」的，會傳染是「うつる」</div>
+
+  <p class="lead">
+    中文說「感冒了」，日文要說 風邪を<strong>ひく</strong>（kaze o hiku），動詞是 ひく，不是 なる。
+    老師問「風邪、ひきましたか？」，我回答「ひいてないです」，意思是「到現在都沒有感冒」。
+    這種回答「沒有」的說法，整理在同一天的<a href="2026-11-09-iie-hitei.html" style="color:var(--accent);">〈いいえ、〜ません〉</a>那篇。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>感冒和分開用的說法</div>
+
+    <div class="word-item" data-text="風邪をひきました">
+      <div class="word-content">
+        <div class="word-ja"><ruby>風邪<rt>かぜ</rt></ruby>を ひきました</div>
+        <div class="word-romaji">kaze o hikimashita</div>
+        <div class="word-meaning">感冒了。風邪 兩個字一起唸 かぜ，跟「風」的 かぜ 同音</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ひいていません">
+      <div class="word-content">
+        <div class="word-ja">ひいて いません</div>
+        <div class="word-romaji">hiite imasen</div>
+        <div class="word-meaning">（現在）沒有感冒。口語常說成 ひいてないです</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="うつります">
+      <div class="word-content">
+        <div class="word-ja">うつります</div>
+        <div class="word-romaji">utsurimasu</div>
+        <div class="word-meaning">（病）傳染。原型 うつる，10/22〈て形〉的例子裡出現過</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="別々にします">
+      <div class="word-content">
+        <div class="word-ja"><ruby>別<rt>べつ</rt>々<rt>べつ</rt></ruby>に します</div>
+        <div class="word-romaji">betsubetsu ni shimasu</div>
+        <div class="word-meaning">分開來、各用各的。10/25 結帳時的「別々でお願いします」（分開付）也是這個字</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="分けます">
+      <div class="word-content">
+        <div class="word-ja"><ruby>分<rt>わ</rt></ruby>けます</div>
+        <div class="word-romaji">wakemasu</div>
+        <div class="word-meaning">分開、分成幾份。原型 分ける，一段動詞</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>別々 和 分ける 差在哪裡</strong><br>
+    別々（betsubetsu）講的是結果：東西是分開的、各用各的，所以說 別々に<strong>します</strong>。<br>
+    分ける（wakeru）講的是動作：把東西分開，所以直接說 お皿を<strong>分けます</strong>。<br>
+    對話的第六、七句剛好一句一個：老師說毛巾要「各用各的」，我回答盤子也會「分開」。
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>タオル 是從英語來的</strong><br>
+    タオル（taoru）來自英語 towel，意思跟英文一樣，就是毛巾。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">四、最後把這段對話用得到的句型放在一起看</div>
+
+  <p class="lead">對話裡可以直接拿去用的句子，照「想說什麼」排在一起，例句換成跟對話不一樣的內容。</p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">突然〜了</div><div class="pat"><b>急に</b> 〜くなりました</div><div class="ex jp"><ruby>急<rt>きゅう</rt></ruby>に <ruby>暗<rt>くら</rt></ruby>く なりました<span class="ro">kyuu ni kuraku narimashita</span></div></div>
+    <div class="sum-card"><div class="want">感冒了／沒感冒</div><div class="pat">風邪を <b>ひきました</b>／<b>ひいてない</b>です</div><div class="ex jp"><ruby>友<rt>とも</rt>達<rt>だち</rt></ruby>が <ruby>風邪<rt>かぜ</rt></ruby>を ひきました<span class="ro">tomodachi ga kaze o hikimashita</span></div></div>
+    <div class="sum-card"><div class="want">分開用</div><div class="pat">〜は <b>別々に</b> します</div><div class="ex jp">コップは <ruby>別<rt>べつ</rt>々<rt>べつ</rt></ruby>に します<span class="ro">koppu wa betsubetsu ni shimasu</span></div></div>
+  </div>
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">五、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>突然變熱了呢。（提示：急に、暑い）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>急に暑くなりましたね。<br>kyuu ni atsuku narimashita ne.</p>
+        </details>
+      </li>
+      <li>被問「風邪、ひきましたか？」，回答「沒有，我沒感冒」。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>いいえ、ひいてないです。（ひいていません 也可以）<br>iie, hiitenai desu.</p>
+        </details>
+      </li>
+      <li>朋友感冒了。（提示：友達）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>友達が風邪をひきました。<br>tomodachi ga kaze o hikimashita.</p>
+        </details>
+      </li>
+      <li>感冒會傳染，毛巾要分開用。（提示：うつります、別々）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>風邪はうつりますから、タオルは別々にしてください。<br>kaze wa utsurimasu kara, taoru wa betsubetsu ni shite kudasai.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-09-toshokan-ehon.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">図書館で絵本を借りました <span class="next-arrow">→</span></span>
+    <span class="next-sub">同一堂課的第二段對話：去圖書館辦卡、借繪本</span>
+  </a>
+  <a href="2026-11-09-iie-hitei.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">いいえ、〜ません／〜じゃないです <span class="next-arrow">→</span></span>
+    <span class="next-sub">文法課：「いいえ、ひいてないです」這種回答，用禮貌形說「不是」「沒有」</span>
+  </a>
+  <a href="2026-11-08-kunarimashita.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">X が〜くなりました／〜になりました <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/8 的「變得〜了」，寒くなりました 就是這個句型</span>
+  </a>
+  <a href="2026-10-22-te-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">て形怎麼變 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/22 急ぐ → 急いで、うつる → うつって</span>
+  </a>
+  <a href="2026-10-25-yoroshii.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">よろしい — 「いい」的客氣版 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/25 結帳時的「別々でお願いします」，跟本篇的 別々に します 是同一個字</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

@@ -597,11 +597,11 @@
    ]
   },
   {
-   "text": "ずっと探していたマウスを見つけた！",
-   "ja": "ずっと<ruby>探<rt>さが</rt></ruby>していたマウスを<ruby>見<rt>み</rt></ruby>つけた！",
-   "kana": "ずっとさがしていたマウスをみつけた！",
-   "romaji": "zutto sagashite ita mausu o mitsuketa!",
-   "meaning": "找到一直在找的滑鼠了！（普通形，跟朋友講話的說法）",
+   "text": "マウスをずっと探しています。",
+   "ja": "マウスをずっと<ruby>探<rt>さが</rt></ruby>しています。",
+   "kana": "マウスをずっとさがしています。",
+   "romaji": "mausu o zutto sagashite imasu.",
+   "meaning": "我一直在找滑鼠。還沒找到，ずっと 放在 探しています 前面＝「一直在找」",
    "kind": "word",
    "lessons": [
     {
@@ -611,15 +611,35 @@
     }
    ],
    "tags": [
-    "問候・句型"
+    "動詞",
+    "生活雜貨"
    ]
   },
   {
-   "text": "ずっと探していたマウスを見つけました。",
-   "ja": "ずっと<ruby>探<rt>さが</rt></ruby>していたマウスを<ruby>見<rt>み</rt></ruby>つけました。",
-   "kana": "ずっとさがしていたマウスをみつけました。",
-   "romaji": "zutto sagashite ita mausu o mitsukemashita.",
-   "meaning": "同一句的禮貌形，跟老師講就用這個",
+   "text": "マウスを見つけました！",
+   "ja": "マウスを<ruby>見<rt>み</rt></ruby>つけました！",
+   "kana": "マウスをみつけました！",
+   "romaji": "mausu o mitsukemashita!",
+   "meaning": "我找到滑鼠了！跟老師講用這個禮貌形",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "見つけた！",
+   "ja": "<ruby>見<rt>み</rt></ruby>つけた！",
+   "kana": "みつけた！",
+   "romaji": "mitsuketa!",
+   "meaning": "找到了！跟朋友講、或自己喊出來，用 8/12〈た形〉就好",
    "kind": "word",
    "lessons": [
     {

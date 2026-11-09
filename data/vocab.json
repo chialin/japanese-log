@@ -578,6 +578,25 @@
    ]
   },
   {
+   "text": "どこで電池を見つけましたか。",
+   "ja": "どこで<ruby>電<rt>でん</rt>池<rt>ち</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけましたか。",
+   "kana": "どこででんちをみつけましたか。",
+   "romaji": "doko de denchi o mitsukemashita ka.",
+   "meaning": "你在哪裡找到電池的？（Duolingo 的題目）找到這個動作發生在哪裡，所以用 どこで， 跟 10/28 的「動作地點用 で」同一條規則。 只問東西在哪裡就是 8/5 的 電池はどこですか",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-09",
+     "href": "lessons/2026-11-09-sagasu-mitsukeru.html",
+     "title": "探す vs 見つける"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "生活雜貨"
+   ]
+  },
+  {
    "text": "ずっと探していたマウスを見つけた！",
    "ja": "ずっと<ruby>探<rt>さが</rt></ruby>していたマウスを<ruby>見<rt>み</rt></ruby>つけた！",
    "kana": "ずっとさがしていたマウスをみつけた！",

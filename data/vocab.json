@@ -1,6 +1,364 @@
 {
- "generated": "2026-11-09",
+ "generated": "2026-11-10",
  "words": [
+  {
+   "text": "外は寒いです。",
+   "ja": "<ruby>外<rt>そと</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>いです。",
+   "kana": "そとは さむいです。",
+   "romaji": "soto wa samui desu.",
+   "meaning": "外面很冷。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "昨日は寒かったです。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>かったです。",
+   "kana": "きのうは さむかったです。",
+   "romaji": "kinou wa samukatta desu.",
+   "meaning": "昨天很冷。（變的是 寒い 自己）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "この店は静かです。",
+   "ja": "この <ruby>店<rt>みせ</rt></ruby>は <ruby>静<rt>しず</rt></ruby>かです。",
+   "kana": "この みせは しずかです。",
+   "romaji": "kono mise wa shizuka desu.",
+   "meaning": "這家店很安靜。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "昨日の店は静かでした。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>の <ruby>店<rt>みせ</rt></ruby>は <ruby>静<rt>しず</rt></ruby>かでした。",
+   "kana": "きのうの みせは しずかでした。",
+   "romaji": "kinou no mise wa shizuka deshita.",
+   "meaning": "昨天那家店很安靜。（變的是 です）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "このお菓子はおいしいです。",
+   "ja": "このお<ruby>菓<rt>か</rt>子<rt>し</rt></ruby>はおいしいです。",
+   "kana": "このおかしはおいしいです。",
+   "romaji": "kono okashi wa oishii desu.",
+   "meaning": "這個點心很好吃。（禮貌形，對老師、店員說）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "食物"
+   ]
+  },
+  {
+   "text": "このお菓子はおいしい。",
+   "ja": "このお<ruby>菓<rt>か</rt>子<rt>し</rt></ruby>はおいしい。",
+   "kana": "このおかしはおいしい。",
+   "romaji": "kono okashi wa oishii.",
+   "meaning": "這個點心很好吃。（常體，對朋友說）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "食物"
+   ]
+  },
+  {
+   "text": "この店は静かです。",
+   "ja": "この<ruby>店<rt>みせ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かです。",
+   "kana": "このみせはしずかです。",
+   "romaji": "kono mise wa shizuka desu.",
+   "meaning": "這家店很安靜。（禮貌形）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "この店は静かだ。",
+   "ja": "この<ruby>店<rt>みせ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かだ。",
+   "kana": "このみせはしずかだ。",
+   "romaji": "kono mise wa shizuka da.",
+   "meaning": "這家店很安靜。（常體，です 換成 だ）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "このラーメンはおいしいです。",
+   "ja": "このラーメンは おいしいです。",
+   "kana": "このラーメンは おいしいです。",
+   "romaji": "kono raamen wa oishii desu.",
+   "meaning": "這碗拉麵很好吃。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "食物"
+   ]
+  },
+  {
+   "text": "ラーメン、おいしかったです。",
+   "ja": "ラーメン、おいしかったです。",
+   "kana": "ラーメン、おいしかったです。",
+   "romaji": "raamen, oishikatta desu.",
+   "meaning": "拉麵很好吃。（吃完之後說，不能說 おいしいでした）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "食物"
+   ]
+  },
+  {
+   "text": "寒かったです",
+   "ja": "寒いでした → <ruby>寒<rt>さむ</rt></ruby>かったです",
+   "kana": "寒いでした → さむかったです",
+   "romaji": "samukatta desu",
+   "meaning": "時態在 寒い 身上，改 寒い 本身，です 不動",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "寒かったです",
+   "ja": "寒かったでした → <ruby>寒<rt>さむ</rt></ruby>かったです",
+   "kana": "寒かったでした → さむかったです",
+   "romaji": "samukatta desu",
+   "meaning": "寒かった 已經是過去了，再加 でした 就是過去說了兩次",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "静かでした",
+   "ja": "静かかったです → <ruby>静<rt>しず</rt></ruby>かでした",
+   "kana": "静かかったです → しずかでした",
+   "romaji": "shizuka deshita",
+   "meaning": "な形容詞自己不會變，過去要改 です",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-i-na-keiyoushi.html",
+     "title": "〜いです／〜です"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "昨日の店、静かだった。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>店<rt>みせ</rt></ruby>、<ruby>静<rt>しず</rt></ruby>かだった。",
+   "kana": "きのうのみせ、しずかだった。",
+   "romaji": "kinou no mise, shizuka datta.",
+   "meaning": "昨天那家店很安靜。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-keiyoushi-joutai.html",
+     "title": "〜い／〜だ"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "この店、静かじゃない。",
+   "ja": "この<ruby>店<rt>みせ</rt></ruby>、<ruby>静<rt>しず</rt></ruby>かじゃない。",
+   "kana": "このみせ、しずかじゃない。",
+   "romaji": "kono mise, shizuka ja nai.",
+   "meaning": "這家店不安靜。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-keiyoushi-joutai.html",
+     "title": "〜い／〜だ"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "このお菓子、おいしかった。",
+   "ja": "このお<ruby>菓<rt>か</rt>子<rt>し</rt></ruby>、おいしかった。",
+   "kana": "このおかし、おいしかった。",
+   "romaji": "kono okashi, oishikatta.",
+   "meaning": "這個點心很好吃。（吃完之後說）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-keiyoushi-joutai.html",
+     "title": "〜い／〜だ"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "食物"
+   ]
+  },
+  {
+   "text": "今日は寒くない。",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>くない。",
+   "kana": "きょうはさむくない。",
+   "romaji": "kyou wa samuku nai.",
+   "meaning": "今天不冷。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-keiyoushi-joutai.html",
+     "title": "〜い／〜だ"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "寒い日",
+   "ja": "<ruby>寒<rt>さむ</rt></ruby>い<ruby>日<rt>ひ</rt></ruby>",
+   "kana": "さむいひ",
+   "romaji": "samui hi",
+   "meaning": "寒冷的日子（い形容詞直接接）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-keiyoushi-joutai.html",
+     "title": "〜い／〜だ"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "静かな店",
+   "ja": "<ruby>静<rt>しず</rt></ruby>かな<ruby>店<rt>みせ</rt></ruby>",
+   "kana": "しずかなみせ",
+   "romaji": "shizuka na mise",
+   "meaning": "安靜的店（な形容詞要加 な）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-keiyoushi-joutai.html",
+     "title": "〜い／〜だ"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "場所"
+   ]
+  },
   {
    "text": "風邪ですか。",
    "ja": "<ruby>風邪<rt>かぜ</rt></ruby>ですか？",

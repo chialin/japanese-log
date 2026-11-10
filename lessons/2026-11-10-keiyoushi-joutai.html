@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜い／〜だ — 兩種形容詞的常體，以及它們從古代日文來的樣子</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+.qa{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:8px;padding:6px 16px;margin-bottom:12px;}
+.qa-tag{display:inline-block;font-size:12px;color:#fff;background:var(--accent);border-radius:999px;padding:1px 10px;margin:8px 0 2px;}
+.qa .word-item{border-bottom:1px dashed var(--line);}
+.qa .word-item:last-child{border-bottom:none;}
+
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);margin-left:8px;}
+.fx .box{display:inline-block;border:1.5px solid var(--accent);border-radius:4px;padding:0 4px;line-height:1.6;}
+.fx .tag{font-family:'Noto Serif TC',serif;font-size:12px;color:var(--ink-mute);margin-left:6px;}
+
+/* 古代／現代對照表 */
+.kind-table{width:100%;border-collapse:collapse;margin:12px 0 16px;background:rgba(255,255,255,.6);font-size:14px;}
+.kind-table th,.kind-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+.kind-table th{background:var(--accent-pale);color:var(--accent);font-weight:600;}
+.kind-table .ex{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;}
+.kind-table .ex .ro{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);}
+.kind-table .ex .mean{display:block;font-family:'Noto Serif TC',serif;font-size:12px;color:var(--ink-mute);}
+.kind-table .ex b{color:var(--accent);}
+.kind-table td.lbl{white-space:nowrap;padding:8px 6px;}
+.kind-table tr.now td{background:var(--accent-pale);}
+.kind-table tr.now td.lbl{color:var(--accent);font-weight:600;}
+.table-legend{font-size:12px;color:var(--ink-mute);margin:-8px 0 16px;}
+.table-legend i{display:inline-block;width:12px;height:12px;background:var(--accent-pale);border:1px solid var(--line);vertical-align:-1px;margin-right:4px;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+.source{font-size:13px;color:var(--ink-mute);line-height:1.8;margin:8px 0 20px;}
+.source a{color:var(--accent);}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜<span class="accent">い</span>／〜<span class="accent">だ</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 10</div>
+  <p class="page-subtitle">兩種形容詞不加 です 時怎麼變，以及這個差別是從古代日文哪裡來的</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    跟朋友、家人說話用常體，形容詞後面不加 です。這時候兩種形容詞的變法差最多，而且原因要從古代日文講起。讀完這篇可以：
+    <ul class="tip-list">
+      <li>知道兩種形容詞變得不一樣，是從古代日文留下來的差別</li>
+      <li>用 寒い、寒かった、寒くない、寒くなかった 跟朋友說い形容詞</li>
+      <li>用 静かだ、静かだった、静かじゃない、静かじゃなかった 跟朋友說な形容詞</li>
+      <li>知道放在名詞前面時，な形容詞為什麼要加 な</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>這篇跟同一天另一篇的分工</strong><br>
+    本篇只講<strong>常體</strong>（不加 です 的說法）和兩種形容詞的來歷。
+    加上 です 變成禮貌形之後，です 在兩種形容詞裡做的事情不一樣，那部分寫在同一天的
+    <a href="2026-11-10-i-na-keiyoushi.html" style="color:var(--accent);">〈〜いです／〜です〉</a>。先讀這篇，再讀那篇會比較好懂。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="mukashi">一、兩種形容詞變得不一樣，是從古代日文留下來的</div>
+
+  <p class="lead">
+    先從兩種形容詞的來歷講起，後面每一節的差別都是同一個原因造成的。
+    古代日文裡，同一個形容詞放在<strong>句尾</strong>和放在<strong>名詞前面</strong>，要用兩種不同的形。
+  </p>
+
+  <table class="kind-table">
+    <tr><th colspan="2"></th><th>句尾</th><th>名詞前面</th></tr>
+    <tr>
+      <td rowspan="2" class="lbl">な<br>形容詞</td>
+      <td class="lbl">古代</td>
+      <td class="ex"><ruby>海<rt>うみ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>か<b>なり</b><span class="ro">umi wa shizuka nari</span><span class="mean">海很安靜</span></td>
+      <td class="ex"><ruby>静<rt>しず</rt></ruby>か<b>なる</b><ruby>海<rt>うみ</rt></ruby><span class="ro">shizuka naru umi</span><span class="mean">安靜的海</span></td>
+    </tr>
+    <tr class="now">
+      <td class="lbl">現代</td>
+      <td class="ex"><ruby>海<rt>うみ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>か<b>だ</b><span class="ro">umi wa shizuka da</span><span class="mean">なり → だ</span></td>
+      <td class="ex"><ruby>静<rt>しず</rt></ruby>か<b>な</b><ruby>海<rt>うみ</rt></ruby><span class="ro">shizuka na umi</span><span class="mean">なる → な</span></td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="lbl">い<br>形容詞</td>
+      <td class="lbl">古代</td>
+      <td class="ex"><ruby>風<rt>かぜ</rt></ruby><ruby>寒<rt>さむ</rt></ruby><b>し</b><span class="ro">kaze samushi</span><span class="mean">風很冷</span></td>
+      <td class="ex"><ruby>寒<rt>さむ</rt></ruby><b>き</b><ruby>風<rt>かぜ</rt></ruby><span class="ro">samuki kaze</span><span class="mean">冷的風</span></td>
+    </tr>
+    <tr class="now">
+      <td class="lbl">現代</td>
+      <td class="ex"><ruby>風<rt>かぜ</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby><b>い</b><span class="ro">kaze wa samui</span><span class="mean">句尾也改用 寒い</span></td>
+      <td class="ex"><ruby>寒<rt>さむ</rt></ruby><b>い</b><ruby>風<rt>かぜ</rt></ruby><span class="ro">samui kaze</span><span class="mean">き → い（兩邊變成同一個形）</span></td>
+    </tr>
+  </table>
+  <p class="table-legend"><i></i>綠底的那一列，就是現在跟朋友說話時用的說法（常體）。</p>
+
+  <p class="lead">
+    <strong>な形容詞</strong>是「静か」加上後面的 なり。なり 是助詞 に 加上動詞 あり 黏在一起變來的：
+    静か＋に＋あり → 静かにあり → 唸快了變成 静かなり。
+    あり 就是現代動詞 ある（有、在）的古代形，所以 静かにあり 照字面是「處在安靜的狀態裡」，也就是「是安靜的」。
+    「静か」本身從來不變，要變的都是後面那一段。到了現代，名詞前面的 なる 去掉 る 變成了 な；句尾則換成另一組也用到 ある 的說法 である，再縮短成 だ，下一節會講。
+  </p>
+
+  <p class="lead">
+    <strong>い形容詞</strong>不一樣，它自己的字尾就會變（し、き），不需要靠後面的字。
+    到了現代，兩個形合成了一個：名詞前面的 寒き 把 き 換成 い，變成 寒い，句尾也改用這個形。
+  </p>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>課本上的「形容動詞」就是な形容詞</strong><br>
+    日本學校的文法課本把な形容詞叫做「形容動詞」，い形容詞叫做「形容詞」。
+    取這個名字，是因為古代的 なり 裡面有動詞 あり，變化的方式跟動詞一樣：意思是形容詞，變化卻像動詞，所以叫「形容動詞」。
+    給外國人用的日文課本覺得這個名字不好懂，改叫「な形容詞」，因為它放在名詞前面要加 な。
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>現代日文裡還看得到「なる」</strong><br>
+    <ruby>単<rt>たん</rt></ruby>なる（tannaru，只不過是）現在也很常用，例如「単なる<ruby>偶<rt>ぐう</rt>然<rt>ぜん</rt></ruby>」（只不過是巧合）；
+    <ruby>大<rt>おお</rt></ruby>いなる（ooinaru，偉大的）常出現在書名和電影名。看到「〜なる＋名詞」，就是な形容詞古代的樣子。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="na">二、な形容詞的常體，變的是後面的 だ</div>
+
+  <p class="lead">
+    書面語會說 静かである（shizuka de aru），意思跟 静かだ 一樣。で 是從古代的 にて（nite）變來的，ある 就是古代的 あり。所以 である 跟 なり 一樣，都是「助詞＋動詞 あり／ある」，只是前面的助詞一個是 にて、一個是 に。
+    把 である 再縮短，就成了 だ。所以 <span class="rs-hl">だ 裡面藏著動詞 ある</span>。
+  </p>
+
+  <p>
+    だ 本身看起來不像動詞，為什麼也能變成過去式？因為它是從 で＋ある 縮出來的，真正在變的是裡面的 ある。
+    動詞的常體過去式是在字尾換成 た（<a href="2026-08-12-ta-kei.html" style="color:var(--accent);">8/12 的た形</a>），ある 的過去式是 あった。
+    把這個變化放回 である 裡，就是 であった，最後 であ 兩個音縮成 だ，得到 だった。下面一步一步列出來。（這一步沒有找到字典直接寫明，是照 である 縮成 だ 的同一個規則去理解。）
+  </p>
+
+  <div class="formula">
+    <h4>だった 可以看成 であった 縮短</h4>
+    <div class="fx">
+      ① <span class="rs-hl">ある</span><span class="tag">現在：有、在</span><span class="ro">aru</span>
+      → <span class="rs-hl">あった</span><span class="tag">過去，跟其他動詞一樣用 た</span><span class="ro">atta</span><br>
+      ② で<span class="rs-hl">ある</span><span class="tag">前面加上 で</span><span class="ro">de aru</span>
+      → で<span class="rs-hl">あった</span><span class="tag">只有 ある 變</span><span class="ro">de atta</span><br>
+      ③ <b>だ</b><span class="tag">であ 縮成 だ</span><span class="ro">da</span>
+      → <b>だ</b>った<span class="tag">であ 縮成 だ，った 留下來</span><span class="ro">datta</span>
+    </div>
+  </div>
+
+  <p>
+    所以 だった 的 った，就是 あった 的 った。現在式 である 縮成 だ，過去式 であった 縮成 だった，兩邊縮的方式一樣。
+  </p>
+
+  <p class="source">資料來源：Wiktionary 日文版 <a href="https://ja.wiktionary.org/wiki/なり" target="_blank" rel="noopener">なり</a>（「にありが約まったもの」）、
+  <a href="https://ja.wiktionary.org/wiki/だ" target="_blank" rel="noopener">だ</a>（「である」的「る」脫落成「であ」再縮短）、
+  <a href="https://ja.wiktionary.org/wiki/で" target="_blank" rel="noopener">で</a>（從格助詞 にて 變來）；英文版 <a href="https://en.wiktionary.org/wiki/だ" target="_blank" rel="noopener">だ</a>（な 來自古代的 なる）。</p>
+
+  <div class="formula">
+    <h4>静か 不動，變的是 だ</h4>
+    <div class="fx">
+      <ruby>静<rt>しず</rt></ruby>か<span class="box"><b>だ</b></span><span class="tag">現在</span><span class="ro">shizuka da</span><br>
+      <ruby>静<rt>しず</rt></ruby>か<span class="box"><b>だった</b></span><span class="tag">過去</span><span class="ro">shizuka datta</span><br>
+      <ruby>静<rt>しず</rt></ruby>か<span class="box"><b>じゃない</b></span><span class="tag">否定</span><span class="ro">shizuka ja nai</span><br>
+      <ruby>静<rt>しず</rt></ruby>か<span class="box"><b>じゃなかった</b></span><span class="tag">過去否定</span><span class="ro">shizuka ja nakatta</span>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">跟朋友說</span>
+    <div class="word-item" data-text="昨日の店、静かだった。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>の<ruby>店<rt>みせ</rt></ruby>、<ruby>静<rt>しず</rt></ruby>か<span class="j-mark">だった</span>。</div>
+        <div class="word-romaji">kinou no mise, shizuka datta.</div>
+        <div class="word-meaning">昨天那家店很安靜。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="この店、静かじゃない。">
+      <div class="word-content">
+        <div class="word-ja">この<ruby>店<rt>みせ</rt></ruby>、<ruby>静<rt>しず</rt></ruby>か<span class="j-mark">じゃない</span>。</div>
+        <div class="word-romaji">kono mise, shizuka ja nai.</div>
+        <div class="word-meaning">這家店不安靜。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    實際跟朋友聊天時，現在式的 だ 聽起來有點硬，常常會加 ね 說成 静かだね（shizuka da ne），或者只說「静か！」。
+    不過寫成完整的句子時，な形容詞還是要有 だ。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="i">三、い形容詞的常體，是形容詞自己在變</div>
+
+  <p class="lead">
+    い形容詞不需要 だ。只說「寒い」就是一句完整的話，要變過去或否定時，改的也是 寒い 自己。
+    過去式的 かった，其實也是 寒く 加上 あった 黏在一起變來的：寒く＋あった → 寒かった。
+    兩種形容詞都借用了動詞 ある，差別在な形容詞是放在後面的 だ 裡，い形容詞是直接黏進字尾。
+  </p>
+
+  <div class="formula">
+    <h4>形容詞自己變</h4>
+    <div class="fx">
+      <span class="box"><ruby>寒<rt>さむ</rt></ruby><b>い</b></span><span class="tag">現在</span><span class="ro">samui</span><br>
+      <span class="box"><ruby>寒<rt>さむ</rt></ruby><b>かった</b></span><span class="tag">過去（寒く＋あった）</span><span class="ro">samukatta</span><br>
+      <span class="box"><ruby>寒<rt>さむ</rt></ruby><b>くない</b></span><span class="tag">否定</span><span class="ro">samuku nai</span><br>
+      <span class="box"><ruby>寒<rt>さむ</rt></ruby><b>くなかった</b></span><span class="tag">過去否定</span><span class="ro">samuku nakatta</span>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">跟朋友說</span>
+    <div class="word-item" data-text="このお菓子、おいしかった。">
+      <div class="word-content">
+        <div class="word-ja">このお<ruby>菓<rt>か</rt>子<rt>し</rt></ruby>、おいし<span class="j-mark">かった</span>。</div>
+        <div class="word-romaji">kono okashi, oishikatta.</div>
+        <div class="word-meaning">這個點心很好吃。（吃完之後說）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="今日は寒くない。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby><span class="j-mark">くない</span>。</div>
+        <div class="word-romaji">kyou wa samuku nai.</div>
+        <div class="word-meaning">今天不冷。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    否定的 ない 也是「い」結尾，所以它的過去式一樣是 なかった。這也是為什麼兩種形容詞的過去否定，最後都是 なかった：
+    寒くなかった、静かじゃなかった。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="meishi">四、放在名詞前面時，な形容詞要加 な</div>
+
+  <p class="lead">
+    第一節的表格已經看得出來：い形容詞古代名詞前面的形（寒き）後來跟句尾合成了一個，所以現在直接用原形接名詞；
+    な形容詞古代名詞前面用的 なる 留下了 な，所以要多加一個「な」。這部分在
+    <a href="2026-09-09-i-keiyoushi-meishi.html" style="color:var(--accent);">9/9</a> 和
+    <a href="2026-09-12-na-keiyoushi-meishi.html" style="color:var(--accent);">9/12</a> 那兩篇有詳細講過。
+  </p>
+
+  <div class="qa">
+    <span class="qa-tag">放在名詞前面</span>
+    <div class="word-item" data-text="寒い日">
+      <div class="word-content">
+        <div class="word-ja"><ruby>寒<rt>さむ</rt></ruby><span class="j-mark">い</span><ruby>日<rt>ひ</rt></ruby></div>
+        <div class="word-romaji">samui hi</div>
+        <div class="word-meaning">寒冷的日子（い形容詞直接接）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="静かな店">
+      <div class="word-content">
+        <div class="word-ja"><ruby>静<rt>しず</rt></ruby>か<span class="j-mark">な</span><ruby>店<rt>みせ</rt></ruby></div>
+        <div class="word-romaji">shizuka na mise</div>
+        <div class="word-meaning">安靜的店（な形容詞要加 な）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">五、最後把常體排在一起：い形容詞自己變，な形容詞改 だ</div>
+
+  <p class="lead">
+    例字換成跟正文不一樣的字。い形容詞那一列，變的是形容詞本身；な形容詞那一列，便利 完全不動，變的都是後面的 だ。
+    每一格後面加上 です 就是禮貌形，不過加的方式兩邊不一樣，那是同一天另一篇的主題。
+  </p>
+
+  <div class="sum-grid" style="--cols:4">
+    <div></div><div class="h">現在</div><div class="h">過去</div><div class="h">否定</div><div class="h">過去否定</div>
+    <div class="rl">い形容詞<br><span class="jp"><ruby>楽<rt>たの</rt></ruby>しい</span></div>
+    <div data-h="現在" class="c jp"><ruby>楽<rt>たの</rt></ruby>し<b>い</b><span class="ro">tanoshii</span></div>
+    <div data-h="過去" class="c jp"><ruby>楽<rt>たの</rt></ruby>し<b>かった</b><span class="ro">tanoshikatta</span></div>
+    <div data-h="否定" class="c jp"><ruby>楽<rt>たの</rt></ruby>し<b>くない</b><span class="ro">tanoshiku nai</span></div>
+    <div data-h="過去否定" class="c jp"><ruby>楽<rt>たの</rt></ruby>し<b>くなかった</b><span class="ro">tanoshiku nakatta</span></div>
+    <div class="rl">な形容詞<br><span class="jp"><ruby>便<rt>べん</rt>利<rt>り</rt></ruby></span></div>
+    <div data-h="現在" class="c jp"><ruby>便<rt>べん</rt>利<rt>り</rt></ruby><b>だ</b><span class="ro">benri da</span></div>
+    <div data-h="過去" class="c jp"><ruby>便<rt>べん</rt>利<rt>り</rt></ruby><b>だった</b><span class="ro">benri datta</span></div>
+    <div data-h="否定" class="c jp"><ruby>便<rt>べん</rt>利<rt>り</rt></ruby><b>じゃない</b><span class="ro">benri ja nai</span></div>
+    <div data-h="過去否定" class="c jp"><ruby>便<rt>べん</rt>利<rt>り</rt></ruby><b>じゃなかった</b><span class="ro">benri ja nakatta</span></div>
+    <div class="rl exc">例外<br><span class="jp">いい</span></div>
+    <div data-h="現在" class="c jp exc">いい<span class="ro">ii</span></div>
+    <div data-h="過去" class="c jp exc"><b>よかった</b><span class="ro">yokatta</span></div>
+    <div data-h="否定" class="c jp exc"><b>よくない</b><span class="ro">yoku nai</span></div>
+    <div data-h="過去否定" class="c jp exc"><b>よくなかった</b><span class="ro">yoku nakatta</span></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">六、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>用常體跟朋友說</div>
+    <ol class="quiz-ol">
+      <li>「昨天很冷。」
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>昨日は寒かった。<br>kinou wa samukatta.<br>寒い 是い形容詞，自己變成 かった。</p>
+        </details>
+      </li>
+      <li>「那個公園不安靜。」（公園＝公園 こうえん）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>あの公園は静かじゃない。<br>ano kouen wa shizuka ja nai.<br>静か 是な形容詞，だ 換成 じゃない。</p>
+        </details>
+      </li>
+      <li>「（那時候）很方便。」
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>便利だった。<br>benri datta.<br>便利 是な形容詞，だ 變成 だった。</p>
+        </details>
+      </li>
+      <li>古代的「静かなる海」，現代要怎麼說？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>静かな海。<br>shizuka na umi.<br>なる 去掉 る，留下 な。</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-10-i-na-keiyoushi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜いです／〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">加上 です 之後：な形容詞的 です 是骨架、い形容詞的 です 只是禮貌，所以不能說 寒いでした</span>
+  </a>
+  <a href="2026-08-12-hitei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">否定的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12 常體的否定：ない、くない、じゃない</span>
+  </a>
+  <a href="2026-08-12-ta-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">過去式 た形 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12 日文的過去只有一個記號 た，形容詞的 かった、だった 也是</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

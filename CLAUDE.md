@@ -148,6 +148,19 @@ Calendar 會自動重算——`data-date` 提供即可，新月份不必動 cale
 > 只有在出現**全新的漢字**時才需要另外跑一次 `node scripts/fetch-kanjidic.mjs`
 > 更新 `data/kanji-readings.json`（會連網下載 KANJIDIC2）。腳本會列出查無讀音的字。
 
+**Step 7 — 主動問要不要複習**：課程頁做完、`build-all.sh` 跑完、截完圖之後，
+**主動問 Scarlett「要不要現在複習？」**（不用等她開口）。她答應就照 `fukushuu` skill
+（[.claude/skills/fukushuu/SKILL.md](.claude/skills/fukushuu/SKILL.md)）跑 `session --lesson <這一課的日期>`，
+新題會優先從剛做的課出。
+
+### 複習系統（2026-11-09 起）
+
+補充 Duolingo 的每日複習，在 Claude Code 對話裡進行，規則都寫在 `fukushuu` skill 裡。
+- 題庫直接讀 `data/vocab.json`：句子（`。？！` 結尾）進「瞬間作文」，其他進「単語」。新課跑完 `build-vocab` 就自動進題庫。
+- 排程、連續天數由 `local/review/review.mjs` 計算（Leitner 1・3・7・14・30 天；當天答滿 10 題算有練），
+  紀錄在 `local/review/state.json`。`local/` 是獨立的私人 git repo，**不會部署**。
+- 之後要在 iPhone 上（Mac 關機時）練，計畫是替 `local/` 加一個 private GitHub remote，用雲端 session 跑。
+
 ### TTS — VOICEVOX 預生 mp3（主要）＋ speechSynthesis（fallback）
 
 **音檔一律用 VOICEVOX 離線預先生成 mp3，不靠瀏覽器即時合成。** 瀏覽器內建的

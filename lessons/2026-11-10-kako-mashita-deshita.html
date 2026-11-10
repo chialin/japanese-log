@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜でした／〜かったです／〜ました — 說過去的事，句尾要改成過去式</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+/* 現在（左）／過去（右）並排 */
+.tp-head{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 4px;font-size:13px;color:var(--ink-mute);text-align:center;}
+.tp{margin-bottom:14px;}
+.tp-kind{display:inline-block;font-size:12px;color:#fff;background:var(--accent);border-radius:999px;padding:1px 10px;margin:0 0 6px;}
+.tp-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.tp-row .word-item{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0;}
+.tp-row .word-item.past{background:var(--accent-pale);border-color:var(--accent-soft);}
+.tp-row .word-ja{font-size:18px;}
+.tp-lbl{display:none;font-size:11px;color:var(--ink-mute);}
+@media (max-width:560px){
+  .tp-head{display:none;}
+  .tp-row{grid-template-columns:1fr;gap:6px;}
+  .tp-lbl{display:block;}
+}
+
+/* 錯誤對照 */
+.fix-table{width:100%;border-collapse:collapse;margin:12px 0 16px;background:rgba(255,255,255,.6);font-size:14px;}
+.fix-table th,.fix-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+.fix-table th{background:var(--accent-pale);color:var(--accent);font-weight:600;}
+.fix-table .ex{font-family:'Klee One','Shippori Mincho',serif;font-size:16px;}
+.fix-table .ex .ro{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);}
+.fix-table .ex b{color:var(--accent);}
+.wrong{color:#b5462f;text-decoration:line-through;text-decoration-thickness:1.5px;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+.fx .ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);margin-left:8px;}
+.fx .tag{font-family:'Noto Serif TC',serif;font-size:12px;color:var(--ink-mute);margin-left:6px;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜<span class="accent">でした</span>／〜<span class="accent">かったです</span>／〜<span class="accent">ました</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 10</div>
+  <p class="page-subtitle">說過去的事，就算前面已經說了「昨日」，句尾還是要改成過去式</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    跟老師聊「昨天做了什麼」「週末天氣怎麼樣」時，每一句都在講過去的事。中文說「昨天下雨」，動詞不用變；日文一定要把句尾改成過去式。讀完這篇可以：
+    <ul class="tip-list">
+      <li>知道日文講過去的事，句尾一定要改，光有「昨日」不夠</li>
+      <li>用禮貌體（です／ます）說出名詞、な形容詞、い形容詞、動詞的過去式</li>
+      <li>避開 寒いでした、いかったです 這兩種常見的錯</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>這篇跟之前幾篇的分工</strong><br>
+    這篇用的是禮貌體，也就是句尾有 です、ます 的說法，跟老師、店員、不熟的人說話都用這一種。
+    不加 です 的常體過去式（だった、寒かった、行った）在
+    <a href="2026-08-12-ta-kei.html" style="color:var(--accent);">8/12〈過去式 た形〉</a>；
+    動詞的 ました 第一次出現在 <a href="2026-07-22-tabemashita.html" style="color:var(--accent);">7/22〈食べました〉</a>，
+    形容詞的過去式在 <a href="2026-08-31-karakatta-desu.html" style="color:var(--accent);">8/31〈〜かったです／〜でした〉</a>。
+    本篇把四種詞放在一起，每一組都是<strong>現在放左邊、過去放右邊</strong>，方便對照。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="zentai">一、以「今日」和「昨日」為主軸，把現在和過去排出來</div>
+
+  <p class="lead">
+    下面每一組，左邊講今天、右邊講昨天。除了「今日」換成「昨日」，右邊的句尾也都跟著改了，改的地方用綠色標出來。
+  </p>
+
+  <div class="tp-head"><div>現在（今日）</div><div>過去（昨日）</div></div>
+
+  <div class="tp">
+    <span class="tp-kind">名詞 雨</span>
+    <div class="tp-row">
+      <div class="word-item" data-text="今日は雨です。">
+        <div class="word-content">
+          <span class="tp-lbl">現在</span>
+          <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby><span class="j-mark">です</span>。</div>
+          <div class="word-romaji">kyou wa ame desu.</div>
+          <div class="word-meaning">今天下雨。</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item past" data-text="昨日は雨でした。">
+        <div class="word-content">
+          <span class="tp-lbl">過去</span>
+          <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby><span class="j-mark">でした</span>。</div>
+          <div class="word-romaji">kinou wa ame deshita.</div>
+          <div class="word-meaning">昨天下雨。</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tp">
+    <span class="tp-kind">な形容詞 静か</span>
+    <div class="tp-row">
+      <div class="word-item" data-text="今日の図書館は静かです。">
+        <div class="word-content">
+          <span class="tp-lbl">現在</span>
+          <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>の<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>は<ruby>静<rt>しず</rt></ruby>か<span class="j-mark">です</span>。</div>
+          <div class="word-romaji">kyou no toshokan wa shizuka desu.</div>
+          <div class="word-meaning">今天的圖書館很安靜。</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item past" data-text="昨日の図書館は静かでした。">
+        <div class="word-content">
+          <span class="tp-lbl">過去</span>
+          <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>の<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>は<ruby>静<rt>しず</rt></ruby>か<span class="j-mark">でした</span>。</div>
+          <div class="word-romaji">kinou no toshokan wa shizuka deshita.</div>
+          <div class="word-meaning">昨天的圖書館很安靜。</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tp">
+    <span class="tp-kind">い形容詞 寒い</span>
+    <div class="tp-row">
+      <div class="word-item" data-text="今日は寒いです。">
+        <div class="word-content">
+          <span class="tp-lbl">現在</span>
+          <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby><span class="j-mark">い</span>です。</div>
+          <div class="word-romaji">kyou wa samui desu.</div>
+          <div class="word-meaning">今天很冷。</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item past" data-text="昨日は寒かったです。">
+        <div class="word-content">
+          <span class="tp-lbl">過去</span>
+          <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby><span class="j-mark">かった</span>です。</div>
+          <div class="word-romaji">kinou wa samukatta desu.</div>
+          <div class="word-meaning">昨天很冷。</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tp">
+    <span class="tp-kind">動詞 行きます</span>
+    <div class="tp-row">
+      <div class="word-item" data-text="今日は図書館に行きます。">
+        <div class="word-content">
+          <span class="tp-lbl">現在</span>
+          <div class="word-ja"><ruby>今日<rt>きょう</rt></ruby>は<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に<ruby>行<rt>い</rt></ruby>き<span class="j-mark">ます</span>。</div>
+          <div class="word-romaji">kyou wa toshokan ni ikimasu.</div>
+          <div class="word-meaning">今天要去圖書館。</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+      <div class="word-item past" data-text="昨日は図書館に行きました。">
+        <div class="word-content">
+          <span class="tp-lbl">過去</span>
+          <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に<ruby>行<rt>い</rt></ruby>き<span class="j-mark">ました</span>。</div>
+          <div class="word-romaji">kinou wa toshokan ni ikimashita.</div>
+          <div class="word-meaning">昨天去了圖書館。</div>
+        </div>
+        <button class="play-btn" aria-label="播放">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hissu">二、講過去的事，句尾一定要用過去式</div>
+
+  <p class="lead">
+    中文靠「昨天」「上週」這種時間詞就能表示過去，「下雨」「很冷」本身不用變。
+    日文不行：就算句子前面已經有「昨日」，句尾沒改成過去式，聽起來就像在講今天或以後的事，是錯的句子。
+  </p>
+
+  <table class="fix-table">
+    <tr><th>❌ 句尾沒改</th><th>✅ 句尾改成過去式</th></tr>
+    <tr>
+      <td class="ex"><span class="wrong"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>です</span></td>
+      <td class="ex"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby><b>でした</b><span class="ro">kinou wa ame deshita</span></td>
+    </tr>
+    <tr>
+      <td class="ex"><span class="wrong"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>いです</span></td>
+      <td class="ex"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby><b>かった</b>です<span class="ro">kinou wa samukatta desu</span></td>
+    </tr>
+    <tr>
+      <td class="ex"><span class="wrong"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます</span></td>
+      <td class="ex"><ruby>昨日<rt>きのう</rt></ruby>は<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に<ruby>行<rt>い</rt></ruby>き<b>ました</b><span class="ro">kinou wa toshokan ni ikimashita</span></td>
+    </tr>
+  </table>
+
+  <p class="lead">
+    反過來說，日本人聽句尾就知道是不是過去的事，所以常常把「昨日」省掉。
+    例如只說「寒かったですね」（samukatta desu ne，好冷喔），對方就知道你在講剛剛或前幾天的冷。
+  </p>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>這裡說的是句尾</strong><br>
+    「一定要改」是指句子最後那個動詞或形容詞。句子中間有些地方的時態規則不一樣，
+    例如「寝る前に」（neru mae ni，睡覺前）就算講的是昨晚，也不改成過去式。這種之後學到再說。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ta">三、四種詞的過去式，都帶著一個「た」</div>
+
+  <p class="lead">
+    第一節右邊那四句，改的方式看起來不一樣，其實有一個共同點：改完都多了一個「た」。
+    這就是 <a href="2026-08-12-ta-kei.html" style="color:var(--accent);">8/12</a> 講過的「日文的過去只有一個記號」。
+  </p>
+
+  <div class="formula">
+    <h4>名詞、な形容詞：改後面的 です</h4>
+    <div class="fx">
+      <ruby>雨<rt>あめ</rt></ruby>です<span class="arw">→</span><ruby>雨<rt>あめ</rt></ruby><b>でした</b><span class="ro">ame deshita</span><br>
+      <ruby>静<rt>しず</rt></ruby>かです<span class="arw">→</span><ruby>静<rt>しず</rt></ruby>か<b>でした</b><span class="ro">shizuka deshita</span>
+    </div>
+  </div>
+
+  <div class="formula">
+    <h4>い形容詞：改形容詞自己的 い，です 不動</h4>
+    <div class="fx">
+      <ruby>寒<rt>さむ</rt></ruby>いです<span class="arw">→</span><ruby>寒<rt>さむ</rt></ruby><b>かった</b>です<span class="ro">samukatta desu</span><br>
+      <ruby>楽<rt>たの</rt></ruby>しいです<span class="arw">→</span><ruby>楽<rt>たの</rt></ruby>し<b>かった</b>です<span class="ro">tanoshikatta desu</span>
+    </div>
+  </div>
+
+  <div class="formula">
+    <h4>動詞：ます 改成 ました</h4>
+    <div class="fx">
+      <ruby>行<rt>い</rt></ruby>きます<span class="arw">→</span><ruby>行<rt>い</rt></ruby>き<b>ました</b><span class="ro">ikimashita</span><br>
+      <ruby>食<rt>た</rt></ruby>べます<span class="arw">→</span><ruby>食<rt>た</rt></ruby>べ<b>ました</b><span class="ro">tabemashita</span>
+    </div>
+  </div>
+
+  <p class="lead">
+    い形容詞為什麼不改 です，而是改自己，在同一天的
+    <a href="2026-11-10-i-na-keiyoushi.html" style="color:var(--accent);">〈〜いです／〜です〉</a>有詳細說明：
+    い形容詞本身就能結束一句話，です 只是加上去的禮貌，所以時態要放在形容詞身上。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">四、有兩個地方容易講錯</div>
+
+  <p class="lead">
+    這兩個錯都跟い形容詞有關：一個是把「改 です」的做法套到い形容詞上，一個是忘了 いい 的過去式要從 よい 變。
+  </p>
+
+  <table class="fix-table">
+    <tr><th>❌ 容易講錯</th><th>✅ 正確說法</th></tr>
+    <tr>
+      <td class="ex"><span class="wrong"><ruby>寒<rt>さむ</rt></ruby>いでした</span><br><small>い形容詞不能改 です</small></td>
+      <td class="ex"><ruby>寒<rt>さむ</rt></ruby><b>かった</b>です<span class="ro">samukatta desu</span></td>
+    </tr>
+    <tr>
+      <td class="ex"><span class="wrong">いかったです</span><br><small>いい 過去式要從 よい 變</small></td>
+      <td class="ex"><b>よかった</b>です<span class="ro">yokatta desu</span></td>
+    </tr>
+  </table>
+
+  <div class="word-item" data-text="天気がよかったです。">
+    <div class="word-content">
+      <div class="word-ja"><ruby>天<rt>てん</rt>気<rt>き</rt></ruby>が<span class="j-mark">よかった</span>です。</div>
+      <div class="word-romaji">tenki ga yokatta desu.</div>
+      <div class="word-meaning">（那天）天氣很好。</div>
+    </div>
+    <button class="play-btn" aria-label="播放">▶</button>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">五、最後把現在放左邊、過去放右邊，一次看完</div>
+
+  <p class="lead">
+    每一列左邊是現在，右邊是過去。名詞和な形容詞改 です，い形容詞改自己，動詞改 ます，綠色的部分都帶著「た」。
+  </p>
+
+  <div class="sum-grid" style="--cols:2">
+    <div></div><div class="h">現在</div><div class="h">過去</div>
+    <div class="rl">名詞<br><span class="jp"><ruby>休<rt>やす</rt></ruby>み</span></div>
+    <div data-h="現在" class="c jp"><ruby>休<rt>やす</rt></ruby>みです<span class="ro">yasumi desu</span></div>
+    <div data-h="過去" class="c jp"><ruby>休<rt>やす</rt></ruby>み<b>でした</b><span class="ro">yasumi deshita</span></div>
+    <div class="rl">な形容詞<br><span class="jp"><ruby>便<rt>べん</rt>利<rt>り</rt></ruby></span></div>
+    <div data-h="現在" class="c jp"><ruby>便<rt>べん</rt>利<rt>り</rt></ruby>です<span class="ro">benri desu</span></div>
+    <div data-h="過去" class="c jp"><ruby>便<rt>べん</rt>利<rt>り</rt></ruby><b>でした</b><span class="ro">benri deshita</span></div>
+    <div class="rl">い形容詞<br><span class="jp"><ruby>楽<rt>たの</rt></ruby>しい</span></div>
+    <div data-h="現在" class="c jp"><ruby>楽<rt>たの</rt></ruby>しいです<span class="ro">tanoshii desu</span></div>
+    <div data-h="過去" class="c jp"><ruby>楽<rt>たの</rt></ruby>し<b>かった</b>です<span class="ro">tanoshikatta desu</span></div>
+    <div class="rl exc">例外<br><span class="jp">いい</span></div>
+    <div data-h="現在" class="c jp exc">いいです<span class="ro">ii desu</span></div>
+    <div data-h="過去" class="c jp exc">よ<b>かった</b>です<span class="ro">yokatta desu</span></div>
+    <div class="rl">動詞<br><span class="jp"><ruby>飲<rt>の</rt></ruby>みます</span></div>
+    <div data-h="現在" class="c jp"><ruby>飲<rt>の</rt></ruby>みます<span class="ro">nomimasu</span></div>
+    <div data-h="過去" class="c jp"><ruby>飲<rt>の</rt></ruby>みまし<b>た</b><span class="ro">nomimashita</span></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">六、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>先想是哪一種詞，再把句尾改成過去式</div>
+    <ol class="quiz-ol">
+      <li>「昨天很開心。」（楽しい）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>昨日は楽しかったです。<br>kinou wa tanoshikatta desu.<br>楽しい 是い形容詞，改自己的 い → かった。</p>
+        </details>
+      </li>
+      <li>「上週是休假。」（先週、休み）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>先週は休みでした。<br>senshuu wa yasumi deshita.<br>休み 是名詞，改 です → でした。</p>
+        </details>
+      </li>
+      <li>「昨天喝了咖啡。」（コーヒー、飲みます）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>昨日はコーヒーを飲みました。<br>kinou wa koohii o nomimashita.<br>動詞把 ます 改成 ました。</p>
+        </details>
+      </li>
+      <li>「那家店以前很安靜。」（その店、静か）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>その店は静かでした。<br>sono mise wa shizuka deshita.<br>静か 是な形容詞，改 です → でした，不能說 静かかったです。</p>
+        </details>
+      </li>
+      <li>「昨日は図書館に行きます。」哪裡錯了？請改正。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>昨日は図書館に行きました。<br>kinou wa toshokan ni ikimashita.<br>有「昨日」，句尾還是要改成過去式 ました。</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-10-i-na-keiyoushi.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜いです／〜です <span class="next-arrow">→</span></span>
+    <span class="next-sub">為什麼い形容詞改自己、な形容詞改 です：です 在兩邊的角色不一樣</span>
+  </a>
+  <a href="2026-11-10-keiyoushi-joutai.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">〜い／〜だ <span class="next-arrow">→</span></span>
+    <span class="next-sub">不加 です 的常體：だった、寒かった，以及兩種形容詞從古代日文來的樣子</span>
+  </a>
+  <a href="2026-08-12-ta-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">過去式 た形 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12 常體的過去式：日文的過去只有一個記號「た」</span>
+  </a>
+  <a href="2026-08-31-karakatta-desu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜かったです／〜でした <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/31 形容詞的過去式，用一頓咖哩當例子</span>
+  </a>
+  <a href="2026-07-22-tabemashita.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">食べました <span class="next-arrow">→</span></span>
+    <span class="next-sub">7/22 動詞 ます → ました 第一次出現</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

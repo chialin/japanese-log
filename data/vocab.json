@@ -246,6 +246,177 @@
    ]
   },
   {
+   "text": "今日は雨です。",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>です。",
+   "kana": "きょうはあめです。",
+   "romaji": "kyou wa ame desu.",
+   "meaning": "今天下雨。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "昨日は雨でした。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>でした。",
+   "kana": "きのうはあめでした。",
+   "romaji": "kinou wa ame deshita.",
+   "meaning": "昨天下雨。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "今日の図書館は静かです。",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>の<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かです。",
+   "kana": "きょうのとしょかんはしずかです。",
+   "romaji": "kyou no toshokan wa shizuka desu.",
+   "meaning": "今天的圖書館很安靜。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "場所",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "昨日の図書館は静かでした。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かでした。",
+   "kana": "きのうのとしょかんはしずかでした。",
+   "romaji": "kinou no toshokan wa shizuka deshita.",
+   "meaning": "昨天的圖書館很安靜。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "場所",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "今日は寒いです。",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>いです。",
+   "kana": "きょうはさむいです。",
+   "romaji": "kyou wa samui desu.",
+   "meaning": "今天很冷。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "昨日は寒かったです。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>かったです。",
+   "kana": "きのうはさむかったです。",
+   "romaji": "kinou wa samukatta desu.",
+   "meaning": "昨天很冷。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "今日は図書館に行きます。",
+   "ja": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。",
+   "kana": "きょうはとしょかんにいきます。",
+   "romaji": "kyou wa toshokan ni ikimasu.",
+   "meaning": "今天要去圖書館。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "昨日は図書館に行きました。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>図<rt>と</rt>書<rt>しょ</rt>館<rt>かん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。",
+   "kana": "きのうはとしょかんにいきました。",
+   "romaji": "kinou wa toshokan ni ikimashita.",
+   "meaning": "昨天去了圖書館。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "場所"
+   ]
+  },
+  {
+   "text": "天気がよかったです。",
+   "ja": "<ruby>天<rt>てん</rt>気<rt>き</rt></ruby>がよかったです。",
+   "kana": "てんきがよかったです。",
+   "romaji": "tenki ga yokatta desu.",
+   "meaning": "（那天）天氣很好。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-10",
+     "href": "lessons/2026-11-10-kako-mashita-deshita.html",
+     "title": "〜でした／〜かったです／〜ました"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "形容詞・副詞"
+   ]
+  },
+  {
    "text": "昨日の店、静かだった。",
    "ja": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>店<rt>みせ</rt></ruby>、<ruby>静<rt>しず</rt></ruby>かだった。",
    "kana": "きのうのみせ、しずかだった。",

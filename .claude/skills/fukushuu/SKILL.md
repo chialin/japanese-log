@@ -72,7 +72,7 @@ AskUserQuestion 一張卡只放一題——放兩題會互相洩題。
 全部答完，或她說「先這樣」「停」：
 
 1. 跑 `summary`，列出這回答對幾題、錯的題目（附正確說法和羅馬拼音），以及最近兩週最常錯的類型。
-   最常錯的類型如果有兩次以上，順便建議下一堂 Native 課可以請老師多練這一塊。
+   不要提 Native Camp 或建議請老師加強（2026-11-11 她說先不管是不是 Native Camp 的課）。
 2. 顯示「連續 N 天（最長 M 天）」。今天還沒達到 10 題的話，提醒她還差幾題才算今天有練。
 3. commit 紀錄：`git -C local add review/state.json && git -C local commit -m "review: YYYY-MM-DD"`。
 

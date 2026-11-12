@@ -9,7 +9,15 @@ Scarlett 用來補充 Duolingo 的每日複習，只練這個 repo 裡她自己�
 **挑題、排程、連續天數一律交給腳本**，你負責出題、對答案、講解。不要自己算格子或到期日。
 
 腳本：`node local/review/review.mjs <指令>`（在 repo 根目錄執行）。紀錄存在 `local/review/state.json`，
-`local/` 是獨立的私人 git repo，不會部署。
+`local/` 是獨立的私人 git repo，不會部署；remote 是 private 的 `git@github.com:chialin/japanese-log-local.git`
+（2026-11-12 建立），Mac 和雲端 session（iPhone）共用同一份紀錄。
+
+## 0. 開始前先同步紀錄
+
+1. 沒有 `local/` 資料夾（雲端 session 只 clone 了主 repo）：
+   `git clone git@github.com:chialin/japanese-log-local.git local`（SSH 不通就用 `gh repo clone chialin/japanese-log-local local`）。
+   clone 不下來就告訴她這次無法記紀錄，問她要不要照樣練（不記錄），不要自己造一份新的 `state.json`。
+2. 已經有 `local/`：`git -C local pull --rebase`，確保拿到另一台裝置上的最新紀錄。
 
 ## 1. 開始一回
 
@@ -74,6 +82,7 @@ AskUserQuestion 一張卡只放一題——放兩題會互相洩題。
 1. 跑 `summary`，列出這回答對幾題、錯的題目（附正確說法和羅馬拼音），以及最近兩週最常錯的類型。
    不要提 Native Camp 或建議請老師加強（2026-11-11 她說先不管是不是 Native Camp 的課）。
 2. 顯示「連續 N 天（最長 M 天）」。今天還沒達到 10 題的話，提醒她還差幾題才算今天有練。
-3. commit 紀錄：`git -C local add review/state.json && git -C local commit -m "review: YYYY-MM-DD"`。
+3. commit 紀錄：`git -C local add review/state.json && git -C local commit -m "review: YYYY-MM-DD" && git -C local push`。
+   push 失敗（另一台裝置先推了）就 `git -C local pull --rebase` 再 push；`state.json` 衝突時告訴她，不要硬蓋。
 
 中途停下也照樣做第 1～3 步。已經答過的題目都記錄了，不會白做。

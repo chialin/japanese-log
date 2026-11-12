@@ -159,7 +159,7 @@ Calendar 會自動重算——`data-date` 提供即可，新月份不必動 cale
 - 題庫直接讀 `data/vocab.json`：句子（`。？！` 結尾）進「瞬間作文」，其他進「単語」。新課跑完 `build-vocab` 就自動進題庫。
 - 排程、連續天數由 `local/review/review.mjs` 計算（Leitner 1・3・7・14・30 天；當天答滿 10 題算有練），
   紀錄在 `local/review/state.json`。`local/` 是獨立的私人 git repo，**不會部署**。
-- 之後要在 iPhone 上（Mac 關機時）練，計畫是替 `local/` 加一個 private GitHub remote，用雲端 session 跑。
+- `local/` 的 remote 是 private 的 `chialin/japanese-log-local`（2026-11-12 建立）。iPhone 上（Mac 關機時）用雲端 session 練：skill 會先把它 clone／pull 到 `local/`，結束時 commit＋push，兩邊共用同一份紀錄。
 
 ### TTS — VOICEVOX 預生 mp3（主要）＋ speechSynthesis（fallback）
 

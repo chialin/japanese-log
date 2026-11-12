@@ -29,6 +29,8 @@ Scarlett 用來補充 Duolingo 的每日複習，只練這個 repo 裡她自己�
 
 輸出是 JSON：`streak` 和 `questions[]`。每題有 `id`、`deck`、`box`、`mode`、`ja`、`kana`、`romaji`、
 `meaning`（`note` 是完整說明）、`audio`、`lesson`、`candidates`（干擾選項候選）。
+`answer`／`play` 一律照抄 JSON 裡的 `id`，不要拿 `ja` 或題目上顯示的字去湊——兩者不一定一樣，
+湊錯會「題庫裡找不到」，播不出聲音也記不到紀錄。
 
 開場一行就好：「今天 N 題（單字 x、作文 y），目前連續 D 天。」然後直接出第一題。
 

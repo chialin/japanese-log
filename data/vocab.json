@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10",
+ "generated": "2026-11-12",
  "words": [
   {
    "text": "外は寒いです。",
@@ -18341,44 +18341,6 @@
    "tags": [
     "家族・人",
     "問候・句型"
-   ]
-  },
-  {
-   "text": "そこは 混んでいますよ",
-   "ja": "そこは <ruby>混<rt>こ</rt></ruby>んでいますよ",
-   "kana": "そこは こんでいますよ",
-   "romaji": "soko wa konde imasu yo",
-   "meaning": "那裡很擠喔 — 混む（こむ）＝擁擠",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-08-06",
-     "href": "lessons/2026-08-06-soko-wa-desu-yo.html",
-     "title": "そこは〜ですよ"
-    }
-   ],
-   "tags": [
-    "場所",
-    "形容詞・副詞"
-   ]
-  },
-  {
-   "text": "そこは 空いていますよ",
-   "ja": "そこは <ruby>空<rt>す</rt></ruby>いていますよ",
-   "kana": "そこは すいていますよ",
-   "romaji": "soko wa suite imasu yo",
-   "meaning": "那裡很空喔、有位子喔 — 空く（すく）＝變空",
-   "kind": "word",
-   "lessons": [
-    {
-     "date": "2026-08-06",
-     "href": "lessons/2026-08-06-soko-wa-desu-yo.html",
-     "title": "そこは〜ですよ"
-    }
-   ],
-   "tags": [
-    "場所",
-    "形容詞・副詞"
    ]
   },
   {

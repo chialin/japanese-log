@@ -1,6 +1,384 @@
 {
- "generated": "2026-11-12",
+ "generated": "2026-11-13",
  "words": [
+  {
+   "text": "明日は雨が降ると思います。",
+   "ja": "<ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>ると<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "あしたは あめが ふるとおもいます。",
+   "romaji": "ashita wa ame ga furu to omoimasu.",
+   "meaning": "我覺得明天會下雨。（る：會）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "明日は雨が降らないと思います。",
+   "ja": "<ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>らないと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "あしたは あめが ふらないとおもいます。",
+   "romaji": "ashita wa ame ga furanai to omoimasu.",
+   "meaning": "我覺得明天不會下雨。（ない：不會）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "昨日の夜、雨が降ったと思います。",
+   "ja": "<ruby>昨日<rt>きのう</rt></ruby>の <ruby>夜<rt>よる</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>ったと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "きのうの よる、あめが ふったとおもいます。",
+   "romaji": "kinou no yoru, ame ga futta to omoimasu.",
+   "meaning": "我覺得昨天晚上有下雨。（た：已經發生，例如早上看到地上是濕的）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "先週、青森は雪が降らなかったと思います。",
+   "ja": "<ruby>先<rt>せん</rt>週<rt>しゅう</rt></ruby>、<ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>は <ruby>雪<rt>ゆき</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>らなかったと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "せんしゅう、あおもりは ゆきが ふらなかったとおもいます。",
+   "romaji": "senshuu, aomori wa yuki ga furanakatta to omoimasu.",
+   "meaning": "我覺得上週青森沒有下雪。（なかった：過去沒有發生）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "このラーメンはおいしいと思います。",
+   "ja": "この ラーメンは おいしいと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "この ラーメンは おいしいとおもいます。",
+   "romaji": "kono raamen wa oishii to omoimasu.",
+   "meaning": "我覺得這碗拉麵很好吃。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "ボルダリングは楽しいと思います。",
+   "ja": "ボルダリングは <ruby>楽<rt>たの</rt></ruby>しいと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "ボルダリングは たのしいとおもいます。",
+   "romaji": "boruderingu wa tanoshii to omoimasu.",
+   "meaning": "我覺得攀岩很好玩。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "この公園は静かだと思います。",
+   "ja": "この <ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>は <ruby>静<rt>しず</rt></ruby>かだと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "この こうえんは しずかだとおもいます。",
+   "romaji": "kono kouen wa shizuka da to omoimasu.",
+   "meaning": "我覺得這座公園很安靜。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "場所",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "明日は休みだと思います。",
+   "ja": "<ruby>明日<rt>あした</rt></ruby>は <ruby>休<rt>やす</rt></ruby>みだと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "あしたは やすみだとおもいます。",
+   "romaji": "ashita wa yasumi da to omoimasu.",
+   "meaning": "我覺得明天放假。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "時間・日期",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "田中さんは来ないと思います。",
+   "ja": "<ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんは <ruby>来<rt>こ</rt></ruby>ないと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "たなかさんは こないとおもいます。",
+   "romaji": "tanaka-san wa konai to omoimasu.",
+   "meaning": "我覺得田中先生不會來。平常的猜測，用這一句",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "田中さんが来るとは思いません。",
+   "ja": "<ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんが <ruby>来<rt>く</rt></ruby>るとは<ruby>思<rt>おも</rt></ruby>いません。",
+   "kana": "たなかさんが くるとはおもいません。",
+   "romaji": "tanaka-san ga kuru to wa omoimasen.",
+   "meaning": "我不認為田中先生會來。語氣比較強，像在否定別人的說法",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "家族・人",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "先生はどう思いますか。",
+   "ja": "<ruby>先<rt>せん</rt>生<rt>せい</rt></ruby>は どう<ruby>思<rt>おも</rt></ruby>いますか？",
+   "kana": "せんせいは どうおもいますか？",
+   "romaji": "sensei wa dou omoimasu ka?",
+   "meaning": "老師覺得怎麼樣？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "學校・工作",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "明日は晴れると思いますか。",
+   "ja": "<ruby>明日<rt>あした</rt></ruby>は <ruby>晴<rt>は</rt></ruby>れると<ruby>思<rt>おも</rt></ruby>いますか？",
+   "kana": "あしたは はれるとおもいますか？",
+   "romaji": "ashita wa hareru to omoimasu ka?",
+   "meaning": "你覺得明天會放晴嗎？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "はい、そう思います。",
+   "ja": "はい、そう<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "はい、そうおもいます。",
+   "romaji": "hai, sou omoimasu.",
+   "meaning": "對，我也這樣覺得。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "うーん、私はそうは思いません。",
+   "ja": "うーん、<ruby>私<rt>わたし</rt></ruby>は そうは<ruby>思<rt>おも</rt></ruby>いません。",
+   "kana": "うーん、わたしは そうはおもいません。",
+   "romaji": "uun, watashi wa sou wa omoimasen.",
+   "meaning": "嗯，我倒不這麼覺得。加 は 是在跟對方的想法做對比，語氣比較和緩",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "日本の冬は台湾の冬より寒いと思います。",
+   "ja": "<ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>の <ruby>冬<rt>ふゆ</rt></ruby>は <ruby>台<rt>たい</rt>湾<rt>わん</rt></ruby>の <ruby>冬<rt>ふゆ</rt></ruby>より <ruby>寒<rt>さむ</rt></ruby>いと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "にほんの ふゆは たいわんの ふゆより さむいとおもいます。",
+   "romaji": "nihon no fuyu wa taiwan no fuyu yori samui to omoimasu.",
+   "meaning": "我覺得日本的冬天比台灣的冬天冷。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "日本語は難しいですが、面白いと思います。",
+   "ja": "<ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>は <ruby>難<rt>むずか</rt></ruby>しいですが、<ruby>面<rt>おも</rt>白<rt>しろ</rt></ruby>いと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "にほんごは むずかしいですが、おもしろいとおもいます。",
+   "romaji": "nihongo wa muzukashii desu ga, omoshiroi to omoimasu.",
+   "meaning": "日文很難，不過我覺得很有趣。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "學校・工作",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "来年も青森に行きたいと思います。",
+   "ja": "<ruby>来<rt>らい</rt>年<rt>ねん</rt></ruby>も <ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>に <ruby>行<rt>い</rt></ruby>きたいと<ruby>思<rt>おも</rt></ruby>います。",
+   "kana": "らいねんも あおもりに いきたいとおもいます。",
+   "romaji": "rainen mo aomori ni ikitai to omoimasu.",
+   "meaning": "我明年也想去青森。〜たい 也是い形容詞的樣子，直接接 と思います，比單說 行きたいです 委婉一點",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "場所",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "行くと思います",
+   "ja": "行きますと思います → <ruby>行<rt>い</rt></ruby>くと<ruby>思<rt>おも</rt></ruby>います",
+   "kana": "行きますと思います → いくとおもいます",
+   "romaji": "iku to omoimasu",
+   "meaning": "と 前面不放 ます，禮貌留給句尾的 思います",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "きれいだと思います",
+   "ja": "きれいと思います → きれいだと<ruby>思<rt>おも</rt></ruby>います",
+   "kana": "きれいと思います → きれいだとおもいます",
+   "romaji": "kirei da to omoimasu",
+   "meaning": "きれい 是な形容詞，要補 だ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "問候・句型"
+   ]
+  },
+  {
+   "text": "おいしいと思います",
+   "ja": "おいしいだと思います → おいしいと<ruby>思<rt>おも</rt></ruby>います",
+   "kana": "おいしいだと思います → おいしいとおもいます",
+   "romaji": "oishii to omoimasu",
+   "meaning": "い形容詞本身就是常體，不能再加 だ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-13",
+     "href": "lessons/2026-11-13-to-omoimasu.html",
+     "title": "〜と思います"
+    }
+   ],
+   "tags": [
+    "食物",
+    "問候・句型"
+   ]
+  },
   {
    "text": "外は寒いです。",
    "ja": "<ruby>外<rt>そと</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>いです。",

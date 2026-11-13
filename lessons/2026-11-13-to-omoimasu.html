@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜と思います — 用常體說出自己的想法</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+/* 問與答 */
+.qa{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:8px;padding:6px 16px;margin-bottom:12px;}
+.qa-tag{display:inline-block;font-size:12px;color:#fff;background:var(--accent);border-radius:999px;padding:1px 10px;margin:8px 0 2px;}
+.qa .word-item{border-bottom:1px dashed var(--line);}
+.qa .word-item:last-child{border-bottom:none;}
+
+/* 變形公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx s{color:var(--ink-mute);text-decoration-thickness:2px;}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+.fx .ro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);margin-left:8px;}
+
+/* 錯誤對照 */
+.wrong{color:#b5462f;text-decoration:line-through;text-decoration-thickness:1.5px;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜と<span class="accent">思います</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 13</div>
+  <p class="page-subtitle">把已經會的常體放在 と思います 前面，就能說「我覺得〜」</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    上會話課時，老師常問「どう思いますか？」（妳覺得怎麼樣），想回答「我覺得〜」就要用 〜と思います。讀完這篇可以：
+    <ul class="tip-list">
+      <li>把動詞的常體（る・ない・た・なかった）放在 と思います 前面，說出自己的猜測和意見</li>
+      <li>知道 と 前面不能放 ます，禮貌的部分交給句尾的 思います</li>
+      <li>知道名詞和な形容詞要補一個 だ，い形容詞不用</li>
+      <li>用 〜ないと思います 說「我覺得不會〜」</li>
+      <li>用 どう思いますか 反問老師的想法</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>這篇是「把常體拿來說話」的第一篇</strong><br>
+    動詞的常體已經在 <a href="2026-08-09-godan-doushi.html" style="color:var(--accent);">8/9〈五段動詞〉</a>、
+    <a href="2026-08-12-ta-kei.html" style="color:var(--accent);">8/12〈た形〉</a>和
+    <a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12〈否定的說法〉</a>學過了，這篇不再講怎麼變。
+    <a href="2026-07-22-tabemashita.html" style="color:var(--accent);">7/22〈食べました〉</a>提過，常體不只是跟朋友講話用的，也是句型的零件。
+    〜と思います 就是最常用的一個：前面放常體，句尾維持禮貌，上課跟老師說話也可以用。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="yottsu">一、以「我覺得」為主軸，把動詞常體的四個字尾排出來</div>
+
+  <p class="lead">
+    先用同一個動詞 <ruby>降<rt>ふ</rt></ruby>る（下雨、下雪）看四句。句尾的 と思います 完全不變，
+    要換的只有前面那個動詞：現在或未來的事用 る／ない，已經發生的事用 た／なかった。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>降る 的四句</div>
+
+    <div class="word-item" data-text="明日は雨が降ると思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby><span class="j-mark">る</span>と<ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">ashita wa ame ga furu to omoimasu.</div>
+        <div class="word-meaning">我覺得明天會下雨。（る：會）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="明日は雨が降らないと思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>ら<span class="j-mark">ない</span>と<ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">ashita wa ame ga furanai to omoimasu.</div>
+        <div class="word-meaning">我覺得明天不會下雨。（ない：不會）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昨日の夜、雨が降ったと思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昨日<rt>きのう</rt></ruby>の <ruby>夜<rt>よる</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>っ<span class="j-mark">た</span>と<ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">kinou no yoru, ame ga futta to omoimasu.</div>
+        <div class="word-meaning">我覺得昨天晚上有下雨。（た：已經發生，例如早上看到地上是濕的）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="先週、青森は雪が降らなかったと思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>先<rt>せん</rt>週<rt>しゅう</rt></ruby>、<ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>は <ruby>雪<rt>ゆき</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>ら<span class="j-mark">なかった</span>と<ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">senshuu, aomori wa yuki ga furanakatta to omoimasu.</div>
+        <div class="word-meaning">我覺得上週青森沒有下雪。（なかった：過去沒有發生）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    中文的「我覺得」後面直接放一句話就好，日文也差不多，只是那句話要用常體，最後再接 と思います。
+    と 是「引用」的記號，意思是「〜，我是這樣想的」。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="masu">二、と 前面要用常體，是因為禮貌已經由 思います 負責了</div>
+
+  <p class="lead">
+    最容易犯的錯是把 ます形 直接放進去，說成 行きますと思います。
+    日文一句話只需要在句尾表現一次禮貌，句尾的 思います 已經是 ます 了，前面那句就用常體。
+    這跟 <a href="2026-10-06-doushite-ndesu.html" style="color:var(--accent);">10/6〈どうして〜んですか〉</a>裡「ん 前面要用普通形」是同一個道理。
+  </p>
+
+  <div class="formula">
+    <h4>ます形 → 常體 ＋ と思います</h4>
+    <div class="fx">
+      <ruby>行<rt>い</rt></ruby>き<s>ます</s><span class="arw">→</span><ruby>行<rt>い</rt></ruby><b>く</b>と<ruby>思<rt>おも</rt></ruby>います<span class="ro">iku to omoimasu</span><br>
+      <ruby>食<rt>た</rt></ruby>べ<s>ます</s><span class="arw">→</span><ruby>食<rt>た</rt></ruby>べ<b>る</b>と<ruby>思<rt>おも</rt></ruby>います<span class="ro">taberu to omoimasu</span><br>
+      <ruby>来<rt>き</rt></ruby><s>ます</s><span class="arw">→</span><ruby>来<rt>く</rt></ruby><b>る</b>と<ruby>思<rt>おも</rt></ruby>います<span class="ro">kuru to omoimasu</span><br>
+      <ruby>行<rt>い</rt></ruby>き<s>ました</s><span class="arw">→</span><ruby>行<rt>い</rt></ruby><b>った</b>と<ruby>思<rt>おも</rt></ruby>います<span class="ro">itta to omoimasu</span>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>想說得禮貌一點，改的是句尾</strong><br>
+    跟朋友說的時候，句尾也換成常體：<ruby>行<rt>い</rt></ruby>くと<ruby>思<rt>おも</rt></ruby>う（iku to omou）。
+    跟老師說的時候只改句尾：行くと<strong>思います</strong>。前面的 行く 兩種情況都一樣，不用跟著變。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="keiyoushi">三、形容詞和名詞也是接常體，名詞和な形容詞要補一個 だ</div>
+
+  <p class="lead">
+    想說「我覺得很好吃」「我覺得很安靜」也是同一個句型。い形容詞本身就是常體，直接接 と思います。
+    名詞和な形容詞的常體是後面加 だ，這個 だ 不能省略，
+    <a href="2026-11-10-keiyoushi-joutai.html" style="color:var(--accent);">11/10〈〜い／〜だ〉</a>那篇講過它們的常體。
+  </p>
+
+  <div class="qa">
+    <span class="qa-tag">い形容詞 直接接</span>
+    <div class="word-item" data-text="このラーメンはおいしいと思います。">
+      <div class="word-content">
+        <div class="word-ja">この ラーメンは おいしい<span class="j-mark">と</span><ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">kono raamen wa oishii to omoimasu.</div>
+        <div class="word-meaning">我覺得這碗拉麵很好吃。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="ボルダリングは楽しいと思います。">
+      <div class="word-content">
+        <div class="word-ja">ボルダリングは <ruby>楽<rt>たの</rt></ruby>しい<span class="j-mark">と</span><ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">boruderingu wa tanoshii to omoimasu.</div>
+        <div class="word-meaning">我覺得攀岩很好玩。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">な形容詞 補 だ</span>
+    <div class="word-item" data-text="この公園は静かだと思います。">
+      <div class="word-content">
+        <div class="word-ja">この <ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>は <ruby>静<rt>しず</rt></ruby>か<span class="j-mark">だ</span>と<ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">kono kouen wa shizuka da to omoimasu.</div>
+        <div class="word-meaning">我覺得這座公園很安靜。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">名詞 補 だ</span>
+    <div class="word-item" data-text="明日は休みだと思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>明日<rt>あした</rt></ruby>は <ruby>休<rt>やす</rt></ruby>み<span class="j-mark">だ</span>と<ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">ashita wa yasumi da to omoimasu.</div>
+        <div class="word-meaning">我覺得明天放假。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>だ 只出現在現在的肯定</strong><br>
+    否定和過去本來就有自己的字尾，不用另外補 だ：
+    <ruby>静<rt>しず</rt></ruby>か<strong>じゃない</strong>と思います（shizuka ja nai to omoimasu，我覺得不安靜）、
+    <ruby>休<rt>やす</rt></ruby>み<strong>だった</strong>と思います（yasumi datta to omoimasu，我覺得那天是放假）。
+    い形容詞也一樣：<ruby>寒<rt>さむ</rt></ruby><strong>くない</strong>と思います、<ruby>寒<rt>さむ</rt></ruby><strong>かった</strong>と思います。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>んです 補 な，と思います 補 だ</strong><br>
+    <a href="2026-10-06-doushite-ndesu.html" style="color:var(--accent);">10/6 的 んです</a>前面，名詞和な形容詞補的是 な（静か<strong>な</strong>んです）。
+    と思います 前面補的是 だ（静か<strong>だ</strong>と思います）。兩個句型都是「常體＋句型」，只有這個小字不一樣，要分開記。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="hitei">四、說「我覺得不會」時，否定習慣放在 と 前面</div>
+
+  <p class="lead">
+    中文可以說「我覺得他不會來」，也可以說「我不覺得他會來」，後面那句聽起來比較像在反駁別人。
+    日文也有這兩種，平常猜測時用第一種，把否定放在 と 前面。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>兩種「不會來」</div>
+
+    <div class="word-item" data-text="田中さんは来ないと思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんは <ruby>来<rt>こ</rt></ruby><span class="j-mark">ない</span>と<ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">tanaka-san wa konai to omoimasu.</div>
+        <div class="word-meaning">我覺得田中先生不會來。平常的猜測，用這一句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="田中さんが来るとは思いません。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>田<rt>た</rt>中<rt>なか</rt></ruby>さんが <ruby>来<rt>く</rt></ruby>るとは<ruby>思<rt>おも</rt></ruby>い<span class="j-mark">ません</span>。</div>
+        <div class="word-romaji">tanaka-san ga kuru to wa omoimasen.</div>
+        <div class="word-meaning">我不認為田中先生會來。語氣比較強，像在否定別人的說法</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 多分 就是中文的「多半」</strong><br>
+    想說得更不確定一點，句子前面加 <ruby>多<rt>た</rt>分<rt>ぶん</rt></ruby>（tabun，大概）：
+    多分、<ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>だと<ruby>思<rt>おも</rt></ruby>います（我覺得明天大概會下雨）。
+    多分 兩個字跟中文的「多半」差一個字，意思也接近，都是「大概、八成」。
+    多分 放在句首，と思います 放在句尾，兩邊一起把語氣放軟。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kiku">五、問對方的想法和回答，是這樣用的</div>
+
+  <p class="lead">
+    會話課不只要說自己的想法，也可以反過來問老師。問「你覺得怎麼樣」用 どう思いますか，
+    問「你覺得會不會〜」就把常體放進 と思いますか。
+  </p>
+
+  <div class="qa">
+    <span class="qa-tag">問想法</span>
+    <div class="word-item" data-text="先生はどう思いますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>先<rt>せん</rt>生<rt>せい</rt></ruby>は どう<ruby>思<rt>おも</rt></ruby>いますか？</div>
+        <div class="word-romaji">sensei wa dou omoimasu ka?</div>
+        <div class="word-meaning">老師覺得怎麼樣？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="明日は晴れると思いますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>明日<rt>あした</rt></ruby>は <ruby>晴<rt>は</rt></ruby>れると<ruby>思<rt>おも</rt></ruby>いますか？</div>
+        <div class="word-romaji">ashita wa hareru to omoimasu ka?</div>
+        <div class="word-meaning">你覺得明天會放晴嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="qa">
+    <span class="qa-tag">回答</span>
+    <div class="word-item" data-text="はい、そう思います。">
+      <div class="word-content">
+        <div class="word-ja">はい、そう<ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">hai, sou omoimasu.</div>
+        <div class="word-meaning">對，我也這樣覺得。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+    <div class="word-item" data-text="うーん、私はそうは思いません。">
+      <div class="word-content">
+        <div class="word-ja">うーん、<ruby>私<rt>わたし</rt></ruby>は そうは<ruby>思<rt>おも</rt></ruby>いません。</div>
+        <div class="word-romaji">uun, watashi wa sou wa omoimasen.</div>
+        <div class="word-meaning">嗯，我倒不這麼覺得。加 は 是在跟對方的想法做對比，語氣比較和緩</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="junbi">六、上會話課前，可以先準備這樣的句子</div>
+
+  <p class="lead">
+    と思います 前面可以放任何學過的句型，所以很適合拿來講自己的生活。
+    下面三句分別用到 <a href="2026-11-06-yori-no-hou-ga.html" style="color:var(--accent);">11/6 的 より</a>、
+    い形容詞和 <a href="2026-11-02-shitai-desu.html" style="color:var(--accent);">11/2 的 〜たい</a>。
+    上課前照這個方式寫三到五句跟當天話題有關的句子，上課時就有話可以講。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>講自己的生活</div>
+
+    <div class="word-item" data-text="日本の冬は台湾の冬より寒いと思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>の <ruby>冬<rt>ふゆ</rt></ruby>は <ruby>台<rt>たい</rt>湾<rt>わん</rt></ruby>の <ruby>冬<rt>ふゆ</rt></ruby>より <ruby>寒<rt>さむ</rt></ruby>い<span class="j-mark">と</span><ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">nihon no fuyu wa taiwan no fuyu yori samui to omoimasu.</div>
+        <div class="word-meaning">我覺得日本的冬天比台灣的冬天冷。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本語は難しいですが、面白いと思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日<rt>に</rt>本<rt>ほん</rt>語<rt>ご</rt></ruby>は <ruby>難<rt>むずか</rt></ruby>しいですが、<ruby>面<rt>おも</rt>白<rt>しろ</rt></ruby>い<span class="j-mark">と</span><ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">nihongo wa muzukashii desu ga, omoshiroi to omoimasu.</div>
+        <div class="word-meaning">日文很難，不過我覺得很有趣。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="来年も青森に行きたいと思います。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>来<rt>らい</rt>年<rt>ねん</rt></ruby>も <ruby>青<rt>あお</rt>森<rt>もり</rt></ruby>に <ruby>行<rt>い</rt></ruby>きたい<span class="j-mark">と</span><ruby>思<rt>おも</rt></ruby>います。</div>
+        <div class="word-romaji">rainen mo aomori ni ikitai to omoimasu.</div>
+        <div class="word-meaning">我明年也想去青森。〜たい 也是い形容詞的樣子，直接接 と思います，比單說 行きたいです 委婉一點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">七、有三個地方容易講錯</div>
+
+  <p class="lead">
+    三個錯都出在 と 的前面。講之前先確認兩件事：前面是不是常體，是名詞或な形容詞的話有沒有補 だ。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>常見的錯</div>
+
+    <div class="word-item" data-text="行くと思います">
+      <div class="word-content">
+        <div class="word-ja"><span class="wrong">行きますと思います</span> → <ruby>行<rt>い</rt></ruby>くと<ruby>思<rt>おも</rt></ruby>います</div>
+        <div class="word-romaji">iku to omoimasu</div>
+        <div class="word-meaning">と 前面不放 ます，禮貌留給句尾的 思います</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="きれいだと思います">
+      <div class="word-content">
+        <div class="word-ja"><span class="wrong">きれいと思います</span> → きれいだと<ruby>思<rt>おも</rt></ruby>います</div>
+        <div class="word-romaji">kirei da to omoimasu</div>
+        <div class="word-meaning">きれい 是な形容詞，要補 だ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="おいしいと思います">
+      <div class="word-content">
+        <div class="word-ja"><span class="wrong">おいしいだと思います</span> → おいしいと<ruby>思<rt>おも</rt></ruby>います</div>
+        <div class="word-romaji">oishii to omoimasu</div>
+        <div class="word-meaning">い形容詞本身就是常體，不能再加 だ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">八、最後把接法分成兩邊：動詞和い形容詞直接接，名詞和な形容詞補 だ</div>
+
+  <p class="lead">
+    例字換成跟正文不一樣的字。左邊那堆本身就是常體，直接接 と思います；右邊那堆要先補 だ 才是常體。
+  </p>
+
+  <div class="sum-bins">
+    <div class="sum-bin">
+      <h4>直接接 <b>と</b>思います</h4>
+      <div class="who">動詞、い形容詞</div>
+      <table>
+        <tr><td class="jp"><ruby>飲<rt>の</rt></ruby>む</td><td class="arw">→</td><td class="jp"><ruby>飲<rt>の</rt></ruby>む<b>と</b></td><td class="ro">nomu to</td></tr>
+        <tr><td class="jp"><ruby>帰<rt>かえ</rt></ruby>らない</td><td class="arw">→</td><td class="jp"><ruby>帰<rt>かえ</rt></ruby>らない<b>と</b></td><td class="ro">kaeranai to</td></tr>
+        <tr><td class="jp"><ruby>高<rt>たか</rt></ruby>い</td><td class="arw">→</td><td class="jp"><ruby>高<rt>たか</rt></ruby>い<b>と</b></td><td class="ro">takai to</td></tr>
+        <tr><td class="jp"><ruby>暑<rt>あつ</rt></ruby>かった</td><td class="arw">→</td><td class="jp"><ruby>暑<rt>あつ</rt></ruby>かった<b>と</b></td><td class="ro">atsukatta to</td></tr>
+      </table>
+    </div>
+    <div class="sum-bin">
+      <h4>補 <b>だ</b> 再接 と思います</h4>
+      <div class="who">名詞、な形容詞</div>
+      <table>
+        <tr><td class="jp"><ruby>元<rt>げん</rt>気<rt>き</rt></ruby></td><td class="arw">→</td><td class="jp"><ruby>元<rt>げん</rt>気<rt>き</rt></ruby><b>だ</b>と</td><td class="ro">genki da to</td></tr>
+        <tr><td class="jp"><ruby>有<rt>ゆう</rt>名<rt>めい</rt></ruby></td><td class="arw">→</td><td class="jp"><ruby>有<rt>ゆう</rt>名<rt>めい</rt></ruby><b>だ</b>と</td><td class="ro">yuumei da to</td></tr>
+        <tr><td class="jp"><ruby>雪<rt>ゆき</rt></ruby></td><td class="arw">→</td><td class="jp"><ruby>雪<rt>ゆき</rt></ruby><b>だ</b>と</td><td class="ro">yuki da to</td></tr>
+        <tr><td class="jp"><ruby>学<rt>がく</rt>生<rt>せい</rt></ruby></td><td class="arw">→</td><td class="jp"><ruby>学<rt>がく</rt>生<rt>せい</rt></ruby><b>だ</b>と</td><td class="ro">gakusei da to</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="sum-exc">
+    <span class="exc-tag">注意</span>
+    <div>
+      <div class="jp"><ruby>元<rt>げん</rt>気<rt>き</rt></ruby>じゃない<b>と</b>／<ruby>雪<rt>ゆき</rt></ruby>だった<b>と</b> <span class="ro">genki ja nai to ／ yuki datta to</span></div>
+      <div class="exc-note">右邊那堆的否定和過去已經有 じゃない、だった 當字尾，不用再補 だ。</div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">九、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>用 と思います 說說看</div>
+    <ol class="quiz-ol">
+      <li>我覺得明天會下雪。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>明日は雪が降ると思います。<br>ashita wa yuki ga furu to omoimasu.<br>降ります 先換成常體 降る。</p>
+        </details>
+      </li>
+      <li>我覺得他不會來。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>彼は来ないと思います。<br>kare wa konai to omoimasu.<br>否定放在 と 前面。来る 的 ない形 唸 こない。</p>
+        </details>
+      </li>
+      <li>我覺得這家店很安靜。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>この店は静かだと思います。<br>kono mise wa shizuka da to omoimasu.<br>静か 是な形容詞，要補 だ。</p>
+        </details>
+      </li>
+      <li>我覺得那部電影很有趣。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>あの映画は面白いと思います。<br>ano eiga wa omoshiroi to omoimasu.<br>い形容詞直接接，不加 だ。</p>
+        </details>
+      </li>
+      <li>老師覺得怎麼樣？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>先生はどう思いますか。<br>sensei wa dou omoimasu ka?</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-07-22-tabemashita.html" class="next-link">
+    <span class="next-kicker">— 前情提要 —</span>
+    <span class="next-title">口語練習 — 食べました <span class="next-arrow">→</span></span>
+    <span class="next-sub">7/22 第一次提到「普通形＋と思います」，也解釋了常體為什麼是句型零件</span>
+  </a>
+  <a href="2026-08-12-ta-kei.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">過去式 た形 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12 動詞怎麼變成 た／なかった</span>
+  </a>
+  <a href="2026-08-12-hitei.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">否定的說法 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12 ない 怎麼接：行かない、来ない、しない</span>
+  </a>
+  <a href="2026-10-06-doushite-ndesu.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">どうして〜んですか <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/6 另一個「常體＋句型」，名詞和な形容詞補的是 な</span>
+  </a>
+  <a href="2026-11-10-keiyoushi-joutai.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜い／〜だ <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/10 兩種形容詞的常體：静かだ・だった・じゃない・じゃなかった</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

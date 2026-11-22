@@ -19,6 +19,9 @@
 //   node scripts/generate-audio.mjs --speaker 16       # 換角色（例：store-phrasebook 用九州そら 16）
 //   node scripts/generate-audio.mjs --list-speakers    # 列出所有可選角色
 //   node scripts/generate-audio.mjs --force            # 強制重新生成（即使 cache 已存在）
+//   node scripts/generate-audio.mjs --from-json local/kaiwa --out local/kaiwa/audio
+//       # 不掃 HTML，改讀資料夾裡每個 *.json 的 items[].text（有 audioText 就用 audioText），
+//       # 輸出到 --out。給私人 repo local/ 的會話句子用，音檔不進公開的 audio/。
 
 import { readFile, writeFile, mkdir, readdir, access, unlink } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
@@ -28,11 +31,13 @@ import path from 'node:path';
 // 用 127.0.0.1 而非 localhost：Node fetch 會把 localhost 解析成 IPv6 ::1，
 // 但 VOICEVOX engine 只監聽 IPv4，會導致連線失敗。
 const ENGINE = 'http://127.0.0.1:50021';
-const AUDIO_DIR = 'audio';
 const ROOT = process.cwd();
 
 // ── arg parse ────────────────────────────
 const args = process.argv.slice(2);
+const argAfter = (flag) => { const i = args.indexOf(flag); return i >= 0 ? args[i + 1] : null; };
+const FROM_JSON = argAfter('--from-json');
+const AUDIO_DIR = argAfter('--out') || 'audio';
 const force = args.includes('--force');
 const listOnly = args.includes('--list-speakers');
 const speakerIdx = args.indexOf('--speaker');
@@ -68,6 +73,7 @@ async function listSpeakers() {
 
 // ── 3. 掃 HTML 收集 data-text ────────────
 async function collectTexts() {
+  if (FROM_JSON) return collectJsonTexts(FROM_JSON);
   const dirs = ['lessons', 'readings', 'tadoku'];
   const files = [];
   for (const dir of dirs) {
@@ -90,6 +96,21 @@ async function collectTexts() {
     const matches = html.matchAll(/data-text="([^"]+)"/g);
     for (const m of matches) {
       const text = decodeHtmlEntities(m[1]);
+      if (!texts.has(text)) texts.set(text, []);
+      texts.get(text).push(file);
+    }
+  }
+  return texts;
+}
+
+async function collectJsonTexts(dir) {
+  const texts = new Map();
+  for (const e of (await readdir(path.join(ROOT, dir))).filter((n) => n.endsWith('.json')).sort()) {
+    const file = path.join(dir, e);
+    const data = JSON.parse(await readFile(path.join(ROOT, file), 'utf8'));
+    for (const it of data.items || []) {
+      const text = it.audioText || it.text;
+      if (!text) continue;
       if (!texts.has(text)) texts.set(text, []);
       texts.get(text).push(file);
     }

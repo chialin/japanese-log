@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十分鐘會話的準備表 — 上 Native Camp 自由會話前要填的表</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+/* root 資源頁 棕橘色票（跟 lessons/* 同一套） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;
+  --accent-deep:#9c4416;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+
+/* 工作表 */
+.sheet{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:18px 0;
+  box-shadow:0 2px 10px rgba(156,68,22,.06);}
+.sheet h2{font-family:'Shippori Mincho',serif;font-size:18px;color:var(--accent-deep);margin:0 0 4px;}
+.sheet .hint{font-size:13px;color:var(--ink-mute);margin-bottom:12px;line-height:1.8;}
+.sheet .hint a{color:var(--accent);}
+.field{margin:12px 0;}
+.field label{display:block;font-size:13px;color:var(--ink-mute);margin-bottom:4px;}
+.field input,.field textarea{width:100%;box-sizing:border-box;border:none;border-bottom:1.5px dashed var(--accent-soft);
+  background:transparent;font-family:'Shippori Mincho',serif;font-size:18px;color:var(--ink);padding:6px 2px;line-height:1.8;}
+.field textarea{resize:vertical;min-height:2.2em;}
+.field input:focus,.field textarea:focus{outline:none;border-bottom-color:var(--accent);background:var(--accent-pale);}
+.field input::placeholder,.field textarea::placeholder{color:#c9ab92;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;
+  font-family:'Shippori Mincho',serif;font-size:15px;cursor:pointer;background:var(--paper);line-height:1.9;}
+.chip input{accent-color:var(--accent);width:auto;margin:0;display:inline-block;}
+.chip:has(input:checked){background:var(--accent-pale);border-color:var(--accent);}
+.check{list-style:none;padding:0;margin:0;}
+.check li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px dotted var(--line);font-size:14px;color:var(--ink-soft);line-height:1.8;}
+.check li:last-child{border-bottom:none;}
+.check input{accent-color:var(--accent);width:18px;height:18px;margin-top:4px;flex:0 0 auto;}
+.check li:has(input:checked) span{text-decoration:line-through;color:var(--ink-mute);}
+.after{counter-reset:af;list-style:none;padding:0;margin:0;}
+.after li{counter-increment:af;position:relative;padding:8px 0 8px 34px;font-size:14px;color:var(--ink-soft);line-height:1.8;}
+.after li::before{content:counter(af);position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:50%;
+  background:var(--accent);color:#fff;font-family:'Cormorant Garamond',serif;font-size:14px;line-height:22px;text-align:center;}
+.after code{background:var(--accent-pale);padding:1px 6px;border-radius:4px;font-size:13px;}
+.bar{display:flex;gap:10px;justify-content:flex-end;align-items:center;margin:8px 0 30px;}
+.btn{border:1px solid var(--accent);background:#fff;color:var(--accent);border-radius:8px;padding:7px 14px;font-size:14px;cursor:pointer;font-family:inherit;}
+.btn.solid{background:var(--accent);color:#fff;}
+.saved{font-size:12px;color:#a9762a;}
+.topic-list{list-style:none;margin:6px 0 0;padding:0;}
+.topic-list li{padding:6px 0;border-bottom:1px dotted var(--line);font-size:13px;line-height:1.8;color:var(--ink-soft);}
+.topic-list li:last-child{border-bottom:none;}
+.topic-list b{font-family:'Shippori Mincho',serif;color:var(--ink);}
+.topic-list a,.word-meaning a{color:var(--accent);}
+details.topics summary{cursor:pointer;font-size:13px;color:var(--accent);margin-top:4px;}
+@media print{.bar,.speed-control,site-header,site-footer,.ref{display:none!important}.sheet{box-shadow:none;break-inside:avoid;}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<script src="js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent">十分鐘</span>會話的準備表</h1>
+  <div class="page-meta">會話 · Conversation · Free Talk Prep</div>
+  <p class="page-subtitle">上 Native Camp 自由會話之前，直接在這頁填好要講的內容；下面附上課時用得到的句子</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>這頁怎麼用</strong><br>
+    文法學過了，上自由會話卻常常聽不懂老師問什麼，或是組不出句子。這頁把一堂課分成三段：
+    <ul class="tip-list">
+      <li>課前花十分鐘填這張表：話題、三句話、一個反問、老師可能會問的問題</li>
+      <li>上課時聽不懂或講不出來，用最下面的求救句和句型</li>
+      <li>下課後把聊天室的紀錄貼給 Claude，整理成句子放進複習</li>
+    </ul>
+    填的內容只存在這台裝置的瀏覽器裡，換話題時按「清空重填」。這套做法的原因和出處寫在
+    <a href="https://github.com/chialin/japanese-log/blob/main/docs/research/2026-11-14-native-camp-free-talk.md" target="_blank" rel="noopener" style="color:var(--accent);">研究筆記</a>裡。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="sheet">
+    <h2>一、今天的話題</h2>
+    <div class="hint">從最近學的文法挑一個生活話題。同一個話題重複講會越講越順，但大約三次之後就不太會再進步，所以講三堂就換下一個。</div>
+    <div class="field"><label for="f-topic">話題</label><input id="f-topic" data-k="topic" placeholder="例：週末去爬高尾山"></div>
+    <div class="field"><label>這是第幾堂</label>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="round" data-k="r1">第一堂</label>
+        <label class="chip"><input type="radio" name="round" data-k="r2">第二堂</label>
+        <label class="chip"><input type="radio" name="round" data-k="r3">第三堂</label>
+      </div>
+    </div>
+    <details class="topics">
+      <summary>不知道講什麼？照學過的文法挑一個</summary>
+      <ul class="topic-list">
+        <li><b>週末做了什麼</b>　〜ました、〜かったです。<a href="lessons/2026-11-10-kako-mashita-deshita.html">11/10 過去式總整理</a></li>
+        <li><b>最近的天氣、季節的變化</b>　〜くなりました。<a href="lessons/2026-11-09-kyuu-ni-samuku.html">11/9 急に寒くなりましたね</a></li>
+        <li><b>喜歡的食物、哪裡最好玩</b>　A より B の方が、一番。<a href="lessons/2026-11-07-ichiban-hayai.html">11/7 X が一番〜です</a></li>
+        <li><b>接下來想做的事、想去的地方</b>　〜たいです。<a href="lessons/2026-11-02-shitai-desu.html">11/2 〜たいです</a></li>
+        <li><b>最近的興趣（攀岩、健身房）</b>　〜ています。<a href="lessons/2026-10-21-jimu-kafe-kaiwa.html">10/21 ジムとカフェに行きました</a></li>
+        <li><b>會做的事、不會做的事</b>　〜ことができます。<a href="lessons/2026-10-08-dekimasen.html">10/8 できません</a></li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="sheet">
+    <h2>二、三句話，加一個反問</h2>
+    <div class="hint">先用中文想內容，再寫成日文。重點是內容，不用把文法檢查到完美。最後加一句問老師的話，對話才接得下去。</div>
+    <div class="field"><label for="f-s1">第一句：做了什麼</label><textarea id="f-s1" data-k="s1" placeholder="週末、高尾山に登りました。"></textarea></div>
+    <div class="field"><label for="f-s2">第二句：怎麼樣</label><textarea id="f-s2" data-k="s2" placeholder="山頂は混んでいました。"></textarea></div>
+    <div class="field"><label for="f-s3">第三句：接下來想做什麼</label><textarea id="f-s3" data-k="s3" placeholder="次はもう少し早く登ります。"></textarea></div>
+    <div class="field"><label for="f-q">反問老師</label><textarea id="f-q" data-k="q" placeholder="先生は高尾山に行ったことがありますか。"></textarea></div>
+  </div>
+
+  <div class="sheet">
+    <h2>三、先猜老師會問什麼</h2>
+    <div class="hint">你講完一句，老師幾乎都會用疑問詞追問。勾三到四個，勾的時候會唸一次，先把耳朵準備好。</div>
+    <div class="chips" id="qs">
+      <label class="chip" data-text="だれと行きましたか。"><input type="checkbox" data-k="q-dare">だれと<ruby>行<rt>い</rt></ruby>きましたか</label>
+      <label class="chip" data-text="どうでしたか。"><input type="checkbox" data-k="q-dou">どうでしたか</label>
+      <label class="chip" data-text="いつ行きましたか。"><input type="checkbox" data-k="q-itsu">いつ<ruby>行<rt>い</rt></ruby>きましたか</label>
+      <label class="chip" data-text="何をしましたか。"><input type="checkbox" data-k="q-nani"><ruby>何<rt>なに</rt></ruby>をしましたか</label>
+      <label class="chip" data-text="どこにありますか。"><input type="checkbox" data-k="q-doko">どこにありますか</label>
+      <label class="chip" data-text="どうしてですか。"><input type="checkbox" data-k="q-doushite">どうしてですか</label>
+      <label class="chip" data-text="どれが一番好きですか。"><input type="checkbox" data-k="q-ichiban">どれが<ruby>一番<rt>いちばん</rt></ruby><ruby>好<rt>す</rt></ruby>きですか</label>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <h2>四、上課前講三次，一次比一次短</h2>
+    <div class="hint">不看稿把三句話連起來講。時間越縮越短，嘴巴會熱起來；這一步只是熱身，不用花更多時間。</div>
+    <ul class="check">
+      <li><input type="checkbox" data-k="c1" id="c1"><label for="c1"><span>第一次，一分半</span></label></li>
+      <li><input type="checkbox" data-k="c2" id="c2"><label for="c2"><span>第二次，一分鐘</span></label></li>
+      <li><input type="checkbox" data-k="c3" id="c3"><label for="c3"><span>第三次，四十五秒</span></label></li>
+      <li><input type="checkbox" data-k="c4" id="c4"><label for="c4"><span>手機錄音準備好，上課開頭先講開場句（見下面）</span></label></li>
+    </ul>
+  </div>
+
+  <div class="sheet">
+    <h2>五、下課後把聊天室的紀錄交給 Claude</h2>
+    <div class="hint">上課時卡住的地方，就是下一步要學的東西。下課後趁還記得，花十分鐘整理。</div>
+    <ol class="after">
+      <li>把老師打在聊天室的字整段複製，貼給 Claude，說 <code>整理會話</code></li>
+      <li>Claude 會把零碎的字放回完整的句子，附上羅馬拼音和中文；確認哪幾句要留</li>
+      <li>留下來的句子會進複習的瞬間作文，之後說 <code>複習</code> 就會出現</li>
+      <li>當天先用播放鍵跟著唸幾次。下一堂講同一個話題時，把這些句子寫進上面的三句話</li>
+    </ol>
+  </div>
+
+  <div class="bar">
+    <span class="saved" id="saved"></span>
+    <button class="btn" id="clear" type="button">清空重填</button>
+    <button class="btn solid" type="button" onclick="window.print()">列印</button>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="ref">
+  <div class="divider" id="hajime">上課一開始先跟老師說這兩句</div>
+
+  <p class="lead">
+    自由會話的老師不一定知道你的程度。開場先講清楚，老師就會放慢速度、用簡單的字，
+    講錯的地方也會打在聊天室，下課後才有東西可以整理。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>開場</div>
+
+    <div class="word-item" data-text="初心者です。ゆっくり話してください。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>初心者<rt>しょしんしゃ</rt></ruby>です。ゆっくり<ruby>話<rt>はな</rt></ruby>してください。</div>
+        <div class="word-romaji">shoshinsha desu. yukkuri hanashite kudasai.</div>
+        <div class="word-meaning">我是初學者，請講慢一點。〜てください 見 <a href="lessons/2026-10-22-te-kei.html">10/22 て形</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="間違いはチャットに書いてください。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>間違<rt>まちが</rt></ruby>いはチャットに<ruby>書<rt>か</rt></ruby>いてください。</div>
+        <div class="word-romaji">machigai wa chatto ni kaite kudasai.</div>
+        <div class="word-meaning">我講錯的地方，請打在聊天室。チャット ← 英語 chat</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="録音してもいいですか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>録音<rt>ろくおん</rt></ruby>してもいいですか。</div>
+        <div class="word-romaji">rokuon shite mo ii desu ka.</div>
+        <div class="word-meaning">可以錄音嗎？想用手機錄下來課後聽的時候先問一聲</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tasukete">聽不懂的時候用這幾句</div>
+
+  <p class="lead">
+    聽不懂時最容易沉默，十分鐘就這樣過去了。請對方重講、確認意思，是語言學裡正式的溝通方法，
+    母語者之間也常這樣做，不算失禮。最簡單的一招是只重複你沒聽懂的那個字，尾音往上揚，
+    例如「<ruby>山頂<rt>さんちょう</rt></ruby>？」，老師就會換個說法。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>求救的話</div>
+
+    <div class="word-item" data-text="もう一度お願いします。">
+      <div class="word-content">
+        <div class="word-ja">もう<ruby>一度<rt>いちど</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします。</div>
+        <div class="word-romaji">mou ichido onegai shimasu.</div>
+        <div class="word-meaning">請再說一次</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="もう少しゆっくりお願いします。">
+      <div class="word-content">
+        <div class="word-ja">もう<ruby>少<rt>すこ</rt></ruby>しゆっくりお<ruby>願<rt>ねが</rt></ruby>いします。</div>
+        <div class="word-romaji">mou sukoshi yukkuri onegai shimasu.</div>
+        <div class="word-meaning">請再講慢一點</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="こうようって何ですか。">
+      <div class="word-content">
+        <div class="word-ja">〜って<ruby>何<rt>なん</rt></ruby>ですか。</div>
+        <div class="word-romaji">~tte nan desu ka.</div>
+        <div class="word-meaning">〜是什麼意思？把沒聽懂的字放在前面，例如「こうようって<ruby>何<rt>なん</rt></ruby>ですか」（kouyou tte nan desu ka，紅葉是什麼？）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="チャットに書いてください。">
+      <div class="word-content">
+        <div class="word-ja">チャットに<ruby>書<rt>か</rt></ruby>いてください。</div>
+        <div class="word-romaji">chatto ni kaite kudasai.</div>
+        <div class="word-meaning">請打在聊天室。聽了兩次還是聽不懂，看字通常就懂了</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本語で何と言いますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日本語<rt>にほんご</rt></ruby>で<ruby>何<rt>なん</rt></ruby>と<ruby>言<rt>い</rt></ruby>いますか。</div>
+        <div class="word-romaji">nihongo de nan to iimasu ka.</div>
+        <div class="word-meaning">日文怎麼說？想講的字不會，先講英文再問這句</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="えーと、ちょっと待ってください。">
+      <div class="word-content">
+        <div class="word-ja">えーと、ちょっと<ruby>待<rt>ま</rt></ruby>ってください。</div>
+        <div class="word-romaji">eeto, chotto matte kudasai.</div>
+        <div class="word-meaning">嗯……請等一下。想句子需要時間時，先講這句讓老師知道你在想</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kata">組不出句子時，先套學過的句型講短句</div>
+
+  <p class="lead">
+    即時講話的時候，從單字和規則一個一個組句會來不及。比較快的做法是把句型當成一整塊背起來，
+    要講的時候只換中間的字。講不完整也沒關係，先講短的，老師通常會幫你補成完整的句子，
+    那句就是下課後要整理的。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>可以直接套的句型</div>
+
+    <div class="word-item" data-text="公園に行きました。">
+      <div class="word-content">
+        <div class="word-ja">〜に<ruby>行<rt>い</rt></ruby>きました。</div>
+        <div class="word-romaji">~ni ikimashita.</div>
+        <div class="word-meaning">去了〜。例：<ruby>公園<rt>こうえん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。見 <a href="lessons/2026-11-10-kako-mashita-deshita.html">11/10 過去式總整理</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="とても楽しかったです。">
+      <div class="word-content">
+        <div class="word-ja">とても〜かったです／〜でした。</div>
+        <div class="word-romaji">totemo ~katta desu / ~deshita.</div>
+        <div class="word-meaning">非常〜。例：とても<ruby>楽<rt>たの</rt></ruby>しかったです。い形容詞用 かったです，な形容詞用 でした，見 <a href="lessons/2026-08-31-karakatta-desu.html">8/31 〜かったです</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="温泉に行きたいです。">
+      <div class="word-content">
+        <div class="word-ja">〜たいです。</div>
+        <div class="word-romaji">~tai desu.</div>
+        <div class="word-meaning">想要〜。例：<ruby>温泉<rt>おんせん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きたいです。見 <a href="lessons/2026-11-02-shitai-desu.html">11/2 想做的事用 〜たいです</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="最近、ボルダリングをしています。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>最近<rt>さいきん</rt></ruby>、〜をしています。</div>
+        <div class="word-romaji">saikin, ~o shite imasu.</div>
+        <div class="word-meaning">最近在做〜。例：<ruby>最近<rt>さいきん</rt></ruby>、ボルダリングをしています。見 <a href="lessons/2026-09-02-teimasu.html">9/2 〜ています</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="コーヒーよりお茶の方が好きです。">
+      <div class="word-content">
+        <div class="word-ja">A より B の<ruby>方<rt>ほう</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。</div>
+        <div class="word-romaji">A yori B no hou ga suki desu.</div>
+        <div class="word-meaning">比起 A 更喜歡 B。例：コーヒーよりお<ruby>茶<rt>ちゃ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。見 <a href="lessons/2026-11-06-yori-no-hou-ga.html">11/6 A より B の方が〜</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="急に寒くなりました。">
+      <div class="word-content">
+        <div class="word-ja">〜くなりました／〜になりました。</div>
+        <div class="word-romaji">~ku narimashita / ~ni narimashita.</div>
+        <div class="word-meaning">變得〜了。例：<ruby>急<rt>きゅう</rt></ruby>に<ruby>寒<rt>さむ</rt></ruby>くなりました。聊天氣最好用，見 <a href="lessons/2026-11-08-kunarimashita.html">11/8 〜くなりました</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日本語を話すことができます。">
+      <div class="word-content">
+        <div class="word-ja">〜ことができます。</div>
+        <div class="word-romaji">~koto ga dekimasu.</div>
+        <div class="word-meaning">會〜、可以〜。例：<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すことができます。見 <a href="lessons/2026-10-06-koto-ga-dekimasu.html">10/6 話すことができます</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="青森に行ったことがあります。">
+      <div class="word-content">
+        <div class="word-ja">〜たことがあります。</div>
+        <div class="word-romaji">~ta koto ga arimasu.</div>
+        <div class="word-meaning">曾經〜過。例：<ruby>青森<rt>あおもり</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったことがあります。見 <a href="lessons/2026-07-28-kita-koto-ga-arimasu.html">7/28 〜たことがあります</a></div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <a href="tenin.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">店員的對話・總整理 <span class="next-arrow">→</span></span>
+    <span class="next-sub">在店裡會聽到的句子，照情境排好，也是會話的好材料</span>
+  </a>
+  </div>
+
+<site-footer></site-footer>
+</div>
+
+<script src="js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+
+  // 老師可能會問的問題：勾起來時唸一次
+  document.querySelectorAll('#qs .chip[data-text]').forEach(chip => {
+    chip.querySelector('input').addEventListener('change', e => {
+      if (e.target.checked) speak(chip.dataset.text);
+    });
+  });
+
+  // 工作表內容只存在這台裝置（localStorage），讀寫失敗也不影響使用
+  const KEY = 'kaiwa-junbi-sheet';
+  const fields = document.querySelectorAll('.sheet [data-k]');
+  const isBox = el => el.type === 'checkbox' || el.type === 'radio';
+  let store = {};
+  try { store = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+  fields.forEach(el => {
+    const v = store[el.dataset.k];
+    if (v !== undefined) { if (isBox(el)) el.checked = v; else el.value = v; }
+    el.addEventListener('input', save);
+    el.addEventListener('change', save);
+  });
+  function save() {
+    fields.forEach(el => { store[el.dataset.k] = isBox(el) ? el.checked : el.value; });
+    try {
+      localStorage.setItem(KEY, JSON.stringify(store));
+      document.getElementById('saved').textContent = '已存在這台裝置';
+    } catch (e) {}
+  }
+  document.getElementById('clear').addEventListener('click', () => {
+    if (!confirm('清空所有填寫的內容？')) return;
+    store = {};
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    fields.forEach(el => { if (isBox(el)) el.checked = false; else el.value = ''; });
+    document.getElementById('saved').textContent = '';
+  });
+</script>
+</body>
+</html>

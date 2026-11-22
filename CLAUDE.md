@@ -157,6 +157,9 @@ Calendar 會自動重算——`data-date` 提供即可，新月份不必動 cale
 
 補充 Duolingo 的每日複習，在 Claude Code 對話裡進行，規則都寫在 `fukushuu` skill 裡。
 - 題庫直接讀 `data/vocab.json`：句子（`。？！` 結尾）進「瞬間作文」，其他進「単語」。新課跑完 `build-vocab` 就自動進題庫。
+- Native Camp 自由會話（2026-11-14 起）：課前用 [kaiwa-junbi.html](kaiwa-junbi.html) 的工作表準備，下課後她貼聊天室紀錄，
+  照 `fukushuu` skill 第 5 節整理成 `local/kaiwa/*.json`，音檔用 `generate-audio.mjs --from-json local/kaiwa --out local/kaiwa/audio`
+  放在私人 repo，題庫自動併進來。做法的研究見 [docs/research/2026-11-14-native-camp-free-talk.md](docs/research/2026-11-14-native-camp-free-talk.md)。
 - 排程、連續天數由 `local/review/review.mjs` 計算（Leitner 1・3・7・14・30 天；當天答滿 10 題算有練），
   紀錄在 `local/review/state.json`。`local/` 是獨立的私人 git repo，**不會部署**。
 - `local/` 的 remote 是 private 的 `chialin/japanese-log-local`（2026-11-12 建立）。iPhone 上（Mac 關機時）用雲端 session 練：skill 會先把它 clone／pull 到 `local/`，結束時 commit＋push，兩邊共用同一份紀錄。

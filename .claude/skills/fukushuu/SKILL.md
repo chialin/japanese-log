@@ -1,6 +1,6 @@
 ---
 name: fukushuu
-description: 複習課程的單字與瞬間作文（Leitner 間隔複習＋連續天數）。當 Scarlett 說「複習」「複習 単語」「複習 作文」「考我」，或新增完課程頁後她答應要複習時使用。
+description: 複習課程的單字與瞬間作文（Leitner 間隔複習＋連續天數），以及把 Native Camp 會話課後的聊天紀錄整理進題庫。當 Scarlett 說「複習」「複習 単語」「複習 作文」「考我」「整理會話」、貼上 Native Camp 聊天室紀錄，或新增完課程頁後她答應要複習時使用。
 ---
 
 # 複習（fukushuu）
@@ -8,6 +8,7 @@ description: 複習課程的單字與瞬間作文（Leitner 間隔複習＋連�
 Scarlett 用來補充 Duolingo 的每日複習，只練這個 repo 裡她自己的課。
 **挑題、排程、連續天數一律交給腳本**，你負責出題、對答案、講解。不要自己算格子或到期日。
 
+題庫是 `data/vocab.json`（課程頁產生）加上 `local/kaiwa/*.json`（會話課後整理的句子，見第 5 節）。
 腳本：`node local/review/review.mjs <指令>`（在 repo 根目錄執行）。紀錄存在 `local/review/state.json`，
 `local/` 是獨立的私人 git repo，不會部署；remote 是 private 的 `git@github.com:chialin/japanese-log-local.git`
 （2026-11-12 建立），Mac 和雲端 session（iPhone）共用同一份紀錄。
@@ -88,3 +89,28 @@ AskUserQuestion 一張卡只放一題——放兩題會互相洩題。
    push 失敗（另一台裝置先推了）就 `git -C local pull --rebase` 再 push；`state.json` 衝突時告訴她，不要硬蓋。
 
 中途停下也照樣做第 1～3 步。已經答過的題目都記錄了，不會白做。
+
+## 5. 整理會話（Native Camp 自由會話的課後）
+
+她下課後貼上 Native Camp 聊天室的紀錄（老師打的零碎字、時間戳），說「整理會話」或直接貼上來，就照這個做。
+目的是把上課講不出來的句子收進題庫，之後跟課程的句子一起複習。課前準備在 `kaiwa-junbi.html`。
+
+1. **先同步**：照第 0 步把 `local/` pull 到最新。
+2. **整理成完整句子**：把老師打的字放回完整、禮貌形的句子（她講的是過去的事就用過去式）。
+   只用她學過的文法；老師的寫法是口語（例：見れた）就保留，在 note 寫課本說法。
+   看不出來的內容（跟誰去、在哪裡）要問她，不要自己編。
+   單獨的名詞（山頂、楓）可以收成單字題。
+3. **給她確認**：列成表，每句附「漢字（假名）」、羅馬拼音、中文，問哪幾句要留、有沒有要改。
+   照全站規則檢查台語線索（唸起來像才寫）和外來語來源，有的話寫進 note。
+4. **寫檔**：`local/kaiwa/<上課日期>-<話題英數 slug>.json`，格式：
+   ```json
+   { "date": "2026-11-14", "topic": "週末去爬高尾山",
+     "items": [ { "text": "山頂は混んでいました。", "kana": "さんちょうはこんでいました。",
+                  "romaji": "sanchou wa konde imashita.", "meaning": "山頂很擠。", "note": "（選填）" } ] }
+   ```
+   `text` 就是題目 id，句子要以 。？！ 結尾才會進作文；單字題的發音容易唸錯時加 `"audioText": "かえで"`。
+   同一個話題下一堂又整理到新句子，加進同一個檔案，不要另開。
+5. **產生音檔**（VOICEVOX 要開著）：`node scripts/generate-audio.mjs --from-json local/kaiwa --out local/kaiwa/audio`。
+   音檔放在私人 repo，不要放進公開的 `audio/`。
+6. **commit**：`git -C local add kaiwa && git -C local commit -m "kaiwa: <日期> <話題>" && git -C local push`。
+7. 問她要不要現在練：要的話跑 `session --lesson <上課日期> --only-lesson`，新題會優先出這次的句子。

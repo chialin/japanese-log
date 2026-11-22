@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>部屋は暖かいです — 會話紀錄：冬天的房間、乾燥、容易感冒</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.dialog-title{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.no{flex-shrink:0;width:18px;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink-mute);padding-top:5px;text-align:right;}
+.who{flex-shrink:0;width:52px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><ruby>部屋<rt>へや</rt></ruby>は<span class="accent"><ruby>暖<rt>あたた</rt></ruby>かい</span>です</h1>
+  <div class="page-meta">會話紀錄 · Conversation · 2026 / 11 / 22</div>
+  <p class="page-subtitle">跟老師聊冬天的房間：外面 13 度、家裡曬得到太陽，用電毯和冷氣取暖，空氣很乾，我很容易感冒</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣說</strong><br>
+    11/22 的口語課聊冬天在家怎麼過：今天幾度、房間冷不冷、用什麼取暖、空氣乾不乾。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 今日は13度です 說氣溫</li>
+      <li>用 日光がたくさん入るので、暖かいです 說房間為什麼溫暖</li>
+      <li>用 電気毛布を使います、ときどきエアコンをつけます 說怎麼取暖</li>
+      <li>分清楚 乾燥します 和 乾燥しています</li>
+      <li>用 風邪をひきやすいです 說自己「很容易感冒」</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaiwa">一、以冬天的房間為主軸，把對話整理出來</div>
+
+  <p class="lead">
+    下面是照課堂筆記重新整理的對話。筆記上記下來的詞（温かい、電気で、13度、乾燥します、加湿器、日光、クリーム、
+    風邪をひきやすい、電気毛布）都放進了句子裡，老師的問句是依當時的流程補上的。每一句都可以按 ▶ 跟著唸。
+  </p>
+
+  <div class="dialog">
+    <div class="dialog-title">對話：冬天的房間</div>
+
+    <div class="turn" data-text="最近、寒いですね。今日は何度ですか。">
+      <div class="no">1</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>最<rt>さい</rt>近<rt>きん</rt></ruby>、<ruby>寒<rt>さむ</rt></ruby>いですね。<ruby>今日<rt>きょう</rt></ruby>は <ruby>何<rt>なん</rt>度<rt>ど</rt></ruby>ですか。</div>
+        <div class="turn-romaji">saikin, samui desu ne. kyou wa nando desu ka.</div>
+        <div class="turn-meaning">最近好冷喔。今天幾度？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="今日は十三度です。">
+      <div class="no">2</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今日<rt>きょう</rt></ruby>は <ruby>13<rt>じゅうさん</rt>度<rt>ど</rt></ruby>です。</div>
+        <div class="turn-romaji">kyou wa juusan do desu.</div>
+        <div class="turn-meaning">今天 13 度。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="家の中は寒いですか。">
+      <div class="no">3</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>家<rt>いえ</rt></ruby>の <ruby>中<rt>なか</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>いですか。</div>
+        <div class="turn-romaji">ie no naka wa samui desu ka.</div>
+        <div class="turn-meaning">家裡面會冷嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="いいえ、日光がたくさん入るので、部屋は暖かいです。">
+      <div class="no">4</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいえ、<ruby>日<rt>にっ</rt>光<rt>こう</rt></ruby>が たくさん <span class="j-mark"><ruby>入<rt>はい</rt></ruby>る</span>ので、<ruby>部屋<rt>へや</rt></ruby>は <ruby>暖<rt>あたた</rt></ruby>かいです。</div>
+        <div class="turn-romaji">iie, nikkou ga takusan hairu node, heya wa atatakai desu.</div>
+        <div class="turn-meaning">不會，因為陽光照得進來很多，房間很暖和。（筆記上寫的是 温かい，房間要用 暖かい，見<a href="#atatakai" style="color:var(--accent);">第三節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="いいですね。なにで暖かくしますか。">
+      <div class="no">5</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいですね。<ruby>何<rt>なに</rt></ruby>で <ruby>暖<rt>あたた</rt></ruby>かく しますか。</div>
+        <div class="turn-romaji">ii desu ne. nani de atataku shimasu ka.</div>
+        <div class="turn-meaning">真好。用什麼讓房間變暖？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="電気で暖かくします。電気毛布を使います。">
+      <div class="no">6</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>電<rt>でん</rt>気<rt>き</rt></ruby><span class="j-mark">で</span> <ruby>暖<rt>あたた</rt></ruby>かく します。<ruby>電<rt>でん</rt>気<rt>き</rt>毛<rt>もう</rt>布<rt>ふ</rt></ruby>を <ruby>使<rt>つか</rt></ruby>います。</div>
+        <div class="turn-romaji">denki de atataku shimasu. denki moufu o tsukaimasu.</div>
+        <div class="turn-meaning">用電。我用電毯。（で＝用什麼方法，見<a href="#denki-de" style="color:var(--accent);">第六節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="ときどきエアコンをつけます。">
+      <div class="no">7</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">ときどき エアコンを <span class="j-mark">つけます</span>。</div>
+        <div class="turn-romaji">tokidoki eakon o tsukemasu.</div>
+        <div class="turn-meaning">有時候會開冷氣（暖氣）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="エアコンは乾燥しますよね。">
+      <div class="no">8</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">エアコンは <ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby>しますよね。</div>
+        <div class="turn-romaji">eakon wa kansou shimasu yo ne.</div>
+        <div class="turn-meaning">開冷氣會變得很乾對吧。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい、乾燥します。だから、加湿器を使います。">
+      <div class="no">9</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、<ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby><span class="j-mark">します</span>。だから、<ruby>加<rt>か</rt>湿<rt>しつ</rt>器<rt>き</rt></ruby>を <ruby>使<rt>つか</rt></ruby>います。</div>
+        <div class="turn-romaji">hai, kansou shimasu. dakara, kashitsuki o tsukaimasu.</div>
+        <div class="turn-meaning">對，會變乾。所以我會用加濕器。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="肌は大丈夫ですか。">
+      <div class="no">10</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>肌<rt>はだ</rt></ruby>は <ruby>大<rt>だい</rt>丈<rt>じょう</rt>夫<rt>ぶ</rt></ruby>ですか。</div>
+        <div class="turn-romaji">hada wa daijoubu desu ka.</div>
+        <div class="turn-meaning">皮膚還好嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="肌が乾燥していますから、クリームを塗ります。">
+      <div class="no">11</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>肌<rt>はだ</rt></ruby>が <ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby><span class="j-mark">しています</span>から、クリームを <ruby>塗<rt>ぬ</rt></ruby>ります。</div>
+        <div class="turn-romaji">hada ga kansou shite imasu kara, kuriimu o nurimasu.</div>
+        <div class="turn-meaning">皮膚很乾，所以會擦乳霜。（乾燥します 和 乾燥しています 的差別見<a href="#kansou" style="color:var(--accent);">第四節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="風邪に気をつけてくださいね。">
+      <div class="no">12</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>風邪<rt>かぜ</rt></ruby>に <ruby>気<rt>き</rt></ruby>を つけて くださいね。</div>
+        <div class="turn-romaji">kaze ni ki o tsukete kudasai ne.</div>
+        <div class="turn-meaning">要小心別感冒喔。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい。わたしは風邪をひきやすいです。">
+      <div class="no">13</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい。わたしは <ruby>風邪<rt>かぜ</rt></ruby>を ひき<span class="j-mark">やすい</span>です。</div>
+        <div class="turn-romaji">hai. watashi wa kaze o hikiyasui desu.</div>
+        <div class="turn-meaning">好。我很容易感冒。（やすい 的用法見<a href="#yasui" style="color:var(--accent);">第五節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">二、對話裡的新單字是這些</div>
+
+  <p class="lead">
+    這段對話的單字分成兩組：一組是取暖用的東西（電、電毯、冷氣），另一組是冬天的困擾（乾燥、加濕器、乳霜、感冒）。
+    風邪 和 ひく 在 <a href="2026-11-09-kyuu-ni-samuku.html" style="color:var(--accent);">11/9〈急に寒くなりましたね〉</a>學過，這裡不再列。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>本課的新字</div>
+
+    <div class="word-item" data-text="何度">
+      <div class="word-content">
+        <div class="word-ja"><ruby>何<rt>なん</rt>度<rt>ど</rt></ruby></div>
+        <div class="word-romaji">nando</div>
+        <div class="word-pos">疑問詞</div>
+        <div class="word-meaning">幾度（溫度）— 度 接在數字後面就是「〇度」：13度（じゅうさんど）、20度（にじゅうど）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="日光">
+      <div class="word-content">
+        <div class="word-ja"><ruby>日<rt>にっ</rt>光<rt>こう</rt></ruby></div>
+        <div class="word-romaji">nikkou</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">陽光、日照 — 日常口語也常說 日（ひ）が入る、日当たりがいい（ひあたり，採光好）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="入る">
+      <div class="word-content">
+        <div class="word-ja"><ruby>入<rt>はい</rt></ruby>る</div>
+        <div class="word-romaji">hairu</div>
+        <div class="word-pos">動詞（五段）</div>
+        <div class="word-meaning">進來、進去 — 人進房間、陽光照進房間都用它；ます形是 入ります</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="暖かい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>暖<rt>あたた</rt></ruby>かい</div>
+        <div class="word-romaji">atatakai</div>
+        <div class="word-pos">い形容詞</div>
+        <div class="word-meaning">（天氣、房間）暖和 — 跟摸得到的「溫熱」温かい 同音，寫法不同</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="電気">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電<rt>でん</rt>気<rt>き</rt></ruby></div>
+        <div class="word-romaji">denki</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">電；也指電燈 — 電気をつけます＝開燈</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="電気毛布">
+      <div class="word-content">
+        <div class="word-ja"><ruby>電<rt>でん</rt>気<rt>き</rt>毛<rt>もう</rt>布<rt>ふ</rt></ruby></div>
+        <div class="word-romaji">denki moufu</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">電毯 — 電気（電）＋ 毛布（毯子）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="ときどき">
+      <div class="word-content">
+        <div class="word-ja">ときどき</div>
+        <div class="word-romaji">tokidoki</div>
+        <div class="word-pos">副詞</div>
+        <div class="word-meaning">有時候 — 漢字寫 時々</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="エアコン">
+      <div class="word-content">
+        <div class="word-ja">エアコン</div>
+        <div class="word-romaji">eakon</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">空調、冷氣 ← 英語 air conditioner 在日文裡縮成四拍；日本的 エアコン 冷暖兩用，冬天開的是暖氣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="つける">
+      <div class="word-content">
+        <div class="word-ja">つける</div>
+        <div class="word-romaji">tsukeru</div>
+        <div class="word-pos">動詞（一段）</div>
+        <div class="word-meaning">打開（電器）— エアコンをつけます；關掉是 消す（けす）：エアコンを消します</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="乾燥">
+      <div class="word-content">
+        <div class="word-ja"><ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby></div>
+        <div class="word-romaji">kansou</div>
+        <div class="word-pos">名詞（＋する）</div>
+        <div class="word-meaning">乾燥 — 加 します 變成動詞：乾燥します（變乾）、乾燥しています（現在很乾）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="加湿器">
+      <div class="word-content">
+        <div class="word-ja"><ruby>加<rt>か</rt>湿<rt>しつ</rt>器<rt>き</rt></ruby></div>
+        <div class="word-romaji">kashitsuki</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">加濕器 — 跟中文的字一模一樣，湿 是 濕 的日本寫法</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="肌">
+      <div class="word-content">
+        <div class="word-ja"><ruby>肌<rt>はだ</rt></ruby></div>
+        <div class="word-romaji">hada</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">皮膚、肌膚 — 講保養時說 肌，講醫學上的皮膚是 皮膚（ひふ）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="クリーム">
+      <div class="word-content">
+        <div class="word-ja">クリーム</div>
+        <div class="word-romaji">kuriimu</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">乳霜 ← 英語 cream；跟英文一樣也是奶油、卡士達：クリームパン 裡包的就是卡士達</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="塗る">
+      <div class="word-content">
+        <div class="word-ja"><ruby>塗<rt>ぬ</rt></ruby>る</div>
+        <div class="word-romaji">nuru</div>
+        <div class="word-pos">動詞（五段）</div>
+        <div class="word-meaning">塗、擦 — クリームを塗ります（擦乳霜）、パンにバターを塗ります（麵包抹奶油）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="風邪をひきやすい">
+      <div class="word-content">
+        <div class="word-ja"><ruby>風邪<rt>かぜ</rt></ruby>を ひきやすい</div>
+        <div class="word-romaji">kaze o hikiyasui</div>
+        <div class="word-pos">い形容詞</div>
+        <div class="word-meaning">很容易感冒 — ひきます 去掉 ます，接上 やすい</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 電気・乾燥・加湿器・度，唸起來都跟台語很像</strong><br>
+    電 台語唸 tian、気 唸 khi，<span class="compare">電気（でんき）</span>整串唸出來幾乎一樣。<br>
+    乾燥 台語唸 kan-so，日文是 <span class="compare">かんそう</span>。<br>
+    加 台語唸 ka、器 唸 khi，<span class="compare">加湿器（かしつき）</span>頭尾兩個字都對得上。<br>
+    度 台語唸 too，日文是 <span class="compare">ど</span>：13度、何度。
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>エアコン 在日本冬天也會開</strong><br>
+    エアコン 來自英語 air conditioner，日文只留下前面 エア（air）和 コン（con-）兩段。
+    台灣說「冷氣」，聽起來只有冷的；日本家裡的 エアコン 大多冷暖兩用，冬天開的是暖氣模式。
+    所以對話裡「ときどきエアコンをつけます」，在冬天就是開暖氣的意思。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="atatakai">三、暖かい 和 温かい 唸法一樣，用的地方不一樣</div>
+
+  <p class="lead">
+    課堂筆記上寫的是 温かいです。這兩個字都唸 あたたかい，說出來沒有差別，寫的時候要看是「什麼」在暖。
+    天氣、房間、整個身體感覺到的暖，用 暖かい；摸得到、喝得到的東西是溫的，用 温かい。
+  </p>
+
+  <div class="sum-bins">
+    <div class="sum-bin">
+      <h4>暖かい — 周圍的空氣很暖</h4>
+      <table>
+        <tr><td class="q">房間很暖和</td><td class="jp"><ruby>部屋<rt>へや</rt></ruby>が <ruby>暖<rt>あたた</rt></ruby>かい</td><td class="ro">heya ga atatakai</td></tr>
+        <tr><td class="q">今天很暖和</td><td class="jp"><ruby>今日<rt>きょう</rt></ruby>は <ruby>暖<rt>あたた</rt></ruby>かい</td><td class="ro">kyou wa atatakai</td></tr>
+        <tr><td class="q">暖和的毛衣</td><td class="jp"><ruby>暖<rt>あたた</rt></ruby>かい セーター</td><td class="ro">atatakai seetaa</td></tr>
+      </table>
+    </div>
+    <div class="sum-bin">
+      <h4>温かい — 東西本身是溫的</h4>
+      <table>
+        <tr><td class="q">熱湯</td><td class="jp"><ruby>温<rt>あたた</rt></ruby>かい スープ</td><td class="ro">atatakai suupu</td></tr>
+        <tr><td class="q">溫的茶</td><td class="jp"><ruby>温<rt>あたた</rt></ruby>かい お<ruby>茶<rt>ちゃ</rt></ruby></td><td class="ro">atatakai ocha</td></tr>
+        <tr><td class="q">手很溫暖</td><td class="jp"><ruby>手<rt>て</rt></ruby>が <ruby>温<rt>あたた</rt></ruby>かい</td><td class="ro">te ga atatakai</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span>相反詞也分成兩組：暖かい 的相反是 <span class="compare">寒い</span>（天氣冷），
+    温かい 的相反是 <span class="compare">冷たい</span>（摸起來冰）。
+    温かい 和 冷たい 這一組在 <a href="2026-08-25-masen-tango.html" style="color:var(--accent);">8/25〈ません — 兩個新的例句與生字〉</a>學過。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kansou">四、乾燥します 和 乾燥しています 差在是變化還是現在的樣子</div>
+
+  <p class="lead">
+    筆記上 乾燥します 和 乾燥しています 都出現了。乾燥する 講的是「變乾」這個變化，
+    所以老師說「開冷氣會變乾」用 乾燥します；要說「皮膚現在很乾」，講的是已經乾掉之後的樣子，就要用 乾燥しています。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">（一開就）會變乾</div><div class="pat">〜は <b>乾燥します</b></div><div class="ex jp"><ruby>冬<rt>ふゆ</rt></ruby>は <ruby>空<rt>くう</rt>気<rt>き</rt></ruby>が <ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby>します<span class="ro">fuyu wa kuuki ga kansou shimasu</span></div></div>
+    <div class="sum-card"><div class="want">現在是乾的</div><div class="pat">〜が <b>乾燥しています</b></div><div class="ex jp"><ruby>唇<rt>くちびる</rt></ruby>が <ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby>しています<span class="ro">kuchibiru ga kansou shite imasu</span></div></div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span>這跟 <a href="2026-10-21-jimu-kafe-kaiwa.html#hitei" style="color:var(--accent);">10/21〈ジムとカフェに行きました〉</a>的
+    混む／混んでいる 是同一種關係：動詞本身講「變成那樣」，ている 講「變完之後的樣子」。
+    規則在 <a href="2026-08-12-jisei-shinkoukei.html#futatsu" style="color:var(--accent);">8/12〈過去・現在・現在進行〉</a>的「結果狀態」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="yasui">五、ひきやすい 的 やすい 是「很容易」的意思</div>
+
+  <p class="lead">
+    最後我說 風邪をひきやすいです（我很容易感冒）。把動詞的ます形去掉 ます，接上 やすい，就是「很容易〜」。
+    接完之後整個詞變成い形容詞，所以後面可以直接加 です。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">很容易感冒</div><div class="pat">ひき<s>ます</s> → ひき<b>やすい</b></div><div class="ex jp"><ruby>風邪<rt>かぜ</rt></ruby>を ひきやすいです<span class="ro">kaze o hikiyasui desu</span></div></div>
+    <div class="sum-card"><div class="want">（皮膚）很容易乾</div><div class="pat">乾燥し<s>ます</s> → 乾燥し<b>やすい</b></div><div class="ex jp"><ruby>肌<rt>はだ</rt></ruby>が <ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby>しやすいです<span class="ro">hada ga kansou shiyasui desu</span></div></div>
+    <div class="sum-card"><div class="want">很好入口</div><div class="pat">飲み<s>ます</s> → 飲み<b>やすい</b></div><div class="ex jp">この お<ruby>茶<rt>ちゃ</rt></ruby>は <ruby>飲<rt>の</rt></ruby>みやすいです<span class="ro">kono ocha wa nomiyasui desu</span></div></div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — やすい 有「便宜」和「容易」兩個</strong><br>
+    單獨用的 <span class="compare">安い（やすい）</span>是便宜；接在ます形後面的 やすい 是「容易」，漢字寫 易い，平常都寫假名。
+    記成「好買」和「好做」：東西好買就是便宜，事情好做就是容易。
+    這個接法在 <a href="2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">8/11〈マス形入門〉</a>的表格裡出現過（飲みやすい＝好入口）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="denki-de">六、電気で暖かくします 的 で 是用什麼方法</div>
+
+  <p class="lead">
+    筆記上記了 電気で。這個 で 跟 電車で行きます 的 で 一樣，表示「用什麼方法、工具」。
+    後面的 暖かくします 是「讓它變暖」：い形容詞的 い 改成 く 再接 します，就是自己動手讓它變成那樣。
+    11/8 學的 〜くなります 是「自己變成那樣」（暖かくなりました＝變暖了），換成 します 就變成「我讓它變成那樣」。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">用電讓房間變暖</div><div class="pat"><b>電気で</b> 暖かく <b>します</b></div><div class="ex jp">ガスで <ruby>暖<rt>あたた</rt></ruby>かく します<span class="ro">gasu de atataku shimasu</span></div></div>
+    <div class="sum-card"><div class="want">（天氣）變暖了</div><div class="pat">暖かく <b>なりました</b></div><div class="ex jp"><ruby>部屋<rt>へや</rt></ruby>が <ruby>暖<rt>あたた</rt></ruby>かく なりました<span class="ro">heya ga atataku narimashita</span></div></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、最後把這段對話用得到的句子放在一起看</div>
+
+  <p class="lead">對話裡可以直接拿去用的句子，照「想說什麼」排在一起，例句換成跟對話不一樣的內容。</p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">說氣溫</div><div class="pat">今日は 〇<b>度</b>です</div><div class="ex jp"><ruby>今日<rt>きょう</rt></ruby>は <ruby>5<rt>ご</rt>度<rt>ど</rt></ruby>です<span class="ro">kyou wa go do desu</span></div></div>
+    <div class="sum-card"><div class="want">陽光照進來</div><div class="pat"><b>日光が入ります</b></div><div class="ex jp"><ruby>朝<rt>あさ</rt></ruby>、<ruby>日<rt>にっ</rt>光<rt>こう</rt></ruby>が <ruby>入<rt>はい</rt></ruby>ります<span class="ro">asa, nikkou ga hairimasu</span></div></div>
+    <div class="sum-card"><div class="want">打開電器</div><div class="pat">〜を <b>つけます</b></div><div class="ex jp"><ruby>電<rt>でん</rt>気<rt>き</rt></ruby>を つけます<span class="ro">denki o tsukemasu</span></div></div>
+    <div class="sum-card"><div class="want">現在很乾</div><div class="pat">〜が <b>乾燥しています</b></div><div class="ex jp"><ruby>手<rt>て</rt></ruby>が <ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby>しています<span class="ro">te ga kansou shite imasu</span></div></div>
+    <div class="sum-card"><div class="want">很容易〜</div><div class="pat">ます形 ＋ <b>やすい</b></div><div class="ex jp">この ペンは <ruby>書<rt>か</rt></ruby>きやすいです<span class="ro">kono pen wa kakiyasui desu</span></div></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>今天 8 度。（提示：度）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>今日は八度です。<br>kyou wa hachi do desu.</p>
+        </details>
+      </li>
+      <li>因為陽光照得進來，所以房間很暖和。（提示：日光、入る、ので）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>日光が入るので、部屋は暖かいです。<br>nikkou ga hairu node, heya wa atatakai desu.</p>
+        </details>
+      </li>
+      <li>晚上會開冷氣（暖氣）。（提示：夜、エアコン、つける）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>夜はエアコンをつけます。<br>yoru wa eakon o tsukemasu.</p>
+        </details>
+      </li>
+      <li>皮膚很乾，所以擦乳霜。（提示：乾燥しています、から）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>肌が乾燥していますから、クリームを塗ります。<br>hada ga kansou shite imasu kara, kuriimu o nurimasu.</p>
+        </details>
+      </li>
+      <li>暖暖的湯，「暖暖的」要寫 暖かい 還是 温かい？整句寫出來。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>温かいスープ（湯是摸得到、喝得到的東西，用 温かい）<br>atatakai suupu</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-09-kyuu-ni-samuku.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">急に寒くなりましたね <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/9 的會話課：天氣變冷、家人感冒，風邪をひく 在那篇</span>
+  </a>
+  <a href="2026-11-08-kunarimashita.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">X が〜くなりました／〜になりました <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/8 的「變得〜了」，暖かくなりました 就是這個句型</span>
+  </a>
+  <a href="2026-10-21-jimu-kafe-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">ジムとカフェに行きました <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/21 混む／混んでいる，跟 乾燥します／乾燥しています 是同一種差別</span>
+  </a>
+  <a href="2026-08-25-masen-tango.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">ません — 兩個新的例句與生字 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/25 冷たい／温かい，摸得到的冷熱</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

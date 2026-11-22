@@ -2,6 +2,471 @@
  "generated": "2026-11-22",
  "words": [
   {
+   "text": "何度",
+   "ja": "<ruby>何<rt>なん</rt>度<rt>ど</rt></ruby>",
+   "kana": "なんど",
+   "romaji": "nando",
+   "meaning": "幾度（溫度）— 度 接在數字後面就是「〇度」：13度（じゅうさんど）、20度（にじゅうど）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "數字"
+   ]
+  },
+  {
+   "text": "日光",
+   "ja": "<ruby>日<rt>にっ</rt>光<rt>こう</rt></ruby>",
+   "kana": "にっこう",
+   "romaji": "nikkou",
+   "meaning": "陽光、日照 — 日常口語也常說 日（ひ）が入る、日当たりがいい（ひあたり，採光好）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "自然",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "入る",
+   "ja": "<ruby>入<rt>はい</rt></ruby>る",
+   "kana": "はいる",
+   "romaji": "hairu",
+   "meaning": "進來、進去 — 人進房間、陽光照進房間都用它；ます形是 入ります",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "暖かい",
+   "ja": "<ruby>暖<rt>あたた</rt></ruby>かい",
+   "kana": "あたたかい",
+   "romaji": "atatakai",
+   "meaning": "（天氣、房間）暖和 — 跟摸得到的「溫熱」温かい 同音，寫法不同",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "形容詞・副詞",
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "電気",
+   "ja": "<ruby>電<rt>でん</rt>気<rt>き</rt></ruby>",
+   "kana": "でんき",
+   "romaji": "denki",
+   "meaning": "電；也指電燈 — 電気をつけます＝開燈",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "電気毛布",
+   "ja": "<ruby>電<rt>でん</rt>気<rt>き</rt>毛<rt>もう</rt>布<rt>ふ</rt></ruby>",
+   "kana": "でんきもうふ",
+   "romaji": "denki moufu",
+   "meaning": "電毯 — 電気（電）＋ 毛布（毯子）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "エアコン",
+   "ja": "エアコン",
+   "kana": "エアコン",
+   "romaji": "eakon",
+   "meaning": "空調、冷氣 ← 英語 air conditioner 在日文裡縮成四拍；日本的 エアコン 冷暖兩用，冬天開的是暖氣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "つける",
+   "ja": "つける",
+   "kana": "つける",
+   "romaji": "tsukeru",
+   "meaning": "打開（電器）— エアコンをつけます；關掉是 消す（けす）：エアコンを消します",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "乾燥",
+   "ja": "<ruby>乾<rt>かん</rt>燥<rt>そう</rt></ruby>",
+   "kana": "かんそう",
+   "romaji": "kansou",
+   "meaning": "乾燥 — 加 します 變成動詞：乾燥します（變乾）、乾燥しています（現在很乾）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "季節・天氣",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "加湿器",
+   "ja": "<ruby>加<rt>か</rt>湿<rt>しつ</rt>器<rt>き</rt></ruby>",
+   "kana": "かしつき",
+   "romaji": "kashitsuki",
+   "meaning": "加濕器 — 跟中文的字一模一樣，湿 是 濕 的日本寫法",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "肌",
+   "ja": "<ruby>肌<rt>はだ</rt></ruby>",
+   "kana": "はだ",
+   "romaji": "hada",
+   "meaning": "皮膚、肌膚 — 講保養時說 肌，講醫學上的皮膚是 皮膚（ひふ）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "クリーム",
+   "ja": "クリーム",
+   "kana": "クリーム",
+   "romaji": "kuriimu",
+   "meaning": "乳霜 ← 英語 cream；跟英文一樣也是奶油、卡士達：クリームパン 裡包的就是卡士達",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "身體・健康"
+   ]
+  },
+  {
+   "text": "塗る",
+   "ja": "<ruby>塗<rt>ぬ</rt></ruby>る",
+   "kana": "ぬる",
+   "romaji": "nuru",
+   "meaning": "塗、擦 — クリームを塗ります（擦乳霜）、パンにバターを塗ります（麵包抹奶油）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "風邪をひきやすい",
+   "ja": "<ruby>風邪<rt>かぜ</rt></ruby>を ひきやすい",
+   "kana": "かぜを ひきやすい",
+   "romaji": "kaze o hikiyasui",
+   "meaning": "很容易感冒 — ひきます 去掉 ます，接上 やすい",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
+    }
+   ],
+   "tags": [
+    "身體・健康",
+    "形容詞・副詞"
+   ]
+  },
+  {
+   "text": "私はオーロラを見たことがあります。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　オーロラを　<ruby>見<rt>み</rt></ruby>たことがあります。",
+   "kana": "わたしは オーロラを みたことがあります。",
+   "romaji": "watashi wa oorora o mita koto ga arimasu.",
+   "meaning": "我看過極光。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "自然"
+   ]
+  },
+  {
+   "text": "私はスカイツリーを見たことがあります。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　スカイツリーを　<ruby>見<rt>み</rt></ruby>たことがあります。",
+   "kana": "わたしは スカイツリーを みたことがあります。",
+   "romaji": "watashi wa sukaitsurii o mita koto ga arimasu.",
+   "meaning": "我看過晴空塔。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "私はアメリカに行ったことがあります。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　アメリカに　<ruby>行<rt>い</rt></ruby>ったことがあります。",
+   "kana": "わたしは アメリカに いったことがあります。",
+   "romaji": "watashi wa amerika ni itta koto ga arimasu.",
+   "meaning": "我去過美國。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "私は浅草に行ったことがあります。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　<ruby>浅<rt>あさ</rt>草<rt>くさ</rt></ruby>に　<ruby>行<rt>い</rt></ruby>ったことがあります。",
+   "kana": "わたしは あさくさに いったことがあります。",
+   "romaji": "watashi wa asakusa ni itta koto ga arimasu.",
+   "meaning": "我去過淺草。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "私はその映画を見たことがあります。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　その　<ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby>たことがあります。",
+   "kana": "わたしは その えいがを みたことがあります。",
+   "romaji": "watashi wa sono eiga o mita koto ga arimasu.",
+   "meaning": "我看過那部電影。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "私はその本を読んだことがあります。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　その　<ruby>本<rt>ほん</rt></ruby>を　<ruby>読<rt>よ</rt></ruby>んだことがあります。",
+   "kana": "わたしは その ほんを よんだことがあります。",
+   "romaji": "watashi wa sono hon o yonda koto ga arimasu.",
+   "meaning": "我讀過那本書。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "オーロラ",
+   "ja": "オーロラ",
+   "kana": "オーロラ",
+   "romaji": "oorora",
+   "meaning": "極光 — オーロラを見ます。日文也有漢字詞 極光（きょっこう，kyokkou），但平常講話幾乎都說 オーロラ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "自然"
+   ]
+  },
+  {
+   "text": "スカイツリー",
+   "ja": "スカイツリー",
+   "kana": "スカイツリー",
+   "romaji": "sukaitsurii",
+   "meaning": "晴空塔 — 全名是 東京スカイツリー（toukyou sukaitsurii），在東京墨田區，離淺草很近",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "浅草",
+   "ja": "<ruby>浅<rt>あさ</rt>草<rt>くさ</rt></ruby>",
+   "kana": "あさくさ",
+   "romaji": "asakusa",
+   "meaning": "淺草 — 東京的老街區，有淺草寺和雷門",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "場所"
+   ]
+  },
+  {
+   "text": "私はオーロラを見たことがありません。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　オーロラを　<ruby>見<rt>み</rt></ruby>たことがありません。",
+   "kana": "わたしは オーロラを みたことがありません。",
+   "romaji": "watashi wa oorora o mita koto ga arimasen.",
+   "meaning": "我沒看過極光。",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "自然"
+   ]
+  },
+  {
+   "text": "私はまだスカイツリーに行ったことがありません。",
+   "ja": "<ruby>私<rt>わたし</rt></ruby>は　まだ　スカイツリーに　<ruby>行<rt>い</rt></ruby>ったことがありません。",
+   "kana": "わたしは まだ スカイツリーに いったことがありません。",
+   "romaji": "watashi wa mada sukaitsurii ni itta koto ga arimasen.",
+   "meaning": "我還沒去過晴空塔。— まだ（mada）是「還沒」，放在前面語氣就是「還沒，之後可能會去」",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-ta-koto-ga-arimasu.html",
+     "title": "〜たことがあります"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
    "text": "キャンプに行ったり、登山をしたりします。",
    "ja": "キャンプに　<ruby>行<rt>い</rt></ruby>ったり、<ruby>登<rt>と</rt>山<rt>ざん</rt></ruby>を　したり　します。",
    "kana": "キャンプに いったり、とざんを したり します。",
@@ -18939,6 +19404,11 @@
      "date": "2026-08-05",
      "href": "lessons/2026-08-05-doko.html",
      "title": "どこですか"
+    },
+    {
+     "date": "2026-11-22",
+     "href": "lessons/2026-11-22-fuyu-no-heya.html",
+     "title": "部屋は暖かいです"
     }
    ],
    "tags": [

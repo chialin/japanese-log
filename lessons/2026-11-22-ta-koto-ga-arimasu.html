@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜たことがあります — 說自己做過的事</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 變化表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.tj{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+.tj .ro{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+.vs-col .ro{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);line-height:1.5;}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜<span class="accent">たことがあります</span></h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 22</div>
+  <p class="page-subtitle">說自己做過的事：オーロラを見たことがあります、アメリカに行ったことがあります；新字 オーロラ・スカイツリー・浅草</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    自我介紹或聊旅行時，想說「我看過極光」「我去過美國」，日文用 〜たことがあります。
+    <a href="2026-07-28-kita-koto-ga-arimasu.html" style="color:var(--accent);">7/28〈〜たことがあります — 問經驗〉</a>學的是怎麼問別人，本篇換成自己講。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 私は〜たことがあります 說「我曾經做過〜」</li>
+      <li>把 見ます・行きます・読みます 變成 見た・行った・読んだ，再接 ことがあります</li>
+      <li>知道 を 還是 に 是看動詞決定的，見る・読む 用 を，行く 用 に</li>
+      <li>分清楚 〜たことがあります（有這個經驗）和 〜ました（某一次做了）</li>
+      <li>沒做過的事，把 あります 換成 ありません</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kihon">一、以「た形＋ことがあります」為主軸，說自己做過的事</div>
+
+  <p class="lead">
+    這個句型是在說「有沒有這個經驗」。動詞先變成 た形，後面加 こと（這件事），再接 があります（有），
+    直譯就是「有『看過極光』這件事」，也就是中文的「我看過極光」。
+  </p>
+
+  <div class="formula">
+    <h4>〜たことがあります 的骨架</h4>
+    <div class="fx">
+      <ruby>私<rt>わたし</rt></ruby>は　〇〇を／に　動詞<b>た形</b>＋<b>ことがあります</b> <span class="arw">→</span> 我曾經〜過
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>課上的例句</div>
+
+    <div class="word-item" data-text="私はオーロラを見たことがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　オーロラを　<ruby>見<rt>み</rt></ruby>た<span class="j-mark">ことがあります</span>。</div>
+        <div class="word-romaji">watashi wa oorora o mita koto ga arimasu.</div>
+        <div class="word-meaning">我看過極光。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私はスカイツリーを見たことがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　スカイツリーを　<ruby>見<rt>み</rt></ruby>た<span class="j-mark">ことがあります</span>。</div>
+        <div class="word-romaji">watashi wa sukaitsurii o mita koto ga arimasu.</div>
+        <div class="word-meaning">我看過晴空塔。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私はアメリカに行ったことがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　アメリカに　<ruby>行<rt>い</rt></ruby>った<span class="j-mark">ことがあります</span>。</div>
+        <div class="word-romaji">watashi wa amerika ni itta koto ga arimasu.</div>
+        <div class="word-meaning">我去過美國。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私は浅草に行ったことがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　<ruby>浅<rt>あさ</rt>草<rt>くさ</rt></ruby>に　<ruby>行<rt>い</rt></ruby>った<span class="j-mark">ことがあります</span>。</div>
+        <div class="word-romaji">watashi wa asakusa ni itta koto ga arimasu.</div>
+        <div class="word-meaning">我去過淺草。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私はその映画を見たことがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　その　<ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby>た<span class="j-mark">ことがあります</span>。</div>
+        <div class="word-romaji">watashi wa sono eiga o mita koto ga arimasu.</div>
+        <div class="word-meaning">我看過那部電影。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私はその本を読んだことがあります。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　その　<ruby>本<rt>ほん</rt></ruby>を　<ruby>読<rt>よ</rt></ruby>んだ<span class="j-mark">ことがあります</span>。</div>
+        <div class="word-romaji">watashi wa sono hon o yonda koto ga arimasu.</div>
+        <div class="word-meaning">我讀過那本書。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    アメリカ 在 <a href="2026-05-14-katakana-a-row.html" style="color:var(--accent);">5/14〈片假名ア行〉</a>就出現過，
+    <a href="2026-10-06-doushite-ndesu.html" style="color:var(--accent);">10/6〈どうして〜んですか〉</a>也說明過它來自地名 America。
+    その映画、その本 的 その 是 <a href="2026-07-29-kono-sono-ano.html" style="color:var(--accent);">7/29〈この・その・あの〉</a>學的「那個〜」，後面直接接名詞。
+    本課的新字有三個：オーロラ、スカイツリー、浅草。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>本課的新字</div>
+
+    <div class="word-item" data-text="オーロラ">
+      <div class="word-content">
+        <div class="word-ja">オーロラ</div>
+        <div class="word-romaji">oorora</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">極光 — オーロラを見ます。日文也有漢字詞 極光（きょっこう，kyokkou），但平常講話幾乎都說 オーロラ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="スカイツリー">
+      <div class="word-content">
+        <div class="word-ja">スカイツリー</div>
+        <div class="word-romaji">sukaitsurii</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">晴空塔 — 全名是 東京スカイツリー（toukyou sukaitsurii），在東京墨田區，離淺草很近</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="浅草">
+      <div class="word-content">
+        <div class="word-ja"><ruby>浅<rt>あさ</rt>草<rt>くさ</rt></ruby></div>
+        <div class="word-romaji">asakusa</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">淺草 — 東京的老街區，有淺草寺和雷門</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>外來語的來源：オーロラ 和 スカイツリー</strong><br>
+    <span class="compare">オーロラ</span> 借自英語 aurora，這個字本來是拉丁語，是羅馬神話裡黎明女神的名字。日文的意思跟英語一樣，就是極光，沒有縮小或轉移。<br>
+    <span class="compare">スカイツリー</span> 是英語 sky（天空）加 tree（樹）組成的塔名，2012 年開幕時取的，英語本身沒有 skytree 這個字。
+    日文沒有 tr 這樣連在一起的子音，所以 tree 寫成 ツリー，跟 クリスマスツリー（kurisumasu tsurii，聖誕樹）的 ツリー 一樣。
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 浅草 就是「淺淺的草」</strong><br>
+    <span class="compare">浅</span>（あさ）是 <a href="2026-09-09-i-keiyoushi-meishi.html">9/9 的課</a>提過的 浅い（asai，淺）的 浅，
+    <span class="compare">草</span>（くさ）就是草。兩個字都用訓讀，所以唸 あさくさ，不是音讀。
+    地名的由來有一說是這一帶以前草長得很淺，字面就是「淺淺的草」。<br>
+    咖啡的淺焙也是同一個字：日文叫 <span class="compare">浅煎り</span>（あさいり，asairi），
+    深焙叫 深煎り（ふかいり，fukairi）。點咖啡看到 浅，就想到 浅草 的 あさ。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="joshi">二、前面用 を 還是 に，是看動詞決定的</div>
+
+  <p class="lead">
+    六個例句裡，有的是 オーロラを，有的是 アメリカに。這跟 ことがあります 無關，是後面的動詞決定的：
+    平常說 映画を見ます、アメリカに行きます，改成經驗的句型時，助詞照原本的用。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>を ＋ 見た／読んだ</h4>
+      <div class="vs-sub">看、讀的「對象」用 を</div>
+      <ul>
+        <li>オーロラ<b>を</b><ruby>見<rt>み</rt></ruby>たことがあります<span class="ro">oorora o mita koto ga arimasu</span></li>
+        <li>その<ruby>本<rt>ほん</rt></ruby><b>を</b><ruby>読<rt>よ</rt></ruby>んだことがあります<span class="ro">sono hon o yonda koto ga arimasu</span></li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>に ＋ 行った</h4>
+      <div class="vs-sub">去的「目的地」用 に</div>
+      <ul>
+        <li>アメリカ<b>に</b><ruby>行<rt>い</rt></ruby>ったことがあります<span class="ro">amerika ni itta koto ga arimasu</span></li>
+        <li><ruby>浅<rt>あさ</rt>草<rt>くさ</rt></ruby><b>に</b><ruby>行<rt>い</rt></ruby>ったことがあります<span class="ro">asakusa ni itta koto ga arimasu</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    スカイツリー 比較特別：「看過晴空塔」用 を見た；要說「去過晴空塔」就換成 スカイツリーに行ったことがあります。
+    同一個地方，用的動詞不一樣，助詞就跟著換。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="takei">三、ことがあります 前面一定是 た形</div>
+
+  <p class="lead">
+    ことがあります 前面不能直接放 ます形，要先換成 <a href="2026-08-12-ta-kei.html#doushi" style="color:var(--accent);">8/12〈過去式 た形〉</a>的 た形。
+    本課的三個動詞剛好是三種不同的變法。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>ます形</th><th>た形</th><th>＋ことがあります</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="tj"><ruby>見<rt>み</rt></ruby>ます<span class="ro">mimasu</span></td><td class="tj"><ruby>見<rt>み</rt></ruby><b>た</b><span class="ro">mita</span></td><td class="tj"><ruby>見<rt>み</rt></ruby><b>た</b>ことがあります<span class="ro">mita koto ga arimasu</span></td></tr>
+      <tr><td class="tj"><ruby>行<rt>い</rt></ruby>きます<span class="ro">ikimasu</span></td><td class="tj"><ruby>行<rt>い</rt></ruby><b>った</b><span class="ro">itta</span></td><td class="tj"><ruby>行<rt>い</rt></ruby><b>った</b>ことがあります<span class="ro">itta koto ga arimasu</span></td></tr>
+      <tr><td class="tj"><ruby>読<rt>よ</rt></ruby>みます<span class="ro">yomimasu</span></td><td class="tj"><ruby>読<rt>よ</rt></ruby><b>んだ</b><span class="ro">yonda</span></td><td class="tj"><ruby>読<rt>よ</rt></ruby><b>んだ</b>ことがあります<span class="ro">yonda koto ga arimasu</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    見ます 是一段動詞，拿掉 ます 加 た 就好。行きます 是例外，照規則應該是 行いた，但實際上是 行った。
+    読みます 的 み 結尾要變成 んだ，跟 飲みます → 飲んだ 一樣。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="mashita">四、〜ました 和 〜たことがあります 都是過去的事，差別在哪裡</div>
+
+  <p class="lead">
+    兩個都跟過去有關，但 〜ました 是講「某一次做了這件事」，通常會帶著時間；
+    〜たことがあります 是講「人生到現在有這個經驗」，不管是哪一次。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>〜ました</h4>
+      <div class="vs-sub">某一次做了，常跟時間一起出現</div>
+      <ul>
+        <li><ruby>去<rt>きょ</rt>年<rt>ねん</rt></ruby>、<ruby>浅<rt>あさ</rt>草<rt>くさ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。<span class="ro">kyonen, asakusa ni ikimashita.</span></li>
+        <li>去年去了淺草</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>〜たことがあります</h4>
+      <div class="vs-sub">有這個經驗，不講是哪一次</div>
+      <ul>
+        <li><ruby>浅<rt>あさ</rt>草<rt>くさ</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったことがあります。<span class="ro">asakusa ni itta koto ga arimasu.</span></li>
+        <li>我去過淺草</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    中文也分得出來：「我去年去了淺草」和「我去過淺草」。會說「〜過」的時候，用 〜たことがあります。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="nai">五、沒做過的事，把 あります 換成 ありません</div>
+
+  <p class="lead">
+    あります 的否定是 ありません，前面的部分完全不用動。
+    <a href="2026-07-28-kita-koto-ga-arimasu.html" style="color:var(--accent);">7/28 那篇</a>回答「いいえ、ありません」也是同一個字。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>沒做過的說法</div>
+
+    <div class="word-item" data-text="私はオーロラを見たことがありません。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　オーロラを　<ruby>見<rt>み</rt></ruby>た<span class="j-mark">ことがありません</span>。</div>
+        <div class="word-romaji">watashi wa oorora o mita koto ga arimasen.</div>
+        <div class="word-meaning">我沒看過極光。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="私はまだスカイツリーに行ったことがありません。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>私<rt>わたし</rt></ruby>は　まだ　スカイツリーに　<ruby>行<rt>い</rt></ruby>った<span class="j-mark">ことがありません</span>。</div>
+        <div class="word-romaji">watashi wa mada sukaitsurii ni itta koto ga arimasen.</div>
+        <div class="word-meaning">我還沒去過晴空塔。— まだ（mada）是「還沒」，放在前面語氣就是「還沒，之後可能會去」</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">六、有三個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① ことがあります 前面不能放 ます形</strong><br>
+    <s>見ますことがあります</s>、<s>見ましたことがあります</s> 都不對。ます 只放在句子最後的 あります 上，前面的動詞要用 た形：
+    <span class="compare">見たことがあります</span>。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② 行きます 的 た形 是 行った</strong><br>
+    照 書きます → 書いた 的規則，會以為是 <s>行いた</s>，但 行きます 是例外，要說
+    <span class="compare">行ったことがあります</span>（itta koto ga arimasu），中間是促音 っ。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>③ 講到是哪一次，就改用 〜ました</strong><br>
+    <s>昨日、その映画を見たことがあります</s> 很不自然，因為 昨日 指的是某一次，不是經驗。
+    要說 <span class="compare">昨日、その映画を見ました</span>（kinou, sono eiga o mimashita）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、最後把 〜たことがあります 的用法放在一起看</div>
+
+  <p class="lead">
+    骨架都是「た形＋ことがあります」，助詞照動詞原本的用，沒做過就把 あります 換成 ありません。講到某一次的時候改回 〜ました。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">我〜過（看、讀）</div><div class="pat">〇〇<b>を</b> 〜<b>たことがあります</b></div><div class="ex jp"><ruby>富<rt>ふ</rt>士<rt>じ</rt>山<rt>さん</rt></ruby>を<ruby>見<rt>み</rt></ruby>たことがあります<span class="ro">fujisan o mita koto ga arimasu</span></div></div>
+    <div class="sum-card"><div class="want">我去過〇〇</div><div class="pat">〇〇<b>に</b> <ruby>行<rt>い</rt></ruby>っ<b>たことがあります</b></div><div class="ex jp"><ruby>京<rt>きょう</rt>都<rt>と</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったことがあります<span class="ro">kyouto ni itta koto ga arimasu</span></div></div>
+    <div class="sum-card"><div class="want">我沒〜過</div><div class="pat">〜た<b>ことがありません</b></div><div class="ex jp">ラーメンを<ruby>作<rt>つく</rt></ruby>ったことがありません<span class="ro">raamen o tsukutta koto ga arimasen</span></div></div>
+    <div class="sum-card"><div class="want">某一次做了（對照）</div><div class="pat">〜<b>ました</b></div><div class="ex jp"><ruby>先<rt>せん</rt>週<rt>しゅう</rt></ruby>、<ruby>海<rt>うみ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました<span class="ro">senshuu, umi ni ikimashita</span></div></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我去過北海道。（提示：北海道 ほっかいどう）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>私は北海道に行ったことがあります。<br>watashi wa hokkaidou ni itta koto ga arimasu.</p>
+        </details>
+      </li>
+      <li>我看過那部電影。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>私はその映画を見たことがあります。<br>watashi wa sono eiga o mita koto ga arimasu.</p>
+        </details>
+      </li>
+      <li>把 飲みます 和 書きます 接上 ことがあります。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>飲んだことがあります（nonda koto ga arimasu）、書いたことがあります（kaita koto ga arimasu）<br>先變成 た形 飲んだ、書いた，再接 ことがあります。</p>
+        </details>
+      </li>
+      <li>我沒看過極光。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>私はオーロラを見たことがありません。<br>watashi wa oorora o mita koto ga arimasen.</p>
+        </details>
+      </li>
+      <li>這句哪裡怪？ 昨日、浅草に行ったことがあります。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>昨日 指的是某一次，要用 〜ました：昨日、浅草に行きました。<br>kinou, asakusa ni ikimashita.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-07-28-kita-koto-ga-arimasu.html" class="next-link">
+    <span class="next-kicker">— 前情提要 —</span>
+    <span class="next-title">〜たことがあります — 問經驗 <span class="next-arrow">→</span></span>
+    <span class="next-sub">7/28：日本に来たことがありますか，問別人的經驗、回答 何回もあります</span>
+  </a>
+
+  <a href="2026-08-12-ta-kei.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">過去式 た形 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12：見た・行った・読んだ 的變法</span>
+  </a>
+
+  <a href="2026-07-29-kono-sono-ano.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">この・その・あの <span class="next-arrow">→</span></span>
+    <span class="next-sub">7/29：その映画、その本 的 その，後面直接接名詞</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

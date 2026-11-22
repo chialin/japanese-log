@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜たり〜たりします — 從很多事裡舉幾個例子</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 變化表 */
+.joshi-table{width:100%;border-collapse:collapse;margin:18px 0;background:rgba(255,255,255,.5);font-size:14px;}
+.joshi-table th,.joshi-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.joshi-table th{background:var(--accent-pale);color:var(--accent);font-family:'Shippori Mincho',serif;font-weight:600;}
+.joshi-table td b{color:var(--accent);}
+.tj{font-family:'Klee One','Shippori Mincho',serif;font-size:15px;}
+.tj .ro{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+.vs-col .ro{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);line-height:1.5;}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">〜<span class="accent">たり</span>〜<span class="accent">たり</span>します</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 19</div>
+  <p class="page-subtitle">從很多件事裡挑幾個當例子：キャンプに行ったり、登山をしたりします；新字 登山・昼寝・読書</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    被問到「週末都做什麼？」「那天去做了什麼？」，想舉幾件事回答，但不想一件一件全部列出來，日文用 〜たり〜たりします。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 〜たり〜たりします 舉兩個例子，說「做做 A、做做 B 之類的」</li>
+      <li>知道 たり 就是 た形 加上 り，變法跟 た形 一樣</li>
+      <li>遇到 読書をします 這種「名詞＋します」，知道 たり 要加在 します 上，變成 読書をしたり</li>
+      <li>知道時態放在最後的 します 上，說過去的事要用 〜たり〜たりしました</li>
+      <li>分清楚 〜て、〜て（照順序全部做）和 〜たり〜たり（隨便舉例）</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kihon">一、〜たり〜たりします 是用來舉例的</div>
+
+  <p class="lead">
+    這個句型是從很多件事裡挑幾個出來當例子，意思接近中文的「做做 A、做做 B」或「A 啦、B 啦」。
+    聽的人會知道你還做其他的事，這兩件只是舉例。每個動詞都改成 た形 再加 り，最後用 します 收尾。
+  </p>
+
+  <div class="formula">
+    <h4>〜たり〜たりします 的骨架</h4>
+    <div class="fx">
+      動詞た形＋<b>り</b>、動詞た形＋<b>り</b>　<b>します</b> <span class="arw">→</span> 做做 A、做做 B 之類的
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>課上的例句</div>
+
+    <div class="word-item" data-text="キャンプに行ったり、登山をしたりします。">
+      <div class="word-content">
+        <div class="word-ja">キャンプに　<ruby>行<rt>い</rt></ruby>っ<span class="j-mark">たり</span>、<ruby>登<rt>と</rt>山<rt>ざん</rt></ruby>を　し<span class="j-mark">たり</span>　<span class="j-mark">します</span>。</div>
+        <div class="word-romaji">kyanpu ni ittari, tozan o shitari shimasu.</div>
+        <div class="word-meaning">會去露營、爬山之類的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昼寝をしたり、テレビを見たりします。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昼<rt>ひる</rt>寝<rt>ね</rt></ruby>を　し<span class="j-mark">たり</span>、テレビを　<ruby>見<rt>み</rt></ruby><span class="j-mark">たり</span>　<span class="j-mark">します</span>。</div>
+        <div class="word-romaji">hirune o shitari, terebi o mitari shimasu.</div>
+        <div class="word-meaning">睡睡午覺、看看電視之類的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="映画を見たり、読書をしたりします。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby><span class="j-mark">たり</span>、<ruby>読<rt>どく</rt>書<rt>しょ</rt></ruby>を　し<span class="j-mark">たり</span>　<span class="j-mark">します</span>。</div>
+        <div class="word-romaji">eiga o mitari, dokusho o shitari shimasu.</div>
+        <div class="word-meaning">看看電影、看看書之類的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    キャンプ 是 <a href="2026-10-13-tsuri-kyanpu-suizokukan.html" style="color:var(--accent);">10/13〈釣り・キャンプ・水族館〉</a>學過的字，從英語 camp 借來。
+    テレビ 在 <a href="2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">8/11〈ます形入門〉</a>的小測驗出現過，是英語 television 只留下前半段的縮寫，英語本身不會這樣縮。
+    本課的新字有三個：登山、昼寝、読書。卡片上的標籤寫著「名詞（＋する）」，意思是這個字本身是名詞，要加 をします 才能當動作用，所以例句裡是 登山をしたり、読書をしたり。為什麼是 したり，第三節會一步一步說明。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>本課的新字</div>
+
+    <div class="word-item" data-text="登山">
+      <div class="word-content">
+        <div class="word-ja"><ruby>登<rt>と</rt>山<rt>ざん</rt></ruby></div>
+        <div class="word-romaji">tozan</div>
+        <div class="word-pos">名詞（＋する）</div>
+        <div class="word-meaning">登山、爬山 — 登山をします。也可以用 11/3 學過的 山に登ります（yama ni noborimasu），意思一樣</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="昼寝">
+      <div class="word-content">
+        <div class="word-ja"><ruby>昼<rt>ひる</rt>寝<rt>ね</rt></ruby></div>
+        <div class="word-romaji">hirune</div>
+        <div class="word-pos">名詞（＋する）</div>
+        <div class="word-meaning">午睡、睡午覺 — 昼寝をします</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="読書">
+      <div class="word-content">
+        <div class="word-ja"><ruby>読<rt>どく</rt>書<rt>しょ</rt></ruby></div>
+        <div class="word-romaji">dokusho</div>
+        <div class="word-pos">名詞（＋する）</div>
+        <div class="word-meaning">讀書、閱讀 — 読書をします。意思跟 本を読みます（hon o yomimasu）一樣，読書 聽起來比較正式，寫在興趣欄裡也常用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 山 的文讀是 san</strong><br>
+    台語 山 的文讀音是 <span class="compare">san</span>（山水 san-sui），日文的音讀也是 <span class="compare">さん</span>，像 <span class="compare">富士山</span>（ふじさん）。
+    在 登山 裡，山 接在 登 後面，第一個音變濁音（連濁），所以唸成 <span class="compare">ざん</span>。
+    火山（かざん）也是同樣的變化。
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 昼寝 是「中午」加「睡」</strong><br>
+    <span class="compare">昼</span>（ひる）是 <a href="2026-07-29-hirugohan-chazuke.html">7/29 昼ごはん</a> 的 昼，
+    <span class="compare">寝</span>（ね）是 <a href="2026-10-23-okite-tabete.html">10/23</a> 寝ます（nemasu，睡覺）的 寝。
+    兩個都用訓讀，中午＋睡，就是睡午覺。
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 読書 的 書 跟 図書館 同音</strong><br>
+    読書 用的是音讀，<span class="compare">書</span> 唸 しょ，跟 <a href="2026-06-28-tokyo-life-vocab.html">6/28 學過的</a> 図書館（としょかん）、還有 辞書（じしょ）是同一個音。
+    同一個 読，單獨當動詞時用訓讀，唸 よむ（読む）；跟別的漢字組成 読書 時用音讀，唸 どく。
+  </div>
+
+  <p class="lead">
+    這個句型最常用在回答「你都做什麼？」。對方問 何をしますか，用 〜たり〜たり 回答，聽起來就是「大概是這些事」，不會像在交代行程。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>一問一答</div>
+
+    <div class="word-item" data-text="週末は何をしますか。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>は　<ruby>何<rt>なに</rt></ruby>を　しますか。</div>
+        <div class="word-romaji">shuumatsu wa nani o shimasu ka.</div>
+        <div class="word-meaning">週末你都做什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="映画を見たり、本を読んだりします。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby><span class="j-mark">たり</span>、<ruby>本<rt>ほん</rt></ruby>を　<ruby>読<rt>よ</rt></ruby>ん<span class="j-mark">だり</span>　<span class="j-mark">します</span>。</div>
+        <div class="word-romaji">eiga o mitari, hon o yondari shimasu.</div>
+        <div class="word-meaning">看看電影、看看書之類的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="家で料理を作ったり、音楽を聞いたりします。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>家<rt>いえ</rt></ruby>で　<ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>を　<ruby>作<rt>つく</rt></ruby>っ<span class="j-mark">たり</span>、<ruby>音<rt>おん</rt>楽<rt>がく</rt></ruby>を　<ruby>聞<rt>き</rt></ruby>い<span class="j-mark">たり</span>　<span class="j-mark">します</span>。</div>
+        <div class="word-romaji">ie de ryouri o tsukuttari, ongaku o kiitari shimasu.</div>
+        <div class="word-meaning">在家做做菜、聽聽音樂之類的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="henka">二、たり 的變法跟 た形 一樣</div>
+
+  <p class="lead">
+    たり 不用另外背。先把動詞變成 <a href="2026-08-12-ta-kei.html#doushi" style="color:var(--accent);">8/12〈過去式 た形〉</a>的 た形，後面加 り 就好。
+    た形 是 て形 的 て 換成 た，所以 で 結尾的那一類，這裡也會變成 だり。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>原型</th><th>た形</th><th>たり</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="tj"><ruby>行<rt>い</rt></ruby>く<span class="ro">iku</span></td><td class="tj"><ruby>行<rt>い</rt></ruby>っ<b>た</b><span class="ro">itta</span></td><td class="tj"><ruby>行<rt>い</rt></ruby>っ<b>たり</b><span class="ro">ittari</span></td></tr>
+      <tr><td class="tj">する<span class="ro">suru</span></td><td class="tj">し<b>た</b><span class="ro">shita</span></td><td class="tj">し<b>たり</b><span class="ro">shitari</span></td></tr>
+      <tr><td class="tj"><ruby>見<rt>み</rt></ruby>る<span class="ro">miru</span></td><td class="tj"><ruby>見<rt>み</rt></ruby><b>た</b><span class="ro">mita</span></td><td class="tj"><ruby>見<rt>み</rt></ruby><b>たり</b><span class="ro">mitari</span></td></tr>
+      <tr><td class="tj"><ruby>読<rt>よ</rt></ruby>む<span class="ro">yomu</span></td><td class="tj"><ruby>読<rt>よ</rt></ruby>ん<b>だ</b><span class="ro">yonda</span></td><td class="tj"><ruby>読<rt>よ</rt></ruby>ん<b>だり</b><span class="ro">yondari</span></td></tr>
+      <tr><td class="tj"><ruby>聞<rt>き</rt></ruby>く<span class="ro">kiku</span></td><td class="tj"><ruby>聞<rt>き</rt></ruby>い<b>た</b><span class="ro">kiita</span></td><td class="tj"><ruby>聞<rt>き</rt></ruby>い<b>たり</b><span class="ro">kiitari</span></td></tr>
+      <tr><td class="tj"><ruby>食<rt>た</rt></ruby>べる<span class="ro">taberu</span></td><td class="tj"><ruby>食<rt>た</rt></ruby>べ<b>た</b><span class="ro">tabeta</span></td><td class="tj"><ruby>食<rt>た</rt></ruby>べ<b>たり</b><span class="ro">tabetari</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    所以只要 た形 會變，たり 就會了。行く 的 た形 是 行った（不是 行いた），たり 也一樣是 行ったり。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="suru">三、〇〇をします 這種說法，たり 要加在 します 上</div>
+
+  <p class="lead">
+    課上的例句是 読書をしたり，不是 読書を読んだり。要弄懂這一點，先分清楚句子裡哪個是名詞、哪個是動詞，
+    再看 たり 能加在哪裡。
+  </p>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>第一步：読書 在日文裡只能當名詞</strong><br>
+    名詞是一樣東西或一件事的名字，像 本（書）、映画（電影）、読書（讀書這件事）；動詞才是真正在做的動作，像 読みます（讀）、見ます（看）、します（做）。<br>
+    中文的「讀書」可以直接當動作用，像「我在讀書」。日文的 読書 不行，它比較像中文的「家事」：
+    「家事」是一件事情的名字，要說「做家事」，真正的動作是「做」。
+    日文也是這樣，<span class="compare">読書を します</span> 是「讀書這件事」＋ を ＋「做」，這句的動詞是 します。
+  </div>
+
+  <p class="lead">
+    第二步：たり 只能加在動詞上，不能加在名詞上。所以做法是先找出句子裡的動詞，把它變成 た形，再加 り。
+    同樣是「讀書」的意思，下面兩句用的動詞不一樣，たり 加的位置也就不一樣。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>步驟</th><th>読書をします</th><th>本を読みます</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>句子裡的動詞</td><td class="tj"><b>します</b><span class="ro">shimasu</span></td><td class="tj"><ruby>読<rt>よ</rt></ruby>みます<span class="ro">yomimasu</span></td></tr>
+      <tr><td>變成 た形</td><td class="tj">した<span class="ro">shita</span></td><td class="tj"><ruby>読<rt>よ</rt></ruby>んだ<span class="ro">yonda</span></td></tr>
+      <tr><td>加上 り</td><td class="tj">し<b>たり</b><span class="ro">shitari</span></td><td class="tj"><ruby>読<rt>よ</rt></ruby>ん<b>だり</b><span class="ro">yondari</span></td></tr>
+      <tr><td>完成</td><td class="tj"><ruby>読<rt>どく</rt>書<rt>しょ</rt></ruby>を<b>したり</b>します<span class="ro">dokusho o shitari shimasu</span></td><td class="tj"><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>ん<b>だり</b>します<span class="ro">hon o yondari shimasu</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    第一句是「做＋讀書這件事」，第二句是「讀＋書」，兩句意思一樣，都可以用。
+    讀書這件事已經有「讀」的意思，所以不能再接 読む，說成 <s>読書を読んだり</s> 就重複了。
+  </p>
+
+  <p class="lead">
+    這種「名詞＋をします」的說法其實很常見，用法全部一樣：看到 〇〇をします，たり 就加在 します 上，變成 〇〇をしたり。
+    其中有幾個也有對應的動詞說法，那一邊的 たり 就加在那個動詞上。
+  </p>
+
+  <div class="tbl-scroll">
+  <table class="joshi-table">
+    <thead>
+      <tr><th>名詞＋します</th><th>たり</th><th>換成動詞的說法</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="tj"><ruby>登<rt>と</rt>山<rt>ざん</rt></ruby>をします<span class="ro">tozan o shimasu</span></td><td class="tj"><ruby>登<rt>と</rt>山<rt>ざん</rt></ruby>を<b>したり</b><span class="ro">tozan o shitari</span></td><td class="tj"><ruby>山<rt>やま</rt></ruby>に<ruby>登<rt>のぼ</rt></ruby>っ<b>たり</b><span class="ro">yama ni nobottari</span></td></tr>
+      <tr><td class="tj"><ruby>読<rt>どく</rt>書<rt>しょ</rt></ruby>をします<span class="ro">dokusho o shimasu</span></td><td class="tj"><ruby>読<rt>どく</rt>書<rt>しょ</rt></ruby>を<b>したり</b><span class="ro">dokusho o shitari</span></td><td class="tj"><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>ん<b>だり</b><span class="ro">hon o yondari</span></td></tr>
+      <tr><td class="tj"><ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>をします<span class="ro">ryouri o shimasu</span></td><td class="tj"><ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>を<b>したり</b><span class="ro">ryouri o shitari</span></td><td class="tj"><ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>を<ruby>作<rt>つく</rt></ruby>っ<b>たり</b><span class="ro">ryouri o tsukuttari</span></td></tr>
+      <tr><td class="tj"><ruby>昼<rt>ひる</rt>寝<rt>ね</rt></ruby>をします<span class="ro">hirune o shimasu</span></td><td class="tj"><ruby>昼<rt>ひる</rt>寝<rt>ね</rt></ruby>を<b>したり</b><span class="ro">hirune o shitari</span></td><td>沒有對應的單一動詞，只能用 します</td></tr>
+      <tr><td class="tj"><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>をします<span class="ro">kaimono o shimasu</span></td><td class="tj"><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<b>したり</b><span class="ro">kaimono o shitari</span></td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="lead">
+    名詞那一欄（登山・読書）通常用音讀，聽起來比較正式；動詞那一欄（登る・読む）用訓讀，比較口語。平常聊天兩種都會聽到。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="jisei">四、時態是放在最後的 します 上的</div>
+
+  <p class="lead">
+    たり 那一段看起來帶著 た，但它在這裡不是過去式的意思，只是句型的一部分。
+    要說現在、習慣還是過去，全看句尾的 します：平常會做的事用 します，已經做過的事改成 しました。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>說過去的事</div>
+
+    <div class="word-item" data-text="神保町で古本屋を回ったり、欧風カレーを食べたりしました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>神<rt>じん</rt>保<rt>ぼう</rt>町<rt>ちょう</rt></ruby>で　<ruby>古<rt>ふる</rt>本<rt>ほん</rt>屋<rt>や</rt></ruby>を　<ruby>回<rt>まわ</rt></ruby>っ<span class="j-mark">たり</span>、<ruby>欧<rt>おう</rt>風<rt>ふう</rt></ruby>カレーを　<ruby>食<rt>た</rt></ruby>べ<span class="j-mark">たり</span>　<span class="j-mark">しました</span>。</div>
+        <div class="word-romaji">jinbouchou de furuhonya o mawattari, oufuu karee o tabetari shimashita.</div>
+        <div class="word-meaning">在神保町逛了古書店、吃了歐風咖哩之類的 — 回ります 是一家接一家跑好幾個地方</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="去年の夏は、キャンプに行ったり、山に登ったりしました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>去<rt>きょ</rt>年<rt>ねん</rt></ruby>の　<ruby>夏<rt>なつ</rt></ruby>は、キャンプに　<ruby>行<rt>い</rt></ruby>っ<span class="j-mark">たり</span>、<ruby>山<rt>やま</rt></ruby>に　<ruby>登<rt>のぼ</rt></ruby>っ<span class="j-mark">たり</span>　<span class="j-mark">しました</span>。</div>
+        <div class="word-romaji">kyonen no natsu wa, kyanpu ni ittari, yama ni nobottari shimashita.</div>
+        <div class="word-meaning">去年夏天去露營、爬山之類的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    句尾的 します 跟其他動詞一樣可以變化，所以 <a href="2026-11-10-kako-mashita-deshita.html" style="color:var(--accent);">11/10〈〜でした／〜かったです／〜ました〉</a>那條規則在這裡也適用：
+    前面說了 去年、昨日，句尾就要改成 しました。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="te">五、〜て、〜て 和 〜たり〜たり 都能接好幾個動作，差別在哪裡</div>
+
+  <p class="lead">
+    <a href="2026-10-23-okite-tabete.html" style="color:var(--accent);">10/23〈〜て、〜て〉</a>也是把好幾個動作接在一起，
+    但它講的是先後順序，而且每一件都做了。〜たり〜たり 只是挑幾件當例子，沒有順序，也沒說只做了這些。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>〜て、〜て</h4>
+      <div class="vs-sub">照順序，全部都做</div>
+      <ul>
+        <li><ruby>起<rt>お</rt></ruby>きて、ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べて、<ruby>出<rt>で</rt></ruby>かけます。<span class="ro">okite, gohan o tabete, dekakemasu.</span></li>
+        <li>起床、吃飯，然後出門</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>〜たり〜たり</h4>
+      <div class="vs-sub">挑幾件舉例，沒有順序</div>
+      <ul>
+        <li><ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を<ruby>見<rt>み</rt></ruby>たり、<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだりします。<span class="ro">eiga o mitari, hon o yondari shimasu.</span></li>
+        <li>看看電影、看看書之類的</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    判斷的方法是想想中文會不會說「然後」：會說「然後」的用 〜て，會說「之類的」的用 〜たり。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">六、有三個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① 兩個動詞都要加 たり</strong><br>
+    中文說「去露營、爬山之類的」，「之類的」只放在最後，所以很容易只改第一個動詞：
+    <s>キャンプに行ったり、登山をします</s>。日文要兩邊都是 たり：
+    <span class="compare">キャンプに行ったり、登山をしたりします</span>。
+    口語裡有人會省掉第二個 たり，但初學時先兩個都說。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② 最後的 します 不能省，過去要改成 しました</strong><br>
+    たり 後面一定要接 します 收尾，句子才算講完。說已經做過的事，要改的是這個 します，
+    <s>昨日は映画を見たり、本を読んだりします</s> 要改成
+    <span class="compare">昨日は映画を見たり、本を読んだりしました</span>。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>③ 読書 已經有「讀」的意思，不能再接 読む</strong><br>
+    <s>読書を読んだりします</s> 會變成「讀讀書這件事」，意思重複了。
+    二選一：<span class="compare">読書をしたりします</span>，或是 <span class="compare">本を読んだりします</span>。
+    登山 也一樣，說 登山をしたり 或 山に登ったり，不說 <s>登山を登ったり</s>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、最後把 〜たり 的用法放在一起看</div>
+
+  <p class="lead">
+    骨架都是「た形＋り」接兩次，再用 します 收尾。〇〇をします 的 たり 加在 します 上；要說過去就改句尾，要照順序講就換成 〜て。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">做做 A、做做 B 之類的</div><div class="pat">〜<b>たり</b>、〜<b>たり</b> します</div><div class="ex jp"><ruby>公<rt>こう</rt>園<rt>えん</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>いたり、<ruby>写<rt>しゃ</rt>真<rt>しん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>ったりします<span class="ro">kouen o aruitari, shashin o tottari shimasu</span></div></div>
+    <div class="sum-card"><div class="want">做了 A、做了 B 之類的</div><div class="pat">〜<b>たり</b>、〜<b>たり</b> <b>しました</b></div><div class="ex jp"><ruby>海<rt>うみ</rt></ruby>で<ruby>泳<rt>およ</rt></ruby>いだり、<ruby>魚<rt>さかな</rt></ruby>を<ruby>食<rt>た</rt></ruby>べたりしました<span class="ro">umi de oyoidari, sakana o tabetari shimashita</span></div></div>
+    <div class="sum-card"><div class="want">先 A 然後 B（對照）</div><div class="pat">〜<b>て</b>、〜ます</div><div class="ex jp"><ruby>家<rt>いえ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>って、ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます<span class="ro">ie ni kaette, gohan o tabemasu</span></div></div>
+    <div class="sum-card"><div class="want">た形 再加 り</div><div class="pat"><ruby>泳<rt>およ</rt></ruby>いだ → <ruby>泳<rt>およ</rt></ruby>いだ<b>り</b></div><div class="ex jp"><ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby>んだり<span class="ro">nomu → nondari</span></div></div>
+    <div class="sum-card"><div class="want">〇〇をします 的 たり</div><div class="pat">〇〇を <b>したり</b></div><div class="ex jp"><ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>をしたり、<ruby>掃<rt>そう</rt>除<rt>じ</rt></ruby>をしたりします<span class="ro">benkyou o shitari, souji o shitari shimasu</span></div></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>昨天看了電影、吃了拉麵之類的。（提示：ラーメン）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>昨日は 映画を見たり、ラーメンを食べたりしました。<br>kinou wa eiga o mitari, raamen o tabetari shimashita.</p>
+        </details>
+      </li>
+      <li>把 遊ぶ（あそぶ，玩）和 書く（かく，寫）變成 たり。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>遊んだり（asondari）、書いたり（kaitari）<br>先變成 た形 遊んだ、書いた，再加 り。</p>
+        </details>
+      </li>
+      <li>「讀讀書、睡睡午覺之類的」用 読書 和 昼寝 怎麼說？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>読書をしたり、昼寝をしたりします。<br>dokusho o shitari, hirune o shitari shimasu.<br>兩個都是名詞，動詞是 します，所以 たり 加在 します 上。</p>
+        </details>
+      </li>
+      <li>這句哪裡錯？ キャンプに行ったり、登山をします。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>第二個動詞也要加 たり：キャンプに行ったり、登山をしたりします。<br>kyanpu ni ittari, tozan o shitari shimasu.</p>
+        </details>
+      </li>
+      <li>「起きて、ご飯を食べます」和「ご飯を食べたり、テレビを見たりします」，哪一句有照先後順序？
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>〜て 的那一句（起きて、ご飯を食べます）有照順序。〜たり 那一句只是舉例。<br>okite, gohan o tabemasu.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-10-23-okite-tabete.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜て、〜て <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/23：て形把動作照先後順序接起來，跟 〜たり〜たり 的舉例對照</span>
+  </a>
+
+  <a href="2026-08-12-ta-kei.html" class="next-link">
+    <span class="next-kicker">— 前情提要 —</span>
+    <span class="next-title">過去式 た形 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/12：た形怎麼變，たり 就是 た形 再加 り</span>
+  </a>
+
+  <a href="2026-10-13-tsuri-kyanpu-suizokukan.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">釣り・キャンプ・水族館 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/13：旅行時想做的事，キャンプ 從英語 camp 來</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

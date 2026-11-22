@@ -1,6 +1,215 @@
 {
- "generated": "2026-11-12",
+ "generated": "2026-11-22",
  "words": [
+  {
+   "text": "キャンプに行ったり、登山をしたりします。",
+   "ja": "キャンプに　<ruby>行<rt>い</rt></ruby>ったり、<ruby>登<rt>と</rt>山<rt>ざん</rt></ruby>を　したり　します。",
+   "kana": "キャンプに いったり、とざんを したり します。",
+   "romaji": "kyanpu ni ittari, tozan o shitari shimasu.",
+   "meaning": "會去露營、爬山之類的",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "昼寝をしたり、テレビを見たりします。",
+   "ja": "<ruby>昼<rt>ひる</rt>寝<rt>ね</rt></ruby>を　したり、テレビを　<ruby>見<rt>み</rt></ruby>たり　します。",
+   "kana": "ひるねを したり、テレビを みたり します。",
+   "romaji": "hirune o shitari, terebi o mitari shimasu.",
+   "meaning": "睡睡午覺、看看電視之類的",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "映画を見たり、読書をしたりします。",
+   "ja": "<ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby>たり、<ruby>読<rt>どく</rt>書<rt>しょ</rt></ruby>を　したり　します。",
+   "kana": "えいがを みたり、どくしょを したり します。",
+   "romaji": "eiga o mitari, dokusho o shitari shimasu.",
+   "meaning": "看看電影、看看書之類的",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "登山",
+   "ja": "<ruby>登<rt>と</rt>山<rt>ざん</rt></ruby>",
+   "kana": "とざん",
+   "romaji": "tozan",
+   "meaning": "登山、爬山 — 登山をします。也可以用 11/3 學過的 山に登ります（yama ni noborimasu），意思一樣",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "自然",
+    "動詞"
+   ]
+  },
+  {
+   "text": "昼寝",
+   "ja": "<ruby>昼<rt>ひる</rt>寝<rt>ね</rt></ruby>",
+   "kana": "ひるね",
+   "romaji": "hirune",
+   "meaning": "午睡、睡午覺 — 昼寝をします",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "読書",
+   "ja": "<ruby>読<rt>どく</rt>書<rt>しょ</rt></ruby>",
+   "kana": "どくしょ",
+   "romaji": "dokusho",
+   "meaning": "讀書、閱讀 — 読書をします。意思跟 本を読みます（hon o yomimasu）一樣，読書 聽起來比較正式，寫在興趣欄裡也常用",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "週末は何をしますか。",
+   "ja": "<ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>は　<ruby>何<rt>なに</rt></ruby>を　しますか。",
+   "kana": "しゅうまつは なにを しますか。",
+   "romaji": "shuumatsu wa nani o shimasu ka.",
+   "meaning": "週末你都做什麼？",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "時間・日期"
+   ]
+  },
+  {
+   "text": "映画を見たり、本を読んだりします。",
+   "ja": "<ruby>映<rt>えい</rt>画<rt>が</rt></ruby>を　<ruby>見<rt>み</rt></ruby>たり、<ruby>本<rt>ほん</rt></ruby>を　<ruby>読<rt>よ</rt></ruby>んだり　します。",
+   "kana": "えいがを みたり、ほんを よんだり します。",
+   "romaji": "eiga o mitari, hon o yondari shimasu.",
+   "meaning": "看看電影、看看書之類的",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "家で料理を作ったり、音楽を聞いたりします。",
+   "ja": "<ruby>家<rt>いえ</rt></ruby>で　<ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>を　<ruby>作<rt>つく</rt></ruby>ったり、<ruby>音<rt>おん</rt>楽<rt>がく</rt></ruby>を　<ruby>聞<rt>き</rt></ruby>いたり　します。",
+   "kana": "いえで りょうりを つくったり、おんがくを きいたり します。",
+   "romaji": "ie de ryouri o tsukuttari, ongaku o kiitari shimasu.",
+   "meaning": "在家做做菜、聽聽音樂之類的",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "動詞"
+   ]
+  },
+  {
+   "text": "神保町で古本屋を回ったり、欧風カレーを食べたりしました。",
+   "ja": "<ruby>神<rt>じん</rt>保<rt>ぼう</rt>町<rt>ちょう</rt></ruby>で　<ruby>古<rt>ふる</rt>本<rt>ほん</rt>屋<rt>や</rt></ruby>を　<ruby>回<rt>まわ</rt></ruby>ったり、<ruby>欧<rt>おう</rt>風<rt>ふう</rt></ruby>カレーを　<ruby>食<rt>た</rt></ruby>べたり　しました。",
+   "kana": "じんぼうちょうで ふるほんやを まわったり、おうふうカレーを たべたり しました。",
+   "romaji": "jinbouchou de furuhonya o mawattari, oufuu karee o tabetari shimashita.",
+   "meaning": "在神保町逛了古書店、吃了歐風咖哩之類的 — 回ります 是一家接一家跑好幾個地方",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "場所"
+   ]
+  },
+  {
+   "text": "去年の夏は、キャンプに行ったり、山に登ったりしました。",
+   "ja": "<ruby>去<rt>きょ</rt>年<rt>ねん</rt></ruby>の　<ruby>夏<rt>なつ</rt></ruby>は、キャンプに　<ruby>行<rt>い</rt></ruby>ったり、<ruby>山<rt>やま</rt></ruby>に　<ruby>登<rt>のぼ</rt></ruby>ったり　しました。",
+   "kana": "きょねんの なつは、キャンプに いったり、やまに のぼったり しました。",
+   "romaji": "kyonen no natsu wa, kyanpu ni ittari, yama ni nobottari shimashita.",
+   "meaning": "去年夏天去露營、爬山之類的",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-19",
+     "href": "lessons/2026-11-19-tari-tari.html",
+     "title": "〜たり〜たりします"
+    }
+   ],
+   "tags": [
+    "問候・句型",
+    "季節・天氣"
+   ]
+  },
   {
    "text": "外は寒いです。",
    "ja": "<ruby>外<rt>そと</rt></ruby>は <ruby>寒<rt>さむ</rt></ruby>いです。",

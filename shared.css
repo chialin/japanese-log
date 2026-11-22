@@ -167,6 +167,13 @@ body::before {
   font-size: 18px; color: var(--accent); letter-spacing: .05em;
 }
 .word-meaning { font-size: 14px; color: var(--ink-soft); margin-top: 2px; }
+/* 詞性標籤（2026-11-22 起，新字卡片一律標）：放在 .word-romaji 之後、.word-meaning 之前。
+   例：<div class="word-pos">名詞（＋する）</div> */
+.word-pos {
+  display: inline-block; margin-top: 4px; padding: 1px 9px;
+  border: 1px solid var(--accent-soft); border-radius: 999px;
+  font-size: 12px; letter-spacing: .06em; color: var(--accent); background: rgba(255,255,255,.6);
+}
 
 /* ── Play button ── */
 .play-btn {

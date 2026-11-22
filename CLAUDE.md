@@ -327,6 +327,21 @@ CSS 在 [shared.css](shared.css)（`.acc` / `.acc-k` / `.ar` / `.ar-legend` / `.
 範例見 [kankouchi-he](lessons/2026-08-07-kankouchi-he.html)（尾高／中高／平板三型齊全）與
 [masu-kei-tango](lessons/2026-08-11-masu-kei-tango.html)（映画＝→えーが→）。
 
+#### 詞性標籤 `.word-pos`（2026-11-22 起，新字卡片必加）
+
+「本課的新字」的每張 `.word-item` 都要標詞性，放在 `.word-romaji` 之後（有 `.acc` 重音列時放在重音列前面）、`.word-meaning` 之前：
+
+```html
+<div class="word-romaji">tozan</div>
+<div class="word-pos">名詞（＋する）</div>
+<div class="word-meaning">…</div>
+```
+
+標籤用這幾種寫法：`名詞`、`名詞（＋する）`（可以加 をします 當動作用的，例：登山・読書・昼寝）、
+`動詞（五段）`／`動詞（一段）`／`動詞（不規則）`、`い形容詞`、`な形容詞`、`副詞`、`助詞`、`疑問詞`、`接續詞`、`招呼語`。
+它是獨立的 div，`build-vocab.mjs` 不會讀進単語帳，不影響 meaning 欄。例句卡片不用標。
+範例見 [tari-tari](lessons/2026-11-19-tari-tari.html)。
+
 #### 記憶小撇步 `.mnemonic`（2026-08-05 新增）
 
 **自己想出來的聯想／諧音記法**用 `.mnemonic`，**貼紙樣式**——2px 圓角外框（`border-radius:16px`）＋ 白底 ＋ 淺色投影，

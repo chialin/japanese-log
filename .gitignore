@@ -5,12 +5,8 @@ node_modules/
 .idea/
 .claude/worktrees/
 .superpowers/
-anki/venv/
-anki/audio_cache/
-anki/__pycache__/
 /*.epub
 .cache/
-anki/tango-*.apkg
 
 # 設計比較稿（只在本地看，不部署）
 /mockups/

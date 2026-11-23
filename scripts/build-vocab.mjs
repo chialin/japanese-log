@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // scripts/build-vocab.mjs
-// 掃課程頁單字卡 → js/vocab-data.js（vocab.html 用）＋ data/vocab.json（Anki 腳本用）。
+// 掃課程頁單字卡 → js/vocab-data.js（vocab.html 用）＋ data/vocab.json（複習題庫 fukushuu 用）。
 // tag 來自 data/vocab-tags.json（沒登記的字會列警告）；
 // JS 生成卡片的頁面（數字、日にち）登記在 data/vocab-extra.json。
 // 用法：寫完新課程後 `node scripts/build-vocab.mjs`，產物一起 commit。

@@ -2,6 +2,154 @@
  "generated": "2026-11-23",
  "words": [
   {
+   "text": "彼女は掃除や洗濯をしました。",
+   "ja": "<ruby>彼<rt>かの</rt>女<rt>じょ</rt></ruby>は　<ruby>掃<rt>そう</rt>除<rt>じ</rt></ruby>や<ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>を　しました。",
+   "kana": "かのじょは そうじやせんたくを しました。",
+   "romaji": "kanojo wa souji ya sentaku o shimashita.",
+   "meaning": "她打掃、洗衣服之類的（做了一些家事）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-joshi-ya.html",
+     "title": "助詞「や」"
+    }
+   ],
+   "tags": [
+    "動詞",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "母は服やアクセサリーを買いました。",
+   "ja": "<ruby>母<rt>はは</rt></ruby>は　<ruby>服<rt>ふく</rt></ruby>やアクセサリーを　<ruby>買<rt>か</rt></ruby>いました。",
+   "kana": "ははは ふくやアクセサリーを かいました。",
+   "romaji": "haha wa fuku ya akusesarii o kaimashita.",
+   "meaning": "我媽媽買了衣服、飾品之類的",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-joshi-ya.html",
+     "title": "助詞「や」"
+    }
+   ],
+   "tags": [
+    "購物",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "父はビールやワインを飲みました。",
+   "ja": "<ruby>父<rt>ちち</rt></ruby>は　ビールやワインを　<ruby>飲<rt>の</rt></ruby>みました。",
+   "kana": "ちちは ビールやワインを のみました。",
+   "romaji": "chichi wa biiru ya wain o nomimashita.",
+   "meaning": "我爸爸喝了啤酒、葡萄酒之類的",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-joshi-ya.html",
+     "title": "助詞「や」"
+    }
+   ],
+   "tags": [
+    "食物",
+    "家族・人"
+   ]
+  },
+  {
+   "text": "洗濯",
+   "ja": "<ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>",
+   "kana": "せんたく",
+   "romaji": "sentaku",
+   "meaning": "洗衣服 — 洗濯をします。跟 掃除 一樣，要加 をします 才能當動作用",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-joshi-ya.html",
+     "title": "助詞「や」"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "父",
+   "ja": "<ruby>父<rt>ちち</rt></ruby>",
+   "kana": "ちち",
+   "romaji": "chichi",
+   "meaning": "（我的）爸爸 — 跟別人講自己的爸爸時用。講別人的爸爸、或直接叫爸爸，用 お父さん（otousan）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-joshi-ya.html",
+     "title": "助詞「や」"
+    }
+   ],
+   "tags": [
+    "家族・人"
+   ]
+  },
+  {
+   "text": "アクセサリー",
+   "ja": "アクセサリー",
+   "kana": "アクセサリー",
+   "romaji": "akusesarii",
+   "meaning": "飾品 — 項鍊、耳環、戒指、手環這類戴在身上的東西",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-joshi-ya.html",
+     "title": "助詞「や」"
+    }
+   ],
+   "tags": [
+    "生活雜貨",
+    "購物"
+   ]
+  },
+  {
+   "text": "掃除や洗濯をしました。",
+   "ja": "<ruby>掃<rt>そう</rt>除<rt>じ</rt></ruby>や<ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>を　しました。",
+   "kana": "そうじやせんたくを しました。",
+   "romaji": "souji ya sentaku o shimashita.",
+   "meaning": "打掃、洗衣服之類的（や 接名詞，只有一個 しました）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-joshi-ya.html",
+     "title": "助詞「や」"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "掃除をしたり、洗濯をしたりしました。",
+   "ja": "<ruby>掃<rt>そう</rt>除<rt>じ</rt></ruby>を　したり、<ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>を　したり　しました。",
+   "kana": "そうじを したり、せんたくを したり しました。",
+   "romaji": "souji o shitari, sentaku o shitari shimashita.",
+   "meaning": "打掃打掃、洗洗衣服之類的（たり 接在每個 します 上）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-joshi-ya.html",
+     "title": "助詞「や」"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
    "text": "韓国料理",
    "ja": "<ruby>韓<rt>かん</rt>国<rt>こく</rt>料<rt>りょう</rt>理<rt>り</rt></ruby>",
    "kana": "かんこくりょうり",

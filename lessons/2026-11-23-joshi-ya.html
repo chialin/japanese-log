@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>助詞「や」— 從幾樣東西裡挑出來舉例</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* 文法課 — 青碧／松葉綠色票 */
+:root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.8;}
+
+/* 句型公式 */
+.formula{border:1px solid var(--line);background:rgba(255,255,255,.6);border-radius:8px;padding:18px 20px;margin:16px 0;}
+.formula h4{margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:16px;color:var(--accent);}
+.fx{font-family:'Klee One','Shippori Mincho',serif;font-size:17px;line-height:2.2;color:var(--ink);}
+.fx b{color:var(--accent);}
+.fx .arw{color:var(--ink-mute);margin:0 8px;}
+
+/* 兩欄對照 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+.vs-col{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:16px 18px;border-radius:8px;}
+.vs-col h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--accent);margin:0 0 4px;}
+.vs-col .vs-sub{font-size:13px;color:var(--ink-mute);margin-bottom:10px;line-height:1.6;}
+.vs-col ul{margin:0;padding-left:18px;font-size:14px;line-height:2;color:var(--ink-soft);}
+.vs-col .ro{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);line-height:1.5;}
+@media(max-width:560px){.vs-grid{grid-template-columns:1fr;}}
+
+/* Self-Quiz */
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">A <span class="accent">や</span> B</h1>
+  <div class="page-meta">文法 · Grammar · 2026 / 11 / 23</div>
+  <p class="page-subtitle">助詞 や：從幾樣東西裡挑出來舉例，跟 と、〜たり 的差別；新字 洗濯・父・アクセサリー</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣用</strong><br>
+    想說「媽媽買了衣服、飾品之類的」，只挑幾樣當例子、不想全部列出來，日文在名詞中間放 や。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 A や B 舉幾樣東西當例子，意思是「A、B 之類的」</li>
+      <li>知道 や 只放在名詞和名詞中間，最後一個名詞後面直接接 を、は、が</li>
+      <li>分清楚 と（全部列出來）和 や（只是舉例）</li>
+      <li>分清楚 や（舉例名詞）和 〜たり〜たり（舉例動作）</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kihon">一、や 是用來挑幾樣東西舉例的</div>
+
+  <p class="lead">
+    や（ya）放在兩個名詞中間，意思接近中文的「A、B 之類的」或「A 啦、B 啦」。
+    聽的人會知道還有別的東西，只是你挑了其中幾樣說出來。最後一個名詞後面接的是原本該有的助詞，像 を。
+  </p>
+
+  <div class="formula">
+    <h4>A や B 的骨架</h4>
+    <div class="fx">
+      名詞A ＋ <b>や</b> ＋ 名詞B ＋ を／は／が … <span class="arw">→</span> A、B 之類的（還有別的）
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>課上的例句</div>
+
+    <div class="word-item" data-text="彼女は掃除や洗濯をしました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>彼<rt>かの</rt>女<rt>じょ</rt></ruby>は　<ruby>掃<rt>そう</rt>除<rt>じ</rt></ruby><span class="j-mark">や</span><ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>を　しました。</div>
+        <div class="word-romaji">kanojo wa souji ya sentaku o shimashita.</div>
+        <div class="word-meaning">她打掃、洗衣服之類的（做了一些家事）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="母は服やアクセサリーを買いました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>母<rt>はは</rt></ruby>は　<ruby>服<rt>ふく</rt></ruby><span class="j-mark">や</span>アクセサリーを　<ruby>買<rt>か</rt></ruby>いました。</div>
+        <div class="word-romaji">haha wa fuku ya akusesarii o kaimashita.</div>
+        <div class="word-meaning">我媽媽買了衣服、飾品之類的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="父はビールやワインを飲みました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>父<rt>ちち</rt></ruby>は　ビール<span class="j-mark">や</span>ワインを　<ruby>飲<rt>の</rt></ruby>みました。</div>
+        <div class="word-romaji">chichi wa biiru ya wain o nomimashita.</div>
+        <div class="word-meaning">我爸爸喝了啤酒、葡萄酒之類的</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    三句的結構都一樣：や 夾在兩個名詞中間，第二個名詞後面接 を，最後是動詞。
+    彼女 在 <a href="2026-07-23-shokugyou.html" style="color:var(--accent);">7/23〈職業〉</a>學過，掃除 在 <a href="2026-09-02-taiwan-ni-kaerimasu.html" style="color:var(--accent);">9/2〈台湾に帰ります〉</a>，
+    服 在 <a href="2026-08-16-fu-tango.html" style="color:var(--accent);">8/16〈ふ 的單字〉</a>，ビール 在 <a href="2026-08-19-naka.html" style="color:var(--accent);">8/19〈〜の中〉</a>，
+    ワイン 在 <a href="2026-05-28-katakana-wa-row.html" style="color:var(--accent);">5/28〈片假名 ワ行〉</a>，母 在 <a href="2026-11-07-ichiban-dore.html" style="color:var(--accent);">11/7〈どれが一番〜〉</a>都出現過。
+    本課的新字有三個：洗濯、父、アクセサリー。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>本課的新字</div>
+
+    <div class="word-item" data-text="洗濯">
+      <div class="word-content">
+        <div class="word-ja"><ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby></div>
+        <div class="word-romaji">sentaku</div>
+        <div class="word-pos">名詞（＋する）</div>
+        <div class="word-meaning">洗衣服 — 洗濯をします。跟 掃除 一樣，要加 をします 才能當動作用</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="父">
+      <div class="word-content">
+        <div class="word-ja"><ruby>父<rt>ちち</rt></ruby></div>
+        <div class="word-romaji">chichi</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">（我的）爸爸 — 跟別人講自己的爸爸時用。講別人的爸爸、或直接叫爸爸，用 お父さん（otousan）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="アクセサリー">
+      <div class="word-content">
+        <div class="word-ja">アクセサリー</div>
+        <div class="word-romaji">akusesarii</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">飾品 — 項鍊、耳環、戒指、手環這類戴在身上的東西</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 洗濯 就是 洗濯機 拿掉 機</strong><br>
+    <a href="2026-08-19-naka.html">8/19</a> 學過 <span class="compare">洗濯機</span>（せんたくき，洗衣機），
+    把最後的 機（き，機器）拿掉，剩下的 <span class="compare">洗濯</span>（せんたく）就是「洗衣服」這件事。
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 父 和 母 都是同一個音唸兩次</strong><br>
+    <span class="compare">母</span> 是 はは（haha），<span class="compare">父</span> 是 ちち（chichi），兩個都是同一個音重複兩次，可以一起記。
+    這兩個都是講「自己家的」爸媽；講別人家的、或當面叫，要換成 お父さん、お母さん。
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>這三個外來語各自從哪裡來</strong><br>
+    <span class="compare">アクセサリー</span> 來自英語 accessory。英語的 accessory 範圍比較大，包包、皮帶、手機配件都算；日文的 アクセサリー 平常主要指項鍊、耳環這類飾品。<br>
+    <span class="compare">ビール</span> 來自荷蘭語 bier，不是英語 beer。江戶時代經長崎出島的貿易傳進來，所以照荷蘭語唸。英語 beer 後來另外借成 ビア，只用在 ビアガーデン（啤酒花園）這類詞裡。<br>
+    <span class="compare">ワイン</span> 來自英語 wine，專指葡萄酒，不是所有的「酒」。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="to">二、や 和 と 都是「和」，差別在有沒有全部列出來</div>
+
+  <p class="lead">
+    <a href="2026-05-10-joshi-2.html" style="color:var(--accent);">5/10〈助詞 II〉</a>學過 と 也能把兩個名詞接起來，翻成中文都是「和」。
+    差別在聽的人怎麼理解：用 と 是「就這些，全部列完了」；用 や 是「舉幾個例子，還有別的」。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>A と B</h4>
+      <div class="vs-sub">全部列出來，只有這幾樣</div>
+      <ul>
+        <li><ruby>母<rt>はは</rt></ruby>は<ruby>服<rt>ふく</rt></ruby>とアクセサリーを<ruby>買<rt>か</rt></ruby>いました。<span class="ro">haha wa fuku to akusesarii o kaimashita.</span></li>
+        <li>媽媽買了衣服和飾品（就買了這兩種）</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>A や B</h4>
+      <div class="vs-sub">挑幾樣舉例，還有別的</div>
+      <ul>
+        <li><ruby>母<rt>はは</rt></ruby>は<ruby>服<rt>ふく</rt></ruby>やアクセサリーを<ruby>買<rt>か</rt></ruby>いました。<span class="ro">haha wa fuku ya akusesarii o kaimashita.</span></li>
+        <li>媽媽買了衣服、飾品之類的（可能還買了包包、鞋子）</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    判斷的方法是想想中文會不會加「之類的」：會加的用 や，不會加、就是這幾樣的用 と。
+    像點餐時說「咖啡和蛋糕」，就只點這兩樣，要用 と：コーヒーとケーキをください（koohii to keeki o kudasai）。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tari">三、や 和 〜たり〜たり 都是舉例，差別在舉的是東西還是動作</div>
+
+  <p class="lead">
+    <a href="2026-11-19-tari-tari.html" style="color:var(--accent);">11/19〈〜たり〜たりします〉</a>也是「挑幾個舉例」的意思，所以兩個很像。
+    差別在接的東西不一樣：や 接在名詞中間，舉的是東西；たり 接在動詞上，舉的是動作。
+  </p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h4>A や B</h4>
+      <div class="vs-sub">舉例東西（名詞），動詞只有一個</div>
+      <ul>
+        <li><ruby>父<rt>ちち</rt></ruby>はビールやワインを<ruby>飲<rt>の</rt></ruby>みました。<span class="ro">chichi wa biiru ya wain o nomimashita.</span></li>
+        <li>爸爸喝了啤酒、葡萄酒之類的（都是「喝」）</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h4>〜たり〜たり</h4>
+      <div class="vs-sub">舉例動作（動詞），每個動作可以不一樣</div>
+      <ul>
+        <li><ruby>父<rt>ちち</rt></ruby>はビールを<ruby>飲<rt>の</rt></ruby>んだり、テレビを<ruby>見<rt>み</rt></ruby>たりしました。<span class="ro">chichi wa biiru o nondari, terebi o mitari shimashita.</span></li>
+        <li>爸爸喝喝啤酒、看看電視之類的（「喝」和「看」兩個動作）</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lead">
+    課上的第一句剛好兩種都能說。掃除 和 洗濯 都是「名詞＋をします」，可以用 や 把兩個名詞接起來，共用一個 しました；
+    也可以照 11/19 的規則，在每個 します 上加 たり。意思幾乎一樣，や 的版本比較短。
+  </p>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>同一件事的兩種說法</div>
+
+    <div class="word-item" data-text="掃除や洗濯をしました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>掃<rt>そう</rt>除<rt>じ</rt></ruby><span class="j-mark">や</span><ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>を　しました。</div>
+        <div class="word-romaji">souji ya sentaku o shimashita.</div>
+        <div class="word-meaning">打掃、洗衣服之類的（や 接名詞，只有一個 しました）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="掃除をしたり、洗濯をしたりしました。">
+      <div class="word-content">
+        <div class="word-ja"><ruby>掃<rt>そう</rt>除<rt>じ</rt></ruby>を　し<span class="j-mark">たり</span>、<ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>を　し<span class="j-mark">たり</span>　しました。</div>
+        <div class="word-romaji">souji o shitari, sentaku o shitari shimashita.</div>
+        <div class="word-meaning">打掃打掃、洗洗衣服之類的（たり 接在每個 します 上）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <p class="lead">
+    要是兩件事用的動詞不一樣（喝啤酒、看電視），や 就接不起來了，因為 や 後面只能放一個動詞。這時要用 〜たり〜たり。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="machigai">四、有三個地方容易講錯</div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>① や 只能接名詞，不能接動詞</strong><br>
+    中文的「和」可以接動作，像「喝啤酒和看電視」，所以很容易寫成 <s>ビールを飲みますやテレビを見ます</s>。
+    や 前後都要是名詞，動作要舉例請用 たり：<span class="compare">ビールを飲んだり、テレビを見たりします</span>。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>② 最後一個名詞後面不放 や</strong><br>
+    や 只夾在名詞和名詞中間，最後一個名詞後面直接接 を、は、が：
+    <s>服やアクセサリーやを買いました</s> 要改成 <span class="compare">服やアクセサリーを買いました</span>。
+    要舉三樣也一樣，只有中間放 や：<span class="compare">服やかばんやアクセサリーを買いました</span>（fuku ya kaban ya akusesarii o kaimashita）。
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>③ 真的只有這幾樣時要用 と</strong><br>
+    や 會讓人以為還有別的。介紹家人時說 <s>父や母がいます</s>，聽起來像家裡還有其他人沒講；
+    如果就是爸爸和媽媽，要說 <span class="compare">父と母がいます</span>（chichi to haha ga imasu）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">五、最後把 と・や・たり 分成三邊：先看接的是名詞還是動詞，再看有沒有列完</div>
+
+  <p class="lead">
+    三個都可以翻成「和」或「之類的」，挑的時候問自己兩件事：要接的是東西還是動作？是全部列出來還是只舉例？
+  </p>
+
+  <div class="sum-bins" style="--cols:3">
+    <div class="sum-bin">
+      <h4>A <b>と</b> B</h4>
+      <div class="who">名詞，全部列出來</div>
+      <table>
+        <tr><td class="q">咖啡和蛋糕</td></tr>
+        <tr><td class="jp">コーヒー<b>と</b>ケーキ</td></tr>
+        <tr><td class="ro">koohii to keeki</td></tr>
+      </table>
+    </div>
+    <div class="sum-bin">
+      <h4>A <b>や</b> B</h4>
+      <div class="who">名詞，只是舉例</div>
+      <table>
+        <tr><td class="q">肉、魚之類的</td></tr>
+        <tr><td class="jp"><ruby>肉<rt>にく</rt></ruby><b>や</b><ruby>魚<rt>さかな</rt></ruby></td></tr>
+        <tr><td class="ro">niku ya sakana</td></tr>
+      </table>
+    </div>
+    <div class="sum-bin">
+      <h4>〜<b>たり</b>〜<b>たり</b></h4>
+      <div class="who">動詞，只是舉例</div>
+      <table>
+        <tr><td class="q">散散步、拍拍照之類的</td></tr>
+        <tr><td class="jp"><ruby>歩<rt>ある</rt></ruby>い<b>たり</b>、<ruby>撮<rt>と</rt></ruby>っ<b>たり</b></td></tr>
+        <tr><td class="ro">aruitari, tottari</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">六、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我在超市買了牛奶、蛋之類的。（提示：スーパー、牛乳、卵）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>スーパーで 牛乳や卵を買いました。<br>suupaa de gyuunyuu ya tamago o kaimashita.</p>
+        </details>
+      </li>
+      <li>我的包包裡只有錢包和鑰匙。要用 と 還是 や？（提示：財布、鍵）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>只有這兩樣，用 と：かばんに 財布と鍵があります。<br>kaban ni saifu to kagi ga arimasu.</p>
+        </details>
+      </li>
+      <li>這句哪裡錯？ 父はビールやワインやを飲みました。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>最後一個名詞後面不放 や：父はビールやワインを飲みました。<br>chichi wa biiru ya wain o nomimashita.</p>
+        </details>
+      </li>
+      <li>「週末看看電影、做做菜之類的」要用 や 還是 たり？寫出來。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>兩個動作的動詞不一樣（見る、作る），用 たり：週末は 映画を見たり、料理を作ったりします。<br>shuumatsu wa eiga o mitari, ryouri o tsukuttari shimasu.</p>
+        </details>
+      </li>
+      <li>把「彼女は掃除や洗濯をしました」改成 〜たり〜たり 的說法。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>彼女は 掃除をしたり、洗濯をしたりしました。<br>kanojo wa souji o shitari, sentaku o shitari shimashita.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-11-19-tari-tari.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">〜たり〜たりします <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/19：舉例動作用 たり，舉例東西用 や</span>
+  </a>
+
+  <a href="2026-05-10-joshi-2.html" class="next-link">
+    <span class="next-kicker">— 前情提要 —</span>
+    <span class="next-title">助詞 II：に・で・へ・と・も <span class="next-arrow">→</span></span>
+    <span class="next-sub">5/10：と 把名詞全部列出來，跟 や 的舉例對照</span>
+  </a>
+
+  <a href="2026-11-23-kankoku-ryouri.html" class="next-link same-day">
+    <span class="next-kicker">— 同一天 / Same day —</span>
+    <span class="next-title">韓国料理を食べました <span class="next-arrow">→</span></span>
+    <span class="next-sub">會話：健身房之後去大久保吃韓國料理</span>
+  </a>
+
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

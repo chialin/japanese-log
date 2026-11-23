@@ -1,6 +1,114 @@
 {
- "generated": "2026-11-22",
+ "generated": "2026-11-23",
  "words": [
+  {
+   "text": "韓国料理",
+   "ja": "<ruby>韓<rt>かん</rt>国<rt>こく</rt>料<rt>りょう</rt>理<rt>り</rt></ruby>",
+   "kana": "かんこくりょうり",
+   "romaji": "kankoku ryouri",
+   "meaning": "韓國料理 — 國名＋料理 就是那一國的菜：日本料理、中華料理、タイ料理",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-kankoku-ryouri.html",
+     "title": "韓国料理を食べました"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "お粥",
+   "ja": "お<ruby>粥<rt>かゆ</rt></ruby>",
+   "kana": "おかゆ",
+   "romaji": "okayu",
+   "meaning": "粥 — 前面的 お 是讓說法比較客氣的接頭語，平常都說 おかゆ；日本人感冒、胃不舒服時常吃",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-kankoku-ryouri.html",
+     "title": "韓国料理を食べました"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "鶏肉",
+   "ja": "<ruby>鶏<rt>とり</rt>肉<rt>にく</rt></ruby>",
+   "kana": "とりにく",
+   "romaji": "toriniku",
+   "meaning": "雞肉 — 鶏 單獨唸 とり（鳥也唸 とり）；同一組還有 豚肉（ぶたにく，豬肉）、牛肉（ぎゅうにく）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-kankoku-ryouri.html",
+     "title": "韓国料理を食べました"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "人参",
+   "ja": "<ruby>人<rt>にん</rt>参<rt>じん</rt></ruby>",
+   "kana": "にんじん",
+   "romaji": "ninjin",
+   "meaning": "紅蘿蔔（不是人參！）— 中文的人參，日文叫 高麗人参（こうらいにんじん）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-kankoku-ryouri.html",
+     "title": "韓国料理を食べました"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "高麗人参",
+   "ja": "<ruby>高<rt>こう</rt>麗<rt>らい</rt>人<rt>にん</rt>参<rt>じん</rt></ruby>",
+   "kana": "こうらいにんじん",
+   "romaji": "kourai ninjin",
+   "meaning": "人參（中文說的那種）— 高麗 是朝鮮半島的舊稱；也叫 朝鮮人参（ちょうせんにんじん）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-kankoku-ryouri.html",
+     "title": "韓国料理を食べました"
+    }
+   ],
+   "tags": [
+    "食物"
+   ]
+  },
+  {
+   "text": "うさぎ",
+   "ja": "うさぎ",
+   "kana": "うさぎ",
+   "romaji": "usagi",
+   "meaning": "兔子 — 漢字寫 兎，平常多寫假名或片假名 ウサギ",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-23",
+     "href": "lessons/2026-11-23-kankoku-ryouri.html",
+     "title": "韓国料理を食べました"
+    }
+   ],
+   "tags": [
+    "動物"
+   ]
+  },
   {
    "text": "何度",
    "ja": "<ruby>何<rt>なん</rt>度<rt>ど</rt></ruby>",

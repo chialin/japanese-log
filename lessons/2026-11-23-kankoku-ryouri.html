@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>韓国料理を食べました — 會話紀錄：大久保的韓國餐廳、お粥、小菜</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.dialog-title{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.no{flex-shrink:0;width:18px;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink-mute);padding-top:5px;text-align:right;}
+.who{flex-shrink:0;width:52px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title"><span class="accent"><ruby>韓<rt>かん</rt>国<rt>こく</rt>料<rt>りょう</rt>理<rt>り</rt></ruby></span>を <ruby>食<rt>た</rt></ruby>べました</h1>
+  <div class="page-meta">會話紀錄 · Conversation · 2026 / 11 / 23</div>
+  <p class="page-subtitle">跟老師聊去健身房之後吃的韓國料理：餐廳在大久保站附近，從健身房走過去十分鐘左右，吃了雞肉人參粥，老師一開始把人參聽成紅蘿蔔，粥不辣，還附了四小盤小菜</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣說</strong><br>
+    11/23 的口語課聊去哪裡吃飯、吃了什麼：餐廳在哪、離多遠、菜裡有什麼、辣不辣、附了幾盤小菜。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 大久保駅の近くです 說地點在某個車站附近</li>
+      <li>用 AからBまで歩いて10分ぐらいです 說兩個地方走路要多久</li>
+      <li>用 鶏肉と高麗人参が入っていました 說菜裡放了什麼</li>
+      <li>知道日文的 人参 是紅蘿蔔，想說中文的人參要說 高麗人参</li>
+      <li>用 お皿が四つありました 說東西有幾個，數量放在動詞前面</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaiwa">一、以健身房之後的晚餐為主軸，把對話整理出來</div>
+
+  <p class="lead">
+    下面是照課堂聊天室的筆記重新整理的對話。筆記上記下來的詞（大久保駅の近く、歩いて10分ぐらい、お粥、人参、うさぎ、
+    とりにく、韓国料理、辛くない、四つ お皿、キムチ、海苔）都放進了句子裡，老師的問句是依當時的流程補上的。每一句都可以按 ▶ 跟著唸。
+  </p>
+
+  <div class="dialog">
+    <div class="dialog-title">對話：健身房之後去吃韓國料理</div>
+
+    <div class="turn" data-text="週末は何をしましたか。">
+      <div class="no">1</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>週<rt>しゅう</rt>末<rt>まつ</rt></ruby>は <ruby>何<rt>なに</rt></ruby>を しましたか。</div>
+        <div class="turn-romaji">shuumatsu wa nani o shimashita ka.</div>
+        <div class="turn-meaning">週末做了什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="ジムに行きました。それから、韓国料理のレストランに行きました。">
+      <div class="no">2</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">ジムに <ruby>行<rt>い</rt></ruby>きました。それから、<ruby>韓<rt>かん</rt>国<rt>こく</rt>料<rt>りょう</rt>理<rt>り</rt></ruby>の レストランに <ruby>行<rt>い</rt></ruby>きました。</div>
+        <div class="turn-romaji">jimu ni ikimashita. sorekara, kankoku ryouri no resutoran ni ikimashita.</div>
+        <div class="turn-meaning">去了健身房。然後去了一家韓國料理餐廳。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="どこのレストランですか。">
+      <div class="no">3</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">どこの レストランですか。</div>
+        <div class="turn-romaji">doko no resutoran desu ka.</div>
+        <div class="turn-meaning">是哪裡的餐廳？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="大久保駅の近くです。">
+      <div class="no">4</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>大<rt>おお</rt>久<rt>く</rt>保<rt>ぼ</rt>駅<rt>えき</rt></ruby><span class="j-mark">の <ruby>近<rt>ちか</rt></ruby>く</span>です。</div>
+        <div class="turn-romaji">ookubo eki no chikaku desu.</div>
+        <div class="turn-meaning">在大久保站附近。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ジムから遠いですか。">
+      <div class="no">5</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">ジムから <ruby>遠<rt>とお</rt></ruby>いですか。</div>
+        <div class="turn-romaji">jimu kara tooi desu ka.</div>
+        <div class="turn-meaning">離健身房遠嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="いいえ、ジムからレストランまで歩いてじゅっぷんぐらいです。">
+      <div class="no">6</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいえ、ジム<span class="j-mark">から</span> レストラン<span class="j-mark">まで</span> <ruby>歩<rt>ある</rt></ruby>いて <ruby>10<rt>じゅっ</rt>分<rt>ぷん</rt></ruby><span class="j-mark">ぐらい</span>です。</div>
+        <div class="turn-romaji">iie, jimu kara resutoran made aruite juppun gurai desu.</div>
+        <div class="turn-meaning">不遠，從健身房走到餐廳大概十分鐘。（句型見<a href="#kyori" style="color:var(--accent);">第三節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="何を食べましたか。">
+      <div class="no">7</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>何<rt>なに</rt></ruby>を <ruby>食<rt>た</rt></ruby>べましたか。</div>
+        <div class="turn-romaji">nani o tabemashita ka.</div>
+        <div class="turn-meaning">吃了什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="お粥を食べました。鶏肉と人参が入っていました。">
+      <div class="no">8</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">お<ruby>粥<rt>かゆ</rt></ruby>を <ruby>食<rt>た</rt></ruby>べました。<ruby>鶏<rt>とり</rt>肉<rt>にく</rt></ruby>と <ruby>人<rt>にん</rt>参<rt>じん</rt></ruby>が <span class="j-mark"><ruby>入<rt>はい</rt></ruby>って いました</span>。</div>
+        <div class="turn-romaji">okayu o tabemashita. toriniku to ninjin ga haitte imashita.</div>
+        <div class="turn-meaning">吃了粥。裡面有雞肉和人參。（我想說的是中文的人參，但日文只說 人参 會被聽成紅蘿蔔，見<a href="#ninjin" style="color:var(--accent);">第四節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="人参ですか。うさぎが好きな野菜ですね。">
+      <div class="no">9</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>人<rt>にん</rt>参<rt>じん</rt></ruby>ですか。うさぎが <ruby>好<rt>す</rt></ruby>きな <ruby>野<rt>や</rt>菜<rt>さい</rt></ruby>ですね。</div>
+        <div class="turn-romaji">ninjin desu ka. usagi ga suki na yasai desu ne.</div>
+        <div class="turn-meaning">紅蘿蔔嗎？就是兔子喜歡的那種蔬菜吧。（老師聽成了紅蘿蔔）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="いいえ、高麗人参です。">
+      <div class="no">10</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいえ、<span class="j-mark"><ruby>高<rt>こう</rt>麗<rt>らい</rt>人<rt>にん</rt>参<rt>じん</rt></ruby></span>です。</div>
+        <div class="turn-romaji">iie, kourai ninjin desu.</div>
+        <div class="turn-meaning">不是，是人參（高麗人參）。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="韓国料理は辛くないですか。">
+      <div class="no">11</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>韓<rt>かん</rt>国<rt>こく</rt>料<rt>りょう</rt>理<rt>り</rt></ruby>は <ruby>辛<rt>から</rt></ruby>くないですか。</div>
+        <div class="turn-romaji">kankoku ryouri wa karakunai desu ka.</div>
+        <div class="turn-meaning">韓國料理不會辣嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="このお粥は辛くないです。">
+      <div class="no">12</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">この お<ruby>粥<rt>かゆ</rt></ruby>は <ruby>辛<rt>から</rt></ruby><span class="j-mark">くない</span>です。</div>
+        <div class="turn-romaji">kono okayu wa karakunai desu.</div>
+        <div class="turn-meaning">這個粥不辣。（辛くない 和 辛くないです 的差別見<a href="#karakunai" style="color:var(--accent);">第六節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ほかに何がありましたか。">
+      <div class="no">13</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">ほかに <ruby>何<rt>なに</rt></ruby>が ありましたか。</div>
+        <div class="turn-romaji">hoka ni nani ga arimashita ka.</div>
+        <div class="turn-meaning">還有什麼別的嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="小さいお皿が四つありました。キムチと海苔がありました。">
+      <div class="no">14</div>
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>小<rt>ちい</rt></ruby>さい お<ruby>皿<rt>さら</rt></ruby>が <span class="j-mark"><ruby>四<rt>よっ</rt></ruby>つ</span> ありました。キムチと <ruby>海<rt>の</rt>苔<rt>り</rt></ruby>が ありました。</div>
+        <div class="turn-romaji">chiisai osara ga yottsu arimashita. kimuchi to nori ga arimashita.</div>
+        <div class="turn-meaning">有四個小盤子。有泡菜和海苔。（數量放的位置見<a href="#yottsu" style="color:var(--accent);">第五節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="いいですね。わたしも食べたいです。">
+      <div class="no">15</div>
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいですね。わたしも <ruby>食<rt>た</rt></ruby>べたいです。</div>
+        <div class="turn-romaji">ii desu ne. watashi mo tabetai desu.</div>
+        <div class="turn-meaning">真好。我也想吃。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>大久保 一帶是東京的韓國街</strong><br>
+    大久保站（JR 中央・總武線）和隔壁的新大久保站（JR 山手線）中間這一帶，韓國餐廳、韓國超市特別多。
+    在日本說「去大久保吃飯」，很多人第一個想到的就是韓國料理。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">二、對話裡的新單字是這些</div>
+
+  <p class="lead">
+    這段對話真正第一次出現的字只有六個，都是吃的東西和兔子。其他的字以前都學過，這裡不再列：
+  </p>
+  <ul class="tip-list" style="margin:-4px 0 16px;color:var(--ink-soft);font-size:14px;line-height:1.9;">
+    <li>野菜（やさい，yasai）、四つ（よっつ，yottsu）：<a href="2026-05-06-ya-row.html" style="color:var(--accent);">5/6〈や行〉</a>的單字卡；野菜 在 <a href="2026-06-09-food-drinks.html" style="color:var(--accent);">6/9〈食材與飲料〉</a>也有一整段</li>
+    <li>ぐらい（gurai，大約）：<a href="2026-06-18-tenin-keywords.html" style="color:var(--accent);">6/18〈店員會話 5 個關鍵〉</a></li>
+    <li>辛い（からい，karai）：<a href="2026-10-05-tsugi-wa-ichikara.html" style="color:var(--accent);">10/5〈次は1辛にします〉</a></li>
+    <li>お皿（おさら，osara）：<a href="2026-11-09-kyuu-ni-samuku.html" style="color:var(--accent);">11/9〈急に寒くなりましたね〉</a>的 お皿も分けます</li>
+    <li>レストラン（resutoran）：<a href="../store-phrasebook.html" style="color:var(--accent);">店員會話帖</a>第一章〈レストランで食事〉；來自法語 restaurant，日文多半指坐下來點菜的餐廳</li>
+    <li>キムチ、海苔（のり，nori）：<a href="2026-05-22-katakana-menu.html" style="color:var(--accent);">5/22〈菜單上的片假名〉</a>；〇〇の近く：<a href="2026-10-21-jimu-kafe-kaiwa.html" style="color:var(--accent);">10/21〈ジムとカフェに行きました〉</a></li>
+  </ul>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>本課的新字</div>
+
+    <div class="word-item" data-text="韓国料理">
+      <div class="word-content">
+        <div class="word-ja"><ruby>韓<rt>かん</rt>国<rt>こく</rt>料<rt>りょう</rt>理<rt>り</rt></ruby></div>
+        <div class="word-romaji">kankoku ryouri</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">韓國料理 — 國名＋料理 就是那一國的菜：日本料理、中華料理、タイ料理</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="お粥">
+      <div class="word-content">
+        <div class="word-ja">お<ruby>粥<rt>かゆ</rt></ruby></div>
+        <div class="word-romaji">okayu</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">粥 — 前面的 お 是讓說法比較客氣的接頭語，平常都說 おかゆ；日本人感冒、胃不舒服時常吃</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="鶏肉">
+      <div class="word-content">
+        <div class="word-ja"><ruby>鶏<rt>とり</rt>肉<rt>にく</rt></ruby></div>
+        <div class="word-romaji">toriniku</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">雞肉 — 鶏 單獨唸 とり（鳥也唸 とり）；同一組還有 豚肉（ぶたにく，豬肉）、牛肉（ぎゅうにく）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="人参">
+      <div class="word-content">
+        <div class="word-ja"><ruby>人<rt>にん</rt>参<rt>じん</rt></ruby></div>
+        <div class="word-romaji">ninjin</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">紅蘿蔔（不是人參！）— 中文的人參，日文叫 高麗人参（こうらいにんじん）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="高麗人参">
+      <div class="word-content">
+        <div class="word-ja"><ruby>高<rt>こう</rt>麗<rt>らい</rt>人<rt>にん</rt>参<rt>じん</rt></ruby></div>
+        <div class="word-romaji">kourai ninjin</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">人參（中文說的那種）— 高麗 是朝鮮半島的舊稱；也叫 朝鮮人参（ちょうせんにんじん）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="うさぎ">
+      <div class="word-content">
+        <div class="word-ja">うさぎ</div>
+        <div class="word-romaji">usagi</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">兔子 — 漢字寫 兎，平常多寫假名或片假名 ウサギ</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+  </div>
+
+  <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 韓国・料理・分，唸起來都跟台語很像</strong><br>
+    韓國 台語唸 Han-kok，日文是 <span class="compare">かんこく</span>，國 kok 對 こく，兩個字都對得上。<br>
+    料理 台語唸 liau-li，日文是 <span class="compare">りょうり</span>。<br>
+    分 台語唸 hun，日文是 <span class="compare">ふん／ぷん</span>：10分（じゅっぷん）、5分（ごふん）。
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span><strong>キムチ 是從韓語借來的</strong><br>
+    キムチ 來自韓語 김치（kimchi），不是英語。日文裡韓國料理的名字大多直接照韓語唸，再寫成片假名：
+    <span class="compare">ビビンバ</span>（拌飯）、<span class="compare">チヂミ</span>（煎餅）、<span class="compare">サムゲタン</span>（蔘雞湯）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kyori">三、說兩個地方走路要多久，是這樣用的</div>
+
+  <p class="lead">
+    「從 A 走到 B 大概幾分鐘」可以整句當一個固定句型背起來。から 是起點、まで 是終點，歩いて 是「用走的」，
+    後面放時間，再加 ぐらい 表示大約。不用走路的話，把 歩いて 換成 電車で、自転車で 就可以。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">走路大約十分鐘</div><div class="pat">A<b>から</b> B<b>まで</b> 歩いて 〇分<b>ぐらい</b>です</div><div class="ex jp"><ruby>家<rt>いえ</rt></ruby>から <ruby>駅<rt>えき</rt></ruby>まで <ruby>歩<rt>ある</rt></ruby>いて <ruby>5<rt>ご</rt>分<rt>ふん</rt></ruby>ぐらいです<span class="ro">ie kara eki made aruite gofun gurai desu</span></div></div>
+    <div class="sum-card"><div class="want">搭電車大約二十分鐘</div><div class="pat">A<b>から</b> B<b>まで</b> 電車で 〇分<b>ぐらい</b>です</div><div class="ex jp"><ruby>新<rt>しん</rt>宿<rt>じゅく</rt></ruby>から <ruby>渋<rt>しぶ</rt>谷<rt>や</rt></ruby>まで <ruby>電<rt>でん</rt>車<rt>しゃ</rt></ruby>で <ruby>10<rt>じゅっ</rt>分<rt>ぷん</rt></ruby>ぐらいです<span class="ro">shinjuku kara shibuya made densha de juppun gurai desu</span></div></div>
+    <div class="sum-card"><div class="want">問要多久</div><div class="pat">A<b>から</b> B<b>まで</b> <b>どのくらい</b>ですか</div><div class="ex jp">ジムから <ruby>駅<rt>えき</rt></ruby>まで どのくらいですか<span class="ro">jimu kara eki made dono kurai desu ka</span></div></div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span>歩いて行きます 的 て形用法在 <a href="2026-10-21-aruite-ikimasu.html" style="color:var(--accent);">10/21〈〜て行きます〉</a>，
+    那篇的例句「家から駅まで歩いて十分です」跟本篇是同一個句型，只是本篇多了 ぐらい。
+    どのくらい 的問法在 <a href="2026-10-04-omosa-kyori.html" style="color:var(--accent);">10/4〈〜（さ）はどのくらいですか〉</a>。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ninjin">四、日文的 人参 是紅蘿蔔，不是人參</div>
+
+  <p class="lead">
+    粥裡放的是人參，但說成 人参（にんじん）之後，老師以為是紅蘿蔔，還說「うさぎが好きな野菜ですね」。
+    原因是日文的 人参 指的是做菜用的紅蘿蔔；中文說的人參，日文要加上產地，叫 高麗人参（こうらいにんじん）。
+    另外字形也不一樣：「參」在日本簡化成「参」。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">紅蘿蔔</div><div class="pat"><b>人参</b>（にんじん）</div><div class="ex jp">うさぎは <ruby>人<rt>にん</rt>参<rt>じん</rt></ruby>が <ruby>好<rt>す</rt></ruby>きです<span class="ro">usagi wa ninjin ga suki desu</span></div></div>
+    <div class="sum-card"><div class="want">中文說的人參</div><div class="pat"><b>高麗人参</b>（こうらいにんじん）</div><div class="ex jp">サムゲタンに <ruby>高<rt>こう</rt>麗<rt>らい</rt>人<rt>にん</rt>参<rt>じん</rt></ruby>が <ruby>入<rt>はい</rt></ruby>っています<span class="ro">samugetan ni kourai ninjin ga haitte imasu</span></div></div>
+  </div>
+
+  <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 紅蘿蔔的根長得像人參</strong><br>
+    紅蘿蔔傳進日本時，因為根的形狀像人參，就借了 人参 這個名字；後來大家吃紅蘿蔔吃得比人參多，
+    人参 就變成指紅蘿蔔，真正的人參反而要加上 高麗（朝鮮半島）兩個字。記成「在日本，餐桌上的人参是橘色的」。
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span>對話第 8 句的 <span class="compare">入っていました</span>（裡面放了）是
+    <a href="2026-11-22-fuyu-no-heya.html" style="color:var(--accent);">11/22〈部屋は暖かいです〉</a>學的 入る 加上 ている，
+    講的是「已經放進去的樣子」，菜裡有什麼料都可以這樣說。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="yottsu">五、說有幾個東西時，數量是放在動詞前面的</div>
+
+  <p class="lead">
+    筆記上記的是「四つ　お皿」，照中文「四個盤子」的順序寫。日文比較自然的說法是先講東西，再講數量，最後才是動詞：
+    お皿が 四つ あります。數量後面不用加助詞，直接接動詞。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">有四個盤子</div><div class="pat">お皿が <b>四つ</b> ありました</div><div class="ex jp">りんごが <ruby>三<rt>みっ</rt></ruby>つ あります<span class="ro">ringo ga mittsu arimasu</span></div></div>
+    <div class="sum-card"><div class="want">買兩個</div><div class="pat">〜を <b>二つ</b> 買いました</div><div class="ex jp">パンを <ruby>二<rt>ふた</rt></ruby>つ <ruby>買<rt>か</rt></ruby>いました<span class="ro">pan o futatsu kaimashita</span></div></div>
+    <div class="sum-card"><div class="want">點餐時說「這個一份」</div><div class="pat">これを <b>一つ</b> ください</div><div class="ex jp">これを <ruby>一<rt>ひと</rt></ruby>つ ください<span class="ro">kore o hitotsu kudasai</span></div></div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span>ひとつ・ふたつ・みっつ・よっつ・いつつ 這一套數法在
+    <a href="2026-05-04-ha-row.html" style="color:var(--accent);">5/4〈は行〉</a>的 ふたつ、<a href="2026-05-06-ya-row.html" style="color:var(--accent);">5/6〈や行〉</a>的 よっつ 那兩張卡學過。
+    「四つのお皿」也說得通，但聊天時比較常聽到的是 お皿が四つ 這個順序。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="karakunai">六、辛くない 加不加 です，差在跟誰說話</div>
+
+  <p class="lead">
+    筆記上記的是 辛くない。這是 辛い 的否定，跟朋友聊天直接說 辛くない 就可以；跟老師、店員說話，後面加上 です 比較有禮貌。
+    過去式是 辛くなかったです（那時候不辣）。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">（跟朋友）不辣</div><div class="pat">辛<b>くない</b></div><div class="ex jp">これ、<ruby>辛<rt>から</rt></ruby>くない<span class="ro">kore, karakunai</span></div></div>
+    <div class="sum-card"><div class="want">（禮貌）不辣</div><div class="pat">辛<b>くないです</b></div><div class="ex jp">この スープは <ruby>辛<rt>から</rt></ruby>くないです<span class="ro">kono suupu wa karakunai desu</span></div></div>
+    <div class="sum-card"><div class="want">（那時候）不辣</div><div class="pat">辛<b>くなかったです</b></div><div class="ex jp">キムチは <ruby>辛<rt>から</rt></ruby>くなかったです<span class="ro">kimuchi wa karakunakatta desu</span></div></div>
+  </div>
+
+  <div class="note">
+    <span class="ui-ic ui-note" aria-hidden="true"></span>い形容詞的否定在 <a href="2026-08-12-hitei.html" style="color:var(--accent);">8/12〈否定的說法〉</a>，
+    辛くなかった 這個過去否定在 <a href="2026-08-31-karakatta-desu.html" style="color:var(--accent);">8/31〈〜かったです〉</a>出現過（このカレーは辛くなかったです）。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、最後把這段對話用得到的句子放在一起看</div>
+
+  <p class="lead">對話裡可以直接拿去用的句子，照「想說什麼」排在一起，例句換成跟對話不一樣的內容。</p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">在某個地方附近</div><div class="pat">〇〇<b>の近く</b>です</div><div class="ex jp"><ruby>新<rt>しん</rt>宿<rt>じゅく</rt>駅<rt>えき</rt></ruby>の <ruby>近<rt>ちか</rt></ruby>くです<span class="ro">shinjuku eki no chikaku desu</span></div></div>
+    <div class="sum-card"><div class="want">走路要多久</div><div class="pat">A<b>から</b> B<b>まで</b> 歩いて 〇分<b>ぐらい</b></div><div class="ex jp"><ruby>駅<rt>えき</rt></ruby>から ジムまで <ruby>歩<rt>ある</rt></ruby>いて <ruby>3<rt>さん</rt>分<rt>ぷん</rt></ruby>ぐらいです<span class="ro">eki kara jimu made aruite sanpun gurai desu</span></div></div>
+    <div class="sum-card"><div class="want">菜裡放了什麼</div><div class="pat">〜が <b>入っていました</b></div><div class="ex jp"><ruby>卵<rt>たまご</rt></ruby>が <ruby>入<rt>はい</rt></ruby>って いました<span class="ro">tamago ga haitte imashita</span></div></div>
+    <div class="sum-card"><div class="want">有幾個</div><div class="pat">〜が <b>〇つ</b> ありました</div><div class="ex jp">いすが <ruby>二<rt>ふた</rt></ruby>つ ありました<span class="ro">isu ga futatsu arimashita</span></div></div>
+    <div class="sum-card"><div class="want">不辣</div><div class="pat">辛<b>くないです</b></div><div class="ex jp">この ラーメンは <ruby>辛<rt>から</rt></ruby>くないです<span class="ro">kono raamen wa karakunai desu</span></div></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>那家餐廳在車站附近。（提示：レストラン、駅の近く）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>そのレストランは駅の近くです。<br>sono resutoran wa eki no chikaku desu.</p>
+        </details>
+      </li>
+      <li>從家裡走到健身房大概十五分鐘。（提示：から、まで、ぐらい）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>家からジムまで歩いて十五分ぐらいです。<br>ie kara jimu made aruite juugofun gurai desu.</p>
+        </details>
+      </li>
+      <li>咖哩裡有雞肉和紅蘿蔔。（提示：カレー、鶏肉、人参、入っています）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>カレーに鶏肉と人参が入っています。<br>karee ni toriniku to ninjin ga haitte imasu.</p>
+        </details>
+      </li>
+      <li>有三個小盤子。（提示：小さい、お皿、三つ）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>小さいお皿が三つありました。<br>chiisai osara ga mittsu arimashita.</p>
+        </details>
+      </li>
+      <li>想跟日本朋友說「我買了人參」，要說 人参 還是 高麗人参？整句寫出來。
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>高麗人参を買いました。（只說 人参 會被聽成紅蘿蔔）<br>kourai ninjin o kaimashita.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-10-21-jimu-kafe-kaiwa.html" class="next-link">
+    <span class="next-kicker">— Related —</span>
+    <span class="next-title">ジムとカフェに行きました <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/21 的會話課：健身房之後去咖啡店，駅の近く 在那篇</span>
+  </a>
+  <a href="2026-10-21-aruite-ikimasu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">〜て行きます — 用什麼方式去 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/21 歩いて行きます，家から駅まで歩いて十分です</span>
+  </a>
+  <a href="2026-05-22-katakana-menu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">菜單上的片假名 — とんかつ屋 <span class="next-arrow">→</span></span>
+    <span class="next-sub">5/22 キムチ、味海苔 在那份菜單上</span>
+  </a>
+  <a href="2026-11-22-fuyu-no-heya.html" class="next-link">
+    <span class="next-kicker">— Prev —</span>
+    <span class="next-title">部屋は暖かいです <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/22 的會話課：入る、乾燥しています</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

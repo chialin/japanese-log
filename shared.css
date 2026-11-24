@@ -766,3 +766,60 @@ a.rs-old:hover { background: #f6ead2; }
   .sum-grid .c[data-h]::before { content: attr(data-h); display: block; font-family: 'Noto Serif TC', serif; font-size: 11px; color: var(--ink-mute); }
   .sum-step { grid-template-columns: 1fr; gap: 0; }
 }
+
+/* ============================================================
+   書的目次與翻頁（2026-11-24 起）
+   grammar.html（文法書，十一章＋附錄）與 kamoku.html（課程，五部）共用。
+   顏色全部跟著每頁的 --accent 走：文法書青碧、課程棕橘。
+   ============================================================ */
+
+/* ── 目次：左邊膠囊標籤＋直線，右邊「名稱 …… N 課」＋一行說明 ── */
+.book-toc { background: rgba(255,255,255,.55); border: 1px solid var(--line); padding: 22px 26px 14px; margin: 24px 0 36px; }
+.book-toc-title { text-align: center; font-family: 'Shippori Mincho', serif; font-size: 15px; letter-spacing: .5em; color: var(--ink-mute); margin-bottom: 8px; }
+.book-toc-path { position: relative; }
+.book-toc-path::before { content: ""; position: absolute; left: 31px; top: 28px; bottom: 40px; width: 2px; background: var(--line); }
+.book-toc-row { display: flex; gap: 16px; align-items: flex-start; padding: 11px 0; position: relative; text-decoration: none; color: inherit; }
+.book-toc-tag { flex: 0 0 64px; height: 30px; border-radius: 15px; margin-top: 2px; background: var(--paper); border: 2px solid var(--accent); color: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Shippori Mincho', serif; font-size: 13px; font-weight: 700; z-index: 1; transition: background .15s, color .15s; }
+.book-toc-row:hover .book-toc-tag { background: var(--accent); color: #fff; }
+.book-toc-body { flex: 1; min-width: 0; border-bottom: 1px solid var(--line); padding: 4px 0 11px; }
+.book-toc-row:last-child .book-toc-body { border-bottom: none; }
+.book-toc-line { display: flex; align-items: baseline; gap: 12px; }
+.book-toc-name { font-family: 'Shippori Mincho', serif; font-size: 18px; font-weight: 700; color: var(--ink); flex: 0 1 auto; transition: color .15s; }
+.book-toc-name small { font-size: 12px; font-weight: 400; color: var(--ink-mute); margin-left: 8px; }
+.book-toc-row:hover .book-toc-name { color: var(--accent); }
+.book-toc-dots { flex: 1; min-width: 16px; border-bottom: 2px dotted var(--accent-soft); transform: translateY(-5px); }
+.book-toc-n { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--ink-soft); flex: 0 0 auto; }
+.book-toc-sub { font-size: 13px; color: var(--ink-mute); line-height: 1.7; margin-top: 3px; }
+@media (max-width: 600px) {
+  .book-toc { padding: 18px 12px 10px; }
+  .book-toc-row { gap: 10px; }
+  .book-toc-tag { flex-basis: 58px; font-size: 12px; }
+  .book-toc-path::before { left: 28px; }
+  .book-toc-name { font-size: 17px; }
+}
+
+/* ── 目錄頁每一章／部的段落 ── */
+.book-part { scroll-margin-top: 16px; }
+.book-part-intro { color: var(--ink-soft); font-size: 14px; line-height: 1.8; margin: -4px 0 14px; }
+.book-part-intro .n { display: block; color: var(--ink-mute); font-size: 13px; }
+
+/* ── 課程頁開頭的位置列：「文法書 · 第四章 動詞和ます形 · 第 3 篇／共 11 篇」 ──
+   由 js/site-chrome.js 讀 js/book-data.js 插入，不用手寫 */
+.book-where { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 13px; color: var(--ink-mute); border-left: 3px solid var(--accent-soft); padding: 4px 0 4px 12px; margin: 0 0 22px; line-height: 1.7; }
+.book-where a { color: var(--accent); text-decoration: none; }
+.book-where a:hover { text-decoration: underline; }
+.book-where .bw-part { font-family: 'Shippori Mincho', serif; color: var(--ink-soft); font-weight: 700; }
+.book-where .bw-prev { flex-basis: 100%; }
+
+/* ── 課程頁底部的上一篇／下一篇 ── */
+.book-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 40px 0 8px; }
+.book-pager a { display: flex; flex-direction: column; gap: 3px; padding: 14px 16px; background: rgba(255,255,255,.6); border: 1px solid var(--line); text-decoration: none; color: inherit; transition: border-color .15s, background .15s; }
+.book-pager a:hover { border-color: var(--accent); background: rgba(255,255,255,.85); }
+.book-pager .bp-next { text-align: right; grid-column: 2; }
+.book-pager .bp-kicker { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 13px; letter-spacing: .1em; color: var(--accent); }
+.book-pager .bp-title { font-family: 'Shippori Mincho', serif; font-size: 15px; font-weight: 700; color: var(--ink); line-height: 1.5; }
+.book-pager .bp-part { font-size: 12px; color: var(--ink-mute); }
+.book-pager-toc { text-align: center; margin-bottom: 24px; font-size: 13px; }
+.book-pager-toc a { color: var(--ink-mute); text-decoration: none; }
+.book-pager-toc a:hover { color: var(--accent); }
+@media (max-width: 600px) { .book-pager { grid-template-columns: 1fr; } .book-pager .bp-next { grid-column: 1; } }

@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>文法 · Grammar — 動詞、助詞、指示詞</title>
+<title>文法 · Grammar — 照順序讀的文法書</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <style>
 /* 文法頁 — 青碧／松葉綠色票（跟 lessons 的棕橘明確分開，一眼知道進了文法區）*/
 :root{--paper:#f2f7f0;--paper-deep:#e2ecdf;--ink:#16261c;--ink-soft:#33513e;--ink-mute:#6a8a76;--accent:#3f7a52;--accent-soft:#a8cbb4;--accent-pale:#e0efe4;--line:#cfe1d4;--bg-spot-1:#eaf4e8;--bg-spot-2:#d8ecdc;}
 
-/* 分類小標下的一句說明 */
-.cat-intro{color:var(--ink-soft);font-size:14px;line-height:1.8;margin:-4px 0 14px;}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,142 +22,203 @@
 
   <h1 class="page-title">文 <span class="accent">法</span></h1>
   <div class="page-meta">文法 · Grammar</div>
-  <p class="page-subtitle">動詞活用、助詞、指示詞 — 照主題查，不照日期</p>
+  <p class="page-subtitle">照學習順序排成十一章，從第一章一路讀下去</p>
 
   <p style="color:var(--ink-soft);font-size:14px;line-height:1.8;margin-bottom:6px;">
-    這裡把散在每日 log 裡的<strong>文法課</strong>集中起來，收的是「講規則、講句型結構」的那幾篇，
-    同一主題內新到舊。每日課程、單字課、會話練習仍然只在<a href="index.html" style="color:var(--accent);">首頁的 log</a>。
+    這裡把每一篇<strong>文法課</strong>照「先學的、後面會用到的放前面」排成一本書。每一章開頭說明它接在哪一章後面，
+    每一課最上面會寫它在第幾章，最下面有「上一篇／下一篇」，可以一路翻下去。
+    文法以外的單字課、會話紀錄在<a href="kamoku.html" style="color:var(--accent);">課程</a>那一頁，照日期排的完整紀錄在<a href="index.html" style="color:var(--accent);">首頁的 log</a>。
   </p>
 
+  <nav class="book-toc" aria-label="目次">
+    <div class="book-toc-title">目 次</div>
+    <div class="book-toc-path">
+      <a class="book-toc-row" href="#ch1">
+        <span class="book-toc-tag">第一章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">句子的骨架</span><span class="book-toc-dots"></span><span class="book-toc-n">6 課</span></div>
+          <div class="book-toc-sub">先認識日文句子的基本零件：禮貌形 です・ます，以及標出主詞、受詞、所屬的助詞。後面每一章都會用到這些。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch2">
+        <span class="book-toc-tag">第二章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">這個、那個、這裡、那裡</span><span class="book-toc-dots"></span><span class="book-toc-n">4 課</span></div>
+          <div class="book-toc-sub">用 これ・ここ・この 指東西、指地方、接名詞，再用「XはYの前です」說東西在哪裡。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch3">
+        <span class="book-toc-tag">第三章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">有和在</span><span class="book-toc-dots"></span><span class="book-toc-n">3 課</span></div>
+          <div class="book-toc-sub">說「有」和「在」：東西用 あります，人和動物用 います。學完就能描述身邊有什麼。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch4">
+        <span class="book-toc-tag">第四章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">動詞和ます形</span><span class="book-toc-dots"></span><span class="book-toc-n">11 課</span></div>
+          <div class="book-toc-sub">動詞從這裡開始。先分清楚五段和一段，再學最常用的ます形，接著是否定、動作的對象、目的地和「去做某件事」。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch5">
+        <span class="book-toc-tag">第五章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">過去、現在、進行中</span><span class="book-toc-dots"></span><span class="book-toc-n">4 課</span></div>
+          <div class="book-toc-sub">把第四章的ます形往過去推：ました、でした，以及時間詞要跟句尾的時態對齊。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch6">
+        <span class="book-toc-tag">第六章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">多常做、做幾次</span><span class="book-toc-dots"></span><span class="book-toc-n">2 課</span></div>
+          <div class="book-toc-sub">說一件事多常做、一週做幾次。句子用的都是第四、五章的ます形，只是多了頻率的詞。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch7">
+        <span class="book-toc-tag">第七章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">形容詞</span><span class="book-toc-dots"></span><span class="book-toc-n">9 課</span></div>
+          <div class="book-toc-sub">い形容詞和な形容詞是兩條路：接名詞、現在和過去、變成名詞、說「變得〜」，每一步兩種都分開走。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch8">
+        <span class="book-toc-tag">第八章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">比較和「最」</span><span class="book-toc-dots"></span><span class="book-toc-n">6 課</span></div>
+          <div class="book-toc-sub">拿第七章的形容詞來比較：A 比 B 更〜，以及在三個以上裡面說「最〜」。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch9">
+        <span class="book-toc-tag">第九章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">て形</span><span class="book-toc-dots"></span><span class="book-toc-n">6 課</span></div>
+          <div class="book-toc-sub">て形是動詞用來接下去的形。學會怎麼變，就能把動作串起來，也能說正在做的事和持續的狀態。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch10">
+        <span class="book-toc-tag">第十章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">た形</span><span class="book-toc-dots"></span><span class="book-toc-n">5 課</span></div>
+          <div class="book-toc-sub">た形的變法跟第九章的て形一樣，只是把 て 換成 た。用它說過去做過的事、說經驗，以及舉幾個動作當例子。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#ch11">
+        <span class="book-toc-tag">第十一章</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">會做、想做</span><span class="book-toc-dots"></span><span class="book-toc-n">5 課</span></div>
+          <div class="book-toc-sub">用動詞說能力和願望：會做、做不到、想做、不想做。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#appendix">
+        <span class="book-toc-tag">附錄</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">音的規則</span><span class="book-toc-dots"></span><span class="book-toc-n">3 課</span></div>
+          <div class="book-toc-sub">嚴格說不算文法，但同樣是規則：漢字的兩種讀法、月份的唸法、濁音和促音。</div>
+        </div>
+      </a>
+    </div>
+  </nav>
+
   <!-- ─────────────────────────────────────── -->
-  <div class="divider">動詞 · 活用</div>
-  <p class="cat-intro">動詞怎麼變、變了之後意思差在哪。<strong>先讀五段那兩篇</strong>，後面的變化形都建立在它上面。</p>
+  <section class="book-part" id="ch1" data-tag="第一章" data-name="句子的骨架">
+  <div class="divider">第一章 · 句子的骨架</div>
+  <p class="book-part-intro">先認識日文句子的基本零件：禮貌形 です・ます，以及標出主詞、受詞、所屬的助詞。後面每一章都會用到這些。<span class="n">共 6 課，照建議的閱讀順序排。</span></p>
 
   <ul class="lesson-list">
     <li>
-      <a class="lesson-link" href="lessons/2026-11-22-ta-koto-ga-arimasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 22</div>
-        <div class="lesson-title">〜たことがあります — 說自己做過的事 <span class="arrow">→</span></div>
-        <div class="lesson-summary">た形＋ことがあります 說經驗；助詞照動詞原本的 を／に；講到某一次改用 〜ました；沒做過用 ありません</div>
+      <a class="lesson-link" href="lessons/2026-07-22-teinei.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 22</div>
+        <div class="lesson-title">丁寧 不是叮嚀 <span class="arrow">→</span></div>
+        <div class="lesson-summary">です・ます 體是什麼、為什麼叫「丁寧語」</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-11-19-tari-tari.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 19</div>
-        <div class="lesson-title">〜たり〜たりします <span class="arrow">→</span></div>
-        <div class="lesson-summary">從很多事裡挑幾個舉例：た形＋り 接兩次，再用 します 收尾；過去改句尾 しました；跟 〜て、〜て 的先後順序不一樣</div>
+      <a class="lesson-link" href="lessons/2026-05-10-joshi-wa.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 05 / 10</div>
+        <div class="lesson-title">助詞入門：は・が・の・を・か <span class="arrow">→</span></div>
+        <div class="lesson-summary">最基本的五個助詞，は 讀作 wa 的規則</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-11-10-kako-mashita-deshita.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 10</div>
-        <div class="lesson-title">〜でした／〜かったです／〜ました <span class="arrow">→</span></div>
-        <div class="lesson-summary">禮貌體的過去式總整理：有「昨日」句尾還是要改；四種詞都帶著 た</div>
+      <a class="lesson-link" href="lessons/2026-05-10-joshi-2.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 05 / 10</div>
+        <div class="lesson-title">助詞 II：に・で・へ・と・も <span class="arrow">→</span></div>
+        <div class="lesson-summary">時間地點、手段方法、方向、對象、也</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-11-02-shitai-desu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 02</div>
-        <div class="lesson-title">想做的事用 〜たいです <span class="arrow">→</span></div>
-        <div class="lesson-summary">〜たい 接在 ます形 去掉 ます 的地方，五段・一段・来る・する 同一個做法；参加する 這種 名詞＋する 只換 する → 参加したいです；否定 たくないです</div>
+      <a class="lesson-link" href="lessons/2026-05-13-jinshou.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 05 / 13</div>
+        <div class="lesson-title">人稱代名詞：わたし・あなた・あのひと <span class="arrow">→</span></div>
+        <div class="lesson-summary">日文為什麼常常把主語整個省略</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-10-28-te-iru-meishi.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 28</div>
-        <div class="lesson-title">〜ている＋名詞 <span class="arrow">→</span></div>
-        <div class="lesson-summary">動詞ている 直接放在名詞前面說明是哪一個人、哪一樣東西（ギターを弾いている人、いつも履いている靴）；裡面的主詞用 が；放在名詞前用普通形；動作地點用 で；車を止める vs 車に乗る</div>
+      <a class="lesson-link" href="lessons/2026-08-01-no-joshi.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 01</div>
+        <div class="lesson-title">助詞「の」 <span class="arrow">→</span></div>
+        <div class="lesson-summary">の 連接兩個名詞：日本の祭り・イギリスのお菓子</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-10-23-okite-tabete.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 23</div>
-        <div class="lesson-title">〜て、〜て <span class="arrow">→</span></div>
-        <div class="lesson-summary">て形接動作的先後順序（先 A 然後 B），可以一直往下接，只有最後一個動詞收尾；跟 歩いて行きます 的「同時、方式」對照</div>
+      <a class="lesson-link" href="lessons/2026-06-17-tono.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 06 / 17</div>
+        <div class="lesson-title">〜との 和某人的某事 <span class="arrow">→</span></div>
+        <div class="lesson-summary">と ＋ の 疊用時怎麼讀</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="ch2" data-tag="第二章" data-name="這個、那個、這裡、那裡">
+  <div class="divider">第二章 · 這個、那個、這裡、那裡</div>
+  <p class="book-part-intro">用 これ・ここ・この 指東西、指地方、接名詞，再用「XはYの前です」說東西在哪裡。<span class="n">共 4 課，照建議的閱讀順序排。</span></p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-28-lesson8-kore-sore-are.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 28</div>
+        <div class="lesson-title">これ・それ・あれ <span class="arrow">→</span></div>
+        <div class="lesson-summary">事物的指示詞，可以單獨當主語</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-10-22-te-kei.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 22</div>
-        <div class="lesson-title">て形怎麼變 <span class="arrow">→</span></div>
-        <div class="lesson-summary">原型最後一個字決定換成 って／んで／いて／いで／して；て形是從五段的い段接 て 再音便（い音便・促音便・撥音便）；る 結尾先分五段一段；た形同一套</div>
+      <a class="lesson-link" href="lessons/2026-07-29-koko-soko-asoko.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 29</div>
+        <div class="lesson-title">ここ・そこ・あそこ <span class="arrow">→</span></div>
+        <div class="lesson-summary">場所的指示詞</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-10-21-aruite-ikimasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 21</div>
-        <div class="lesson-title">〜て行きます <span class="arrow">→</span></div>
-        <div class="lesson-summary">動詞て形＋行きます＝用什麼方式去；歩いて行きます vs 電車で行きます vs 走りに行きます，終點用 まで 或 に</div>
+      <a class="lesson-link" href="lessons/2026-07-29-kono-sono-ano.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 29</div>
+        <div class="lesson-title">この・その・あの <span class="arrow">→</span></div>
+        <div class="lesson-summary">指示連體詞，後面一定接名詞</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-10-09-mi-ni-ikimasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 09</div>
-        <div class="lesson-title">〜に行きます <span class="arrow">→</span></div>
-        <div class="lesson-summary">ます形去掉ます＋に行きます＝出門去做某件事；映画を見ます 與 映画を見に行きます 的差別</div>
+      <a class="lesson-link" href="lessons/2026-08-18-x-wa-y-no-mae.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 18</div>
+        <div class="lesson-title">XはYの前です <span class="arrow">→</span></div>
+        <div class="lesson-summary">位置詞（前・後ろ・上・中・隣・間）是名詞，靠 の 接在基準物後面；です 版與 〜にあります 版的語感差別</div>
       </a>
     </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="ch3" data-tag="第三章" data-name="有和在">
+  <div class="divider">第三章 · 有和在</div>
+  <p class="book-part-intro">說「有」和「在」：東西用 あります，人和動物用 います。學完就能描述身邊有什麼。<span class="n">共 3 課，照建議的閱讀順序排。</span></p>
+
+  <ul class="lesson-list">
     <li>
-      <a class="lesson-link" href="lessons/2026-10-08-takunai-dekinai.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 08</div>
-        <div class="lesson-title">不想做和不會做 <span class="arrow">→</span></div>
-        <div class="lesson-summary">ません（不做）、可能形＋ません（不會）、たくないです（不想）三種否定的變法與語感</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-10-08-suru-dekiru.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 08</div>
-        <div class="lesson-title">する 的可能形是 できる <span class="arrow">→</span></div>
-        <div class="lesson-summary">する 不照規則變，借 できる 來用；名詞＋する 只換 する（運転できません），名詞拉出來時加 が（運転ができません）</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-10-08-dekimasen.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 08</div>
-        <div class="lesson-title">できません — 說自己「做不到」的說法 <span class="arrow">→</span></div>
-        <div class="lesson-summary">可能形的否定：五段動詞字尾換え段（話せません）、一段動詞加られ（食べられません）、する→できません；でき 是 できる（出来る）去掉 る</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-10-06-koto-ga-dekimasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 06</div>
-        <div class="lesson-title">動詞原形 ＋ ことができます <span class="arrow">→</span></div>
-        <div class="lesson-summary">「會做、可以做」：こと 把動作變成名詞，を 屬於前面的動詞、が 屬於 できます；跟可能形 話せます 對照</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-10-06-doushite-ndesu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 06</div>
-        <div class="lesson-title">どうして〜んですか — 問原因要加 ん <span class="arrow">→</span></div>
-        <div class="lesson-summary">ん 是 の 的口語縮音，用來請對方說明已知的事；ん 前面的動詞用原形，名詞・な形容詞補 な</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-10-05-ni-shimasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 05</div>
-        <div class="lesson-title">名詞 ＋ にします <span class="arrow">→</span></div>
-        <div class="lesson-summary">從選項裡選定一個：カレーにします、何にしますか；沒有 を 的 にします 是選擇，跟 〜を〜にします、になります 對照</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-09-02-teimasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 09 / 02</div>
-        <div class="lesson-title">〜ています — 正在做的事要這樣說 <span class="arrow">→</span></div>
-        <div class="lesson-summary">て形三類動詞的變法，ています 的進行中／狀態殘留／習慣三種意思，以及「読んでいます 為什麼不能只寫 読む」</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-08-29-megane-o-kaimashita.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 29</div>
-        <div class="lesson-title">ました — 把做完的事說出來 <span class="arrow">→</span></div>
-        <div class="lesson-summary">把「誰は何を動詞ます」換成過去式 ました；語尾う的五段動詞「う→い」的變法，以及過去否定 ませんでした</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-08-16-x-ga-imasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 16</div>
-        <div class="lesson-title">Xがいます <span class="arrow">→</span></div>
-        <div class="lesson-summary">人和動物的存在句；判準是「會不會自己動」，所以樹和車子仍用 あります，否定形 いません 與 が→は</div>
+      <a class="lesson-link" href="lessons/2026-08-14-arimasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 14</div>
+        <div class="lesson-title">Xがあります <span class="arrow">→</span></div>
+        <div class="lesson-summary">場所に＋物が＋あります 的存在句；あります 與 います 的分界、に 和 で 的差別、否定與過去四形</div>
       </a>
     </li>
     <li>
@@ -170,17 +229,54 @@
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-08-14-arimasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 14</div>
-        <div class="lesson-title">Xがあります <span class="arrow">→</span></div>
-        <div class="lesson-summary">場所に＋物が＋あります 的存在句；あります 與 います 的分界、に 和 で 的差別、否定與過去四形</div>
+      <a class="lesson-link" href="lessons/2026-08-16-x-ga-imasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 16</div>
+        <div class="lesson-title">Xがいます <span class="arrow">→</span></div>
+        <div class="lesson-summary">人和動物的存在句；判準是「會不會自己動」，所以樹和車子仍用 あります，否定形 いません 與 が→は</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="ch4" data-tag="第四章" data-name="動詞和ます形">
+  <div class="divider">第四章 · 動詞和ます形</div>
+  <p class="book-part-intro">動詞從這裡開始。先分清楚五段和一段，再學最常用的ます形，接著是否定、動作的對象、目的地和「去做某件事」。<span class="n">共 11 課，照建議的閱讀順序排。</span></p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-09-godan-doushi.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 09</div>
+        <div class="lesson-title">什麼是五段動詞 <span class="arrow">→</span></div>
+        <div class="lesson-summary">原形一定う段結尾；字尾置換成哪一段就決定否定／禮貌／假設／邀約，附行與段的十字圖與互動練習</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-08-12-ima-sakki.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 12</div>
-        <div class="lesson-title">今 和 さっき：時間詞要跟句尾對齊 <span class="arrow">→</span></div>
-        <div class="lesson-summary">時間詞與句尾時制必須同一邊；今＝「剛剛」的例外、今まで 的作用，附下雨的四種講法與問句的 ？／か</div>
+      <a class="lesson-link" href="lessons/2026-08-09-godan-vs-ichidan.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 09</div>
+        <div class="lesson-title">五段 vs 一段：那「食べる」呢 <span class="arrow">→</span></div>
+        <div class="lesson-summary">る 結尾兩邊都可能，看前面那個音來分；含帰る・要る那組例外與三步判斷流程</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-11-masu-kei-nyuumon.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 11</div>
+        <div class="lesson-title">マス形入門 <span class="arrow">→</span></div>
+        <div class="lesson-summary">為什麼有禮貌形、動詞三類怎麼判斷、四個句尾變化，以及マス形語幹能接的東西</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-11-joshi-o.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 11</div>
+        <div class="lesson-title">助詞「を」的三種用法 <span class="arrow">→</span></div>
+        <div class="lesson-summary">受詞・通過的場所・離開的起點；含 を／に／で 的分界表與填空測驗</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-04-mokutekichi-ni.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 04</div>
+        <div class="lesson-title">目的地 ＋ に <span class="arrow">→</span></div>
+        <div class="lesson-summary">に 標示到達點：主人について日本に来ました</div>
       </a>
     </li>
     <li>
@@ -198,12 +294,42 @@
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-08-12-ta-kei.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 12</div>
-        <div class="lesson-title">過去式 た形 <span class="arrow">→</span></div>
-        <div class="lesson-summary">過去只有「た」一個記號：た形＝て形的て換成た（で→だ）、否定的過去 なかった，以及い形容詞／な形容詞／名詞的過去</div>
+      <a class="lesson-link" href="lessons/2026-08-07-kikoemasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 07</div>
+        <div class="lesson-title">〜が聞こえます・〜が見えます — 聽得到 vs 去聽 <span class="arrow">→</span></div>
+        <div class="lesson-summary">自然聽得到（聞こえます）與主動去聽（聞きます）的差別</div>
       </a>
     </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-09-mi-ni-ikimasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 09</div>
+        <div class="lesson-title">〜に行きます <span class="arrow">→</span></div>
+        <div class="lesson-summary">ます形去掉ます＋に行きます＝出門去做某件事；映画を見ます 與 映画を見に行きます 的差別</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-05-ni-shimasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 05</div>
+        <div class="lesson-title">名詞 ＋ にします <span class="arrow">→</span></div>
+        <div class="lesson-summary">從選項裡選定一個：カレーにします、何にしますか；沒有 を 的 にします 是選擇，跟 〜を〜にします、になります 對照</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-06-doushite-ndesu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 06</div>
+        <div class="lesson-title">どうして〜んですか — 問原因要加 ん <span class="arrow">→</span></div>
+        <div class="lesson-summary">ん 是 の 的口語縮音，用來請對方說明已知的事；ん 前面的動詞用原形，名詞・な形容詞補 な</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="ch5" data-tag="第五章" data-name="過去、現在、進行中">
+  <div class="divider">第五章 · 過去、現在、進行中</div>
+  <p class="book-part-intro">把第四章的ます形往過去推：ました、でした，以及時間詞要跟句尾的時態對齊。<span class="n">共 4 課，照建議的閱讀順序排。</span></p>
+
+  <ul class="lesson-list">
     <li>
       <a class="lesson-link" href="lessons/2026-08-12-jisei-shinkoukei.html">
         <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 12</div>
@@ -212,87 +338,63 @@
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-08-11-masu-kei-nyuumon.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 11</div>
-        <div class="lesson-title">マス形入門 <span class="arrow">→</span></div>
-        <div class="lesson-summary">為什麼有禮貌形、動詞三類怎麼判斷、四個句尾變化，以及マス形語幹能接的東西</div>
+      <a class="lesson-link" href="lessons/2026-08-29-megane-o-kaimashita.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 29</div>
+        <div class="lesson-title">ました — 把做完的事說出來 <span class="arrow">→</span></div>
+        <div class="lesson-summary">把「誰は何を動詞ます」換成過去式 ました；語尾う的五段動詞「う→い」的變法，以及過去否定 ませんでした</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-08-09-godan-doushi.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 09</div>
-        <div class="lesson-title">什麼是五段動詞 <span class="arrow">→</span></div>
-        <div class="lesson-summary">原形一定う段結尾；字尾置換成哪一段就決定否定／禮貌／假設／邀約，附行與段的十字圖與互動練習</div>
+      <a class="lesson-link" href="lessons/2026-08-12-ima-sakki.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 12</div>
+        <div class="lesson-title">今 和 さっき：時間詞要跟句尾對齊 <span class="arrow">→</span></div>
+        <div class="lesson-summary">時間詞與句尾時制必須同一邊；今＝「剛剛」的例外、今まで 的作用，附下雨的四種講法與問句的 ？／か</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-08-09-godan-vs-ichidan.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 09</div>
-        <div class="lesson-title">五段 vs 一段：那「食べる」呢 <span class="arrow">→</span></div>
-        <div class="lesson-summary">る 結尾兩邊都可能，看前面那個音來分；含帰る・要る那組例外與三步判斷流程</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-08-07-kikoemasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 07</div>
-        <div class="lesson-title">〜が聞こえます・〜が見えます — 聽得到 vs 去聽 <span class="arrow">→</span></div>
-        <div class="lesson-summary">自然聽得到（聞こえます）與主動去聽（聞きます）的差別</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-07-28-kita-koto-ga-arimasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 28</div>
-        <div class="lesson-title">〜たことがあります — 問經驗 <span class="arrow">→</span></div>
-        <div class="lesson-summary">「有沒有做過某件事」的句型</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-07-22-teinei.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 22</div>
-        <div class="lesson-title">丁寧 不是叮嚀 <span class="arrow">→</span></div>
-        <div class="lesson-summary">です・ます 體是什麼、為什麼叫「丁寧語」</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-06-24-sunde-imasu.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 06 / 24</div>
-        <div class="lesson-title">〜に すんでいます <span class="arrow">→</span></div>
-        <div class="lesson-summary">て形 ＋ います 表示持續狀態，配助詞に</div>
+      <a class="lesson-link" href="lessons/2026-11-10-kako-mashita-deshita.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 10</div>
+        <div class="lesson-title">〜でした／〜かったです／〜ました <span class="arrow">→</span></div>
+        <div class="lesson-summary">禮貌體的過去式總整理：有「昨日」句尾還是要改；四種詞都帶著 た</div>
       </a>
     </li>
   </ul>
+  </section>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider">形容詞</div>
-  <p class="cat-intro">形容詞分成い形容詞與な形容詞兩類，接什麼、怎麼變，全看它屬於哪一類。</p>
+  <section class="book-part" id="ch6" data-tag="第六章" data-name="多常做、做幾次">
+  <div class="divider">第六章 · 多常做、做幾次</div>
+  <p class="book-part-intro">說一件事多常做、一週做幾次。句子用的都是第四、五章的ます形，只是多了頻率的詞。<span class="n">共 2 課，照建議的閱讀順序排。</span></p>
 
   <ul class="lesson-list">
     <li>
-      <a class="lesson-link" href="lessons/2026-11-10-keiyoushi-joutai.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 10</div>
-        <div class="lesson-title">〜い／〜だ <span class="arrow">→</span></div>
-        <div class="lesson-summary">兩種形容詞的常體與來歷：古代 なり／なる 變成 だ／な，い形容詞的 し／き 合成 い；なり＝に＋あり，だ＝である 縮短</div>
+      <a class="lesson-link" href="lessons/2026-08-20-hindo.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 20</div>
+        <div class="lesson-title">頻率副詞：從「總是」到「完全不」 <span class="arrow">→</span></div>
+        <div class="lesson-summary">把頻率副詞照做得多頻繁排成一條線，中間有一道分界——一邊配肯定，另一邊句尾一定要否定；附 ほとんど・まったく・ぜんぜん 的拍子拆解與「全」的訓讀／音讀</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-11-10-i-na-keiyoushi.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 10</div>
-        <div class="lesson-title">〜いです／〜です <span class="arrow">→</span></div>
-        <div class="lesson-summary">加上 です 之後的差別：看最後一個字分辨；な形容詞改 です、い形容詞改自己，因為 です 在兩邊的角色不同；為什麼不能說 寒いでした</div>
+      <a class="lesson-link" href="lessons/2026-08-21-ni-kai.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 21</div>
+        <div class="lesson-title">〜に〜回：一週間に二回 <span class="arrow">→</span></div>
+        <div class="lesson-summary">〔期間〕に〔數字〕回 的固定骨架；回 的十種讀法與促音變化、「二、三回」這種不確定數字的寫法，以及期間後面為什麼不能換成 は</div>
       </a>
     </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="ch7" data-tag="第七章" data-name="形容詞">
+  <div class="divider">第七章 · 形容詞</div>
+  <p class="book-part-intro">い形容詞和な形容詞是兩條路：接名詞、現在和過去、變成名詞、說「變得〜」，每一步兩種都分開走。<span class="n">共 9 課，照建議的閱讀順序排。</span></p>
+
+  <ul class="lesson-list">
     <li>
-      <a class="lesson-link" href="lessons/2026-11-08-kunarimashita.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 08</div>
-        <div class="lesson-title">X が〜くなりました／〜になりました <span class="arrow">→</span></div>
-        <div class="lesson-summary">用 汚い・きれい、明るい・暗い、高い・低い 練變化句；く 和 に 是同一個位置，差在形容詞種類；です 與 なりました 的差別</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-10-04-omosa-kyori.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 04</div>
-        <div class="lesson-title">い形容詞 → 名詞（〜さ） <span class="arrow">→</span></div>
-        <div class="lesson-summary">重さはどのくらいですか／距離はどのくらいですか：形容詞去い加さ才能當主題，本來就是名詞的不用加</div>
+      <a class="lesson-link" href="lessons/2026-09-09-i-keiyoushi-meishi.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 09 / 09</div>
+        <div class="lesson-title">い形容詞 ＋ 名詞 <span class="arrow">→</span></div>
+        <div class="lesson-summary">い形容詞原形可以直接接名詞修飾；以 うすいノートがあります 與 あついほんがあります 為核心例句，並詳細拆解「厚い」（0型/平調）與「熱い・暑い」（2型）的發音聲調差別</div>
       </a>
     </li>
     <li>
@@ -303,10 +405,17 @@
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-09-09-i-keiyoushi-meishi.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 09 / 09</div>
-        <div class="lesson-title">い形容詞 ＋ 名詞 <span class="arrow">→</span></div>
-        <div class="lesson-summary">い形容詞原形可以直接接名詞修飾；以 うすいノートがあります 與 あついほんがあります 為核心例句，並詳細拆解「厚い」（0型/平調）與「熱い・暑い」（2型）的發音聲調差別</div>
+      <a class="lesson-link" href="lessons/2026-11-10-i-na-keiyoushi.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 10</div>
+        <div class="lesson-title">〜いです／〜です <span class="arrow">→</span></div>
+        <div class="lesson-summary">加上 です 之後的差別：看最後一個字分辨；な形容詞改 です、い形容詞改自己，因為 です 在兩邊的角色不同；為什麼不能說 寒いでした</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-10-keiyoushi-joutai.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 10</div>
+        <div class="lesson-title">〜い／〜だ <span class="arrow">→</span></div>
+        <div class="lesson-summary">兩種形容詞的常體與來歷：古代 なり／なる 變成 だ／な，い形容詞的 し／き 合成 い；なり＝に＋あり，だ＝である 縮短</div>
       </a>
     </li>
     <li>
@@ -317,10 +426,10 @@
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-08-29-naritai-biyouin.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 29</div>
-        <div class="lesson-title">〜くなります／〜くします／〜になりたいです <span class="arrow">→</span></div>
-        <div class="lesson-summary">同一個形容詞變形，自己變用 なる、有人動手用 する（助詞也跟著 が→を）；再加上比擬的 〜のような／〜のように 與願望的 〜になりたいです</div>
+      <a class="lesson-link" href="lessons/2026-10-04-omosa-kyori.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 04</div>
+        <div class="lesson-title">い形容詞 → 名詞（〜さ） <span class="arrow">→</span></div>
+        <div class="lesson-summary">重さはどのくらいですか／距離はどのくらいですか：形容詞去い加さ才能當主題，本來就是名詞的不用加</div>
       </a>
     </li>
     <li>
@@ -330,11 +439,27 @@
         <div class="lesson-summary">講變化的句型；い形容詞去 い 加 く、な形容詞與名詞加 に，例外的 いい→よくなる，以及接原因的 なぜなら〜からです</div>
       </a>
     </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-29-naritai-biyouin.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 29</div>
+        <div class="lesson-title">〜くなります／〜くします／〜になりたいです <span class="arrow">→</span></div>
+        <div class="lesson-summary">同一個形容詞變形，自己變用 なる、有人動手用 する（助詞也跟著 が→を）；再加上比擬的 〜のような／〜のように 與願望的 〜になりたいです</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-08-kunarimashita.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 08</div>
+        <div class="lesson-title">X が〜くなりました／〜になりました <span class="arrow">→</span></div>
+        <div class="lesson-summary">用 汚い・きれい、明るい・暗い、高い・低い 練變化句；く 和 に 是同一個位置，差在形容詞種類；です 與 なりました 的差別</div>
+      </a>
+    </li>
   </ul>
+  </section>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider">比較 · 最高級</div>
-  <p class="cat-intro">兩樣東西比較用 より・の方が，三樣以上比出第一名用 一番。照下面的順序讀，從兩樣到三樣以上、從直述句到問句。</p>
+  <section class="book-part" id="ch8" data-tag="第八章" data-name="比較和「最」">
+  <div class="divider">第八章 · 比較和「最」</div>
+  <p class="book-part-intro">拿第七章的形容詞來比較：A 比 B 更〜，以及在三個以上裡面說「最〜」。<span class="n">共 6 課，照建議的閱讀順序排。</span></p>
 
   <ul class="lesson-list">
     <li>
@@ -380,12 +505,93 @@
       </a>
     </li>
   </ul>
+  </section>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider">助詞</div>
-  <p class="cat-intro">日文的語序很自由，靠助詞標示每個詞在句中的角色。</p>
+  <section class="book-part" id="ch9" data-tag="第九章" data-name="て形">
+  <div class="divider">第九章 · て形</div>
+  <p class="book-part-intro">て形是動詞用來接下去的形。學會怎麼變，就能把動作串起來，也能說正在做的事和持續的狀態。<span class="n">共 6 課，照建議的閱讀順序排。</span></p>
 
   <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-22-te-kei.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 22</div>
+        <div class="lesson-title">て形怎麼變 <span class="arrow">→</span></div>
+        <div class="lesson-summary">原型最後一個字決定換成 って／んで／いて／いで／して；て形是從五段的い段接 て 再音便（い音便・促音便・撥音便）；る 結尾先分五段一段；た形同一套</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-23-okite-tabete.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 23</div>
+        <div class="lesson-title">〜て、〜て <span class="arrow">→</span></div>
+        <div class="lesson-summary">て形接動作的先後順序（先 A 然後 B），可以一直往下接，只有最後一個動詞收尾；跟 歩いて行きます 的「同時、方式」對照</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-21-aruite-ikimasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 21</div>
+        <div class="lesson-title">〜て行きます <span class="arrow">→</span></div>
+        <div class="lesson-summary">動詞て形＋行きます＝用什麼方式去；歩いて行きます vs 電車で行きます vs 走りに行きます，終點用 まで 或 に</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-09-02-teimasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 09 / 02</div>
+        <div class="lesson-title">〜ています — 正在做的事要這樣說 <span class="arrow">→</span></div>
+        <div class="lesson-summary">て形三類動詞的變法，ています 的進行中／狀態殘留／習慣三種意思，以及「読んでいます 為什麼不能只寫 読む」</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-24-sunde-imasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 06 / 24</div>
+        <div class="lesson-title">〜に すんでいます <span class="arrow">→</span></div>
+        <div class="lesson-summary">て形 ＋ います 表示持續狀態，配助詞に</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-28-te-iru-meishi.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 28</div>
+        <div class="lesson-title">〜ている＋名詞 <span class="arrow">→</span></div>
+        <div class="lesson-summary">動詞ている 直接放在名詞前面說明是哪一個人、哪一樣東西（ギターを弾いている人、いつも履いている靴）；裡面的主詞用 が；放在名詞前用普通形；動作地點用 で；車を止める vs 車に乗る</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="ch10" data-tag="第十章" data-name="た形">
+  <div class="divider">第十章 · た形</div>
+  <p class="book-part-intro">た形的變法跟第九章的て形一樣，只是把 て 換成 た。用它說過去做過的事、說經驗，以及舉幾個動作當例子。<span class="n">共 5 課，照建議的閱讀順序排。</span></p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-12-ta-kei.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 12</div>
+        <div class="lesson-title">過去式 た形 <span class="arrow">→</span></div>
+        <div class="lesson-summary">過去只有「た」一個記號：た形＝て形的て換成た（で→だ）、否定的過去 なかった，以及い形容詞／な形容詞／名詞的過去</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-28-kita-koto-ga-arimasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 28</div>
+        <div class="lesson-title">〜たことがあります — 問經驗 <span class="arrow">→</span></div>
+        <div class="lesson-summary">「有沒有做過某件事」的句型</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-22-ta-koto-ga-arimasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 22</div>
+        <div class="lesson-title">〜たことがあります — 說自己做過的事 <span class="arrow">→</span></div>
+        <div class="lesson-summary">た形＋ことがあります 說經驗；助詞照動詞原本的 を／に；講到某一次改用 〜ました；沒做過用 ありません</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-19-tari-tari.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 19</div>
+        <div class="lesson-title">〜たり〜たりします <span class="arrow">→</span></div>
+        <div class="lesson-summary">從很多事裡挑幾個舉例：た形＋り 接兩次，再用 します 收尾；過去改句尾 しました；跟 〜て、〜て 的先後順序不一樣</div>
+      </a>
+    </li>
     <li>
       <a class="lesson-link" href="lessons/2026-11-23-joshi-ya.html">
         <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 23</div>
@@ -393,116 +599,57 @@
         <div class="lesson-summary">や 挑幾樣名詞舉例；跟 と（全部列完）、〜たり〜たり（舉例動作）的差別</div>
       </a>
     </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-08-18-x-wa-y-no-mae.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 18</div>
-        <div class="lesson-title">XはYの前です <span class="arrow">→</span></div>
-        <div class="lesson-summary">位置詞（前・後ろ・上・中・隣・間）是名詞，靠 の 接在基準物後面；です 版與 〜にあります 版的語感差別</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-08-11-joshi-o.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 11</div>
-        <div class="lesson-title">助詞「を」的三種用法 <span class="arrow">→</span></div>
-        <div class="lesson-summary">受詞・通過的場所・離開的起點；含 を／に／で 的分界表與填空測驗</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-08-04-mokutekichi-ni.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 04</div>
-        <div class="lesson-title">目的地 ＋ に <span class="arrow">→</span></div>
-        <div class="lesson-summary">に 標示到達點：主人について日本に来ました</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-08-01-no-joshi.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 01</div>
-        <div class="lesson-title">助詞「の」 <span class="arrow">→</span></div>
-        <div class="lesson-summary">の 連接兩個名詞：日本の祭り・イギリスのお菓子</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-06-17-tono.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 06 / 17</div>
-        <div class="lesson-title">〜との 和某人的某事 <span class="arrow">→</span></div>
-        <div class="lesson-summary">と ＋ の 疊用時怎麼讀</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-05-10-joshi-2.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 05 / 10</div>
-        <div class="lesson-title">助詞 II：に・で・へ・と・も <span class="arrow">→</span></div>
-        <div class="lesson-summary">時間地點、手段方法、方向、對象、也</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-05-10-joshi-wa.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 05 / 10</div>
-        <div class="lesson-title">助詞入門：は・が・の・を・か <span class="arrow">→</span></div>
-        <div class="lesson-summary">最基本的五個助詞，は 讀作 wa 的規則</div>
-      </a>
-    </li>
   </ul>
+  </section>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider">副詞</div>
-  <p class="cat-intro">修飾動詞的詞。重點常常不在意思，而在<strong>它規定句尾要接肯定還是否定</strong>。</p>
+  <section class="book-part" id="ch11" data-tag="第十一章" data-name="會做、想做">
+  <div class="divider">第十一章 · 會做、想做</div>
+  <p class="book-part-intro">用動詞說能力和願望：會做、做不到、想做、不想做。<span class="n">共 5 課，照建議的閱讀順序排。</span></p>
 
   <ul class="lesson-list">
     <li>
-      <a class="lesson-link" href="lessons/2026-08-21-ni-kai.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 21</div>
-        <div class="lesson-title">〜に〜回：一週間に二回 <span class="arrow">→</span></div>
-        <div class="lesson-summary">〔期間〕に〔數字〕回 的固定骨架；回 的十種讀法與促音變化、「二、三回」這種不確定數字的寫法，以及期間後面為什麼不能換成 は</div>
+      <a class="lesson-link" href="lessons/2026-10-06-koto-ga-dekimasu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 06</div>
+        <div class="lesson-title">動詞原形 ＋ ことができます <span class="arrow">→</span></div>
+        <div class="lesson-summary">「會做、可以做」：こと 把動作變成名詞，を 屬於前面的動詞、が 屬於 できます；跟可能形 話せます 對照</div>
       </a>
     </li>
     <li>
-      <a class="lesson-link" href="lessons/2026-08-20-hindo.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 08 / 20</div>
-        <div class="lesson-title">頻率副詞：從「總是」到「完全不」 <span class="arrow">→</span></div>
-        <div class="lesson-summary">把頻率副詞照做得多頻繁排成一條線，中間有一道分界——一邊配肯定，另一邊句尾一定要否定；附 ほとんど・まったく・ぜんぜん 的拍子拆解與「全」的訓讀／音讀</div>
+      <a class="lesson-link" href="lessons/2026-10-08-suru-dekiru.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 08</div>
+        <div class="lesson-title">する 的可能形是 できる <span class="arrow">→</span></div>
+        <div class="lesson-summary">する 不照規則變，借 できる 來用；名詞＋する 只換 する（運転できません），名詞拉出來時加 が（運転ができません）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-08-dekimasen.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 08</div>
+        <div class="lesson-title">できません — 說自己「做不到」的說法 <span class="arrow">→</span></div>
+        <div class="lesson-summary">可能形的否定：五段動詞字尾換え段（話せません）、一段動詞加られ（食べられません）、する→できません；でき 是 できる（出来る）去掉 る</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-08-takunai-dekinai.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 10 / 08</div>
+        <div class="lesson-title">不想做和不會做 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ません（不做）、可能形＋ません（不會）、たくないです（不想）三種否定的變法與語感</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-02-shitai-desu.html">
+        <div class="lesson-meta">文法 · Grammar · 2026 / 11 / 02</div>
+        <div class="lesson-title">想做的事用 〜たいです <span class="arrow">→</span></div>
+        <div class="lesson-summary">〜たい 接在 ます形 去掉 ます 的地方，五段・一段・来る・する 同一個做法；参加する 這種 名詞＋する 只換 する → 参加したいです；否定 たくないです</div>
       </a>
     </li>
   </ul>
+  </section>
 
   <!-- ─────────────────────────────────────── -->
-  <div class="divider">指示詞 · 代名詞</div>
-  <p class="cat-intro">こそあど 系統：離自己近、離對方近、兩邊都遠、疑問，四組一起記最省力。</p>
-
-  <ul class="lesson-list">
-    <li>
-      <a class="lesson-link" href="lessons/2026-07-29-kono-sono-ano.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 29</div>
-        <div class="lesson-title">この・その・あの <span class="arrow">→</span></div>
-        <div class="lesson-summary">指示連體詞，後面一定接名詞</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-07-29-koko-soko-asoko.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 29</div>
-        <div class="lesson-title">ここ・そこ・あそこ <span class="arrow">→</span></div>
-        <div class="lesson-summary">場所的指示詞</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-07-28-lesson8-kore-sore-are.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 07 / 28</div>
-        <div class="lesson-title">これ・それ・あれ <span class="arrow">→</span></div>
-        <div class="lesson-summary">事物的指示詞，可以單獨當主語</div>
-      </a>
-    </li>
-    <li>
-      <a class="lesson-link" href="lessons/2026-05-13-jinshou.html">
-        <div class="lesson-meta">文法 · Grammar · 2026 / 05 / 13</div>
-        <div class="lesson-title">人稱代名詞：わたし・あなた・あのひと <span class="arrow">→</span></div>
-        <div class="lesson-summary">日文為什麼常常把主語整個省略</div>
-      </a>
-    </li>
-  </ul>
-
-  <!-- ─────────────────────────────────────── -->
-  <div class="divider">音的規則</div>
-  <p class="cat-intro">嚴格說不算文法，但同樣是「規則」而不是「單字」，放在這裡一起查。</p>
+  <section class="book-part" id="appendix" data-tag="附錄" data-name="音的規則">
+  <div class="divider">附錄 · 音的規則</div>
+  <p class="book-part-intro">嚴格說不算文法，但同樣是規則：漢字的兩種讀法、月份的唸法、濁音和促音。<span class="n">共 3 課，照建議的閱讀順序排。</span></p>
 
   <ul class="lesson-list">
     <li>
@@ -527,6 +674,7 @@
       </a>
     </li>
   </ul>
+  </section>
 
 <site-footer></site-footer>
 </div>

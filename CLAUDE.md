@@ -21,6 +21,9 @@ There is no build, lint, or test step. Development workflow:
 ```
 index.html                       ← 首頁：calendar + log（棕色主題）
 shared.css                       ← 全站共用元件樣式（masthead/word-item/play-btn/...）
+grammar.html                     ← 文法書：64 篇文法課照學習順序排成十一章＋附錄（青碧，手寫）
+kamoku.html                      ← 課程：文法課以外的課分成五部（棕橘，手寫）
+js/book-data.js                  ← 兩本書的閱讀順序，build-book.mjs 從上面兩頁產生（產物）
 vocab.html                       ← 単語帳：全站單字索引（檢索），小豆色票，自動產生資料靠 build-vocab
 resources.html                   ← 資源入口，分四類：會話／多読（外部讀本清單）／速查表／練字帖（棕色主題）；
                                    **會話類一律置頂**，包在 `<section class="kaiwa">` 裡用金茶 #a9762a
@@ -37,13 +40,28 @@ images/epub/*.png                ← EPUB 用的いらすとや插圖（build-ep
 data/vocab*.json                 ← 単語帳資料（vocab.json／vocab-tags.json／vocab-extra.json），build-vocab.mjs 產出＋登記
 ```
 
-全站導覽列固定四個入口（2026-08-19 起）：文法（`grammar.html`）／漢字（`kanji.html`）／檢索（`vocab.html`）／資源（`resources.html`）。
+全站導覽列固定五個入口（2026-11-24 起）：文法（`grammar.html`）／課程（`kamoku.html`）／漢字（`kanji.html`）／檢索（`vocab.html`）／資源（`resources.html`）。
 自製迷你多読（`tadoku.html`、`tadoku/*`、`images/tadoku/`）已於 2026-11-24 整個刪除：只有三篇、兩篇跟會話課重複，質感不夠。7/28 搬家那課的完整對話搬回 [hikkoshi-kaiwa](lessons/2026-07-28-hikkoshi-kaiwa.html) 第十段；要撈舊版看 `git log -- tadoku/`。`resources.html` 的多読區只剩外部讀本清單「多読起步」。
 「關於我」（`my-name-katakana.html`）**已從導覽列移到頁尾**（`site-footer` 第一個連結）。
 
-`grammar.html` 是**手寫**的文法索引頁（不是產物），用**青碧／松葉綠**色票（2026-08-11 起，見下方色票表），按主題分七區：
-動詞・活用／形容詞／比較・最高級／助詞／副詞／指示詞・代名詞／音的規則。**新增文法課時要手動加一張卡進去**——
-它跟 `index.html` 的 log 是兩份清單，log 照日期、這裡照主題。
+### 兩本書：grammar.html（文法書）與 kamoku.html（課程）（2026-11-24 起）
+
+全站每一課都收進其中一本「書」，可以像讀書一樣從頭一篇一篇往下讀。兩頁都是**手寫**（不是產物），
+跟 `index.html` 的 log 是不同的清單：log 照日期，書照閱讀順序。
+
+| 書 | 收什麼 | 怎麼分 | 每段裡的順序 |
+|------|------|------|------|
+| `grammar.html` 文法書（青碧） | 文法課（index 掛 `grammar` class 的） | 十一章＋附錄：句子的骨架／這個那個／有和在／動詞和ます形／過去現在進行中／多常做做幾次／形容詞／比較和「最」／て形／た形／會做想做／附錄 音的規則 | **依賴關係**：先學、後面會用到的放前面（た形排在て形後面，因為變法一樣） |
+| `kamoku.html` 課程（棕橘） | 其他所有課 | 五部：假名／單字（一組一組的字）／說法（某件事怎麼說）／會話紀錄（會話課講過的事）／生活中的日文（菜單、傳單、廣播、店員） | **上課日期由舊到新**，新課接在該部最後面 |
+
+結構：開頭一個 `.book-toc` 目次（左邊膠囊標籤＋直線，右邊「名稱 …… N 課」＋一行說明），
+下面每章／部是一個 `<section class="book-part" id="..." data-tag="第四章" data-name="動詞和ます形">`，
+裡面一個 `.lesson-list`。樣式在 shared.css「書的目次與翻頁」那段，顏色跟著 `--accent`。
+
+**新增一課時**：把卡片貼進對應那一章／部的 `<ul>`（文法課照依賴關係找位置，其他課貼在該部最後），
+**再把目次那一列的「N 課」和段落開頭「共 N 課」各加一**。然後跑 `build-all.sh`——
+`build-book.mjs` 會把順序寫進 `js/book-data.js`，`js/site-chrome.js` 在每一課開頭插「文法書 · 第四章 … · 第 3 篇／共 11 篇 · 建議先讀」，
+底部插「上一篇／下一篇」，課程頁本身**不用手寫翻頁**。首頁 log 有、但兩本書都沒收的課，腳本會列警告。
 
 每個 HTML 都長同一個樣子：
 1. 自己的 `<style>` 裡只放 `:root` 色票（其餘版面交給 `shared.css`）
@@ -128,10 +146,12 @@ Calendar 會自動重算——`data-date` 提供即可，新月份不必動 cale
 
 **Step 5 — 確保 favicon link 存在**（特別是非複製 `lessons/_skeleton.html` 的手寫頁、或新類型的產生器頁）：最簡單做法是執行 `node scripts/add-favicon.mjs`（冪等，已有 `rel="icon"` 的頁會自動跳過；root 頁注入 `favicon.svg`、`lessons/`／`readings/` 注入 `../favicon.svg`）。favicon 功能已於 2026-05-17 完成（見 [docs/superpowers/specs/2026-05-17-favicon-design.md](docs/superpowers/specs/2026-05-17-favicon-design.md)），`_skeleton.html` 已內含該 link，但手寫新頁或新產生器樣板不會自動帶上。
 
+**Step 4.5 — 把卡片也貼進 `grammar.html` 或 `kamoku.html`**（見上面〈兩本書〉）。
+
 **Step 6 — 跑 `scripts/build-all.sh`**：一次跑完 `build-kanji.mjs`（重新產生 `kanji.html`、
 `js/kanji-data.js`、`js/kanji-index.js`，掃全站 `<ruby>` 標音）＋ `build-vocab.mjs`（重新產生
-`js/vocab-data.js`、`data/vocab.json`，掃全站單字卡），任一步失敗就中止。
-跟 `generate-audio.mjs` 同性質——內容改了就要重跑，產物 kanji／vocab **一起跟這次的課程 commit**。
+`js/vocab-data.js`、`data/vocab.json`，掃全站單字卡）＋ `build-book.mjs`（重新產生 `js/book-data.js`），任一步失敗就中止。
+跟 `generate-audio.mjs` 同性質——內容改了就要重跑，產物 kanji／vocab／book **一起跟這次的課程 commit**。
 （Anki 牌組功能已於 2026-11-23 移除，複習改用 `fukushuu`；要撈舊版看 `git log -- anki/`。）
 
 > 新單字沒登記 tag 時，`build-vocab.mjs` 會列警告（沒 tag 的字仍會產出，只是 vocab.html
@@ -234,7 +254,7 @@ Speed slider: `0.5x` to `1.2x`, default **`0.8x`** (slightly slower for learning
 | `grammar.html` ＋ 它收錄的文法課 | 青碧 / 松葉綠 | `#f2f7f0` | `#3f7a52` |
 | `vocab.html`（単語帳） | 小豆／海老茶 | `#fbf3f1` | `#96504b` |
 
-> **文法課用青碧色票**（2026-08-11 起）——`grammar.html` 索引頁，以及它 `<ul>` 裡收錄的每一篇
+> **文法課用青碧色票**（2026-08-11 起）——`grammar.html` 文法書，以及它收錄的每一篇
 > `lessons/*` 文法課，都換成青碧，進頁面一眼就知道「這篇在講規則」。
 > 檔案仍住在 `lessons/`，只有 `:root` 那行不一樣（註解寫「文法課 — 青碧／松葉綠色票」）。
 >

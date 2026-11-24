@@ -15,7 +15,8 @@ class SiteHeader extends HTMLElement {
     const prefix = siteChromePrefix();
     const home = isHomePage();
     // 目前頁面：導覽對應項高亮（用絕對 pathname 判斷，與 prefix 無關）
-    const isActive = (file) => location.pathname.endsWith('/' + file);
+    // 本機 serve 和 Cloudflare Pages 都會把 .html 拿掉，兩種網址都要認得
+    const isActive = (file) => location.pathname.endsWith('/' + file) || location.pathname.endsWith('/' + file.replace(/\.html$/, ''));
     // 首頁入口：家的圖示，收在導覽膠囊最左邊（Lucide house）
     const houseIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.2 12 3l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>`;
     const homeNav =
@@ -45,6 +46,7 @@ class SiteHeader extends HTMLElement {
           <nav class="site-nav">
             ${homeNav}
             ${navItem('grammar.html', '文法')}
+            ${navItem('kamoku.html', '課程')}
             ${navItem('kanji.html', '漢字')}
             ${navItem('vocab.html', '檢索')}
             ${navItem('resources.html', '資源')}
@@ -167,4 +169,49 @@ document.querySelectorAll('.speed-control').forEach(upgradeSpeedControl);
       document.head.appendChild(s);
     });
   load('js/kanji-index.js').then(() => load('js/kanji-link.js'));
+})();
+
+// ── 書的位置列與翻頁：課程頁開頭寫「在第幾章」，底部放上一篇／下一篇 ──
+// 資料由 scripts/build-book.mjs 從 grammar.html／kamoku.html 的順序產生（js/book-data.js）
+(function () {
+  if (!/\/lessons\//.test(location.pathname)) return;
+  const s = document.createElement('script');
+  s.src = '../js/book-data.js';
+  s.onload = renderBookNav;
+  document.head.appendChild(s);
+
+  function renderBookNav() {
+    const data = window.BOOK_DATA || {};
+    // 網址可能沒有 .html（本機 serve 會省略），兩種都試
+    const m = location.pathname.match(/\/(lessons\/[^/]+?)(\.html)?$/);
+    const b = m && data[m[1] + '.html'];
+    if (!b) return;
+    const esc = (t) => t.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const toc = `../${b.bookHref}#${b.partId}`;
+
+    // 開頭：在 .page-title（或第一個 h1）前面插一行
+    const where = document.createElement('div');
+    where.className = 'book-where';
+    where.innerHTML =
+      `<a href="../${b.bookHref}">${b.book}</a><span>·</span>` +
+      `<a class="bw-part" href="${toc}">${esc(b.part)}</a><span>·</span>` +
+      `<span>第 ${b.no} 篇／共 ${b.total} 篇</span>` +
+      (b.prev ? `<span class="bw-prev">建議先讀：<a href="../${b.prev.href}">${esc(b.prev.title)}</a></span>` : '');
+    const anchor = document.querySelector('.page-title') || document.querySelector('h1');
+    if (anchor) anchor.parentNode.insertBefore(where, anchor);
+
+    // 底部：上一篇／下一篇，放在 <site-footer> 前面
+    const card = (x, cls, kicker) =>
+      x ? `<a class="${cls}" href="../${x.href}"><span class="bp-kicker">${kicker}</span>` +
+          `<span class="bp-title">${esc(x.title)}</span><span class="bp-part">${esc(x.part)}</span></a>` : '';
+    const pager = document.createElement('nav');
+    pager.setAttribute('aria-label', '上一篇／下一篇');
+    pager.innerHTML =
+      `<div class="book-pager">${card(b.prev, 'bp-prev', '← 上一篇')}${card(b.next, 'bp-next', '下一篇 →')}</div>` +
+      `<div class="book-pager-toc"><a href="${toc}">回${esc(b.book)}目次</a></div>`;
+    const footer = document.querySelector('site-footer');
+    const wrap = document.querySelector('.wrap') || document.body;
+    if (footer) footer.parentNode.insertBefore(pager, footer);
+    else wrap.appendChild(pager);
+  }
 })();

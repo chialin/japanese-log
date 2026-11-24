@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>課程 · Lessons — 假名、單字、說法、會話、生活</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+/* 課程頁 — 跟一般課程同一組棕橘色票 */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<script src="js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">課 <span class="accent">程</span></h1>
+  <div class="page-meta">課程 · Lessons</div>
+  <p class="page-subtitle">假名、單字、說法、會話、生活 — 照類別一篇一篇讀</p>
+
+  <p style="color:var(--ink-soft);font-size:14px;line-height:1.8;margin-bottom:6px;">
+    這裡收的是<strong>文法課以外</strong>的每一課，分成五部。每一部照上課日期由舊到新排，從第一篇開始往下讀，
+    每一課最下面都有「上一篇／下一篇」可以接著讀。文法課在<a href="grammar.html" style="color:var(--accent);">文法</a>那一頁，照日期排的完整紀錄在<a href="index.html" style="color:var(--accent);">首頁的 log</a>。
+  </p>
+
+  <nav class="book-toc" aria-label="目次">
+    <div class="book-toc-title">目 次</div>
+    <div class="book-toc-path">
+      <a class="book-toc-row" href="#kana">
+        <span class="book-toc-tag">第一部</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">假名<small>かな</small></span><span class="book-toc-dots"></span><span class="book-toc-n">24 課</span></div>
+          <div class="book-toc-sub">平假名、片假名一行一行學，加上字源、筆順和容易搞混的字。剛開始的五十音都在這裡。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#tango">
+        <span class="book-toc-tag">第二部</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">單字<small>たんご</small></span><span class="book-toc-dots"></span><span class="book-toc-n">27 課</span></div>
+          <div class="book-toc-sub">一組一組的單字：數字、顏色、方向、時間詞，還有一個字一課的「物」「本」。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#iikata">
+        <span class="book-toc-tag">第三部</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">說法<small>いいかた</small></span><span class="book-toc-dots"></span><span class="book-toc-n">16 課</span></div>
+          <div class="book-toc-sub">某件事要怎麼說：問路、問人有沒有空、身體不舒服、打招呼。一課學一種說法。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#kaiwa">
+        <span class="book-toc-tag">第四部</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">會話紀錄<small>かいわ</small></span><span class="book-toc-dots"></span><span class="book-toc-n">24 課</span></div>
+          <div class="book-toc-sub">會話課上自己講過的事，整理成一篇一篇。照日期讀下來，就是這段時間的生活。</div>
+        </div>
+      </a>
+      <a class="book-toc-row" href="#seikatsu">
+        <span class="book-toc-tag">第五部</span>
+        <div class="book-toc-body">
+          <div class="book-toc-line"><span class="book-toc-name">生活中的日文<small>せいかつ</small></span><span class="book-toc-dots"></span><span class="book-toc-n">21 課</span></div>
+          <div class="book-toc-sub">在日本生活遇到的真實文字：菜單、傳單、車站廣播、店員講的話、銀行 App。</div>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="kana" data-tag="第一部" data-name="假名">
+  <div class="divider">第一部 · 假名</div>
+  <p class="book-part-intro">平假名、片假名一行一行學，加上字源、筆順和容易搞混的字。剛開始的五十音都在這裡。<span class="n">共 24 課，照上課日期由舊到新。</span></p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-04-29-a-row.html">
+        <div class="lesson-meta">假名 · 2026 / 04 / 29</div>
+        <div class="lesson-title">あ行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">あ・い・う・え・お，五十音の起點，五個基本母音</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-04-30-ka-row.html">
+        <div class="lesson-meta">假名 · 2026 / 04 / 30</div>
+        <div class="lesson-title">か行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">か・き・く・け・こ，第一個子音行</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-01-sa-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 01</div>
+        <div class="lesson-title">さ行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">さ・し・す・せ・そ，注意 し＝shi 的特殊發音</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-02-ta-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 02</div>
+        <div class="lesson-title">た行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">た・ち・つ・て・と，注意 ち＝chi、つ＝tsu 的特殊發音</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-03-na-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 03</div>
+        <div class="lesson-title">な行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">な・に・ぬ・ね・の，配上 いぬ、あに、あね 等單字</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-04-ha-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 04</div>
+        <div class="lesson-title">は行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">は・ひ・ふ・へ・ほ，含助詞は的特殊發音 wa、單字與句子</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-04-kana.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 04</div>
+        <div class="lesson-title">假名是什麼？平假名 vs 片假名 <span class="arrow">→</span></div>
+        <div class="lesson-summary">仮名（かな）的概念、平假名與片假名的差異與用途對照</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-05-ma-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 05</div>
+        <div class="lesson-title">ま行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ま・み・む・め・も + 單字與句子</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-06-ya-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 06</div>
+        <div class="lesson-title">や行三音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">や・ゆ・よ + 單字與句子</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-07-ra-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 07</div>
+        <div class="lesson-title">ら行五音 + 單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ら・り・る・れ・ろ + 單字與句子</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-08-wa-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 08</div>
+        <div class="lesson-title">わ行 + ん（わ・を・ん） <span class="arrow">→</span></div>
+        <div class="lesson-summary">五十音表最後三個音：わ、助詞 を、撥音 ん — 平假名基本 46 音到此完成</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-14-katakana-a-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 14</div>
+        <div class="lesson-title">片假名 ア行（ア・イ・ウ・エ・オ） <span class="arrow">→</span></div>
+        <div class="lesson-summary">開始學片假名！五個母音對照平假名 あいうえお，含 アイス・アメリカ 等外來語</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-15-katakana-ka-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 15</div>
+        <div class="lesson-title">片假名 カ行（カ・キ・ク・ケ・コ） <span class="arrow">→</span></div>
+        <div class="lesson-summary">片假名第二行 — 對照 か行平假名，含 カメラ・ケーキ・コーヒー 等外來語</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-17-hiragana-jigen.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 17</div>
+        <div class="lesson-title">平假名 字源 × 筆順 <span class="arrow">→</span></div>
+        <div class="lesson-summary">每個平假名來自哪個漢字草書 ＋ 筆順</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-17-katakana-jigen.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 17</div>
+        <div class="lesson-title">片假名 字源 × 筆順 <span class="arrow">→</span></div>
+        <div class="lesson-summary">每個片假名取自哪個漢字部件 ＋ 筆順</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-18-katakana-sa-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 18</div>
+        <div class="lesson-title">片假名 サ行 + 外來語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">サ・シ・ス・セ・ソ + サラダ・シール・スープ・セーター・ソファ</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-23-katakana-ta-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 23</div>
+        <div class="lesson-title">片假名 タ行 + 外來語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">タ・チ・ツ・テ・ト + タオル・チーズ・ツナ・テレビ・トマト</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-24-katakana-na-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 24</div>
+        <div class="lesson-title">片假名 ナ行 + 外來語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ナ・ニ・ヌ・ネ・ノ + ナイフ・ニュース・ヌードル・ネクタイ・ノート</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-24-katakana-ha-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 24</div>
+        <div class="lesson-title">片假名 ハ行 + 外來語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ハ・ヒ・フ・ヘ・ホ + ハム・ヒント・フルーツ・ヘルメット・ホテル</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-25-katakana-ma-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 25</div>
+        <div class="lesson-title">片假名 マ行 + 外來語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">マ・ミ・ム・メ・モ + マスク・ミルク・ムード・メール・モデル</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-26-katakana-ya-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 26</div>
+        <div class="lesson-title">片假名 ヤ行 + 外來語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ヤ・ユ・ヨ（只有三個音）+ ヤクルト・ユーロ・ヨガ</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-27-katakana-ra-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 27</div>
+        <div class="lesson-title">片假名 ラ行 + 外來語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ラ・リ・ル・レ・ロ + ラジオ・リボン・ルール・レモン・ロボット</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-28-katakana-wa-row.html">
+        <div class="lesson-meta">假名 · 2026 / 05 / 28</div>
+        <div class="lesson-title">片假名 ワ行 + ン <span class="arrow">→</span></div>
+        <div class="lesson-summary">ワ・ヲ・ン（基本清音最後三格）+ ワイン・ペン・パン・ラーメン</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-23-katakana-similar.html">
+        <div class="lesson-meta">假名 · 2026 / 06 / 23</div>
+        <div class="lesson-title">片假名 易混淆 7 組 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ウ／ク／タ・ヲ／フ／ユ・マ／ム・コ／ロ／ヨ・シ／ツ・ソ／ン・チ／テ — 想像圖對照</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="tango" data-tag="第二部" data-name="單字">
+  <div class="divider">第二部 · 單字</div>
+  <p class="book-part-intro">一組一組的單字：數字、顏色、方向、時間詞，還有一個字一課的「物」「本」。<span class="n">共 27 課，照上課日期由舊到新。</span></p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-03-numbers.html">
+        <div class="lesson-meta">單字 · 2026 / 05 / 03</div>
+        <div class="lesson-title">數字 1–10 <span class="arrow">→</span></div>
+        <div class="lesson-summary">いち到じゅう，注意 4/7/9 有兩種念法</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-04-seasons.html">
+        <div class="lesson-meta">單字 · 2026 / 05 / 04</div>
+        <div class="lesson-title">春夏秋冬 <span class="arrow">→</span></div>
+        <div class="lesson-summary">はる・なつ・あき・ふゆ + 喜歡的用法</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-08-uchi-ya-ie.html">
+        <div class="lesson-meta">單字 · 2026 / 05 / 08</div>
+        <div class="lesson-title">うち · いえ · や 三種「家」 <span class="arrow">→</span></div>
+        <div class="lesson-summary">三個都跟「家」有關的詞如何分辨：うち（我家）、いえ（房子）、〜や（店／字尾）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-13-onyomi-sensei.html">
+        <div class="lesson-meta">單字 · 2026 / 05 / 13</div>
+        <div class="lesson-title">音讀入門：先生・學生・會社員 <span class="arrow">→</span></div>
+        <div class="lesson-summary">同字共音的規律 — 「生」念 せい，記一次三個詞都會念；附「先生」與「会社員」的用法</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-01-directions.html">
+        <div class="lesson-meta">單字 · 2026 / 06 / 01</div>
+        <div class="lesson-title">方向のことば <span class="arrow">→</span></div>
+        <div class="lesson-summary">東・西・南・北・左・右 + 常用例句</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-09-food-drinks.html">
+        <div class="lesson-meta">單字 · 2026 / 06 / 09</div>
+        <div class="lesson-title">食材と飲み物 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ほうれんそう・ぶどう・たまご・ぎゅうにゅう・コーヒー・オーツラテ</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-22-hiru.html">
+        <div class="lesson-meta">單字 · 2026 / 06 / 22</div>
+        <div class="lesson-title">昼（ひる）の三つの意味 <span class="arrow">→</span></div>
+        <div class="lesson-summary">白天・中午・正午——同一個字的三種語境</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-27-vocab-shopping.html">
+        <div class="lesson-meta">單字 · 2026 / 06 / 27</div>
+        <div class="lesson-title">今日の単語 — 読む・注文・旬・送料・パソコン <span class="arrow">→</span></div>
+        <div class="lesson-summary">5 個日常高頻單字：パソコン（電腦）・読む（閱讀）・注文（點餐/下訂）・旬（當季）・送料（運費）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-12-colors-asagohan.html">
+        <div class="lesson-meta">單字 · 2026 / 07 / 12</div>
+        <div class="lesson-title">今日の単語 — 色と朝 <span class="arrow">→</span></div>
+        <div class="lesson-summary">今天學的 7 個單字：どういたしまして・雨・朝ご飯・赤・白・青・黒</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-27-kau-yomu-kiku.html">
+        <div class="lesson-meta">單字 · 2026 / 07 / 27</div>
+        <div class="lesson-title">今日の動詞 買います・読みます・聞きます <span class="arrow">→</span></div>
+        <div class="lesson-summary">名詞 紙・かばん ＋ ます形動詞 読みます・買います・聞きます（音楽を聞きます）＋「名詞を動詞ます」例句 紙を買います・かばんを買います</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-03-su-shi-se-vocab.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 03</div>
+        <div class="lesson-title">基礎生活單字與年齡時間問句 — 酢・寿司・塩・18歳・20歳 <span class="arrow">→</span></div>
+        <div class="lesson-summary">整理今日學習單字（酢・寿司・砂・仕事・塩・砂糖・背中・先生・世界）、18歲（じゅうはっさい促音）與20歲（はたち）特別讀法、時間與星期問句</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-03-colors.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 03</div>
+        <div class="lesson-title">色のまとめ — 綠色與日文常見顏色彙整 <span class="arrow">→</span></div>
+        <div class="lesson-summary">從新單字「緑（みどり）」延伸整理日文常見 10 種顏色、名詞形與い形容詞形修飾差異，以及日本「青信号（綠燈）」文化小知識</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-05-hinichi.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 05</div>
+        <div class="lesson-title">日にち — 1日〜31日的唸法 <span class="arrow">→</span></div>
+        <div class="lesson-summary">ついたち・ふつか…とおか 的特殊唸法 ＋ 14/20/24 三個例外 ＋ 規則型〜にち，附踩雷點速記表與小測驗</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-11-jikan-kotoba.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 11</div>
+        <div class="lesson-title">時間詞：き系與あ系 <span class="arrow">→</span></div>
+        <div class="lesson-summary">昨日・今日（き系＝已發生）vs 明日・明後日（あ系＝未發生），五個字兩組記；再接週月年的先／今／来三前綴</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-14-ne-no-tango.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 14</div>
+        <div class="lesson-title">ね・の 開頭的單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">葱・熱・糊・喉・野原 五個短詞；熱（ねつ）名詞與 熱い／暑い 兩個形容詞怎麼分，還有「熱があります」＝發燒</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-14-basho-mono-tango.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 14</div>
+        <div class="lesson-title">場所と物の単語 ＋ 雨が降る <span class="arrow">→</span></div>
+        <div class="lesson-summary">部屋・時計・冷蔵庫・食堂・公園・ベンチ・庭・牛乳，音讀對台語的四個字，以及「下雨」為什麼用 降る</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-16-reji-renji.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 16</div>
+        <div class="lesson-title">レジ と レンジ <span class="arrow">→</span></div>
+        <div class="lesson-summary">差一個ン就從收銀台變微波爐；片假名 ン／ソ 的分辨法、疊字符號「々」與連濁（時々），以及單字 長い・短い</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-16-dansei-josei.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 16</div>
+        <div class="lesson-title">男性・女性・男の子・女の子 <span class="arrow">→</span></div>
+        <div class="lesson-summary">指人的四組說法與各自的語感差別，男性／女性三個漢字全對得上台語；句型練「あの男性は誰ですか」</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-16-he-tango.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 16</div>
+        <div class="lesson-title">へ 開頭的單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">蛇・部屋・返事＋返信・返品，部屋的「部」為什麼不唸 ぶ；助詞 へ 唸 e 的對照，加上猿與「山に猿がいません」</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-16-fu-tango.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 16</div>
+        <div class="lesson-title">ふ 開頭的單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">船・蓋・服 三個詞剛好三種重音型；ふ 的嘴型不是英文 f，還有跟 服 同音不同調的動詞 吹く</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-19-hon.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 19</div>
+        <div class="lesson-title">「本」到底是什麼意思 <span class="arrow">→</span></div>
+        <div class="lesson-summary">本的原義是樹根不是書；本棚（書架）・本まぐろ（黑鮪魚）・本島（主島）・本日（今天）四種用法一次分清，外加量詞〜本 的 ぽん／ぼん 變化</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-22-shiasatte.html">
+        <div class="lesson-meta">單字 · 2026 / 08 / 22</div>
+        <div class="lesson-title">從大前天到大後天 <span class="arrow">→</span></div>
+        <div class="lesson-summary">以今天為中心，前後各三天的說法一次補齊。兩頭那兩個長字其實是拼出來的（さき＋おととい／し＋あさって），另外談 あさって 的停頓為什麼不能省、這些字後面為什麼不加 に，以及しあさって 各地說法不一樣這件事</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-10-mono.html">
+        <div class="lesson-meta">單字 · 2026 / 10 / 10</div>
+        <div class="lesson-title">「物」的詞 <span class="arrow">→</span></div>
+        <div class="lesson-summary">食べ物・飲み物・買い物・乗り物：ます形去掉ます＋物；果物＝く（樹）＋だ（的）＋もの，跟 獣（けだもの）同結構；木 唸 こ 的詞；物 在 動物・荷物 唸 ぶつ・もつ</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-13-tsuri-kyanpu-suizokukan.html">
+        <div class="lesson-meta">單字 · 2026 / 10 / 13</div>
+        <div class="lesson-title">釣り・キャンプ・水族館 <span class="arrow">→</span></div>
+        <div class="lesson-summary">旅行時想做的事：釣り・キャンプ・水族館・お好み焼き；水族館＝水曜日＋家族＋図書館、好 唸 この；〜たい／〜に行きます／〜たことがありません 造句</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-27-hantaigo.html">
+        <div class="lesson-meta">單字 · 2026 / 10 / 27</div>
+        <div class="lesson-title">形容詞的反義詞 <span class="arrow">→</span></div>
+        <div class="lesson-summary">広い↔狭い、汚い↔きれい、高い↔低い、長い↔短い；身高頭髮要說 背が高い・髪が長い；きれい 是な形容詞（きれいな部屋・きれいじゃない）；高い 講價錢反義是 安い、薄い 講味道反義是 濃い、暑い↔寒い vs 熱い↔冷たい；另附大小輕重新舊遠近等常用反義詞</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-03-hiroba-noboriguchi.html">
+        <div class="lesson-meta">單字 · 2026 / 11 / 03</div>
+        <div class="lesson-title">場所を紹介します — 広場・登り口・下り口 <span class="arrow">→</span></div>
+        <div class="lesson-summary">場所・紹介・広場・登る・登り口・下り口；唸起來像的字串成一組（広い＋場所＝広場、ます形去ます＋口＝登り口・入り口）；山に登ります vs 階段を登ります；下りる 與 降りる</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-09-sagasu-mitsukeru.html">
+        <div class="lesson-meta">單字 · 2026 / 11 / 09</div>
+        <div class="lesson-title">探す vs 見つける — 「找」和「找到」 <span class="arrow">→</span></div>
+        <div class="lesson-summary">探す＝找（過程）、見つける＝找到（結果）；どこで電池を見つけましたか；ずっと探しています → 見つけました！；沒找到要說 見つかりませんでした；ずっと 的「一直」vs「〜得多」</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="iikata" data-tag="第三部" data-name="說法">
+  <div class="divider">第三部 · 說法</div>
+  <p class="book-part-intro">某件事要怎麼說：問路、問人有沒有空、身體不舒服、打招呼。一課學一種說法。<span class="n">共 16 課，照上課日期由舊到新。</span></p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-02-ashita.html">
+        <div class="lesson-meta">說法 · 2026 / 05 / 02</div>
+        <div class="lesson-title">あした + 句子 <span class="arrow">→</span></div>
+        <div class="lesson-summary">あした、またあした、あしたね 等實用表達</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-24-aisatsu.html">
+        <div class="lesson-meta">說法 · 2026 / 06 / 24</div>
+        <div class="lesson-title">あいさつ 問候 <span class="arrow">→</span></div>
+        <div class="lesson-summary">從早到晚的日常問候 — おはよう・こんにちは・こんばんは・おやすみ・ありがとう・すみません・はじめまして</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-14-classroom-vocab.html">
+        <div class="lesson-meta">說法 · 2026 / 07 / 14</div>
+        <div class="lesson-title">今日の単語 — 教室のことば <span class="arrow">→</span></div>
+        <div class="lesson-summary">今天學的 7 個詞：質問はありますか・くりかえしてください・正解・家・いいえ・椅子・犬</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-20-pair-aisatsu.html">
+        <div class="lesson-meta">說法 · 2026 / 07 / 20</div>
+        <div class="lesson-title">今日の単語 — ペアのあいさつ <span class="arrow">→</span></div>
+        <div class="lesson-summary">成對記的句子：聞こえますか・見えますか・ありません＋うちのあいさつ六句＋「〜てください」句型解剖</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-04-onaka-suita.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 04</div>
+        <div class="lesson-title">お腹が空いた — 身體狀態怎麼講 <span class="arrow">→</span></div>
+        <div class="lesson-summary">が 的主格用法、空いた vs 空きました（常體／丁寧體）、為什麼用過去式 ＋ 疲れた・のどが渇いた・ぺこぺこ</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-05-doko.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 05</div>
+        <div class="lesson-title">どこですか — 問路與交通工具 <span class="arrow">→</span></div>
+        <div class="lesson-summary">〜はどこですか（郵便局・駅・トイレ）＋ バスに乗ります 的 に（不是を）＋ 頻率副詞 よく／時々</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-05-renshuu-kaiwa.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 05</div>
+        <div class="lesson-title">練習と会話 — 週に2、3回 <span class="arrow">→</span></div>
+        <div class="lesson-summary">練習・会話・あとで ＋ 頻率說法「期間に〜回」（に 的第四種用法）＋ た 開頭單字 卵・滝・田んぼ ＋ 筆・教会</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-06-soko-wa-desu-yo.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 06</div>
+        <div class="lesson-title">そこは〜ですよ — 評論一個地方 <span class="arrow">→</span></div>
+        <div class="lesson-summary">そこは〜ですよ ＋ 高い・安い・寒い・暑い・近い・遠い ＋ つ 開頭單字 釣り・爪・机</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-07-kankouchi-he.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 07</div>
+        <div class="lesson-title">観光地へ行きます <span class="arrow">→</span></div>
+        <div class="lesson-summary">場所＋へ／に（へ 唸 e）＋ 山・観光地・温泉 的高低アクセント ＋ 一緒 vs 同じ ＋ 首・手首・足首 ＋ 観光地 vs 看護師 辨音</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-11-masu-kei-tango.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 11</div>
+        <div class="lesson-title">助詞「を」：動作的對象 <span class="arrow">→</span></div>
+        <div class="lesson-summary">を 標受詞（私は映画を見ます）；同時把 買う→買います、行く→行きます 的マス形走一遍，新單字 鳥・門・扉・名前・涙・映画</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-19-naka.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 19</div>
+        <div class="lesson-title">XはYの中です <span class="arrow">→</span></div>
+        <div class="lesson-summary">位置詞換成「中」的五個句子，加上パジャマ・洗濯機・冷蔵庫・下駄箱 等八個生活名詞；順便解決兩個唸起來跟寫的不一樣的字（れーぞーこ／せんたっき）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-25-masen-tango.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 25</div>
+        <div class="lesson-title">ませんの文と単語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">兩個新的 ません 例句剛好對照助詞：写真を撮ります 用 を、親に会います 用 に；再拆解老師開場那句「昨日の続きをします」，剩下的生字收成一組——冷たい 與相對的 温かい・ぬるい，長得很像的 恥ずかしい 與 難しい</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-26-aite-imasu.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 26</div>
+        <div class="lesson-title">空いていますか — 問人有沒有空 <span class="arrow">→</span></div>
+        <div class="lesson-summary">約時間常連著問的三句：平日は仕事ですか／午前は空いていますか／午後は忙しいですか。句尾要不要加 です 看的是詞性，動詞的 ます 已經有禮貌就不能再疊；順帶拆開 空く＋て形＋います 的「狀態還留著」用法</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-28-ha-o-migakimasu.html">
+        <div class="lesson-meta">說法 · 2026 / 08 / 28</div>
+        <div class="lesson-title">歯を磨きます — 誰做什麼的三個句子 <span class="arrow">→</span></div>
+        <div class="lesson-summary">私は歯を磨きます／彼は車を運転します／彼女は料理を作ります 三句同一個骨架，順著把 磨く→磨きます、作る→作ります、運転する→運転します 三種變法看過一遍；並釐清什麼時候該配 します、什麼時候動詞自己變</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-27-tsukiatte-imasu.html">
+        <div class="lesson-meta">說法 · 2026 / 10 / 27</div>
+        <div class="lesson-title">付き合っています <span class="arrow">→</span></div>
+        <div class="lesson-summary">映画を見ています（正在做）vs 彼女と付き合っています（持續的狀態）、結婚しています；付き合う → 付き合って（う→って、促音五拍）；三種用法：人＋と交往、事情＋に陪、跟鄰居相處；研究所＝大学院</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-03-aku-suku.html">
+        <div class="lesson-meta">說法 · 2026 / 11 / 03</div>
+        <div class="lesson-title">空いています — あいて 和 すいて <span class="arrow">→</span></div>
+        <div class="lesson-summary">同一個 空く 兩種讀音：あく＝沒被佔用（午前は空いていますか、席が空いています），すく＝人少不擠（反義 混む、お腹が空きました）；開く 也唸 あく</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="kaiwa" data-tag="第四部" data-name="會話紀錄">
+  <div class="divider">第四部 · 會話紀錄</div>
+  <p class="book-part-intro">會話課上自己講過的事，整理成一篇一篇。照日期讀下來，就是這段時間的生活。<span class="n">共 24 課，照上課日期由舊到新。</span></p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-10-jikoshoukai.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 07 / 10</div>
+        <div class="lesson-title">初めまして 自己紹介 <span class="arrow">→</span></div>
+        <div class="lesson-summary">口語課第一堂：自我介紹、住的地方、學日文的理由、問答句型 11 句</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-21-kaiwa-aisatsu.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 07 / 21</div>
+        <div class="lesson-title">口語練習 単語と挨拶 <span class="arrow">→</span></div>
+        <div class="lesson-summary">今日の口語課：海・上・牛 讀音複習＋問候語六句＋拆解「お久しぶりです」的「久」訓讀與送假名</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-22-tabemashita.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 07 / 22</div>
+        <div class="lesson-title">口語練習 食べました <span class="arrow">→</span></div>
+        <div class="lesson-summary">今日の口語課：ます→ました 過去形＋常體「食べた」的分工＋「何を食べましたか」問答＋牛的平板重音＋え／えい 長音之別</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-23-kaiwa.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 07 / 23</div>
+        <div class="lesson-title">口語練習 その他 <span class="arrow">→</span></div>
+        <div class="lesson-summary">今日の口語課その他：名字＋さん（外國名寫片假名・不加在自己身上）＋知ってます 口語省略い＋否定跳「知りません」＋期間 〜か月（三か月＝さんかげつ）與促音</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-23-shokugyou.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 07 / 23</div>
+        <div class="lesson-title">彼は消防士です — 職業 <span class="arrow">→</span></div>
+        <div class="lesson-summary">用「A は B です」介紹別人的職業：消防士・先生・保育士・警察官＋助詞 は 唸 wa＋國名＋人（じん）講國籍「台湾人」</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-24-shokugyou-shitsumon.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 07 / 24</div>
+        <div class="lesson-title">彼はプログラマーですか — 職業を尋ねる <span class="arrow">→</span></div>
+        <div class="lesson-summary">今日の口語課：昨天的「A は B です」句尾加 か 變問句「A は B ですか？」＋新職業 美容師・歌手・バリスタ・プログラマー・看護師（外來語寫片假名）＋日常名詞 親・お菓子・お金（お 接頭語）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-28-hikkoshi-kaiwa.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 07 / 28</div>
+        <div class="lesson-title">日本に引っ越ししました — 近況を話す <span class="arrow">→</span></div>
+        <div class="lesson-summary">おかえりなさい／ただいま（不只用在家，視訊課也能用）＋ 辭職・搬家・幾時（３か月前）＋ 助詞 や／か ＋ 夫vsご主人 ＋ 方位 北南東西 ＋ き・く 單字整理 ＋ 色 黄色・黒・青</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-29-hirugohan-chazuke.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 07 / 29</div>
+        <div class="lesson-title">口語練習 昼ごはんとお茶漬け <span class="arrow">→</span></div>
+        <div class="lesson-summary">今日の口語課：天氣熱（暑いですから）在家做午餐・二人でいっしょに作りました・野菜と魚とごはん・お茶漬けが好きです・かんたんです ＋ 因果句型 〜から/ですから ＋ 助詞 で / と / が</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-02-manga-event.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 08 / 02</div>
+        <div class="lesson-title">週末行動與過去式 — 夫と漫画のイベントに行きました <span class="arrow">→</span></div>
+        <div class="lesson-summary">對話整理：昨日は何をしましたか？・夫と漫画のイベントに行きました・おもしろかったです・私は普通日本の漫画を読みます ＋ 核心文法：過去式詢問與回答（助詞 と / に / を）、い形容詞過去形（〜かったです）、日常習慣表達（普通）＋ 單字表與自我測驗</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-03-kaiwa-seikatsu.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 08 / 03</div>
+        <div class="lesson-title">日本生活、氣候與近期讀書 — 日本の生活・天気と読書 <span class="arrow">→</span></div>
+        <div class="lesson-summary">對話整理：聊聊日本生活適應（慣れましたか）、文化衝擊（カルチャーショック）、天氣過去式（一昨日は雨が降りましたから、涼しかったです）與最近閱讀的書籍（金庸、台湾漫遊鉄道のふたり、絵本、Tadoku） ＋ 核心單字與句型拆解</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-21-bouldering-kaiwa.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 08 / 21</div>
+        <div class="lesson-title">ボルダリングの話 <span class="arrow">→</span></div>
+        <div class="lesson-summary">室內抱石會話紀錄：怎麼描述自己的抱石習慣——多久去一次、跟誰去、場地長什麼樣、會費怎麼付；ボルダリングジム・壁・種類・登ります・疲れます 等 19 個生字排在後面逐字拆</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-24-yotei-washoku.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 08 / 24</div>
+        <div class="lesson-title">明日、予定がありますか <span class="arrow">→</span></div>
+        <div class="lesson-summary">約人吃飯的一段對話，從問行程開始：予定がありますか／ありません、〜ませんか 的邀約，再到和食與洋食怎麼分（洋食不等於西餐），順帶收 たくさん 的用法</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-09-02-taiwan-ni-kaerimasu.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 09 / 02</div>
+        <div class="lesson-title">台湾に帰ります — 回台灣要見的人與要帶的伴手禮 <span class="arrow">→</span></div>
+        <div class="lesson-summary">兄弟・姉妹・姉 自己家與別人家分兩套講法，親と一緒に（同行者）跟 親に会います（見面對象）的助詞差別，明太子借自韓語 명태 的來歷，以及 鮭・おにぎり・財布・漫画・ユーチューブ・掃除・九州 一組生字</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-09-23-tomodachi-douryou-kaiwa.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 09 / 23</div>
+        <div class="lesson-title">友達と元同僚の話 — 久しぶりの再会 <span class="arrow">→</span></div>
+        <div class="lesson-summary">記錄與「高校の時の友達」（高中朋友）以及「会社の元同僚」（前同事）見面聊天的日常對話；拆解如何用日文描述過去的社交活動（〜と話しました、〜と会いました），並介紹接頭詞「元（もと）」與時期修飾「〜の時の〜」的用法</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-05-tsugi-wa-ichikara.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 10 / 05</div>
+        <div class="lesson-title">次は1辛にします — 比較、辣度與點餐的決定 <span class="arrow">→</span></div>
+        <div class="lesson-summary">聊外食（がいしょく）與咖哩店的對話：吉祥寺の方が美味しい 用 〜の方が（＋より）比較兩家店，辛さ 是 辛い 去い加さ的名詞，0.5辛・1辛 的 辛 唸 から，少し辛い，以及做決定的 次は1辛にします 和 次回／次 的差別</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-09-techou-kakeibo.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 10 / 09</div>
+        <div class="lesson-title">新しい手帳を買いました <span class="arrow">→</span></div>
+        <div class="lesson-summary">手帳・見せてください・合計で6000円・ハンコ／スタンプ；家計簿をつける（記帳用 つける）、大変（辛苦）與 面倒（麻煩）的差別、3キロ増えました</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-12-aomori-kouyou-kaiwa.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 10 / 12</div>
+        <div class="lesson-title">水曜日は青森に行きます <span class="arrow">→</span></div>
+        <div class="lesson-summary">話題・トピック「毎日考えること」；疲れました 與 疲れていました 的時間點、行っていました＝以前的習慣、主人と友達と一緒に；中文「楓葉」日文說 紅葉（こうよう／もみじ）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-21-jimu-kafe-kaiwa.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 10 / 21</div>
+        <div class="lesson-title">ジムとカフェに行きました <span class="arrow">→</span></div>
+        <div class="lesson-summary">前一天去抱石的健身房和咖啡廳；ので／から 講原因、混んでいなかった＝混んでいる 的過去否定、並んだ vs 並んでいた、小さいカフェです、歩いて行きます／走って行きます（走る＝跑）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-29-atarashii-kutsu.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 10 / 29</div>
+        <div class="lesson-title">新しい靴を買いました <span class="arrow">→</span></div>
+        <div class="lesson-summary">會話：買了新的抱石鞋；穿鞋用 履く、穿上衣用 着る；柔らかくて（い→くて，いい→よくて）；きついし、痛いし 的 し 列理由；いつもの靴より小さい／のほうが；上級者は半年で替えます、初級は2～3年以上</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-03-bunka-no-hi-bouldering.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 11 / 03</div>
+        <div class="lesson-title">文化の日はボルダリングのイベント <span class="arrow">→</span></div>
+        <div class="lesson-summary">會話：11/3 抱石館的活動；祝日・平日（日＝じつ）；12時から3時半まで；なので 說原因、相反用 が；見られます（不說 見れます）；参加したいです</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-09-kyuu-ni-samuku.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 11 / 09</div>
+        <div class="lesson-title">急に寒くなりましたね <span class="arrow">→</span></div>
+        <div class="lesson-summary">會話：天氣突然變冷、家人感冒；風邪をひく・ひいてないです・うつる・別々にします・分けます；急 的兩種唸法（きゅう／いそぐ）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-09-toshokan-ehon.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 11 / 09</div>
+        <div class="lesson-title">図書館で絵本を借りました <span class="arrow">→</span></div>
+        <div class="lesson-summary">會話：週末去圖書館辦卡借書；〜てくれました（別人為我做）、冊 的唸法（一冊 いっさつ・何冊）、選ぶ→選びました</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-22-fuyu-no-heya.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 11 / 22</div>
+        <div class="lesson-title">部屋は暖かいです <span class="arrow">→</span></div>
+        <div class="lesson-summary">會話：冬天的房間；13度・日光が入る・電気毛布・エアコンをつけます・加湿器・クリームを塗ります；暖かい vs 温かい、乾燥します vs 乾燥しています、風邪をひきやすい（ます形＋やすい）</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-11-23-kankoku-ryouri.html">
+        <div class="lesson-meta">會話紀錄 · 2026 / 11 / 23</div>
+        <div class="lesson-title">韓国料理を食べました <span class="arrow">→</span></div>
+        <div class="lesson-summary">會話：健身房之後去大久保吃韓國料理；駅の近く・ジムからレストランまで歩いて10分ぐらい・鶏肉と高麗人参が入っていました・お皿が四つ・辛くないです；人参＝紅蘿蔔、中文的人參是 高麗人参</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────── -->
+  <section class="book-part" id="seikatsu" data-tag="第五部" data-name="生活中的日文">
+  <div class="divider">第五部 · 生活中的日文</div>
+  <p class="book-part-intro">在日本生活遇到的真實文字：菜單、傳單、車站廣播、店員講的話、銀行 App。<span class="n">共 21 課，照上課日期由舊到新。</span></p>
+
+  <ul class="lesson-list">
+    <li>
+      <a class="lesson-link" href="lessons/2026-05-22-katakana-menu.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 05 / 22</div>
+        <div class="lesson-title">菜單上的片假名 — とんかつ屋 <span class="arrow">→</span></div>
+        <div class="lesson-summary">從一張豬排定食菜單學外來語 — ランチ・ロース・ポーク・カレー・フライ 等 17 個單字</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-03-yucho-app.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 03</div>
+        <div class="lesson-title">ゆうちょ單字 <span class="arrow">→</span></div>
+        <div class="lesson-summary">通帳・認証・新規・申し込み・アプリ + 實用語句</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-14-hakkoubi-youbi.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 14</div>
+        <div class="lesson-title">発行日と曜日 <span class="arrow">→</span></div>
+        <div class="lesson-summary">発行日・年・月・日 ＋ 月〜日曜日</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-16-tennai-mochikaeri.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 16</div>
+        <div class="lesson-title">店内 or 持ち帰り <span class="arrow">→</span></div>
+        <div class="lesson-summary">內用還是外帶 — 結帳必聽的問句與回答</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-18-tenin-keywords.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 18</div>
+        <div class="lesson-title">店員會話 5 個關鍵 <span class="arrow">→</span></div>
+        <div class="lesson-summary">持ち帰り・ます・〜ぐらいで・いりますか・よろしい 拆解</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-19-haishin-kaijo.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 19</div>
+        <div class="lesson-title">ご利用の方はこちら <span class="arrow">→</span></div>
+        <div class="lesson-summary">取消通知頁的敬語 — 名詞＋をご利用の方は＋こちら</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-26-momo-fruit.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 26</div>
+        <div class="lesson-title">水果攤日語 — 桃を買う <span class="arrow">→</span></div>
+        <div class="lesson-summary">從山梨県桃子價目牌學 8 個買水果單字 — 桃・あんず・円・税込・特売・売り切れ・訳あり・パック</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-28-tokyo-life-vocab.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 28</div>
+        <div class="lesson-title">今日の単語 — 高円寺・中野・図書館・上り・下り <span class="arrow">→</span></div>
+        <div class="lesson-summary">10 個東京生活單字：通学路・王道・高円寺・中野・図書館・高い・安い・上り・下り・降車エリア</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-29-mos-burger-order.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 29</div>
+        <div class="lesson-title">今日の単語 — お席・店舗・決済・現金不可 <span class="arrow">→</span></div>
+        <div class="lesson-summary">在モスバーガー從告示牌學到的 9 個單字：お席・店舗・店内飲食・検索・商品・選択・テーブル番号・決済・現金不可</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-06-30-yoshinoya-gyutan.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 06 / 30</div>
+        <div class="lesson-title">今日の単語 — 厚切り牛たん復活 <span class="arrow">→</span></div>
+        <div class="lesson-summary">在吉野家看板學到的 8 個單字：厚切り・牛たん・牛皿・御膳・4切・8切・復活・税込</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-05-gym-flyer.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 07 / 05</div>
+        <div class="lesson-title">今日の単語 — Summerキャンペーン <span class="arrow">→</span></div>
+        <div class="lesson-summary">健身房入會傳單學到的 10 個單字：入会・特典・体験・パーソナルトレーニング・施設料・月会費・オプション・無料・加圧トレーニング・申し込み</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-08-lunch-menu.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 07 / 08</div>
+        <div class="lesson-title">午餐菜單 — おすすめ <span class="arrow">→</span></div>
+        <div class="lesson-summary">咖啡店午餐菜單學到的 12 個單字：ランチプレート・おすすめ・本日・総菜・メイン料理・デザート盛り合わせ・おかわり・サーモン・合鴨・鰻・裏面・お選びください</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-11-eki-announcement.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 07 / 11</div>
+        <div class="lesson-title">電車アナウンス — 次とまもなく <span class="arrow">→</span></div>
+        <div class="lesson-summary">車站廣播 6 個句型：次は〇〇です・次の駅・次は渋谷渋谷です・まもなく発車します・まもなく到着します・〇〇着</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-07-21-tadoku-reading-list.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 07 / 21</div>
+        <div class="lesson-title">多読起步 <span class="arrow">→</span></div>
+        <div class="lesson-summary">現在的程度適合讀什麼？免費 Level 0 讀本清單＋多読讀書技巧</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-07-kuyakusho-te.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 08 / 07</div>
+        <div class="lesson-title">区役所で申し込みました <span class="arrow">→</span></div>
+        <div class="lesson-summary">区役所・市役所（役所＝台語 ik-soo）＋ 申し込みました（ます→ました）＋ カフェ ＋ て 開頭單字 手・手首・手紙</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-18-pan.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 08 / 18</div>
+        <div class="lesson-title">パン屋のことば <span class="arrow">→</span></div>
+        <div class="lesson-summary">麵包店的十三個字（菓子パン／惣菜パン／焼きたて），以及 パン 為什麼是葡萄牙語不是英文——順帶釐清菜單上的「南蛮」多半跟葡萄牙無關</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-18-machi-tana-shouhin.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 08 / 18</div>
+        <div class="lesson-title">街・棚・商品の単語 <span class="arrow">→</span></div>
+        <div class="lesson-summary">街・道・後ろ・棚 四個訓讀詞（牛在後面／棚≒攤），加上商品・値段・売り場・店員，商店街三個字全對得上台語</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-08-29-seki.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 08 / 29</div>
+        <div class="lesson-title">席 — 店裡的五種座位 <span class="arrow">→</span></div>
+        <div class="lesson-summary">座椅子・座席・座敷・椅子席・カウンター席 五個詞照「坐在地上還是椅子上」排開；順著看 席 怎麼黏在別的詞後面組出座位種類，以及 座席 與 席 的場合差別</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-kashikomarimashita-kono-mama.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 10 / 25</div>
+        <div class="lesson-title">生活篇 — 與店員的對話 <span class="arrow">→</span></div>
+        <div class="lesson-summary">かしこまりました＝畏まる＋ました，店員接下要求時才用（客人說 わかりました）；このまま＝照現在這樣，結帳時問不裝袋可以嗎；回 このままで大丈夫です／袋をお願いします；跟 以上でよろしいですか 的差別；餐廳門口等位子：こちらで（指定地點）vs そのまま（留在原地）、お掛けになって・お名前を書いてお待ちください</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-nanmei-sama.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 10 / 25</div>
+        <div class="lesson-title">何名様ですか <span class="arrow">→</span></div>
+        <div class="lesson-summary">店員問幾位：何名様＝何＋名（數人的量詞）＋様（敬稱）；客人說 一人・二人・三人，店員說 お一人様・二名様・三名様；二名様ですね 是複述確認；客人自己不加 様，回 二人です／二名です</div>
+      </a>
+    </li>
+    <li>
+      <a class="lesson-link" href="lessons/2026-10-25-yoroshii.html">
+        <div class="lesson-meta">生活中的日文 · 2026 / 10 / 25</div>
+        <div class="lesson-title">よろしい — 「いい」的客氣版 <span class="arrow">→</span></div>
+        <div class="lesson-summary">從 6/18 獨立出來：よろしい＝いい 的客氣說法；店員用 〜でよろしいですか 確認（以上で・このままで・袋はご一緒で・お支払いはカードで）；よろしければ＝不介意的話、よろしく＝副詞形；回答時不說 よろしいです</div>
+      </a>
+    </li>
+  </ul>
+  </section>
+
+<site-footer></site-footer>
+</div>
+</body>
+</html>

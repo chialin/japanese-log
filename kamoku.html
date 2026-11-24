@@ -8,6 +8,13 @@
 <style>
 /* 課程頁 — 跟一般課程同一組棕橘色票 */
 :root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+/* 「記憶小撇步」入口卡：用藍色記憶貼紙的樣子，一看就知道裡面是貼紙 */
+.memo-card{display:flex;align-items:center;gap:14px;border:2px solid #2b6cb0;border-radius:16px;background:rgba(255,255,255,.8);box-shadow:0 3px 10px rgba(43,108,176,.10);padding:14px 20px;text-decoration:none;color:inherit;margin:22px 0 0;transition:box-shadow .15s,transform .15s;}
+.memo-card:hover{box-shadow:0 6px 16px rgba(43,108,176,.18);transform:translateY(-2px);}
+.memo-card .mi{--memo:#2b6cb0;flex:0 0 auto;width:28px;height:28px;margin:0;}
+.memo-card .t{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:#2b6cb0;}
+.memo-card .s{font-size:13px;color:var(--ink-soft);margin-top:2px;line-height:1.7;}
+.memo-card .a{margin-left:auto;color:#2b6cb0;font-size:18px;}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +34,13 @@
     這裡收的是<strong>文法課以外</strong>的每一課，分成五部。每一部照上課日期由舊到新排，從第一篇開始往下讀，
     每一課最下面都有「上一篇／下一篇」可以接著讀。文法課在<a href="grammar.html" style="color:var(--accent);">文法</a>那一頁，照日期排的完整紀錄在<a href="index.html" style="color:var(--accent);">首頁的 log</a>。
   </p>
+
+  <a class="memo-card" href="kioku.html">
+    <span class="mi mi-memo" aria-hidden="true"></span>
+    <div><div class="t">記憶小撇步</div>
+    <div class="s">每一課裡的記憶貼紙都集中在這一頁，可以只看台語線索或其他記法，也可以搜尋；最上面是不屬於任何一課的「我的筆記」。</div></div>
+    <span class="a">→</span>
+  </a>
 
   <nav class="book-toc" aria-label="目次">
     <div class="book-toc-title">目 次</div>

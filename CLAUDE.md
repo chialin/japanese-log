@@ -23,6 +23,8 @@ index.html                       ← 首頁：calendar + log（棕色主題）
 shared.css                       ← 全站共用元件樣式（masthead/word-item/play-btn/...）
 grammar.html                     ← 文法書：64 篇文法課照學習順序排成十一章＋附錄（青碧，手寫）
 kamoku.html                      ← 課程：文法課以外的課分成五部（棕橘，手寫）
+kioku.html                       ← 記憶小撇步：全站記憶貼紙＋我的筆記（產物，build-kioku.mjs 產生，從 kamoku.html 的入口卡進去）
+data/my-notes.html               ← 「我的筆記」：不屬於任何一課的記憶筆記（手寫 HTML 片段）
 js/book-data.js                  ← 兩本書的閱讀順序，build-book.mjs 從上面兩頁產生（產物）
 vocab.html                       ← 単語帳：全站單字索引（檢索），小豆色票，自動產生資料靠 build-vocab
 resources.html                   ← 資源入口，分四類：會話／多読（外部讀本清單）／速查表／練字帖（棕色主題）；
@@ -62,6 +64,17 @@ data/vocab*.json                 ← 単語帳資料（vocab.json／vocab-tags.j
 **再把目次那一列的「N 課」和段落開頭「共 N 課」各加一**。然後跑 `build-all.sh`——
 `build-book.mjs` 會把順序寫進 `js/book-data.js`，`js/site-chrome.js` 在每一課開頭插「文法書 · 第四章 … · 第 3 篇／共 11 篇 · 建議先讀」，
 底部插「上一篇／下一篇」，課程頁本身**不用手寫翻頁**。首頁 log 有、但兩本書都沒收的課，腳本會列警告。
+
+### 記憶小撇步 kioku.html 與「我的筆記」（2026-11-24 起）
+
+`kioku.html` 是**產物**：`build-kioku.mjs` 掃全站的 `.mnemonic`／`.mnemonic.taigi` 貼紙，照上課日期由舊到新排，
+每組附連回原課的標題，頁面上可以照紅／藍篩選、搜尋。要改貼紙就改課程頁，重跑 `build-all.sh`。
+
+Scarlett 在對話裡講自己的記法時（例如「借りる 我都想成…」）：
+- **屬於某一課**→ 照〈記憶小撇步 `.mnemonic`〉的規則寫成貼紙，放進那一課（台語線索紅、其他藍）。
+- **不屬於任何一課**（整體的心得、跨很多課的規律）→ 寫進 `data/my-notes.html`，會出現在 kioku.html 最上面的「我的筆記」。
+  標題寫「我的筆記 — …（日期）」。
+- 兩種都公開在網站上；提到真實的人等私人內容才放 `local/`。寫完跑 `build-all.sh`。
 
 每個 HTML 都長同一個樣子：
 1. 自己的 `<style>` 裡只放 `:root` 色票（其餘版面交給 `shared.css`）
@@ -150,8 +163,8 @@ Calendar 會自動重算——`data-date` 提供即可，新月份不必動 cale
 
 **Step 6 — 跑 `scripts/build-all.sh`**：一次跑完 `build-kanji.mjs`（重新產生 `kanji.html`、
 `js/kanji-data.js`、`js/kanji-index.js`，掃全站 `<ruby>` 標音）＋ `build-vocab.mjs`（重新產生
-`js/vocab-data.js`、`data/vocab.json`，掃全站單字卡）＋ `build-book.mjs`（重新產生 `js/book-data.js`），任一步失敗就中止。
-跟 `generate-audio.mjs` 同性質——內容改了就要重跑，產物 kanji／vocab／book **一起跟這次的課程 commit**。
+`js/vocab-data.js`、`data/vocab.json`，掃全站單字卡）＋ `build-book.mjs`（重新產生 `js/book-data.js`）＋ `build-kioku.mjs`（重新產生 `kioku.html`），任一步失敗就中止。
+跟 `generate-audio.mjs` 同性質——內容改了就要重跑，產物 kanji／vocab／book／kioku **一起跟這次的課程 commit**。
 （Anki 牌組功能已於 2026-11-23 移除，複習改用 `fukushuu`；要撈舊版看 `git log -- anki/`。）
 
 > 新單字沒登記 tag 時，`build-vocab.mjs` 會列警告（沒 tag 的字仍會產出，只是 vocab.html

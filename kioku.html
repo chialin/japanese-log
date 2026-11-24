@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 由 scripts/build-kioku.mjs 產生，不要手改：貼紙改課程頁，筆記改 data/my-notes.html -->
+<title>記憶小撇步 — 全站的記憶貼紙與我的筆記</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<style>
+/* 記憶小撇步頁 — 棕橘底色，貼紙本身維持紅（台語線索）／藍（其他記法） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+.kioku-bar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--paper);padding:10px 0 12px;margin:20px 0 8px;border-bottom:1px solid var(--line);}
+.kioku-chip{font-family:'Shippori Mincho',serif;font-size:14px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.6);color:var(--ink);cursor:pointer;}
+.kioku-chip .n{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);margin-left:4px;}
+.kioku-chip[data-f="taigi"]{border-color:#d92818;color:#d92818;}
+.kioku-chip[data-f="memo"]{border-color:#2b6cb0;color:#2b6cb0;}
+.kioku-chip.on{background:var(--ink);border-color:var(--ink);color:#fff;}
+.kioku-chip.on .n{color:#fff;}
+.kioku-search{flex:1;min-width:160px;font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.7);color:var(--ink);font-family:'Noto Serif TC',serif;}
+.kioku-search:focus{outline:2px solid var(--accent-soft);}
+.kioku-group{margin:28px 0 8px;}
+.kioku-src{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:inherit;border-bottom:1px dashed var(--line);padding-bottom:6px;}
+.kioku-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-mute);flex:0 0 auto;}
+.kioku-title{font-family:'Shippori Mincho',serif;font-size:15px;font-weight:700;color:var(--ink-soft);}
+.kioku-src .arrow{margin-left:auto;color:var(--ink-mute);transition:transform .15s,color .15s;}
+.kioku-src:hover .kioku-title,.kioku-src:hover .arrow{color:var(--accent);}
+.kioku-src:hover .arrow{transform:translateX(3px);}
+.kioku-notes-empty{font-size:14px;color:var(--ink-mute);line-height:1.8;border:1px dashed var(--line);padding:14px 18px;margin-top:12px;}
+.kioku-none{display:none;text-align:center;color:var(--ink-mute);font-size:14px;margin:40px 0;}
+.is-hidden{display:none!important;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<script src="js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">記憶 <span class="accent">小撇步</span></h1>
+  <div class="page-meta">記憶 · Memory Notes</div>
+  <p class="page-subtitle">全站的記憶貼紙集中在這一頁，加上我自己的筆記</p>
+
+  <p style="color:var(--ink-soft);font-size:14px;line-height:1.8;margin-bottom:6px;">
+    每一課裡的記憶貼紙都收在這裡：<strong style="color:#d92818;">紅色</strong>是用台語讀音連到日文的線索，
+    <strong style="color:#2b6cb0;">藍色</strong>是字形、字義、日文詞群這類其他記法。照上課日期由舊到新排，
+    每一組上面的標題點下去會回到那一課。最上面是不屬於任何一課的「我的筆記」。
+  </p>
+
+  <div class="kioku-bar">
+    <button class="kioku-chip on" data-f="all">全部<span class="n">121</span></button>
+    <button class="kioku-chip" data-f="taigi">台語線索<span class="n">64</span></button>
+    <button class="kioku-chip" data-f="memo">其他記法<span class="n">57</span></button>
+    <input class="kioku-search" type="search" placeholder="找字：例如 局、ひがし、扉" aria-label="搜尋貼紙">
+  </div>
+
+  <section class="kioku-group" id="my-notes">
+    <div class="divider">我的筆記 · My Notes</div>
+    <p class="kioku-notes-empty">還沒有筆記。想到什麼記法，在對話裡跟 Claude 說，屬於某一課的會寫進那一課，不屬於任何一課的就放在這裡。</p>
+  </section>
+
+  <div class="divider" style="margin-top:36px;">各課的記憶貼紙 · From Lessons</div>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-06-01-directions.html"><span class="kioku-date">2026 / 06 / 01</span><span class="kioku-title">方向のことば</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 東西南北的音讀，三條台語規律一次到齊</strong><br>
+    上面四個是<strong>訓讀</strong>（ひがし・にし・みなみ・きた），日文自己的字，跟漢字音無關。
+    但一進到<strong>複合詞</strong>就換成音讀，而音讀全都能用台語推：<br><br>
+    <strong>東</strong> 台語 tang（<span class="compare">-ng 尾</span>）→ <strong>とう</strong>（東京 とうきょう、東北 とうほく）
+    —— -ng 拉成 <strong>う 長音</strong>，不是 ん<br>
+    <strong>南</strong> 台語 lam（<span class="compare">-m 尾</span>）→ <strong>なん</strong>（南米 なんべい、東南 とうなん）
+    —— -m 併進 <strong>ん</strong><br>
+    <strong>西</strong> 台語 se（無韻尾）→ <strong>せい</strong>（西洋 せいよう）／<strong>さい</strong>（関西 かんさい）<br>
+    <strong>北</strong> 台語 pak（<span class="compare">入聲 -k</span>）→ <strong>ほく</strong>（北海道 ほっかいどう、東北 とうほく）
+    —— 入聲 -k 變 <strong>く</strong><br><br>
+    這四個字剛好把三條規律湊齊了：<strong>-ng 拉長音、-m／-n 收 ん、入聲 -k 變 く</strong>。
+    詳細見 <a href="lessons/2026-08-06-soko-wa-desu-yo.html">8/6 的音讀線索</a>。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — ひがし 的 ひ 就是太陽（日）</strong><br>
+    ひがし 在古日語唸 pimukasi，後來變成 ひんがし，再變成現在的 ひがし。
+    日文的語源辭典一般把它拆成 <span class="compare">ひ（日）＋ むか（向か）＋ し（方向）</span>，
+    意思是「朝著太陽的那一邊」。早上太陽從東邊出來，所以記住開頭的 ひ＝日 就好。
+    （古語形式見 <a href="https://en.wiktionary.org/wiki/%E6%9D%B1" target="_blank" rel="noopener">Wiktionary 東</a>）<br>
+    另外 ひがし（higashi）和 にし（nishi）都是 し 結尾，東西可以當一對記；
+    11/3 學的 <a href="lessons/2026-11-03-hiroba-noboriguchi.html">東出口（ひがしでぐち）</a> 也是這個 ひがし。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-05-doko.html"><span class="kioku-date">2026 / 08 / 05</span><span class="kioku-title">どこですか — 問路與交通工具</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 —「郵便局」前半日語 ＋ 後半台語</strong><br>
+    <span class="compare">ゆうびん</span>（郵便＝郵政）　＋　<span class="compare">きょく</span>＝台語的「<strong>局</strong>」（kiok）<br>
+    　　→ ゆうびん ＋ kiok ＝ <strong>ゆうびんきょく</strong><br><br>
+    這不是巧合：台語保留了中古漢語的<strong>入聲 -k</strong>（局 kiok），日語把同一個音收成 <strong>く</strong>，
+    所以「〜局」一律唸 <span class="compare">きょく</span>。會台語的話這組字幾乎不用背：<br>
+    ・<ruby>薬局<rt>やっきょく</rt></ruby>（藥局／台語 ioh-kiok）
+    ・<ruby>放送局<rt>ほうそうきょく</rt></ruby>（電視台）
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-06-soko-wa-desu-yo.html"><span class="kioku-date">2026 / 08 / 06</span><span class="kioku-title">そこは〜ですよ — 評論一個地方</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 台語 -m／-n 尾 → 日語收 ん</strong><br>
+    台語收 <strong>-m</strong> 或 <strong>-n</strong> 的漢字，音讀幾乎都收 <span class="compare">ん</span>：<br>
+    <strong>寒</strong> han → <strong>かん</strong>（寒気 かんき）｜
+    <strong>近</strong> kin → <strong>きん</strong>（近所 きんじょ、最近 さいきん）｜
+    <strong>遠</strong> uan → <strong>えん</strong>（遠足 えんそく）｜
+    <strong>安</strong> an → <strong>あん</strong>（安心 あんしん）<br>
+    收 -m 的也一樣（日語沒有 -m 韻尾，一律併進 ん）：
+    <strong>心</strong> sim → <strong>しん</strong>｜<strong>金</strong> kim → <strong>きん</strong>｜
+    <strong>三</strong> sam → <strong>さん</strong>｜<strong>音</strong> im → <strong>おん</strong>
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 但台語 -ng 尾是拉長音，不是 ん</strong><br>
+    這是最容易搞混的地方。台語收 <strong>-ng</strong> 的字，日語通常變成
+    <span class="compare">う／い 長音</span>，而不是 ん：<br>
+    <strong>東</strong> tong → <strong>とう</strong>｜<strong>中</strong> tiong → <strong>ちゅう</strong>｜
+    <strong>光</strong> kong → <strong>こう</strong>｜<strong>京</strong> king → <strong>きょう</strong>｜
+    <strong>明</strong> bing → <strong>めい</strong><br>
+    ⇒ 看到台語韻尾就能分：<strong>-m／-n 收 ん</strong>，<strong>-ng 拉長音</strong>。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 其他幾個</strong><br>
+    <strong>高</strong> 台語 ko → <strong>こう</strong>（高校 こうこう、最高 さいこう）｜
+    <strong>暑</strong> 台語 su → <strong>しょ</strong>（暑中見舞い しょちゅうみまい）
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-07-kankouchi-he.html"><span class="kioku-date">2026 / 08 / 07</span><span class="kioku-title">観光地へ行きます</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 用漢字拆回去</strong><br>
+    <strong>観光・地</strong>＝觀光的<strong>地</strong>方 → 地 台語 <span class="compare">te</span> → <span class="compare">ち</span>（<ruby>地図<rt>ちず</rt></ruby>、<ruby>目的地<rt>もくてきち</rt></ruby>）<br>
+    <strong>看護・師</strong>＝看護的<strong>師</strong>傅 → 師 台語 <span class="compare">su</span> → <span class="compare">し</span>（<ruby>美容師<rt>びようし</rt></ruby>、<ruby>教師<rt>きょうし</rt></ruby>）<br>
+    ⇒ 想不起來時，先問「這是<strong>地方</strong>還是<strong>人</strong>」，答案就出來了：地方收 <strong>ち</strong>、人收 <strong>し</strong>。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 今天這批全是鼻音尾</strong><br>
+    <strong>山</strong> 台語 san → 音讀 <span class="compare">さん</span>（<ruby>富士山<rt>ふじさん</rt></ruby>、<ruby>火山<rt>かざん</rt></ruby>）<br>
+    <strong>温</strong> 台語 un → 音讀 <span class="compare">おん</span>（<ruby>温泉<rt>おんせん</rt></ruby>、<ruby>温度<rt>おんど</rt></ruby>）<br>
+    <strong>泉</strong> 台語 tsuan → 音讀 <span class="compare">せん</span>（温泉）<br>
+    <strong>観</strong> 台語 kuan → 音讀 <span class="compare">かん</span>（観光・観客）　<strong>看</strong> 台語 khan → <span class="compare">かん</span>（看護師）<br>
+    <strong>光</strong> 台語 kong → 音讀 <span class="compare">こう</span>（観光・<ruby>光線<rt>こうせん</rt></ruby>）—— <strong>-ng 尾常變成長音 こう／とう</strong><br>
+    ⇒ 台語收 <strong>-n</strong> 的字，日文幾乎都收 <strong>ん</strong>；收 <strong>-ng</strong> 的字，日文常拉成 <strong>う</strong> 長音。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-07-kikoemasu.html"><span class="kioku-date">2026 / 08 / 07</span><span class="kioku-title">〜が聞こえます・〜が見えます — 聽得到 vs 去聽</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 聞・音・見</strong><br>
+    <strong>聞</strong> 台語 bun（-n 尾）→ 音讀 <span class="compare">ぶん</span>（<ruby>新聞<rt>しんぶん</rt></ruby>、<ruby>見聞<rt>けんぶん</rt></ruby>）<br>
+    <strong>音</strong> 台語 im（<strong>-m 尾</strong>）→ 音讀 <span class="compare">おん</span>（<ruby>音楽<rt>おんがく</rt></ruby>、<ruby>発音<rt>はつおん</rt></ruby>）<br>
+    <strong>見</strong> 台語 kian（-n 尾）→ 音讀 <span class="compare">けん</span>（<ruby>見学<rt>けんがく</rt></ruby>＝參觀、意見 いけん）<br>
+    三個字都收 <strong>ん</strong>。日語沒有 -m 韻尾，所以台語的 <strong>-m 和 -n 一律併進 ん</strong>
+    —— 「音」的 ん 對到的正是台語那個 -m（同款：心 sim → しん、金 kim → きん）。<br>
+    ⚠️ 但台語 <strong>-ng</strong> 尾不走這條，會拉成長音：光 kong → こう、東 tong → とう。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-07-kuyakusho-te.html"><span class="kioku-date">2026 / 08 / 07</span><span class="kioku-title">区役所で申し込みました</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 役所＝台語的「役所」原音</strong><br>
+    <span class="compare">区 → く</span>：台語「區」讀 khu，日語音讀就是 く。<br>
+    <span class="compare">役 → やく</span>：台語「役」是入聲 ik，<strong>入聲 -k → 日語 く</strong>（跟 局 kiok → きょく 同一條規律）。<br>
+    <span class="compare">所 → しょ</span>：台語「所」soo → しょ。<br>
+    <span class="compare">市 → し</span>：台語「市」tshi → し。<br>
+    所以 <strong>khu-ik-soo → くやくしょ</strong>、<strong>tshi-ik-soo → しやくしょ</strong>，整串幾乎是台語直翻。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 「手」的兩張臉</strong><br>
+    <span class="compare">訓讀 て</span>：日本自己的字，手・手首・手紙 都用它。<br>
+    <span class="compare">音讀 しゅ</span>：從中文借的音，台語「手」tshiu → しゅ（<ruby>握手<rt>あくしゅ</rt></ruby>＝握手、<ruby>選手<rt>せんしゅ</rt></ruby>＝選手）。<br>
+    分辨法：<strong>單獨用或配日本詞 → て；配漢語詞 → しゅ</strong>。<br>
+    另外 <strong>手紙＝信</strong> 用「親手寫在紙上」去記，別想成衛生紙（那個是ティッシュ）。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-11-jikan-kotoba.html"><span class="kioku-date">2026 / 08 / 11</span><span class="kioku-title">時間詞：き系與あ系</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — き系／あ系</strong><br>
+    <strong>き ＝「既」</strong>（既成事實，已經發生了）→ <ruby>昨日<rt>きのう</rt></ruby>・<ruby>今日<rt>きょう</rt></ruby><br>
+    <strong>あ ＝「after」</strong>（之後）→ <ruby>明日<rt>あした</rt></ruby>・<ruby>明後日<rt>あさって</rt></ruby><br>
+    卡在中間想不起來時，先問自己「<strong>這件事發生了沒</strong>」，發生了就從 き 開頭找，沒發生就從 あ 開頭找。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 正式那欄才接得上台語</strong><br>
+    ・<strong>昨</strong> 台語 <span class="compare">tsak</span> → <span class="compare">さく</span>（昨日さくじつ）<br>
+    ・<strong>明</strong> 台語 <span class="compare">bing</span> → <span class="compare">みょう</span>（明後日みょうごにち）<br>
+    ・<strong>本</strong> 台語 <span class="compare">pun</span> → <span class="compare">ほん</span>（本日ほんじつ）<br>
+    ・<strong>日</strong> 台語 <span class="compare">jit</span> → <span class="compare">にち／じつ</span>（入聲 -t → ち／つ）<br>
+    所以順序是：<strong>口語那欄靠き系／あ系記，正式那欄靠台語音讀記</strong>，兩邊各有各的鑰匙。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 先・今・来 的台語音讀</strong><br>
+    ・<strong>先</strong> 台語 <span class="compare">sian</span> → <span class="compare">せん</span>（先週・先月・先生）<br>
+    ・<strong>今</strong> 台語 <span class="compare">kim</span> → <span class="compare">こん</span>（今週・今月）—— <strong>-m 尾對到 ん</strong><br>
+    ・<strong>来</strong> 台語 <span class="compare">lai</span> → <span class="compare">らい</span>（来週・来月・来年）—— 幾乎一模一樣<br>
+    ・<strong>昨</strong> 台語 <span class="compare">tsak</span> → <span class="compare">さく</span>（昨年・昨夜・昨日さくじつ）—— <strong>入聲 -k → く</strong><br>
+    ⚠️ 但 <ruby>昨日<rt>きのう</rt></ruby>・<ruby>今日<rt>きょう</rt></ruby>・<ruby>今年<rt>ことし</rt></ruby> 是固有詞讀法，
+    <strong>接不上台語</strong>，那幾個要靠上面的き系／あ系去記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-11-joshi-o.html"><span class="kioku-date">2026 / 08 / 11</span><span class="kioku-title">助詞「を」的三種用法</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 一句話串起三種</strong><br>
+    三種其實是同一個意象：<strong>を 標的東西，都被動詞「穿過」了一遍</strong>。<br>
+    ・穿過一個<strong>物</strong> → 動作落在它身上（<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>る）<br>
+    ・穿過一個<strong>空間</strong> → 走過去（<ruby>橋<rt>はし</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>る）<br>
+    ・穿過一道<strong>邊界</strong> → 出來了（<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>る）<br>
+    を 這個字形本身就像一條線<strong>穿過</strong>兩橫，可以拿來當圖像記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-11-masu-kei-nyuumon.html"><span class="kioku-date">2026 / 08 / 11</span><span class="kioku-title">マス形入門</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 三類用「數量」記</strong><br>
+    ・<strong>Ⅲ類只有 2 個</strong>（する・来る）→ 先排除<br>
+    ・<strong>Ⅱ類一定是「る」結尾，而且る前面是い段或え段</strong>（たべ<u>る</u>・み<u>る</u>）→ 再排除<br>
+    ・<strong>剩下的全是Ⅰ類</strong><br>
+    判斷順序是「<strong>Ⅲ → Ⅱ → Ⅰ</strong>」，因為Ⅰ類最多，放最後當「其他」處理最省力。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-11-masu-kei-tango.html"><span class="kioku-date">2026 / 08 / 11</span><span class="kioku-title">助詞「を」：動作的對象</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 扉（とびら）怎麼記</strong><br>
+    <span class="compare">と（戸）</span>＋<span class="compare">びら（ひら／平ら）</span> ——
+    <strong>門的那一「片」平板</strong>。同一個 ひら 也在 <ruby>一枚<rt>いちまい</rt></ruby>的「片」、<ruby>開<rt>ひら</rt></ruby>く 裡面，
+    都是「平平一片、攤開」的意象。<br>
+    字形也順：<strong>扉 ＝ 戸（門）＋ 非（左右兩扇像翅膀展開）</strong> —— 兩扇對開的門板。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 涙（なみだ）怎麼記</strong><br>
+    なみだ 拆成 <span class="compare">なみ（波）</span>＋<span class="compare">だ（出だ／垂だ）</span>——
+    <strong>眼淚像一波一波湧出來</strong>。日文語源學上也真的認為 なみだ 跟「なみ（波）」同源，不是硬湊的。<br>
+    字形再補一刀：<strong>涙 ＝ 氵（水）＋ 戻（返回）</strong>，水一再回來 ＝ 眼淚。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 門・名・映 用台語接音讀</strong><br>
+    ・<strong>門</strong> 台語 <span class="compare">bun</span> → <span class="compare">もん</span>（専門 せんもん、正門 せいもん）<br>
+    ・<strong>名</strong> 台語 <span class="compare">bing</span> → <span class="compare">めい</span>（有名 ゆうめい、名刺 めいし）—— 但 <ruby>名前<rt>なまえ</rt></ruby> 的 な 是訓讀，別混<br>
+    ・<strong>映</strong> 台語 <span class="compare">ing</span> → <span class="compare">えい</span>；<strong>画</strong> 台語 <span class="compare">ue</span> → <span class="compare">が</span>。鼻音尾 -ng 對到 えい 這條在日台之間很整齊<br>
+    ・<strong>鳥</strong> 台語 <span class="compare">tsiau</span> → 音讀 <span class="compare">ちょう</span>（白鳥 はくちょう）；但單獨講「鳥」用訓讀 <span class="compare">とり</span>
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-12-hitei.html"><span class="kioku-date">2026 / 08 / 12</span><span class="kioku-title">否定的說法</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 「じゃ」是「では」念快的結果</strong><br>
+    正式書寫會看到 <span class="compare">学生<b>では</b>ない</span>，口語把 では 念成
+    <strong>じゃ</strong> → 学生<b>じゃ</b>ない。<br>
+    兩個是同一個東西，<strong>じゃ 只是口語版</strong>，看到 ではない 不用當成新句型。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — は 是「先舉起來，再說它怎樣」</strong><br>
+    <strong>は 的工作是把某個東西提出來當話題</strong>，而否定天生就是在講
+    「這個東西<u>不</u>是這樣」——先把它舉起來再打叉，語感上很順。<br>
+    所以規律是：<strong>否定句 → 想都不用想，先用 は</strong>。<br>
+    順帶一提，這也解釋了為什麼「<ruby>私<rt>わたし</rt></ruby>は<ruby>肉<rt>にく</rt></ruby>を<ruby>食<rt>た</rt></ruby>べない」聽起來自然——
+    先舉出「我」，再說我不吃肉。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 学生（がくせい）＝ 台語的 hak-sing</strong><br>
+    「学」台語念 <strong>hak</strong>，入聲 <strong>-k</strong> 到了日文會變成
+    <span class="compare">く</span> → <strong>がく</strong>。<br>
+    同一條線還有：<ruby>薬<rt>やく</rt></ruby>（iok）、<ruby>各<rt>かく</rt></ruby>（kok）、
+    <ruby>国<rt>こく</rt></ruby>（kok）——<strong>台語念起來收 -k 的字，日文音讀多半收 く</strong>。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-12-jisei-shinkoukei.html"><span class="kioku-date">2026 / 08 / 12</span><span class="kioku-title">過去・現在・現在進行</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 過去記號只有一個「た」</strong><br>
+    食べ<span class="compare">た</span>、<ruby>行<rt>い</rt></ruby>っ<span class="compare">た</span>、
+    <ruby>高<rt>たか</rt></ruby>かっ<span class="compare">た</span>、<ruby>学生<rt>がくせい</rt></ruby>だっ<span class="compare">た</span>。<br>
+    <strong>看到 た 就想到「已經」</strong>——這條線一路通到底，不會再有第二個過去記號。<br>
+    連否定的過去也一樣：ない 先變成 <strong>なかっ</strong>，再掛上同一個 <strong>た</strong>。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 開關與燈</strong><br>
+    Ⓐ ＝ <strong>按著開關不放</strong>（動作本身在持續）<br>
+    Ⓑ ＝ <strong>按一下開關，燈就一直亮著</strong>（動作結束了，狀態還在）<br>
+    判斷方法：問自己「這個動作能不能持續十分鐘？」<br>
+    「読む」可以讀十分鐘 → Ⓐ；「住む」不是一直在做的動作 → Ⓑ。<br>
+    <strong>兩種都是在說「現在這個狀態成立」，所以日文用同一個形。</strong>
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 中文用「加字」，日文用「換尾巴」</strong><br>
+    中文講時間是<strong>往句子裡塞詞</strong>：昨天、明天、已經、等一下——<strong>不塞也能講完一句話</strong>。<br>
+    日文講時間是<strong>換動詞的尾巴</strong>：る ↔ た——<strong>不換就講不完一句話</strong>。<br>
+    所以中文人學日文最不習慣的不是「規則難」，是<strong>「躲不掉」</strong>：
+    每次開口都被逼著表態這件事是過去還是沒過去。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-12-ta-kei.html"><span class="kioku-date">2026 / 08 / 12</span><span class="kioku-title">過去式 た形</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 過去記號只有一個「た」</strong><br>
+    食べ<span class="compare">た</span>、<ruby>行<rt>い</rt></ruby>っ<span class="compare">た</span>、
+    高かっ<span class="compare">た</span>、学生だっ<span class="compare">た</span>。<br>
+    <strong>看到 た 就想到「已經」</strong>——這條線一路通到底，不會再有第二個過去記號。<br>
+    每一格的差別只在<strong>「た」前面要墊什麼</strong>：
+    動詞墊て形、い形容詞墊 かっ、名詞和な形容詞墊 だっ。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 「ない」自己是個い形容詞</strong><br>
+    ない 的長相就是い結尾，所以它變過去的方式跟 高い 一模一樣：<br>
+    <span class="compare">高<u>い</u> → 高<u>かった</u></span>　／
+    <span class="compare">な<u>い</u> → な<u>かった</u></span><br>
+    <strong>認出這件事之後就不用另外背了</strong>，兩個是同一條規則。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-14-basho-mono-tango.html"><span class="kioku-date">2026 / 08 / 14</span><span class="kioku-title">場所と物の単語 ＋ 雨が降る</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 這四個字用台語唸就對了</strong><br>
+    音讀是從中古漢語借過去的，台語也保留同一層，所以對得很整齊：<br>
+    <span class="compare">食堂</span> 台語 sit tng → <b>しょくどう</b>（食 sit 的 -t 入聲 → しょく 的 く）<br>
+    <span class="compare">公園</span> 台語 kong hng → <b>こうえん</b>（-ng 鼻音尾 → う／ん）<br>
+    <span class="compare">牛乳</span> 台語 gu ju → <b>ぎゅうにゅう</b>（幾乎照唸）<br>
+    <span class="compare">冷蔵庫</span> 台語 ling tsong koo → <b>れいぞうこ</b>（庫 koo → こ，一模一樣）
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — あめ 兩個意思，靠重音分</strong><br>
+    <span class="compare">雨（あめ）</span>是頭高型（高→低），<span class="compare">飴（あめ）＝糖果</span>是平板型（低→高）。
+    寫出來漢字不同，講出來就只剩音高在分。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-14-ne-no-tango.html"><span class="kioku-date">2026 / 08 / 14</span><span class="kioku-title">ね・の 開頭的單字</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 熱 jiat → ねつ</strong><br>
+    <span class="compare">熱</span>台語唸 jiat／liat，收 <b>-t</b> 入聲；日語音讀把 -t 收尾變成 <b>つ</b> → <b>ねつ</b>。
+    同一條規律：一 it → いち、日 jit → にち。<br>
+    連帶記：<ruby>発熱<rt>はつねつ</rt></ruby>（發熱）、<ruby>熱心<rt>ねっしん</rt></ruby>（熱心）都用 ねつ。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 看部首就分得出來</strong><br>
+    <span class="compare">熱</span>下面是「灬」＝<b>火</b>，有火才會燙 → 摸得到的東西。<br>
+    <span class="compare">暑</span>上面是「日」＝<b>太陽</b>，太陽曬的是整個環境 → 天氣熱。<br>
+    對應的反義詞也分兩套：熱い ↔ <ruby>冷<rt>つめ</rt></ruby>たい（東西冰）、暑い ↔ <ruby>寒<rt>さむ</rt></ruby>い（天氣冷）。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 喉 的音讀對台語 âu</strong><br>
+    <span class="compare">喉</span>訓讀 のど 跟漢字音無關，但音讀 <b>こう</b> 對得上台語 hâu／âu：
+    <ruby>咽喉<rt>いんこう</rt></ruby>（咽喉）。日常講身體部位用訓讀 のど，醫學詞才用 こう。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-15-x-ga-arimasen.html"><span class="kioku-date">2026 / 08 / 15</span><span class="kioku-title">Xがありません</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 駐車場</strong><br>
+    三個字都是音讀，跟台語一路對上：車 tshia → <span class="compare">しゃ</span>、場 tiunn → <span class="compare">じょう</span>、駐 tsu → <span class="compare">ちゅう</span>。
+    同一組的「庫 khoo → こ」也出現在 <a href="lessons/2026-08-14-basho-mono-tango.html">冷蔵庫（れいぞうこ）</a>。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 郵便箱</strong><br>
+    前半段跟 <a href="lessons/2026-08-05-doko.html">郵便局（ゆうびんきょく）</a> 一模一樣，只是後面換成「箱ばこ」。
+    ゆうびん 這組音認一次，郵便局・郵便箱・郵便番号 整串通。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-16-dansei-josei.html"><span class="kioku-date">2026 / 08 / 16</span><span class="kioku-title">男性・女性・男の子・女の子</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 男性・女性 三個字全部對得上台語</strong><br>
+    男 <span class="compare">lam</span> → <span class="compare">だん</span>（鼻音尾 -m 收成 ん）<br>
+    女 <span class="compare">lu</span> → <span class="compare">じょ</span><br>
+    性 <span class="compare">sing</span> → <span class="compare">せい</span>（鼻音尾 -ng 對到日文的 -い）<br>
+    「性」認得之後整組通吃：<ruby>性別<rt>せいべつ</rt></ruby>、<ruby>性格<rt>せいかく</rt></ruby>、<ruby>個性<rt>こせい</rt></ruby>。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-16-fu-tango.html"><span class="kioku-date">2026 / 08 / 16</span><span class="kioku-title">ふ 開頭的單字</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 服 hok → ふく</strong><br>
+    <span class="compare">服</span>台語唸 <span class="compare">hok</span>，收 <b>-k</b> 入聲；日語音讀把 -k 收尾變成 <b>く</b> → <b>ふく</b>。<br>
+    同一條規律的還有：<ruby>肉<rt>にく</rt></ruby>（文讀 jiok，日常唸 bah）、<ruby>薬<rt>やく</rt></ruby>（iok → やく）、
+    <ruby>学<rt>がく</rt></ruby>（hak → がく）。<b>看到台語收 -k 的字，日文八成收 く</b>。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 船的兩套讀法</strong><br>
+    訓讀 <span class="compare">ふね</span> 是日本自己的詞；音讀 <span class="compare">せん</span> 對得上台語 <span class="compare">tsûn</span>
+    → <ruby>船長<rt>せんちょう</rt></ruby>（船長）、<ruby>漁船<rt>ぎょせん</rt></ruby>（漁船）、<ruby>風船<rt>ふうせん</rt></ruby>（氣球）。<br>
+    判斷方法跟 <a href="lessons/2026-06-28-onyomi-kunyomi.html">音讀訓讀那篇</a>一樣：<b>單獨一個字唸訓讀，兩個漢字黏在一起唸音讀</b>。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-16-he-tango.html"><span class="kioku-date">2026 / 08 / 16</span><span class="kioku-title">へ 開頭的單字</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 返事（へんじ）</strong><br>
+    兩個字都是音讀，跟台語一路對上：返 <span class="compare">huán</span> → <span class="compare">へん</span>（鼻音尾 -n 變 ん）、
+    事 <span class="compare">sū</span> → <span class="compare">じ</span>。<br>
+    整組帶著走：<ruby>返信<rt>へんしん</rt></ruby>（回信）、<ruby>返品<rt>へんぴん</rt></ruby>（退貨）；
+    事 → <ruby>事務<rt>じむ</rt></ruby>、<ruby>火事<rt>かじ</rt></ruby>、<ruby>大事<rt>だいじ</rt></ruby>。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-16-reji-renji.html"><span class="kioku-date">2026 / 08 / 16</span><span class="kioku-title">レジ と レンジ</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — ン 和 ソ 怎麼分</strong><br>
+    看那一撇的<b>走向</b>：<span class="compare">ン</span> 是「<b>ん</b>」變來的，
+    寫 ん 的時候最後那筆也是<b>往右上勾</b>，方向一致。<br>
+    <span class="compare">ソ</span> 則跟 <span class="compare">シ</span>（shi）同一組，都是<b>由上往下</b>掃。<br>
+    一句話：<b>ン 往上、ソ 往下</b>。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 会計（かいけい）</strong><br>
+    這個不是外來語，是漢字詞，台語一路對得上：<br>
+    会 <span class="compare">huē／kài</span> → <span class="compare">かい</span>（同組：<ruby>会話<rt>かいわ</rt></ruby>・<ruby>会社<rt>かいしゃ</rt></ruby>）<br>
+    計 <span class="compare">ke</span> → <span class="compare">けい</span>（同組：<ruby>計画<rt>けいかく</rt></ruby>・<ruby>時計<rt>とけい</rt></ruby>）<br>
+    ⚠️ 別因為都在收銀台用到就以為 会計 和 レジ 有關係——一個是漢字詞、一個是英文外來語，來源完全不同。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — とき<span class="compare">ど</span>き 為什麼變濁音</strong><br>
+    這叫<b>連濁（れんだく）</b>：兩個詞黏成一個時，後面那個的第一音變濁音。<br>
+    とき＋とき → とき<b>ど</b>き ｜ ひと＋ひと → ひと<b>び</b>と ｜ はな＋ひ → はな<b>び</b>（煙火）<br>
+    在 <a href="lessons/2026-08-15-x-ga-arimasen.html" style="color:var(--accent);">8/15 ごみ＋箱→ごみばこ</a> 已經遇過同一條規則，
+    <a href="lessons/2026-08-07-kuyakusho-te.html" style="color:var(--accent);">8/7 かみ→がみ</a> 也是。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-16-x-ga-imasu.html"><span class="kioku-date">2026 / 08 / 16</span><span class="kioku-title">Xがいます</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 道路（どうろ）</strong><br>
+    兩個字都跟台語一路對上：道 <span class="compare">tō</span> → <span class="compare">どう</span>、路 <span class="compare">lōo</span> → <span class="compare">ろ</span>。
+    「道」的 どう 還會出現在 <ruby>柔道<rt>じゅうどう</rt></ruby>・<ruby>北海道<rt>ほっかいどう</rt></ruby>，認一次整組通。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 警備員的「員」</strong><br>
+    員 台語 <span class="compare">uân</span> → 日文一律唸 <span class="compare">いん</span>：警備員（けいび<b>いん</b>）、
+    <ruby>店員<rt>てんいん</rt></ruby>、<ruby>会社員<rt>かいしゃいん</rt></ruby>、<ruby>駅員<rt>えきいん</rt></ruby>。
+    「〜員」＝做某種工作的人，看到這個字尾就知道是職業名。<ruby>会社員<rt>かいしゃいん</rt></ruby> 見
+    <a href="lessons/2026-07-24-shokugyou-shitsumon.html">7/24 職業的問法</a>。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-18-machi-tana-shouhin.html"><span class="kioku-date">2026 / 08 / 18</span><span class="kioku-title">街・棚・商品の単語</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — うしろ 和 たな</strong><br>
+    <b>後ろ（うしろ）</b>：拆成「<b>うし</b>（牛）＋ろ」，想成「<u>牛在後面</u>」——牛慢慢走，永遠跟在後面。<br>
+    <b>棚（たな）</b>：聽起來像台語的「<b>攤</b>（tann）」，攤子就是一層一層把東西擺出來給人看，跟貨架同一個畫面。
+    字形也幫得上忙：<span class="compare">棚</span>＝木＋朋，兩塊木板像朋友一樣並排，就是層架。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 商店街＝台語直接搬過去</strong><br>
+    <ruby>商<rt>しょう</rt>店<rt>てん</rt>街<rt>がい</rt></ruby> 三個字拆開，每個都對得上台語：<br>
+    <span class="compare">商</span> siong → <b>しょう</b>（商品）｜
+    <span class="compare">店</span> tiam → <b>てん</b>（店員）｜
+    <span class="compare">街</span> kai → <b>がい</b>（商店街）<br>
+    所以看到「街」不要反射性唸 まち——<u>單獨出現才唸訓讀 まち，跟別的漢字組成詞就唸 がい</u>。
+    同一條規則：<span class="compare">段</span> tuan → <b>だん</b>（値段・<ruby>階<rt>かい</rt>段<rt>だん</rt></ruby>）、
+    <span class="compare">品</span> phin → <b>ひん</b>（商品・<ruby>品<rt>しな</rt>物<rt>もの</rt></ruby>的 品 則唸訓讀 しな）。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 体育館＝台語「體育館」直接唸</strong><br>
+    <span class="compare">体</span> the → <b>たい</b>｜
+    <span class="compare">育</span> iok（入聲 -k）→ <b>いく</b>｜
+    <span class="compare">館</span> kuan（鼻音尾 -n）→ <b>かん</b><br>
+    入聲 -k 變 <b>く</b> 是老規則了，跟 <ruby>局<rt>きょく</rt></ruby>（kiok）同一條。
+    旁邊那個 <ruby>公<rt>こう</rt>園<rt>えん</rt></ruby> 也一樣：公 kong 的鼻音尾 -ng → 長音 <b>こう</b>。<br>
+    只有 <ruby>横<rt>よこ</rt></ruby> 是訓讀，跟漢字音無關，得另外硬記。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 物 的入聲 -t ／ 文 的例外音</strong><br>
+    <span class="compare">物</span> 台語 but（入聲 -t）→ <b>もつ</b>，跟 一 it → いち、日 jit → にち 同一條規則，
+    <u>入聲 -t 尾在日文變成 ち／つ</u>。<br>
+    <span class="compare">文</span> 台語 bun（鼻音尾 -n）→ 一般唸 <b>ぶん</b>（<ruby>文<rt>ぶん</rt>法<rt>ぽう</rt></ruby>・<ruby>作<rt>さく</rt>文<rt>ぶん</rt></ruby>），
+    但在 <ruby>文<rt>も</rt>字<rt>じ</rt></ruby> 裡唸 <b>も</b>——這是更早的吳音層留下來的，對不上台語，只能硬記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-18-pan.html"><span class="kioku-date">2026 / 08 / 18</span><span class="kioku-title">パン屋のことば</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — パン 對到的是歐陸不是英美</strong><br>
+    看到 <span class="compare">パン</span> 別想 bread，想 <b>pan / pain / pane</b>——這幾個歐洲語言的字自己就長得像片假名的讀音。<br>
+    學過任何一個歐洲語言（或看過菜單上的 <i>pain de campagne</i>）都直接通，反而<b>用英文去猜會猜錯</b>。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 南蛮 ≒ 中文的「番」「胡」</strong><br>
+    南蛮不是產地標示，是「<b>外面來的、跟平常不一樣的</b>」這個泛稱標籤。<br>
+    就像中文的 <b>番</b>茄、<b>番</b>薯、<b>胡</b>椒、<b>胡</b>瓜——「番」「胡」只說明「這是外來的」，沒指定哪一國。完全同一個邏輯。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-18-x-wa-y-no-mae.html"><span class="kioku-date">2026 / 08 / 18</span><span class="kioku-title">XはYの前です</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 位置詞的音讀都跟台語對得上</strong><br>
+    這些字單獨用是訓讀（まえ・うしろ），但一進到漢語詞就變音讀，而且整齊對台語：<br>
+    <span class="compare">前</span> 台語 tsian → <b>ぜん</b>（<ruby>午<rt>ご</rt>前<rt>ぜん</rt></ruby>）｜
+    <span class="compare">後</span> 台語 hio → <b>ご</b>（<ruby>午<rt>ご</rt>後<rt>ご</rt></ruby>）｜
+    <span class="compare">中</span> 台語 tiong → <b>ちゅう</b>（<ruby>中<rt>ちゅう</rt>国<rt>ごく</rt></ruby>）｜
+    <span class="compare">間</span> 台語 kan → <b>かん</b>（<ruby>時<rt>じ</rt>間<rt>かん</rt></ruby>）<br>
+    所以「前後中間」四個字的音讀等於直接把台語搬過來，只有訓讀那層要另外記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-19-hon.html"><span class="kioku-date">2026 / 08 / 19</span><span class="kioku-title">「本」到底是什麼意思</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 本 台語 pun → ほん</strong><br>
+    <span class="compare">本</span> 台語 <b>pun</b> → <b>ほん</b>，鼻音尾 -n 對應 <b>ん</b>，跟
+    <ruby>電<rt>でん</rt></ruby>（tian）、<ruby>練<rt>れん</rt></ruby>（lian）是同一條規律。<br>
+    好消息是 <b>本 的音讀永遠是 ほん</b>，四種意思都不變——只有當量詞、接在數字後面時會被前面的音影響，
+    變成 <b>ぼん／ぽん</b>（見下一節）。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-19-naka.html"><span class="kioku-date">2026 / 08 / 19</span><span class="kioku-title">XはYの中です</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 下駄箱（げたばこ）拆成四層</strong><br>
+    ① <b>諧音</b>：げたばこ ≈ 中文「<b>給他箱</b>」——鞋子脫下來給它一個箱子。<br>
+    ② <b>ばこ 不用記</b>：<ruby>箱<rt>はこ</rt></ruby> 接在別的字後面一律連濁成 <b>ばこ</b>（ごみ<ruby>箱<rt>ばこ</rt></ruby>・<ruby>筆<rt>ふで</rt>箱<rt>ばこ</rt></ruby>・<ruby>本<rt>ほん</rt>箱<rt>ばこ</rt></ruby>），所以真正要背的只有 <b>げた</b> 兩個音。<br>
+    ③ <b>「駄」這個字已經認得</b>：就是 <ruby>駄<rt>だ</rt>目<rt>め</rt></ruby>（不行）、<ruby>無<rt>む</rt>駄<rt>だ</rt></ruby>（白費）的那個駄，看到它就唸 だ／た。<ruby>下<rt>げ</rt>駄<rt>た</rt></ruby>＝木屐，字面就是「木屐的箱子」。<br>
+    ④ <b>忘了的備案</b>：<ruby>靴<rt>くつ</rt>箱<rt>ばこ</rt></ruby>（kutsubako）是同義詞，現代日常一樣通用，而且 <ruby>靴<rt>くつ</rt></ruby> 本篇剛學過。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 上着（うわぎ）＝ 上 ＋ 着，而且要跟下着成對記</strong><br>
+    <b>着（き）</b> 來自動詞 <ruby>着<rt>き</rt></ruby>る（穿），接在後面連濁成 <b>ぎ</b>——跟 <ruby>箱<rt>はこ</rt></ruby>→ばこ 同一條規則。<br>
+    <b>「上」在這裡唸 うわ 不是 うえ</b>：單獨用或接 の 才是 うえ（<ruby>棚<rt>たな</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>），
+    <u>黏在名詞前面當接頭語就變 うわ</u>（<ruby>上<rt>うわ</rt>着<rt>ぎ</rt></ruby>・<ruby>上<rt>うわ</rt></ruby><ruby>履<rt>ば</rt></ruby>き・<ruby>上<rt>うわ</rt>書<rt>が</rt></ruby>き＝覆蓋存檔）。<br>
+    成對記最省力：<ruby>上<rt>うわ</rt>着<rt>ぎ</rt></ruby>（外套，穿外層）↔ <ruby>下<rt>した</rt>着<rt>ぎ</rt></ruby>（<b>內衣</b>，穿裡層）｜
+    <ruby>上<rt>うわ</rt></ruby><ruby>履<rt>ば</rt></ruby>き（室內鞋）↔ <ruby>下<rt>した</rt></ruby><ruby>履<rt>ば</rt></ruby>き（室外鞋）。<br>
+    而且後面兩個剛好跟 <ruby>下<rt>げ</rt>駄<rt>た</rt>箱<rt>ばこ</rt></ruby> 是同一個場景：進學校玄關脫下 下履き 放進下駄箱，換上 上履き 進教室。<br>
+    ⚠️ 不對稱的地方：上着 的上唸 <b>うわ</b>，但下着 的下唸 <b>した</b>（不是しも），照常規唸就好。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 台語直接唸出來就是日文</strong><br>
+    <span class="compare">新聞</span> 台語 <b>sin-bun</b> → <b>しんぶん</b>（幾乎一模一樣，只差聲調）<br>
+    <span class="compare">教科書</span> 台語 <b>kau-kho-su</b> → <b>きょうかしょ</b>（三個音節一對一對上）<br>
+    <span class="compare">洗濯機</span> 的 <b>機</b> 台語 ki → <b>き</b>（飛行機・機会 都是這個 き）<br>
+    <span class="compare">冷蔵庫</span> 的 <b>冷</b> 台語 ling → <b>れい</b>、<b>庫</b> 台語 kho → <b>こ</b><br>
+    對不上的只有訓讀那兩個：<ruby>上<rt>うわ</rt>着<rt>ぎ</rt></ruby>（穿在「上」面的那件）、<ruby>下<rt>げ</rt>駄<rt>た</rt>箱<rt>ばこ</rt></ruby>（記法見上面那張貼紙）。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-20-hindo.html"><span class="kioku-date">2026 / 08 / 20</span><span class="kioku-title">頻率副詞：從「總是」到「完全不」</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 杯子裡還剩多少水</strong><br>
+    否定那一組想成同一個杯子：<span class="compare">あまり</span>＝剩一半、
+    <span class="compare">ほとんど</span>＝剩一滴、<span class="compare">全く</span>＝空杯。<br>
+    用同一個動詞連唸三次就黏住了：<br>
+    「あまり<ruby>飲<rt>の</rt></ruby>まない → ほとんど飲まない → 全く飲まない」
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 「全」的兩張臉</strong><br>
+    <span class="compare"><ruby>全<rt>まった</rt></ruby>く</span> 和 <span class="compare"><ruby>全然<rt>ぜんぜん</rt></ruby></span>
+    漢字一樣，讀音卻差很多，因為一個訓讀一個音讀：<br>
+    ・<strong>音讀 ぜん</strong>：台語「全」讀 <strong>tsuân</strong>，鼻音尾 -n → 日文 <strong>ん</strong>。
+    全然・<ruby>全部<rt>ぜんぶ</rt></ruby>・<ruby>安全<rt>あんぜん</rt></ruby> 都是 ぜん。<br>
+    ・<strong>訓讀 まった</strong>：日本固有詞，跟中文無關，只能單背。<br>
+    分辨法：<strong>漢字後面有平假名尾巴（全<b>く</b>・全<b>て</b>）就是訓讀</strong>，純漢字複合詞就是音讀。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-21-bouldering-kaiwa.html"><span class="kioku-date">2026 / 08 / 21</span><span class="kioku-title">ボルダリングの話</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 台語直接唸出來的三個字</strong><br>
+    <strong><ruby>簡単<rt>かんたん</rt></ruby></strong>：台語「簡單」<span class="compare">kan-tan</span> → <strong>かんたん</strong>，
+    兩個鼻音尾 -n 都變成 ん，幾乎一模一樣。<br>
+    <strong><ruby>種類<rt>しゅるい</rt></ruby></strong>：「類」台語 <span class="compare">lui</span> → <strong>るい</strong>（人類・種類・書類）。<br>
+    <strong><ruby>場所<rt>ばしょ</rt></ruby></strong>：「所」台語 <span class="compare">soo</span> → <strong>しょ</strong>（住所・事務所・場所）。<br>
+    反過來，<ruby>登<rt>のぼ</rt></ruby>る・<ruby>払<rt>はら</rt></ruby>う・<ruby>疲<rt>つか</rt></ruby>れる 都是<strong>訓讀</strong>（漢字後面拖著平假名尾巴），
+    跟漢字音對不上，要靠句子情境記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-21-kagetsu.html"><span class="kioku-date">2026 / 08 / 21</span><span class="kioku-title">〜月（がつ）與〜か月（かげつ）</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 台語的「月」對到 げつ</strong><br>
+    台語「月」文讀 <span class="compare">goat</span>、白話讀 <span class="compare">goeh</span>，都是入聲收尾 → 日語音讀 <span class="compare">げつ</span>（-t 對 -つ）。
+    月曜日（げつようび）、今月（こんげつ）、三か月（さんかげつ）都對得上。<br>
+    反過來說，<span class="compare">がつ</span> 是特別留給月份名稱的舊音，看到 がつ 就是在講「幾月」。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-21-ni-kai.html"><span class="kioku-date">2026 / 08 / 21</span><span class="kioku-title">〜に〜回：一週間に二回</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 回・会 同音，都是 かい</strong><br>
+    <ruby>回<rt>かい</rt></ruby>（次數）跟 <ruby>会<rt>かい</rt></ruby>（見面・会話・会社）音讀完全一樣，
+    對應台語的 <span class="compare">hoe</span>。<strong>認得一個就通兩個</strong>——
+    這篇剛好兩個字都出現：<ruby>二<rt>に</rt>回<rt>かい</rt></ruby> 去爬，其中一次 <ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-22-shiasatte.html"><span class="kioku-date">2026 / 08 / 22</span><span class="kioku-title">從大前天到大後天</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 中文剛好也是加字</strong><br>
+    中文說「前天 → <span class="compare">大</span>前天」「後天 → <span class="compare">大</span>後天」，
+    也是在原本的詞前面加一個字，日文的做法一模一樣，只是加的字不同。<br>
+    記成「往前加 <strong>さき</strong>、往後加 <strong>し</strong>」就夠用了。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 昨・今・明 的音讀跟台語對得上</strong><br>
+    這三個漢字在比較正式的說法裡會露出音讀，而音讀跟台語是同一個源頭：<br>
+    <strong>昨</strong>　台語 tsok（-k 收尾）→ <ruby>昨日<rt>さくじつ</rt></ruby>，入聲 -k 變成 <span class="compare">く</span><br>
+    <strong>今</strong>　台語 kim（鼻音收尾）→ <ruby>今週<rt>こんしゅう</rt></ruby>，-m／-n 尾變成 <span class="compare">ん</span><br>
+    <strong>明</strong>　台語 bing（-ng 收尾）→ <ruby>明後日<rt>みょうごにち</rt></ruby>，-ng 尾變成<span class="compare">長音</span><br>
+    所以在新聞或公文上看到「昨日（さくじつ）」「本日（ほんじつ）」不用緊張，
+    那只是同一個漢字換成音讀在唸而已。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-24-yotei-washoku.html"><span class="kioku-date">2026 / 08 / 24</span><span class="kioku-title">明日、予定がありますか</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 洋食兩個字的音讀都能用台語推</strong><br>
+    <strong>洋</strong>　台語 iong（-ng 收尾）→ <ruby>洋<rt>よう</rt></ruby>，鼻音尾變成<span class="compare">長音</span><br>
+    <strong>食</strong>　台語 sit（入聲收尾）→ <ruby>食<rt>しょく</rt></ruby>，入聲尾變成 <span class="compare">く</span><br>
+    同一個「食」在 <ruby>食堂<rt>しょくどう</rt></ruby>、<ruby>食事<rt>しょくじ</rt></ruby> 唸法完全一樣，記一次整組通。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 予定的「定」是鼻音尾</strong><br>
+    <strong>予</strong>　台語 ú → <ruby>予<rt>よ</rt></ruby>，同一個字在 <ruby>予約<rt>よやく</rt></ruby>（預約）也唸 よ<br>
+    <strong>定</strong>　台語 ting（-ng 收尾）→ <ruby>定<rt>てい</rt></ruby>，鼻音尾變成長音<br>
+    中文的「預定」跟日文的<ruby>予定<rt>よてい</rt></ruby>意思幾乎一樣，這個字只要記讀音就好。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-25-masen-tango.html"><span class="kioku-date">2026 / 08 / 25</span><span class="kioku-title">ませんの文と単語</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 休憩的「休」跟台語一樣收 -u</strong><br>
+    <strong>休</strong>　台語 hiu → <ruby>休<rt>きゅう</rt></ruby>，同一個字也在
+    <ruby>休日<rt>きゅうじつ</rt></ruby>（假日）、<ruby>連休<rt>れんきゅう</rt></ruby>（連假）裡<br>
+    <strong>憩</strong>　台語 khe → <ruby>憩<rt>けい</rt></ruby><br>
+    看到「休」開頭的漢字詞，讀音幾乎都是 きゅう。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 完璧的兩個音都能用台語推</strong><br>
+    <strong>完</strong>　台語 uan（-n 收尾）→ <ruby>完<rt>かん</rt></ruby>，鼻音尾變成 <span class="compare">ん</span><br>
+    <strong>璧</strong>　台語 phik（入聲 -k 收尾）→ <ruby>璧<rt>へき</rt></ruby>，入聲尾變成 <span class="compare">き</span>，
+    前面接 ん 之後變成半濁音 <span class="compare">ぺ</span>（かん＋へき → かん<strong>ぺ</strong>き）<br>
+    「完璧」在中文也是同一個詞（完璧歸趙），意思一模一樣，只要記讀音就好。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-25-naru.html"><span class="kioku-date">2026 / 08 / 25</span><span class="kioku-title">形容詞加上 なる，就是在講變化</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 親切的音讀跟台語對得上</strong><br>
+    <strong>親</strong>　台語 tshin（鼻音 -n 收尾）→ <ruby>親<rt>しん</rt></ruby>，-n 尾變成 <span class="compare">ん</span><br>
+    <strong>切</strong>　台語 tshiat（入聲 -t 收尾）→ <ruby>切<rt>せつ</rt></ruby>，-t 尾變成 <span class="compare">つ</span><br>
+    合起來就是 <strong>しんせつ</strong>。同一個「切」在 <ruby>大切<rt>たいせつ</rt></ruby>（重要）裡唸法一模一樣，
+    看到 -t 收尾的台語字，日文音讀多半以 つ／ち 結束。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-26-aite-imasu.html"><span class="kioku-date">2026 / 08 / 26</span><span class="kioku-title">空いていますか — 問人有沒有空</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 空 的兩個身分</strong><br>
+    <span class="compare">空</span> 當動詞唸 <strong>あく</strong>（訓讀，跟漢字音無關），
+    但它的音讀是 <strong>くう</strong>，就藏在已經認得的<ruby>空<rt>くう</rt>港<rt>こう</rt></ruby>（機場）裡。
+    記成「空著（あく）＝ 空港（くうこう）那個空」，一個字的兩種唸法一起帶走。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-28-ha-o-migakimasu.html"><span class="kioku-date">2026 / 08 / 28</span><span class="kioku-title">歯を磨きます — 誰做什麼的三個句子</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 車跟料理用台語直接對過去</strong><br>
+    <span class="compare">車</span> 的音讀 <b>しゃ</b>，跟台語的「車 chhia」整串唸起來就是同一個音，
+    <ruby>自転車<rt>じてんしゃ</rt></ruby>、<ruby>電車<rt>でんしゃ</rt></ruby> 尾巴都是它。<br>
+    <span class="compare">料理</span> <b>りょうり</b> 對台語的「料理 liau-li」也是整串對得上，
+    連兩個音節的順序都一樣，這個詞幾乎不用背。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-29-megane-o-kaimashita.html"><span class="kioku-date">2026 / 08 / 29</span><span class="kioku-title">ました — 把做完的事說出來</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 眼 的音讀就是台語的「眼」</strong><br>
+    <span class="compare">眼</span> 的音讀是 <b>がん</b>，跟台語的「眼 gán」整串唸起來就是同一個音，
+    <ruby>眼科<rt>がんか</rt></ruby>（眼科）一唸就對得上。<br>
+    不過 <span class="compare">眼鏡</span> 唸 <b>めがね</b> 是特例 —— 這是整組配上去的熟字訓，
+    跟漢字音沒有關係，只能整個詞記起來。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-29-naritai-biyouin.html"><span class="kioku-date">2026 / 08 / 29</span><span class="kioku-title">〜くなります・〜くします・〜になりたいです — なる、する、還有想變成什麼的 たい</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 写真＝台語的 sia-tsin</strong><br>
+    <ruby>写<rt>しゃ</rt>真<rt>しん</rt></ruby> 唸 <span class="compare">しゃしん</span>（shashin），
+    台語的「寫真」唸 sia-tsin，整串唸出來幾乎一樣。台語講的寫真也是照片的意思，
+    想起阿公阿嬤說「翕寫真」（拍照）就記住了。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-29-seki.html"><span class="kioku-date">2026 / 08 / 29</span><span class="kioku-title">席 — 店裡的五種座位</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 席 跟台語整串對得上</strong><br>
+    <span class="compare">席</span> 的音讀 <b>せき</b>，跟台語的「席 sik」唸起來就是同一串：
+    開頭的 s 一樣，台語收尾的 -k 到日語就變成多出來的一拍 <b>き</b>。<br>
+    <span class="compare">椅子</span> 的 <b>い</b> 也一樣 —— 台語的「椅 i」就是它，
+    <ruby>椅子<rt>いす</rt></ruby> 前面那個音直接對過去。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-08-31-karakatta-desu.html"><span class="kioku-date">2026 / 08 / 31</span><span class="kioku-title">〜かったです／〜でした — 形容詞的過去式</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 税理士拆成三個字各記各的</strong><br>
+    <span class="compare">金 kim → きん</span>、<span class="compare">理 li → り</span>、<span class="compare">士 su → し</span>，
+    這三個字的日文音讀跟台語唸起來都很接近，把它們當成同一組認得就好：
+    税金＝ぜい＋<b>きん</b>、税理士＝ぜい＋<b>り</b>＋<b>し</b>。
+    只有 税（ぜい）本身跟台語對不太上，那個字單獨背。
+    另外 理 唸 り 是整組通用的：<ruby>料理<rt>りょうり</rt></ruby>、<ruby>無理<rt>むり</rt></ruby>、<ruby>理由<rt>りゆう</rt></ruby> 都是同一個 り。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-09-02-taiwan-ni-kaerimasu.html"><span class="kioku-date">2026 / 09 / 02</span><span class="kioku-title">台湾に帰ります — 回台灣要見的人與要帶的伴手禮</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 台湾 唸起來就是台語的「台灣」</strong><br>
+    <ruby>台湾<rt>たいわん</rt></ruby> taiwan 跟台語的 <strong>Tâi-uân</strong> 幾乎一模一樣，
+    整串音都對得上，不用另外背。這個字是日文漢字音跟台語同源的乾淨例子——
+    台 tâi → <strong>たい</strong>、湾 uân → <strong>わん</strong>。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-04-omosa-kyori.html"><span class="kioku-date">2026 / 10 / 04</span><span class="kioku-title">〜（さ）はどのくらいですか</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+      <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 離＝り</strong><br>
+      「離」的台語唸 <span class="compare">lî</span>，日文音讀就是 <span class="compare">り</span>，整個音對得上。
+      所以 <ruby>距<rt>きょ</rt>離<rt>り</rt></ruby> 的後半直接用台語記；前半的 きょ 跟台語不像，就當作一組「きょり」整個背下來。
+    </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-05-tsugi-wa-ichikara.html"><span class="kioku-date">2026 / 10 / 05</span><span class="kioku-title">次は1辛にします — 比較、辣度與點餐的決定</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 食＝しょく 一整組</strong><br>
+    外食 的 食 唸 <span class="compare">しょく</span>，跟 <a href="lessons/2026-08-24-yotei-washoku.html">8/24 的課</a>學過的 <ruby>和食<rt>わしょく</rt></ruby>（日式料理）、<ruby>洋食<rt>ようしょく</rt></ruby>（西式料理）是同一個音。
+    前面換一個字就是另一種吃法：和（日本）＋食、洋（西洋）＋食、外（外面）＋食。
+    外 在這裡唸 <span class="compare">がい</span>，跟 <ruby>外<rt>がい</rt>国<rt>こく</rt></ruby>（外國）的 がい 一樣；單獨說「外面」時才唸 そと。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 回＝かい 一整組</strong><br>
+    次回 的 回 唸 <span class="compare">かい</span>，跟 <ruby>今回<rt>こんかい</rt></ruby>（這次）、<ruby>前回<rt>ぜんかい</rt></ruby>（上次）、<ruby>何回<rt>なんかい</rt></ruby>（幾次）是同一個字同一個音。
+    記住 回＝かい，前面換成 今・前・次 就是這次、上次、下次。
+    次 單獨一個字時唸 つぎ，跟 回 組在一起才唸 じ。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-08-dekimasen.html"><span class="kioku-date">2026 / 10 / 08</span><span class="kioku-title">できません — 說自己「做不到」的說法</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 出来る 就是中文的「出來」</strong><br>
+    出 唸 で，跟 <ruby>出<rt>で</rt></ruby>ます（出去）同一個 で；来 唸 き，跟 <ruby>来<rt>き</rt></ruby>ます（來）同一個 き。
+    合起來的 でき，用中文想就是「做得<strong>出來</strong>」：做得出來 ＝ できます，做不出來 ＝ できません。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-08-suru-dekiru.html"><span class="kioku-date">2026 / 10 / 08</span><span class="kioku-title">する 的可能形是 できる</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 跟英文的 go → went 一樣</strong><br>
+    英文 go 的過去式不是 goed，而是借了另一個字 went 來用。
+    日文 する 的可能形也是這樣，不是從 する 變出來的，而是直接換成另一個字 できる。
+    兩個都是最常用的動詞，所以特別不規則，只能整個記起來。
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 料理（りょうり）＝ 台語的 liau-li</strong><br>
+    台語的「料理」唸 <strong>liau-li</strong>，日文唸 <strong>ryou-ri</strong>，兩個唸出來很像。
+    台語的料理是「處理事情」的意思，日文則是「做菜、菜餚」，意思不一樣，但聲音可以拿來記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-09-mi-ni-ikimasu.html"><span class="kioku-date">2026 / 10 / 09</span><span class="kioku-title">〜に行きます</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 服＝ふく</strong><br>
+    服 的音讀 <span class="compare">ふく</span>（fuku）跟中文的「服 fú」、台語的「服 hok」唸起來都很像，
+    日文的 ふ 本來就介在 h 和 f 之間。<ruby>洋<rt>よう</rt>服<rt>ふく</rt></ruby>（yōfuku，西式服裝）、<ruby>制<rt>せい</rt>服<rt>ふく</rt></ruby>（seifuku，制服）也是同一個音。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-09-techou-kakeibo.html"><span class="kioku-date">2026 / 10 / 09</span><span class="kioku-title">新しい手帳を買いました</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 銀＝ぎん、家＝か、大＝たい</strong><br>
+    這三個字的音讀跟台語唸起來幾乎一樣：<br>
+    銀 台語 gin → <span class="compare">ぎん</span>（銀行）；金 台語 kim → <span class="compare">きん</span>（<ruby>金<rt>きん</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>），金銀一起記。<br>
+    家 台語 ka（國家 kok-ka）→ <span class="compare">か</span>（家計簿）；日文的 <ruby>国<rt>こっ</rt>家<rt>か</rt></ruby> 也唸 kokka。<br>
+    大 台語 tai → <span class="compare">たい</span>（大変）。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — くだもの＝木の物，跟 けだもの 同一個結構</strong><br>
+    果物 是熟字訓，くだ 不是 果 的讀音。くだもの 拆開是 <span class="compare">く＋だ＋もの</span>：
+    く 是「樹」（木 的古音 こ 變來的），だ 是很古老的「の」，もの 是「東西」，合起來就是「樹上的東西」。<br>
+    <ruby>獣<rt>けだもの</rt></ruby>（kedamono，野獸）是同一個做法：<span class="compare">け（毛）＋だ＋もの</span>，長毛的東西。<br>
+    木 唸 こ 的痕跡還留在 <ruby>木<rt>こ</rt></ruby>の<ruby>葉<rt>は</rt></ruby>（konoha，樹葉）、<ruby>木<rt>こ</rt>陰<rt>かげ</rt></ruby>（kokage，樹蔭）、<ruby>木<rt>こ</rt></ruby><ruby>漏<rt>も</rt></ruby>れ<ruby>日<rt>び</rt></ruby>（komorebi，從樹葉間灑下的陽光）。
+    後半的 もの 則跟 <ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>、<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>、<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby> 一樣。
+    （出處：<a href="https://en.wiktionary.org/wiki/果物" target="_blank" rel="noopener">Wiktionary 果物</a>）
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-10-mono.html"><span class="kioku-date">2026 / 10 / 10</span><span class="kioku-title">「物」的詞</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — くだもの 和 けだもの 只差一個音</strong><br>
+    <span class="compare">く</span>だもの 是樹上的東西（水果），<span class="compare">け</span>だもの 是長毛的東西（野獸）。
+    兩個詞的後半 だもの 完全一樣，只要記住前面的 く＝樹、け＝毛。
+    （出處：<a href="https://en.wiktionary.org/wiki/果物" target="_blank" rel="noopener">Wiktionary 果物</a>）
+  </div>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 物＝ぶつ</strong><br>
+    物 的台語文讀 but，跟 <span class="compare">ぶつ</span>（butsu）唸起來幾乎一樣。
+    動物（どうぶつ）、<ruby>生<rt>せい</rt>物<rt>ぶつ</rt></ruby>（seibutsu，生物）的 物 都是這個音。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-12-aomori-kouyou-kaiwa.html"><span class="kioku-date">2026 / 10 / 12</span><span class="kioku-title">水曜日は青森に行きます</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 話題的 わ 和 だい 各有一組詞</strong><br>
+    話 唸 わ 的詞，學過 <span class="compare">会話（かいわ）</span>，還有 <span class="compare">電話（でんわ）</span>；
+    題 唸 だい 的詞有 <span class="compare">問題（もんだい）</span>、<span class="compare">宿題（しゅくだい）</span>。
+    兩組各認一個字，話題 就自己拼得出來了。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-13-tsuri-kyanpu-suizokukan.html"><span class="kioku-date">2026 / 10 / 13</span><span class="kioku-title">釣り・キャンプ・水族館</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 水族館 拆成三個學過的字</strong><br>
+    <span class="compare">水（すい）</span>是 水曜日 的 すい，<span class="compare">族（ぞく）</span>是
+    <a href="lessons/2026-08-05-doko.html">8/5 家族（かぞく）</a> 的 ぞく，<span class="compare">館（かん）</span>是
+    <a href="lessons/2026-06-28-tokyo-life-vocab.html">6/28 図書館（としょかん）</a> 的 かん。
+    三個字都在別的詞裡唸過，水族館 直接拼起來就是 すいぞくかん。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-21-aruite-ikimasu.html"><span class="kioku-date">2026 / 10 / 21</span><span class="kioku-title">〜て行きます</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 電車 的兩個字跟台語很像</strong><br>
+    電 台語唸 tian，日文是 でん；車 台語唸 tshia，日文是 しゃ。
+    <span class="compare">電車（でんしゃ）</span>、<span class="compare">自転車（じてんしゃ）</span>的 車 都是 しゃ，
+    電 也出現在 <span class="compare">電話（でんわ）</span>。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-21-jimu-kafe-kaiwa.html"><span class="kioku-date">2026 / 10 / 21</span><span class="kioku-title">ジムとカフェに行きました</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 新 和 間 的唸法跟台語一樣</strong><br>
+    新 台語唸 sin，日文音讀是 しん：<span class="compare">新宿（しんじゅく）</span>、<span class="compare">新聞（しんぶん）</span>。<br>
+    間 台語唸 kan，日文音讀是 かん：本課的 <span class="compare">時間（じかん）</span>、<span class="compare">一週間（いっしゅうかん）</span>都是它。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 中文的「走」在日文是「跑」</strong><br>
+    日文的 走る 保留了古漢語「走」＝奔跑的意思（像成語「奔走」「走馬看花」）。
+    中文現在說的「走路」，日文要用 <span class="compare">歩く</span>。看到 走 就想成「跑」。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-22-te-kei.html"><span class="kioku-date">2026 / 10 / 22</span><span class="kioku-title">て形怎麼變</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 把表唸成一串口訣</strong><br>
+    <span class="compare">うつる って、むぶぬ んで、く いて、ぐ いで、す して</span>。
+    五段的部分就這五組，唸熟之後看到結尾就能直接接上。一段動詞跟不規則的 する、来る、行く 另外記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-23-okite-tabete.html"><span class="kioku-date">2026 / 10 / 23</span><span class="kioku-title">〜て、〜て</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 図書館 的 館 跟其他場館是同一個 かん</strong><br>
+    <span class="compare">図書館（としょかん）</span>、<a href="lessons/2026-08-18-machi-tana-shouhin.html">8/18 体育館（たいいくかん）</a>、
+    <a href="lessons/2026-10-13-tsuri-kyanpu-suizokukan.html">10/13 水族館（すいぞくかん）</a>，
+    最後的 館 都唸 かん，台語的 館 kuan 唸起來也很接近。看到「〇〇館」是一棟建築，就唸 〇〇かん。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-25-kashikomarimashita-kono-mama.html"><span class="kioku-date">2026 / 10 / 25</span><span class="kioku-title">生活篇 — 與店員的對話</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 看「畏」這個字</strong><br>
+    畏 就是「敬畏」的畏。店員把自己放低、對客人表示敬意，用的就是帶著敬畏的詞。
+    這是訓讀，跟 畏 的漢字音 い 無關，台語也對不上，所以就靠字義來記。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 聽到「mama」就是不用袋子</strong><br>
+    まま 是日文固有的詞，沒有漢字音或台語可以借。我就記收銀台的畫面：
+    店員手上拿著我的東西問 <span class="compare">このまま</span>，意思就是「直接這樣給你，不裝袋喔」。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-25-nanmei-sama.html"><span class="kioku-date">2026 / 10 / 25</span><span class="kioku-title">何名様ですか</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 名＝めい，跟 有名 同一個音</strong><br>
+    名 的音讀 めい，跟 <ruby>有<rt>ゆう</rt>名<rt>めい</rt></ruby>（yuumei，有名）、<ruby>名<rt>めい</rt>刺<rt>し</rt></ruby>（meishi，名片）是同一個 めい，
+    認得一個就整組都通。台語的「名」唸起來不像，所以就用這組日文詞來記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-25-yoroshii.html"><span class="kioku-date">2026 / 10 / 25</span><span class="kioku-title">よろしい — 「いい」的客氣版</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 宜＝適宜</strong><br>
+    よろしい 的漢字寫成 <ruby>宜<rt>よろ</rt></ruby>しい，「宜」就是「適宜」的宜，意思是合適、恰當。
+    よろしいですか 就是在問「這樣合適嗎？」。這是訓讀，跟 宜 的漢字音 ぎ 無關，台語也對不上，
+    所以靠字義來記。平常幾乎都寫平假名 よろしい。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-27-hantaigo.html"><span class="kioku-date">2026 / 10 / 27</span><span class="kioku-title">形容詞的反義詞</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 高＝こう</strong><br>
+    「高」的台語文讀唸 <span class="compare">ko</span>，日文音讀是 <span class="compare">こう</span>（kou），唸起來很像。
+    所以 <ruby>高<rt>こう</rt>校<rt>こう</rt></ruby>（koukou，高中）、<ruby>最<rt>さい</rt>高<rt>こう</rt></ruby>（saikou，最棒）裡的 高 都可以用台語記。
+    不過 <ruby>高<rt>たか</rt></ruby>い 是訓讀，跟台語無關，要另外記。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-10-28-te-iru-meishi.html"><span class="kioku-date">2026 / 10 / 28</span><span class="kioku-title">〜ている＋名詞</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 大学 跟台語的「大學」很像</strong><br>
+    大學 台語唸 tai-hak，日文是 <span class="compare">だいがく</span>（daigaku），整串唸起來很接近。
+    学 一律唸 がく，<span class="compare">小学校</span>、<span class="compare">中学生</span>、<span class="compare">大学</span> 都是它，
+    只有後面接 こう 的時候縮成 がっ（がっこう）。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 注 和 駐 在中文、日文裡都同音</strong><br>
+    華語的「注」「駐」都唸 zhù，日文也一樣都唸 ちゅう，所以 <span class="compare">注射</span> 和 <span class="compare">駐車</span> 在日文裡是同音字。
+    後半的 射、車 台語唸 sia、tshia，跟 しゃ 很像，聽到 ちゅうしゃ 要靠前後文判斷是打針還是停車。
+    後面多一個 場（じょう）就一定是停車場；把 車 換成 輪，就是停腳踏車的 駐輪場。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-03-bunka-no-hi-bouldering.html"><span class="kioku-date">2026 / 11 / 03</span><span class="kioku-title">文化の日はボルダリングのイベント</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 日 唸 じつ 的一組字</strong><br>
+    <span class="compare">日</span> 的台語是 jit，日文音讀 <span class="compare">じつ</span> 唸起來幾乎一樣。
+    本篇的 祝日（しゅくじつ）、平日（へいじつ）都是這個音，再加上 休日（きゅうじつ，休假日）、本日（ほんじつ，本日），
+    「〇日＝某種日子」的兩字詞大多唸 じつ。祝 的台語 tsiok 跟 しゅく 也很接近，整個 祝日 用台語唸一次就記住了。<br>
+    同樣地，<span class="compare">参加</span> 的台語 tsham-ka 跟 さんか 唸起來很像，參 對 さん、加 對 か。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-03-hiroba-noboriguchi.html"><span class="kioku-date">2026 / 11 / 03</span><span class="kioku-title">場所を紹介します — 広場・登り口・下り口</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 紹介＝台語的 siau-kai</strong><br>
+    華語說「介紹」，日文寫成 <span class="compare">紹介</span>，兩個字順序顛倒。
+    台語剛好也說 <span class="compare">siau-kai（紹介）</span>，順序跟日文一樣，唸起來也像 しょうかい。
+    用台語去記，就不會把順序寫反。
+    （台語讀音見 <a href="https://en.wiktionary.org/wiki/%E7%B4%B9%E4%BB%8B" target="_blank" rel="noopener">Wiktionary 紹介</a>）
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-06-yori-no-hou-ga.html"><span class="kioku-date">2026 / 11 / 06</span><span class="kioku-title">A より B の方が〜・B は A より〜</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — ずっと 本來是「一直」</strong><br>
+    ずっと 還有「一直、始終」的意思，像 ずっと待っています（一直在等）。
+    放進比較句裡，就是「一路差下去、差了一大段」，所以變成「〜得多」。兩個意思都是「距離拉得很長」，一起記就好。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-07-ichiban-hayai.html"><span class="kioku-date">2026 / 11 / 07</span><span class="kioku-title">X が一番〜です — 說「最〜」的基本句型</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 一 唸 いち，新幹線 三個字都對得上</strong><br>
+    台語的「一」唸 <span class="compare">it</span>，日文音讀是 <span class="compare">いち</span>（ichi），跟<a href="lessons/2026-05-03-numbers.html" style="color:var(--accent);">數字那一課</a>的 いち 是同一個字。<br>
+    新幹線 用台語的文讀來唸是 <span class="compare">sin-kan-sian</span>，日文是 <span class="compare">しんかんせん</span>（shinkansen），三個字一路對下來：新 sin → しん、幹 kan → かん、線 sian → せん。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 速 是速度，早 是早上</strong><br>
+    速い 的 速 就是中文「速度」的速，跟快慢有關；早い 的 早 是「早上」的早，跟時間有關。照中文的意思挑字就不會錯。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-08-kunarimashita.html"><span class="kioku-date">2026 / 11 / 08</span><span class="kioku-title">X が〜くなりました／〜になりました — 講「變得〜了」</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 明るい 藏著「紅」，暗い 跟「黑」很像</strong><br>
+    <strong><ruby>明<rt>あか</rt></ruby>るい（akarui）</strong>：前兩個音就是 <ruby>赤<rt>あか</rt></ruby>い（紅色的）的 <span class="compare">あか</span>。太陽、火都是紅紅亮亮的，「紅」跟「亮」本來就是一家人。<br>
+    <strong><ruby>暗<rt>くら</rt></ruby>い（kurai）</strong>：跟 <ruby>黒<rt>くろ</rt></ruby>い（黑色的）只差一個母音，<span class="compare">くら</span> ↔ <span class="compare">くろ</span>，暗暗的就是黑黑的。<br>
+    日語的語源說法也是這樣：赤 跟「明」同源，黒 跟「暗」同源。赤い、黒い 在 <a href="lessons/2026-08-03-colors.html" style="color:var(--accent);">8/3 顏色那篇</a>學過。<br>
+    <span style="color:var(--ink-mute);">漢字的話，明 是 日＋月，兩個會發光的東西放在一起，所以是亮；暗 的左邊也有 日，右邊是 音。</span>
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 気温 拆成 気 和 温，各有一組學過的字</strong><br>
+    <strong>気（き）</strong>：跟 <ruby>天<rt>てん</rt>気<rt>き</rt></ruby>（天氣）、<ruby>元<rt>げん</rt>気<rt>き</rt></ruby>（有精神）是同一個 き。<br>
+    <strong>温（おん）</strong>：就是 <a href="lessons/2026-08-25-masen-tango.html" style="color:var(--accent);">8/25 學過的</a> <ruby>温<rt>あたた</rt></ruby>かい 的「温」，
+    在漢字詞裡唸 おん，像 <ruby>温<rt>おん</rt>泉<rt>せん</rt></ruby>（溫泉）。<br>
+    「空氣的溫度」＝<span class="compare">き＋おん</span>＝ きおん（kion）。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-09-kyuu-ni-samuku.html"><span class="kioku-date">2026 / 11 / 09</span><span class="kioku-title">急に寒くなりましたね</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 急 唸 きゅう 的字，日本到處都看得到</strong><br>
+    <strong>意思連在一起</strong>：事情來得很「急」，就是「突然」。急ぐ 是自己趕，急に 是事情突然發生，都是同一個「急」。<br>
+    <strong>搭電車就會看到的 きゅう</strong>：<ruby>急<rt>きゅう</rt>行<rt>こう</rt></ruby>（kyuukou，急行列車）、<ruby>特<rt>とっ</rt>急<rt>きゅう</rt></ruby>（tokkyuu，特急列車），
+    路上的救護車是 <ruby>救<rt>きゅう</rt>急<rt>きゅう</rt>車<rt>しゃ</rt></ruby>（kyuukyuusha）。看到這幾個詞裡的 急，都唸 <span class="compare">きゅう</span>。<br>
+    <strong>字形</strong>：下面是一個「心」，心裡很著急。<br>
+    <span style="color:var(--ink-mute);">台語的 急 唸 kip，跟 きゅう 唸起來不像，所以這個字不用台語記。</span>
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-09-sagasu-mitsukeru.html"><span class="kioku-date">2026 / 11 / 09</span><span class="kioku-title">探す vs 見つける — 「找」和「找到」</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 電池 用台語唸就是 でんち</strong><br>
+    電池 的台語唸 <span class="compare">tian-ti</span>，日文是 <span class="compare">でんち</span>（denchi），整串唸起來很像。
+    電 唸 でん 的字以前也學過：<a href="lessons/2026-07-11-eki-announcement.html">7/11</a> 的 電車（でんしゃ），看到 電 就先想 でん。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 看漢字的部首就分得出來</strong><br>
+    <strong>探</strong> 的左邊是提手旁（扌），手在東西堆裡翻來翻去，就是「找」的過程。<br>
+    <strong>見つける</strong> 開頭是 <span class="compare">見</span>（看見）：眼睛看到了，就是「找到」。<br>
+    <span style="color:var(--ink-mute);">さがす、みつける 都是訓讀（日文固有的詞），跟台語的漢字音沒有關係，所以用字形記。</span>
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-10-i-na-keiyoushi.html"><span class="kioku-date">2026 / 11 / 10</span><span class="kioku-title">〜いです／〜です — い形容詞和な形容詞加上 です 的差別</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 中文看得懂的兩字詞，幾乎都是な形容詞</strong><br>
+    簡単、便利、有名、元気、親切 這類兩個漢字、用音讀唸的詞，是古時候從中文借進日文的。
+    這種詞當形容詞用時，幾乎都是な形容詞。看到中文就懂意思的兩字詞，先猜な形容詞，通常不會錯。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-19-tari-tari.html"><span class="kioku-date">2026 / 11 / 19</span><span class="kioku-title">〜たり〜たりします — 從很多事裡舉幾個例子</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 山 的文讀是 san</strong><br>
+    台語 山 的文讀音是 <span class="compare">san</span>（山水 san-sui），日文的音讀也是 <span class="compare">さん</span>，像 <span class="compare">富士山</span>（ふじさん）。
+    在 登山 裡，山 接在 登 後面，第一個音變濁音（連濁），所以唸成 <span class="compare">ざん</span>。
+    火山（かざん）也是同樣的變化。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 昼寝 是「中午」加「睡」</strong><br>
+    <span class="compare">昼</span>（ひる）是 <a href="lessons/2026-07-29-hirugohan-chazuke.html">7/29 昼ごはん</a> 的 昼，
+    <span class="compare">寝</span>（ね）是 <a href="lessons/2026-10-23-okite-tabete.html">10/23</a> 寝ます（nemasu，睡覺）的 寝。
+    兩個都用訓讀，中午＋睡，就是睡午覺。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 読書 的 書 跟 図書館 同音</strong><br>
+    読書 用的是音讀，<span class="compare">書</span> 唸 しょ，跟 <a href="lessons/2026-06-28-tokyo-life-vocab.html">6/28 學過的</a> 図書館（としょかん）、還有 辞書（じしょ）是同一個音。
+    同一個 読，單獨當動詞時用訓讀，唸 よむ（読む）；跟別的漢字組成 読書 時用音讀，唸 どく。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-22-fuyu-no-heya.html"><span class="kioku-date">2026 / 11 / 22</span><span class="kioku-title">部屋は暖かいです</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 電気・乾燥・加湿器・度，唸起來都跟台語很像</strong><br>
+    電 台語唸 tian、気 唸 khi，<span class="compare">電気（でんき）</span>整串唸出來幾乎一樣。<br>
+    乾燥 台語唸 kan-so，日文是 <span class="compare">かんそう</span>。<br>
+    加 台語唸 ka、器 唸 khi，<span class="compare">加湿器（かしつき）</span>頭尾兩個字都對得上。<br>
+    度 台語唸 too，日文是 <span class="compare">ど</span>：13度、何度。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — やすい 有「便宜」和「容易」兩個</strong><br>
+    單獨用的 <span class="compare">安い（やすい）</span>是便宜；接在ます形後面的 やすい 是「容易」，漢字寫 易い，平常都寫假名。
+    記成「好買」和「好做」：東西好買就是便宜，事情好做就是容易。
+    這個接法在 <a href="lessons/2026-08-11-masu-kei-nyuumon.html" style="color:var(--accent);">8/11〈マス形入門〉</a>的表格裡出現過（飲みやすい＝好入口）。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-22-ta-koto-ga-arimasu.html"><span class="kioku-date">2026 / 11 / 22</span><span class="kioku-title">〜たことがあります — 說自己做過的事</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 浅草 就是「淺淺的草」</strong><br>
+    <span class="compare">浅</span>（あさ）是 <a href="lessons/2026-09-09-i-keiyoushi-meishi.html">9/9 的課</a>提過的 浅い（asai，淺）的 浅，
+    <span class="compare">草</span>（くさ）就是草。兩個字都用訓讀，所以唸 あさくさ，不是音讀。
+    地名的由來有一說是這一帶以前草長得很淺，字面就是「淺淺的草」。<br>
+    咖啡的淺焙也是同一個字：日文叫 <span class="compare">浅煎り</span>（あさいり，asairi），
+    深焙叫 深煎り（ふかいり，fukairi）。點咖啡看到 浅，就想到 浅草 的 あさ。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-23-joshi-ya.html"><span class="kioku-date">2026 / 11 / 23</span><span class="kioku-title">助詞「や」— 從幾樣東西裡挑出來舉例</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 洗濯 就是 洗濯機 拿掉 機</strong><br>
+    <a href="lessons/2026-08-19-naka.html">8/19</a> 學過 <span class="compare">洗濯機</span>（せんたくき，洗衣機），
+    把最後的 機（き，機器）拿掉，剩下的 <span class="compare">洗濯</span>（せんたく）就是「洗衣服」這件事。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 父 和 母 都是同一個音唸兩次</strong><br>
+    <span class="compare">母</span> 是 はは（haha），<span class="compare">父</span> 是 ちち（chichi），兩個都是同一個音重複兩次，可以一起記。
+    這兩個都是講「自己家的」爸媽；講別人家的、或當面叫，要換成 お父さん、お母さん。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="lessons/2026-11-23-kankoku-ryouri.html"><span class="kioku-date">2026 / 11 / 23</span><span class="kioku-title">韓国料理を食べました</span><span class="arrow">→</span></a>
+    <div class="mnemonic taigi">
+    <span class="mi mi-taigi" aria-hidden="true"></span><strong>台語線索 — 韓国・料理・分，唸起來都跟台語很像</strong><br>
+    韓國 台語唸 Han-kok，日文是 <span class="compare">かんこく</span>，國 kok 對 こく，兩個字都對得上。<br>
+    料理 台語唸 liau-li，日文是 <span class="compare">りょうり</span>。<br>
+    分 台語唸 hun，日文是 <span class="compare">ふん／ぷん</span>：10分（じゅっぷん）、5分（ごふん）。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 紅蘿蔔的根長得像人參</strong><br>
+    紅蘿蔔傳進日本時，因為根的形狀像人參，就借了 人参 這個名字；後來大家吃紅蘿蔔吃得比人參多，
+    人参 就變成指紅蘿蔔，真正的人參反而要加上 高麗（朝鮮半島）兩個字。記成「在日本，餐桌上的人参是橘色的」。
+  </div>
+  </section>
+  <section class="kioku-group">
+    <a class="kioku-src" href="jikan.html"><span class="kioku-date">速查表</span><span class="kioku-title">時間 速記表</span><span class="arrow">→</span></a>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 七曜就是七顆星</strong><br>
+    <strong>月・火・水・木・金・土・日</strong> ＝ 月亮、火星、水星、木星、金星、土星、太陽。<br>
+    這套「七曜」中文古代也用，順序<strong>跟中文星期一到星期日完全對上</strong>：<br>
+    星期一＝<strong>月</strong>曜日、星期二＝<strong>火</strong>曜日……星期日＝<strong>日</strong>曜日。<br>
+    所以不用另外背順序，<strong>只要記住漢字後面固定接「ようび」</strong>就好。
+  </div>
+    <div class="mnemonic">
+    <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 「間」就是期間的開關</strong><br>
+    <ruby>今週<rt>こんしゅう</rt></ruby>＝這一週（<strong>哪一週</strong>）　vs　<ruby>一週間<rt>いっしゅうかん</rt></ruby>＝一整週（<strong>多久</strong>）<br>
+    看到 <span class="compare">間</span> 就知道在講<strong>長度</strong>，沒有 間 就是在講<strong>位置</strong>。
+    中文的「期間」「時間」用的也是同一個字。
+  </div>
+  </section>
+
+  <p class="kioku-none">找不到符合的貼紙。</p>
+
+<site-footer></site-footer>
+</div>
+<script>
+(function () {
+  const chips = document.querySelectorAll('.kioku-chip');
+  const search = document.querySelector('.kioku-search');
+  const none = document.querySelector('.kioku-none');
+  let kind = 'all';
+  function apply() {
+    const q = search.value.trim().toLowerCase();
+    let shown = 0;
+    document.querySelectorAll('.kioku-group').forEach((g) => {
+      let any = 0;
+      g.querySelectorAll('.mnemonic').forEach((m) => {
+        const isTaigi = m.classList.contains('taigi');
+        const okKind = kind === 'all' || (kind === 'taigi') === isTaigi;
+        const okText = !q || m.textContent.toLowerCase().includes(q) || g.querySelector('.kioku-src, .divider').textContent.toLowerCase().includes(q);
+        const ok = okKind && okText;
+        m.classList.toggle('is-hidden', !ok);
+        if (ok) any++;
+      });
+      // 「我的筆記」沒有篩選條件時一律顯示（含空白提示）
+      const keep = g.id === 'my-notes' ? (any > 0 || (kind === 'all' && !q)) : any > 0;
+      g.classList.toggle('is-hidden', !keep);
+      shown += any;
+    });
+    none.style.display = shown ? 'none' : 'block';
+  }
+  chips.forEach((c) => c.addEventListener('click', () => {
+    kind = c.dataset.f;
+    chips.forEach((x) => x.classList.toggle('on', x === c));
+    apply();
+  }));
+  search.addEventListener('input', apply);
+})();
+</script>
+</body>
+</html>

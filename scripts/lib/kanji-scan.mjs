@@ -3,7 +3,7 @@
 
 import { readdir, readFile } from 'node:fs/promises';
 
-const DIRS = ['lessons', 'tadoku', 'readings'];
+const DIRS = ['lessons', 'readings'];
 
 export function isKanji(ch) {
   const c = ch.codePointAt(0);

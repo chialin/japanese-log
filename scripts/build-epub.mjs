@@ -32,7 +32,7 @@ const BOOK = {
 
 /* ─────────────────────────────  素材  ───────────────────────────── */
 
-// 對話用的插圖（跟網站共用 images/tadoku/）
+// 對話用的插圖（images/epub/；原本跟多読頁共用，多読已於 2026-11-24 刪除）
 const IMAGES = [
   'home_kitaku_girl.png',
   'taisyoku_hanataba_young_woman.png',
@@ -592,7 +592,7 @@ fs.writeFileSync(path.join(oebps, 'style.css'), CSS);
 for (const ch of chapters) fs.writeFileSync(path.join(oebps, ch.file), ch.html);
 for (const img of IMAGES) {
   const dst = path.join(oebps, 'images', img);
-  fs.copyFileSync(path.join(ROOT, 'images', 'tadoku', img), dst);
+  fs.copyFileSync(path.join(ROOT, 'images', 'epub', img), dst);
   // E-ink 是灰階：先轉灰階，對比比較可控，檔案也小一些（macOS sips；失敗就保留彩色）
   try {
     execFileSync('sips', ['-m', '/System/Library/ColorSync/Profiles/Generic Gray Profile.icc', dst],

@@ -5,7 +5,7 @@
 //   2. 找不到（404）→ fallback 到瀏覽器內建 speechSynthesis（Kyoko/O-ren）
 //
 // 使用方式：
-//   <script src="../js/tts.js"></script>   // lessons/, readings/, tadoku/ 等子目錄
+//   <script src="../js/tts.js"></script>   // lessons/, readings/ 等子目錄
 //   <script src="js/tts.js"></script>       // 根目錄路徑
 //
 //   await JTalk.speak('ほんを よむ', button, { rate: 0.8 });

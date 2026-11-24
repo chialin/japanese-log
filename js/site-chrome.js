@@ -200,16 +200,21 @@ document.querySelectorAll('.speed-control').forEach(upgradeSpeedControl);
     const anchor = document.querySelector('.page-title') || document.querySelector('h1');
     if (anchor) anchor.parentNode.insertBefore(where, anchor);
 
-    // 底部：上一篇／下一篇，左右兩邊的小膠囊，中間回目次；放在 <site-footer> 前面
-    const pill = (x, cls, text) =>
-      x ? `<a class="${cls}" href="../${x.href}" title="${esc(x.part)}：${esc(x.title)}">${text}</a>` : '<span></span>';
+    // 底部：上一篇／下一篇。每邊上面是小標＋標題，下面是固定寬度的實心按鈕，中間回目次
+    // 標題只放主標題：「 — 」後面的副標留在 title（滑鼠停上去看得到）
+    const short = (t) => t.split(/\s+[—–]\s+/)[0];
+    const side = (x, cls, kicker, label) => x
+      ? `<div class="bp-side ${cls}"><span class="bp-k">${kicker}</span>` +
+        `<a class="bp-t" href="../${x.href}" title="${esc(x.part)}：${esc(x.title)}">${esc(short(x.title))}</a>` +
+        `<a class="bp-btn" href="../${x.href}">${label}</a></div>`
+      : '';
     const pager = document.createElement('nav');
     pager.className = 'book-pager';
     pager.setAttribute('aria-label', '上一篇／下一篇');
     pager.innerHTML =
-      pill(b.prev, 'bp-prev', b.prev && '← ' + esc(b.prev.title)) +
-      `<a class="bp-toc" href="${toc}">目次</a>` +
-      pill(b.next, 'bp-next', b.next && esc(b.next.title) + ' →');
+      side(b.prev, 'bp-prev', 'Previous', '← 上一篇') +
+      `<a class="bp-btn bp-toc" href="${toc}">目次</a>` +
+      side(b.next, 'bp-next', 'Next', '下一篇 →');
     const footer = document.querySelector('site-footer');
     const wrap = document.querySelector('.wrap') || document.body;
     if (footer) footer.parentNode.insertBefore(pager, footer);

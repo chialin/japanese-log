@@ -811,12 +811,19 @@ a.rs-old:hover { background: #f6ead2; }
 .book-where .bw-part { font-family: 'Shippori Mincho', serif; color: var(--ink-soft); font-weight: 700; }
 .book-where .bw-prev { flex-basis: 100%; }
 
-/* ── 課程頁底部的上一篇／下一篇：小膠囊，上一篇靠左、目次置中、下一篇靠右 ──
-   課名太長會自動截成「…」，手機上也排得下一列 */
-.book-pager { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: 8px; margin: 40px 0 28px; }
-.book-pager a { display: inline-block; max-width: 100%; font-size: 13px; line-height: 1.5; padding: 5px 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.6); color: var(--ink-soft); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: border-color .15s, color .15s; }
-.book-pager a:hover { border-color: var(--accent); color: var(--accent); }
-.book-pager .bp-prev { justify-self: start; }
-.book-pager .bp-toc { justify-self: center; color: var(--ink-mute); }
-.book-pager .bp-next { justify-self: end; }
-@media (max-width: 600px) { .book-pager a { padding: 5px 11px; } }
+/* ── 課程頁底部的上一篇／下一篇（2026-11-24 比較稿選 B）──
+   每邊：小標 Previous／Next ＋ 細線 ＋ 課名（最多兩行）＋ 固定寬度的實心按鈕；目次在中間 */
+/* 兩邊用 subgrid 共用三列（小標／課名／按鈕），一邊課名折兩行時，另一邊的細線也在同一個高度 */
+.book-pager { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); grid-template-rows: auto auto auto; column-gap: 10px; row-gap: 7px; margin: 40px 0 28px; }
+.book-pager .bp-side { grid-row: 1 / 4; display: grid; grid-template-rows: subgrid; row-gap: 7px; min-width: 0; }
+.book-pager .bp-prev { grid-column: 1; justify-items: start; }
+.book-pager .bp-next { grid-column: 3; justify-items: end; text-align: right; }
+.book-pager .bp-side .bp-t { align-self: start; justify-self: stretch; }
+.book-pager .bp-toc { grid-column: 2; grid-row: 3; }
+.book-pager .bp-k { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 12px; color: var(--ink-mute); letter-spacing: .04em; }
+.book-pager .bp-t { border-top: 1px solid var(--line); padding-top: 6px; font-family: 'Shippori Mincho', serif; font-size: 14px; line-height: 1.55; color: var(--ink); text-decoration: none; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; overflow-wrap: anywhere; }
+.book-pager .bp-t:hover { color: var(--accent); }
+.book-pager .bp-btn { width: 7.2em; text-align: center; font-size: 13px; line-height: 1.5; padding: 6px 0; border: 1px solid var(--accent); border-radius: 6px; background: var(--accent); color: #fff; text-decoration: none; transition: background .15s, color .15s; }
+.book-pager .bp-btn:hover { filter: brightness(.9); }
+.book-pager .bp-toc { width: 4.5em; background: transparent; color: var(--accent); }
+.book-pager .bp-toc:hover { filter: none; background: var(--accent-pale); }

@@ -77,7 +77,7 @@ Each `<a class="lesson-link">` in `#lesson-list` carries:
 
 判斷標準：**這件事會讓之後的學習內容長得不一樣**才放進來，否則只進 Log。
 
-The calendar is built dynamically from `data-date` attributes. The script **auto-detects the two most recent months** that contain at least one lesson and renders only those two — no manual update needed when a new month starts.
+The calendar is built dynamically from `data-date` attributes. 一次顯示**一個月**（2026-11-24 起）：左邊是年份下拉＋該年有課的月份清單（附當月課數），點月份換右邊的日曆；預設停在最新一堂課的月份。沒課的月份不列出來，新月份、新年份都會自動出現，不必動 calendar 邏輯。手機版（≤600px）藏起左邊清單，改成日曆上方一顆標題按鈕「2026 年 11 月 ▾ 22 堂」，點了展開年份＋十二個月方塊，選完自動收起（不用橫向滑動，這是她從比較稿挑的版本）。
 
 ### Adding a New Page
 

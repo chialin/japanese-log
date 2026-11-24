@@ -36,9 +36,41 @@
   .dl-link:hover .dl-arrow{color:var(--accent);transform:translateY(2px);}
   /* ── Section divider ── */
   /* ── Calendar ── */
-  .cal-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px;}.cal-month{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:16px;}.cal-month-title{text-align:center;font-size:14px;letter-spacing:.25em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}.cal-dow{text-align:center;font-size:14px;letter-spacing:.08em;color:var(--ink-mute);text-transform:uppercase;padding-bottom:5px;font-family:'Cormorant Garamond',serif;}.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink);font-family:'Cormorant Garamond',serif;}.cal-day.has-lesson{background:var(--accent-pale);color:var(--accent);font-weight:700;cursor:pointer;transition:background .15s;}.cal-day.has-lesson:hover{background:var(--accent);color:white;}.cal-day.has-lesson.active{background:var(--accent);color:white;}/* ── Calendar popup ── */
-  .cal-popup{display:none;background:rgba(255,255,255,.8);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 18px;margin-bottom:32px;}.cal-popup.visible{display:block;}.cal-popup-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:10px;}.cal-popup-item{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:14px;transition:color .1s;}.cal-popup-item:last-child{border-bottom:none;}.cal-popup-item:hover{color:var(--accent);}.cal-popup-arrow{margin-left:auto;color:var(--ink-mute);font-size:14px;}/* ── Lesson list ── */
-  @media(max-width:600px){.container{padding:32px 18px 64px;}.hero h1{font-size:36px;}.cal-wrap{grid-template-columns:1fr;}}
+  /* 左邊：年份下拉＋有課的月份清單；右邊：單月日曆（手機改成標題按鈕展開選單，見下方 @media） */
+  .cal-wrap{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:start;margin-bottom:12px;padding:0 48px;}
+  /* 用自己畫的箭頭取代瀏覽器預設的（預設的會貼在最右邊），箭頭離右邊框 12px */
+  .cal-year{width:100%;margin-bottom:8px;font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--ink);border:1px solid var(--line);padding:4px 32px 4px 10px;cursor:pointer;-webkit-appearance:none;appearance:none;border-radius:0;
+    background:rgba(255,255,255,.7) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a6040' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 12px center;}
+  .cal-year:focus{outline:2px solid var(--accent-soft);}
+  .cal-months{display:flex;flex-direction:column;gap:2px;}
+  .cal-mbtn{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font-family:'Shippori Mincho',serif;font-size:15px;padding:6px 10px;border:none;border-left:3px solid transparent;background:none;color:var(--ink);cursor:pointer;text-align:left;transition:color .15s,background .15s;}
+  .cal-mbtn:hover{color:var(--accent);}
+  .cal-mbtn.on{border-left-color:var(--accent);background:var(--accent-pale);color:var(--accent);}
+  .cal-mcnt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ink-mute);}
+  /* 手機版才出現的標題按鈕＋展開選單（桌機藏起來） */
+  .cal-mhead{display:none;}
+  .cal-mtitle{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;color:var(--ink);background:none;border:none;border-bottom:1px dashed var(--accent-soft);cursor:pointer;padding:2px 4px;margin-bottom:10px;}
+  .cal-mtitle .cal-mcnt{font-weight:400;font-size:14px;margin-left:6px;}
+  .cal-sheet{display:none;border:1px solid var(--line);background:#fffaf6;padding:10px;margin-bottom:10px;}
+  .cal-sheet.open{display:block;}
+  .cal-sheet-years{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;}
+  .cal-sheet-months{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;}
+  .cal-chip{font-family:'Shippori Mincho',serif;font-size:14px;border:1px solid var(--line);background:rgba(255,255,255,.5);color:var(--ink);padding:7px 0;text-align:center;cursor:pointer;}
+  .cal-sheet-years .cal-chip{padding:4px 12px;}
+  .cal-chip.on{background:var(--accent);border-color:var(--accent);color:#fff;}
+  .cal-chip:disabled{color:#d8c4b4;border-style:dashed;background:transparent;cursor:default;}
+  .cal-month{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:16px 24px;}.cal-month-title{text-align:center;font-size:14px;letter-spacing:.25em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}.cal-dow{text-align:center;font-size:14px;letter-spacing:.08em;color:var(--ink-mute);text-transform:uppercase;padding-bottom:5px;font-family:'Cormorant Garamond',serif;}.cal-day{height:40px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink);font-family:'Cormorant Garamond',serif;}.cal-day.has-lesson{background:var(--accent-pale);color:var(--accent);font-weight:700;cursor:pointer;transition:background .15s;}.cal-day.has-lesson:hover{background:var(--accent);color:white;}.cal-day.has-lesson.active{background:var(--accent);color:white;}/* ── Calendar popup ── */
+  .cal-popup{display:none;background:rgba(255,255,255,.8);border:1px solid var(--line);border-left:3px solid var(--accent);padding:14px 18px;margin:0 48px 32px;}.cal-popup.visible{display:block;}.cal-popup-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.15em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:10px;}.cal-popup-item{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:14px;transition:color .1s;}.cal-popup-item:last-child{border-bottom:none;}.cal-popup-item:hover{color:var(--accent);}.cal-popup-arrow{margin-left:auto;color:var(--ink-mute);font-size:14px;}/* ── Lesson list ── */
+  @media(max-width:600px){.container{padding:32px 18px 64px;}.hero h1{font-size:36px;}
+    /* 手機：藏起左邊清單，改用日曆上方的標題按鈕打開年份／月份選單 */
+    .cal-wrap{grid-template-columns:1fr;padding:0;}
+    .cal-popup{margin:0 0 32px;}
+    .cal-side{display:none;}
+    .cal-mhead{display:block;}
+    .cal-month{padding:12px 10px;}
+    .cal-month-title{display:none;}
+    .cal-dow{font-size:12px;letter-spacing:0;}
+    .cal-day{font-size:15px;height:auto;aspect-ratio:1;}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1679,14 +1711,106 @@
     popup.classList.add('visible');
   }
 
-  // 自動取最近兩個有課的月份來顯示
+  // 年份下拉＋有課的月份清單，一次顯示一個月；預設最新一堂課的那個月
   const calWrap = document.getElementById('cal-wrap');
-  const monthSet = new Set(Object.keys(byDate).map(d => d.slice(0, 7)));
-  const sortedMonths = [...monthSet].sort().slice(-2);
-  sortedMonths.forEach(ym => {
-    const [y, m] = ym.split('-').map(Number);
-    calWrap.appendChild(renderMonth(y, m - 1));
+  const lessonCount = {};   // 'YYYY-MM' → 該月課數
+  Object.entries(byDate).forEach(([d, list]) => {
+    const ym = d.slice(0, 7);
+    lessonCount[ym] = (lessonCount[ym] || 0) + list.length;
   });
+  const allYM = Object.keys(lessonCount).sort();
+  const years = [...new Set(allYM.map(ym => +ym.slice(0, 4)))].sort((a, b) => b - a);
+  const ymKey = (y, m) => `${y}-${String(m).padStart(2, '0')}`;
+  let [calY, calM] = allYM[allYM.length - 1].split('-').map(Number);
+  let sheetOpen = false;   // 手機版的年月選單是否展開
+
+  // 換年份時停在同一個月；那個月沒課就跳到該年最新有課的月份
+  function fixMonth() {
+    if (!lessonCount[ymKey(calY, calM)]) {
+      calM = +allYM.filter(ym => ym.startsWith(calY + '-')).pop().slice(5);
+    }
+  }
+
+  function closePopup() {
+    activeDay = null;
+    document.getElementById('cal-popup').classList.remove('visible');
+  }
+
+  function drawCalendar() {
+    calWrap.innerHTML = '';
+    const side = document.createElement('div');
+    side.className = 'cal-side';
+
+    const sel = document.createElement('select');
+    sel.className = 'cal-year';
+    sel.setAttribute('aria-label', '選擇年份');
+    years.forEach(y => {
+      const o = document.createElement('option');
+      o.value = y; o.textContent = `${y} 年`; o.selected = y === calY;
+      sel.appendChild(o);
+    });
+    sel.addEventListener('change', () => {
+      calY = +sel.value;
+      fixMonth();
+      closePopup();
+      drawCalendar();
+    });
+    side.appendChild(sel);
+
+    const list = document.createElement('div');
+    list.className = 'cal-months';
+    for (let m = 12; m >= 1; m--) {
+      const n = lessonCount[ymKey(calY, m)];
+      if (!n) continue;
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'cal-mbtn' + (m === calM ? ' on' : '');
+      b.innerHTML = `<span>${m} 月</span><span class="cal-mcnt">${n} 堂</span>`;
+      b.addEventListener('click', () => { calM = m; closePopup(); drawCalendar(); });
+      list.appendChild(b);
+    }
+    side.appendChild(list);
+
+    // 手機版：標題按鈕「2026 年 11 月 ▾ 22 堂」，點了展開年份＋月份方塊
+    const main = document.createElement('div');
+    const mhead = document.createElement('div');
+    mhead.className = 'cal-mhead';
+    const mtitle = document.createElement('button');
+    mtitle.type = 'button';
+    mtitle.className = 'cal-mtitle';
+    mtitle.setAttribute('aria-expanded', sheetOpen);
+    mtitle.innerHTML = `${calY} 年 ${calM} 月 ${sheetOpen ? '▴' : '▾'}<span class="cal-mcnt">${lessonCount[ymKey(calY, calM)]} 堂</span>`;
+    mtitle.addEventListener('click', () => { sheetOpen = !sheetOpen; drawCalendar(); });
+    const sheet = document.createElement('div');
+    sheet.className = 'cal-sheet' + (sheetOpen ? ' open' : '');
+    const yRow = document.createElement('div');
+    yRow.className = 'cal-sheet-years';
+    years.forEach(y => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'cal-chip' + (y === calY ? ' on' : '');
+      b.textContent = y;
+      b.addEventListener('click', () => { calY = y; fixMonth(); closePopup(); drawCalendar(); });
+      yRow.appendChild(b);
+    });
+    const mGrid = document.createElement('div');
+    mGrid.className = 'cal-sheet-months';
+    for (let m = 1; m <= 12; m++) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'cal-chip' + (m === calM ? ' on' : '');
+      b.textContent = `${m}月`;
+      b.disabled = !lessonCount[ymKey(calY, m)];
+      b.addEventListener('click', () => { calM = m; sheetOpen = false; closePopup(); drawCalendar(); });
+      mGrid.appendChild(b);
+    }
+    sheet.append(yRow, mGrid);
+    mhead.append(mtitle, sheet);
+    main.append(mhead, renderMonth(calY, calM - 1));
+
+    calWrap.append(side, main);
+  }
+  drawCalendar();
 </script>
 </body>
 </html>

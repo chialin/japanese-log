@@ -200,15 +200,16 @@ document.querySelectorAll('.speed-control').forEach(upgradeSpeedControl);
     const anchor = document.querySelector('.page-title') || document.querySelector('h1');
     if (anchor) anchor.parentNode.insertBefore(where, anchor);
 
-    // 底部：上一篇／下一篇，放在 <site-footer> 前面
-    const card = (x, cls, kicker) =>
-      x ? `<a class="${cls}" href="../${x.href}"><span class="bp-kicker">${kicker}</span>` +
-          `<span class="bp-title">${esc(x.title)}</span><span class="bp-part">${esc(x.part)}</span></a>` : '';
+    // 底部：上一篇／下一篇，左右兩邊的小膠囊，中間回目次；放在 <site-footer> 前面
+    const pill = (x, cls, text) =>
+      x ? `<a class="${cls}" href="../${x.href}" title="${esc(x.part)}：${esc(x.title)}">${text}</a>` : '<span></span>';
     const pager = document.createElement('nav');
+    pager.className = 'book-pager';
     pager.setAttribute('aria-label', '上一篇／下一篇');
     pager.innerHTML =
-      `<div class="book-pager">${card(b.prev, 'bp-prev', '← 上一篇')}${card(b.next, 'bp-next', '下一篇 →')}</div>` +
-      `<div class="book-pager-toc"><a href="${toc}">回${esc(b.book)}目次</a></div>`;
+      pill(b.prev, 'bp-prev', b.prev && '← ' + esc(b.prev.title)) +
+      `<a class="bp-toc" href="${toc}">目次</a>` +
+      pill(b.next, 'bp-next', b.next && esc(b.next.title) + ' →');
     const footer = document.querySelector('site-footer');
     const wrap = document.querySelector('.wrap') || document.body;
     if (footer) footer.parentNode.insertBefore(pager, footer);

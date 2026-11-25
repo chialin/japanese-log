@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ブログの画面を作っています — 會話紀錄：做部落格、天氣、星期四去大阪</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<style>
+/* lessons/* 棕橘色票（不要動） */
+:root{--paper:#fdf6f0;--paper-deep:#f5e8d8;--ink:#2a1810;--ink-soft:#4a3020;--ink-mute:#8a6040;--accent:#c96830;--accent-soft:#f0b48a;--accent-pale:#fce8d8;--line:#f0d0b8;--bg-spot-1:#fdf0e5;--bg-spot-2:#f8e0c8;}
+
+.j-mark{display:inline-block;background:var(--accent-pale);color:var(--accent);font-weight:600;padding:0 4px;border-radius:2px;font-family:'Klee One','Shippori Mincho',serif;}
+.lead{margin-bottom:14px;color:var(--ink-soft);font-size:14px;line-height:1.9;}
+.divider[id]{scroll-margin-top:24px;}
+
+/* 對話 */
+.dialog{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:18px 20px;margin-bottom:16px;border-radius:4px;}
+.dialog-title{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+.turn{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
+.turn:last-child{border-bottom:none;}
+.who{flex-shrink:0;width:52px;font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;color:var(--accent);padding-top:4px;letter-spacing:.05em;}
+.turn.me .who{color:#a9762a;}
+.turn-body{flex:1;min-width:0;}
+.turn-ja{font-family:'Klee One','Shippori Mincho',serif;font-size:20px;color:var(--ink);line-height:1.5;}
+.turn-romaji{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-mute);font-size:14px;letter-spacing:.05em;margin-top:3px;}
+.turn-meaning{color:var(--ink-soft);font-size:13px;margin-top:3px;}
+.turn .play-btn{flex-shrink:0;}
+
+.quiz-box{background:rgba(255,255,255,.7);border:1px solid var(--line);border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:4px;}
+.quiz-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.quiz-ol{margin:0;padding-left:20px;color:var(--ink-soft);line-height:1.8;font-size:15px;}
+.quiz-ol li{margin-bottom:14px;}
+.quiz-ans{margin-top:6px;background:var(--paper-deep);padding:8px 14px;border-radius:4px;font-size:14px;color:var(--ink-soft);}
+.quiz-ans summary{cursor:pointer;font-weight:600;color:var(--accent);}
+.quiz-ans p{margin:8px 0 0 0;line-height:1.9;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<script src="../js/site-chrome.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<site-header></site-header>
+
+  <h1 class="page-title">ブログの<span class="accent"><ruby>画<rt>が</rt>面<rt>めん</rt></ruby></span>を <ruby>作<rt>つく</rt></ruby>っています</h1>
+  <div class="page-meta">會話紀錄 · Conversation · 2026 / 11 / 24</div>
+  <p class="page-subtitle">跟老師聊三件事：這天用 Claude 做部落格的介面、沒去健身房；外面風很大、十七度；星期四要去大阪，天氣還沒查</p>
+
+  <div class="speed-control">
+    <label for="rate">速度</label>
+    <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="1">
+    <span class="speed-value" id="rateValue">1.0x</span>
+  </div>
+
+  <div class="tip">
+    <span class="ui-ic ui-tip" aria-hidden="true"></span><strong>讀完這篇可以這樣說</strong><br>
+    11/24 的口語課，老師問我這天在做什麼、天氣怎麼樣，還有這個星期有什麼安排。讀完這篇可以：
+    <ul class="tip-list">
+      <li>用 Aを使って、Bを作っています 說「正在用 A 做 B」</li>
+      <li>用 日本に来てから 說「來日本之後」，用 出る前に 說「出門之前」</li>
+      <li>用 行けません 說「沒辦法去」，知道它跟 行くことができません 意思一樣</li>
+      <li>用 週に二、三回 說「一個星期兩三次」</li>
+      <li>用 まだ調べていません 說「還沒查」</li>
+      <li>用 晴れですか、曇りですか 問「是晴天還是陰天」</li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kaiwa">一、以這堂課聊的三件事為主軸，把對話整理出來</div>
+
+  <p class="lead">
+    下面是照聊天室的筆記重新整理的對話，分成三段。老師在聊天室打的多半是零碎的字，我把它們放回完整的禮貌形句子；
+    老師的問句是依當時的流程補上的。每一句都可以按 ▶ 跟著唸。
+  </p>
+
+  <div class="dialog">
+    <div class="dialog-title">部落格和健身房</div>
+
+    <div class="turn" data-text="今日は何をしていますか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今日<rt>きょう</rt></ruby>は <ruby>何<rt>なに</rt></ruby>を していますか。</div>
+        <div class="turn-romaji">kyou wa nani o shite imasu ka.</div>
+        <div class="turn-meaning">這天在做什麼呢？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="今日はクロードを使って、ブログの画面を作っています。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今日<rt>きょう</rt></ruby>は Claude（クロード）を <span class="j-mark"><ruby>使<rt>つか</rt></ruby>って</span>、ブログの <ruby>画<rt>が</rt>面<rt>めん</rt></ruby>を <span class="j-mark"><ruby>作<rt>つく</rt></ruby>っています</span>。</div>
+        <div class="turn-romaji">kyou wa kuroodo o tsukatte, burogu no gamen o tsukutte imasu.</div>
+        <div class="turn-meaning">我在用 Claude 做部落格的介面。（使って 的用法見<a href="#tsukatte" style="color:var(--accent);">第三節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ブログを書いていますか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">ブログを <ruby>書<rt>か</rt></ruby>いていますか。</div>
+        <div class="turn-romaji">burogu o kaite imasu ka.</div>
+        <div class="turn-meaning">你有在寫部落格嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい、日本に来てから、時々ブログを書いています。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、<ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>に <span class="j-mark"><ruby>来<rt>き</rt></ruby>てから</span>、<ruby>時<rt>とき</rt>々<rt>どき</rt></ruby> ブログを <ruby>書<rt>か</rt></ruby>いています。</div>
+        <div class="turn-romaji">hai, nihon ni kite kara, tokidoki burogu o kaite imasu.</div>
+        <div class="turn-meaning">有，來日本之後，我有時候會寫。（てから 見<a href="#kara-mae" style="color:var(--accent);">第四節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="ジムに行きましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">ジムに <ruby>行<rt>い</rt></ruby>きましたか。</div>
+        <div class="turn-romaji">jimu ni ikimashita ka.</div>
+        <div class="turn-meaning">有去健身房嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="いいえ、今日はジムに行っていません。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいえ、<ruby>今日<rt>きょう</rt></ruby>は ジムに <ruby>行<rt>い</rt></ruby>っていません。</div>
+        <div class="turn-romaji">iie, kyou wa jimu ni itte imasen.</div>
+        <div class="turn-meaning">沒有，這天沒去健身房。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="毎日ジムに行けません。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> ジムに <span class="j-mark"><ruby>行<rt>い</rt></ruby>けません</span>。</div>
+        <div class="turn-romaji">mainichi jimu ni ikemasen.</div>
+        <div class="turn-meaning">我沒辦法每天去健身房。（老師也寫了 行くことができない，見<a href="#ikemasen" style="color:var(--accent);">第五節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="どのくらい行きますか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja">どのくらい <ruby>行<rt>い</rt></ruby>きますか。</div>
+        <div class="turn-romaji">dono kurai ikimasu ka.</div>
+        <div class="turn-meaning">大概多久去一次？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="週に二、三回行きます。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>週<rt>しゅう</rt></ruby>に <ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby> <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="turn-romaji">shuu ni nisankai ikimasu.</div>
+        <div class="turn-meaning">一個星期去兩三次。（我先說了 ２回とか３回，老師改成 二、三回）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="dialog">
+    <div class="dialog-title">天氣</div>
+
+    <div class="turn" data-text="今日の天気はどうですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今日<rt>きょう</rt></ruby>の <ruby>天<rt>てん</rt>気<rt>き</rt></ruby>は どうですか。</div>
+        <div class="turn-romaji">kyou no tenki wa dou desu ka.</div>
+        <div class="turn-meaning">那邊天氣怎麼樣？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="今は雨じゃないです。でも、風が強いです。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今<rt>いま</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>じゃないです。でも、<ruby>風<rt>かぜ</rt></ruby>が <ruby>強<rt>つよ</rt></ruby>いです。</div>
+        <div class="turn-romaji">ima wa ame ja nai desu. demo, kaze ga tsuyoi desu.</div>
+        <div class="turn-meaning">現在沒有下雨，不過風很大。（風大用 強い，不用 大きい）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="何度ですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>何<rt>なん</rt>度<rt>ど</rt></ruby>ですか。</div>
+        <div class="turn-romaji">nando desu ka.</div>
+        <div class="turn-meaning">幾度？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="十七度です。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>17<rt>じゅうなな</rt>度<rt>ど</rt></ruby>です。</div>
+        <div class="turn-romaji">juunana do desu.</div>
+        <div class="turn-meaning">十七度。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="外に行きましたか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>外<rt>そと</rt></ruby>に <ruby>行<rt>い</rt></ruby>きましたか。</div>
+        <div class="turn-romaji">soto ni ikimashita ka.</div>
+        <div class="turn-meaning">有出門嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="いいえ、今日は外に行っていません。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">いいえ、<ruby>今日<rt>きょう</rt></ruby>は <ruby>外<rt>そと</rt></ruby>に <ruby>行<rt>い</rt></ruby>っていません。</div>
+        <div class="turn-romaji">iie, kyou wa soto ni itte imasen.</div>
+        <div class="turn-meaning">沒有，這天還沒出門。（老師打的是口語的 行ってない）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <div class="dialog">
+    <div class="dialog-title">星期四去大阪</div>
+
+    <div class="turn" data-text="今週は何をしますか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>今<rt>こん</rt>週<rt>しゅう</rt></ruby>は <ruby>何<rt>なに</rt></ruby>を しますか。</div>
+        <div class="turn-romaji">konshuu wa nani o shimasu ka.</div>
+        <div class="turn-meaning">這個星期要做什麼？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="木曜日から大阪に行きます。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>木<rt>もく</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>から <ruby>大<rt>おお</rt>阪<rt>さか</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。</div>
+        <div class="turn-romaji">mokuyoubi kara oosaka ni ikimasu.</div>
+        <div class="turn-meaning">星期四開始去大阪。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="大阪に行ったことがありますか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>大<rt>おお</rt>阪<rt>さか</rt></ruby>に <ruby>行<rt>い</rt></ruby>ったことが ありますか。</div>
+        <div class="turn-romaji">oosaka ni itta koto ga arimasu ka.</div>
+        <div class="turn-meaning">你去過大阪嗎？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="はい、前に行ったことがあります。旅行で大阪に行きました。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja">はい、<ruby>前<rt>まえ</rt></ruby>に <ruby>行<rt>い</rt></ruby>ったことが あります。<ruby>旅<rt>りょ</rt>行<rt>こう</rt></ruby>で <ruby>大<rt>おお</rt>阪<rt>さか</rt></ruby>に <ruby>行<rt>い</rt></ruby>きました。</div>
+        <div class="turn-romaji">hai, mae ni itta koto ga arimasu. ryokou de oosaka ni ikimashita.</div>
+        <div class="turn-meaning">有，以前去過，那次是去旅行。</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn" data-text="木曜日は晴れですか、曇りですか。">
+      <div class="who">先生</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>木<rt>もく</rt>曜<rt>よう</rt>日<rt>び</rt></ruby>は <ruby>晴<rt>は</rt></ruby>れですか、<ruby>曇<rt>くも</rt></ruby>りですか。</div>
+        <div class="turn-romaji">mokuyoubi wa hare desu ka, kumori desu ka.</div>
+        <div class="turn-meaning">星期四是晴天還是陰天？</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="天気はまだ調べていません。明日調べます。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><ruby>天<rt>てん</rt>気<rt>き</rt></ruby>は <span class="j-mark">まだ <ruby>調<rt>しら</rt></ruby>べていません</span>。<ruby>明日<rt>あした</rt></ruby> <ruby>調<rt>しら</rt></ruby>べます。</div>
+        <div class="turn-romaji">tenki wa mada shirabete imasen. ashita shirabemasu.</div>
+        <div class="turn-meaning">天氣我還沒查，明天會查。（見<a href="#mada" style="color:var(--accent);">第六節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="turn me" data-text="出る前に調べます。">
+      <div class="who">わたし</div>
+      <div class="turn-body">
+        <div class="turn-ja"><span class="j-mark"><ruby>出<rt>で</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>に</span> <ruby>調<rt>しら</rt></ruby>べます。</div>
+        <div class="turn-romaji">deru mae ni shirabemasu.</div>
+        <div class="turn-meaning">出發前會查。（る前に 見<a href="#kara-mae" style="color:var(--accent);">第四節</a>）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tango">二、對話裡的新單字是這些</div>
+
+  <p class="lead">
+    這段對話第一次出現的字有七個：兩個跟做網站有關，兩個是天氣，加上兩個動詞和一個次數的說法。其他的字以前都學過，這裡不再列：
+  </p>
+  <ul class="tip-list" style="margin:-4px 0 16px;color:var(--ink-soft);font-size:14px;line-height:1.9;">
+    <li>ジム（jimu，健身房）：<a href="2026-07-05-gym-flyer.html" style="color:var(--accent);">7/5 健身房傳單</a>；<a href="2026-10-21-jimu-kafe-kaiwa.html" style="color:var(--accent);">10/21〈ジムとカフェに行きました〉</a>有寫來源</li>
+    <li>作っています（tsukutte imasu）：<a href="2026-09-02-teimasu.html" style="color:var(--accent);">9/2〈〜ています〉</a></li>
+    <li>強い（つよい，tsuyoi）：<a href="2026-10-27-hantaigo.html" style="color:var(--accent);">10/27〈形容詞的反義詞〉</a></li>
+    <li>〇度（ど，do）：<a href="2026-11-22-fuyu-no-heya.html" style="color:var(--accent);">11/22〈部屋は暖かいです〉</a>的 十三度</li>
+    <li>大阪（おおさか，oosaka）：<a href="2026-10-13-tsuri-kyanpu-suizokukan.html" style="color:var(--accent);">10/13〈釣り・キャンプ・水族館〉</a></li>
+  </ul>
+
+  <div class="section">
+    <div class="section-title"><span class="ui-ic ui-book" aria-hidden="true"></span>本課的新字</div>
+
+    <div class="word-item" data-text="ブログ">
+      <div class="word-content">
+        <div class="word-ja">ブログ</div>
+        <div class="word-romaji">burogu</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">部落格 ← 英語 blog；blog 本身是 weblog（網路日誌）的縮寫。寫部落格是 ブログを書きます</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="画面">
+      <div class="word-content">
+        <div class="word-ja"><ruby>画<rt>が</rt>面<rt>めん</rt></ruby></div>
+        <div class="word-romaji">gamen</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">畫面、介面：螢幕上看到的樣子；網站、app、手機的畫面都用這個字</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="使う">
+      <div class="word-content">
+        <div class="word-ja"><ruby>使<rt>つか</rt></ruby>う</div>
+        <div class="word-romaji">tsukau</div>
+        <div class="word-pos">動詞（五段）</div>
+        <div class="word-meaning">使用；ます形 使います，て形 使って</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="調べる">
+      <div class="word-content">
+        <div class="word-ja"><ruby>調<rt>しら</rt></ruby>べる</div>
+        <div class="word-romaji">shiraberu</div>
+        <div class="word-pos">動詞（一段）</div>
+        <div class="word-meaning">查、查詢：查天氣、查路線、查單字都用它；ます形 調べます，て形 調べて</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="晴れ">
+      <div class="word-content">
+        <div class="word-ja"><ruby>晴<rt>は</rt></ruby>れ</div>
+        <div class="word-romaji">hare</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">晴天；說「今天是晴天」是 今日は晴れです</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="曇り">
+      <div class="word-content">
+        <div class="word-ja"><ruby>曇<rt>くも</rt></ruby>り</div>
+        <div class="word-romaji">kumori</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">陰天；跟 雲（くも，雲）同音，天上都是雲就是陰天</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="word-item" data-text="二、三回">
+      <div class="word-content">
+        <div class="word-ja"><ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby></div>
+        <div class="word-romaji">nisankai</div>
+        <div class="word-pos">名詞</div>
+        <div class="word-meaning">兩三次：兩個數字直接連著唸，中間不加 と；同樣的說法還有 二、三人（にさんにん，兩三個人）</div>
+      </div>
+      <button class="play-btn" aria-label="播放">▶</button>
+    </div>
+
+    <div class="mnemonic">
+      <span class="mi mi-memo" aria-hidden="true"></span><strong>我的記憶小撇步 — 晴 和 曇 都從太陽看</strong><br>
+      兩個字的左邊或上面都有 日（太陽）。<span class="compare">晴</span> 是 日＋青，太陽配藍天，就是晴天；
+      <span class="compare">曇</span> 是 日 下面壓著一個 雲，太陽被雲擋住，就是陰天。
+      而且 曇り（くもり）的前兩個音剛好就是 雲（くも）。
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="tsukatte">三、「用 A 來做 B」是 Aを使って、Bを〜 這樣說的</div>
+
+  <p class="lead">
+    中文說「用 Claude 做部落格」，一句話裡有兩個動作：用、做。日文把前面那個動作變成て形，跟後面的動作接起來。
+    前半句講用什麼工具，後半句講拿它做什麼。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">用 Claude 做部落格的介面</div><div class="pat">Claudeを <b>使って</b>、ブログの画面を 作っています</div><div class="ex jp">Claudeを <ruby>使<rt>つか</rt></ruby>って、ブログの <ruby>画<rt>が</rt>面<rt>めん</rt></ruby>を <ruby>作<rt>つく</rt></ruby>っています<span class="ro">kuroodo o tsukatte, burogu no gamen o tsukutte imasu</span></div></div>
+    <div class="sum-card"><div class="want">用手機查天氣</div><div class="pat">スマホを <b>使って</b>、天気を 調べます</div><div class="ex jp">スマホを <ruby>使<rt>つか</rt></ruby>って、<ruby>天<rt>てん</rt>気<rt>き</rt></ruby>を <ruby>調<rt>しら</rt></ruby>べます<span class="ro">sumaho o tsukatte, tenki o shirabemasu</span></div></div>
+    <div class="sum-card"><div class="want">用電腦寫部落格</div><div class="pat">パソコンを <b>使って</b>、ブログを 書きます</div><div class="ex jp">パソコンを <ruby>使<rt>つか</rt></ruby>って、ブログを <ruby>書<rt>か</rt></ruby>きます<span class="ro">pasokon o tsukatte, burogu o kakimasu</span></div></div>
+  </div>
+
+  <p class="lead">
+    句尾換成 作っています，意思就是「正在做」，這是 <a href="2026-09-02-teimasu.html" style="color:var(--accent);">9/2〈〜ています〉</a>學過的用法。
+    做網站、做菜、做東西都用 作ります（tsukurimasu）。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="kara-mae">四、「之後」用 てから，「之前」用 る前に</div>
+
+  <p class="lead">
+    這堂課有兩句話在講時間的先後：來日本之後開始寫部落格，出門之前會查天氣。
+    兩句前面接的動詞形不一樣，「之後」接て形，「之前」接辭書形（る 結尾的原形）。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">做了 A 之後</div><div class="pat">A（て形）<b>から</b></div><div class="ex jp"><ruby>日<rt>に</rt>本<rt>ほん</rt></ruby>に <ruby>来<rt>き</rt></ruby>て<b>から</b>、ブログを <ruby>書<rt>か</rt></ruby>いています<span class="ro">nihon ni kite kara, burogu o kaite imasu</span></div></div>
+    <div class="sum-card"><div class="want">做 A 之前</div><div class="pat">A（辭書形）<b>前に</b></div><div class="ex jp"><ruby>出<rt>で</rt></ruby>る<b><ruby>前<rt>まえ</rt></ruby>に</b>、<ruby>天<rt>てん</rt>気<rt>き</rt></ruby>を <ruby>調<rt>しら</rt></ruby>べます<span class="ro">deru mae ni, tenki o shirabemasu</span></div></div>
+    <div class="sum-card"><div class="want">吃飯之前</div><div class="pat">名詞＋<b>の前に</b></div><div class="ex jp">ご<ruby>飯<rt>はん</rt></ruby>の<b><ruby>前<rt>まえ</rt></ruby>に</b>、<ruby>手<rt>て</rt></ruby>を <ruby>洗<rt>あら</rt></ruby>います<span class="ro">gohan no mae ni, te o araimasu</span></div></div>
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>る前に 的前面不能用過去式</strong><br>
+    中文說「出門前」，出門這件事還沒發生，所以日文用辭書形 出る，不會說 出た前に。
+    反過來，てから 前面的事已經做完了，所以用て形接。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="ikemasen">五、行けません 和 行くことができません 意思一樣</div>
+
+  <p class="lead">
+    說「沒辦法每天去健身房」時，老師在聊天室打了兩種說法。兩種都學過，意思一樣，只是長短不同。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">可能形（比較短，會話常用）</div><div class="pat">行<b>け</b>ません</div><div class="ex jp"><ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> ジムに <ruby>行<rt>い</rt></ruby>けません<span class="ro">mainichi jimu ni ikemasen</span></div></div>
+    <div class="sum-card"><div class="want">辭書形＋ことができません（比較長、正式）</div><div class="pat">行く<b>ことができません</b></div><div class="ex jp"><ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby> ジムに <ruby>行<rt>い</rt></ruby>くことが できません<span class="ro">mainichi jimu ni iku koto ga dekimasen</span></div></div>
+    <div class="sum-card"><div class="want">跟朋友說（口語）</div><div class="pat">行<b>けない</b></div><div class="ex jp"><ruby>毎<rt>まい</rt>日<rt>にち</rt></ruby>は <ruby>行<rt>い</rt></ruby>けない<span class="ro">mainichi wa ikenai</span></div></div>
+  </div>
+
+  <p class="lead">
+    行く 是五段動詞，字尾 く 換到え段變成 け，再加 る 就是可能形 行ける，
+    這條規則在 <a href="2026-10-08-dekimasen.html" style="color:var(--accent);">10/8〈できません〉</a>；
+    ことができます 的說法在 <a href="2026-10-06-koto-ga-dekimasu.html" style="color:var(--accent);">10/6〈〜ことができます〉</a>。
+  </p>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="mada">六、「還沒做」是 まだ〜ていません，不是 まだ〜ません</div>
+
+  <p class="lead">
+    老師問星期四的天氣，我還沒查。日文說「還沒」要用 まだ 加上 ていません，表示到現在為止這件事都還沒發生。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">還沒查</div><div class="pat"><b>まだ</b> 調べて<b>いません</b></div><div class="ex jp"><ruby>天<rt>てん</rt>気<rt>き</rt></ruby>は まだ <ruby>調<rt>しら</rt></ruby>べていません<span class="ro">tenki wa mada shirabete imasen</span></div></div>
+    <div class="sum-card"><div class="want">還沒吃</div><div class="pat"><b>まだ</b> 食べて<b>いません</b></div><div class="ex jp">たこ<ruby>焼<rt>や</rt></ruby>きは まだ <ruby>食<rt>た</rt></ruby>べていません<span class="ro">takoyaki wa mada tabete imasen</span></div></div>
+    <div class="sum-card"><div class="want">之後會做</div><div class="pat">明日 調べ<b>ます</b></div><div class="ex jp"><ruby>明日<rt>あした</rt></ruby> <ruby>調<rt>しら</rt></ruby>べます<span class="ro">ashita shirabemasu</span></div></div>
+  </div>
+
+  <div class="alert">
+    <span class="ui-ic ui-alert" aria-hidden="true"></span><strong>まだ調べません 意思不一樣</strong><br>
+    まだ調べません（mada shirabemasen）是「現在還不打算查」，帶著「之後才要查」的意思。
+    想說「還沒查（到目前為止沒做）」要用 まだ調べていません。被問「查了嗎？」的時候，回答 まだです（mada desu）也可以。
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="matome">七、最後把這段對話用得到的句子放在一起看</div>
+
+  <p class="lead">
+    下面這幾個句型都是從這堂課的對話來的，換掉裡面的字，就可以講自己的事。
+  </p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="want">用 A 做 B</div><div class="pat">Aを <b>使って</b>、Bを 作っています</div><div class="ex jp">アプリを <ruby>使<rt>つか</rt></ruby>って、<ruby>単<rt>たん</rt>語<rt>ご</rt></ruby>を <ruby>覚<rt>おぼ</rt></ruby>えています<span class="ro">apuri o tsukatte, tango o oboete imasu</span></div></div>
+    <div class="sum-card"><div class="want">做了 A 之後</div><div class="pat">A（て形）<b>から</b></div><div class="ex jp"><ruby>家<rt>いえ</rt></ruby>に <ruby>帰<rt>かえ</rt></ruby>ってから、<ruby>勉<rt>べん</rt>強<rt>きょう</rt></ruby>します<span class="ro">ie ni kaette kara, benkyou shimasu</span></div></div>
+    <div class="sum-card"><div class="want">做 A 之前</div><div class="pat">A（辭書形）<b>前に</b></div><div class="ex jp"><ruby>寝<rt>ね</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>に、<ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます<span class="ro">neru mae ni, hon o yomimasu</span></div></div>
+    <div class="sum-card"><div class="want">沒辦法做</div><div class="pat">可能形＋<b>ません</b></div><div class="ex jp"><ruby>朝<rt>あさ</rt></ruby>は <ruby>早<rt>はや</rt></ruby>く <ruby>起<rt>お</rt></ruby>きられません<span class="ro">asa wa hayaku okiraremasen</span></div></div>
+    <div class="sum-card"><div class="want">一段時間做幾次</div><div class="pat"><b>週に</b> 二、三回</div><div class="ex jp"><ruby>週<rt>しゅう</rt></ruby>に <ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby> <ruby>料<rt>りょう</rt>理<rt>り</rt></ruby>を します<span class="ro">shuu ni nisankai ryouri o shimasu</span></div></div>
+    <div class="sum-card"><div class="want">還沒做</div><div class="pat"><b>まだ</b>〜て<b>いません</b></div><div class="ex jp">まだ <ruby>決<rt>き</rt></ruby>めていません<span class="ro">mada kimete imasen</span></div></div>
+    <div class="sum-card"><div class="want">問是 A 還是 B</div><div class="pat">Aですか、Bですか</div><div class="ex jp"><ruby>雨<rt>あめ</rt></ruby>ですか、<ruby>雪<rt>ゆき</rt></ruby>ですか<span class="ro">ame desu ka, yuki desu ka</span></div></div>
+  </div>
+
+  <!-- ─────────────────────────────────────── -->
+  <div class="divider" id="quiz">八、換你自己做做看 · Self-Quiz</div>
+
+  <div class="quiz-box">
+    <div class="quiz-title"><span class="ui-ic ui-quiz" aria-hidden="true"></span>依提示寫出日文</div>
+    <ol class="quiz-ol">
+      <li>我用手機查天氣。（提示：スマホ、使って、調べます）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>スマホを使って、天気を調べます。<br>sumaho o tsukatte, tenki o shirabemasu.</p>
+        </details>
+      </li>
+      <li>來東京之後，我開始去健身房。（提示：東京に来てから、ジムに行っています）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>東京に来てから、ジムに行っています。<br>toukyou ni kite kara, jimu ni itte imasu.</p>
+        </details>
+      </li>
+      <li>我沒辦法每天寫部落格。（用可能形）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>毎日ブログを書けません。（毎日ブログを書くことができません 也可以）<br>mainichi burogu o kakemasen.</p>
+        </details>
+      </li>
+      <li>飯店我還沒查。（提示：ホテル、まだ）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>ホテルはまだ調べていません。<br>hoteru wa mada shirabete imasen.</p>
+        </details>
+      </li>
+      <li>睡覺前會查明天的天氣。（提示：寝る前に、明日の天気）
+        <details class="quiz-ans">
+          <summary><span class="ui-ic ui-ans" aria-hidden="true"></span>看解答</summary>
+          <p>寝る前に、明日の天気を調べます。<br>neru mae ni, ashita no tenki o shirabemasu.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <a href="2026-10-08-dekimasen.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">できません — 說自己做不到 <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/8 可能形怎麼變，行けません 就是這條規則</span>
+  </a>
+  <a href="2026-10-06-koto-ga-dekimasu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">〜ことができます <span class="next-arrow">→</span></span>
+    <span class="next-sub">10/6 行くことができません 的說法在那篇</span>
+  </a>
+  <a href="2026-11-22-ta-koto-ga-arimasu.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">〜たことがあります <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/22 前に大阪に行ったことがあります 的句型</span>
+  </a>
+  <a href="2026-08-21-ni-kai.html" class="next-link">
+    <span class="next-kicker">— 複習 —</span>
+    <span class="next-title">〜に〜回：一週間に二回 <span class="next-arrow">→</span></span>
+    <span class="next-sub">8/21 週に二、三回 的「一段時間做幾次」</span>
+  </a>
+  <a href="2026-11-23-kankoku-ryouri.html" class="next-link">
+    <span class="next-kicker">— Prev —</span>
+    <span class="next-title">韓国料理を食べました <span class="next-arrow">→</span></span>
+    <span class="next-sub">11/23 的會話課：健身房之後去大久保吃韓國料理</span>
+  </a>
+<site-footer></site-footer>
+</div>
+
+<script src="../js/tts.js"></script>
+<script>
+  const rateSlider = document.getElementById('rate');
+  const rateValue = document.getElementById('rateValue');
+  rateSlider.addEventListener('input', () => {
+    rateValue.textContent = rateSlider.value + 'x';
+  });
+  function speak(text, button) {
+    return JTalk.speak(text, button, { rate: parseFloat(rateSlider.value) });
+  }
+  document.querySelectorAll('.turn[data-text], .word-item[data-text]').forEach(item => {
+    const button = item.querySelector('.play-btn');
+    const text = item.dataset.text;
+    const handler = (e) => { e.stopPropagation(); speak(text, button); };
+    button.addEventListener('click', handler);
+  });
+</script>
+</body>
+</html>

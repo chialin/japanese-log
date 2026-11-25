@@ -2,6 +2,132 @@
  "generated": "2026-11-24",
  "words": [
   {
+   "text": "ブログ",
+   "ja": "ブログ",
+   "kana": "ブログ",
+   "romaji": "burogu",
+   "meaning": "部落格 ← 英語 blog；blog 本身是 weblog（網路日誌）的縮寫。寫部落格是 ブログを書きます",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-24",
+     "href": "lessons/2026-11-24-blog-osaka-kaiwa.html",
+     "title": "ブログの画面を作っています"
+    }
+   ],
+   "tags": [
+    "學校・工作"
+   ]
+  },
+  {
+   "text": "画面",
+   "ja": "<ruby>画<rt>が</rt>面<rt>めん</rt></ruby>",
+   "kana": "がめん",
+   "romaji": "gamen",
+   "meaning": "畫面、介面：螢幕上看到的樣子；網站、app、手機的畫面都用這個字",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-24",
+     "href": "lessons/2026-11-24-blog-osaka-kaiwa.html",
+     "title": "ブログの画面を作っています"
+    }
+   ],
+   "tags": [
+    "生活雜貨"
+   ]
+  },
+  {
+   "text": "使う",
+   "ja": "<ruby>使<rt>つか</rt></ruby>う",
+   "kana": "つかう",
+   "romaji": "tsukau",
+   "meaning": "使用；ます形 使います，て形 使って",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-24",
+     "href": "lessons/2026-11-24-blog-osaka-kaiwa.html",
+     "title": "ブログの画面を作っています"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "調べる",
+   "ja": "<ruby>調<rt>しら</rt></ruby>べる",
+   "kana": "しらべる",
+   "romaji": "shiraberu",
+   "meaning": "查、查詢：查天氣、查路線、查單字都用它；ます形 調べます，て形 調べて",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-24",
+     "href": "lessons/2026-11-24-blog-osaka-kaiwa.html",
+     "title": "ブログの画面を作っています"
+    }
+   ],
+   "tags": [
+    "動詞"
+   ]
+  },
+  {
+   "text": "晴れ",
+   "ja": "<ruby>晴<rt>は</rt></ruby>れ",
+   "kana": "はれ",
+   "romaji": "hare",
+   "meaning": "晴天；說「今天是晴天」是 今日は晴れです",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-24",
+     "href": "lessons/2026-11-24-blog-osaka-kaiwa.html",
+     "title": "ブログの画面を作っています"
+    }
+   ],
+   "tags": [
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "曇り",
+   "ja": "<ruby>曇<rt>くも</rt></ruby>り",
+   "kana": "くもり",
+   "romaji": "kumori",
+   "meaning": "陰天；跟 雲（くも，雲）同音，天上都是雲就是陰天",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-24",
+     "href": "lessons/2026-11-24-blog-osaka-kaiwa.html",
+     "title": "ブログの画面を作っています"
+    }
+   ],
+   "tags": [
+    "季節・天氣"
+   ]
+  },
+  {
+   "text": "二、三回",
+   "ja": "<ruby>二<rt>に</rt></ruby>、<ruby>三<rt>さん</rt>回<rt>かい</rt></ruby>",
+   "kana": "に、さんかい",
+   "romaji": "nisankai",
+   "meaning": "兩三次：兩個數字直接連著唸，中間不加 と；同樣的說法還有 二、三人（にさんにん，兩三個人）",
+   "kind": "word",
+   "lessons": [
+    {
+     "date": "2026-11-24",
+     "href": "lessons/2026-11-24-blog-osaka-kaiwa.html",
+     "title": "ブログの画面を作っています"
+    }
+   ],
+   "tags": [
+    "數字"
+   ]
+  },
+  {
    "text": "彼女は掃除や洗濯をしました。",
    "ja": "<ruby>彼<rt>かの</rt>女<rt>じょ</rt></ruby>は　<ruby>掃<rt>そう</rt>除<rt>じ</rt></ruby>や<ruby>洗<rt>せん</rt>濯<rt>たく</rt></ruby>を　しました。",
    "kana": "かのじょは そうじやせんたくを しました。",
